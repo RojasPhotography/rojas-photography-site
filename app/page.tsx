@@ -232,9 +232,9 @@ export default function HomePage() {
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-              <a href="/premium-headshots" className="service-card border-2 border-emerald-900 p-8 rounded-lg block group" aria-label="Learn more about Premium Corporate Headshots">
-                <h3 className="text-2xl font-bold text-black mb-4 group-hover:text-emerald-900 transition">Premium Corporate Headshots</h3>
-                <p className="text-gray-700 font-medium mb-6">Professional studio headshots for executives and business leaders.</p>
+              <a href="/premium-headshots" className="service-card border-2 border-emerald-900 p-8 rounded-lg block group" aria-label="Learn more about In-Studio Corporate Headshots">
+                <h3 className="text-2xl font-bold text-black mb-4 group-hover:text-emerald-900 transition">In-Studio Corporate Headshots</h3>
+                <p className="text-gray-700 font-medium mb-6">Premium individual headshots in our professional studio. Executive portraits for business leaders, attorneys, and professionals.</p>
                 <div className="flex items-center text-emerald-900 font-bold arrow-icon">
                   <span>Learn More</span>
                   <span>→</span>
