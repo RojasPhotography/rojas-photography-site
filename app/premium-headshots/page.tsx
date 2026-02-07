@@ -74,7 +74,7 @@ export default function PremiumHeadshotsPage() {
       <section className="relative w-full h-auto md:min-h-96 flex items-center justify-center overflow-hidden pt-24 md:pt-20 mt-24 md:mt-0 pb-6 md:pb-12 bg-gradient-to-r from-emerald-900 to-emerald-800" aria-label="Premium Corporate Headshots service page">
         <div className="relative z-10 max-w-5xl mx-auto px-8 text-white text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Premium Corporate Headshots
+            In-Studio Corporate Headshots
           </h1>
           <p className="text-lg md:text-xl font-medium max-w-3xl mx-auto">
             Guided, professional headshot sessions in our Modesto studio with real-time coaching and image selection
