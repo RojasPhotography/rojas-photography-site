@@ -510,19 +510,23 @@ export default function HomePage() {
             <nav>
               <h4 className="text-white font-bold mb-6">SERVICES</h4>
               <ul className="font-medium space-y-3">
-                <li><a href="#services" className="hover:text-emerald-700 transition focus:outline-none">Executive Headshots</a></li>
-                <li><a href="#services" className="hover:text-emerald-700 transition focus:outline-none">Team Headshots</a></li>
-                <li><a href="#services" className="hover:text-emerald-700 transition focus:outline-none">Commercial Photography</a></li>
-                <li><a href="#services" className="hover:text-emerald-700 transition focus:outline-none">Video Services</a></li>
+                <li><a href="/premium-headshots" className="hover:text-emerald-700 transition focus:outline-none">In-Studio Headshots</a></li>
+                <li><a href="/on-site-photography" className="hover:text-emerald-700 transition focus:outline-none">On-Site Photography</a></li>
+                <li><a href="/commercial" className="hover:text-emerald-700 transition focus:outline-none">Commercial Photography</a></li>
+                <li><a href="/video" className="hover:text-emerald-700 transition focus:outline-none">Video Services</a></li>
+                <li><a href="/event-photography" className="hover:text-emerald-700 transition focus:outline-none">Event Photography</a></li>
+                <li><a href="/video" className="hover:text-emerald-700 transition focus:outline-none">Drone Services - Part 107 Certified</a></li>
               </ul>
             </nav>
             <nav>
               <h4 className="text-white font-bold mb-6">LOCATIONS</h4>
               <ul className="font-medium space-y-3">
-                <li><a href="#services" className="hover:text-emerald-700 transition focus:outline-none">Modesto</a></li>
-                <li><a href="#services" className="hover:text-emerald-700 transition focus:outline-none">Stockton</a></li>
-                <li><a href="#services" className="hover:text-emerald-700 transition focus:outline-none">Fresno</a></li>
-                <li><a href="#services" className="hover:text-emerald-700 transition focus:outline-none">Turlock</a></li>
+                <li><a href="/" className="hover:text-emerald-700 transition focus:outline-none">Modesto</a></li>
+                <li><a href="/" className="hover:text-emerald-700 transition focus:outline-none">Stockton</a></li>
+                <li><a href="/" className="hover:text-emerald-700 transition focus:outline-none">Fresno</a></li>
+                <li><a href="/" className="hover:text-emerald-700 transition focus:outline-none">Turlock</a></li>
+                <li><a href="/" className="hover:text-emerald-700 transition focus:outline-none">Sacramento</a></li>
+                <li><a href="/" className="hover:text-emerald-700 transition focus:outline-none">East Bay</a></li>
               </ul>
             </nav>
             <div>
@@ -534,7 +538,7 @@ export default function HomePage() {
           </div>
           
           <div className="border-t border-gray-700 pt-8 text-center font-medium">
-            <p>&copy; 2026 Rojas Photography. Professional Corporate Headshots in Modesto, Stockton, Fresno, Turlock & Merced. All rights reserved.</p>
+            <p>&copy; 2026 Rojas Photography. Professional Corporate Headshots in Modesto, Stockton, Fresno, Turlock, Sacramento & East Bay. All rights reserved.</p>
             <p className="mt-4 text-sm"><a href="#accessibility" className="hover:text-emerald-700 transition focus:outline-none">Accessibility Statement</a> • <a href="#privacy" className="hover:text-emerald-700 transition focus:outline-none">Privacy Policy</a> • <a href="#terms" className="hover:text-emerald-700 transition focus:outline-none">Terms & Conditions</a></p>
           </div>
         </div>
