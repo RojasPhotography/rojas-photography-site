@@ -37,6 +37,59 @@ export default function Navigation() {
             >
               Home
             </Link>
+
+            {/* Services Dropdown */}
+            <div className="relative group">
+              <button className="text-sm font-medium tracking-wide hover:text-[var(--color-primary)] transition-colors flex items-center gap-1">
+                Services
+                <svg
+                  className="w-4 h-4 group-hover:rotate-180 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                  />
+                </svg>
+              </button>
+              <div className="absolute left-0 mt-0 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100 py-2 z-50">
+                <Link
+                  href="/premium-headshots"
+                  className="block px-4 py-2 text-sm text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-colors"
+                >
+                  In-Studio Headshots
+                </Link>
+                <Link
+                  href="/on-site-photography"
+                  className="block px-4 py-2 text-sm text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-colors"
+                >
+                  On-Site Photography
+                </Link>
+                <Link
+                  href="/commercial"
+                  className="block px-4 py-2 text-sm text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-colors"
+                >
+                  Commercial Photography
+                </Link>
+                <Link
+                  href="/video"
+                  className="block px-4 py-2 text-sm text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-colors"
+                >
+                  Video Production
+                </Link>
+                <Link
+                  href="/event-photography"
+                  className="block px-4 py-2 text-sm text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-colors"
+                >
+                  Event Photography
+                </Link>
+              </div>
+            </div>
+
             <Link
               href="/work"
               className="text-sm font-medium tracking-wide hover:text-[var(--color-primary)] transition-colors"
@@ -93,11 +146,11 @@ export default function Navigation() {
 
         {/* Mobile slide-in drawer */}
         <div
-          className={`md:hidden fixed inset-0 top-[57px] bg-white z-40 transition-transform duration-300 ease-in-out ${
+          className={`md:hidden fixed inset-0 top-[57px] bg-white z-40 transition-transform duration-300 ease-in-out overflow-y-auto ${
             menuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="flex flex-col items-center justify-center gap-8 pt-16">
+          <div className="flex flex-col items-center justify-start gap-8 pt-16 pb-16">
             <Link
               href="/"
               className="text-2xl font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] transition-colors"
@@ -105,6 +158,51 @@ export default function Navigation() {
             >
               Home
             </Link>
+
+            {/* Mobile Services Menu */}
+            <div className="w-full px-8">
+              <div className="text-center mb-6">
+                <h3 className="text-xl font-semibold text-[var(--color-text-dark)] mb-4">Services</h3>
+                <div className="flex flex-col gap-3">
+                  <Link
+                    href="/premium-headshots"
+                    className="text-lg text-[var(--color-text-dark)] hover:text-[var(--color-primary)] transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    In-Studio Headshots
+                  </Link>
+                  <Link
+                    href="/on-site-photography"
+                    className="text-lg text-[var(--color-text-dark)] hover:text-[var(--color-primary)] transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    On-Site Photography
+                  </Link>
+                  <Link
+                    href="/commercial"
+                    className="text-lg text-[var(--color-text-dark)] hover:text-[var(--color-primary)] transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Commercial Photography
+                  </Link>
+                  <Link
+                    href="/video"
+                    className="text-lg text-[var(--color-text-dark)] hover:text-[var(--color-primary)] transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Video Production
+                  </Link>
+                  <Link
+                    href="/event-photography"
+                    className="text-lg text-[var(--color-text-dark)] hover:text-[var(--color-primary)] transition-colors"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Event Photography
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             <Link
               href="/work"
               className="text-2xl font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] transition-colors"

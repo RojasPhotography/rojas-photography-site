@@ -3,6 +3,8 @@ import { DM_Serif_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import SchemaScript from "./components/SchemaScript";
+import { generateOrganizationSchema } from "./lib/schema";
 
 const dmSerifDisplay = DM_Serif_Display({
   weight: "400",
@@ -48,6 +50,7 @@ export default function RootLayout({
       <body
         className={`${dmSerifDisplay.variable} ${dmSans.variable} antialiased`}
       >
+        <SchemaScript schema={generateOrganizationSchema()} />
         <Navigation />
         {children}
         <Footer />

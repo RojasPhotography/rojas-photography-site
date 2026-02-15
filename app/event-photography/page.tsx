@@ -1,12 +1,75 @@
+import type { Metadata } from 'next';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
+import FAQSection from '../components/FAQSection';
+import SchemaScript from '../components/SchemaScript';
+import { generateServiceSchema, generateFAQSchema } from '../lib/schema';
+
+const faqs = [
+  {
+    question: 'How much does event photography cost in Modesto?',
+    answer:
+      'Event photography pricing is custom based on your event size, duration, and coverage needs. Whether you need a few hours of coverage or full-day documentation, we provide personalized quotes. Contact us with your event details for an accurate estimate of our services.',
+  },
+  {
+    question: 'Do you provide photos during the event?',
+    answer:
+      'Yes! We photograph throughout your entire event and deliver professionally edited photos within 24-48 hours via our secure SpotMyPhotos gallery. Attendees can view and download photos immediately, making it perfect for real-time social media updates and event follow-up.',
+  },
+  {
+    question: 'How many photos do we receive from our event?',
+    answer:
+      'The number of photos depends on event length and coverage. A 4-hour event typically produces 300-500 professionally edited photos. A full-day event can produce 600-800+ photos. We curate and deliver only the best shots—no filler photos—so you get quality over quantity.',
+  },
+  {
+    question: 'Can you handle large corporate events?',
+    answer:
+      'Absolutely! For larger events (200+ guests), we deploy multiple photographers to ensure complete coverage across all areas. We coordinate team photographers and deliver all images from the same professional vision. We\'ve successfully covered major events for Comcast, Save Mart, and California Lawyers Association.',
+  },
+  {
+    question: 'Do you do step and repeat photography at events?',
+    answer:
+      'Yes! We provide professional step and repeat backdrop photography perfect for sponsor recognition, brand activation, and creating shareable moments. This is ideal for galas, award ceremonies, and fundraising events. Photos are perfect for social media and event promotion.',
+  },
+];
+
+export const metadata: Metadata = {
+  title: 'Corporate Event Photography Modesto | Conference & Gala Photography',
+  description:
+    'Professional event photography in Modesto and Central Valley. Conference photography, gala coverage, product launches, and corporate event documentation. 24-hour delivery.',
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://rojasphotography.net/event-photography',
+  },
+  openGraph: {
+    title: 'Corporate Event Photography in Modesto | Rojas Photography',
+    description:
+      'Professional event coverage for conferences, galas, fundraisers, product launches, and corporate gatherings. Fast delivery with expert photography.',
+    url: 'https://rojasphotography.net/event-photography',
+    type: 'website',
+    images: [
+      {
+        url: '/images/CLA AM 25 201.jpg',
+        alt: 'Corporate event photography - Modesto photographer',
+      },
+    ],
+  },
+};
 
 export default function EventPhotographyPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <SchemaScript schema={generateServiceSchema({
+        name: 'Corporate Event Photography',
+        description: 'Professional event photography for conferences, galas, fundraisers, and corporate gatherings in Modesto and Central Valley. 24-hour delivery.',
+        url: 'https://rojasphotography.net/event-photography',
+        image: '/images/CLA AM 25 201.jpg',
+      })} />
+      <SchemaScript schema={generateFAQSchema(faqs)} />
+      <div className="min-h-screen bg-white">
       <HeroSection
         title="Professional Event Photography for Your Business"
         subtitle="Comprehensive event coverage for conferences, galas, fundraisers, product launches, and corporate gatherings."
@@ -19,13 +82,13 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Our Event Photography Work</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Professional Event Photography in Modesto & Central Valley</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-4">
               {[
-                { src: '/images/CLA AM 25 201.jpg', alt: 'Corporate event photography', extra: 'scale-125' },
-                { src: '/images/DSC_1638.jpg', alt: 'Gala and formal event photography', extra: 'object-[center_40%]' },
-                { src: '/images/CLA AM 25 335.jpg', alt: 'Conference and networking coverage', extra: 'object-left' },
+                { src: '/images/CLA AM 25 201.jpg', alt: 'Corporate event photography in Modesto', extra: 'scale-125' },
+                { src: '/images/DSC_1638.jpg', alt: 'Professional gala and formal event photography', extra: 'object-[center_40%]' },
+                { src: '/images/CLA AM 25 335.jpg', alt: 'Conference and networking event coverage - Central Valley', extra: 'object-left' },
               ].map((img) => (
                 <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden">
                   <img src={img.src} alt={img.alt} className={`w-full h-96 object-cover ${img.extra}`} />
@@ -176,11 +239,44 @@ export default function EventPhotographyPage() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <FAQSection
+          faqs={[
+            {
+              question: 'How much does event photography cost in Modesto?',
+              answer:
+                'Event photography pricing is custom based on your event size, duration, and coverage needs. Whether you need a few hours of coverage or full-day documentation, we provide personalized quotes. Contact us with your event details for an accurate estimate of our services.',
+            },
+            {
+              question: 'Do you provide photos during the event?',
+              answer:
+                'Yes! We photograph throughout your entire event and deliver professionally edited photos within 24-48 hours via our secure SpotMyPhotos gallery. Attendees can view and download photos immediately, making it perfect for real-time social media updates and event follow-up.',
+            },
+            {
+              question: 'How many photos do we receive from our event?',
+              answer:
+                'The number of photos depends on event length and coverage. A 4-hour event typically produces 300-500 professionally edited photos. A full-day event can produce 600-800+ photos. We curate and deliver only the best shots—no filler photos—so you get quality over quantity.',
+            },
+            {
+              question: 'Can you handle large corporate events?',
+              answer:
+                'Absolutely! For larger events (200+ guests), we deploy multiple photographers to ensure complete coverage across all areas. We coordinate team photographers and deliver all images from the same professional vision. We\'ve successfully covered major events for Comcast, Save Mart, and California Lawyers Association.',
+            },
+            {
+              question: 'Do you do step and repeat photography at events?',
+              answer:
+                'Yes! We provide professional step and repeat backdrop photography perfect for sponsor recognition, brand activation, and creating shareable moments. This is ideal for galas, award ceremonies, and fundraising events. Photos are perfect for social media and event promotion.',
+            },
+          ]}
+          heading="Event Photography Questions"
+        />
+
         <CTASection
           heading="Ready to Capture Your Next Event?"
           subheading="Let us document your event with professional photography. From planning to delivery, we handle everything."
         />
       </main>
-    </div>
+      </div>
+    </>
   );
 }

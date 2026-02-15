@@ -1,21 +1,77 @@
-'use client';
-
-import { useEffect, useState } from 'react';
+import type { Metadata } from 'next';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
+import FAQSection from '../components/FAQSection';
+import SchemaScript from '../components/SchemaScript';
+import BookingScheduler from '../components/BookingScheduler';
+import { generateServiceSchema, generateFAQSchema } from '../lib/schema';
+
+export const metadata: Metadata = {
+  title: 'Professional Headshots Modesto CA | $150 Session | Rojas Photography',
+  description:
+    'Premium corporate headshots in Modesto. Guided studio sessions with real-time coaching. $150 session + $150/image. Trusted by 500+ executives. Book today.',
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://rojasphotography.net/premium-headshots',
+  },
+  openGraph: {
+    title: 'Professional Corporate Headshots in Modesto | Rojas Photography',
+    description:
+      'Premium corporate headshots for executives and business professionals in Modesto and Central Valley. Guided sessions with professional coaching.',
+    url: 'https://rojasphotography.net/premium-headshots',
+    type: 'website',
+    images: [
+      {
+        url: '/images/Gina-0026 (1).jpg',
+        alt: 'Professional corporate headshot - Modesto photographer',
+      },
+    ],
+  },
+};
 
 export default function PremiumHeadshotsPage() {
-  const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+  const faqs = [
+    {
+      question: 'How much do professional headshots cost in Modesto?',
+      answer:
+        'Our professional headshot sessions are $150, plus $150 for each image you purchase. There are no package minimums—you only pay for the images you love. This flexible pricing model lets you select exactly the photos you need without wasting money on images you won\'t use.',
+    },
+    {
+      question: 'What should I wear for corporate headshot photos?',
+      answer:
+        'We recommend solid colors and professional business attire that represents your industry. Avoid busy patterns and busy logos. We offer free wardrobe consultation before your session to ensure you select looks that represent your professional brand. Feel free to bring multiple outfits—our sessions include unlimited wardrobe changes.',
+    },
+    {
+      question: 'How long does a professional headshot session take?',
+      answer:
+        'Our guided sessions include unlimited coaching time. Most sessions take 30-45 minutes, though you can take as long as you need. We guide you through posing, expression, and styling in real-time, and we review images together before you leave. Your professionally edited images are delivered within 48 hours.',
+    },
+    {
+      question: 'Do you provide makeup and styling for headshots?',
+      answer:
+        'We don\'t provide makeup application, but we do offer professional wardrobe consultation to help you select looks that represent your brand. We can recommend local makeup artists if needed. Many clients bring their own makeup artist for a polished look, which works great in our studio.',
+    },
+    {
+      question: 'Can I use these headshots for LinkedIn and my website?',
+      answer:
+        'Absolutely! Your headshots are fully licensed for professional use on LinkedIn, your website, company directory, and all business marketing materials. You own the images you purchase and can use them however you need for your professional brand.',
+    },
+  ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <SchemaScript schema={generateServiceSchema({
+        name: 'Professional In-Studio Headshots',
+        description: 'Guided, professional headshot sessions in our Modesto studio with real-time coaching and image selection. $150 session + $150/image.',
+        url: 'https://rojasphotography.net/premium-headshots',
+        image: '/images/Gina-0026 (1).jpg',
+      })} />
+      <SchemaScript schema={generateFAQSchema(faqs)} />
+      <div className="min-h-screen bg-white">
       <HeroSection
         title="In-Studio Corporate Headshots"
         subtitle="Guided, professional headshot sessions in our Modesto studio with real-time coaching and image selection"
@@ -45,13 +101,13 @@ export default function PremiumHeadshotsPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-4">
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden">
-                <img src="/images/Gina-0026 (1).jpg" alt="Premium corporate headshot - professional woman" className="w-full h-96 object-cover" />
+                <img src="/images/Gina-0026 (1).jpg" alt="Professional corporate headshot - Modesto photographer" className="w-full h-96 object-cover" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden">
-                <img src="/images/Miguel-(2 of 6) (1).jpg" alt="Premium corporate headshot - professional man" className="w-full h-96 object-cover" />
+                <img src="/images/Miguel-(2 of 6) (1).jpg" alt="Executive headshot session in Modesto studio" className="w-full h-96 object-cover" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden">
-                <img src="/images/Joyce-0029.jpg" alt="Premium corporate headshot - business woman" className="w-full h-96 object-cover" />
+                <img src="/images/Joyce-0029.jpg" alt="Professional business headshot - Central Valley" className="w-full h-96 object-cover" />
               </SectionReveal>
             </div>
           </div>
@@ -163,19 +219,42 @@ export default function PremiumHeadshotsPage() {
             </SectionReveal>
 
             <div className="flex justify-center">
-              {isMounted && (
-                <iframe
-                  name="hats_scheduler"
-                  style={{ margin: '20px' }}
-                  frameBorder={0}
-                  width="100%"
-                  height="600"
-                  src="https://Rojasheadshots.17hats.com/p#/scheduling/dghcgwpskptvbvsvkskdrcgkpnrrgxch?embed=true&tp=false&hide_desc=false"
-                />
-              )}
+              <BookingScheduler />
             </div>
           </div>
         </section>
+
+        {/* FAQ Section */}
+        <FAQSection
+          faqs={[
+            {
+              question: 'How much do professional headshots cost in Modesto?',
+              answer:
+                'Our professional headshot sessions are $150, plus $150 for each image you purchase. There are no package minimums—you only pay for the images you love. This flexible pricing model lets you select exactly the photos you need without wasting money on images you won\'t use.',
+            },
+            {
+              question: 'What should I wear for corporate headshot photos?',
+              answer:
+                'We recommend solid colors and professional business attire that represents your industry. Avoid busy patterns and busy logos. We offer free wardrobe consultation before your session to ensure you select looks that represent your professional brand. Feel free to bring multiple outfits—our sessions include unlimited wardrobe changes.',
+            },
+            {
+              question: 'How long does a professional headshot session take?',
+              answer:
+                'Our guided sessions include unlimited coaching time. Most sessions take 30-45 minutes, though you can take as long as you need. We guide you through posing, expression, and styling in real-time, and we review images together before you leave. Your professionally edited images are delivered within 48 hours.',
+            },
+            {
+              question: 'Do you provide makeup and styling for headshots?',
+              answer:
+                'We don\'t provide makeup application, but we do offer professional wardrobe consultation to help you select looks that represent your brand. We can recommend local makeup artists if needed. Many clients bring their own makeup artist for a polished look, which works great in our studio.',
+            },
+            {
+              question: 'Can I use these headshots for LinkedIn and my website?',
+              answer:
+                'Absolutely! Your headshots are fully licensed for professional use on LinkedIn, your website, company directory, and all business marketing materials. You own the images you purchase and can use them however you need for your professional brand.',
+            },
+          ]}
+          heading="Professional Headshot Questions"
+        />
 
         <CTASection
           heading="Want to Discuss Your Project First?"
@@ -183,6 +262,7 @@ export default function PremiumHeadshotsPage() {
           showContactInfo={false}
         />
       </main>
-    </div>
+      </div>
+    </>
   );
 }

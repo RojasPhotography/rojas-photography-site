@@ -1,12 +1,40 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import HeroSection from './components/HeroSection';
 import SectionReveal from './components/SectionReveal';
 import TestimonialCard from './components/TestimonialCard';
 import CTASection from './components/CTASection';
+import SchemaScript from './components/SchemaScript';
+import { generateLocalBusinessSchema } from './lib/schema';
+
+export const metadata: Metadata = {
+  title: 'Corporate Photography Modesto CA | Professional Headshots & Video',
+  description:
+    'Expert corporate photography in Modesto and Central Valley. Professional headshots, on-site photography, commercial photography, video production, and event coverage. Trusted by 500+ executives.',
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://rojasphotography.net',
+  },
+  openGraph: {
+    title: 'Corporate Photography Modesto CA | Professional Headshots & Video',
+    description:
+      'Professional corporate photography services in Modesto and Central Valley. In-studio headshots, on-site photography, commercial photography, video production, and event coverage.',
+    url: 'https://rojasphotography.net',
+    type: 'website',
+    images: [
+      {
+        url: '/images/Hero Image1.jpg',
+        alt: 'Professional corporate photography - Modesto photographer',
+      },
+    ],
+  },
+};
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <SchemaScript schema={generateLocalBusinessSchema()} />
+      <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <HeroSection
         image="/images/Hero Image1.jpg"
@@ -217,6 +245,7 @@ export default function HomePage() {
         {/* CTA + Contact */}
         <CTASection />
       </main>
-    </div>
+      </div>
+    </>
   );
 }

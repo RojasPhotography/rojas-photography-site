@@ -1,12 +1,75 @@
+import type { Metadata } from 'next';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
+import FAQSection from '../components/FAQSection';
+import SchemaScript from '../components/SchemaScript';
+import { generateServiceSchema, generateFAQSchema } from '../lib/schema';
+
+const faqs = [
+  {
+    question: 'How much does corporate video production cost?',
+    answer:
+      'Video production pricing is custom based on your project scope, length, complexity, and editing requirements. A simple promotional video costs less than a comprehensive corporate video with motion graphics. We provide personalized quotes based on your specific needs and budget.',
+  },
+  {
+    question: 'Are you a licensed drone pilot?',
+    answer:
+      'Yes! We are Part 107 certified professional drone pilots licensed by the FAA. This means we can legally fly drones for commercial purposes with all required safety and insurance documentation. Aerial drone videography is perfect for real estate, events, and commercial properties.',
+  },
+  {
+    question: 'How long does video production take?',
+    answer:
+      'Project timelines vary based on scope. A simple 30-second promotional video might take 1-2 weeks, while a comprehensive corporate video with motion graphics takes 3-4 weeks. We discuss timelines upfront during planning. Most projects are delivered within 2-4 weeks.',
+  },
+  {
+    question: 'What types of corporate videos do you create?',
+    answer:
+      'We create corporate videos, client testimonial videos, promotional content, product demonstration videos, brand videos, training videos, event highlights, and aerial drone videography. Whether you need a simple social media clip or a comprehensive corporate production, we handle full concept development through final delivery.',
+  },
+  {
+    question: 'Can you create videos optimized for social media?',
+    answer:
+      'Absolutely! We deliver videos in multiple formats optimized for different platforms. This includes full-resolution for websites, social media versions (vertical, square, and horizontal), and broadcast-quality files. We understand the requirements for Instagram, TikTok, YouTube, LinkedIn, and Facebook.',
+  },
+];
+
+export const metadata: Metadata = {
+  title: 'Corporate Video Production Modesto CA | Drone Videography',
+  description:
+    'Professional corporate video production in Modesto and Central Valley. Business videos, testimonials, drone videography, and promotional content. Part 107 certified.',
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://rojasphotography.net/video',
+  },
+  openGraph: {
+    title: 'Corporate Video Production in Modesto | Rojas Photography',
+    description:
+      'High-impact video production including corporate videos, client testimonials, aerial drone videography, and promotional content for your business.',
+    url: 'https://rojasphotography.net/video',
+    type: 'website',
+    images: [
+      {
+        url: '/images/BBSI-Corp-Video.jpg',
+        alt: 'Corporate video production - Modesto videographer',
+      },
+    ],
+  },
+};
 
 export default function VideoServicesPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <>
+      <SchemaScript schema={generateServiceSchema({
+        name: 'Corporate Video Production',
+        description: 'Professional corporate video production including business videos, testimonials, drone videography, and promotional content in Modesto and Central Valley.',
+        url: 'https://rojasphotography.net/video',
+        image: '/images/BBSI-Corp-Video.jpg',
+      })} />
+      <SchemaScript schema={generateFAQSchema(faqs)} />
+      <div className="min-h-screen bg-white">
       <HeroSection
         title="Professional Video Services for Your Business"
         subtitle="High-impact video production including corporate videos, client testimonials, aerial drone videography, and promotional content."
@@ -19,13 +82,13 @@ export default function VideoServicesPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Our Video Production Work</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Professional Video Production in Modesto & Central Valley</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-4">
               {[
-                { src: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production' },
-                { src: '/images/ALCC Drone 03.jpg', alt: 'Aerial drone videography' },
-                { src: '/images/BBSI-Video-Freeze.jpg', alt: 'Client testimonial videos' },
+                { src: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production in Modesto' },
+                { src: '/images/ALCC Drone 03.jpg', alt: 'Aerial drone videography - Central Valley' },
+                { src: '/images/BBSI-Video-Freeze.jpg', alt: 'Professional client testimonial videos' },
               ].map((img) => (
                 <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-96">
                   <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
@@ -177,11 +240,44 @@ export default function VideoServicesPage() {
           </div>
         </section>
 
+        {/* FAQ Section */}
+        <FAQSection
+          faqs={[
+            {
+              question: 'How much does corporate video production cost?',
+              answer:
+                'Video production pricing is custom based on your project scope, length, complexity, and editing requirements. A simple promotional video costs less than a comprehensive corporate video with motion graphics. We provide personalized quotes based on your specific needs and budget.',
+            },
+            {
+              question: 'Are you a licensed drone pilot?',
+              answer:
+                'Yes! We are Part 107 certified professional drone pilots licensed by the FAA. This means we can legally fly drones for commercial purposes with all required safety and insurance documentation. Aerial drone videography is perfect for real estate, events, and commercial properties.',
+            },
+            {
+              question: 'How long does video production take?',
+              answer:
+                'Project timelines vary based on scope. A simple 30-second promotional video might take 1-2 weeks, while a comprehensive corporate video with motion graphics takes 3-4 weeks. We discuss timelines upfront during planning. Most projects are delivered within 2-4 weeks.',
+            },
+            {
+              question: 'What types of corporate videos do you create?',
+              answer:
+                'We create corporate videos, client testimonial videos, promotional content, product demonstration videos, brand videos, training videos, event highlights, and aerial drone videography. Whether you need a simple social media clip or a comprehensive corporate production, we handle full concept development through final delivery.',
+            },
+            {
+              question: 'Can you create videos optimized for social media?',
+              answer:
+                'Absolutely! We deliver videos in multiple formats optimized for different platforms. This includes full-resolution for websites, social media versions (vertical, square, and horizontal), and broadcast-quality files. We understand the requirements for Instagram, TikTok, YouTube, LinkedIn, and Facebook.',
+            },
+          ]}
+          heading="Video Production Questions"
+        />
+
         <CTASection
           heading="Ready for Professional Video Services?"
           subheading="Let's create compelling video content that engages your audience and drives business results."
         />
       </main>
-    </div>
+      </div>
+    </>
   );
 }
