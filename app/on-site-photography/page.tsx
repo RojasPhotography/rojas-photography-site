@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
@@ -133,7 +134,7 @@ export default function OnSitePhotographyPage() {
                 { src: '/images/Marily4170.jpg', alt: 'Business photography at client location', label: 'Corporate Photography', objectPosition: 'center 30%' },
               ].map((img) => (
                 <SectionReveal key={img.label} className="relative rounded-xl overflow-hidden h-96 group">
-                  <img src={img.src} alt={img.alt} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: img.objectPosition }} />
+                  <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-500 group-hover:scale-105" style={{ objectPosition: img.objectPosition }} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
                     <h3 className="text-white text-2xl font-bold">{img.label}</h3>
                   </div>
@@ -210,8 +211,8 @@ export default function OnSitePhotographyPage() {
                 { src: '/images/EsmilcoBTS.png', alt: 'Behind the scenes at on-site session' },
                 { src: '/images/Mayor RIverbank BTS.png', alt: 'Behind the scenes at Riverbank Mayor session' },
               ].map((img) => (
-                <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-64">
-                  <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-64 relative">
+                  <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                 </SectionReveal>
               ))}
             </div>

@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 interface HeroSectionProps {
   title: string;
   subtitle?: string;
@@ -25,10 +27,13 @@ export default function HeroSection({
         className={`relative w-full ${heightClass} flex items-center justify-center overflow-hidden pt-20`}
         aria-label={title}
       >
-        <img
+        <Image
           src={image}
           alt=""
-          className="absolute inset-0 w-full h-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-[var(--color-primary-dark)]/70" />

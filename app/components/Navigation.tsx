@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -72,10 +73,13 @@ export default function Navigation() {
             className="flex items-center flex-shrink-0 transition-transform hover:scale-105 duration-300"
             aria-label="Rojas Photography Home"
           >
-            <img
+            <Image
               src="/images/Rojas Photography Logo 24.6.png"
               alt="Rojas Photography"
-              className="h-9 sm:h-10"
+              width={200}
+              height={40}
+              className="h-9 sm:h-10 w-auto"
+              priority
             />
           </Link>
 

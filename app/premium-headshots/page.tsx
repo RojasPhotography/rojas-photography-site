@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
@@ -141,14 +142,14 @@ export default function PremiumHeadshotsPage() {
               </h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-4">
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden">
-                <img src="/images/Gina-0026 (1).jpg" alt="Professional corporate headshot - Modesto photographer" className="w-full h-96 object-cover" />
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative h-96">
+                <Image src="/images/Gina-0026 (1).jpg" alt="Professional corporate headshot - Modesto photographer" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden">
-                <img src="/images/Miguel-(2 of 6) (1).jpg" alt="Executive headshot session in Modesto studio" className="w-full h-96 object-cover" />
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative h-96">
+                <Image src="/images/Miguel-(2 of 6) (1).jpg" alt="Executive headshot session in Modesto studio" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden">
-                <img src="/images/Joyce-0029.jpg" alt="Professional business headshot - Central Valley" className="w-full h-96 object-cover" />
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative h-96">
+                <Image src="/images/Joyce-0029.jpg" alt="Professional business headshot - Central Valley" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
               </SectionReveal>
             </div>
           </div>

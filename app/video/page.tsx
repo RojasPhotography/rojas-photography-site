@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
@@ -123,8 +124,8 @@ export default function VideoServicesPage() {
                 { src: '/images/ALCC Drone 03.jpg', alt: 'Aerial drone videography - Central Valley' },
                 { src: '/images/BBSI-Video-Freeze.jpg', alt: 'Professional client testimonial videos' },
               ].map((img) => (
-                <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-96">
-                  <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
+                <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-96 relative">
+                  <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
                 </SectionReveal>
               ))}
             </div>

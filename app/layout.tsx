@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import SchemaScript from "./components/SchemaScript";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 import { generateOrganizationSchema } from "./lib/schema";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -20,6 +21,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://rojasphotography.net'),
   title: "Professional Corporate Headshots in Modesto | Rojas Photography",
   description:
     "Premium corporate headshots for executives, attorneys, and business leaders in Modesto, Stockton, Fresno, Turlock, and Merced. $150 session + $150/image. Trusted by Comcast, Save Mart, and California Lawyers Association.",
@@ -50,6 +52,7 @@ export default function RootLayout({
       <body
         className={`${dmSerifDisplay.variable} ${dmSans.variable} antialiased`}
       >
+        <GoogleAnalytics measurementId="G-FH5SG2NXP2" />
         <SchemaScript schema={generateOrganizationSchema()} />
         <Navigation />
         {children}

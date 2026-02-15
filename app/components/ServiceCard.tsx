@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 interface ServiceCardProps {
@@ -18,11 +19,13 @@ export default function ServiceCard({
 }: ServiceCardProps) {
   return (
     <Link href={href} className="group service-card block rounded-xl overflow-hidden bg-white border border-gray-100">
-      <div className="img-hover-zoom aspect-[4/3]">
-        <img
+      <div className="img-hover-zoom aspect-[4/3] relative">
+        <Image
           src={image}
           alt={imageAlt}
-          className="w-full h-full object-cover"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover"
         />
       </div>
       <div className="p-6">

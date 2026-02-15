@@ -1,7 +1,32 @@
+import type { Metadata } from 'next';
+import Image from 'next/image';
 import { CheckCircle2, Users, Award, Zap } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import CTASection from '../components/CTASection';
+
+export const metadata: Metadata = {
+  title: 'About Rojas Photography | Modesto Corporate Photographers',
+  description:
+    'Meet Alfonso & Niomi Rojas - professional corporate photographers with 15+ years experience serving 500+ executives across Modesto and Central Valley. Learn our story.',
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://rojasphotography.net/about-rojas-photography',
+  },
+  openGraph: {
+    title: 'About Rojas Photography | Corporate Photographers in Modesto',
+    description:
+      '15+ years corporate experience, 500+ executives photographed, 50+ five-star reviews. Meet the team behind Modesto\'s premier photography studio.',
+    url: 'https://rojasphotography.net/about-rojas-photography',
+    type: 'website',
+    images: [
+      {
+        url: '/images/Alfonso+Niomi-0026.jpg',
+        alt: 'Alfonso and Niomi Rojas - Founders of Rojas Photography',
+      },
+    ],
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -22,8 +47,8 @@ export default function AboutPage() {
 
             <div className="grid md:grid-cols-2 gap-12 items-start mb-24">
               <SectionReveal>
-                <div className="rounded-2xl overflow-hidden">
-                  <img src="/images/Alfonso+Niomi-0026.jpg" alt="Alfonso and Niomi Rojas - Founders of Rojas Photography" className="w-full h-auto object-cover" />
+                <div className="rounded-2xl overflow-hidden relative aspect-[4/3]">
+                  <Image src="/images/Alfonso+Niomi-0026.jpg" alt="Alfonso and Niomi Rojas - Founders of Rojas Photography" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                 </div>
               </SectionReveal>
 
@@ -87,8 +112,8 @@ export default function AboutPage() {
               <SectionReveal>
                 <div>
                   <div className="mb-8 flex justify-center">
-                    <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-[var(--color-primary)]">
-                      <img src="/images/Alfonso-headshot.jpg" alt="Alfonso Rojas - Founder & Lead Photographer" className="w-full h-full object-cover" />
+                    <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-[var(--color-primary)] relative">
+                      <Image src="/images/Alfonso-headshot.jpg" alt="Alfonso Rojas - Founder & Lead Photographer" fill sizes="224px" className="object-cover" />
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-[var(--color-text-dark)] mb-2">Alfonso Rojas</h3>
@@ -107,8 +132,8 @@ export default function AboutPage() {
               <SectionReveal>
                 <div>
                   <div className="mb-8 flex justify-center">
-                    <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-[var(--color-primary)]">
-                      <img src="/images/Niomi-headshot.jpg" alt="Niomi Rojas - Founder, Photographer & Operations Lead" className="w-full h-full object-cover" style={{ objectPosition: '25% 45%', transform: 'scale(1.1)' }} />
+                    <div className="w-56 h-56 rounded-full overflow-hidden border-4 border-[var(--color-primary)] relative">
+                      <Image src="/images/Niomi-headshot.jpg" alt="Niomi Rojas - Founder, Photographer & Operations Lead" fill sizes="224px" className="object-cover scale-110" style={{ objectPosition: '25% 45%' }} />
                     </div>
                   </div>
                   <h3 className="text-2xl font-bold text-[var(--color-text-dark)] mb-2">Niomi Rojas</h3>

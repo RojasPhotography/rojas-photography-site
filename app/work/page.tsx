@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import ServiceCard from '../components/ServiceCard';

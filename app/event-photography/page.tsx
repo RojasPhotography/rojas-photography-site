@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
@@ -123,8 +124,8 @@ export default function EventPhotographyPage() {
                 { src: '/images/DSC_1638.jpg', alt: 'Professional gala and formal event photography', extra: 'object-[center_40%]' },
                 { src: '/images/CLA AM 25 335.jpg', alt: 'Conference and networking event coverage - Central Valley', extra: 'object-left' },
               ].map((img) => (
-                <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden">
-                  <img src={img.src} alt={img.alt} className={`w-full h-96 object-cover ${img.extra}`} />
+                <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-96 relative">
+                  <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className={`object-cover ${img.extra}`} />
                 </SectionReveal>
               ))}
             </div>

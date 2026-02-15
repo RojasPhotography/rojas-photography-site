@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import HeroSection from './components/HeroSection';
 import SectionReveal from './components/SectionReveal';
 import TestimonialCard from './components/TestimonialCard';
@@ -90,46 +91,58 @@ export default function HomePage() {
             </SectionReveal>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4]">
-                <img
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
                   src="/images/Gina-0026 (1).jpg"
                   alt="Professional corporate headshot - executive woman"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4]">
-                <img
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
                   src="/images/Miguel-(2 of 6) (1).jpg"
                   alt="Professional corporate headshot - executive man"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4]">
-                <img
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
                   src="/images/Joyce-0029.jpg"
                   alt="Professional corporate headshot - business woman"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4]">
-                <img
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
                   src="/images/MOVE Stanislaus-(3 of 28).jpg"
                   alt="Commercial photography for business"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4]">
-                <img
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
                   src="/images/CLA AM 25 201.jpg"
                   alt="Corporate event photography"
-                  className="w-full h-full object-cover scale-125"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover scale-125"
                 />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4]">
-                <img
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
                   src="/images/individual Headshot Website.png"
                   alt="Individual headshot session"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </SectionReveal>
             </div>
@@ -269,11 +282,13 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <SectionReveal>
-                <div className="rounded-2xl overflow-hidden">
-                  <img
+                <div className="rounded-2xl overflow-hidden relative aspect-[4/3]">
+                  <Image
                     src="/images/Alfonso+Niomi-0026.jpg"
                     alt="Alfonso and Niomi Rojas - Founders of Rojas Photography"
-                    className="w-full h-auto object-cover"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
                   />
                 </div>
               </SectionReveal>
