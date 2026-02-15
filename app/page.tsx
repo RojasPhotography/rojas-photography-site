@@ -206,6 +206,64 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Authority & Credentials Section */}
+        <section className="py-20 md:py-28 px-8 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <SectionReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
+                  Trusted by Central Valley Businesses
+                </h2>
+                <p className="text-lg text-[var(--color-text-muted)]">
+                  Experience, expertise, and proven results
+                </p>
+              </div>
+            </SectionReveal>
+
+            <div className="grid md:grid-cols-4 gap-8">
+              <SectionReveal>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">15+</div>
+                  <p className="text-[var(--color-text-dark)] font-semibold mb-2">Years Experience</p>
+                  <p className="text-sm text-[var(--color-text-body)]">Corporate leadership background</p>
+                </div>
+              </SectionReveal>
+
+              <SectionReveal>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">500+</div>
+                  <p className="text-[var(--color-text-dark)] font-semibold mb-2">Executives Photographed</p>
+                  <p className="text-sm text-[var(--color-text-body)]">CEOs, attorneys, professionals</p>
+                </div>
+              </SectionReveal>
+
+              <SectionReveal>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">50+</div>
+                  <p className="text-[var(--color-text-dark)] font-semibold mb-2">Five-Star Reviews</p>
+                  <p className="text-sm text-[var(--color-text-body)]">Proven client satisfaction</p>
+                </div>
+              </SectionReveal>
+
+              <SectionReveal>
+                <div className="text-center">
+                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">FAA</div>
+                  <p className="text-[var(--color-text-dark)] font-semibold mb-2">Part 107 Certified</p>
+                  <p className="text-sm text-[var(--color-text-body)]">Licensed drone pilots</p>
+                </div>
+              </SectionReveal>
+            </div>
+
+            <SectionReveal>
+              <div className="mt-16 p-8 bg-[var(--color-bg-warm)] rounded-xl text-center">
+                <p className="text-lg text-[var(--color-text-body)] leading-relaxed">
+                  We serve businesses across Modesto, Stockton, Fresno, Turlock, Merced, Sacramento, and the East Bay with professional photography and video services you can trust.
+                </p>
+              </div>
+            </SectionReveal>
+          </div>
+        </section>
+
         {/* About Teaser */}
         <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">

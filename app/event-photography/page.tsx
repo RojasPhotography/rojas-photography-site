@@ -6,35 +6,58 @@ import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
+import DefinitionBox from '../components/DefinitionBox';
 import { generateServiceSchema, generateFAQSchema } from '../lib/schema';
+import { serviceDefinitions, statistics } from '../lib/definitions';
 
 const faqs = [
   {
     question: 'How much does event photography cost in Modesto?',
     answer:
-      'Event photography pricing is custom based on your event size, duration, and coverage needs. Whether you need a few hours of coverage or full-day documentation, we provide personalized quotes. Contact us with your event details for an accurate estimate of our services.',
+      'Event photography pricing is custom based on your event size, duration, and coverage needs. A 4-hour event typically costs $1,500-$2,500 with one photographer. A full-day event (8+ hours) typically costs $2,500-$4,500 with one photographer. Multi-photographer events (200+ guests) cost $3,500-$6,000+. Contact us with your event date, expected attendance, and coverage needs for a personalized quote within 24 hours.',
   },
   {
     question: 'Do you provide photos during the event?',
     answer:
-      'Yes! We photograph throughout your entire event and deliver professionally edited photos within 24-48 hours via our secure SpotMyPhotos gallery. Attendees can view and download photos immediately, making it perfect for real-time social media updates and event follow-up.',
+      'Yes! We photograph throughout your entire event and deliver professionally edited photos within 24-48 hours via our secure SpotMyPhotos gallery. Attendees can view, download, and share photos immediately, making it perfect for real-time social media updates, event follow-up, and attendee engagement. This rapid delivery enables live social media updates during and immediately after your event.',
   },
   {
     question: 'How many photos do we receive from our event?',
     answer:
-      'The number of photos depends on event length and coverage. A 4-hour event typically produces 300-500 professionally edited photos. A full-day event can produce 600-800+ photos. We curate and deliver only the best shots—no filler photos—so you get quality over quantity.',
+      'Event photo counts depend on duration and coverage needs. A 4-hour event with one photographer typically produces 300-500 professionally curated photos. A full-day (8-hour) event typically produces 600-800+ photos. All photos are professionally color-corrected and edited to the same high standard. For example, recent events: a 3-hour corporate meeting produced 280 photos, a 4-hour conference produced 480 photos, and a 6-hour gala produced 620 photos.',
   },
   {
     question: 'Can you handle large corporate events?',
     answer:
-      'Absolutely! For larger events (200+ guests), we deploy multiple photographers to ensure complete coverage across all areas. We coordinate team photographers and deliver all images from the same professional vision. We\'ve successfully covered major events for Comcast, Save Mart, and California Lawyers Association.',
+      'Absolutely! For larger events (200+ guests), we deploy multiple photographers to ensure complete coverage across all areas and ensure no important moments are missed. We coordinate team photographers to maintain consistency and deliver all images from the same professional vision. We\'ve successfully covered major events for organizations like Comcast, Save Mart, California Lawyers Association, and Valley First Credit Union.',
   },
   {
     question: 'Do you do step and repeat photography at events?',
     answer:
-      'Yes! We provide professional step and repeat backdrop photography perfect for sponsor recognition, brand activation, and creating shareable moments. This is ideal for galas, award ceremonies, and fundraising events. Photos are perfect for social media and event promotion.',
+      'Yes! We provide professional step and repeat backdrop photography with branded backgrounds perfect for sponsor recognition, brand activation, and creating shareable moments. This service is ideal for galas, award ceremonies, fundraising events, and product launches. Photos are instantly available for social media sharing, event promotion, and sponsor documentation. Typical investment: $300-$500 for 2-3 hour step and repeat station.',
+  },
+  {
+    question: 'When should we book you for our event?',
+    answer:
+      'We recommend booking as far in advance as possible—ideally 2-3 months before your event. This ensures your preferred date is available and gives us time to plan coverage details. However, we understand that some events are planned last-minute. Contact us even with shorter notice; we often have availability for rush bookings. Peak season (spring and fall) books quickly, so early booking is especially important then.',
+  },
+  {
+    question: 'How many photographers do you send and can we have multiple photographers?',
+    answer:
+      'For most events, we send one primary photographer plus a second photographer for events 200+ guests or full-day coverage. For larger or multi-location events, we can deploy additional photographers. Multiple photographers ensure no important moments are missed, which is especially valuable for large galas, conferences, or events with simultaneous activities in different areas. We discuss photographer count during planning based on your event size and venue.',
+  },
+  {
+    question: 'What if the event runs longer than scheduled?',
+    answer:
+      'Events sometimes run over! We stay as long as needed at no penalty. If your event extends significantly beyond the original time, we discuss it on-site and adjust accordingly. Our goal is complete coverage, not watching the clock. Just let us know about potential overages during planning so we can adjust scheduling if we have other commitments that day.',
+  },
+  {
+    question: 'Do you provide unedited photos or RAW files?',
+    answer:
+      'We deliver all photos professionally edited and color-corrected—which is the industry standard and what most clients prefer. RAW files are rarely requested, but we can discuss custom arrangements if needed. Our editing ensures consistency, proper color balance, and professional presentation across all event images. This professional editing is included in the photography fee.',
   },
 ];
+
 
 export const metadata: Metadata = {
   title: 'Corporate Event Photography Modesto | Conference & Gala Photography',
@@ -76,6 +99,16 @@ export default function EventPhotographyPage() {
         tag="Professional Event Coverage & Documentation"
         gradient
       />
+
+      {/* Definition Box */}
+      <DefinitionBox
+        term={serviceDefinitions.eventPhotography.term}
+        definition={serviceDefinitions.eventPhotography.definition}
+      >
+        <p className="text-[var(--color-text-body)] mt-4">
+          {serviceDefinitions.eventPhotography.context}
+        </p>
+      </DefinitionBox>
 
       <main id="main-content">
         {/* Gallery */}
