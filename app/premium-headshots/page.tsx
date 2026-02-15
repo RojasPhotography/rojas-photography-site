@@ -9,9 +9,8 @@ import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import BookingScheduler from '../components/BookingScheduler';
 import DefinitionBox from '../components/DefinitionBox';
-import ComparisonTable from '../components/ComparisonTable';
 import { generateServiceSchema, generateFAQSchema } from '../lib/schema';
-import { serviceDefinitions, comparisons, statistics } from '../lib/definitions';
+import { serviceDefinitions, statistics } from '../lib/definitions';
 
 export const metadata: Metadata = {
   title: 'Professional Headshots Modesto CA | $150 Session | Rojas Photography',
@@ -111,14 +110,6 @@ export default function PremiumHeadshotsPage() {
           {serviceDefinitions.premiumHeadshots.context}
         </p>
       </DefinitionBox>
-
-      {/* Comparison Table */}
-      <ComparisonTable
-        title={comparisons.studioVsOnSite.title}
-        column1Label={comparisons.studioVsOnSite.column1}
-        column2Label={comparisons.studioVsOnSite.column2}
-        rows={comparisons.studioVsOnSite.rows}
-      />
 
       <main id="main-content">
         {/* CTA Buttons */}

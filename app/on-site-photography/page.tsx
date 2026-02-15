@@ -8,9 +8,8 @@ import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
-import ComparisonTable from '../components/ComparisonTable';
 import { generateServiceSchema, generateFAQSchema } from '../lib/schema';
-import { serviceDefinitions, comparisons, statistics } from '../lib/definitions';
+import { serviceDefinitions, statistics } from '../lib/definitions';
 
 const faqs = [
   {
@@ -111,14 +110,6 @@ export default function OnSitePhotographyPage() {
           {serviceDefinitions.onsitePhotography.context}
         </p>
       </DefinitionBox>
-
-      {/* Comparison Table */}
-      <ComparisonTable
-        title={comparisons.studioVsOnSite.title}
-        column1Label={comparisons.studioVsOnSite.column1}
-        column2Label={comparisons.studioVsOnSite.column2}
-        rows={comparisons.studioVsOnSite.rows}
-      />
 
       <main id="main-content">
         {/* Gallery */}
