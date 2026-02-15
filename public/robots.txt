@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*?*sort=
+Sitemap: https://rojasphotography.net/sitemap.xml
