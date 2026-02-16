@@ -146,15 +146,6 @@ export default function HomePage() {
                 />
               </SectionReveal>
             </div>
-
-            <SectionReveal className="text-center mt-12">
-              <Link
-                href="/work"
-                className="btn-outline px-8 py-3 font-semibold rounded-full inline-block"
-              >
-                View All Services
-              </Link>
-            </SectionReveal>
           </div>
         </section>
 

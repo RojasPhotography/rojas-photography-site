@@ -164,12 +164,6 @@ export default function Navigation() {
             </div>
 
             <Link
-              href="/work"
-              className="nav-link text-sm font-medium tracking-wide hover:text-[var(--color-primary)] transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--color-primary)] hover:after:w-full after:transition-all after:duration-300"
-            >
-              Work
-            </Link>
-            <Link
               href="/about-rojas-photography"
               className="nav-link text-sm font-medium tracking-wide hover:text-[var(--color-primary)] transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--color-primary)] hover:after:w-full after:transition-all after:duration-300"
             >
@@ -321,18 +315,10 @@ export default function Navigation() {
             </div>
 
             <Link
-              href="/work"
-              className="mobile-nav-item text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-3.5 rounded-lg transition-all duration-200 border-l-4 border-transparent hover:border-[var(--color-primary)]"
-              onClick={closeMenu}
-              style={{ animationDelay: '0.15s' }}
-            >
-              Work
-            </Link>
-            <Link
               href="/about-rojas-photography"
               className="mobile-nav-item text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-3.5 rounded-lg transition-all duration-200 border-l-4 border-transparent hover:border-[var(--color-primary)]"
               onClick={closeMenu}
-              style={{ animationDelay: '0.2s' }}
+              style={{ animationDelay: '0.15s' }}
             >
               About
             </Link>
@@ -340,7 +326,7 @@ export default function Navigation() {
               href="/contact-quote"
               className="mobile-nav-item text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-3.5 rounded-lg transition-all duration-200 border-l-4 border-transparent hover:border-[var(--color-primary)]"
               onClick={closeMenu}
-              style={{ animationDelay: '0.25s' }}
+              style={{ animationDelay: '0.2s' }}
             >
               Contact
             </Link>

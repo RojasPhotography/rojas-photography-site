@@ -7,7 +7,7 @@ export const serviceDefinitions = {
   premiumHeadshots: {
     term: 'Professional In-Studio Headshots',
     definition: `Professional in-studio headshots are guided photography sessions that produce polished, authentic portraits for LinkedIn, company websites, and business marketing. Unlike casual photos, professional headshots at Rojas Photography include real-time coaching on posing, expression, and confidence, professional lighting and studio equipment, wardrobe consultation, real-time image review, and professional editing with delivery within 48 hours.`,
-    context: `A professional headshot typically costs $150 for the session plus $150 per image selected, with most clients investing $600–$1,150 for 3-5 polished images.`,
+    context: `Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love—no package minimums, no pressure.`,
   },
   onsitePhotography: {
     term: 'On-Site Corporate Photography',
