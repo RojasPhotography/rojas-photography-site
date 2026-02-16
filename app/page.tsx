@@ -279,7 +279,7 @@ export default function HomePage() {
                     alt="Alfonso and Niomi Rojas - Founders of Rojas Photography"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover"
+                    className="object-cover object-[50%_20%]"
                   />
                 </div>
               </SectionReveal>

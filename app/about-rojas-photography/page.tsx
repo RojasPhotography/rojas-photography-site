@@ -48,7 +48,7 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 gap-12 items-start mb-24">
               <SectionReveal>
                 <div className="rounded-2xl overflow-hidden relative aspect-[4/3]">
-                  <Image src="/images/Alfonso+Niomi-0026.jpg" alt="Alfonso and Niomi Rojas - Founders of Rojas Photography" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                  <Image src="/images/Alfonso+Niomi-0026.jpg" alt="Alfonso and Niomi Rojas - Founders of Rojas Photography" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover object-[50%_20%]" />
                 </div>
               </SectionReveal>
 
