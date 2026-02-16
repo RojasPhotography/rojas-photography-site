@@ -252,7 +252,7 @@ export default function PremiumHeadshotsPage() {
             </SectionReveal>
 
             <div className="flex justify-center">
-              <BookingScheduler />
+              <BookingScheduler height={750} />
             </div>
           </div>
         </section>
