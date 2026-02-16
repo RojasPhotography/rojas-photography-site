@@ -56,7 +56,7 @@ export default function PremiumHeadshotsPage() {
     {
       question: 'Do you provide makeup and styling for headshots?',
       answer:
-        'We don\'t provide makeup application directly, but we do offer professional wardrobe consultation to help you select looks that represent your brand. Many clients invest in professional makeup (typical cost: $50–$100) for extra polish. We can recommend local makeup artists if needed. Styling consultation is included with every session at no additional cost, and our photographers provide real-time posing direction throughout.',
+        'We don\'t provide makeup application in-studio, but we do offer professional wardrobe consultation to help you select looks that represent your brand. We can recommend trusted local makeup artists if needed. Many clients schedule makeup appointments before their session for a polished, camera-ready look. Styling consultation is included with every session at no additional cost, and our photographers provide real-time posing direction throughout.',
     },
     {
       question: 'Can I use these headshots for LinkedIn and my website?',
@@ -278,7 +278,7 @@ export default function PremiumHeadshotsPage() {
             {
               question: 'Do you provide makeup and styling for headshots?',
               answer:
-                'We don\'t provide makeup application, but we do offer professional wardrobe consultation to help you select looks that represent your brand. We can recommend local makeup artists if needed. Many clients bring their own makeup artist for a polished look, which works great in our studio.',
+                'We don\'t provide makeup application in-studio, but we do offer professional wardrobe consultation to help you select looks that represent your brand. We can recommend trusted local makeup artists if needed. Many clients schedule makeup appointments before their session for a polished, camera-ready look.',
             },
             {
               question: 'Can I use these headshots for LinkedIn and my website?',
