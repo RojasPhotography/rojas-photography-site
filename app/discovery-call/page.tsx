@@ -95,7 +95,7 @@ export default function DiscoveryCallPage() {
 
             <div className="flex justify-center">
               {isMounted && (
-                <iframe name="hats_scheduler_discovery" style={{ margin: '20px' }} frameBorder={0} width="100%" height="600" src="https://Rojasheadshots.17hats.com/p#/scheduling/rrhknvrrwcvggbprgbngdvgzcdwwbpnb?embed=true&tp=false&hide_desc=false" />
+                <iframe name="hats_scheduler_discovery" style={{ margin: '20px', minHeight: '900px' }} frameBorder={0} width="100%" height="900" src="https://Rojasheadshots.17hats.com/p#/scheduling/rrhknvrrwcvggbprgbngdvgzcdwwbpnb?embed=true&tp=false&hide_desc=false" />
               )}
             </div>
 
