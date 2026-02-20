@@ -126,21 +126,60 @@ export default function PremiumHeadshotsPage() {
 
         {/* Headshot Gallery */}
         <section className="py-16 px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-text-dark)]">
                 Our Premium Corporate Headshots
               </h2>
+              <p className="text-center text-[var(--color-text-body)] mb-12 max-w-2xl mx-auto">
+                Professional headshots for attorneys, executives, financial advisors, healthcare professionals, and business leaders across Modesto and the Central Valley.
+              </p>
             </SectionReveal>
-            <div className="grid md:grid-cols-3 gap-4">
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative h-96">
-                <Image src="/images/Gina-0026 (1).jpg" alt="Professional corporate headshot - Modesto photographer" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-attorney-01.jpg" alt="Professional attorney headshot - Modesto corporate photographer" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative h-96">
-                <Image src="/images/Miguel-(2 of 6) (1).jpg" alt="Executive headshot session in Modesto studio" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-financial-advisor-01.jpg" alt="Financial advisor professional headshot - Central Valley" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative h-96">
-                <Image src="/images/Joyce-0029.jpg" alt="Professional business headshot - Central Valley" fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-healthcare-executive-01.jpg" alt="Healthcare executive headshot - Modesto professional photographer" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-realestate-agent.jpg" alt="Real estate agent professional headshot - Modesto" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-executive.jpg" alt="Corporate executive headshot - professional photography Modesto" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-attorney-02.jpg" alt="Professional attorney headshot - Modesto law firm photography" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-cpa-finance-01.jpg" alt="CPA finance professional headshot - Modesto accountant photography" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-mortgage-lender-01.jpg" alt="Mortgage lender professional headshot - Central Valley" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-sales-manager-01.jpg" alt="Sales manager professional headshot - Modesto corporate photography" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-comcast-exectutive.jpg" alt="Corporate executive headshot - Modesto business professional photography" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-attorney-03.jpg" alt="Professional headshot for attorney - Modesto legal photography" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-attorney-familylaw-01.jpg" alt="Family law attorney headshot - Modesto professional photographer" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-mortgage-lender-02.jpg" alt="Mortgage lender headshot - Central Valley professional photography" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-sales-manager-02.jpg" alt="Sales professional headshot - Modesto business photography" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-attorney-04.jpg" alt="Professional attorney corporate headshot - Modesto CA" fill sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw" className="object-cover" />
               </SectionReveal>
             </div>
           </div>
