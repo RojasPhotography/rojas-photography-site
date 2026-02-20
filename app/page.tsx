@@ -29,6 +29,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Corporate Photography Modesto CA | Professional Headshots & Video',
+    description:
+      'Expert corporate photography in Modesto and Central Valley. Professional headshots, on-site photography, commercial photography, video production, and event coverage. Trusted by 500+ executives.',
+    images: ['/images/Hero Image1.jpg'],
+  },
 };
 
 export default function HomePage() {
