@@ -141,3 +141,58 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
     })),
   };
 }
+
+/**
+ * Generate Person schema for founders/team members
+ */
+export function generatePersonSchema() {
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': 'https://rojasphotography.net/about-rojas-photography#alfonso',
+      name: 'Alfonso Rojas',
+      jobTitle: 'Founder & Lead Photographer',
+      description:
+        'Professional corporate photographer with 15+ years of leadership experience. Specializes in executive headshots, corporate photography, and business videography.',
+      image: 'https://rojasphotography.net/images/Alfonso+Niomi-0026.jpg',
+      url: 'https://rojasphotography.net/about-rojas-photography',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Rojas Photography',
+        url: 'https://rojasphotography.net',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Modesto',
+        addressRegion: 'CA',
+        postalCode: '95350',
+        addressCountry: 'US',
+      },
+      sameAs: ['https://www.instagram.com/rojasphotographymodesto/'],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      '@id': 'https://rojasphotography.net/about-rojas-photography#niomi',
+      name: 'Niomi Rojas',
+      jobTitle: 'Co-Founder & Operations Director',
+      description:
+        'Business operations expert with 15+ years of experience in HR and client relations. Specializes in client satisfaction, team coordination, and event management.',
+      image: 'https://rojasphotography.net/images/Alfonso+Niomi-0026.jpg',
+      url: 'https://rojasphotography.net/about-rojas-photography',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Rojas Photography',
+        url: 'https://rojasphotography.net',
+      },
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Modesto',
+        addressRegion: 'CA',
+        postalCode: '95350',
+        addressCountry: 'US',
+      },
+    },
+  ];
+}

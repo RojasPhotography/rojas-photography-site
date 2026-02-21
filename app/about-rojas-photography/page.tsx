@@ -4,6 +4,8 @@ import { CheckCircle2, Users, Award, Zap } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import CTASection from '../components/CTASection';
+import SchemaScript from '../components/SchemaScript';
+import { generatePersonSchema } from '../lib/schema';
 
 export const metadata: Metadata = {
   title: 'About Rojas Photography | Modesto Corporate Photographers',
@@ -29,13 +31,19 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const personSchemas = generatePersonSchema();
+
   return (
-    <div className="min-h-screen bg-white">
-      <HeroSection
-        title="About Rojas Photography"
-        subtitle="Professional photographers dedicated to creating authentic corporate headshots and business imagery that elevate your professional brand."
-        gradient
-      />
+    <>
+      {personSchemas.map((schema, index) => (
+        <SchemaScript key={index} schema={schema} />
+      ))}
+      <div className="min-h-screen bg-white">
+        <HeroSection
+          title="About Rojas Photography"
+          subtitle="Professional photographers dedicated to creating authentic corporate headshots and business imagery that elevate your professional brand."
+          gradient
+        />
 
       <main id="main-content">
         {/* Our Story */}
@@ -236,6 +244,7 @@ export default function AboutPage() {
           dark={false}
         />
       </main>
-    </div>
+      </div>
+    </>
   );
 }
