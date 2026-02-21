@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Camera, Users, Briefcase, Video, Calendar } from 'lucide-react';
 import HeroSection from './components/HeroSection';
 import SectionReveal from './components/SectionReveal';
 import TestimonialCard from './components/TestimonialCard';
@@ -151,6 +152,124 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-cover"
                 />
+              </SectionReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="py-20 md:py-28 px-8 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <SectionReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
+                  Our Services
+                </h2>
+                <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
+                  Professional photography and video services for businesses across Modesto and the Central Valley
+                </p>
+              </div>
+            </SectionReveal>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Premium Headshots */}
+              <SectionReveal>
+                <Link href="/premium-headshots" className="block group">
+                  <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all h-full">
+                    <div className="w-14 h-14 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      <Camera className="text-[var(--color-primary)]" size={28} />
+                    </div>
+                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">
+                      Premium Headshots
+                    </h3>
+                    <p className="text-[var(--color-text-body)] mb-4 leading-relaxed">
+                      Professional in-studio headshots with real-time coaching. Perfect for executives, attorneys, and business professionals.
+                    </p>
+                    <span className="text-[var(--color-primary)] font-semibold group-hover:underline">
+                      Learn More →
+                    </span>
+                  </div>
+                </Link>
+              </SectionReveal>
+
+              {/* On-Site Photography */}
+              <SectionReveal>
+                <Link href="/on-site-photography" className="block group">
+                  <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all h-full">
+                    <div className="w-14 h-14 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      <Users className="text-[var(--color-primary)]" size={28} />
+                    </div>
+                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">
+                      On-Site Photography
+                    </h3>
+                    <p className="text-[var(--color-text-body)] mb-4 leading-relaxed">
+                      We bring our studio to your office. Ideal for teams of 10+ with 24-hour turnaround and minimal disruption.
+                    </p>
+                    <span className="text-[var(--color-primary)] font-semibold group-hover:underline">
+                      Learn More →
+                    </span>
+                  </div>
+                </Link>
+              </SectionReveal>
+
+              {/* Commercial Photography */}
+              <SectionReveal>
+                <Link href="/commercial" className="block group">
+                  <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all h-full">
+                    <div className="w-14 h-14 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      <Briefcase className="text-[var(--color-primary)]" size={28} />
+                    </div>
+                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">
+                      Commercial Photography
+                    </h3>
+                    <p className="text-[var(--color-text-body)] mb-4 leading-relaxed">
+                      Product, architectural, and brand photography for websites, marketing campaigns, and e-commerce.
+                    </p>
+                    <span className="text-[var(--color-primary)] font-semibold group-hover:underline">
+                      Learn More →
+                    </span>
+                  </div>
+                </Link>
+              </SectionReveal>
+
+              {/* Video Production */}
+              <SectionReveal>
+                <Link href="/video" className="block group">
+                  <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all h-full">
+                    <div className="w-14 h-14 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      <Video className="text-[var(--color-primary)]" size={28} />
+                    </div>
+                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">
+                      Video Production
+                    </h3>
+                    <p className="text-[var(--color-text-body)] mb-4 leading-relaxed">
+                      Corporate videos, testimonials, and aerial drone footage by FAA Part 107 certified pilots.
+                    </p>
+                    <span className="text-[var(--color-primary)] font-semibold group-hover:underline">
+                      Learn More →
+                    </span>
+                  </div>
+                </Link>
+              </SectionReveal>
+
+              {/* Event Photography */}
+              <SectionReveal>
+                <Link href="/event-photography" className="block group">
+                  <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all h-full">
+                    <div className="w-14 h-14 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                      <Calendar className="text-[var(--color-primary)]" size={28} />
+                    </div>
+                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">
+                      Event Photography
+                    </h3>
+                    <p className="text-[var(--color-text-body)] mb-4 leading-relaxed">
+                      Professional coverage for corporate events, conferences, and networking functions with same-day delivery options.
+                    </p>
+                    <span className="text-[var(--color-primary)] font-semibold group-hover:underline">
+                      Learn More →
+                    </span>
+                  </div>
+                </Link>
               </SectionReveal>
             </div>
           </div>
