@@ -346,11 +346,11 @@ export default function HomePage() {
                 />
               </SectionReveal>
 
-              {/* Small - Gina Headshot */}
+              {/* Small - Realtor Headshot */}
               <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/Gina-0026 (1).jpg"
-                  alt="Professional headshot - executive woman"
+                  src="/images/headshots/headshot-realtor-01.jpg"
+                  alt="Professional realtor headshot"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 25vw"
