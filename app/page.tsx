@@ -219,8 +219,8 @@ export default function HomePage() {
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
                 <Image
-                  src="/images/Gina-0026 (1).jpg"
-                  alt="Professional corporate headshot - executive woman"
+                  src="/images/headshots/headshot-ceo-nutrition.jpg"
+                  alt="Professional corporate headshot - CEO executive"
                   fill
                   sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-cover"
