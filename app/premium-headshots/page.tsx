@@ -191,6 +191,34 @@ export default function PremiumHeadshotsPage() {
           </div>
         </section>
 
+        {/* Mid-Page CTA */}
+        <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Ready to Elevate Your Professional Image?
+              </h2>
+              <p className="text-lg mb-8 text-white/90">
+                Schedule your premium headshot session today and get professional images delivered within 48 hours.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/discovery-call"
+                  className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+                >
+                  Book Your Session
+                </Link>
+                <a
+                  href="tel:2093803727"
+                  className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+                >
+                  Call 209-380-3727
+                </a>
+              </div>
+            </SectionReveal>
+          </div>
+        </section>
+
         {/* What's Included */}
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
