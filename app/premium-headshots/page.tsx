@@ -136,7 +136,7 @@ export default function PremiumHeadshotsPage() {
               </p>
             </SectionReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Row 1: Kaiser Medical - White background leads */}
+              {/* Row 1: Kaiser Medical + Healthcare Executive */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-kaiser-medical-02.jpg" alt="Kaiser healthcare professional headshot - medical photography Central Valley" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
@@ -144,27 +144,27 @@ export default function PremiumHeadshotsPage() {
                 <Image src="/images/headshots/headshot-kaiser-medical-01.jpg" alt="Kaiser medical professional headshot - healthcare photography Modesto" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-healthcare-executive-01.jpg" alt="Healthcare executive headshot - Modesto professional photographer" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+              </SectionReveal>
+              {/* Row 2: Kaiser Medical continues + Attorneys begin */}
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-kaiser-medical-03.jpg" alt="Kaiser medical staff headshot - professional healthcare photography Modesto" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
-              {/* Row 2: Attorneys - Mix of white backgrounds */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-attorney-01.jpg" alt="Professional attorney headshot - Modesto corporate photographer" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-attorney-02.jpg" alt="Professional attorney headshot - Modesto law firm photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
+              {/* Row 3: Attorneys continued - White background accent */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-attorney-04.jpg" alt="Professional attorney corporate headshot - Modesto CA" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
-              {/* Row 3: Attorneys continued - White background accent */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-attorney-03.jpg" alt="Professional headshot for attorney - Modesto legal photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-attorney-familylaw-01.jpg" alt="Family law attorney headshot - Modesto professional photographer" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
-              </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
-                <Image src="/images/headshots/headshot-healthcare-executive-01.jpg" alt="Healthcare executive headshot - Modesto professional photographer" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               {/* Row 4: Financial & Real Estate */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
