@@ -203,18 +203,18 @@ export default function PremiumHeadshotsPage() {
                 Schedule your premium headshot session today and get professional images delivered within 48 hours.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/discovery-call"
+                <a
+                  href="#booking-heading"
                   className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
                   Book Your Session
-                </Link>
-                <a
-                  href="tel:2093803727"
+                </a>
+                <Link
+                  href="/discovery-call"
                   className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Call 209-380-3727
-                </a>
+                  Have Questions?
+                </Link>
               </div>
             </SectionReveal>
           </div>
