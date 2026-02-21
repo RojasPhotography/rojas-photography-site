@@ -368,6 +368,17 @@ export default function HomePage() {
                 />
               </SectionReveal>
 
+              {/* Small - Attorney Headshot */}
+              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
+                <Image
+                  src="/images/headshots/headshot-attorney-03.jpg"
+                  alt="Professional attorney headshot"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+              </SectionReveal>
+
               {/* Large Featured - Event */}
               <SectionReveal className="md:col-span-2 md:row-span-2 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
