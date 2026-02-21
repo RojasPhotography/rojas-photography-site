@@ -385,7 +385,7 @@ export default function HomePage() {
                   src="/images/DoctorOffice 4.jpg"
                   alt="Commercial architectural photography"
                   fill
-                  className="object-cover scale-90"
+                  className="object-cover object-[50%_25%] scale-90"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </SectionReveal>
