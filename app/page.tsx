@@ -102,19 +102,31 @@ export default function HomePage() {
               {/* Premium Headshots */}
               <SectionReveal>
                 <Link href="/premium-headshots" className="block group">
-                  <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all h-full">
-                    <div className="w-14 h-14 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <Camera className="text-[var(--color-primary)]" size={28} />
+                  <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                    {/* Background Image */}
+                    <Image
+                      src="/images/headshots/headshot-ceo-nutrition.jpg"
+                      alt="Premium Headshots - Professional corporate headshot"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
+                    {/* Content */}
+                    <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                      <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                        <Camera className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-3">
+                        Premium Headshots
+                      </h3>
+                      <p className="text-white/90 mb-4 leading-relaxed">
+                        Professional in-studio headshots with real-time coaching. Perfect for executives, attorneys, and business professionals.
+                      </p>
+                      <span className="text-white font-semibold group-hover:underline">
+                        Learn More →
+                      </span>
                     </div>
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">
-                      Premium Headshots
-                    </h3>
-                    <p className="text-[var(--color-text-body)] mb-4 leading-relaxed">
-                      Professional in-studio headshots with real-time coaching. Perfect for executives, attorneys, and business professionals.
-                    </p>
-                    <span className="text-[var(--color-primary)] font-semibold group-hover:underline">
-                      Learn More →
-                    </span>
                   </div>
                 </Link>
               </SectionReveal>
@@ -122,19 +134,31 @@ export default function HomePage() {
               {/* On-Site Photography */}
               <SectionReveal>
                 <Link href="/on-site-photography" className="block group">
-                  <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all h-full">
-                    <div className="w-14 h-14 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <Users className="text-[var(--color-primary)]" size={28} />
+                  <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                    {/* Background Image */}
+                    <Image
+                      src="/images/BB Individual Headshot Session.png"
+                      alt="On-Site Photography - Team headshot session"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
+                    {/* Content */}
+                    <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                      <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                        <Users className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-3">
+                        On-Site Photography
+                      </h3>
+                      <p className="text-white/90 mb-4 leading-relaxed">
+                        We bring our studio to your office. Ideal for teams of 10+ with 24-hour turnaround and minimal disruption.
+                      </p>
+                      <span className="text-white font-semibold group-hover:underline">
+                        Learn More →
+                      </span>
                     </div>
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">
-                      On-Site Photography
-                    </h3>
-                    <p className="text-[var(--color-text-body)] mb-4 leading-relaxed">
-                      We bring our studio to your office. Ideal for teams of 10+ with 24-hour turnaround and minimal disruption.
-                    </p>
-                    <span className="text-[var(--color-primary)] font-semibold group-hover:underline">
-                      Learn More →
-                    </span>
                   </div>
                 </Link>
               </SectionReveal>
@@ -142,19 +166,31 @@ export default function HomePage() {
               {/* Commercial Photography */}
               <SectionReveal>
                 <Link href="/commercial" className="block group">
-                  <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all h-full">
-                    <div className="w-14 h-14 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <Briefcase className="text-[var(--color-primary)]" size={28} />
+                  <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                    {/* Background Image */}
+                    <Image
+                      src="/images/DoctorOffice 4.jpg"
+                      alt="Commercial Photography - Professional business photography"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
+                    {/* Content */}
+                    <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                      <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                        <Briefcase className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-3">
+                        Commercial Photography
+                      </h3>
+                      <p className="text-white/90 mb-4 leading-relaxed">
+                        Product, architectural, and brand photography for websites, marketing campaigns, and e-commerce.
+                      </p>
+                      <span className="text-white font-semibold group-hover:underline">
+                        Learn More →
+                      </span>
                     </div>
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">
-                      Commercial Photography
-                    </h3>
-                    <p className="text-[var(--color-text-body)] mb-4 leading-relaxed">
-                      Product, architectural, and brand photography for websites, marketing campaigns, and e-commerce.
-                    </p>
-                    <span className="text-[var(--color-primary)] font-semibold group-hover:underline">
-                      Learn More →
-                    </span>
                   </div>
                 </Link>
               </SectionReveal>
@@ -162,19 +198,31 @@ export default function HomePage() {
               {/* Video Production */}
               <SectionReveal>
                 <Link href="/video" className="block group">
-                  <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all h-full">
-                    <div className="w-14 h-14 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <Video className="text-[var(--color-primary)]" size={28} />
+                  <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                    {/* Background Image */}
+                    <Image
+                      src="/images/BBSI-Corp-Video.jpg"
+                      alt="Video Production - Corporate video production"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
+                    {/* Content */}
+                    <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                      <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                        <Video className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-3">
+                        Video Production
+                      </h3>
+                      <p className="text-white/90 mb-4 leading-relaxed">
+                        Corporate videos, testimonials, and aerial drone footage by FAA Part 107 certified pilots.
+                      </p>
+                      <span className="text-white font-semibold group-hover:underline">
+                        Learn More →
+                      </span>
                     </div>
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">
-                      Video Production
-                    </h3>
-                    <p className="text-[var(--color-text-body)] mb-4 leading-relaxed">
-                      Corporate videos, testimonials, and aerial drone footage by FAA Part 107 certified pilots.
-                    </p>
-                    <span className="text-[var(--color-primary)] font-semibold group-hover:underline">
-                      Learn More →
-                    </span>
                   </div>
                 </Link>
               </SectionReveal>
@@ -182,19 +230,31 @@ export default function HomePage() {
               {/* Event Photography */}
               <SectionReveal>
                 <Link href="/event-photography" className="block group">
-                  <div className="bg-white border border-gray-200 rounded-xl p-8 hover:shadow-lg transition-all h-full">
-                    <div className="w-14 h-14 bg-[var(--color-primary-light)] rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                      <Calendar className="text-[var(--color-primary)]" size={28} />
+                  <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                    {/* Background Image */}
+                    <Image
+                      src="/images/CLA AM 25 335.jpg"
+                      alt="Event Photography - Corporate event coverage"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    {/* Dark Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
+                    {/* Content */}
+                    <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                      <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                        <Calendar className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-3">
+                        Event Photography
+                      </h3>
+                      <p className="text-white/90 mb-4 leading-relaxed">
+                        Professional coverage for corporate events, conferences, and networking functions with same-day delivery options.
+                      </p>
+                      <span className="text-white font-semibold group-hover:underline">
+                        Learn More →
+                      </span>
                     </div>
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">
-                      Event Photography
-                    </h3>
-                    <p className="text-[var(--color-text-body)] mb-4 leading-relaxed">
-                      Professional coverage for corporate events, conferences, and networking functions with same-day delivery options.
-                    </p>
-                    <span className="text-[var(--color-primary)] font-semibold group-hover:underline">
-                      Learn More →
-                    </span>
                   </div>
                 </Link>
               </SectionReveal>
