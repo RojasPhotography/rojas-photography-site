@@ -1,22 +1,43 @@
-'use client';
-
-import { useEffect, useState } from 'react';
+import type { Metadata } from 'next';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import CTASection from '../components/CTASection';
+import ContactFormEmbed from '../components/ContactFormEmbed';
+
+export const metadata: Metadata = {
+  title: 'Contact Rojas Photography | Get a Quote for Professional Photography',
+  description:
+    'Contact Rojas Photography in Modesto for professional headshots, on-site photography, commercial, video, and event services. Call 209-380-3727 or request a quote online.',
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://rojasphotography.net/contact-quote',
+  },
+  openGraph: {
+    title: 'Contact Rojas Photography | Get a Quote',
+    description:
+      'Professional corporate photography in Modesto. Contact us for headshots, on-site photography, commercial, video, and event coverage. 24-hour response time.',
+    url: 'https://rojasphotography.net/contact-quote',
+    type: 'website',
+    images: [
+      {
+        url: '/images/Alfonso+Niomi-0026.jpg',
+        alt: 'Contact Rojas Photography - Professional photographers in Modesto CA',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Rojas Photography | Get a Quote',
+    description:
+      'Contact Rojas Photography in Modesto for professional headshots, on-site photography, commercial, video, and event services. Call 209-380-3727.',
+    images: ['/images/Alfonso+Niomi-0026.jpg'],
+  },
+};
 
 export default function ContactPage() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   return (
     <div className="min-h-screen bg-white">
-      <script type="text/javascript" src="https://Rojasheadshots.17hats.com/vendor/iframeSizer.min.js" />
-
       <HeroSection
         title="Let's Work Together"
         subtitle="Ready to transform your professional image? Get in touch with Rojas Photography. We're here to answer your questions and discuss your photography needs."
@@ -28,7 +49,9 @@ export default function ContactPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Get in Touch</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+                Get in Touch
+              </h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-6 mb-24">
               {[
@@ -61,16 +84,16 @@ export default function ContactPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-text-dark)]">Request a Quote</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-text-dark)]">
+                Request a Quote
+              </h2>
               <p className="text-center text-[var(--color-text-body)] mb-16 text-lg">
                 Tell us about your project and we&apos;ll provide a personalized quote within 24 hours.
               </p>
             </SectionReveal>
 
             <div className="flex justify-center">
-              {isMounted && (
-                <iframe name="lc_contact_form" frameBorder={0} width="100%" height="600" src="https://Rojasheadshots.17hats.com/p#/embed/pzxhhxtvwbkzwzxgzwgxvphnpdkrfwbt" />
-              )}
+              <ContactFormEmbed />
             </div>
 
             <p className="text-center text-[var(--color-text-muted)] text-sm mt-8">
@@ -83,7 +106,9 @@ export default function ContactPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Frequently Asked Questions</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+                Frequently Asked Questions
+              </h2>
             </SectionReveal>
 
             <div className="space-y-8">

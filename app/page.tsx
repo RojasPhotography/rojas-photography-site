@@ -93,7 +93,7 @@ export default function HomePage() {
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  Rojas Photography provides professional corporate photography and video services for businesses across Modesto and the Central Valley. From executive headshots to on-site team photography, commercial imagery, and video production, we help companies present their best professional image.
+                  Rojas Photography provides professional corporate photography and video services for businesses across Modesto and the Central Valley. From <Link href="/premium-headshots" className="text-[var(--color-primary)] hover:underline">executive headshots</Link> to <Link href="/on-site-photography" className="text-[var(--color-primary)] hover:underline">on-site team photography</Link>, <Link href="/commercial" className="text-[var(--color-primary)] hover:underline">commercial imagery</Link>, and <Link href="/video" className="text-[var(--color-primary)] hover:underline">video production</Link>, we help companies present their best professional image.
                 </p>
                 <p>
                   With 15+ years of corporate leadership experience, we understand what executives need. We've photographed 500+ professionals and know how to make people feel comfortable in front of the camera while capturing authentic, professional results.
@@ -306,7 +306,7 @@ export default function HomePage() {
               <SectionReveal className="md:col-span-2 md:row-span-2 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/headshots/headshot-ceo-nutrition.jpg"
-                  alt="Professional corporate headshot - CEO executive"
+                  alt="Professional CEO headshot Modesto - Executive corporate photography"
                   fill
                   className="object-cover object-[70%_50%]"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -317,7 +317,7 @@ export default function HomePage() {
               <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/headshots/headshot-attorney-03.jpg"
-                  alt="Professional attorney headshot"
+                  alt="Attorney headshot Modesto CA - Professional legal photography"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 25vw"
@@ -328,7 +328,7 @@ export default function HomePage() {
               <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/Joyce-0029.jpg"
-                  alt="Business professional headshot"
+                  alt="Business professional headshot Central Valley - Corporate photography"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 25vw"
@@ -339,7 +339,7 @@ export default function HomePage() {
               <SectionReveal className="md:col-span-2 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/MOVE Stanislaus-(3 of 28).jpg"
-                  alt="Commercial photography for business"
+                  alt="Commercial photography Modesto - Business team photography"
                   fill
                   className="object-cover object-[50%_20%]"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -350,7 +350,7 @@ export default function HomePage() {
               <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/headshots/headshot-realtor-01.jpg"
-                  alt="Professional realtor headshot"
+                  alt="Real estate agent headshot Modesto - Professional realtor photography"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 25vw"
@@ -361,7 +361,7 @@ export default function HomePage() {
               <SectionReveal className="md:col-span-2 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/Move Staff Group 9.jpg"
-                  alt="Team group photography - on-site session"
+                  alt="On-site team photography Modesto - Corporate group headshots"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -372,7 +372,7 @@ export default function HomePage() {
               <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/Miguel-(2 of 6) (1).jpg"
-                  alt="Professional executive headshot"
+                  alt="Executive headshot Modesto CA - Professional corporate photography"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 25vw"
@@ -383,7 +383,7 @@ export default function HomePage() {
               <SectionReveal className="md:col-span-2 md:row-span-2 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/CLA AM 25 335.jpg"
-                  alt="Corporate event photography"
+                  alt="Corporate event photography Central Valley - Professional event coverage"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -394,7 +394,7 @@ export default function HomePage() {
               <SectionReveal className="md:col-span-2 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/DoctorOffice 4.jpg"
-                  alt="Commercial architectural photography"
+                  alt="Commercial architectural photography Modesto - Professional business photography"
                   fill
                   className="object-cover object-[50%_25%] scale-90"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -405,7 +405,7 @@ export default function HomePage() {
               <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/BB Individual Headshot Session.png"
-                  alt="On-site team photography session"
+                  alt="On-site corporate photography Modesto - Team headshot sessions"
                   fill
                   className="object-cover object-[50%_30%]"
                   sizes="(max-width: 768px) 100vw, 25vw"
@@ -416,7 +416,7 @@ export default function HomePage() {
               <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/BBSI-Corp-Video.jpg"
-                  alt="Corporate video production"
+                  alt="Corporate video production Central Valley - Professional business videography"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 25vw"
@@ -519,9 +519,9 @@ export default function HomePage() {
         <section className="py-12 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-2xl mx-auto text-center">
             <SectionReveal>
-              <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-4">
                 Join 500+ Professionals Who Trust Rojas Photography
-              </h3>
+              </h2>
               <p className="text-[var(--color-text-body)] mb-6">
                 Let's create professional images that elevate your brand.
               </p>

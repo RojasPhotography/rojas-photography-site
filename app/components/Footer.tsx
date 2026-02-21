@@ -97,7 +97,7 @@ export default function Footer() {
                 alfonso@rojasphotography.net
               </a>
             </p>
-            <p className="text-sm">Modesto, CA</p>
+            <p className="text-sm">Modesto, CA 95350</p>
           </div>
         </div>
 

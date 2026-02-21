@@ -1,22 +1,43 @@
-'use client';
-
-import { useEffect, useState } from 'react';
+import type { Metadata } from 'next';
 import { CheckCircle2, Clock, Target, Users } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import CTASection from '../components/CTASection';
+import SchedulerEmbed from '../components/SchedulerEmbed';
+
+export const metadata: Metadata = {
+  title: 'Schedule Your Free Discovery Call | Rojas Photography Modesto',
+  description:
+    'Book your free 20-30 minute discovery call to discuss your professional photography needs in Modesto. Phone or video consultation. No obligation. Schedule today.',
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://rojasphotography.net/discovery-call',
+  },
+  openGraph: {
+    title: 'Schedule Your Free Discovery Call | Rojas Photography',
+    description:
+      'Free professional photography consultation in Modesto. Discuss your headshots, on-site photography, or commercial needs. Book your 20-30 minute call today.',
+    url: 'https://rojasphotography.net/discovery-call',
+    type: 'website',
+    images: [
+      {
+        url: '/images/Alfonso+Niomi-0026.jpg',
+        alt: 'Alfonso and Niomi Rojas - Professional photographers in Modesto',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Schedule Your Free Discovery Call | Rojas Photography',
+    description:
+      'Book your free 20-30 minute discovery call to discuss your professional photography needs in Modesto. No obligation.',
+    images: ['/images/Alfonso+Niomi-0026.jpg'],
+  },
+};
 
 export default function DiscoveryCallPage() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
   return (
     <div className="min-h-screen bg-white">
-      <script type="text/javascript" src="https://Rojasheadshots.17hats.com/vendor/iframeSizer.min.js" />
-
       <HeroSection
         title="Schedule Your Discovery Call"
         subtitle="Let's discuss your professional photography needs and create a customized solution that works for you."
@@ -28,7 +49,9 @@ export default function DiscoveryCallPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-20 text-[var(--color-text-dark)]">What Happens on a Discovery Call?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-20 text-[var(--color-text-dark)]">
+                What Happens on a Discovery Call?
+              </h2>
             </SectionReveal>
 
             <div className="grid md:grid-cols-2 gap-16">
@@ -87,16 +110,16 @@ export default function DiscoveryCallPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]" aria-labelledby="calendar-heading">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 id="calendar-heading" className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-text-dark)]">Pick Your Time</h2>
+              <h2 id="calendar-heading" className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-text-dark)]">
+                Pick Your Time
+              </h2>
               <p className="text-center text-[var(--color-text-body)] mb-16 text-lg">
                 Select a time that works for you. You can choose a phone or video call during checkout.
               </p>
             </SectionReveal>
 
             <div className="flex justify-center">
-              {isMounted && (
-                <iframe name="hats_scheduler_discovery" style={{ margin: '20px', minHeight: '900px' }} frameBorder={0} width="100%" height="900" src="https://Rojasheadshots.17hats.com/p#/scheduling/rrhknvrrwcvggbprgbngdvgzcdwwbpnb?embed=true&tp=false&hide_desc=false" />
-              )}
+              <SchedulerEmbed />
             </div>
 
             <p className="text-center text-[var(--color-text-muted)] text-sm mt-8">
@@ -109,7 +132,9 @@ export default function DiscoveryCallPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Why Schedule a Discovery Call?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+                Why Schedule a Discovery Call?
+              </h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-6">
               {[
@@ -132,7 +157,9 @@ export default function DiscoveryCallPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Questions About Discovery Calls?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+                Questions About Discovery Calls?
+              </h2>
             </SectionReveal>
 
             <div className="space-y-8">
