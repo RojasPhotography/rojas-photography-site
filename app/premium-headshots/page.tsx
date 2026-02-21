@@ -169,9 +169,9 @@ export default function PremiumHeadshotsPage() {
                 <Image src="/images/headshots/headshot-mortgage-lender-02.jpg" alt="Mortgage lender headshot - Central Valley professional photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
-                <Image src="/images/headshots/headshot-sales-manager-01.jpg" alt="Sales manager professional headshot - Modesto corporate photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+                <Image src="/images/headshots/headshot-sales-manager-01.jpg" alt="Sales manager professional headshot - Modesto corporate photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover object-[30%_50%]" />
               </SectionReveal>
-              {/* Row 6: Corporate Executives */}
+              {/* Row 5: Corporate Executives */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-executive.jpg" alt="Corporate executive headshot - professional photography Modesto" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
