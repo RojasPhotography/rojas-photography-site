@@ -150,9 +150,9 @@ export default function PremiumHeadshotsPage() {
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-finance-cpa.jpg" alt="Finance CPA professional headshot - Modesto accounting photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
-              {/* Row 3: Kaiser Medical continues */}
+              {/* Row 2: Comcast Executive */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
-                <Image src="/images/headshots/headshot-kaiser-medical-03.jpg" alt="Kaiser medical staff headshot - professional healthcare photography Modesto" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+                <Image src="/images/headshots/headshot-comcast-executive.jpg" alt="Comcast executive headshot - Modesto corporate leadership photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               {/* Row 3: Attorneys continued - White background accent */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
@@ -189,7 +189,7 @@ export default function PremiumHeadshotsPage() {
                 <Image src="/images/headshots/headshot-executive-cpa.jpg" alt="CPA executive headshot - Modesto financial professional photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
-                <Image src="/images/headshots/headshot-comcast-executive.jpg" alt="Comcast executive headshot - Modesto corporate leadership photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+                <Image src="/images/headshots/headshot-kaiser-medical-03.jpg" alt="Kaiser medical staff headshot - professional healthcare photography Modesto" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
             </div>
           </div>
