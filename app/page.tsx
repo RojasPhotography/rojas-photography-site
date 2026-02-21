@@ -341,7 +341,7 @@ export default function HomePage() {
                   src="/images/MOVE Stanislaus-(3 of 28).jpg"
                   alt="Commercial photography for business"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[50%_70%]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </SectionReveal>
@@ -357,14 +357,14 @@ export default function HomePage() {
                 />
               </SectionReveal>
 
-              {/* Small - Individual Session */}
-              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
+              {/* Medium Wide - Team Group Photo */}
+              <SectionReveal className="md:col-span-2 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/individual Headshot Website.png"
-                  alt="Individual headshot session"
+                  src="/images/Move Staff Group 9.jpg"
+                  alt="Team group photography - on-site session"
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 25vw"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </SectionReveal>
 
@@ -385,7 +385,7 @@ export default function HomePage() {
                   src="/images/DoctorOffice 4.jpg"
                   alt="Commercial architectural photography"
                   fill
-                  className="object-cover"
+                  className="object-cover scale-90"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </SectionReveal>
@@ -396,7 +396,7 @@ export default function HomePage() {
                   src="/images/BB Individual Headshot Session.png"
                   alt="On-site team photography session"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[50%_70%]"
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </SectionReveal>
