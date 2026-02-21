@@ -154,11 +154,11 @@ export default function PremiumHeadshotsPage() {
                 <Image src="/images/headshots/headshot-attorney-02.jpg" alt="Professional attorney headshot - Modesto law firm photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
-                <Image src="/images/headshots/headshot-attorney-03.jpg" alt="Professional headshot for attorney - Modesto legal photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+                <Image src="/images/headshots/headshot-attorney-04.jpg" alt="Professional attorney corporate headshot - Modesto CA" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               {/* Row 3: Attorneys continued - White background accent */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
-                <Image src="/images/headshots/headshot-attorney-04.jpg" alt="Professional attorney corporate headshot - Modesto CA" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+                <Image src="/images/headshots/headshot-attorney-03.jpg" alt="Professional headshot for attorney - Modesto legal photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-attorney-familylaw-01.jpg" alt="Family law attorney headshot - Modesto professional photographer" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
