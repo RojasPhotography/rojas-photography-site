@@ -341,7 +341,7 @@ export default function HomePage() {
                   src="/images/MOVE Stanislaus-(3 of 28).jpg"
                   alt="Commercial photography for business"
                   fill
-                  className="object-cover object-[50%_30%]"
+                  className="object-cover object-[50%_20%]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </SectionReveal>
