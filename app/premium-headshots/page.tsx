@@ -196,6 +196,9 @@ export default function PremiumHeadshotsPage() {
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-comcast-exectutive.jpg" alt="Corporate executive headshot - Modesto business professional photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-finance-cpa.jpg" alt="Finance CPA professional headshot - Modesto accounting photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+              </SectionReveal>
             </div>
           </div>
         </section>
