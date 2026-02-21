@@ -415,6 +415,33 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Discovery Call CTA #1 - After Portfolio */}
+        <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Ready to Discuss Your Photography Needs?
+              </h2>
+              <p className="text-lg mb-8 text-white/90">
+                Schedule a free discovery call to discuss your project, ask questions, and see if we're the right fit.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/discovery-call"
+                  className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+                >
+                  Schedule Discovery Call
+                </Link>
+                <a
+                  href="tel:2093803727"
+                  className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+                >
+                  Call 209-380-3727
+                </a>
+              </div>
+            </SectionReveal>
+          </div>
+        </section>
 
         {/* Social Proof Bar */}
         <SectionReveal>
@@ -474,6 +501,26 @@ export default function HomePage() {
                 />
               </SectionReveal>
             </div>
+          </div>
+        </section>
+
+        {/* Discovery Call CTA #2 - After Testimonials */}
+        <section className="py-12 px-8 bg-[var(--color-bg-warm)]">
+          <div className="max-w-2xl mx-auto text-center">
+            <SectionReveal>
+              <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-4">
+                Join 500+ Professionals Who Trust Rojas Photography
+              </h3>
+              <p className="text-[var(--color-text-body)] mb-6">
+                Let's create professional images that elevate your brand.
+              </p>
+              <Link
+                href="/discovery-call"
+                className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block"
+              >
+                Schedule Your Free Consultation
+              </Link>
+            </SectionReveal>
           </div>
         </section>
 
