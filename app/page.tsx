@@ -223,7 +223,7 @@ export default function HomePage() {
                   alt="Professional corporate headshot - CEO executive"
                   fill
                   sizes="(max-width: 768px) 50vw, 33vw"
-                  className="object-cover"
+                  className="object-cover object-[30%_50%]"
                 />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
