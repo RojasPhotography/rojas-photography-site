@@ -83,6 +83,30 @@ export default function HomePage() {
         </div>
       </HeroSection>
 
+      {/* Intro Section */}
+      <section className="py-16 md:py-20 px-8 bg-white border-b border-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <SectionReveal>
+            <div className="text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
+                Corporate Photography & Video Production in Modesto
+              </h2>
+              <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
+                <p>
+                  Rojas Photography provides professional corporate photography and video services for businesses across Modesto and the Central Valley. From executive headshots to on-site team photography, commercial imagery, and video production, we help companies present their best professional image.
+                </p>
+                <p>
+                  With 15+ years of corporate leadership experience, we understand what executives need. We've photographed 500+ professionals and know how to make people feel comfortable in front of the camera while capturing authentic, professional results.
+                </p>
+                <p>
+                  Whether you need a single headshot or comprehensive visual content for your entire organization, we bring the same level of professionalism and attention to detail to every project.
+                </p>
+              </div>
+            </div>
+          </SectionReveal>
+        </div>
+      </section>
+
       <main id="main-content">
         {/* Services Section */}
         <section className="py-20 md:py-28 px-8 bg-white">
