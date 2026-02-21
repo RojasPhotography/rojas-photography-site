@@ -313,11 +313,11 @@ export default function HomePage() {
                 />
               </SectionReveal>
 
-              {/* Small - Miguel Headshot */}
+              {/* Small - Attorney Headshot */}
               <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/Miguel-(2 of 6) (1).jpg"
-                  alt="Professional executive headshot"
+                  src="/images/headshots/headshot-attorney-03.jpg"
+                  alt="Professional attorney headshot"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 25vw"
@@ -368,11 +368,11 @@ export default function HomePage() {
                 />
               </SectionReveal>
 
-              {/* Small - Attorney Headshot */}
+              {/* Small - Miguel Headshot */}
               <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/headshots/headshot-attorney-03.jpg"
-                  alt="Professional attorney headshot"
+                  src="/images/Miguel-(2 of 6) (1).jpg"
+                  alt="Professional executive headshot"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 25vw"
