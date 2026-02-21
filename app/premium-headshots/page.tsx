@@ -148,7 +148,7 @@ export default function PremiumHeadshotsPage() {
               </SectionReveal>
               {/* Row 2: Finance CPA */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
-                <Image src="/images/headshots/headshot-finance-cpa.jpg" alt="Finance CPA professional headshot - Modesto accounting photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover object-[70%_50%]" />
+                <Image src="/images/headshots/headshot-finance-cpa.jpg" alt="Finance CPA professional headshot - Modesto accounting photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover object-[75%_50%]" />
               </SectionReveal>
               {/* Row 2: Comcast Executive */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
