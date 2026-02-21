@@ -257,6 +257,15 @@ export default function PremiumHeadshotsPage() {
                 <p className="text-[var(--color-text-body)]">Per Image: <span className="text-[var(--color-primary)] font-bold text-lg">$150 each</span></p>
                 <p className="text-[var(--color-text-muted)] text-sm mt-4">Only pay for the images you love. No package minimums, no surprises.</p>
               </div>
+              <div className="text-center mt-8">
+                <p className="text-[var(--color-text-body)] mb-4">Ready to get started?</p>
+                <a
+                  href="#booking-heading"
+                  className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block"
+                >
+                  Schedule Your Session
+                </a>
+              </div>
             </SectionReveal>
           </div>
         </section>
