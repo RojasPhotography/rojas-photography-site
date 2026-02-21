@@ -162,7 +162,7 @@ export default function PremiumHeadshotsPage() {
                 <Image src="/images/headshots/headshot-finance-ceo.jpg" alt="Finance CEO headshot - Modesto financial executive photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
-                <Image src="/images/headshots/headshot-attorney-familylaw-01.jpg" alt="Family law attorney headshot - Modesto professional photographer" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+                <Image src="/images/headshots/headshot-attorney-familylaw-01.jpg" alt="Family law attorney headshot - Modesto professional photographer" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover object-[40%_50%]" />
               </SectionReveal>
               {/* Row 4: Mortgage & Sales */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
