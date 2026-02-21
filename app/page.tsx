@@ -286,9 +286,9 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Portfolio Preview */}
+        {/* Portfolio Bento Grid */}
         <section className="py-20 md:py-28 px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
@@ -300,59 +300,115 @@ export default function HomePage() {
               </div>
             </SectionReveal>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+            {/* Bento Grid Layout */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[280px]">
+              {/* Large Featured - CEO Nutrition */}
+              <SectionReveal className="md:col-span-2 md:row-span-2 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/headshots/headshot-ceo-nutrition.jpg"
                   alt="Professional corporate headshot - CEO executive"
                   fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-cover object-[70%_50%]"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+
+              {/* Small - Miguel Headshot */}
+              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/Miguel-(2 of 6) (1).jpg"
-                  alt="Professional corporate headshot - executive man"
+                  alt="Professional executive headshot"
                   fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+
+              {/* Small - Joyce Headshot */}
+              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/Joyce-0029.jpg"
-                  alt="Professional corporate headshot - business woman"
+                  alt="Business professional headshot"
                   fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+
+              {/* Medium Wide - Commercial */}
+              <SectionReveal className="md:col-span-2 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/MOVE Stanislaus-(3 of 28).jpg"
                   alt="Commercial photography for business"
                   fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+
+              {/* Small - Gina Headshot */}
+              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/CLA AM 25 201.jpg"
-                  alt="Corporate event photography"
+                  src="/images/Gina-0026 (1).jpg"
+                  alt="Professional headshot - executive woman"
                   fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  className="object-cover scale-125"
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+
+              {/* Small - Individual Session */}
+              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
                   src="/images/individual Headshot Website.png"
                   alt="Individual headshot session"
                   fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
                   className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+              </SectionReveal>
+
+              {/* Large Featured - Event */}
+              <SectionReveal className="md:col-span-2 md:row-span-2 img-hover-zoom rounded-xl overflow-hidden relative">
+                <Image
+                  src="/images/CLA AM 25 335.jpg"
+                  alt="Corporate event photography"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </SectionReveal>
+
+              {/* Medium Wide - Doctor Office */}
+              <SectionReveal className="md:col-span-2 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
+                <Image
+                  src="/images/DoctorOffice 4.jpg"
+                  alt="Commercial architectural photography"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </SectionReveal>
+
+              {/* Small - On-Site Session */}
+              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
+                <Image
+                  src="/images/BB Individual Headshot Session.png"
+                  alt="On-site team photography session"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+              </SectionReveal>
+
+              {/* Small - Video Production */}
+              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
+                <Image
+                  src="/images/BBSI-Corp-Video.jpg"
+                  alt="Corporate video production"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </SectionReveal>
             </div>
