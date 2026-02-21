@@ -84,79 +84,6 @@ export default function HomePage() {
       </HeroSection>
 
       <main id="main-content">
-        {/* Portfolio Preview */}
-        <section className="py-20 md:py-28 px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <SectionReveal>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
-                  Our Work
-                </h2>
-                <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  Professional imagery for executives, teams, and businesses across the Central Valley
-                </p>
-              </div>
-            </SectionReveal>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
-                <Image
-                  src="/images/Gina-0026 (1).jpg"
-                  alt="Professional corporate headshot - executive woman"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  className="object-cover"
-                />
-              </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
-                <Image
-                  src="/images/Miguel-(2 of 6) (1).jpg"
-                  alt="Professional corporate headshot - executive man"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  className="object-cover"
-                />
-              </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
-                <Image
-                  src="/images/Joyce-0029.jpg"
-                  alt="Professional corporate headshot - business woman"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  className="object-cover"
-                />
-              </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
-                <Image
-                  src="/images/MOVE Stanislaus-(3 of 28).jpg"
-                  alt="Commercial photography for business"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  className="object-cover"
-                />
-              </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
-                <Image
-                  src="/images/CLA AM 25 201.jpg"
-                  alt="Corporate event photography"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  className="object-cover scale-125"
-                />
-              </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
-                <Image
-                  src="/images/individual Headshot Website.png"
-                  alt="Individual headshot session"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 33vw"
-                  className="object-cover"
-                />
-              </SectionReveal>
-            </div>
-          </div>
-        </section>
-
         {/* Services Section */}
         <section className="py-20 md:py-28 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
@@ -274,6 +201,80 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Portfolio Preview */}
+        <section className="py-20 md:py-28 px-8 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <SectionReveal>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
+                  Our Work
+                </h2>
+                <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
+                  Professional imagery for executives, teams, and businesses across the Central Valley
+                </p>
+              </div>
+            </SectionReveal>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
+                  src="/images/Gina-0026 (1).jpg"
+                  alt="Professional corporate headshot - executive woman"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
+                  src="/images/Miguel-(2 of 6) (1).jpg"
+                  alt="Professional corporate headshot - executive man"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
+                  src="/images/Joyce-0029.jpg"
+                  alt="Professional corporate headshot - business woman"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
+                  src="/images/MOVE Stanislaus-(3 of 28).jpg"
+                  alt="Commercial photography for business"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
+                  src="/images/CLA AM 25 201.jpg"
+                  alt="Corporate event photography"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover scale-125"
+                />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                <Image
+                  src="/images/individual Headshot Website.png"
+                  alt="Individual headshot session"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </SectionReveal>
+            </div>
+          </div>
+        </section>
+
 
         {/* Social Proof Bar */}
         <SectionReveal>
