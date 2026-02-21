@@ -138,13 +138,13 @@ export default function PremiumHeadshotsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Row 1: CEO & Nutrition Executives */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
+                <Image src="/images/headshots/headshot-ceo-nutrition.jpg" alt="Nutrition business owner headshot - Modesto wellness professional photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
+              </SectionReveal>
+              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-finance-ceo.jpg" alt="Finance CEO headshot - Modesto financial executive photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-ceo-nutrition-01.jpg" alt="Nutrition CEO headshot - Modesto healthcare executive photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
-              </SectionReveal>
-              <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
-                <Image src="/images/headshots/headshot-ceo-nutrition.jpg" alt="Nutrition business owner headshot - Modesto wellness professional photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />
               </SectionReveal>
               {/* Row 2: Kaiser Medical + Healthcare Executive */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
