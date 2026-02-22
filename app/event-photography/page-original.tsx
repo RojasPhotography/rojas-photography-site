@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
@@ -95,22 +94,12 @@ export default function EventPhotographyPage() {
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <div className="min-h-screen bg-white">
-      {/* SB7: A Character - Event Organizer/Marketing Manager */}
       <HeroSection
-        title="Your Event Happens Once. You Need a Photographer You Can Trust."
-        subtitle="Professional event photography with fast delivery and complete coverage—so your conference, gala, or corporate event is documented flawlessly. Serving Modesto and Central Valley."
+        title="Professional Event Photography for Your Business"
+        subtitle="Comprehensive event coverage for conferences, galas, fundraisers, product launches, and corporate gatherings."
         tag="Professional Event Coverage & Documentation"
         gradient
-      >
-        <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
-          <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-            Request a Quote
-          </Link>
-          <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-            Schedule Discovery Call
-          </Link>
-        </div>
-      </HeroSection>
+      />
 
       {/* Definition Box */}
       <DefinitionBox
@@ -123,101 +112,6 @@ export default function EventPhotographyPage() {
       </DefinitionBox>
 
       <main id="main-content">
-        {/* SB7: Has a Problem */}
-        <section className="py-16 px-8 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Events Can&apos;t Be Redone—Bad Photography Ruins Everything</h2>
-              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
-                <p>
-                  You&apos;re planning a major conference, gala, or corporate event. Hundreds of guests. Important speakers. Sponsors expecting professional coverage. Your reputation is on the line.
-                </p>
-                <p>
-                  You hire a photographer. They show up late. They miss key moments—the keynote speech, the award presentation, the VIP networking. Half the photos are blurry, poorly lit, or unusable. Your event planner nightmare becomes reality: you have a $50,000 event with zero marketing assets to show for it.
-                </p>
-                <p>
-                  Or worse—the photographer ghosts you after the event. Weeks pass with no photos delivered. Your sponsors are asking for images. Your social media is silent. Attendees are wondering if photos even exist.
-                </p>
-                <p>
-                  <strong>Events happen once.</strong> There are no do-overs. An unreliable photographer doesn&apos;t just fail to capture moments—they destroy months of planning, waste your budget, and damage your professional reputation.
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* SB7: Meets a Guide (Empathy + Authority) */}
-        <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
-          <div className="max-w-4xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Reliable Event Photography You Can Count On</h2>
-              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
-                <p>
-                  <strong>We understand the pressure of event photography.</strong> There&apos;s no second chance to capture the keynote, the award ceremony, or the networking moments. That&apos;s exactly why we specialize in reliable, professional event coverage with fast delivery—because your event deserves documentation as professional as the event itself.
-                </p>
-                <p>
-                  <strong>We&apos;ve covered 500+ corporate events across Modesto and the Central Valley</strong>—from intimate executive dinners to 1,000+ person conferences. Organizations like Comcast, Save Mart, California Lawyers Association, and Valley First Credit Union trust us because we show up early, stay until the end, and deliver professionally edited photos within 24-48 hours. <em>Every single time.</em>
-                </p>
-                <p>
-                  We don&apos;t just "take photos"—we anticipate moments, capture candid connections, coordinate with your event timeline, and deliver complete coverage so you have marketing assets, social media content, and sponsor documentation ready immediately.
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* SB7: Who Gives Them a Plan */}
-        <section className="py-20 px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Our Event Photography Process</h2>
-            </SectionReveal>
-            <div className="grid md:grid-cols-3 gap-8">
-              <SectionReveal>
-                <div>
-                  <span className="text-5xl font-bold text-[var(--color-primary-light)]">01</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Pre-Event Planning</h3>
-                  <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    We discuss your event schedule, key moments to prioritize, important people to photograph, sponsor requirements, and photography goals. We coordinate with your event planner or AV team to ensure seamless integration. For larger events (200+ guests), we deploy multiple photographers for complete coverage.
-                  </p>
-                </div>
-              </SectionReveal>
-              <SectionReveal>
-                <div>
-                  <span className="text-5xl font-bold text-[var(--color-primary-light)]">02</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Coverage</h3>
-                  <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    We arrive early to scout lighting and key locations. Throughout your event, we capture candid moments, posed group photos, speaker presentations, attendee networking, sponsor activations, and all key moments. Professional, unobtrusive coverage that doesn&apos;t disrupt the experience—we blend in while capturing everything.
-                  </p>
-                </div>
-              </SectionReveal>
-              <SectionReveal>
-                <div>
-                  <span className="text-5xl font-bold text-[var(--color-primary-light)]">03</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Rapid Delivery</h3>
-                  <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    Photos professionally edited, color-corrected, and delivered within 24-48 hours via secure SpotMyPhotos gallery. Attendees can view, download, and share immediately. Perfect for real-time social media updates, event follow-up, and sponsor deliverables. You get complete coverage while the event is still fresh.
-                  </p>
-                </div>
-              </SectionReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* Urgent CTA After Plan - Early Conversion Opportunity */}
-        <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                Stop gambling with unreliable photographers. Get professional event coverage you can trust.
-              </p>
-              <Link href="/contact-quote" className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">
-                Request a Quote
-              </Link>
-            </SectionReveal>
-          </div>
-        </section>
-
         {/* Gallery */}
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
@@ -235,52 +129,10 @@ export default function EventPhotographyPage() {
                 </SectionReveal>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* SB7: Helps Avoid Failure (Stakes) */}
-        <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
-          <div className="max-w-4xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Bad Event Photography Destroys Months of Planning</h2>
-              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
-                <p>
-                  When your photographer fails—shows up late, misses key moments, delivers blurry photos, or ghosts you completely—you don&apos;t just lose photos. You lose everything.
-                </p>
-                <p>
-                  Your sponsors paid for visibility. They want photos of their branded activations, their executives networking, their logo in the background. No photos = broken sponsor commitments = lost relationships and future funding.
-                </p>
-                <p>
-                  Your marketing team needs content. Social media posts. Website updates. Email follow-ups. Without professional event photos, your $50,000 conference produces <em>zero</em> marketing assets. The event happened, but digitally it might as well not exist.
-                </p>
-                <p>
-                  Your attendees expect documentation. They want photos of themselves networking, learning, celebrating. Without photos, the event feels incomplete—attendees feel undervalued, and your reputation suffers.
-                </p>
-                <p>
-                  <strong>Events happen once.</strong> There are no do-overs. Unreliable photography doesn&apos;t just fail to capture moments—it wastes your entire event investment and damages your professional credibility.
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* CTA After Stakes */}
-        <section className="py-16 px-8 bg-white text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Ready for Reliable Event Coverage?</h2>
-              <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
-                Get a custom quote for your event. We&apos;ll provide professional photography with fast delivery and complete coverage—so you can focus on running a successful event, not worrying about the photographer.
-              </p>
-              <div className="flex flex-col md:flex-row gap-4 justify-center">
-                <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                  Request a Quote
-                </Link>
-                <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                  Schedule Discovery Call
-                </Link>
-              </div>
-            </SectionReveal>
+            <div className="flex flex-col md:flex-row gap-4 justify-center mt-12">
+              <a href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">Request a Quote</a>
+              <a href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">Schedule a Discovery Call</a>
+            </div>
           </div>
         </section>
 
@@ -315,17 +167,39 @@ export default function EventPhotographyPage() {
             <SectionReveal>
               <div className="bg-white p-8 rounded-xl border border-gray-100 max-w-sm mx-auto text-center shadow-sm">
                 <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-4">Pricing</h3>
-                <p className="text-[var(--color-text-body)] mb-6">Custom pricing based on event size, duration, and coverage needs.</p>
-                <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
-                  Get Your Quote
-                </Link>
+                <p className="text-[var(--color-text-body)] mb-4">Custom pricing based on event size, duration, and coverage needs.</p>
+                <p className="text-[var(--color-text-muted)] text-sm">Contact us for a personalized quote.</p>
               </div>
             </SectionReveal>
           </div>
         </section>
 
-        {/* Event Types */}
+        {/* Process */}
         <section className="py-20 px-8 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Our Event Photography Process</h2>
+            </SectionReveal>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { step: '01', title: 'Event Planning', desc: 'We discuss your event schedule, key moments, important people, and photography goals.' },
+                { step: '02', title: 'Professional Coverage', desc: 'Our photographers arrive early and stay throughout. Professional, unobtrusive coverage.' },
+                { step: '03', title: 'Rapid Delivery', desc: 'Photos professionally edited and delivered within 24-48 hours via secure online gallery.' },
+              ].map((item) => (
+                <SectionReveal key={item.step}>
+                  <div>
+                    <span className="text-5xl font-bold text-[var(--color-primary-light)]">{item.step}</span>
+                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">{item.title}</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </SectionReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Event Types */}
+        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl font-bold text-[var(--color-text-dark)] mb-8">Events We Cover</h2>
@@ -356,7 +230,7 @@ export default function EventPhotographyPage() {
         </section>
 
         {/* Why Choose Rojas */}
-        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
+        <section className="py-20 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Choose Rojas Photography for Your Event</h2>
@@ -383,7 +257,7 @@ export default function EventPhotographyPage() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-20 px-8 bg-white">
+        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">What Event Organizers Say</h2>
@@ -396,21 +270,6 @@ export default function EventPhotographyPage() {
                 <TestimonialCard name="Event Organizer" role="Corporate Client" quote="From planning to delivery, Rojas Photography was excellent. They understood our event goals, captured everything we needed, and delivered photos quickly." />
               </SectionReveal>
             </div>
-          </div>
-        </section>
-
-        {/* Final CTA Before FAQ */}
-        <section className="py-16 px-8 bg-[var(--color-bg-warm)] text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Your Event Deserves Reliable Photography</h2>
-              <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
-                Join hundreds of Central Valley organizations who&apos;ve trusted us for professional, reliable event coverage. Complete documentation with fast delivery is one quote away.
-              </p>
-              <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                Request a Quote
-              </Link>
-            </SectionReveal>
           </div>
         </section>
 
@@ -446,20 +305,10 @@ export default function EventPhotographyPage() {
           heading="Event Photography Questions"
         />
 
-        {/* Bottom CTA */}
-        <section className="py-16 px-8 bg-white text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Ready to Capture Your Next Event?</h2>
-              <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
-                Let us document your event with professional photography. From planning to delivery, we handle everything.
-              </p>
-              <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                Request a Quote
-              </Link>
-            </SectionReveal>
-          </div>
-        </section>
+        <CTASection
+          heading="Ready to Capture Your Next Event?"
+          subheading="Let us document your event with professional photography. From planning to delivery, we handle everything."
+        />
       </main>
       </div>
     </>

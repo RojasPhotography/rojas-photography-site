@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
@@ -95,22 +94,12 @@ export default function VideoServicesPage() {
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <div className="min-h-screen bg-white">
-      {/* SB7: A Character - Business Owner/Marketing Director */}
       <HeroSection
-        title="Corporate Videos Shouldn't Feel Scripted and Fake."
-        subtitle="Authentic video storytelling that connects with your audience—not stiff, rehearsed corporate speak. Professional video production for businesses in Modesto and Central Valley."
+        title="Professional Video Services for Your Business"
+        subtitle="High-impact video production including corporate videos, client testimonials, aerial drone videography, and promotional content."
         tag="Professional Video Production & Drone Videography"
         gradient
-      >
-        <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
-          <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-            Request a Quote
-          </Link>
-          <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-            Schedule Discovery Call
-          </Link>
-        </div>
-      </HeroSection>
+      />
 
       {/* Definition Box */}
       <DefinitionBox
@@ -123,110 +112,6 @@ export default function VideoServicesPage() {
       </DefinitionBox>
 
       <main id="main-content">
-        {/* SB7: Has a Problem */}
-        <section className="py-16 px-8 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Most Corporate Videos Feel Forced and Inauthentic</h2>
-              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
-                <p>
-                  You watch corporate videos from competitors and they all feel the same. Stiff executives reading from scripts. Forced smiles and rehearsed talking points. Zero authenticity, zero connection.
-                </p>
-                <p>
-                  You <em>want</em> video content—you know it drives engagement and converts customers—but creating authentic video feels impossible. Your team freezes on camera. Everything comes out scripted and corporate. The final product looks professional but feels hollow.
-                </p>
-                <p>
-                  And the production companies you&apos;ve talked to either charge $15,000+ for a single video or deliver cheap, template-driven work that screams "budget production." You need something in between: professional quality with authentic storytelling that actually connects with your audience.
-                </p>
-                <p>
-                  Meanwhile, your competitors with compelling video content are capturing attention on social media, building trust through testimonials, and converting leads you should be winning.
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* SB7: Meets a Guide (Empathy + Authority) */}
-        <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
-          <div className="max-w-4xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">We Create Video That Feels Authentic, Not Scripted</h2>
-              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
-                <p>
-                  <strong>We understand the challenge of authentic video.</strong> Most people aren&apos;t naturally comfortable on camera, and scripted content rarely connects with audiences. That&apos;s exactly why we specialize in conversational, story-driven video production that feels genuine—not corporate theater.
-                </p>
-                <p>
-                  <strong>We&apos;ve produced 200+ corporate videos for businesses across Modesto and the Central Valley</strong>—from client testimonials and brand stories to product demos and aerial drone footage. We bring 15+ years of visual storytelling experience, <strong>FAA Part 107 drone certification</strong>, and the ability to make your team feel comfortable on camera so their authentic personality shines through.
-                </p>
-                <p>
-                  We don&apos;t force scripts. We guide conversations. We capture authentic moments. We create video content that actually engages your audience because it feels <em>real</em>—whether you need a 15-second social clip, a 3-minute brand video, or comprehensive aerial drone footage.
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* SB7: Who Gives Them a Plan */}
-        <section className="py-20 px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Our Video Production Process</h2>
-            </SectionReveal>
-            <div className="grid md:grid-cols-4 gap-8">
-              <SectionReveal>
-                <div>
-                  <span className="text-5xl font-bold text-[var(--color-primary-light)]">01</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Story Development</h3>
-                  <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    We discuss your video goals, target audience, key messages, and desired tone. Whether you need a brand story, client testimonial, product demo, or promotional video, we develop the narrative structure and shot list—not rigid scripts that feel forced.
-                  </p>
-                </div>
-              </SectionReveal>
-              <SectionReveal>
-                <div>
-                  <span className="text-5xl font-bold text-[var(--color-primary-light)]">02</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Production</h3>
-                  <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    We arrive with professional cameras, audio equipment, lighting, and (when needed) drones. We guide your team through conversational interviews—not stiff scripts—capturing authentic moments and genuine emotion. We shoot at your location, in our studio, or anywhere your story lives.
-                  </p>
-                </div>
-              </SectionReveal>
-              <SectionReveal>
-                <div>
-                  <span className="text-5xl font-bold text-[var(--color-primary-light)]">03</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Editing</h3>
-                  <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    We edit your footage with color grading, sound design, motion graphics, and professional music. We craft the narrative to maximize engagement while maintaining authenticity. Every frame is intentional.
-                  </p>
-                </div>
-              </SectionReveal>
-              <SectionReveal>
-                <div>
-                  <span className="text-5xl font-bold text-[var(--color-primary-light)]">04</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Multi-Format Delivery</h3>
-                  <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    Videos delivered in multiple formats optimized for different platforms—full resolution for websites, vertical for Instagram Stories, square for social feeds, and broadcast quality for professional use. Ready to publish immediately.
-                  </p>
-                </div>
-              </SectionReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* Urgent CTA After Plan - Early Conversion Opportunity */}
-        <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                Stop creating stiff, scripted corporate videos. Get authentic storytelling.
-              </p>
-              <Link href="/contact-quote" className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">
-                Request a Quote
-              </Link>
-            </SectionReveal>
-          </div>
-        </section>
-
         {/* Gallery */}
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
@@ -244,49 +129,10 @@ export default function VideoServicesPage() {
                 </SectionReveal>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* SB7: Helps Avoid Failure (Stakes) */}
-        <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
-          <div className="max-w-4xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Inauthentic Video Pushes Customers Away</h2>
-              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
-                <p>
-                  When your corporate video feels scripted and fake, viewers click away within seconds. You&apos;ve invested thousands of dollars in production that actively <em>damages</em> your brand instead of building it.
-                </p>
-                <p>
-                  Worse, bad video is harder to recover from than no video at all. Once potential customers see stiff, inauthentic content, they question whether your entire business lacks authenticity. That first impression is nearly impossible to reverse.
-                </p>
-                <p>
-                  Meanwhile, businesses with authentic, engaging video content see 80% higher customer engagement and 47% better conversion rates. Video is the most powerful marketing tool available—<em>when it&apos;s done right</em>. Scripted corporate theater isn&apos;t "done right."
-                </p>
-                <p>
-                  Every day you delay creating authentic video content, you&apos;re surrendering attention and trust to competitors who understand that genuine storytelling wins in the digital age.
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* CTA After Stakes */}
-        <section className="py-16 px-8 bg-white text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Ready for Authentic Video Content?</h2>
-              <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
-                Get a custom quote for your video project. We&apos;ll create professional video content that connects with your audience through genuine storytelling—not scripted corporate speak.
-              </p>
-              <div className="flex flex-col md:flex-row gap-4 justify-center">
-                <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                  Request a Quote
-                </Link>
-                <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                  Schedule Discovery Call
-                </Link>
-              </div>
-            </SectionReveal>
+            <div className="flex flex-col md:flex-row gap-4 justify-center mt-12">
+              <a href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">Request a Quote</a>
+              <a href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">Schedule a Discovery Call</a>
+            </div>
           </div>
         </section>
 
@@ -321,17 +167,40 @@ export default function VideoServicesPage() {
             <SectionReveal>
               <div className="bg-white p-8 rounded-xl border border-gray-100 max-w-sm mx-auto text-center shadow-sm">
                 <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-4">Pricing</h3>
-                <p className="text-[var(--color-text-body)] mb-6">Custom pricing based on project scope, length, and production needs.</p>
-                <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
-                  Get Your Quote
-                </Link>
+                <p className="text-[var(--color-text-body)] mb-4">Custom pricing based on project scope, length, and production needs.</p>
+                <p className="text-[var(--color-text-muted)] text-sm">Contact us for a personalized quote.</p>
               </div>
             </SectionReveal>
           </div>
         </section>
 
-        {/* Video Types */}
+        {/* Process */}
         <section className="py-20 px-8 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Our Video Production Process</h2>
+            </SectionReveal>
+            <div className="grid md:grid-cols-4 gap-8">
+              {[
+                { step: '01', title: 'Planning', desc: 'We discuss your video goals, vision, target audience, and key messages.' },
+                { step: '02', title: 'Production', desc: 'Professional filming with high-quality cameras, audio equipment, and lighting.' },
+                { step: '03', title: 'Editing', desc: 'Professional editing, color grading, sound design, and motion graphics.' },
+                { step: '04', title: 'Delivery', desc: 'Videos delivered in multiple formats optimized for different platforms.' },
+              ].map((item) => (
+                <SectionReveal key={item.step}>
+                  <div>
+                    <span className="text-5xl font-bold text-[var(--color-primary-light)]">{item.step}</span>
+                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">{item.title}</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </SectionReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Video Types */}
+        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl font-bold text-[var(--color-text-dark)] mb-8">Video Services We Provide</h2>
@@ -362,7 +231,7 @@ export default function VideoServicesPage() {
         </section>
 
         {/* Why Choose Rojas */}
-        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
+        <section className="py-20 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Choose Rojas Photography for Video</h2>
@@ -389,7 +258,7 @@ export default function VideoServicesPage() {
         </section>
 
         {/* Testimonials */}
-        <section className="py-20 px-8 bg-white">
+        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">What Clients Say</h2>
@@ -402,21 +271,6 @@ export default function VideoServicesPage() {
                 <TestimonialCard name="Marketing Manager" role="Corporate Client" quote="The aerial drone footage for our property was absolutely stunning. Professional, timely, and exactly what we needed for our marketing." />
               </SectionReveal>
             </div>
-          </div>
-        </section>
-
-        {/* Final CTA Before FAQ */}
-        <section className="py-16 px-8 bg-[var(--color-bg-warm)] text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Your Story Deserves Authentic Video</h2>
-              <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
-                Join hundreds of Central Valley businesses who&apos;ve partnered with us for genuine, professional video production. Authentic storytelling is one quote away.
-              </p>
-              <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                Request a Quote
-              </Link>
-            </SectionReveal>
           </div>
         </section>
 
@@ -452,20 +306,10 @@ export default function VideoServicesPage() {
           heading="Video Production Questions"
         />
 
-        {/* Bottom CTA */}
-        <section className="py-16 px-8 bg-white text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Ready for Professional Video Services?</h2>
-              <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
-                Let&apos;s create compelling video content that engages your audience and drives business results.
-              </p>
-              <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                Request a Quote
-              </Link>
-            </SectionReveal>
-          </div>
-        </section>
+        <CTASection
+          heading="Ready for Professional Video Services?"
+          subheading="Let's create compelling video content that engages your audience and drives business results."
+        />
       </main>
       </div>
     </>
