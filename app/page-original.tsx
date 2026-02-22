@@ -44,22 +44,19 @@ export default function HomePage() {
     <>
       <SchemaScript schema={generateLocalBusinessSchema()} />
       <div className="min-h-screen bg-white">
-      {/* Hero Section - SB7: A Character */}
+      {/* Hero Section */}
       <HeroSection
         image="/images/Hero Image1.jpg"
-        title="Every Business Has a Story Worth Telling. We Help You Tell Yours Visually."
+        title="Corporate Photography That Builds Trust"
         tag="Premium Corporate Photography | Modesto, CA"
         fullHeight
       >
-        <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Visual storytelling partners for businesses across Modesto and Central Valley. We don't just take photos and videos—we work closely with you to create imagery that authentically tells your organization's story.
-        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
           <Link
             href="/discovery-call"
             className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
           >
-            Book Your Discovery Call
+            Book Now
           </Link>
           <a
             href="tel:2093803727"
@@ -86,30 +83,7 @@ export default function HomePage() {
         </div>
       </HeroSection>
 
-      {/* Problem Section - SB7: Has a Problem */}
-      <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
-        <div className="max-w-4xl mx-auto">
-          <SectionReveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-8">
-              Your Story Deserves More Than Generic Photography
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed">
-              <div>
-                <p className="mb-4">
-                  Many businesses struggle with photography and video that feels transactional, not collaborative. Images that look professional but don't tell their story. Photographers who don't take time to understand their organization.
-                </p>
-              </div>
-              <div>
-                <p className="mb-4">
-                  Your business has a unique story—your values, your people, your culture. Your imagery and video content should tell that story authentically, not just fill space on a website or social media.
-                </p>
-              </div>
-            </div>
-          </SectionReveal>
-        </div>
-      </section>
-
-      {/* Intro Section - SB7: Meets a Guide */}
+      {/* Intro Section */}
       <section className="py-16 md:py-20 px-8 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto">
           <SectionReveal>
@@ -118,14 +92,14 @@ export default function HomePage() {
                 Corporate Photography & Video Production in Modesto
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
-                <p className="font-semibold text-[var(--color-text-dark)]">
-                  Here's what makes us different: We're not just photographers—we're visual storytelling partners.
+                <p>
+                  Rojas Photography provides professional corporate photography and video services for businesses across Modesto and the Central Valley. From <Link href="/premium-headshots" className="text-[var(--color-primary)] hover:underline">executive headshots</Link> to <Link href="/on-site-photography" className="text-[var(--color-primary)] hover:underline">on-site team photography</Link>, <Link href="/commercial" className="text-[var(--color-primary)] hover:underline">commercial imagery</Link>, and <Link href="/video" className="text-[var(--color-primary)] hover:underline">video production</Link>, we help companies present their best professional image.
                 </p>
                 <p>
-                  With 15+ years in corporate leadership, we understand business from the inside. We take time to understand your organization's story, collaborate closely to ensure your imagery and video content reflects who you really are, and bring a strategic perspective beyond just artistic execution.
+                  With 15+ years of corporate leadership experience, we understand what executives need. We've photographed 500+ professionals and know how to make people feel comfortable in front of the camera while capturing authentic, professional results.
                 </p>
                 <p>
-                  We've worked with professionals across the Central Valley—from <Link href="/premium-headshots" className="text-[var(--color-primary)] hover:underline">executive headshots</Link> to <Link href="/on-site-photography" className="text-[var(--color-primary)] hover:underline">on-site team photography</Link>, <Link href="/commercial" className="text-[var(--color-primary)] hover:underline">commercial imagery</Link>, and <Link href="/video" className="text-[var(--color-primary)] hover:underline">video production</Link>—helping organizations tell their story visually. Not as vendors, but as trusted partners who care about getting it right.
+                  Whether you need a single headshot or comprehensive visual content for your entire organization, we bring the same level of professionalism and attention to detail to every project.
                 </p>
               </div>
             </div>
@@ -134,71 +108,16 @@ export default function HomePage() {
       </section>
 
       <main id="main-content">
-        {/* The Plan Section - SB7: Who Gives Them a Plan */}
+        {/* Services Section */}
         <section className="py-20 md:py-28 px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-5xl font-bold text-center text-[var(--color-text-dark)] mb-16">
-                Our Collaborative Storytelling Process
-              </h2>
-            </SectionReveal>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
-                    1
-                  </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Discovery & Story Development
-                  </h3>
-                  <p className="text-[var(--color-text-body)] leading-relaxed">
-                    We have a real conversation about your organization—your values, your people, your story. This collaborative planning session helps us understand what you need your imagery and video to communicate.
-                  </p>
-                </div>
-              </SectionReveal>
-
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
-                    2
-                  </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Collaborative Creation
-                  </h3>
-                  <p className="text-[var(--color-text-body)] leading-relaxed">
-                    You're not just a subject—you're a partner. We work together to capture authentic moments that tell your story, whether through photography or video content that reflects your brand values.
-                  </p>
-                </div>
-              </SectionReveal>
-
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
-                    3
-                  </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Story-Driven Delivery
-                  </h3>
-                  <p className="text-[var(--color-text-body)] leading-relaxed">
-                    Receive polished imagery and video content that authentically tells your story (24-48 hours for photos, 2-4 weeks for video)—ready for your website, LinkedIn, and all marketing materials.
-                  </p>
-                </div>
-              </SectionReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* Services Section - SB7 Enhanced */}
-        <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
-                  How We Help Tell Your Story
+                  Our Services
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  Visual storytelling solutions for businesses across Modesto and the Central Valley
+                  Professional photography and video services for businesses across Modesto and the Central Valley
                 </p>
               </div>
             </SectionReveal>
@@ -226,7 +145,7 @@ export default function HomePage() {
                         Premium Headshots
                       </h3>
                       <p className="text-white/90 mb-4 leading-relaxed">
-                        Headshots that tell the story of who your team really is. We collaborate to capture authentic portraits that show personality and professionalism—not stiff, corporate photos.
+                        Professional in-studio headshots with real-time coaching. Perfect for executives, attorneys, and business professionals.
                       </p>
                       <span className="text-white font-semibold group-hover:underline">
                         Learn More →
@@ -258,7 +177,7 @@ export default function HomePage() {
                         On-Site Photography
                       </h3>
                       <p className="text-white/90 mb-4 leading-relaxed">
-                        We come to your organization, understand your culture, and create team imagery that tells your story authentically. Not just a lineup of faces—a visual narrative of your people.
+                        We bring our studio to your office. Ideal for teams of 10+ with 24-hour turnaround and minimal disruption.
                       </p>
                       <span className="text-white font-semibold group-hover:underline">
                         Learn More →
@@ -290,7 +209,7 @@ export default function HomePage() {
                         Commercial Photography
                       </h3>
                       <p className="text-white/90 mb-4 leading-relaxed">
-                        Brand imagery that tells your story to customers. We collaborate to understand your values and create visuals that communicate them authentically—products, spaces, and people.
+                        Product, architectural, and brand photography for websites, marketing campaigns, and e-commerce.
                       </p>
                       <span className="text-white font-semibold group-hover:underline">
                         Learn More →
@@ -322,7 +241,7 @@ export default function HomePage() {
                         Video Production
                       </h3>
                       <p className="text-white/90 mb-4 leading-relaxed">
-                        Your story deserves motion. We partner with you to create video content that connects emotionally—brand stories, testimonials, culture videos, and aerial footage that feels authentic, not scripted.
+                        Corporate videos, testimonials, and aerial drone footage by FAA Part 107 certified pilots.
                       </p>
                       <span className="text-white font-semibold group-hover:underline">
                         Learn More →
@@ -354,7 +273,7 @@ export default function HomePage() {
                         Event Photography
                       </h3>
                       <p className="text-white/90 mb-4 leading-relaxed">
-                        We don't just document your events—we capture the story. The moments, connections, and culture. Your event has a narrative; we tell it through photos and video.
+                        Professional coverage for corporate events, conferences, and networking functions with same-day delivery options.
                       </p>
                       <span className="text-white font-semibold group-hover:underline">
                         Learn More →
@@ -376,7 +295,7 @@ export default function HomePage() {
                   Our Work
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  Visual storytelling for businesses across the Central Valley—photography and video that tells your story authentically
+                  Professional imagery for executives, teams, and businesses across the Central Valley
                 </p>
               </div>
             </SectionReveal>
@@ -507,37 +426,15 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Stakes Section - SB7: Helps Avoid Failure */}
-        <section className="py-16 px-8 bg-white border-y border-gray-100">
-          <div className="max-w-4xl mx-auto text-center">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
-                When Your Story Isn't Told Visually, You Lose Connection
-              </h2>
-              <div className="text-lg text-[var(--color-text-body)] leading-relaxed space-y-4">
-                <p>
-                  Without authentic visual storytelling, your audience sees generic imagery that doesn't connect emotionally. Potential clients can't see the real people and values behind your business. Your marketing feels transactional instead of relational.
-                </p>
-                <p>
-                  You look like everyone else—no story, no differentiation. The culture and values you've built remain invisible to those who need to see them.
-                </p>
-                <p className="font-semibold text-[var(--color-text-dark)]">
-                  Your organization has worked too hard building your story to let mediocre imagery tell it wrong.
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* Discovery Call CTA #1 - After Portfolio - SB7: Call to Action */}
+        {/* Discovery Call CTA #1 - After Portfolio */}
         <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
           <div className="max-w-3xl mx-auto text-center">
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Tell Your Story Visually?
+                Ready to Discuss Your Photography Needs?
               </h2>
               <p className="text-lg mb-8 text-white/90">
-                Schedule a free discovery call. We'll discuss your organization's story, show you examples of our work, and create a custom plan. Zero pressure. Zero obligation.
+                Schedule a free discovery call to discuss your project, ask questions, and see if we're the right fit.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -563,7 +460,7 @@ export default function HomePage() {
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
               <div>
                 <p className="text-3xl font-bold text-[var(--color-primary)]">500+</p>
-                <p className="text-sm text-[var(--color-text-muted)]">Professionals Photographed</p>
+                <p className="text-sm text-[var(--color-text-muted)]">Executives Photographed</p>
               </div>
               <div className="hidden md:block w-px h-10 bg-gray-200" />
               <div>
@@ -581,7 +478,7 @@ export default function HomePage() {
           </section>
         </SectionReveal>
 
-        {/* Testimonials - Kept Authentic */}
+        {/* Testimonials */}
         <section className="py-20 md:py-28 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
@@ -623,10 +520,10 @@ export default function HomePage() {
           <div className="max-w-2xl mx-auto text-center">
             <SectionReveal>
               <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-4">
-                Your Story Deserves to Be Told Authentically
+                Join 500+ Professionals Who Trust Rojas Photography
               </h2>
               <p className="text-[var(--color-text-body)] mb-6">
-                Join hundreds of Central Valley professionals and organizations who've partnered with us to tell their story visually. Your authentic narrative is one conversation away.
+                Let's create professional images that elevate your brand.
               </p>
               <Link
                 href="/discovery-call"
@@ -664,8 +561,8 @@ export default function HomePage() {
               <SectionReveal>
                 <div className="text-center">
                   <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">500+</div>
-                  <p className="text-[var(--color-text-dark)] font-semibold mb-2">Professionals Photographed</p>
-                  <p className="text-sm text-[var(--color-text-body)]">CEOs, attorneys, business leaders</p>
+                  <p className="text-[var(--color-text-dark)] font-semibold mb-2">Executives Photographed</p>
+                  <p className="text-sm text-[var(--color-text-body)]">CEOs, attorneys, professionals</p>
                 </div>
               </SectionReveal>
 
@@ -689,14 +586,14 @@ export default function HomePage() {
             <SectionReveal>
               <div className="mt-16 p-8 bg-[var(--color-bg-warm)] rounded-xl text-center">
                 <p className="text-lg text-[var(--color-text-body)] leading-relaxed">
-                  We partner with businesses across Modesto, Stockton, Fresno, Turlock, Merced, Sacramento, and the East Bay—helping organizations tell their story through professional photography and video content you can trust.
+                  We serve businesses across Modesto, Stockton, Fresno, Turlock, Merced, Sacramento, and the East Bay with professional photography and video services you can trust.
                 </p>
               </div>
             </SectionReveal>
           </div>
         </section>
 
-        {/* About Teaser - SB7: Success Vision */}
+        {/* About Teaser */}
         <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -717,10 +614,10 @@ export default function HomePage() {
                     Meet Alfonso & Niomi
                   </h2>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
-                    With 15+ years in corporate leadership, we understand what businesses need. We've partnered with professionals across the Central Valley to create authentic photography and video content that tells their story and builds credibility.
+                    With 15+ years in corporate leadership, we understand what executives need. We&apos;ve helped 500+ professionals create authentic portraits that build credibility.
                   </p>
                   <p className="text-[var(--color-text-body)] leading-relaxed mb-8">
-                    Visual storytelling isn't about being &ldquo;photogenic.&rdquo; It's about presenting your authentic organizational story with confidence—through imagery and video that connects.
+                    Professional photography isn&apos;t about being &ldquo;photogenic.&rdquo; It&apos;s about presenting your authentic professional self with confidence.
                   </p>
                   <Link
                     href="/about-rojas-photography"
