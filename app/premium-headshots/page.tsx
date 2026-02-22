@@ -101,7 +101,7 @@ export default function PremiumHeadshotsPage() {
         image="/images/headshots/headshot-ceo-nutrition.jpg"
         title="Professional Headshots Shouldn't Feel Awkward."
         tag="Premium Corporate Headshots | Modesto, CA"
-        objectPosition="70% 50%"
+        objectPosition="70% 35%"
         fullHeight
       >
         <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
