@@ -7,6 +7,7 @@ interface HeroSectionProps {
   image?: string;
   gradient?: boolean;
   fullHeight?: boolean;
+  objectPosition?: string;
   children?: React.ReactNode;
 }
 
@@ -17,6 +18,7 @@ export default function HeroSection({
   image,
   gradient = false,
   fullHeight = false,
+  objectPosition,
   children,
 }: HeroSectionProps) {
   const heightClass = fullHeight ? 'min-h-screen' : 'min-h-[50vh]';
@@ -34,6 +36,7 @@ export default function HeroSection({
           priority
           sizes="100vw"
           className="object-cover"
+          style={objectPosition ? { objectPosition } : undefined}
           aria-hidden="true"
         />
         <div className="absolute inset-0 bg-[var(--color-primary-dark)]/70" />
