@@ -529,6 +529,23 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Urgent CTA After Stakes - Strike While Emotions Are High */}
+        <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
+          <div className="max-w-2xl mx-auto">
+            <SectionReveal>
+              <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
+                Don't let generic imagery tell your story wrong.
+              </p>
+              <Link
+                href="/discovery-call"
+                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+              >
+                Book Your Discovery Call
+              </Link>
+            </SectionReveal>
+          </div>
+        </section>
+
         {/* Discovery Call CTA #1 - After Portfolio - SB7: Call to Action */}
         <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
           <div className="max-w-3xl mx-auto text-center">
@@ -735,7 +752,7 @@ export default function HomePage() {
         </section>
 
         {/* CTA + Contact */}
-        <CTASection />
+        <CTASection primaryLabel="Book Your Discovery Call" />
       </main>
       </div>
     </>
