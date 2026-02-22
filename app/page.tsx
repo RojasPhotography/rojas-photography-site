@@ -47,12 +47,12 @@ export default function HomePage() {
       {/* Hero Section - SB7: A Character */}
       <HeroSection
         image="/images/Hero Image1.jpg"
-        title="Every Business Has a Story Worth Telling. We Help You Tell Yours Visually."
+        title="Stop Blending In. Your Story Deserves to Be Seen."
         tag="Premium Corporate Photography | Modesto, CA"
         fullHeight
       >
         <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Visual storytelling partners for businesses across Modesto and Central Valley. We don't just take photos and videos—we work closely with you to create imagery that authentically tells your organization's story.
+          Visual storytelling partners for businesses across Modesto and Central Valley who refuse to look like everyone else. We don't just take photos and videos—we partner with you to create imagery that shows who you really are.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
           <Link
@@ -544,7 +544,7 @@ export default function HomePage() {
                   href="/discovery-call"
                   className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Schedule Discovery Call
+                  Book Your Discovery Call
                 </Link>
                 <a
                   href="tel:2093803727"
@@ -632,7 +632,7 @@ export default function HomePage() {
                 href="/discovery-call"
                 className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block"
               >
-                Schedule Your Free Consultation
+                Book Your Discovery Call
               </Link>
             </SectionReveal>
           </div>
