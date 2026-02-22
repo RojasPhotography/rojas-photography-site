@@ -34,11 +34,6 @@ const faqs = [
       'Project timelines vary based on scope. A simple product photography session (5-10 items) takes 2-3 hours. A comprehensive commercial shoot (full-day location coverage) takes 6-8 hours. After shooting, we professionally edit, color correct, and deliver all images within 48-72 hours. Rush delivery available (additional fee) with 24-hour turnaround.',
   },
   {
-    question: 'Can you do photography for real estate marketing?',
-    answer:
-      'Yes! We provide professional architectural and interior photography perfect for real estate marketing. Services include property exterior shots, interior room photography, detailed fixture photography, and aerial drone videography captured by FAA Part 107 certified pilots. Real estate professionals in Modesto and Central Valley trust us for high-quality marketing imagery that increases showings and accelerates sales.',
-  },
-  {
     question: 'How do you determine pricing for my commercial project?',
     answer:
       'We base pricing on several factors: project scope (complexity and size), shooting duration (how many hours needed), location (on-site or studio), number of deliverable images, and editing requirements. During your consultation, we discuss your goals, timeline, and budget to create a custom proposal. We provide transparent quotes with no hidden fees. This approach ensures you pay fairly for the specific work needed rather than paying for unnecessary services.',
@@ -290,7 +285,7 @@ export default function CommercialPhotographyPage() {
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
                 { title: 'Product Photography', desc: 'Professional product shots for e-commerce, catalogs, and marketing materials. We showcase your products in the best light to drive sales.' },
-                { title: 'Architectural & Interior Photography', desc: 'Professional building, office, and interior space photography. Perfect for real estate marketing, business websites, and commercial listings.' },
+                { title: 'Architectural & Interior Photography', desc: 'Professional building, office, and interior space photography. Perfect for business websites, marketing materials, and showcasing your commercial spaces.' },
                 { title: 'Brand & Lifestyle Photography', desc: 'Authentic brand storytelling through lifestyle imagery. Capture your business culture, team in action, and brand values.' },
                 { title: 'Website & Marketing Imagery', desc: 'Custom photography for your website, social media, and marketing campaigns. Professional visuals that engage your audience.' },
                 { title: 'Professional Editing & Retouching', desc: 'All images professionally edited and color-corrected for consistency across your marketing materials.' },
@@ -325,10 +320,10 @@ export default function CommercialPhotographyPage() {
             <SectionReveal>
               <h2 className="text-3xl font-bold text-[var(--color-text-dark)] mb-6">Who This Service Is For</h2>
               <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
-                Commercial Photography is perfect for any business that needs professional visual content. Whether you&apos;re a retail business, real estate company, restaurant, healthcare provider, or service-based company, professional imagery elevates your brand.
+                Commercial Photography is perfect for any business that needs professional visual content. Whether you&apos;re a retail business, restaurant, healthcare provider, manufacturing company, or service-based organization, professional imagery elevates your brand.
               </p>
               <p className="text-[var(--color-text-body)] leading-relaxed">
-                If you need compelling photos for your website, social media, marketing campaigns, or commercial listings, we have the expertise and equipment to deliver exactly what you need.
+                If you need compelling photos for your website, social media, marketing campaigns, or business materials, we have the expertise and equipment to deliver exactly what you need.
               </p>
             </SectionReveal>
           </div>
@@ -399,7 +394,7 @@ export default function CommercialPhotographyPage() {
             {
               question: 'What is commercial photography used for?',
               answer:
-                'Commercial photography is used for marketing, branding, and business purposes. This includes product photography for e-commerce and catalogs, architectural and interior photography for real estate and office spaces, brand and lifestyle photography for websites and social media, and website imagery for marketing campaigns. Professional commercial photos elevate your brand and increase customer engagement.',
+                'Commercial photography is used for marketing, branding, and business purposes. This includes product photography for e-commerce and catalogs, architectural and interior photography for office spaces and commercial buildings, brand and lifestyle photography for websites and social media, and website imagery for marketing campaigns. Professional commercial photos elevate your brand and increase customer engagement.',
             },
             {
               question: 'How much does commercial photography cost in Modesto?',
@@ -415,11 +410,6 @@ export default function CommercialPhotographyPage() {
               question: 'How long does commercial photography take?',
               answer:
                 'Project timelines vary. A simple product photography session might take a few hours, while a comprehensive commercial shoot could be a full day. We schedule based on your needs. After shooting, we professionally edit and color correct all images within 48-72 hours for delivery.',
-            },
-            {
-              question: 'Can you do photography for real estate marketing?',
-              answer:
-                'Yes! We provide professional architectural and interior photography perfect for real estate marketing. This includes property exterior shots, interior room photography, and aerial drone photography if needed. Real estate professionals in Modesto and Central Valley trust us for high-quality marketing imagery that sells properties faster.',
             },
           ]}
           heading="Commercial Photography Questions"

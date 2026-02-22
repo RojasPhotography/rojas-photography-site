@@ -16,12 +16,12 @@ const faqs = [
   {
     question: 'How much does event photography cost in Modesto?',
     answer:
-      'Event photography pricing is custom based on your event size, duration, and coverage needs. A 4-hour event typically costs $1,500-$2,500 with one photographer. A full-day event (8+ hours) typically costs $2,500-$4,500 with one photographer. Multi-photographer events (200+ guests) cost $3,500-$6,000+. Contact us with your event date, expected attendance, and coverage needs for a personalized quote within 24 hours.',
+      'Event photography pricing is custom based on your event size, duration, and coverage needs. A 4-hour event typically costs $1,500-$2,500 with one photographer. A full-day event (8+ hours) typically costs $2,500-$4,500 with one photographer. Multi-photographer coverage starts at $3,500+. Contact us with your event date, expected attendance, and coverage needs for a personalized quote within 24 hours.',
   },
   {
     question: 'Do you provide photos during the event?',
     answer:
-      'Yes! We photograph throughout your entire event and deliver professionally edited photos within 24-48 hours via our secure SpotMyPhotos gallery. Attendees can view, download, and share photos immediately, making it perfect for real-time social media updates, event follow-up, and attendee engagement. This rapid delivery enables live social media updates during and immediately after your event.',
+      'Yes! We photograph throughout your entire event and deliver professionally edited photos within 24-48 hours via our secure online private gallery. Attendees can view, download, and share photos immediately, making it perfect for real-time social media updates, event follow-up, and attendee engagement. This rapid delivery enables live social media updates during and immediately after your event.',
   },
   {
     question: 'How many photos do we receive from our event?',
@@ -31,7 +31,7 @@ const faqs = [
   {
     question: 'Can you handle large corporate events?',
     answer:
-      'Absolutely! For larger events (200+ guests), we deploy multiple photographers to ensure complete coverage across all areas and ensure no important moments are missed. We coordinate team photographers to maintain consistency and deliver all images from the same professional vision. We\'ve successfully covered major events for organizations like Comcast, Save Mart, California Lawyers Association, and Valley First Credit Union.',
+      'Absolutely! For larger events, we can deploy multiple photographers to ensure complete coverage across all areas and ensure no important moments are missed. We coordinate team photographers to maintain consistency and deliver all images from the same professional vision. We\'ve successfully covered major events for organizations like Comcast, Save Mart, California Lawyers Association, and Valley First Credit Union.',
   },
   {
     question: 'Do you do step and repeat photography at events?',
@@ -46,7 +46,7 @@ const faqs = [
   {
     question: 'How many photographers do you send and can we have multiple photographers?',
     answer:
-      'For most events, we send one primary photographer plus a second photographer for events 200+ guests or full-day coverage. For larger or multi-location events, we can deploy additional photographers. Multiple photographers ensure no important moments are missed, which is especially valuable for large galas, conferences, or events with simultaneous activities in different areas. We discuss photographer count during planning based on your event size and venue.',
+      'For most events, we send one primary photographer. For events requiring more extensive coverage or full-day events, we can deploy additional photographers based on your needs. Multiple photographers ensure no important moments are missed, which is especially valuable for large galas, conferences, or events with simultaneous activities in different areas. We discuss photographer count during planning based on your event scope, timeline, and venue.',
   },
   {
     question: 'What if the event runs longer than scheduled?',
@@ -178,7 +178,7 @@ export default function EventPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">01</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Pre-Event Planning</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    We discuss your event schedule, key moments to prioritize, important people to photograph, sponsor requirements, and photography goals. We coordinate with your event planner or AV team to ensure seamless integration. For larger events (200+ guests), we deploy multiple photographers for complete coverage.
+                    We discuss your event schedule, key moments to prioritize, important people to photograph, sponsor requirements, and photography goals. We coordinate with your event planner or AV team to ensure seamless integration. Based on your event scope, we can deploy multiple photographers for complete coverage.
                   </p>
                 </div>
               </SectionReveal>
@@ -196,7 +196,7 @@ export default function EventPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">03</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Rapid Delivery</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    Photos professionally edited, color-corrected, and delivered within 24-48 hours via secure SpotMyPhotos gallery. Attendees can view, download, and share immediately. Perfect for real-time social media updates, event follow-up, and sponsor deliverables. You get complete coverage while the event is still fresh.
+                    Photos professionally edited, color-corrected, and delivered within 24-48 hours via secure online private gallery. Attendees can view, download, and share immediately. Perfect for real-time social media updates, event follow-up, and sponsor deliverables. You get complete coverage while the event is still fresh.
                   </p>
                 </div>
               </SectionReveal>
@@ -298,7 +298,7 @@ export default function EventPhotographyPage() {
                 { title: 'Step & Repeat Photography', desc: 'Professional step and repeat backdrop photography. Perfect for sponsor recognition and brand activation.' },
                 { title: 'Rapid Photo Delivery', desc: 'Event photos available within 24-48 hours. Perfect for social media during and after your event.' },
                 { title: 'Professional Editing & Curation', desc: 'All photos professionally edited and color-corrected. We deliver only the best shots—curated for quality.' },
-                { title: 'Online Gallery & Download', desc: 'Photos delivered via secure online gallery (SpotMyPhotos). Attendees can view, download, and share.' },
+                { title: 'Online Gallery & Download', desc: 'Photos delivered via secure online private gallery. Attendees can view, download, and share.' },
                 { title: 'Flexible Event Types', desc: 'We cover all event types: conferences, galas, fundraisers, product launches, award ceremonies, and more.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
@@ -425,7 +425,7 @@ export default function EventPhotographyPage() {
             {
               question: 'Do you provide photos during the event?',
               answer:
-                'Yes! We photograph throughout your entire event and deliver professionally edited photos within 24-48 hours via our secure SpotMyPhotos gallery. Attendees can view and download photos immediately, making it perfect for real-time social media updates and event follow-up.',
+                'Yes! We photograph throughout your entire event and deliver professionally edited photos within 24-48 hours via our secure online private gallery. Attendees can view and download photos immediately, making it perfect for real-time social media updates and event follow-up.',
             },
             {
               question: 'How many photos do we receive from our event?',
@@ -435,7 +435,7 @@ export default function EventPhotographyPage() {
             {
               question: 'Can you handle large corporate events?',
               answer:
-                'Absolutely! For larger events (200+ guests), we deploy multiple photographers to ensure complete coverage across all areas. We coordinate team photographers and deliver all images from the same professional vision. We\'ve successfully covered major events for Comcast, Save Mart, and California Lawyers Association.',
+                'Absolutely! For larger events, we can deploy multiple photographers to ensure complete coverage across all areas. We coordinate team photographers and deliver all images from the same professional vision. We\'ve successfully covered major events for Comcast, Save Mart, and California Lawyers Association.',
             },
             {
               question: 'Do you do step and repeat photography at events?',

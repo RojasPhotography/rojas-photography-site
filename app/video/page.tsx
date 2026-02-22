@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'Are you a licensed drone pilot?',
     answer:
-      'Yes! We are FAA Part 107 certified professional drone pilots, meaning we hold the required federal license for commercial drone operations. We carry all required insurance documentation and maintain the highest safety standards. This certification enables us to legally fly drones for commercial properties, real estate marketing, events, and aerial videography—capabilities that uncertified operators cannot provide.',
+      'Yes! We are FAA Part 107 certified professional drone pilots, meaning we hold the required federal license for commercial drone operations. We carry all required insurance documentation and maintain the highest safety standards. This certification enables us to legally fly drones for commercial properties, corporate events, and aerial videography—capabilities that uncertified operators cannot provide.',
   },
   {
     question: 'How long does video production take?',
@@ -300,7 +300,7 @@ export default function VideoServicesPage() {
               {[
                 { title: 'Corporate Video Production', desc: 'Professional business videos for websites, marketing campaigns, and corporate communications. From concept to final edit.' },
                 { title: 'Client Testimonial Videos', desc: 'Powerful video testimonials from satisfied clients. We guide the process, handle filming, and deliver professionally edited videos.' },
-                { title: 'Aerial Drone Videography', desc: 'Stunning aerial footage using Part 107 certified drone operators. Perfect for real estate, commercial properties, and events.' },
+                { title: 'Aerial Drone Videography', desc: 'Stunning aerial footage using Part 107 certified drone operators. Perfect for commercial properties, corporate events, and business showcases.' },
                 { title: 'Event Video Coverage', desc: 'Professional video documentation of your corporate events. Highlights reels, complete coverage, or edited recap videos.' },
                 { title: 'Professional Editing & Motion Graphics', desc: 'High-quality editing, color grading, and motion graphics. Custom music, titles, transitions, and effects.' },
                 { title: 'Multi-Format Delivery', desc: 'Videos optimized for all platforms. Full resolution for websites, social media versions, and broadcast quality.' },
@@ -350,10 +350,10 @@ export default function VideoServicesPage() {
                   <h4 className="font-bold text-[var(--color-text-dark)] mb-4">Aerial & Specialty Videos</h4>
                   <ul className="text-[var(--color-text-body)] text-sm space-y-2">
                     <li>&#10003; Drone videography and aerial footage</li>
-                    <li>&#10003; Real estate property tours</li>
                     <li>&#10003; Commercial and construction documentation</li>
                     <li>&#10003; Event highlights and recap videos</li>
                     <li>&#10003; Testimonial and interview videos</li>
+                    <li>&#10003; Corporate facility tours</li>
                   </ul>
                 </div>
               </div>
@@ -431,7 +431,7 @@ export default function VideoServicesPage() {
             {
               question: 'Are you a licensed drone pilot?',
               answer:
-                'Yes! We are Part 107 certified professional drone pilots licensed by the FAA. This means we can legally fly drones for commercial purposes with all required safety and insurance documentation. Aerial drone videography is perfect for real estate, events, and commercial properties.',
+                'Yes! We are Part 107 certified professional drone pilots licensed by the FAA. This means we can legally fly drones for commercial purposes with all required safety and insurance documentation. Aerial drone videography is perfect for corporate events, commercial properties, and business facilities.',
             },
             {
               question: 'How long does video production take?',

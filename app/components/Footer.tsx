@@ -100,7 +100,7 @@ export default function Footer() {
             <p className="text-sm mb-4">Modesto, CA 95350</p>
             <p className="text-sm">
               <a
-                href="https://g.page/r/CZL9rK1kZJHDEBM/review"
+                href="https://g.page/r/CdOO4Sj3FR_lEBM/review"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[var(--color-primary-light)] transition-colors inline-flex items-center gap-1"

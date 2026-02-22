@@ -16,7 +16,7 @@ const faqs = [
   {
     question: 'How does on-site corporate photography work?',
     answer:
-      'We schedule a date and time at your location, arrive with our complete professional studio setup (professional lighting rigs, quality backdrops, high-end cameras), and photograph your team. For organizations with 10+ employees, we set up a custom scheduling system so everyone can book their own time slot. We typically photograph 20-30+ people per day. All photos are professionally edited and delivered within 24 hours via our secure SpotMyPhotos gallery, enabling immediate social media sharing and employee access.',
+      'We schedule a date and time at your location, arrive with our complete professional studio setup (professional lighting rigs, quality backdrops, high-end cameras), and photograph your team. For organizations with 10+ employees, we set up a custom scheduling system so everyone can book their own time slot. We typically photograph 20-30+ people per day. All photos are professionally edited and delivered within 24 hours via our secure online private gallery, enabling immediate social media sharing and employee access.',
   },
   {
     question: 'Do you bring a full studio setup on-site?',
@@ -226,7 +226,7 @@ export default function OnSitePhotographyPage() {
                     Immediate Delivery
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    Professionally edited images delivered within 24 hours via SpotMyPhotos gallery. Your team can download photos immediately for LinkedIn, your website, and all marketing materials.
+                    Professionally edited images delivered within 24 hours via online private gallery. Your team can download photos immediately for LinkedIn, your website, and all marketing materials.
                   </p>
                 </div>
               </SectionReveal>
@@ -340,7 +340,7 @@ export default function OnSitePhotographyPage() {
                 { title: 'Custom Employee Scheduling', desc: 'For organizations with 10+ employees, we create a custom online calendar so your team members can schedule their own session times.' },
                 { title: 'Real-Time Image Review & Coaching', desc: 'We guide your team through posing and expression in real-time. Everyone sees their photos as we shoot, ensuring confidence in final results.' },
                 { title: 'Saves Time & Increases Efficiency', desc: 'No travel time to a studio. We come to you and work efficiently at your location. Your employees stay in their familiar environment.' },
-                { title: 'Immediate Delivery', desc: 'All images are professionally edited and delivered within 24 hours via our SpotMyPhotos gallery. Your team can download photos instantly.' },
+                { title: 'Immediate Delivery', desc: 'All images are professionally edited and delivered within 24 hours via our online private gallery. Your team can download photos instantly.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
                   <div className="flex gap-4">
@@ -444,7 +444,7 @@ export default function OnSitePhotographyPage() {
             {
               question: 'How does on-site corporate photography work?',
               answer:
-                'We schedule a date and time at your location, arrive with our complete professional studio setup (lighting, backdrop, cameras), and photograph your team. For 10+ employees, we set up a custom scheduling system so everyone can book their own time. Photos are professionally edited and delivered within 24 hours via our SpotMyPhotos gallery.',
+                'We schedule a date and time at your location, arrive with our complete professional studio setup (lighting, backdrop, cameras), and photograph your team. For 10+ employees, we set up a custom scheduling system so everyone can book their own time. Photos are professionally edited and delivered within 24 hours via our online private gallery.',
             },
             {
               question: 'Do you bring a full studio setup on-site?',
