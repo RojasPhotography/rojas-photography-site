@@ -356,8 +356,7 @@ export default function OnSitePhotographyPage() {
             <SectionReveal>
               <div className="bg-white p-8 rounded-xl border border-gray-100 max-w-sm mx-auto text-center shadow-sm">
                 <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-4">Pricing</h3>
-                <p className="text-[var(--color-text-body)] mb-4">Custom pricing based on your organization&apos;s size and photography needs.</p>
-                <p className="text-[var(--color-text-muted)] text-sm mb-6">Teams of 20 average $150-$300 per person.</p>
+                <p className="text-[var(--color-text-body)] mb-6">Custom pricing based on your organization&apos;s size and photography needs.</p>
                 <Link
                   href="/contact-quote"
                   className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block"
