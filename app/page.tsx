@@ -189,6 +189,23 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Urgent CTA Before Services - Early Conversion Opportunity */}
+        <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
+          <div className="max-w-2xl mx-auto">
+            <SectionReveal>
+              <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
+                Don't let generic imagery tell your story wrong.
+              </p>
+              <Link
+                href="/discovery-call"
+                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+              >
+                Book Your Discovery Call
+              </Link>
+            </SectionReveal>
+          </div>
+        </section>
+
         {/* Services Section - SB7 Enhanced */}
         <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
@@ -525,23 +542,6 @@ export default function HomePage() {
                   Your organization has worked too hard building your story to let mediocre imagery tell it wrong.
                 </p>
               </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* Urgent CTA After Stakes - Strike While Emotions Are High */}
-        <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                Don't let generic imagery tell your story wrong.
-              </p>
-              <Link
-                href="/discovery-call"
-                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-              >
-                Book Your Discovery Call
-              </Link>
             </SectionReveal>
           </div>
         </section>
