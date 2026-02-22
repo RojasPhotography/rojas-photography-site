@@ -385,7 +385,7 @@ export default function HomePage() {
                   src="/images/CLA AM 25 335.jpg"
                   alt="Corporate event photography Central Valley - Professional event coverage"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[40%_50%]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </SectionReveal>
