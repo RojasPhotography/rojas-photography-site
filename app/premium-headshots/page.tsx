@@ -99,7 +99,7 @@ export default function PremiumHeadshotsPage() {
       {/* Hero Section - SB7: A Character */}
       <HeroSection
         image="/images/headshots/headshot-ceo-nutrition.jpg"
-        title="You Shouldn't Have to Feel Awkward Getting a Professional Headshot."
+        title="Professional Headshots Shouldn't Feel Awkward."
         tag="Premium Corporate Headshots | Modesto, CA"
         fullHeight
       >
