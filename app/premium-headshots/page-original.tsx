@@ -96,158 +96,32 @@ export default function PremiumHeadshotsPage() {
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <div className="min-h-screen bg-white">
-      {/* Hero Section - SB7: A Character */}
       <HeroSection
-        image="/images/headshots/headshot-ceo-nutrition.jpg"
-        title="You Shouldn't Have to Feel Awkward Getting a Professional Headshot."
-        tag="Premium Corporate Headshots | Modesto, CA"
-        fullHeight
+        title="In-Studio Corporate Headshots"
+        subtitle="Guided, professional headshot sessions in our Modesto studio with real-time coaching and image selection"
+        gradient
+      />
+
+      {/* Definition Box */}
+      <DefinitionBox
+        term={serviceDefinitions.premiumHeadshots.term}
+        definition={serviceDefinitions.premiumHeadshots.definition}
       >
-        <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Most professionals feel camera-shy or don't know how to pose. Our guided headshot sessions in Modesto include real-time coaching so you feel confident, look natural, and walk away with a headshot that builds credibility.
+        <p className="text-[var(--color-text-body)] mt-4">
+          {serviceDefinitions.premiumHeadshots.context}
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-          <a
-            href="#booking-heading"
-            className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-          >
-            Book Your Session
-          </a>
-          <Link
-            href="/discovery-call"
-            className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-          >
-            Schedule Discovery Call
-          </Link>
-        </div>
-      </HeroSection>
-
-      {/* Problem Section - SB7: Has a Problem */}
-      <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
-        <div className="max-w-4xl mx-auto">
-          <SectionReveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-8">
-              Generic Corporate Headshots Hurt Your Credibility
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed">
-              <div>
-                <p className="mb-4">
-                  You've seen them: stiff, awkward corporate headshots that scream "I was uncomfortable." Generic photographer drops you in front of a camera, snaps a few shots, and sends you images that look forced and inauthentic.
-                </p>
-                <p className="mb-4">
-                  You don't know how to pose. You feel camera-shy. The photographer doesn't coach you—they just tell you to "look natural" and expect you to figure it out.
-                </p>
-              </div>
-              <div>
-                <p className="mb-4">
-                  The result? A headshot that doesn't reflect your expertise or build trust. On LinkedIn, your profile gets skipped. On your website, you blend in with everyone else.
-                </p>
-                <p className="mb-4 font-semibold text-[var(--color-text-dark)]">
-                  Your professional image deserves better than a stiff, uncomfortable photo session that produces mediocre results.
-                </p>
-              </div>
-            </div>
-          </SectionReveal>
-        </div>
-      </section>
-
-      {/* Guide Section - SB7: Meets a Guide */}
-      <section className="py-16 md:py-20 px-8 bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <SectionReveal>
-            <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
-                Real-Time Coaching for Camera-Shy Professionals
-              </h2>
-              <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
-                <p className="font-semibold text-[var(--color-text-dark)]">
-                  Here's what makes us different: We don't just take your photo—we coach you through the entire session.
-                </p>
-                <p>
-                  Most of our clients feel the same way you do: awkward in front of the camera, unsure about posing, worried they're "not photogenic." We get it. That's exactly why our approach is built around real-time guidance.
-                </p>
-                <p>
-                  We've photographed 500+ professionals across Modesto and the Central Valley—CEOs, attorneys, realtors, consultants, healthcare executives. With 15+ years of corporate leadership experience, we understand what a professional headshot needs to communicate: confidence, authenticity, and credibility.
-                </p>
-                <p>
-                  You're not alone in front of a camera. We guide your posing, adjust your angles, coach your expression, and review images together in real-time so you see exactly what's working.
-                </p>
-              </div>
-            </div>
-          </SectionReveal>
-        </div>
-      </section>
+      </DefinitionBox>
 
       <main id="main-content">
-        {/* Plan Section - SB7: Who Gives Them a Plan */}
-        <section className="py-20 md:py-28 px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-5xl font-bold text-center text-[var(--color-text-dark)] mb-16">
-                Our Guided Headshot Process
-              </h2>
-            </SectionReveal>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
-                    1
-                  </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Pre-Session Consultation
-                  </h3>
-                  <p className="text-[var(--color-text-body)] leading-relaxed">
-                    We discuss your professional goals, the images you need, and offer wardrobe guidance. If you're camera-shy or uncertain, we'll walk you through what to expect so you arrive confident and prepared.
-                  </p>
-                </div>
-              </SectionReveal>
-
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
-                    2
-                  </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Coached Studio Session
-                  </h3>
-                  <p className="text-[var(--color-text-body)] leading-relaxed">
-                    You're not on your own. We coach you through posing, expression, angles, and confidence. See your photos in real-time, provide feedback, and adjust on the fly. Unlimited time, unlimited wardrobe changes.
-                  </p>
-                </div>
-              </SectionReveal>
-
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
-                    3
-                  </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Selection & Fast Delivery
-                  </h3>
-                  <p className="text-[var(--color-text-body)] leading-relaxed">
-                    We review your session together and help you select your best images. Only pay for the photos you love. Professionally edited images delivered within 48 hours, ready for LinkedIn and your website.
-                  </p>
-                </div>
-              </SectionReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* Urgent CTA Before Gallery - Early Conversion Opportunity */}
-        <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                Don't settle for a stiff, awkward headshot that hurts your credibility.
-              </p>
-              <a
-                href="#booking-heading"
-                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-              >
-                Book Your Session
-              </a>
-            </SectionReveal>
+        {/* CTA Buttons */}
+        <section className="py-12 px-8 bg-white">
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <a href="#booking-heading" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
+              Book Now
+            </a>
+            <a href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
+              Schedule Discovery Call
+            </a>
           </div>
         </section>
 
@@ -318,40 +192,15 @@ export default function PremiumHeadshotsPage() {
           </div>
         </section>
 
-        {/* Stakes Section - SB7: Helps Avoid Failure */}
-        <section className="py-16 px-8 bg-white border-y border-gray-100">
-          <div className="max-w-4xl mx-auto text-center">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
-                A Bad Headshot Costs You Opportunities
-              </h2>
-              <div className="text-lg text-[var(--color-text-body)] leading-relaxed space-y-4">
-                <p>
-                  Your headshot is often the first impression potential clients, employers, or partners have of you. A stiff, awkward, or unprofessional photo sends the wrong message—no matter how qualified you are.
-                </p>
-                <p>
-                  Studies show LinkedIn profiles with professional photos get 21x more views and 9x more connection requests. Without a strong headshot, you're invisible. With a bad one, you hurt your credibility.
-                </p>
-                <p>
-                  Meanwhile, your competitors with confident, authentic headshots are winning the business you deserve.
-                </p>
-                <p className="font-semibold text-[var(--color-text-dark)]">
-                  You've worked too hard building your expertise to let an awkward photo undermine it.
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* CTA After Stakes */}
+        {/* Mid-Page CTA */}
         <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
           <div className="max-w-3xl mx-auto text-center">
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready for a Headshot That Builds Credibility?
+                Ready to Elevate Your Professional Image?
               </h2>
               <p className="text-lg mb-8 text-white/90">
-                Schedule your guided session today. No awkwardness, no guesswork—just real-time coaching and a headshot you'll be proud to use.
+                Schedule your premium headshot session today and get professional images delivered within 48 hours.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -364,7 +213,7 @@ export default function PremiumHeadshotsPage() {
                   href="/discovery-call"
                   className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Schedule Discovery Call
+                  Have Questions?
                 </Link>
               </div>
             </SectionReveal>
@@ -417,6 +266,45 @@ export default function PremiumHeadshotsPage() {
                   Schedule Your Session
                 </a>
               </div>
+            </SectionReveal>
+          </div>
+        </section>
+
+        {/* Process */}
+        <section className="py-20 px-8 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Our Process</h2>
+            </SectionReveal>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { step: '01', title: 'Pre-Session Consultation', desc: "We discuss your professional goals, the images you need, and your vision. If you'd like wardrobe guidance, we'll help you prepare so you feel confident and ready." },
+                { step: '02', title: 'Guided Coaching Session', desc: "During your session, we guide every detail—posing, expression, angles, and confidence. You're not standing alone in front of a camera; we're coaching you the entire way." },
+                { step: '03', title: 'Selection & Delivery', desc: 'We review your session photos together and help you select the perfect shots. Your images are professionally edited and delivered within 48 hours.' },
+              ].map((item) => (
+                <SectionReveal key={item.step}>
+                  <div>
+                    <span className="text-5xl font-bold text-[var(--color-primary-light)]">{item.step}</span>
+                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">{item.title}</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
+                  </div>
+                </SectionReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Who This Is For */}
+        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
+          <div className="max-w-4xl mx-auto">
+            <SectionReveal>
+              <h2 className="text-3xl font-bold text-[var(--color-text-dark)] mb-6">Who This Service Is For</h2>
+              <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
+                Premium Corporate Headshots are perfect for business professionals who want guidance throughout their session. Whether you&apos;re a CEO, attorney, consultant, realtor, or entrepreneur, this service is designed for people who need direction and want to walk away confident in their images.
+              </p>
+              <p className="text-[var(--color-text-body)] leading-relaxed">
+                If you&apos;re unsure about posing, angles, or which looks best for your brand—we&apos;ve got you covered. Our coaching approach removes the stress and ensures you get professional portraits you&apos;ll love.
+              </p>
             </SectionReveal>
           </div>
         </section>
@@ -487,7 +375,6 @@ export default function PremiumHeadshotsPage() {
         <CTASection
           heading="Want to Discuss Your Project First?"
           subheading="Schedule a free discovery call to discuss your professional photography needs."
-          primaryLabel="Book Your Discovery Call"
           showContactInfo={false}
         />
       </main>
