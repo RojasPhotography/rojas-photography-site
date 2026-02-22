@@ -156,7 +156,7 @@ export default function CommercialPhotographyPage() {
                   <strong>We understand the frustration of generic stock photos.</strong> Your brand is unique—your imagery should be too. That&apos;s exactly why we specialize in custom commercial photography that tells your specific story.
                 </p>
                 <p>
-                  <strong>We&apos;ve photographed 500+ businesses across Modesto and the Central Valley</strong>—from healthcare organizations and law firms to tech startups and manufacturing companies. We bring 15+ years of corporate experience, which means we understand business context, brand positioning, and what actually converts customers.
+                  <strong>We&apos;ve photographed countless businesses across Modesto and the Central Valley</strong>—from healthcare organizations and law firms to tech startups and manufacturing companies. We bring 15+ years of corporate experience, which means we understand business context, brand positioning, and what actually converts customers.
                 </p>
                 <p>
                   We don&apos;t just shoot photos. We create visual storytelling that differentiates your brand, connects with your audience, and strengthens your marketing—whether you need product photography, architectural shots, lifestyle imagery, or a complete brand photography library.
