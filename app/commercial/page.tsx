@@ -9,7 +9,7 @@ import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
-import { generateServiceSchema, generateFAQSchema } from '../lib/schema';
+import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 import { serviceDefinitions, statistics } from '../lib/definitions';
 
 const faqs = [
@@ -89,6 +89,10 @@ export default function CommercialPhotographyPage() {
         image: '/images/MOVE Stanislaus-(3 of 28).jpg',
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
+      <SchemaScript schema={generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://rojasphotography.net' },
+        { name: 'Commercial Photography', url: 'https://rojasphotography.net/commercial' },
+      ])} />
       <div className="min-h-screen bg-white">
       {/* SB7: A Character - Business Owner/Marketing Manager */}
       <HeroSection

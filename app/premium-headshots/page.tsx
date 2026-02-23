@@ -10,7 +10,7 @@ import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import BookingScheduler from '../components/BookingScheduler';
 import DefinitionBox from '../components/DefinitionBox';
-import { generateServiceSchema, generateFAQSchema } from '../lib/schema';
+import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 import { serviceDefinitions, statistics } from '../lib/definitions';
 
 export const metadata: Metadata = {
@@ -95,6 +95,10 @@ export default function PremiumHeadshotsPage() {
         image: '/images/Gina-0026 (1).jpg',
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
+      <SchemaScript schema={generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://rojasphotography.net' },
+        { name: 'Premium Headshots', url: 'https://rojasphotography.net/premium-headshots' },
+      ])} />
       <div className="min-h-screen bg-white">
       {/* Hero Section - SB7: A Character */}
       <HeroSection

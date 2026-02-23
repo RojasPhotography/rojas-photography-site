@@ -9,7 +9,7 @@ import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
-import { generateServiceSchema, generateFAQSchema } from '../lib/schema';
+import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 import { serviceDefinitions, statistics } from '../lib/definitions';
 
 const faqs = [
@@ -94,6 +94,10 @@ export default function OnSitePhotographyPage() {
         image: '/images/BB Individual Headshot Session.png',
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
+      <SchemaScript schema={generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://rojasphotography.net' },
+        { name: 'On-Site Photography', url: 'https://rojasphotography.net/on-site-photography' },
+      ])} />
       <div className="min-h-screen bg-white">
       {/* Hero Section - SB7: A Character */}
       <HeroSection
