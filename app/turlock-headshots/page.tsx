@@ -8,6 +8,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
+import { generateBreadcrumbSchema } from '../lib/schema';
 
 function generateTurlockSchema() {
   return {
@@ -163,6 +164,10 @@ export default function TurlockHeadshotsPage() {
       <SchemaScript schema={generateTurlockSchema()} />
       <SchemaScript schema={generateTurlockServiceSchema()} />
       <SchemaScript schema={generateTurlockFAQSchema()} />
+      <SchemaScript schema={generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://rojasphotography.net' },
+        { name: 'Turlock Headshots', url: 'https://rojasphotography.net/turlock-headshots' },
+      ])} />
       <div className="min-h-screen bg-white">
         <HeroSection
           image="/images/Hero Image1.jpg"

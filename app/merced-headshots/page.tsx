@@ -8,6 +8,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
+import { generateBreadcrumbSchema } from '../lib/schema';
 
 function generateMercedSchema() {
   return {
@@ -163,6 +164,10 @@ export default function MercedHeadshotsPage() {
       <SchemaScript schema={generateMercedSchema()} />
       <SchemaScript schema={generateMercedServiceSchema()} />
       <SchemaScript schema={generateMercedFAQSchema()} />
+      <SchemaScript schema={generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://rojasphotography.net' },
+        { name: 'Merced Headshots', url: 'https://rojasphotography.net/merced-headshots' },
+      ])} />
       <div className="min-h-screen bg-white">
         <HeroSection
           image="/images/Hero Image1.jpg"

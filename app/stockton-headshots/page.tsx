@@ -8,6 +8,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
+import { generateBreadcrumbSchema } from '../lib/schema';
 
 function generateStocktonSchema() {
   return {
@@ -163,6 +164,10 @@ export default function StocktonHeadshotsPage() {
       <SchemaScript schema={generateStocktonSchema()} />
       <SchemaScript schema={generateStocktonServiceSchema()} />
       <SchemaScript schema={generateStocktonFAQSchema()} />
+      <SchemaScript schema={generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://rojasphotography.net' },
+        { name: 'Stockton Headshots', url: 'https://rojasphotography.net/stockton-headshots' },
+      ])} />
       <div className="min-h-screen bg-white">
         <HeroSection
           image="/images/Hero Image1.jpg"

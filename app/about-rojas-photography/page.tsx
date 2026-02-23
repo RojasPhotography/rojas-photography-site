@@ -5,7 +5,7 @@ import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import CTASection from '../components/CTASection';
 import SchemaScript from '../components/SchemaScript';
-import { generatePersonSchema } from '../lib/schema';
+import { generatePersonSchema, generateBreadcrumbSchema } from '../lib/schema';
 
 export const metadata: Metadata = {
   title: 'About Rojas Photography | Modesto Corporate Photographers',
@@ -38,6 +38,10 @@ export default function AboutPage() {
       {personSchemas.map((schema, index) => (
         <SchemaScript key={index} schema={schema} />
       ))}
+      <SchemaScript schema={generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://rojasphotography.net' },
+        { name: 'About', url: 'https://rojasphotography.net/about-rojas-photography' },
+      ])} />
       <div className="min-h-screen bg-white">
         <HeroSection
           title="About Rojas Photography"

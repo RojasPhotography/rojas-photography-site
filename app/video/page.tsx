@@ -9,7 +9,7 @@ import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
-import { generateServiceSchema, generateFAQSchema } from '../lib/schema';
+import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 import { serviceDefinitions, statistics } from '../lib/definitions';
 
 const faqs = [
@@ -94,6 +94,10 @@ export default function VideoServicesPage() {
         image: '/images/BBSI-Corp-Video.jpg',
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
+      <SchemaScript schema={generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://rojasphotography.net' },
+        { name: 'Video Production', url: 'https://rojasphotography.net/video' },
+      ])} />
       <div className="min-h-screen bg-white">
       {/* SB7: A Character - Business Owner/Marketing Director */}
       <HeroSection

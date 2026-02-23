@@ -8,6 +8,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
+import { generateBreadcrumbSchema } from '../lib/schema';
 
 function generateFresnoSchema() {
   return {
@@ -163,6 +164,10 @@ export default function FresnoHeadshotsPage() {
       <SchemaScript schema={generateFresnoSchema()} />
       <SchemaScript schema={generateFresnoServiceSchema()} />
       <SchemaScript schema={generateFresnoFAQSchema()} />
+      <SchemaScript schema={generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://rojasphotography.net' },
+        { name: 'Fresno Headshots', url: 'https://rojasphotography.net/fresno-headshots' },
+      ])} />
       <div className="min-h-screen bg-white">
         <HeroSection
           image="/images/Hero Image1.jpg"
