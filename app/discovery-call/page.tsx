@@ -4,6 +4,8 @@ import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import CTASection from '../components/CTASection';
 import SchedulerEmbed from '../components/SchedulerEmbed';
+import SchemaScript from '../components/SchemaScript';
+import { generateBreadcrumbSchema } from '../lib/schema';
 
 export const metadata: Metadata = {
   title: 'Schedule Your Free Discovery Call | Rojas Photography Modesto',
@@ -37,6 +39,11 @@ export const metadata: Metadata = {
 
 export default function DiscoveryCallPage() {
   return (
+    <>
+      <SchemaScript schema={generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://rojasphotography.net' },
+        { name: 'Discovery Call', url: 'https://rojasphotography.net/discovery-call' },
+      ])} />
     <div className="min-h-screen bg-white">
       <HeroSection
         title="Schedule Your Discovery Call"
@@ -188,5 +195,6 @@ export default function DiscoveryCallPage() {
         />
       </main>
     </div>
+    </>
   );
 }

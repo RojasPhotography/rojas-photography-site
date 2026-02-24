@@ -13,6 +13,34 @@ import DefinitionBox from '../components/DefinitionBox';
 import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 import { serviceDefinitions, statistics } from '../lib/definitions';
 
+const faqs = [
+  {
+    question: 'How much do professional headshots cost in Modesto?',
+    answer:
+      'Rojas Photography professional headshot sessions are priced at $150 for the session fee, plus $150 per image you select. This transparent, flexible pricing means you only pay for the photos you love with no package minimums or surprise costs. All images are professionally edited and delivered within 48 hours via online private gallery, ready for LinkedIn, your website, and business marketing materials.',
+  },
+  {
+    question: 'What should I wear for corporate headshot photos?',
+    answer:
+      'We recommend solid colors and professional business attire that represents your industry. Avoid busy patterns and logos. We offer free wardrobe consultation before your session to ensure you select looks that represent your professional brand. Feel free to bring multiple outfits—our sessions include unlimited wardrobe changes. Popular choices include dark blazer with light shirt, professional dress, or tailored suit.',
+  },
+  {
+    question: 'How long does a professional headshot session take?',
+    answer:
+      'Our guided sessions include unlimited coaching time. Most sessions take 30-45 minutes, though you can take as long as you need. During your session, we guide you through posing, expression, and styling in real-time. Your professionally edited images are delivered within 48 hours. For time-sensitive needs, we offer rush delivery (additional $75 fee) with 24-hour turnaround.',
+  },
+  {
+    question: 'Do you provide makeup and styling for headshots?',
+    answer:
+      'We don\'t provide makeup application in-studio, but we do offer professional wardrobe consultation to help you select looks that represent your brand. We can recommend trusted local makeup artists if needed. Many clients schedule makeup appointments before their session for a polished, camera-ready look. Styling consultation is included with every session at no additional cost.',
+  },
+  {
+    question: 'Can I use these headshots for LinkedIn and my website?',
+    answer:
+      'Absolutely! Your headshots are fully licensed for professional use on LinkedIn, your website, company directory, and all business marketing materials. You own the images you purchase and can use them however you need for your professional brand. Typical uses include: LinkedIn profile photo, company website/bio page, professional email signature, industry directory, and printed marketing materials.',
+  },
+];
+
 export const metadata: Metadata = {
   title: 'Professional Headshots Modesto CA | $150 Session | Rojas Photography',
   description:
@@ -37,62 +65,13 @@ export const metadata: Metadata = {
 };
 
 export default function PremiumHeadshotsPage() {
-
-  const faqs = [
-    {
-      question: 'How much do professional headshots cost in Modesto?',
-      answer:
-        'Rojas Photography professional headshot sessions are priced at $150 for the session fee, plus $150 per image you select. This transparent, flexible pricing means you only pay for the photos you love with no package minimums or surprise costs. All images are professionally edited and delivered within 48 hours via online private gallery, ready for LinkedIn, your website, and business marketing materials.',
-    },
-    {
-      question: 'What should I wear for corporate headshot photos?',
-      answer:
-        'We recommend solid colors and professional business attire that represents your industry. Avoid busy patterns and logos. We offer free wardrobe consultation before your session to ensure you select looks that represent your professional brand. Feel free to bring multiple outfits—our sessions include unlimited wardrobe changes. Popular choices include dark blazer with light shirt, professional dress, or tailored suit. Our photographers will guide you on which options photograph best and match your professional brand.',
-    },
-    {
-      question: 'How long does a professional headshot session take?',
-      answer:
-        'Our guided sessions include unlimited coaching time. Most sessions take 30-45 minutes, though you can take as long as you need. During your session, we guide you through posing, expression, and styling in real-time. You\'ll see your photos as we shoot and provide feedback, and we review images together before you leave to ensure you feel confident in the results. Your professionally edited images are delivered within 48 hours. For time-sensitive needs, we offer rush delivery (additional $75 fee) with 24-hour turnaround.',
-    },
-    {
-      question: 'Do you provide makeup and styling for headshots?',
-      answer:
-        'We don\'t provide makeup application in-studio, but we do offer professional wardrobe consultation to help you select looks that represent your brand. We can recommend trusted local makeup artists if needed. Many clients schedule makeup appointments before their session for a polished, camera-ready look. Styling consultation is included with every session at no additional cost, and our photographers provide real-time posing direction throughout.',
-    },
-    {
-      question: 'Can I use these headshots for LinkedIn and my website?',
-      answer:
-        'Absolutely! Your headshots are fully licensed for professional use on LinkedIn, your website, company directory, and all business marketing materials. You own the images you purchase and can use them however you need for your professional brand. Typical uses include: LinkedIn profile photo (1-2 images), company website/bio page (1-2 images), professional email signature, industry directory, and printed marketing materials. All delivered images include full usage rights with no additional fees.',
-    },
-    {
-      question: 'Why is professional photography important for my career?',
-      answer:
-        'Professional headshots are often the first impression potential clients, employers, or business partners have of you. A high-quality, authentic headshot builds credibility, conveys confidence, and differentiates you from competitors with amateur photos. Studies show that LinkedIn profiles with professional photos receive 21x more profile views and 9x more connection requests. Whether you\'re a CEO, entrepreneur, attorney, or consultant, a professional headshot is an essential investment in your professional brand and career growth.',
-    },
-    {
-      question: 'What if I\'m not photogenic or camera shy?',
-      answer:
-        'This is extremely common—most of our clients feel the same way! Our approach is different: we provide real-time coaching throughout your session to guide your posing, expression, and confidence. We see our role as helping you present your authentic professional self, not creating an artificial image. Our photographers have experience working with professionals who are camera-shy, and we create a comfortable, supportive environment. Most clients are surprised by how natural and professional they look in their final images.',
-    },
-    {
-      question: 'Can we rush the turnaround if we need photos quickly?',
-      answer:
-        'Yes! While standard turnaround is 48 hours, we offer rush delivery for an additional $75 fee with 24-hour turnaround. This means you can schedule a session in the morning and have professionally edited images by the next morning. This is perfect for time-sensitive needs like last-minute LinkedIn updates, company announcements, or sudden website needs. Contact us about same-day or next-day availability.',
-    },
-    {
-      question: 'Do you offer virtual consultations before the session?',
-      answer:
-        'Absolutely! We offer free virtual consultations via Zoom or phone before your session. During the consultation, we discuss your professional goals, wardrobe options, the images you need, and any concerns you have. This pre-session planning ensures you feel confident and prepared when you arrive. We can also provide wardrobe recommendations, discuss styling choices, and answer any questions you have about the process.',
-    },
-  ];
-
   return (
     <>
       <SchemaScript schema={generateServiceSchema({
         name: 'Professional In-Studio Headshots',
         description: 'Guided, professional headshot sessions in our Modesto studio with real-time coaching and image selection. $150 session + $150/image.',
         url: 'https://rojasphotography.net/premium-headshots',
-        image: '/images/Gina-0026 (1).jpg',
+        image: 'https://rojasphotography.net/images/Gina-0026 (1).jpg',
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([
@@ -459,33 +438,7 @@ export default function PremiumHeadshotsPage() {
 
         {/* FAQ Section */}
         <FAQSection
-          faqs={[
-            {
-              question: 'How much do professional headshots cost in Modesto?',
-              answer:
-                'Our professional headshot sessions are $150, plus $150 for each image you purchase. There are no package minimums—you only pay for the images you love. This flexible pricing model lets you select exactly the photos you need without wasting money on images you won\'t use.',
-            },
-            {
-              question: 'What should I wear for corporate headshot photos?',
-              answer:
-                'We recommend solid colors and professional business attire that represents your industry. Avoid busy patterns and busy logos. We offer free wardrobe consultation before your session to ensure you select looks that represent your professional brand. Feel free to bring multiple outfits—our sessions include unlimited wardrobe changes.',
-            },
-            {
-              question: 'How long does a professional headshot session take?',
-              answer:
-                'Our guided sessions include unlimited coaching time. Most sessions take 30-45 minutes, though you can take as long as you need. We guide you through posing, expression, and styling in real-time, and we review images together before you leave. Your professionally edited images are delivered within 48 hours.',
-            },
-            {
-              question: 'Do you provide makeup and styling for headshots?',
-              answer:
-                'We don\'t provide makeup application in-studio, but we do offer professional wardrobe consultation to help you select looks that represent your brand. We can recommend trusted local makeup artists if needed. Many clients schedule makeup appointments before their session for a polished, camera-ready look.',
-            },
-            {
-              question: 'Can I use these headshots for LinkedIn and my website?',
-              answer:
-                'Absolutely! Your headshots are fully licensed for professional use on LinkedIn, your website, company directory, and all business marketing materials. You own the images you purchase and can use them however you need for your professional brand.',
-            },
-          ]}
+          faqs={faqs}
           heading="Professional Headshot Questions"
         />
 

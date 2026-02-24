@@ -61,7 +61,7 @@ export function generateOrganizationSchema() {
       'https://www.instagram.com/rojasphotographymodesto/',
       'https://www.facebook.com/rojasphotography/',
     ],
-    contact: {
+    contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
       telephone: '+1-209-380-3727',

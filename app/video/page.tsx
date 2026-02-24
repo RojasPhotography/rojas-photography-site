@@ -38,26 +38,6 @@ const faqs = [
     answer:
       'Absolutely! We deliver videos in multiple optimized formats for different platforms. This includes full-resolution files for websites and YouTube, vertical format for Instagram Stories and TikTok, square format for Facebook and LinkedIn feeds, and broadcast-quality files for professional distribution. Professional business videos generate 80% more engagement than static images and increase conversion rates by 47%.',
   },
-  {
-    question: 'What\'s the shortest video length you create?',
-    answer:
-      'We create videos at any length, starting from 10-15 seconds for social media clips up to feature-length productions. The shortest videos are typically promotional clips for Instagram, TikTok, or LinkedIn—perfect for quick announcements, product highlights, or testimonials. Even short videos receive professional scripting, filming, color grading, and editing. We\'ll work with you to maximize impact within your desired length.',
-  },
-  {
-    question: 'Do you handle scripting and concept development?',
-    answer:
-      'Yes! We offer full concept-to-delivery service. If you have a clear vision, we execute it. If you need help developing the concept, we guide you through the process. Our team discusses your goals, target audience, key messages, and desired tone to create a script and shot list. This collaborative approach ensures the final video aligns perfectly with your vision and business objectives.',
-  },
-  {
-    question: 'Can you shoot on location or do you need a studio?',
-    answer:
-      'We shoot anywhere—on location, in your office, at events, outdoors, or in a studio. Our equipment is portable and professional-grade, allowing us to produce high-quality video in any environment. On-location shooting often captures authentic company culture and real-world context. For certain projects, studio lighting produces superior results. We recommend the best option based on your specific needs during the planning phase.',
-  },
-  {
-    question: 'What video formats do you deliver and what about music licensing?',
-    answer:
-      'We deliver videos in all standard formats: MP4 for web and social media, MOV for professional editing suites, and other formats as needed. Music and sound effects are professionally licensed royalty-free or we arrange proper licensing for copyrighted music. All music is included in the project cost and fully licensed for your intended use—no surprise fees or licensing issues later.',
-  },
 ];
 
 
@@ -91,7 +71,7 @@ export default function VideoServicesPage() {
         name: 'Corporate Video Production',
         description: 'Professional corporate video production including business videos, testimonials, drone videography, and promotional content in Modesto and Central Valley.',
         url: 'https://rojasphotography.net/video',
-        image: '/images/BBSI-Corp-Video.jpg',
+        image: 'https://rojasphotography.net/images/BBSI-Corp-Video.jpg',
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([
@@ -426,33 +406,7 @@ export default function VideoServicesPage() {
 
         {/* FAQ Section */}
         <FAQSection
-          faqs={[
-            {
-              question: 'How much does corporate video production cost?',
-              answer:
-                'Video production pricing is custom based on your project scope, length, complexity, and editing requirements. A simple promotional video costs less than a comprehensive corporate video with motion graphics. We provide personalized quotes based on your specific needs and budget.',
-            },
-            {
-              question: 'Are you a licensed drone pilot?',
-              answer:
-                'Yes! We are Part 107 certified professional drone pilots licensed by the FAA. This means we can legally fly drones for commercial purposes with all required safety and insurance documentation. Aerial drone videography is perfect for corporate events, commercial properties, and business facilities.',
-            },
-            {
-              question: 'How long does video production take?',
-              answer:
-                'Project timelines vary based on scope. A simple 30-second promotional video might take 1-2 weeks, while a comprehensive corporate video with motion graphics takes 3-4 weeks. We discuss timelines upfront during planning. Most projects are delivered within 2-4 weeks.',
-            },
-            {
-              question: 'What types of corporate videos do you create?',
-              answer:
-                'We create corporate videos, client testimonial videos, promotional content, product demonstration videos, brand videos, training videos, event highlights, and aerial drone videography. Whether you need a simple social media clip or a comprehensive corporate production, we handle full concept development through final delivery.',
-            },
-            {
-              question: 'Can you create videos optimized for social media?',
-              answer:
-                'Absolutely! We deliver videos in multiple formats optimized for different platforms. This includes full-resolution for websites, social media versions (vertical, square, and horizontal), and broadcast-quality files. We understand the requirements for Instagram, TikTok, YouTube, LinkedIn, and Facebook.',
-            },
-          ]}
+          faqs={faqs}
           heading="Video Production Questions"
         />
 

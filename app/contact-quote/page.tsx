@@ -4,6 +4,8 @@ import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import CTASection from '../components/CTASection';
 import ContactFormEmbed from '../components/ContactFormEmbed';
+import SchemaScript from '../components/SchemaScript';
+import { generateBreadcrumbSchema } from '../lib/schema';
 
 export const metadata: Metadata = {
   title: 'Contact Rojas Photography | Get a Quote for Professional Photography',
@@ -37,6 +39,11 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
+    <>
+      <SchemaScript schema={generateBreadcrumbSchema([
+        { name: 'Home', url: 'https://rojasphotography.net' },
+        { name: 'Contact & Quote', url: 'https://rojasphotography.net/contact-quote' },
+      ])} />
     <div className="min-h-screen bg-white">
       <HeroSection
         title="Let's Work Together"
@@ -138,5 +145,6 @@ export default function ContactPage() {
         />
       </main>
     </div>
+    </>
   );
 }

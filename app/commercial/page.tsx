@@ -33,26 +33,6 @@ const faqs = [
     answer:
       'Project timelines vary based on scope. A simple product photography session (5-10 items) takes 2-3 hours. A comprehensive commercial shoot (full-day location coverage) takes 6-8 hours. After shooting, we professionally edit, color correct, and deliver all images within 48-72 hours. Rush delivery available (additional fee) with 24-hour turnaround.',
   },
-  {
-    question: 'How do you determine pricing for my commercial project?',
-    answer:
-      'We base pricing on several factors: project scope (complexity and size), shooting duration (how many hours needed), location (on-site or studio), number of deliverable images, and editing requirements. During your consultation, we discuss your goals, timeline, and budget to create a custom proposal. We provide transparent quotes with no hidden fees. This approach ensures you pay fairly for the specific work needed rather than paying for unnecessary services.',
-  },
-  {
-    question: 'Can you work with our company\'s style guide and brand guidelines?',
-    answer:
-      'Absolutely! We\'re experienced working with established brand guidelines and style requirements. During our consultation, please share your brand guide, color palettes, photography style preferences, and any specific requirements. We ensure all images align with your brand identity and marketing standards. This consistency across your commercial imagery strengthens brand recognition and professionalism.',
-  },
-  {
-    question: 'Do you offer revisions or retouching for commercial photos?',
-    answer:
-      'Yes! All commercial photography packages include professional color correction and basic retouching. If you need additional revisions—such as background changes, object removal, or extensive retouching—we offer revision packages. We discuss these options during initial scoping so there are no surprises. Most clients are satisfied with our standard editing, but we\'re flexible if additional work is needed.',
-  },
-  {
-    question: 'What about usage rights for the commercial photos?',
-    answer:
-      'You own the usage rights to all photos we deliver. You can use them on your website, social media, print materials, advertising, and any other business purpose without restrictions or additional licensing fees. We retain the right to display them in our portfolio with your permission. If you need exclusive rights or special licensing arrangements, we can discuss custom terms.',
-  },
 ];
 
 
@@ -86,7 +66,7 @@ export default function CommercialPhotographyPage() {
         name: 'Commercial Photography',
         description: 'Professional commercial photography including product photography, architectural shots, and brand imagery for your business in Modesto and Central Valley.',
         url: 'https://rojasphotography.net/commercial',
-        image: '/images/MOVE Stanislaus-(3 of 28).jpg',
+        image: 'https://rojasphotography.net/images/MOVE Stanislaus-(3 of 28).jpg',
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([
@@ -394,28 +374,7 @@ export default function CommercialPhotographyPage() {
 
         {/* FAQ Section */}
         <FAQSection
-          faqs={[
-            {
-              question: 'What is commercial photography used for?',
-              answer:
-                'Commercial photography is used for marketing, branding, and business purposes. This includes product photography for e-commerce and catalogs, architectural and interior photography for office spaces and commercial buildings, brand and lifestyle photography for websites and social media, and website imagery for marketing campaigns. Professional commercial photos elevate your brand and increase customer engagement.',
-            },
-            {
-              question: 'How much does commercial photography cost in Modesto?',
-              answer:
-                'Commercial photography pricing is custom based on your project scope, the number of images needed, and the extent of editing required. Whether you need a simple product shoot or a comprehensive brand photography session, we create personalized quotes. Contact us with details about your project for an accurate estimate.',
-            },
-            {
-              question: 'What\'s included in a commercial photography package?',
-              answer:
-                'Our commercial photography packages include professional planning and consultation, professional-grade photography with appropriate lighting and equipment, full editing and color correction, and fast delivery (48-72 hours). Specific deliverables are customized to your project needs—whether you need product shots, architectural photography, or lifestyle imagery.',
-            },
-            {
-              question: 'How long does commercial photography take?',
-              answer:
-                'Project timelines vary. A simple product photography session might take a few hours, while a comprehensive commercial shoot could be a full day. We schedule based on your needs. After shooting, we professionally edit and color correct all images within 48-72 hours for delivery.',
-            },
-          ]}
+          faqs={faqs}
           heading="Commercial Photography Questions"
         />
 

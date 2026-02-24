@@ -38,26 +38,6 @@ const faqs = [
     answer:
       'Yes! We offer individual executive headshots, team portraits, group photos, and even building/office photography if needed. Most companies invest in both: individual headshots for company directories and LinkedIn, plus professional group photos for company websites, marketing materials, and social media. All delivered within 24 hours.',
   },
-  {
-    question: 'How long does an on-site photography session typically take?',
-    answer:
-      'Most on-site sessions run 4-8 hours depending on your team size and scope. For 20-30 people with individual headshots and group photos, expect 4-6 hours. We schedule multiple time slots throughout the day so employees can return to their work between their sessions. We\'re efficient and professional—your business operations continue while we work. We can also arrange morning, afternoon, or split-day sessions to minimize disruption.',
-  },
-  {
-    question: 'What if we run over time or need extra coverage?',
-    answer:
-      'We\'re flexible! If the session runs longer than expected, we continue photographing without penalties. If you decide mid-session that you need additional coverage (more group photos, department photos, etc.), we accommodate requests. Our goal is to ensure you get the photos you need. Any significant additions would be discussed and quoted separately, but minor extensions are included at no extra charge.',
-  },
-  {
-    question: 'Do you require a deposit to book an on-site session?',
-    answer:
-      'Yes, we require a 50% deposit to secure your date and time. This holds your spot on our calendar and ensures we\'re committed to your event. The remaining balance is due before the session. Deposits are refundable up to 30 days before your scheduled date. This policy protects both us and you—it ensures your date is reserved and demonstrates mutual commitment.',
-  },
-  {
-    question: 'How do you handle large groups or multiple departments?',
-    answer:
-      'For larger organizations or multiple departments, we scale accordingly. We can deploy multiple photographers simultaneously to photograph different departments, reducing overall session time. For 50+ people, we recommend either scheduling across two days or bringing additional photographers. This ensures each person receives proper lighting and guidance while keeping the process efficient.',
-  },
 ];
 
 
@@ -91,7 +71,7 @@ export default function OnSitePhotographyPage() {
         name: 'On-Site Corporate Photography',
         description: 'Professional on-site headshots, team photography, and corporate photography at your location in Modesto and Central Valley.',
         url: 'https://rojasphotography.net/on-site-photography',
-        image: '/images/BB Individual Headshot Session.png',
+        image: 'https://rojasphotography.net/images/BB Individual Headshot Session.png',
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([
@@ -444,33 +424,7 @@ export default function OnSitePhotographyPage() {
 
         {/* FAQ Section */}
         <FAQSection
-          faqs={[
-            {
-              question: 'How does on-site corporate photography work?',
-              answer:
-                'We schedule a date and time at your location, arrive with our complete professional studio setup (lighting, backdrop, cameras), and photograph your team. For 10+ employees, we set up a custom scheduling system so everyone can book their own time. Photos are professionally edited and delivered within 24 hours via our online private gallery.',
-            },
-            {
-              question: 'Do you bring a full studio setup on-site?',
-              answer:
-                'Yes, absolutely. We bring professional lighting rigs, quality backdrops, cameras, and all necessary equipment. Our team sets everything up at your location so your employees don\'t need to travel to a studio. We handle all the technical details so you can focus on your business.',
-            },
-            {
-              question: 'How many people can you photograph in one day?',
-              answer:
-                'We can photograph 20-30+ people per day depending on your preferences and time available. For larger teams, we recommend scheduling across multiple days or bringing additional photographers. We\'ll work with you to create an efficient schedule that minimizes disruption to your workplace.',
-            },
-            {
-              question: 'What\'s the cost for on-site headshots for a team?',
-              answer:
-                'Pricing is custom based on your team size, location, and specific photography needs. On-site sessions are typically more cost-effective than studio sessions when photographing multiple people. Contact us for a personalized quote for your organization.',
-            },
-            {
-              question: 'Can we do team group photos in addition to individual headshots?',
-              answer:
-                'Yes! We do individual executive headshots, team portraits, group photos, and even building photography if needed. Most companies order both individual headshots for directories and websites plus professional group photos for company materials and social media.',
-            },
-          ]}
+          faqs={faqs}
           heading="On-Site Photography Questions"
         />
 
