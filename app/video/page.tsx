@@ -140,7 +140,7 @@ export default function VideoServicesPage() {
                   <strong>We understand the challenge of authentic video.</strong> Most people aren&apos;t naturally comfortable on camera, and scripted content rarely connects with audiences. That&apos;s exactly why we specialize in conversational, story-driven video production that feels genuine—not corporate theater.
                 </p>
                 <p>
-                  <strong>We&apos;ve produced 200+ corporate videos for businesses across Modesto and the Central Valley</strong>—from client testimonials and brand stories to product demos and aerial drone footage. We bring 15+ years of visual storytelling experience, <strong>FAA Part 107 drone certification</strong>, and the ability to make your team feel comfortable on camera so their authentic personality shines through.
+                  <strong>We produce corporate videos for businesses across Modesto and the Central Valley</strong>—from client testimonials and brand stories to product demos and aerial drone footage. We bring 15+ years of visual storytelling experience, <strong>FAA Part 107 drone certification</strong>, and the ability to make your team feel comfortable on camera so their authentic personality shines through.
                 </p>
                 <p>
                   We don&apos;t force scripts. We guide conversations. We capture authentic moments. We create video content that actually engages your audience because it feels <em>real</em>—whether you need a 15-second social clip, a 3-minute brand video, or comprehensive aerial drone footage.
