@@ -7,6 +7,7 @@ import SectionReveal from './components/SectionReveal';
 import TestimonialCard from './components/TestimonialCard';
 import CTASection from './components/CTASection';
 import SchemaScript from './components/SchemaScript';
+import NewsletterSignup from './components/NewsletterSignup';
 import { generateLocalBusinessSchema } from './lib/schema';
 
 export const metadata: Metadata = {
@@ -749,6 +750,15 @@ export default function HomePage() {
                 </div>
               </SectionReveal>
             </div>
+          </div>
+        </section>
+
+        {/* Newsletter Section */}
+        <section className="py-20 px-8 bg-white">
+          <div className="max-w-2xl mx-auto">
+            <SectionReveal>
+              <NewsletterSignup />
+            </SectionReveal>
           </div>
         </section>
 

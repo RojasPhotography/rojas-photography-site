@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NewsletterFooterForm from './NewsletterFooterForm';
 
 export default function Footer() {
   return (
@@ -7,6 +8,17 @@ export default function Footer() {
       role="contentinfo"
     >
       <div className="max-w-6xl mx-auto">
+        {/* Newsletter bar */}
+        <div className="border border-white/10 rounded-2xl px-8 py-7 mb-12 flex flex-col md:flex-row md:items-center gap-4">
+          <div className="flex-1">
+            <p className="text-white font-semibold text-base mb-1">Join Our Monthly Newsletter</p>
+            <p className="text-gray-400 text-sm">Join professionals across California. No spam, ever.</p>
+          </div>
+          <div className="md:w-80">
+            <NewsletterFooterForm />
+          </div>
+        </div>
+
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
             <h4 className="text-white font-bold text-lg mb-6 font-[family-name:var(--font-heading)]">

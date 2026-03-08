@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import SchemaScript from "./components/SchemaScript";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import MicrosoftClarity from "./components/MicrosoftClarity";
+import NewsletterSlideIn from "./components/NewsletterSlideIn";
 import { generateOrganizationSchema } from "./lib/schema";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -63,6 +64,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
+        <NewsletterSlideIn />
       </body>
     </html>
   );

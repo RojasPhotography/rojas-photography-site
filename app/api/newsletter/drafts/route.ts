@@ -6,10 +6,11 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY!
 );
 
-// GET — list all drafts, or fetch one by id
+// GET — list all drafts (or sent history), or fetch one by id
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const id = searchParams.get('id');
+  const status = searchParams.get('status') || 'draft';
 
   if (id) {
     const { data, error } = await supabase
@@ -18,6 +19,17 @@ export async function GET(request: Request) {
       .eq('id', id)
       .eq('status', 'draft')
       .single();
+    if (error) return NextResponse.json({ error: error.message }, { status: 500 });
+    return NextResponse.json(data);
+  }
+
+  if (status === 'sent') {
+    const { data, error } = await supabase
+      .from('newsletters')
+      .select('id, subject, sent_at, created_at')
+      .eq('status', 'sent')
+      .order('sent_at', { ascending: false })
+      .limit(20);
     if (error) return NextResponse.json({ error: error.message }, { status: 500 });
     return NextResponse.json(data);
   }

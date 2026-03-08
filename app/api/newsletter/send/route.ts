@@ -9,6 +9,8 @@ const supabase = createClient(
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+const BATCH_SIZE = 50;
+
 export async function POST(request: Request) {
   try {
     const { password, subject, content, html_content } = await request.json();
@@ -47,52 +49,62 @@ export async function POST(request: Request) {
 
     if (newsletterError) throw newsletterError;
 
-    // Send to each subscriber
     let sent = 0;
     let failed = 0;
 
-    for (const subscriber of subscribers) {
-      try {
-        await resend.emails.send({
-          from: 'Alfonso Rojas <alfonso@rojasphotography.net>',
-          to: subscriber.email,
-          subject,
-          html: `
-            <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; color: #333;">
-              ${html_content}
-              <hr style="border: none; border-top: 1px solid #eee; margin: 40px 0;" />
-              <p style="font-size: 13px; color: #888;">
-                — Alfonso & Niomi Rojas<br/>Rojas Photography · Modesto, CA
-              </p>
-              <p style="font-size: 12px; color: #aaa;">
-                <a href="https://rojasphotography.net/api/newsletter/unsubscribe?email=${encodeURIComponent(subscriber.email)}" style="color: #aaa;">Unsubscribe</a>
-              </p>
-            </div>
-          `,
-        });
+    // Send in batches of BATCH_SIZE
+    for (let i = 0; i < subscribers.length; i += BATCH_SIZE) {
+      const batch = subscribers.slice(i, i + BATCH_SIZE);
 
-        // Log successful send event
-        await supabase.from('email_events').insert({
+      const emails = batch.map((subscriber) => ({
+        from: 'Alfonso Rojas <alfonso@rojasphotography.net>',
+        to: subscriber.email,
+        subject,
+        html: `
+          <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; color: #333;">
+            ${html_content}
+            <hr style="border: none; border-top: 1px solid #eee; margin: 40px 0;" />
+            <p style="font-size: 13px; color: #888;">
+              — Alfonso & Niomi Rojas<br/>Rojas Photography · Modesto, CA
+            </p>
+            <p style="font-size: 12px; color: #aaa;">
+              <a href="https://rojasphotography.net/api/newsletter/unsubscribe?email=${encodeURIComponent(subscriber.email)}" style="color: #aaa;">Unsubscribe</a>
+            </p>
+          </div>
+        `,
+      }));
+
+      try {
+        const { error: batchError } = await resend.batch.send(emails);
+
+        // Log events for each subscriber in the batch
+        const eventRows = batch.map((subscriber) => ({
           newsletter_id: newsletter.id,
           subscriber_id: subscriber.id,
           subscriber_email: subscriber.email,
-          event_type: 'sent',
-        });
+          event_type: batchError ? 'failed' : 'sent',
+        }));
 
-        sent++;
+        await supabase.from('email_events').insert(eventRows);
+
+        if (batchError) {
+          failed += batch.length;
+        } else {
+          sent += batch.length;
+        }
       } catch {
-        // Log failed send event
-        await supabase.from('email_events').insert({
+        const eventRows = batch.map((subscriber) => ({
           newsletter_id: newsletter.id,
           subscriber_id: subscriber.id,
           subscriber_email: subscriber.email,
           event_type: 'failed',
-        });
-        failed++;
+        }));
+        await supabase.from('email_events').insert(eventRows);
+        failed += batch.length;
       }
     }
 
-    // Update newsletter status to sent
+    // Update newsletter status
     await supabase
       .from('newsletters')
       .update({ status: 'sent', sent_at: new Date().toISOString() })

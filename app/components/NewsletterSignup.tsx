@@ -39,7 +39,7 @@ export default function NewsletterSignup() {
   return (
     <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 md:p-10">
       <h3 className="text-2xl font-bold text-[var(--color-text-dark)] mb-2">
-        Photography Tips & Business Insights
+        Join Our Monthly Newsletter
       </h3>
       <p className="text-[var(--color-text-body)] mb-6">
         Join professionals across the Central Valley. Get photography tips, behind-the-scenes content, and occasional special offers — no spam, ever.
