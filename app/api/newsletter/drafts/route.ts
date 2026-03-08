@@ -1,13 +1,9 @@
-import { createClient } from '@supabase/supabase-js';
+import { getSupabase } from '@/app/lib/supabase-server';
 import { NextResponse } from 'next/server';
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
 
 // GET — list all drafts (or sent history), or fetch one by id
 export async function GET(request: Request) {
+  const supabase = getSupabase();
   const { searchParams } = new URL(request.url);
   const id = searchParams.get('id');
   const status = searchParams.get('status') || 'draft';
@@ -47,6 +43,7 @@ export async function GET(request: Request) {
 // POST — save or update a draft
 export async function POST(request: Request) {
   try {
+    const supabase = getSupabase();
     const { password, id, subject, content, html_content } = await request.json();
 
     if (password !== process.env.NEWSLETTER_ADMIN_PASSWORD) {
@@ -96,6 +93,7 @@ export async function POST(request: Request) {
 // DELETE — delete a draft
 export async function DELETE(request: Request) {
   try {
+    const supabase = getSupabase();
     const { password, id } = await request.json();
 
     if (password !== process.env.NEWSLETTER_ADMIN_PASSWORD) {

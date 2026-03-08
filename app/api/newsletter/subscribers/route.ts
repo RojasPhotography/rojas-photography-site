@@ -1,13 +1,9 @@
-import { createClient } from '@supabase/supabase-js';
+import { getSupabase } from '@/app/lib/supabase-server';
 import { NextResponse } from 'next/server';
-
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
 
 // GET — list all subscribers (active + inactive)
 export async function GET(request: Request) {
+  const supabase = getSupabase();
   const { searchParams } = new URL(request.url);
   const password = searchParams.get('password');
 
@@ -27,6 +23,7 @@ export async function GET(request: Request) {
 // DELETE — deactivate (unsubscribe) a subscriber
 export async function DELETE(request: Request) {
   try {
+    const supabase = getSupabase();
     const { password, email } = await request.json();
 
     if (password !== process.env.NEWSLETTER_ADMIN_PASSWORD) {

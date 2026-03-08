@@ -1,16 +1,11 @@
-import { createClient } from '@supabase/supabase-js';
+import { getSupabase } from '@/app/lib/supabase-server';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
-
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
+    const supabase = getSupabase();
+    const resend = new Resend(process.env.RESEND_API_KEY);
     const { email, name } = await request.json();
 
     if (!email) {
