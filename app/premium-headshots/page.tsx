@@ -302,6 +302,39 @@ export default function PremiumHeadshotsPage() {
           </div>
         </section>
 
+        {/* Pricing Section */}
+        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
+          <div className="max-w-3xl mx-auto text-center">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
+                Simple, Transparent Pricing
+              </h2>
+              <p className="text-[var(--color-text-body)] text-lg mb-10">
+                No packages, no minimums. You only pay for the images you love.
+              </p>
+              <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-6">
+                <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                  <p className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wide mb-2">Session Fee</p>
+                  <p className="text-5xl font-bold text-[var(--color-primary)] mb-3">$150</p>
+                  <p className="text-[var(--color-text-body)] text-sm">Unlimited time, real-time coaching &amp; wardrobe changes</p>
+                </div>
+                <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                  <p className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wide mb-2">Per Image</p>
+                  <p className="text-5xl font-bold text-[var(--color-primary)] mb-3">$150</p>
+                  <p className="text-[var(--color-text-body)] text-sm">Professionally edited &amp; delivered within 48 hours</p>
+                </div>
+              </div>
+              <p className="text-[var(--color-text-muted)] text-sm mb-10">Rush delivery available — 24-hour turnaround for an additional $75</p>
+              <a
+                href="#booking-heading"
+                className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block"
+              >
+                Book Your Session
+              </a>
+            </SectionReveal>
+          </div>
+        </section>
+
         {/* Stakes Section - SB7: Helps Avoid Failure */}
         <section className="py-16 px-8 bg-white border-y border-gray-100">
           <div className="max-w-4xl mx-auto text-center">
@@ -386,19 +419,12 @@ export default function PremiumHeadshotsPage() {
             </div>
 
             <SectionReveal>
-              <div className="bg-white p-8 rounded-xl border border-gray-100 max-w-sm mx-auto text-center shadow-sm">
-                <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-4">Pricing</h3>
-                <p className="text-[var(--color-text-body)] mb-2">Session Fee: <span className="text-[var(--color-primary)] font-bold text-lg">$150</span></p>
-                <p className="text-[var(--color-text-body)]">Per Image: <span className="text-[var(--color-primary)] font-bold text-lg">$150 each</span></p>
-                <p className="text-[var(--color-text-muted)] text-sm mt-4">Only pay for the images you love. No package minimums, no surprises.</p>
-              </div>
-              <div className="text-center mt-8">
-                <p className="text-[var(--color-text-body)] mb-4">Ready to get started?</p>
+              <div className="text-center mt-4">
                 <a
                   href="#booking-heading"
                   className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block"
                 >
-                  Schedule Your Session
+                  Book Your Session
                 </a>
               </div>
             </SectionReveal>
