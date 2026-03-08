@@ -5,6 +5,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import SchemaScript from "./components/SchemaScript";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import MicrosoftClarity from "./components/MicrosoftClarity";
 import { generateOrganizationSchema } from "./lib/schema";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -57,6 +58,7 @@ export default function RootLayout({
         className={`${dmSerifDisplay.variable} ${dmSans.variable} antialiased`}
       >
         <GoogleAnalytics measurementId="G-FH5SG2NXP2" />
+        <MicrosoftClarity projectId="vsdhem9lhy" />
         <SchemaScript schema={generateOrganizationSchema()} />
         <Navigation />
         {children}
