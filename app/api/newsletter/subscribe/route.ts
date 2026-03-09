@@ -171,6 +171,6 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: true, message: 'Subscribed successfully' });
   } catch (error) {
     console.error('Subscribe error:', error);
-    return NextResponse.json({ error: 'Something went wrong', detail: String(error) }, { status: 500 });
+    return NextResponse.json({ error: 'Something went wrong' }, { status: 500 });
   }
 }
