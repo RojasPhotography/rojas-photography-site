@@ -26,17 +26,18 @@ export async function POST(request: Request) {
       // Reactivate if previously unsubscribed
       await supabase
         .from('subscribers')
-        .update({ is_active: true, unsubscribed_at: null, name: name || null })
+        .update({ is_active: true, unsubscribed_at: null, name: name || null, subscribed_at: new Date().toISOString() })
         .eq('email', email);
     } else {
       const { error } = await supabase
         .from('subscribers')
-        .insert({ email, name: name || null, is_active: true });
+        .insert({ email, name: name || null, is_active: true, subscribed_at: new Date().toISOString() });
 
       if (error) throw error;
     }
 
-    // Send welcome email
+    // Send welcome email — wrapped separately so a failed email doesn't block subscription
+    try {
     await resend.emails.send({
       from: 'Alfonso & Niomi Rojas <alfonso@rojasphotography.net>',
       to: email,
@@ -162,6 +163,10 @@ export async function POST(request: Request) {
         </div>
       `,
     });
+    } catch (emailError) {
+      console.error('Welcome email failed:', emailError);
+      // Don't block — subscriber was saved successfully
+    }
 
     return NextResponse.json({ success: true, message: 'Subscribed successfully' });
   } catch (error) {
