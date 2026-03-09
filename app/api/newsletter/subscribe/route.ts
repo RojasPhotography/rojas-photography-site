@@ -122,9 +122,9 @@ export async function POST(request: Request) {
               </p>
               <p style="font-size: 15px; line-height: 1.6; margin: 0 0 20px; color: #555;">
                 Or reach out directly:<br/>
-                📧 <a href="mailto:alfonso@rojasphotography.net" style="color: #0f3d2a; text-decoration: none;">alfonso@rojasphotography.net</a><br/>
-                📧 <a href="mailto:niomi@rojasphotography.net" style="color: #0f3d2a; text-decoration: none;">niomi@rojasphotography.net</a><br/>
-                📱 <a href="tel:2093803727" style="color: #0f3d2a; text-decoration: none;">209-380-3727</a>
+                📧 <a href="mailto:alfonso@rojasphotography.net" style="color: #0f3d2a; text-decoration: none; white-space: nowrap;">alfonso@rojasphotography.net</a><br/>
+                📧 <a href="mailto:niomi@rojasphotography.net" style="color: #0f3d2a; text-decoration: none; white-space: nowrap;">niomi@rojasphotography.net</a><br/>
+                📱 <a href="tel:2093803727" style="color: #0f3d2a; text-decoration: none; white-space: nowrap;">209-380-3727</a>
               </p>
               <a
                 href="https://rojasphotography.net/discovery-call"
