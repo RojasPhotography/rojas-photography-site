@@ -128,7 +128,7 @@ export async function POST(request: Request) {
               </p>
               <a
                 href="https://rojasphotography.net/discovery-call"
-                style="display: inline-block; background-color: #0f3d2a; color: #ffffff; padding: 14px 32px; text-decoration: none; border-radius: 50px; font-size: 15px; font-weight: bold; letter-spacing: 0.3px;"
+                style="display: block; background-color: #0f3d2a; color: #ffffff; padding: 14px 32px; text-decoration: none; border-radius: 50px; font-size: 15px; font-weight: bold; letter-spacing: 0.3px; text-align: center;"
               >
                 Book a Free Discovery Call
               </a>
