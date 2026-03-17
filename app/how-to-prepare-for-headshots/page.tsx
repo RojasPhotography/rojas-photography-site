@@ -505,6 +505,62 @@ export default function HowToPrepareForHeadshotsPage() {
             </div>
           </section>
 
+          {/* Industry Headshot Gallery */}
+          <section className="py-16 px-8 bg-white">
+            <div className="max-w-6xl mx-auto">
+              <SectionReveal>
+                <p className="text-center text-[var(--color-text-muted)] text-sm mb-10 uppercase tracking-widest font-semibold">
+                  Real results from Rojas Photography — Modesto, CA
+                </p>
+              </SectionReveal>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <SectionReveal className="relative">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                    <Image src="/images/headshots/headshot-attorney-03.jpg" alt="Professional attorney headshot - Modesto legal photography" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
+                  </div>
+                  <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Attorney</p>
+                </SectionReveal>
+                <SectionReveal className="relative">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                    <Image src="/images/headshots/headshot-executive-ceo.jpg" alt="Corporate executive CEO headshot - Modesto professional photography" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
+                  </div>
+                  <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Corporate Executive</p>
+                </SectionReveal>
+                <SectionReveal className="relative">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                    <Image src="/images/headshots/headshot-healthcare-executive-01.jpg" alt="Healthcare executive headshot - Modesto medical professional photography" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover object-[30%_50%]" />
+                  </div>
+                  <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Healthcare</p>
+                </SectionReveal>
+                <SectionReveal className="relative">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                    <Image src="/images/headshots/headshot-finance-cpa.jpg" alt="Finance CPA professional headshot - Modesto accounting photography" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover object-[75%_50%]" />
+                  </div>
+                  <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Finance / CPA</p>
+                </SectionReveal>
+                <SectionReveal className="relative">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                    <Image src="/images/headshots/headshot-realtor-01.jpg" alt="Real estate agent headshot - Modesto realtor professional photography" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
+                  </div>
+                  <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Real Estate</p>
+                </SectionReveal>
+                <SectionReveal className="relative">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                    <Image src="/images/headshots/headshot-sales-manager-01.jpg" alt="Sales manager professional headshot - Modesto corporate photography" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
+                  </div>
+                  <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Sales</p>
+                </SectionReveal>
+              </div>
+              <SectionReveal>
+                <p className="text-center mt-8">
+                  <Link href="/premium-headshots" className="text-[var(--color-primary)] font-semibold hover:underline">
+                    View full headshot gallery →
+                  </Link>
+                </p>
+              </SectionReveal>
+            </div>
+          </section>
+
           {/* Looking Natural — Psychology */}
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
