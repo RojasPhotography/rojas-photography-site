@@ -18,7 +18,7 @@ const faqs = [
   {
     question: 'Should I wear makeup for a professional headshot?',
     answer:
-      'Yes — and go slightly heavier than your everyday makeup. Studio lighting washes out features, so your makeup needs to compensate. Use matte foundation and avoid shimmer or glitter. Bring your makeup bag for touch-ups between outfit changes. Men: a light application of matte powder helps reduce shine under studio lights.',
+      'Come with your natural, everyday makeup — avoid going overboard. The goal is to look like yourself at your best, not overdone. Use matte products and avoid shimmer or glitter that can reflect harshly. Bring your makeup bag for touch-ups between outfit changes. Less is more — heavy makeup can be distracting in close-up photography.',
   },
   {
     question: 'What colors should I wear for a professional headshot?',
@@ -120,7 +120,7 @@ const dayOfChecklist = [
   'Eat a light breakfast — avoid heavy, salty foods',
   'Drink water — dehydration visibly affects skin on camera',
   'Shower and groom as you would for an important meeting',
-  'Apply makeup (slightly heavier than everyday for camera)',
+  'Apply makeup naturally — avoid going overboard',
   'Pack clothes on hangers; bring hair products and a compact',
   'Arrive 10-15 minutes early to settle in before the session',
   'Silence your phone and clear your schedule — be fully present',
@@ -228,7 +228,7 @@ export default function HowToPrepareForHeadshotsPage() {
                     <h3 className="font-bold text-[var(--color-text-dark)] mb-4 text-lg">Day Of</h3>
                     <ul className="space-y-2 text-[var(--color-text-body)] text-sm">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Eat a light meal, avoid salty foods</li>
-                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Apply makeup (slightly heavier than usual)</li>
+                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Apply makeup naturally — less is more</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Arrive 10-15 minutes early</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring touch-up supplies in a small bag</li>
                     </ul>
@@ -339,7 +339,7 @@ export default function HowToPrepareForHeadshotsPage() {
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 h-full">
                     <h3 className="text-lg font-bold text-[var(--color-text-dark)] mb-4">For Men</h3>
                     <ul className="space-y-3 text-[var(--color-text-body)] text-sm leading-relaxed">
-                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Shave or groom facial hair 1-2 hours before your session — not the morning of (to allow redness to settle)</li>
+                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Shave the morning of your session — give yourself enough time before you arrive for any redness to settle</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring a razor and grooming supplies for touch-ups</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Trim nose and ear hair — small details show clearly in close-up photography</li>
                     </ul>
@@ -362,9 +362,9 @@ export default function HowToPrepareForHeadshotsPage() {
                   <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
                     <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">For Women</h3>
                     <ul className="space-y-3 text-[var(--color-text-body)] text-sm leading-relaxed">
-                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Go slightly heavier than everyday makeup — studio lighting washes features out</li>
-                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Use matte foundation and powder — avoid shimmer or glitter that reflects harshly under lights</li>
-                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Set your makeup well so it lasts through multiple outfit changes</li>
+                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Come with your natural, everyday makeup — the goal is to look like yourself at your best</li>
+                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Use matte products — avoid shimmer or glitter that reflects harshly in photos</li>
+                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Less is more — heavy or overdone makeup can be distracting in close-up photography</li>
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring blotting papers and your compact for touch-ups between looks</li>
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Avoid applying heavy face lotion immediately before the session — it can create shine under lights</li>
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Consider booking a professional makeup artist for the best results — we can recommend trusted local artists in Modesto</li>
@@ -375,11 +375,9 @@ export default function HowToPrepareForHeadshotsPage() {
                   <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
                     <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">For Men</h3>
                     <ul className="space-y-3 text-[var(--color-text-body)] text-sm leading-relaxed">
-                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />A light application of matte setting powder significantly reduces shine under studio lighting — even if you don&apos;t normally wear any products</li>
-                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Moisturize the night before for healthy skin, but avoid applying lotion the morning of</li>
-                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring blotting papers for in-session touch-ups</li>
-                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />If you have visible blemishes, a small amount of concealer can save editing time</li>
-                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Trim eyebrows if needed — camera picks up details your mirror might miss</li>
+                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Moisturize the night before for healthy skin</li>
+                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring blotting papers in case of shine during the session</li>
+                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Trim eyebrows if needed — the camera picks up details your mirror might miss</li>
                     </ul>
                   </div>
                 </SectionReveal>
