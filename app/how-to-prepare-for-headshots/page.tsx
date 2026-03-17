@@ -55,7 +55,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'How to Prepare for Professional Headshots | Complete Guide',
   description:
-    'The complete guide to preparing for your professional headshot: wardrobe, hair, makeup, day-of checklist, and industry tips. From Modesto\'s top corporate photographer.',
+    'Complete guide: wardrobe, hair, makeup & day-of tips for your headshot session. Industry-specific advice from Modesto\'s top corporate photographer.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/how-to-prepare-for-headshots',
@@ -63,9 +63,15 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'How to Prepare for Professional Headshots | Complete Guide',
     description:
-      'Wardrobe, hair, makeup, and day-of tips for your professional headshot session. Complete guide from Rojas Photography — Modesto, CA.',
+      'Complete guide: wardrobe, hair, makeup & day-of tips for your headshot session. Industry-specific advice from Modesto\'s top corporate photographer.',
     url: 'https://rojasphotography.net/how-to-prepare-for-headshots',
     type: 'article',
+    images: [
+      {
+        url: '/images/headshots/headshot-ceo-nutrition.jpg',
+        alt: 'Professional corporate headshot - Rojas Photography Modesto CA',
+      },
+    ],
   },
 };
 

@@ -53,19 +53,25 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Corporate Event Photography Cost | 2026 Pricing Guide | Modesto CA',
+  title: 'Corporate Event Photography Cost | 2026 Pricing Guide',
   description:
-    'How much does corporate event photography cost? Complete 2026 pricing guide for Modesto & Central Valley. Hourly rates, packages, and what\'s included. Get a quote in 24 hrs.',
+    'How much does corporate event photography cost? 2026 pricing guide — Modesto & Central Valley. Hourly rates, packages & what\'s included. Quote in 24 hrs.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/corporate-event-photography-cost',
   },
   openGraph: {
-    title: 'Corporate Event Photography Cost — 2026 Pricing Guide',
+    title: 'Corporate Event Photography Cost | 2026 Pricing Guide',
     description:
-      'Complete pricing guide for corporate event photography in Modesto and Central Valley. Hourly rates, packages, and what\'s included.',
+      'How much does corporate event photography cost? 2026 pricing guide for Modesto & Central Valley — hourly rates, packages & what\'s included.',
     url: 'https://rojasphotography.net/corporate-event-photography-cost',
     type: 'article',
+    images: [
+      {
+        url: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-124.jpg',
+        alt: 'Corporate event photography at Salesforce San Francisco - Rojas Photography',
+      },
+    ],
   },
 };
 
@@ -230,7 +236,7 @@ export default function CorporateEventPhotographyCostPage() {
                 </SectionReveal>
                 <SectionReveal className="relative">
                   <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-video">
-                    <Image src="/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-28.jpg" alt="Anti-Trust corporate event photography at Salesforce - San Francisco CA" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
+                    <Image src="/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-19.jpg" alt="Anti-Trust corporate event photography at Salesforce - San Francisco CA" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
                   </div>
                 </SectionReveal>
                 <SectionReveal className="relative">
