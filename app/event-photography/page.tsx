@@ -210,11 +210,14 @@ export default function EventPhotographyPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-4">
               {[
-                { src: '/images/CLA AM 25 201.jpg', alt: 'Corporate event photography in Modesto', extra: 'scale-125' },
-                { src: '/images/DSC_1638.jpg', alt: 'Professional gala and formal event photography', extra: 'object-[center_40%]' },
-                { src: '/images/CLA AM 25 335.jpg', alt: 'Conference and networking event coverage - Central Valley', extra: 'object-left' },
+                { src: '/images/CLA AM 25 201.jpg', alt: 'California Lawyers Association annual meeting - corporate event photography Modesto', extra: 'scale-125' },
+                { src: '/images/DSC_1638.jpg', alt: 'Professional gala and formal event photography Central Valley', extra: 'object-[center_40%]' },
+                { src: '/images/CLA AM 25 335.jpg', alt: 'Conference and networking event photography - Rojas Photography Central Valley', extra: 'object-left' },
+                { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-69.jpg', alt: 'Anti-Trust corporate event photography at Salesforce San Francisco CA', extra: '' },
+                { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-111.jpg', alt: 'Corporate conference event photography Salesforce San Francisco - Rojas Photography', extra: '' },
+                { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-137.jpg', alt: 'Professional corporate event photographer San Francisco CA - Rojas Photography', extra: '' },
               ].map((img) => (
-                <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-96 relative">
+                <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-72 relative">
                   <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className={`object-cover ${img.extra}`} />
                 </SectionReveal>
               ))}
