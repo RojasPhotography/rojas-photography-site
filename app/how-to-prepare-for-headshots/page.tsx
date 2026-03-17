@@ -515,37 +515,37 @@ export default function HowToPrepareForHeadshotsPage() {
               </SectionReveal>
               <div className="grid grid-cols-3 gap-3">
                 <SectionReveal className="relative">
-                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                     <Image src="/images/headshots/headshot-attorney-03.jpg" alt="Professional attorney headshot - Modesto legal photography" fill sizes="(max-width: 768px) 33vw, 20vw" className="object-cover" />
                   </div>
                   <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Attorney</p>
                 </SectionReveal>
                 <SectionReveal className="relative">
-                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                     <Image src="/images/headshots/headshot-executive-ceo.jpg" alt="Corporate executive CEO headshot - Modesto professional photography" fill sizes="(max-width: 768px) 33vw, 20vw" className="object-cover" />
                   </div>
                   <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Corporate Executive</p>
                 </SectionReveal>
                 <SectionReveal className="relative">
-                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                     <Image src="/images/headshots/headshot-healthcare-executive-01.jpg" alt="Healthcare executive headshot - Modesto medical professional photography" fill sizes="(max-width: 768px) 33vw, 20vw" className="object-cover object-[30%_50%]" />
                   </div>
                   <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Healthcare</p>
                 </SectionReveal>
                 <SectionReveal className="relative">
-                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                     <Image src="/images/headshots/headshot-finance-cpa.jpg" alt="Finance CPA professional headshot - Modesto accounting photography" fill sizes="(max-width: 768px) 33vw, 20vw" className="object-cover object-[75%_50%]" />
                   </div>
                   <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Finance / CPA</p>
                 </SectionReveal>
                 <SectionReveal className="relative">
-                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                     <Image src="/images/headshots/headshot-realtor-01.jpg" alt="Real estate agent headshot - Modesto realtor professional photography" fill sizes="(max-width: 768px) 33vw, 20vw" className="object-cover" />
                   </div>
                   <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Real Estate</p>
                 </SectionReveal>
                 <SectionReveal className="relative">
-                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-[3/4]">
+                  <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                     <Image src="/images/headshots/headshot-sales-manager-01.jpg" alt="Sales manager professional headshot - Modesto corporate photography" fill sizes="(max-width: 768px) 33vw, 20vw" className="object-cover" />
                   </div>
                   <p className="text-center text-sm text-[var(--color-text-muted)] mt-2 font-medium">Sales</p>
