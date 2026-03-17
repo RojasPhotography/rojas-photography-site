@@ -688,7 +688,7 @@ export default function HowToPrepareForHeadshotsPage() {
                     src="/images/kaiser-bts-headshots1.jpeg"
                     alt="Behind the scenes at a corporate headshot session with Kaiser Permanente - Rojas Photography Pleasanton CA"
                     fill
-                    className="object-cover object-bottom"
+                    className="object-cover object-[center_40%]"
                     sizes="(max-width: 768px) 100vw, 900px"
                   />
                 </div>
