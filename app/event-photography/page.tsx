@@ -36,7 +36,7 @@ const faqs = [
   {
     question: 'Do you do step and repeat photography at events?',
     answer:
-      'Yes! We provide professional step and repeat backdrop photography with branded backgrounds perfect for sponsor recognition, brand activation, and creating shareable moments. This service is ideal for galas, award ceremonies, fundraising events, and product launches. Photos are instantly available for social media sharing, event promotion, and sponsor documentation. Typical investment: $300-$500 for 2-3 hour step and repeat station.',
+      'Yes! We provide professional step and repeat backdrop photography with branded backgrounds perfect for sponsor recognition, brand activation, and creating shareable moments. This service is ideal for galas, award ceremonies, fundraising events, and product launches. Photos are instantly available for social media sharing, event promotion, and sponsor documentation. Typical investment: $700-$1,050 for a 2-3 hour step and repeat station.',
   },
 ];
 

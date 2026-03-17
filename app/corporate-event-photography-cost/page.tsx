@@ -87,7 +87,7 @@ const eventTypes = [
   { type: 'Trade Show / Expo', coverage: 'Half or full day, 1–2 photographers', range: '$1,500–$3,500', notes: 'Booth coverage, demos, networking, signage' },
   { type: 'Fundraiser / Non-Profit', coverage: '3–5 hours, 1 photographer', range: '$1,200–$2,500', notes: 'Donors, speakers, live auction, candid moments' },
   { type: 'Team Building / Off-site', coverage: '2–4 hours, 1 photographer', range: '$800–$2,000', notes: 'Candid activity coverage, group photos' },
-  { type: 'Step & Repeat Station Only', coverage: '2–3 hours', range: '$300–$500', notes: 'Branded backdrop, instant social sharing' },
+  { type: 'Step & Repeat Station Only', coverage: '2–3 hours', range: '$700–$1,050', notes: 'Branded backdrop, instant social sharing' },
 ];
 
 const redFlags = [
