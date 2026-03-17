@@ -230,12 +230,12 @@ export default function CorporateEventPhotographyCostPage() {
                 </SectionReveal>
                 <SectionReveal className="relative">
                   <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-video">
-                    <Image src="/images/Move Staff Group 9.jpg" alt="Corporate event group photography - MOVE Stanislaus Central Valley" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
+                    <Image src="/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-19.jpg" alt="Anti-Trust corporate event photography at Salesforce - San Francisco CA" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
                   </div>
                 </SectionReveal>
                 <SectionReveal className="relative">
                   <div className="img-hover-zoom rounded-xl overflow-hidden relative aspect-video">
-                    <Image src="/images/Gym Step N Repeat.png" alt="Step and repeat event photography - Rojas Photography Modesto" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover object-top" />
+                    <Image src="/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-49.jpg" alt="Corporate event photography Salesforce Tower San Francisco - Rojas Photography" fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
                   </div>
                 </SectionReveal>
               </div>
