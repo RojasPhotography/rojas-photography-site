@@ -688,7 +688,7 @@ export default function HowToPrepareForHeadshotsPage() {
                     src="/images/kaiser-bts-headshots1.jpeg"
                     alt="Behind the scenes at a corporate headshot session - Rojas Photography Modesto CA"
                     fill
-                    className="object-cover object-top"
+                    className="object-cover object-bottom"
                     sizes="(max-width: 768px) 100vw, 900px"
                   />
                 </div>
