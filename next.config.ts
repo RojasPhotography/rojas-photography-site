@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   async redirects() {
     return [
+      // www → non-www (covers both http and https)
       {
         source: '/:path*',
         has: [
@@ -13,6 +14,17 @@ const nextConfig: NextConfig = {
           },
         ],
         destination: 'https://rojasphotography.net/:path*',
+        permanent: true,
+      },
+      // Old URL → current URL redirects
+      {
+        source: '/about',
+        destination: '/about-rojas-photography',
+        permanent: true,
+      },
+      {
+        source: '/on-site-corporate-team-headshots',
+        destination: '/on-site-photography',
         permanent: true,
       },
     ];
