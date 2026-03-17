@@ -398,6 +398,26 @@ export default function EventPhotographyPage() {
           </div>
         </section>
 
+        {/* Pricing Guide CTA */}
+        <section className="py-12 px-8 bg-[var(--color-bg-warm)]">
+          <div className="max-w-3xl mx-auto text-center">
+            <SectionReveal>
+              <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-4">
+                Wondering About Event Photography Pricing?
+              </h2>
+              <p className="text-[var(--color-text-body)] text-lg mb-6 leading-relaxed">
+                We put together a complete 2026 pricing guide covering hourly rates, packages by event type, and exactly what affects cost — so you can plan your budget with confidence.
+              </p>
+              <Link
+                href="/corporate-event-photography-cost"
+                className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block"
+              >
+                View the Full Pricing Guide →
+              </Link>
+            </SectionReveal>
+          </div>
+        </section>
+
         {/* FAQ Section */}
         <FAQSection
           faqs={faqs}
