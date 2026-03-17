@@ -281,7 +281,7 @@ export default function CorporateEventPhotographyCostPage() {
                   </table>
                 </div>
                 <p className="text-sm text-[var(--color-text-muted)] mt-4 text-center">
-                  Pricing reflects one photographer. Multi-photographer events add $800–$1,500 per additional photographer.
+                  Ranges reflect single-photographer coverage. Events listed as "1–2 photographers" are priced at the lower end for one photographer and higher end for two. Additional photographers add $800–$1,500 each.
                 </p>
               </SectionReveal>
             </div>
