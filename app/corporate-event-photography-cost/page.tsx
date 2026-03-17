@@ -474,7 +474,7 @@ export default function CorporateEventPhotographyCostPage() {
           {/* SB7: Success */}
           <CTASection
             heading="Ready to Document Your Next Corporate Event?"
-            subheading="Trusted by Comcast, Save Mart, California Lawyers Association, and 500+ organizations across the Central Valley."
+            subheading="Trusted by Comcast, Save Mart, California Lawyers Association, and organizations across California."
             primaryLabel="Get a Quote"
             primaryHref="/contact-quote"
             showContactInfo={false}
