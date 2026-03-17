@@ -48,7 +48,7 @@ const faqs = [
   {
     question: 'Do you travel outside Modesto for corporate events?',
     answer:
-      'Yes. Rojas Photography covers the entire Central Valley and beyond — Modesto, Stockton, Fresno, Turlock, Merced, Sacramento, and the Bay Area. Travel fees may apply for events beyond 30 miles from Modesto. Contact us with your event location for a full quote.',
+      'Yes. Rojas Photography travels statewide for corporate events. We regularly cover events in Modesto, Stockton, Fresno, Sacramento, the Bay Area, San Francisco, Los Angeles, Orange County, and San Diego. Travel fees apply for events outside the Central Valley. Contact us with your event location and date for a full quote.',
   },
 ];
 
@@ -364,7 +364,7 @@ export default function CorporateEventPhotographyCostPage() {
                   Corporate Event Photography in Modesto & the Central Valley
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">
-                  Rojas Photography has covered corporate events for organizations across Modesto, Stockton, Fresno, Sacramento, and the Bay Area.
+                  Rojas Photography travels statewide for corporate events — from the Central Valley to San Francisco, Los Angeles, Orange County, and San Diego.
                 </p>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-10 items-center">
@@ -382,7 +382,7 @@ export default function CorporateEventPhotographyCostPage() {
                       Every event includes pre-event planning and a shot list, professional coverage by an experienced corporate photographer, full editing and color correction, and delivery to a private online gallery within <strong className="text-[var(--color-text-dark)]">24–48 hours</strong>.
                     </p>
                     <p>
-                      We cover events throughout the Central Valley and travel to the Bay Area, Sacramento, and Southern California with advance notice.
+                      We cover events throughout California — Central Valley, San Francisco Bay Area, Sacramento, Los Angeles, Orange County, and San Diego. If your event is in California, we can be there.
                     </p>
                     <Link
                       href="/contact-quote"
