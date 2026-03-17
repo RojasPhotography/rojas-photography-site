@@ -75,7 +75,7 @@ const pricingFactors = [
   { factor: 'Photographer Experience', detail: 'Entry-level photographers charge $100–$175/hr. Experienced professionals who work corporate events regularly charge $300–$500/hr. Rojas Photography charges $350/hr — reflecting 15+ years of corporate photography experience across the Central Valley.' },
   { factor: 'Editing & Turnaround', detail: 'Standard delivery is 48–72 hours. Rush delivery (24 hours or same-day) commands a premium of $150–$400. All professional packages include color correction and editing — raw, unedited files are not standard.' },
   { factor: 'Travel Distance', detail: 'Most photographers include travel within a certain radius (typically 20–30 miles). Events beyond that incur mileage fees, typically $0.67–$1.50/mile, plus potential hotel costs for distant events.' },
-  { factor: 'Add-On Services', detail: 'Step and repeat backdrop photography, drone coverage, headshot stations, and same-day social media delivery are common add-ons that increase total cost by $300–$800 each.' },
+  { factor: 'Add-On Services', detail: 'Step and repeat backdrop photography, drone coverage, on-site headshot stations, and SpotMyPhotos instant delivery are common add-ons. SpotMyPhotos uses facial recognition so attendees can find and download their photos instantly during the event — included with full-day bookings, available as an add-on for shorter events.' },
   { factor: 'Usage Rights & Licensing', detail: 'Most professional photographers include standard commercial usage rights for internal and marketing use. Exclusive rights, editorial licensing, or advertising use may cost extra. Always confirm licensing in your contract.' },
 ];
 
@@ -379,7 +379,7 @@ export default function CorporateEventPhotographyCostPage() {
                       We&apos;ve photographed conferences, galas, fundraisers, product launches, and large-scale corporate events for clients including <strong className="text-[var(--color-text-dark)]">Comcast, Save Mart, California Lawyers Association,</strong> and <strong className="text-[var(--color-text-dark)]">Valley First Credit Union</strong>.
                     </p>
                     <p>
-                      Every event includes pre-event planning and a shot list, professional coverage by an experienced corporate photographer, full editing and color correction, and delivery to a private online gallery within <strong className="text-[var(--color-text-dark)]">24–48 hours</strong>.
+                      Every event includes pre-event planning and a shot list, professional coverage by an experienced corporate photographer, full editing and color correction, and delivery to a private online gallery within <strong className="text-[var(--color-text-dark)]">24–48 hours</strong>. Full-day bookings include <strong className="text-[var(--color-text-dark)]">SpotMyPhotos</strong> — a facial recognition platform that lets attendees find and download their photos instantly during the event, perfect for social sharing and sponsor visibility.
                     </p>
                     <p>
                       We cover events throughout California — Central Valley, San Francisco Bay Area, Sacramento, Los Angeles, Orange County, and San Diego. If your event is in California, we can be there.
