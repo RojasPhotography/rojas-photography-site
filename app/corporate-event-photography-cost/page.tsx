@@ -18,7 +18,7 @@ const faqs = [
   {
     question: 'How do event photographers structure their pricing?',
     answer:
-      'Most professional event photographers offer three pricing models: hourly rates, half-day rates covering up to 4 hours, and full-day rates covering up to 8 hours. Rojas Photography charges $350/hr with a 2-hour minimum. Full-day rates are almost always better value than paying hourly for a long event.',
+      'Most professional event photographers offer three pricing models: hourly rates ($175–$500/hr depending on experience), half-day rates covering up to 4 hours, and full-day rates covering up to 8 hours. Full-day rates are almost always better value than paying hourly for a long event. Most photographers require a 2–3 hour minimum.',
   },
   {
     question: 'What is included in corporate event photography?',
@@ -191,9 +191,9 @@ export default function CorporateEventPhotographyCostPage() {
                 <SectionReveal>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 text-center border border-gray-100">
                     <p className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wide mb-2">Hourly Rate</p>
-                    <p className="text-4xl font-bold text-[var(--color-primary)] mb-2">$350</p>
+                    <p className="text-4xl font-bold text-[var(--color-primary)] mb-2">$175–$500</p>
                     <p className="text-[var(--color-text-muted)] text-sm mb-4">per hour</p>
-                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Most photographers require a 2–3 hour minimum. Best for shorter events or add-on coverage.</p>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Rate depends on experience level and market. Most photographers require a 2–3 hour minimum.</p>
                   </div>
                 </SectionReveal>
                 <SectionReveal>
