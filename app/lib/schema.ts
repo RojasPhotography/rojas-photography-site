@@ -96,11 +96,6 @@ export function generateServiceSchema(options: ServiceSchemaOptions) {
     ],
     ...(options.image && { image: options.image }),
     url: options.url,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '50',
-    },
   };
 }
 
