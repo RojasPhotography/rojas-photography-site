@@ -144,7 +144,7 @@ export default function HowToPrepareForHeadshotsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
             <Link
-              href="/premium-headshots"
+              href="/premium-headshots#booking-heading"
               className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
             >
               Book Your Session
@@ -451,7 +451,7 @@ export default function HowToPrepareForHeadshotsPage() {
                 </div>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
-                    href="/premium-headshots"
+                    href="/premium-headshots#booking-heading"
                     className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block text-center"
                   >
                     View Session Details & Book
@@ -553,7 +553,7 @@ export default function HowToPrepareForHeadshotsPage() {
               </div>
               <SectionReveal>
                 <p className="text-center mt-8">
-                  <Link href="/premium-headshots" className="text-[var(--color-primary)] font-semibold hover:underline">
+                  <Link href="/premium-headshots#booking-heading" className="text-[var(--color-primary)] font-semibold hover:underline">
                     View full headshot gallery →
                   </Link>
                 </p>
@@ -711,7 +711,7 @@ export default function HowToPrepareForHeadshotsPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link
-                    href="/premium-headshots"
+                    href="/premium-headshots#booking-heading"
                     className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                   >
                     Book Your Session
