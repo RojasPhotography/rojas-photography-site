@@ -18,7 +18,7 @@ const faqs = [
   {
     question: 'How do event photographers structure their pricing?',
     answer:
-      'Most professional event photographers offer three pricing models: hourly rates (typically $175–$350/hr), half-day rates covering up to 4 hours, and full-day rates covering up to 8 hours. Full-day rates are almost always better value than paying hourly for a long event. Most photographers require a 2–3 hour minimum booking.',
+      'Most professional event photographers offer three pricing models: hourly rates, half-day rates covering up to 4 hours, and full-day rates covering up to 8 hours. Rojas Photography charges $350/hr with a 2-hour minimum. Full-day rates are almost always better value than paying hourly for a long event.',
   },
   {
     question: 'What is included in corporate event photography?',
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
 const pricingFactors = [
   { factor: 'Event Duration', detail: 'The single biggest pricing variable. A 2-hour executive portrait session costs far less than an 8-hour conference. Most photographers offer better per-hour rates for longer events.' },
   { factor: 'Number of Photographers', detail: 'A single photographer can cover most events under 100 people. Larger events, multi-room conferences, or events requiring simultaneous coverage in different locations need 2+ photographers.' },
-  { factor: 'Photographer Experience', detail: 'Entry-level photographers charge $100–$175/hr. Experienced professionals who work corporate events regularly charge $175–$350/hr. The difference shows in how they handle fast-moving situations and low-light venues.' },
+  { factor: 'Photographer Experience', detail: 'Entry-level photographers charge $100–$175/hr. Experienced professionals who work corporate events regularly charge $300–$500/hr. Rojas Photography charges $350/hr — reflecting 15+ years of corporate photography experience across the Central Valley.' },
   { factor: 'Editing & Turnaround', detail: 'Standard delivery is 48–72 hours. Rush delivery (24 hours or same-day) commands a premium of $150–$400. All professional packages include color correction and editing — raw, unedited files are not standard.' },
   { factor: 'Travel Distance', detail: 'Most photographers include travel within a certain radius (typically 20–30 miles). Events beyond that incur mileage fees, typically $0.67–$1.50/mile, plus potential hotel costs for distant events.' },
   { factor: 'Add-On Services', detail: 'Step and repeat backdrop photography, drone coverage, headshot stations, and same-day social media delivery are common add-ons that increase total cost by $300–$800 each.' },
@@ -185,7 +185,7 @@ export default function CorporateEventPhotographyCostPage() {
                 <SectionReveal>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 text-center border border-gray-100">
                     <p className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wide mb-2">Hourly Rate</p>
-                    <p className="text-4xl font-bold text-[var(--color-primary)] mb-2">$175–$350</p>
+                    <p className="text-4xl font-bold text-[var(--color-primary)] mb-2">$350</p>
                     <p className="text-[var(--color-text-muted)] text-sm mb-4">per hour</p>
                     <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Most photographers require a 2–3 hour minimum. Best for shorter events or add-on coverage.</p>
                   </div>
