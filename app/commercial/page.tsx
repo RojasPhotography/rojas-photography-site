@@ -39,7 +39,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Commercial Photography Modesto | Business & Product Photography',
   description:
-    'Professional commercial photography in Modesto and Central Valley. Brand imagery, product photography, architectural shots, and marketing visuals for your business.',
+    'Modesto commercial photographer for product, brand & architectural photography. Delivered in 48-72 hrs. Trusted by local businesses across the Central Valley. Get a quote today.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/commercial',

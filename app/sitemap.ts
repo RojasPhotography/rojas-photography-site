@@ -83,6 +83,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/how-to-prepare-for-headshots`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/fresno-headshots`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
