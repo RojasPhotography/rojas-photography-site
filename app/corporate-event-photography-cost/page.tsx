@@ -370,7 +370,7 @@ export default function CorporateEventPhotographyCostPage() {
               <div className="grid md:grid-cols-2 gap-10 items-center">
                 <SectionReveal>
                   <div className="relative aspect-video rounded-2xl overflow-hidden">
-                    <Image src="/images/MOVE Stanislaus-(3 of 28).jpg" alt="Corporate event photography - MOVE Stanislaus event Modesto CA" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
+                    <Image src="/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-103.jpg" alt="Corporate event photography at Salesforce - Rojas Photography San Francisco CA" fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                   </div>
                 </SectionReveal>
                 <SectionReveal>
