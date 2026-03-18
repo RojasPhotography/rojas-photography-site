@@ -78,7 +78,7 @@ export const metadata: Metadata = {
 const pricingFactors = [
   { factor: 'Event Duration', detail: 'The single biggest pricing variable. A 2-hour executive portrait session costs far less than an 8-hour conference. Most photographers offer better per-hour rates for longer events.' },
   { factor: 'Number of Photographers', detail: 'A single photographer can cover most events under 100 people. Larger events, multi-room conferences, or events requiring simultaneous coverage in different locations need 2+ photographers.' },
-  { factor: 'Photographer Experience', detail: 'Entry-level photographers charge $100–$175/hr. Experienced professionals who work corporate events regularly charge $300–$500/hr. Rojas Photography charges $350/hr — reflecting 15+ years of corporate photography experience across the Central Valley.' },
+  { factor: 'Photographer Experience', detail: 'Entry-level photographers charge $100–$175/hr. Experienced professionals who work corporate events regularly charge $300–$500/hr. The more experience a photographer has with corporate events specifically, the more confidently they can work a room without disrupting the flow.' },
   { factor: 'Editing & Turnaround', detail: 'Standard delivery is 48–72 hours. Rush delivery (24 hours or same-day) commands a premium of $150–$400. All professional packages include color correction and editing — raw, unedited files are not standard.' },
   { factor: 'Travel Distance', detail: 'Most photographers include travel within a certain radius (typically 20–30 miles). Events beyond that incur mileage fees, typically $0.67–$1.50/mile, plus potential hotel costs for distant events.' },
   { factor: 'Add-On Services', detail: 'Step and repeat backdrop photography, drone coverage, on-site headshot stations, and SpotMyPhotos instant delivery are common add-ons. SpotMyPhotos uses facial recognition so attendees can find and download their photos instantly during the event — included with full-day bookings, available as an add-on for shorter events.' },
@@ -93,7 +93,7 @@ const eventTypes = [
   { type: 'Trade Show / Expo', coverage: 'Half or full day, 1–2 photographers', range: '$1,500–$3,500', notes: 'Booth coverage, demos, networking, signage' },
   { type: 'Fundraiser / Non-Profit', coverage: '3–5 hours, 1 photographer', range: '$1,200–$2,500', notes: 'Donors, speakers, live auction, candid moments' },
   { type: 'Team Building / Off-site', coverage: '2–4 hours, 1 photographer', range: '$800–$2,000', notes: 'Candid activity coverage, group photos' },
-  { type: 'Step & Repeat Station Only', coverage: '2–3 hours', range: '$700–$1,050', notes: 'Branded backdrop, instant social sharing' },
+  { type: 'Step & Repeat Station Only', coverage: '2–3 hours', range: '$600–$1,200', notes: 'Branded backdrop, instant social sharing' },
 ];
 
 const redFlags = [
