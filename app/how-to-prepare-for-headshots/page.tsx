@@ -451,7 +451,7 @@ export default function HowToPrepareForHeadshotsPage() {
                     <strong className="text-[var(--color-text-dark)]">At Rojas Photography, you are never on your own in front of the camera.</strong> Our sessions are built entirely around real-time coaching. We guide your posing, angles, and expression step by step throughout the session. You see your images on a screen in real-time and give feedback as we go — so you always know what&apos;s working.
                   </p>
                   <p>
-                    When you arrive, we&apos;ll do a brief consultation to review your goals and outfits. Sessions typically run 30-45 minutes, but there is no time limit — take as long as you need. Unlimited wardrobe changes are included. Your professionally edited images are delivered to a private online gallery within 48 hours.
+                    When you arrive, we&apos;ll do a brief consultation to review your goals and outfits. Sessions typically run 60-90 minutes, though we can move faster if you need to get in and out quickly. Unlimited wardrobe changes are included. Your professionally edited images are delivered to a private online gallery within 48 hours.
                   </p>
                 </div>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
