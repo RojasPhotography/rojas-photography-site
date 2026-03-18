@@ -122,7 +122,7 @@ const dayOfChecklist = [
   'Shower and groom as you would for an important meeting',
   'Apply makeup naturally — avoid going overboard',
   'Pack clothes on hangers; bring hair products and a compact',
-  'Arrive 10-15 minutes early to settle in before the session',
+  'Give yourself plenty of time getting ready so you don\'t feel rushed before you arrive',
   'Silence your phone and clear your schedule — be fully present',
 ];
 
@@ -229,7 +229,7 @@ export default function HowToPrepareForHeadshotsPage() {
                     <ul className="space-y-2 text-[var(--color-text-body)] text-sm">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Eat a light meal, avoid salty foods</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Apply makeup naturally — less is more</li>
-                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Arrive 10-15 minutes early</li>
+                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Give yourself plenty of time getting ready — arriving relaxed makes a difference</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring touch-up supplies in a small bag</li>
                     </ul>
                   </div>
@@ -340,8 +340,11 @@ export default function HowToPrepareForHeadshotsPage() {
                     <h3 className="text-lg font-bold text-[var(--color-text-dark)] mb-4">For Men</h3>
                     <ul className="space-y-3 text-[var(--color-text-body)] text-sm leading-relaxed">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Shave the morning of your session — give yourself enough time before you arrive for any redness to settle</li>
-                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring a razor and grooming supplies for touch-ups</li>
+                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />If you wear a beard, trim and shape it a day or two before — not the morning of</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Trim nose and ear hair — small details show clearly in close-up photography</li>
+                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Get a haircut 5-7 days before — not the day before — so it looks natural and settled</li>
+                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Clean your glasses if you wear them — smudges are very visible in photos</li>
+                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring a razor and grooming supplies for touch-ups between outfit changes</li>
                     </ul>
                   </div>
                 </SectionReveal>
@@ -367,7 +370,7 @@ export default function HowToPrepareForHeadshotsPage() {
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Less is more — heavy or overdone makeup can be distracting in close-up photography</li>
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring blotting papers and your compact for touch-ups between looks</li>
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Avoid applying heavy face lotion immediately before the session — it can create shine under lights</li>
-                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Consider booking a professional makeup artist for the best results — we can recommend trusted local artists in Modesto</li>
+                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Consider booking a professional makeup artist for the best results — it&apos;s a worthwhile investment for polished, camera-ready looks</li>
                     </ul>
                   </div>
                 </SectionReveal>
@@ -375,9 +378,11 @@ export default function HowToPrepareForHeadshotsPage() {
                   <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
                     <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">For Men</h3>
                     <ul className="space-y-3 text-[var(--color-text-body)] text-sm leading-relaxed">
-                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Moisturize the night before for healthy skin</li>
+                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Moisturize the night before for healthy-looking skin — avoid heavy lotion the morning of</li>
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring blotting papers in case of shine during the session</li>
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Trim eyebrows if needed — the camera picks up details your mirror might miss</li>
+                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Keep lips hydrated — dry or chapped lips are noticeable in close-up shots</li>
+                      <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Go easy on cologne — strong scent can be distracting in a close-range session</li>
                     </ul>
                   </div>
                 </SectionReveal>
@@ -405,11 +410,7 @@ export default function HowToPrepareForHeadshotsPage() {
                     ))}
                   </ul>
                 </div>
-                <div className="mt-6 bg-amber-50 border border-amber-200 rounded-xl p-6">
-                  <p className="text-amber-900 text-sm leading-relaxed">
-                    <strong>Pro tip:</strong> If your eyes tend to be puffy in the morning, place two spoons in the freezer overnight and apply them to your under-eye area for 1-2 minutes the morning of your session. It works.
-                  </p>
-                </div>
+
               </SectionReveal>
             </div>
           </section>
