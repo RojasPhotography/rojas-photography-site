@@ -95,6 +95,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/modesto-headshots`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 1.0,
+    },
+    {
       url: `${baseUrl}/fresno-headshots`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
