@@ -18,7 +18,7 @@ function generateModestoLocalBusinessSchema() {
     name: 'Rojas Photography – Modesto Headshots',
     image: 'https://rojasphotography.net/images/headshots/headshot-executive-ceo.jpg',
     description:
-      'Professional corporate headshots and photography services in Modesto, CA. Serving Save Mart, Memorial Medical Center, Stanislaus County, agricultural businesses, legal professionals, and executives across the Central Valley.',
+      'Professional corporate headshots and photography services in Modesto, CA. Serving Save Mart, Stanislaus County, agricultural businesses, legal professionals, healthcare organizations, and executives across the Central Valley.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Modesto',
@@ -51,7 +51,7 @@ function generateModestoServiceSchema() {
     '@type': 'Service',
     name: 'Professional Headshots in Modesto, CA',
     description:
-      'Professional corporate headshots for Modesto executives, Save Mart professionals, Memorial Medical Center healthcare staff, Stanislaus County employees, agricultural business leaders, legal professionals, and entrepreneurs across the Central Valley.',
+      'Professional corporate headshots for Modesto executives, Save Mart professionals, Stanislaus County employees, agricultural business leaders, legal professionals, healthcare professionals, and entrepreneurs across the Central Valley.',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rojas Photography',
@@ -111,7 +111,7 @@ function generateModestoFAQSchema() {
         name: 'Do you offer on-site headshot photography for Modesto businesses?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. We bring our full professional studio setup — lighting, backdrop, camera equipment — directly to your Modesto office, medical facility, law firm, or business location. On-site photography is ideal for teams, avoiding disruption to your workday, and capturing staff in their professional environment. We have photographed teams for Save Mart, Comcast, Memorial Medical Center, Valley First Credit Union, and many other Central Valley organizations.',
+          text: 'Yes. We bring our full professional studio setup — lighting, backdrop, camera equipment — directly to your Modesto office, medical facility, law firm, or business location. On-site photography is ideal for teams, avoiding disruption to your workday, and capturing staff in their professional environment. We have photographed teams for Save Mart, Comcast, Valley First Credit Union, and many other Central Valley organizations.',
         },
       },
       {
@@ -119,7 +119,7 @@ function generateModestoFAQSchema() {
         name: 'Why do Modesto professionals choose Rojas Photography?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We are Modesto locals — this is our home and our community. With 15+ years of corporate leadership experience, we understand the professional culture of the Central Valley. We have photographed 500+ executives and professionals across healthcare, legal, agriculture, finance, and corporate sectors. Our guided approach makes even camera-shy professionals look confident and authentic. Images delivered within 48 hours.',
+          text: 'We are Modesto locals — this is our home and our community. With 15+ years of corporate leadership experience, we understand the professional culture of the Central Valley. We have photographed 500+ professionals across healthcare, legal, agriculture, finance, and corporate sectors. Our guided approach makes even camera-shy professionals look confident and authentic. Images delivered within 48 hours.',
         },
       },
     ],
@@ -222,7 +222,7 @@ export default function ModestoHeadshotsPage() {
               <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
                 <div>
                   <p className="text-3xl font-bold text-[var(--color-primary)]">500+</p>
-                  <p className="text-sm text-[var(--color-text-muted)]">Executives Photographed</p>
+                  <p className="text-sm text-[var(--color-text-muted)]">Professionals Photographed</p>
                 </div>
                 <div className="hidden md:block w-px h-10 bg-gray-200" />
                 <div>
@@ -302,12 +302,12 @@ export default function ModestoHeadshotsPage() {
                   {
                     step: '01',
                     title: 'Book Your Session',
-                    desc: 'Schedule online in minutes. We confirm your appointment and send a preparation guide so you know exactly what to wear, how to prep, and what to expect. No surprises.',
+                    desc: 'Book online at your convenience — no back-and-forth needed. Once booked, you\'ll receive a preparation guide so you know exactly what to wear, how to prep, and what to expect.',
                   },
                   {
                     step: '02',
                     title: 'We Guide You Through It',
-                    desc: 'Arrive at our Modesto studio and we handle everything — lighting, posing, expression, angles. You don\'t need to know how to pose. That\'s our job. Most sessions run 60–90 minutes with unlimited wardrobe changes.',
+                    desc: 'You are never alone in this process. We review what we\'re capturing with you in real time, talk through what\'s working and what we want to adjust, and guide your posing and expression throughout. Most sessions run 60–90 minutes with unlimited wardrobe changes.',
                   },
                   {
                     step: '03',
@@ -395,7 +395,7 @@ export default function ModestoHeadshotsPage() {
                   {
                     icon: Users,
                     title: 'Healthcare Professionals',
-                    desc: 'Physicians, nurses, administrators, and staff at Memorial Medical Center, Doctors Medical Center, and healthcare organizations across Stanislaus County. Credibility matters in healthcare — your headshot should reflect that.',
+                    desc: 'Healthcare professionals at Memorial Medical Center, Doctors Medical Center, and organizations across Stanislaus County. Credibility matters in healthcare — your headshot should reflect that.',
                   },
                   {
                     icon: Camera,
@@ -567,12 +567,12 @@ export default function ModestoHeadshotsPage() {
               {
                 question: 'Do you offer on-site headshot photography for Modesto businesses?',
                 answer:
-                  'Yes. We bring our full professional studio setup — lighting, backdrop, camera equipment — directly to your Modesto office, medical facility, law firm, or business location. On-site photography is ideal for teams, avoiding disruption to your workday, and capturing staff in their professional environment. We have photographed teams for Save Mart, Comcast, Memorial Medical Center, Valley First Credit Union, and many other Central Valley organizations.',
+                  'Yes. We bring our full professional studio setup — lighting, backdrop, camera equipment — directly to your Modesto office, medical facility, law firm, or business location. On-site photography is ideal for teams, avoiding disruption to your workday, and capturing staff in their professional environment. We have photographed teams for Save Mart, Comcast, Valley First Credit Union, and many other Central Valley organizations.',
               },
               {
                 question: 'Why do Modesto professionals choose Rojas Photography?',
                 answer:
-                  'We are Modesto locals — this is our home and our community. With 15+ years of corporate leadership experience, we understand the professional culture of the Central Valley. We have photographed 500+ executives and professionals across healthcare, legal, agriculture, finance, and corporate sectors. Our guided approach makes even camera-shy professionals look confident and authentic. Images delivered within 48 hours.',
+                  'We are Modesto locals — this is our home and our community. With 15+ years of corporate leadership experience, we understand the professional culture of the Central Valley. We have photographed 500+ professionals across healthcare, legal, agriculture, finance, and corporate sectors. Our guided approach makes even camera-shy professionals look confident and authentic. Images delivered within 48 hours.',
               },
             ]}
             heading="Modesto Headshot Questions Answered"
