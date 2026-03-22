@@ -77,29 +77,10 @@ export const metadata: Metadata = {
 
 const pricingTiers = [
   {
-    label: 'Budget',
-    range: '$50–$150',
-    session: 'session',
-    highlight: false,
-    includes: [
-      'Basic studio or outdoor shoot',
-      'Limited coaching or posing direction',
-      'Minimal or no editing',
-      'Often delivered as-is or lightly retouched',
-    ],
-    misses: [
-      'Professional lighting setup',
-      'Real-time expression coaching',
-      'Color correction and professional editing',
-      'Corporate-ready quality',
-    ],
-    note: 'Fine for casual use. Not recommended for LinkedIn, company websites, or client-facing materials.',
-  },
-  {
     label: 'Professional',
     range: '$150–$300',
     session: 'session',
-    highlight: true,
+    highlight: false,
     includes: [
       'Professional studio lighting',
       'Posing and expression coaching throughout',
@@ -299,10 +280,10 @@ export default function ProfessionalHeadshotCostPage() {
                   What You Get at Each Price Point
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
-                  Price differences in headshot photography are real — here is exactly what changes as you move up the range.
+                  Professional headshot photographers fall into two tiers. Here is what separates them — and what you should expect at each level.
                 </p>
               </SectionReveal>
-              <div className="grid md:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
                 {pricingTiers.map((tier) => (
                   <SectionReveal key={tier.label}>
                     <div className={`rounded-xl p-8 h-full flex flex-col border ${tier.highlight ? 'bg-white border-[var(--color-primary)] shadow-lg' : 'bg-white border-gray-100'}`}>
