@@ -39,7 +39,7 @@ export function generateLocalBusinessSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',
-      reviewCount: '50',
+      reviewCount: '60',
     },
     sameAs: [
       'https://www.instagram.com/rojasphotographymodesto/',

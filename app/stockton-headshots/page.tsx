@@ -40,7 +40,7 @@ function generateStocktonSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',
-      reviewCount: '50',
+      reviewCount: '60',
     },
   };
 }
@@ -119,7 +119,7 @@ function generateStocktonFAQSchema() {
         name: 'Why do Stockton professionals choose Rojas Photography?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Stockton professionals choose Rojas Photography because we understand business. With 15+ years of corporate leadership experience, we know what executives, attorneys, healthcare professionals, and business leaders need from their professional imagery. We have photographed 500+ executives across the Central Valley and maintain 50+ five-star reviews. Our guided sessions eliminate the awkwardness of professional photos, helping you look confident and authentic on LinkedIn, your company website, and all professional materials.',
+          text: 'Stockton professionals choose Rojas Photography because we understand business. With 15+ years of corporate leadership experience, we know what executives, attorneys, healthcare professionals, and business leaders need from their professional imagery. We have photographed 500+ executives across the Central Valley and maintain 60+ Five-Star reviews. Our guided sessions eliminate the awkwardness of professional photos, helping you look confident and authentic on LinkedIn, your company website, and all professional materials.',
         },
       },
     ],
@@ -219,7 +219,7 @@ export default function StocktonHeadshotsPage() {
                 </div>
                 <div className="hidden md:block w-px h-10 bg-gray-200" />
                 <div>
-                  <p className="text-3xl font-bold text-[var(--color-primary)]">50+</p>
+                  <p className="text-3xl font-bold text-[var(--color-primary)]">60+</p>
                   <p className="text-sm text-[var(--color-text-muted)]">Five-Star Reviews</p>
                 </div>
                 <div className="hidden md:block w-px h-10 bg-gray-200" />
@@ -467,7 +467,7 @@ export default function StocktonHeadshotsPage() {
               {
                 question: 'Why do Stockton professionals choose Rojas Photography?',
                 answer:
-                  'Stockton professionals choose Rojas Photography because we understand business. With 15+ years of corporate leadership experience, we\'ve helped 500+ executives across the Central Valley present themselves with confidence. We have 50+ five-star reviews and are trusted by organizations like Comcast, Save Mart, and the California Lawyers Association. Our guided sessions make professional photography comfortable and stress-free.',
+                  'Stockton professionals choose Rojas Photography because we understand business. With 15+ years of corporate leadership experience, we\'ve helped 500+ executives across the Central Valley present themselves with confidence. We have 60+ Five-Star reviews and are trusted by organizations like Comcast, Save Mart, and the California Lawyers Association. Our guided sessions make professional photography comfortable and stress-free.',
               },
             ]}
             heading="Stockton Headshot Questions Answered"

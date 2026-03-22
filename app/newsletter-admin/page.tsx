@@ -217,11 +217,14 @@ export default function NewsletterAdmin() {
         setTimeout(() => setTestEmailStatus('idle'), 4000);
       } else {
         setTestEmailStatus('error');
+        setStatus('error');
         setResult(data.error || 'Could not send test email.');
         setTimeout(() => setTestEmailStatus('idle'), 4000);
       }
     } catch {
       setTestEmailStatus('error');
+      setStatus('error');
+      setResult('Could not reach the server. Please try again.');
       setTimeout(() => setTestEmailStatus('idle'), 4000);
     }
   }

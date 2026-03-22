@@ -586,7 +586,7 @@ export default function HomePage() {
               </div>
               <div className="hidden md:block w-px h-10 bg-gray-200" />
               <div>
-                <p className="text-3xl font-bold text-[var(--color-primary)]">50+</p>
+                <p className="text-3xl font-bold text-[var(--color-primary)]">60+</p>
                 <p className="text-sm text-[var(--color-text-muted)]">Five-Star Reviews</p>
               </div>
               <div className="hidden md:block w-px h-10 bg-gray-200" />
@@ -690,7 +690,7 @@ export default function HomePage() {
 
               <SectionReveal>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">50+</div>
+                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">60+</div>
                   <p className="text-[var(--color-text-dark)] font-semibold mb-2">Five-Star Reviews</p>
                   <p className="text-sm text-[var(--color-text-body)]">Proven client satisfaction</p>
                 </div>

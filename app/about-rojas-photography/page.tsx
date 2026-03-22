@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'About Rojas Photography | Corporate Photographers in Modesto',
     description:
-      '15+ years corporate experience, 500+ executives photographed, 50+ five-star reviews. Meet the team behind Modesto\'s premier photography studio.',
+      '15+ years corporate experience, 500+ executives photographed, 60+ Five-Star reviews. Meet the team behind Modesto\'s premier photography studio.',
     url: 'https://rojasphotography.net/about-rojas-photography',
     type: 'website',
     images: [
@@ -98,7 +98,7 @@ export default function AboutPage() {
                     <p className="text-sm text-[var(--color-text-muted)] mt-1">Corporate clients served</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-bold text-[var(--color-primary)]">50+</p>
+                    <p className="text-4xl font-bold text-[var(--color-primary)]">60+</p>
                     <p className="font-semibold text-[var(--color-text-dark)]">Five-Star Reviews</p>
                     <p className="text-sm text-[var(--color-text-muted)] mt-1">Consistent excellence</p>
                   </div>

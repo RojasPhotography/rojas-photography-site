@@ -40,7 +40,7 @@ function generateMercedSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',
-      reviewCount: '50',
+      reviewCount: '60',
     },
   };
 }
@@ -219,7 +219,7 @@ export default function MercedHeadshotsPage() {
                 </div>
                 <div className="hidden md:block w-px h-10 bg-gray-200" />
                 <div>
-                  <p className="text-3xl font-bold text-[var(--color-primary)]">50+</p>
+                  <p className="text-3xl font-bold text-[var(--color-primary)]">60+</p>
                   <p className="text-sm text-[var(--color-text-muted)]">Five-Star Reviews</p>
                 </div>
                 <div className="hidden md:block w-px h-10 bg-gray-200" />
