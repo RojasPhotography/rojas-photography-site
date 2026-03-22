@@ -168,6 +168,30 @@ export async function POST(request: Request) {
       // Don't block — subscriber was saved successfully
     }
 
+    // Notify Alfonso & Niomi of new subscriber
+    try {
+      await resend.emails.send({
+        from: 'Rojas Photography <alfonso@rojasphotography.net>',
+        to: ['alfonso@rojasphotography.net', 'niomi@rojasphotography.net'],
+        subject: `New subscriber: ${name || email}`,
+        html: `
+          <div style="font-family: Georgia, serif; max-width: 480px; margin: 0 auto; color: #333;">
+            <div style="background-color: #0f3d2a; padding: 20px 32px;">
+              <p style="color: #ffffff; margin: 0; font-size: 16px; font-weight: bold;">New Newsletter Subscriber</p>
+            </div>
+            <div style="padding: 28px 32px;">
+              <p style="font-size: 15px; margin: 0 0 12px;"><strong>Name:</strong> ${name || '(not provided)'}</p>
+              <p style="font-size: 15px; margin: 0 0 12px;"><strong>Email:</strong> ${email}</p>
+              <p style="font-size: 15px; margin: 0 0 0;"><strong>Signed up:</strong> ${new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', dateStyle: 'full', timeStyle: 'short' })}</p>
+            </div>
+          </div>
+        `,
+      });
+    } catch (notifyError) {
+      console.error('Notification email failed:', notifyError);
+      // Don't block — subscription already succeeded
+    }
+
     return NextResponse.json({ success: true, message: 'Subscribed successfully' });
   } catch (error) {
     console.error('Subscribe error:', error);
