@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { CheckCircle2, XCircle, AlertTriangle } from 'lucide-react';
+import { CheckCircle2, AlertTriangle } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import FAQSection from '../components/FAQSection';
@@ -13,7 +13,7 @@ const faqs = [
   {
     question: 'How much does a professional headshot cost?',
     answer:
-      'Professional headshot pricing typically ranges from $150–$500 for a session fee, with per-image selection fees of $50–$300 per image. Budget photographers charge $50–$150 but often lack the lighting, coaching, and editing quality needed for corporate use. Mid-range professional photographers charge $150–$300 per session with $100–$200 per image. Premium corporate headshot photographers charge $300–$500+ per session. At Rojas Photography, sessions are $150 with images at $150 each — you only pay for what you love.',
+      'At Rojas Photography, sessions are $150 and images are $150 each — you only pay for the images you love, with no minimum purchase. Currently enrolled students receive a special rate of $150 total, which includes the session and one professionally edited image. For teams and on-site photography, pricing is customized based on team size and location.',
   },
   {
     question: 'What is included in a professional headshot session?',
@@ -28,7 +28,7 @@ const faqs = [
   {
     question: 'How many headshot images will I receive?',
     answer:
-      'Most individual sessions produce 50–100 raw images from which you select your favorites for editing. The number of final edited images depends on how many you choose to purchase. Most clients select 2–5 images for different uses — LinkedIn, company website, speaking bio, business card, and social media.',
+      'Your session will produce a strong gallery of options to choose from. The number of final edited images is entirely up to you — you select what you love and pay only for those. Some clients walk away with one perfect image. Others select several for different uses across LinkedIn, their company website, speaking bios, and other platforms. There is no right or wrong number.',
   },
   {
     question: 'Do I need a professional headshot or can I use a phone photo?',
@@ -43,7 +43,7 @@ const faqs = [
   {
     question: 'Can I get headshots for my entire team?',
     answer:
-      'Yes. For teams, we offer on-site photography at your Modesto or Central Valley location — we bring our full studio setup to your office. On-site team photography is custom-priced based on team size and location. We can photograph 20–30 people per day efficiently without disrupting your operations. Contact us for a team quote.',
+      'Yes. For teams, we offer on-site photography at your Modesto or Central Valley location — we bring our full studio setup directly to your office. We work efficiently at scale: we recently photographed nearly 70 professionals in a single seven-hour day. On-site team photography is custom-priced based on team size and location. Contact us for a quote.',
   },
   {
     question: 'How soon will I receive my headshots?',
@@ -75,36 +75,53 @@ export const metadata: Metadata = {
   },
 };
 
-const pricingTiers = [
+const pricingOptions = [
   {
-    label: 'Professional',
-    range: '$150–$300',
-    session: 'session',
-    highlight: false,
+    label: 'Standard Rate',
+    price: '$150',
+    sub: 'session fee',
+    plus: '+ $150 per image selected',
+    highlight: true,
     includes: [
+      '60–90 minute guided session',
       'Professional studio lighting',
-      'Posing and expression coaching throughout',
+      'Real-time posing & expression coaching',
       'Unlimited wardrobe changes',
-      'Professional editing and color correction',
+      'Professional editing & color correction',
       '48-hour delivery to private gallery',
+      'No minimum image purchase',
     ],
-    misses: [],
-    note: 'The right choice for most executives, attorneys, healthcare professionals, financial advisors, and business owners.',
+    note: 'For executives, attorneys, healthcare professionals, financial advisors, real estate agents, and business owners.',
   },
   {
-    label: 'Premium',
-    range: '$300–$500+',
-    session: 'session',
+    label: 'Student Rate',
+    price: '$150',
+    sub: 'session + one edited image',
+    plus: 'Currently enrolled students only',
     highlight: false,
     includes: [
-      'Everything in the Professional tier',
-      'Extended session time',
-      'Hair and makeup included (some)',
-      'Multiple location setups',
-      'Dedicated retouching artist',
+      'Everything in the standard session',
+      'One professionally edited image included',
+      'ERAS-ready format available',
+      'Bring your student ID',
+      'Additional images at standard rate',
     ],
-    misses: [],
-    note: 'Best for high-visibility executives, public figures, and brand campaigns where image is a core marketing asset.',
+    note: 'For college students, graduate students, and medical students applying through ERAS.',
+  },
+  {
+    label: 'Teams & On-Site',
+    price: 'Custom',
+    sub: 'based on team size & location',
+    plus: 'We bring the studio to you',
+    highlight: false,
+    includes: [
+      'Full studio setup at your location',
+      'Consistent lighting across all team members',
+      'High-volume efficiency — large teams welcome',
+      'Coordinated scheduling to minimize disruption',
+      '24–48 hour delivery',
+    ],
+    note: 'For companies, healthcare organizations, law firms, and any team needing consistent headshots across multiple people.',
   },
 ];
 
@@ -242,7 +259,7 @@ export default function ProfessionalHeadshotCostPage() {
               <SectionReveal>
                 <div className="bg-[var(--color-bg-warm)] rounded-xl p-7 border border-gray-100 text-center">
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    <strong className="text-[var(--color-text-dark)]">No minimum purchase.</strong> Most clients select 2–5 images for different uses — LinkedIn, company website, speaking bio, and business card. You decide what you need. Rush delivery (24-hour turnaround) available for an additional $75.
+                    <strong className="text-[var(--color-text-dark)]">No minimum purchase.</strong> Images can be used across LinkedIn, your company website, speaking bio, business card, and more — you decide what you need. Rush delivery (24-hour turnaround) available for an additional $75.
                   </p>
                 </div>
               </SectionReveal>
@@ -272,42 +289,37 @@ export default function ProfessionalHeadshotCostPage() {
             </div>
           </section>
 
-          {/* Industry Price Tiers */}
+          {/* Pricing Options */}
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
-                  What You Get at Each Price Point
+                  Pricing at Rojas Photography
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
-                  Professional headshot photographers fall into two tiers. Here is what separates them — and what you should expect at each level.
+                  Simple, transparent pricing for every situation — individual professionals, students, and teams.
                 </p>
               </SectionReveal>
-              <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-                {pricingTiers.map((tier) => (
-                  <SectionReveal key={tier.label}>
-                    <div className={`rounded-xl p-8 h-full flex flex-col border ${tier.highlight ? 'bg-white border-[var(--color-primary)] shadow-lg' : 'bg-white border-gray-100'}`}>
-                      {tier.highlight && (
-                        <span className="text-xs font-bold text-[var(--color-primary)] uppercase tracking-widest mb-3">Most Popular</span>
+              <div className="grid md:grid-cols-3 gap-6">
+                {pricingOptions.map((option) => (
+                  <SectionReveal key={option.label}>
+                    <div className={`rounded-xl p-8 h-full flex flex-col border ${option.highlight ? 'bg-white border-[var(--color-primary)] shadow-lg' : 'bg-white border-gray-100'}`}>
+                      {option.highlight && (
+                        <span className="text-xs font-bold text-[var(--color-primary)] uppercase tracking-widest mb-3">Most Common</span>
                       )}
-                      <p className="text-lg font-bold text-[var(--color-text-dark)]">{tier.label}</p>
-                      <p className="text-3xl font-bold text-[var(--color-primary)] mb-1">{tier.range}</p>
-                      <p className="text-sm text-[var(--color-text-muted)] mb-6">{tier.session}</p>
+                      <p className="text-lg font-bold text-[var(--color-text-dark)]">{option.label}</p>
+                      <p className="text-4xl font-bold text-[var(--color-primary)] mb-1">{option.price}</p>
+                      <p className="text-sm text-[var(--color-text-muted)] mb-1">{option.sub}</p>
+                      <p className="text-xs font-semibold text-[var(--color-primary)] mb-6">{option.plus}</p>
                       <ul className="space-y-2 mb-4 flex-1">
-                        {tier.includes.map(item => (
+                        {option.includes.map(item => (
                           <li key={item} className="flex gap-2 text-sm text-[var(--color-text-body)]">
                             <CheckCircle2 size={14} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
                             {item}
                           </li>
                         ))}
-                        {tier.misses.map(item => (
-                          <li key={item} className="flex gap-2 text-sm text-[var(--color-text-muted)]">
-                            <XCircle size={14} className="text-red-300 flex-shrink-0 mt-0.5" />
-                            {item}
-                          </li>
-                        ))}
                       </ul>
-                      <p className="text-xs text-[var(--color-text-muted)] italic leading-relaxed border-t border-gray-100 pt-4 mt-2">{tier.note}</p>
+                      <p className="text-xs text-[var(--color-text-muted)] italic leading-relaxed border-t border-gray-100 pt-4 mt-2">{option.note}</p>
                     </div>
                   </SectionReveal>
                 ))}
