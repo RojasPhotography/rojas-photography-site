@@ -309,7 +309,7 @@ export default function NewsletterAdmin() {
   }
 
   return (
-    <div className="min-h-screen bg-[var(--color-bg-warm)]">
+    <div className="min-h-screen bg-[var(--color-bg-warm)] pt-[70px]">
       {/* Header */}
       <div className="bg-white border-b border-gray-100 px-6 py-4">
         <div className="max-w-7xl mx-auto">
