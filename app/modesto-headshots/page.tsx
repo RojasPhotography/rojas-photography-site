@@ -209,7 +209,7 @@ export default function ModestoHeadshotsPage() {
                     The problem isn&apos;t how you look. It&apos;s that nobody coached you. Nobody controlled the lighting. Nobody told you how to hold your shoulders or where to look or how to get that natural expression that actually builds trust instead of just filling a box on your website.
                   </p>
                   <p>
-                    In the Central Valley, where relationships drive business, your headshot is often the first impression you make before anyone shakes your hand. It should do more than exist — it should work for you.
+                    Studies show people form a first impression in as little as 100 milliseconds — and in the Central Valley, where relationships drive business, your headshot is often that first impression before anyone shakes your hand. It should do more than exist — it should work for you.
                   </p>
                 </div>
               </SectionReveal>

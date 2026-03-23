@@ -344,7 +344,7 @@ export default function PremiumHeadshotsPage() {
               </h2>
               <div className="text-lg text-[var(--color-text-body)] leading-relaxed space-y-4">
                 <p>
-                  Your headshot is often the first impression potential clients, employers, or partners have of you. A stiff, awkward, or unprofessional photo sends the wrong message—no matter how qualified you are.
+                  Studies show people form a first impression in as little as 100 milliseconds — and your headshot is often the first impression potential clients, employers, or partners have of you. A stiff, awkward, or unprofessional photo sends the wrong message—no matter how qualified you are.
                 </p>
                 <p>
                   Studies show LinkedIn profiles with professional photos get 21x more views and 9x more connection requests. Without a strong headshot, you're invisible. With a bad one, you hurt your credibility.

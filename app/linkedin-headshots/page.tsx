@@ -82,7 +82,7 @@ const linkedInStats = [
   { stat: '21x', label: 'More profile views with a professional photo vs. no photo' },
   { stat: '9x', label: 'More connection requests accepted with a professional headshot' },
   { stat: '36x', label: 'More messages received by profiles with a photo vs. without' },
-  { stat: '7 sec', label: 'Time it takes someone to judge your credibility from your photo' },
+  { stat: '100ms', label: 'Time it takes someone to form a first impression from your photo' },
 ];
 
 const whatWeDeliver = [
@@ -153,7 +153,7 @@ export default function LinkedInHeadshotsPage() {
                     You have built a strong career. You have the experience, the credentials, the track record. But when someone clicks on your LinkedIn profile, the first thing they see is a blurry photo from three years ago — taken at a company picnic, cropped from a group shot, or snapped in bad lighting by someone with a phone.
                   </p>
                   <p>
-                    Before they read a single word of your bio, they have already made a judgment. It takes seven seconds. And if your photo signals that you don&apos;t invest in your professional image, some portion of your audience will assume the same about your work.
+                    Before they read a single word of your bio, they have already made a judgment. Research shows it takes as little as 100 milliseconds. And if your photo signals that you don&apos;t invest in your professional image, some portion of your audience will assume the same about your work.
                   </p>
                   <p>
                     This is not about vanity. It is about first impressions — and on LinkedIn, your photo <em>is</em> your first impression.
