@@ -259,7 +259,7 @@ export default function ProfessionalHeadshotCostPage() {
               <SectionReveal>
                 <div className="bg-[var(--color-bg-warm)] rounded-xl p-7 border border-gray-100 text-center">
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    <strong className="text-[var(--color-text-dark)]">No minimum purchase.</strong> Images can be used across LinkedIn, your company website, speaking bio, business card, and more — you decide what you need. Rush delivery (24-hour turnaround) available for an additional $75.
+                    <strong className="text-[var(--color-text-dark)]">No minimum purchase.</strong> Images can be used across LinkedIn, your company website, speaking bio, business card, and more — you decide what you need. Rush delivery (24-hour turnaround) available for an additional $75 per photo.
                   </p>
                 </div>
               </SectionReveal>
