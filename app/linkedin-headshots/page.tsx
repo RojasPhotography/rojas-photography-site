@@ -323,7 +323,7 @@ export default function LinkedInHeadshotsPage() {
                   LinkedIn has over 900 million users. The professionals in your field are being discovered, connected with, and hired based partly on how their profile looks. An outdated, low-quality photo quietly filters you out of opportunities before you ever have a chance to compete.
                 </p>
                 <p className="text-lg text-white/90 mb-10 leading-relaxed max-w-2xl mx-auto">
-                  One session. 48 hours. A photo that represents you the way you deserve to be represented.
+                  One session. 48 hours. Multiple headshots that represent you the way you deserve to be represented — on LinkedIn, your website, your bio, and everywhere your name appears.
                 </p>
                 <Link
                   href="/premium-headshots#booking-heading"
