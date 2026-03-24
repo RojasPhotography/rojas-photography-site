@@ -43,7 +43,7 @@ const faqs = [
   {
     question: 'Can I get headshots for my entire team?',
     answer:
-      'Yes. For teams, we offer on-site photography at your Modesto or Central Valley location — we bring our full studio setup directly to your office. We work efficiently at scale: we recently photographed nearly 70 professionals in a single seven-hour day. On-site team photography is custom-priced based on team size and location. Contact us for a quote.',
+      'Yes. For teams, we offer on-site photography at your location — we bring our full studio setup directly to your office. We travel throughout California and beyond, including the Central Valley, Sacramento, the Bay Area, and as far as San Diego. We work efficiently at scale: we recently photographed nearly 70 professionals in a single seven-hour day. On-site team photography is custom-priced based on team size and location. Contact us for a quote.',
   },
   {
     question: 'How soon will I receive my headshots?',
