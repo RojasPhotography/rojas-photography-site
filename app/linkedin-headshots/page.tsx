@@ -239,12 +239,12 @@ export default function LinkedInHeadshotsPage() {
                   {
                     step: '02',
                     title: 'Guided Session',
-                    desc: 'Arrive at our Modesto studio. We handle everything — lighting, posing, expression coaching, wardrobe changes. Sessions run 60–90 minutes. You leave knowing you have something great.',
+                    desc: 'Arrive at our Modesto studio. We handle everything — lighting, posing, expression coaching, wardrobe changes. Sessions run 60–90 minutes. Before you leave, we review your images together and you select your favorites.',
                   },
                   {
                     step: '03',
                     title: '48-Hour Delivery',
-                    desc: 'You review and select your favorite images with us during the session. Your professionally edited selections arrive in a private online gallery within 48 hours — ready to upload to LinkedIn.',
+                    desc: 'Your professionally edited selections arrive in a private online gallery within 48 hours — ready to upload to LinkedIn, your website, your bio, and anywhere else your name appears.',
                   },
                 ].map((item) => (
                   <SectionReveal key={item.step}>
