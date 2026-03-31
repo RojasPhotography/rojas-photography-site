@@ -51,23 +51,30 @@ export async function POST(request: Request) {
     for (let i = 0; i < subscribers.length; i += BATCH_SIZE) {
       const batch = subscribers.slice(i, i + BATCH_SIZE);
 
-      const emails = batch.map((subscriber) => ({
-        from: 'Alfonso Rojas <alfonso@rojasphotography.net>',
-        to: subscriber.email,
-        subject,
-        html: `
-          <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; color: #333;">
-            ${html_content}
-            <hr style="border: none; border-top: 1px solid #eee; margin: 40px 0;" />
-            <p style="font-size: 13px; color: #888;">
-              — Alfonso & Niomi Rojas<br/>Rojas Photography · Modesto, CA
-            </p>
-            <p style="font-size: 12px; color: #aaa;">
-              <a href="https://rojasphotography.net/api/newsletter/unsubscribe?email=${encodeURIComponent(subscriber.email)}" style="color: #aaa;">Unsubscribe</a>
-            </p>
-          </div>
-        `,
-      }));
+      const emails = batch.map((subscriber) => {
+        const firstName = subscriber.name ? subscriber.name.split(' ')[0] : 'there';
+        const personalizedHtml = html_content
+          .replace(/\{\{first_name\}\}/gi, firstName)
+          .replace(/\{\{name\}\}/gi, subscriber.name || 'there');
+
+        return {
+          from: 'Alfonso Rojas <alfonso@rojasphotography.net>',
+          to: subscriber.email,
+          subject,
+          html: `
+            <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; color: #333;">
+              ${personalizedHtml}
+              <hr style="border: none; border-top: 1px solid #eee; margin: 40px 0;" />
+              <p style="font-size: 13px; color: #888;">
+                — Alfonso & Niomi Rojas<br/>Rojas Photography · Modesto, CA
+              </p>
+              <p style="font-size: 12px; color: #aaa;">
+                <a href="https://rojasphotography.net/api/newsletter/unsubscribe?email=${encodeURIComponent(subscriber.email)}" style="color: #aaa;">Unsubscribe</a>
+              </p>
+            </div>
+          `,
+        };
+      });
 
       try {
         const { error: batchError } = await resend.batch.send(emails);

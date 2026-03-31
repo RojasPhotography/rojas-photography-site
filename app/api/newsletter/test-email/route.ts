@@ -19,6 +19,10 @@ export async function POST(request: Request) {
 
     const testTo = to || 'alfonso@rojasphotography.net';
 
+    const personalizedHtml = html_content
+      .replace(/\{\{first_name\}\}/gi, 'Alfonso')
+      .replace(/\{\{name\}\}/gi, 'Alfonso Rojas');
+
     await resend.emails.send({
       from: 'Alfonso Rojas <alfonso@rojasphotography.net>',
       to: testTo,
@@ -28,7 +32,7 @@ export async function POST(request: Request) {
           ⚠️ <strong>TEST EMAIL</strong> — This is a preview. It has not been sent to your subscribers.
         </div>
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; color: #333;">
-          ${html_content}
+          ${personalizedHtml}
           <hr style="border: none; border-top: 1px solid #eee; margin: 40px 0;" />
           <p style="font-size: 13px; color: #888;">
             — Alfonso & Niomi Rojas<br/>Rojas Photography · Modesto, CA
