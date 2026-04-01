@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import BeefreeSDK from '@beefree.io/sdk';
 
 interface Draft {
@@ -47,6 +47,7 @@ export default function NewsletterAdmin() {
 
   const [bee, setBee] = useState<BeefreeSDK | null>(null);
   const [editorReady, setEditorReady] = useState(false);
+  const pendingDraftSave = useRef(false);
 
   const [status, setStatus] = useState<'idle' | 'loading' | 'saving' | 'success' | 'error'>('idle');
   const [result, setResult] = useState('');
@@ -109,6 +110,10 @@ export default function NewsletterAdmin() {
             setJsonContent(pageJson);
             setHtmlContent(pageHtml);
             setResult('');
+            if (pendingDraftSave.current) {
+              pendingDraftSave.current = false;
+              saveDraftWithContent(pageJson, pageHtml);
+            }
           },
           onSaveAsTemplate: (_pageJson: string) => {},
           onError: (error: unknown) => {
@@ -145,13 +150,7 @@ export default function NewsletterAdmin() {
     }
   }
 
-  async function saveDraft() {
-    if (!htmlContent && !jsonContent) {
-      setStatus('error');
-      setResult('Please design your email first, then click Save in the editor before saving a draft.');
-      return;
-    }
-
+  async function saveDraftWithContent(json: string, html: string) {
     setStatus('saving');
     try {
       const res = await fetch('/api/newsletter/drafts', {
@@ -161,8 +160,8 @@ export default function NewsletterAdmin() {
           password,
           id: currentDraftId,
           subject: subject || 'Untitled Draft',
-          content: jsonContent,
-          html_content: htmlContent,
+          content: json,
+          html_content: html,
         }),
       });
 
@@ -181,6 +180,17 @@ export default function NewsletterAdmin() {
       setStatus('error');
       setResult('Something went wrong saving the draft.');
     }
+  }
+
+  function saveDraft() {
+    if (!bee) {
+      setStatus('error');
+      setResult('Editor not ready. Please wait and try again.');
+      return;
+    }
+    // Trigger Beefree to save first — onSave callback will then save the draft
+    pendingDraftSave.current = true;
+    bee.save();
   }
 
   async function deleteDraft(id: number) {
