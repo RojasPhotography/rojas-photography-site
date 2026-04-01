@@ -509,7 +509,7 @@ export default function NewsletterAdmin() {
                     <div>
                       <p className="font-medium text-[var(--color-text-dark)] text-sm">{item.subject}</p>
                       <p className="text-xs text-[var(--color-text-muted)]">
-                        Sent {new Date(item.sent_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                        Sent {new Date(item.sent_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'America/Los_Angeles' })}
                       </p>
                     </div>
                   </div>
@@ -534,7 +534,7 @@ export default function NewsletterAdmin() {
                     <div>
                       <p className="font-medium text-[var(--color-text-dark)] text-sm">{draft.subject || 'Untitled Draft'}</p>
                       <p className="text-xs text-[var(--color-text-muted)]">
-                        Last edited {new Date(draft.updated_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' })}
+                        Last edited {new Date(draft.updated_at).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'America/Los_Angeles' })}
                       </p>
                     </div>
                     <div className="flex gap-2">
