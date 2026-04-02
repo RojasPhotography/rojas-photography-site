@@ -436,7 +436,7 @@ export default function ProfessionalHeadshotCostPage() {
 
           <CTASection
             heading="Ready to Invest in a Headshot That Works for You?"
-            subheading="$150 session. $150 per image. No minimums. 48-hour delivery. Serving Modesto, the Central Valley, and all of California."
+            subheading="$150 session. $150 per image. No minimums. 48-hour delivery. Based in Modesto, CA — serving the Central Valley and all of California."
             primaryLabel="Book Your Session"
             primaryHref="/premium-headshots#booking-heading"
             showContactInfo={false}
