@@ -57,6 +57,8 @@ export async function POST(request: Request) {
           .replace(/\{\{first_name\}\}/gi, firstName)
           .replace(/\{\{name\}\}/gi, subscriber.name || 'there');
 
+        const trackingPixel = `<img src="https://rojasphotography.net/api/newsletter/track?n=${newsletter.id}&s=${subscriber.id}" width="1" height="1" style="display:block;width:1px;height:1px;opacity:0;" alt="" />`;
+
         return {
           from: 'Alfonso Rojas <alfonso@rojasphotography.net>',
           to: subscriber.email,
@@ -71,6 +73,7 @@ export async function POST(request: Request) {
               <p style="font-size: 12px; color: #aaa;">
                 <a href="https://rojasphotography.net/api/newsletter/unsubscribe?email=${encodeURIComponent(subscriber.email)}" style="color: #aaa;">Unsubscribe</a>
               </p>
+              ${trackingPixel}
             </div>
           `,
         };
