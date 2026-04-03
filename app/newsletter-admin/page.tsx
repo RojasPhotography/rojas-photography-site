@@ -15,6 +15,7 @@ interface SentNewsletter {
   subject: string;
   sent_at: string;
   created_at: string;
+  stats?: { sent: number; opened: number; failed: number; openRate: number };
 }
 
 interface Subscriber {
@@ -90,7 +91,21 @@ export default function NewsletterAdmin() {
   const loadHistory = useCallback(async () => {
     const res = await fetch('/api/newsletter/drafts?status=sent');
     const data = await res.json();
-    if (Array.isArray(data)) setHistory(data);
+    if (!Array.isArray(data)) return;
+
+    // Fetch stats for each newsletter in parallel
+    const withStats = await Promise.all(
+      data.map(async (item: SentNewsletter) => {
+        try {
+          const statsRes = await fetch(`/api/newsletter/stats?newsletter_id=${item.id}`);
+          const stats = await statsRes.json();
+          return { ...item, stats };
+        } catch {
+          return item;
+        }
+      })
+    );
+    setHistory(withStats);
   }, []);
 
   useEffect(() => {
@@ -288,6 +303,7 @@ export default function NewsletterAdmin() {
   }
 
   const activeCount = subscribers.filter((s) => s.is_active).length;
+  const unsubscribedCount = subscribers.filter((s) => !s.is_active).length;
 
   if (!authenticated) {
     return (
@@ -421,6 +437,20 @@ export default function NewsletterAdmin() {
             </div>
           </div>
 
+          {/* Subscriber summary */}
+          {subscribers.length > 0 && (
+            <div className="mt-3 flex gap-6 text-sm">
+              <span className="text-[var(--color-text-muted)]">
+                <span className="font-bold text-green-600">{activeCount}</span> active subscribers
+              </span>
+              {unsubscribedCount > 0 && (
+                <span className="text-[var(--color-text-muted)]">
+                  <span className="font-bold text-gray-400">{unsubscribedCount}</span> unsubscribed
+                </span>
+              )}
+            </div>
+          )}
+
           {/* Status messages */}
           {status === 'success' && (
             <div className="mt-3 bg-green-50 border border-green-200 rounded-xl px-4 py-3 text-green-800 text-sm font-medium">
@@ -513,14 +543,38 @@ export default function NewsletterAdmin() {
             {history.length === 0 ? (
               <p className="text-[var(--color-text-muted)] text-sm">No newsletters sent yet.</p>
             ) : (
-              <div className="space-y-2">
+              <div className="space-y-3">
                 {history.map((item) => (
-                  <div key={item.id} className="flex items-center justify-between p-3 rounded-lg border border-gray-100">
-                    <div>
-                      <p className="font-medium text-[var(--color-text-dark)] text-sm">{item.subject}</p>
-                      <p className="text-xs text-[var(--color-text-muted)]">
-                        Sent {new Date(item.sent_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'America/Los_Angeles' })}
-                      </p>
+                  <div key={item.id} className="p-4 rounded-lg border border-gray-100 hover:bg-gray-50">
+                    <div className="flex items-start justify-between gap-4 flex-wrap">
+                      <div>
+                        <p className="font-medium text-[var(--color-text-dark)] text-sm">{item.subject}</p>
+                        <p className="text-xs text-[var(--color-text-muted)] mt-0.5">
+                          Sent {new Date(item.sent_at).toLocaleString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit', timeZone: 'America/Los_Angeles' })}
+                        </p>
+                      </div>
+                      {item.stats && (
+                        <div className="flex gap-4 flex-wrap">
+                          <div className="text-center">
+                            <p className="text-lg font-bold text-[var(--color-text-dark)]">{item.stats.sent}</p>
+                            <p className="text-xs text-[var(--color-text-muted)]">Sent</p>
+                          </div>
+                          <div className="text-center">
+                            <p className="text-lg font-bold text-green-600">{item.stats.openRate}%</p>
+                            <p className="text-xs text-[var(--color-text-muted)]">Open Rate</p>
+                          </div>
+                          <div className="text-center">
+                            <p className="text-lg font-bold text-[var(--color-text-dark)]">{item.stats.opened}</p>
+                            <p className="text-xs text-[var(--color-text-muted)]">Opened</p>
+                          </div>
+                          {item.stats.failed > 0 && (
+                            <div className="text-center">
+                              <p className="text-lg font-bold text-red-500">{item.stats.failed}</p>
+                              <p className="text-xs text-[var(--color-text-muted)]">Failed</p>
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}
