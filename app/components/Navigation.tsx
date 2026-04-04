@@ -140,6 +140,13 @@ export default function Navigation() {
                   On-Site Photography
                 </Link>
                 <Link
+                  href="/headshot-booth"
+                  className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
+                  onClick={() => setDesktopServicesOpen(false)}
+                >
+                  Headshot Booth
+                </Link>
+                <Link
                   href="/commercial"
                   className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
                   onClick={() => setDesktopServicesOpen(false)}
@@ -288,6 +295,13 @@ export default function Navigation() {
                     onClick={closeMenu}
                   >
                     On-Site Photography
+                  </Link>
+                  <Link
+                    href="/headshot-booth"
+                    className="block text-base text-[var(--color-text-body)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-2.5 rounded-lg transition-all duration-200"
+                    onClick={closeMenu}
+                  >
+                    Headshot Booth
                   </Link>
                   <Link
                     href="/commercial"
