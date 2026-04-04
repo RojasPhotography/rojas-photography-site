@@ -48,13 +48,13 @@ export default function HomePage() {
       {/* Hero Section - SB7: A Character */}
       <HeroSection
         image="/images/Kaiser BTS Headshots.png"
-        title="Stop Blending In. Your Story Deserves to Be Seen."
+        title="Your Business Is Better Than Your Photos Suggest."
         tag="Premium Corporate Photography | Modesto, CA"
         objectPosition="center 40%"
         fullHeight
       >
         <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Visual storytelling partners for businesses across Modesto and Central Valley who refuse to look like everyone else. We don't just take photos and videos—we partner with you to create imagery that shows who you really are.
+          I help professionals across Modesto and Central Valley create imagery that actually reflects the quality of who they are.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
           <Link
