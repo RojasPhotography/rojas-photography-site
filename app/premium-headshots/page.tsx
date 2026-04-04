@@ -141,20 +141,17 @@ export default function PremiumHeadshotsPage() {
           <SectionReveal>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
-                Real-Time Coaching for Camera-Shy Professionals
+                I Know How It Feels to Be Camera-Shy
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
+                <p>
+                  Most people I work with feel the same way before they arrive: awkward in front of a camera, unsure how to pose, convinced they're just "not photogenic." That feeling is real — and it's exactly what I'm here to take off your plate.
+                </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  Here's what makes us different: We don't just take your photo—we coach you through the entire session.
+                  I'm Alfonso Rojas. I've photographed 500+ professionals across Modesto and the Central Valley — CEOs, attorneys, realtors, healthcare executives — and I've spent 15+ years in corporate leadership myself. I know what a headshot needs to communicate, and I know how to get you there without it feeling forced.
                 </p>
                 <p>
-                  Most of our clients feel the same way you do: awkward in front of the camera, unsure about posing, worried they're "not photogenic." We get it. That's exactly why our approach is built around real-time guidance.
-                </p>
-                <p>
-                  We've photographed 500+ professionals across Modesto and the Central Valley—CEOs, attorneys, realtors, consultants, healthcare executives. With 15+ years of corporate leadership experience, we understand what a professional headshot needs to communicate: confidence, authenticity, and credibility.
-                </p>
-                <p>
-                  You're not alone in front of a camera. We guide your posing, adjust your angles, coach your expression, and review images together in real-time so you see exactly what's working.
+                  You're never alone in front of the camera. I guide your posing, coach your expression, adjust your angles, and review images with you in real-time so you can see exactly what's working as we go.
                 </p>
               </div>
             </div>
@@ -168,7 +165,7 @@ export default function PremiumHeadshotsPage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl md:text-5xl font-bold text-center text-[var(--color-text-dark)] mb-16">
-                Our Guided Headshot Process
+                How I Work With You
               </h2>
             </SectionReveal>
 
@@ -182,7 +179,7 @@ export default function PremiumHeadshotsPage() {
                     Pre-Session Consultation
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    We discuss your professional goals, the images you need, and offer wardrobe guidance. If you're camera-shy or uncertain, we'll walk you through what to expect so you arrive confident and prepared.
+                    I start by learning about your professional goals and the images you need, and I'll walk you through wardrobe guidance. If you're camera-shy or unsure what to expect, we'll cover all of it before you arrive.
                   </p>
                 </div>
               </SectionReveal>
@@ -196,7 +193,7 @@ export default function PremiumHeadshotsPage() {
                     Coached Studio Session
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    You're not on your own. We coach you through posing, expression, angles, and confidence. See your photos in real-time, provide feedback, and adjust on the fly. Unlimited time, unlimited wardrobe changes.
+                    You're never on your own. I coach you through posing, expression, and angles the entire time. We review photos together as we shoot, adjust on the fly, and keep going until we have something you love.
                   </p>
                 </div>
               </SectionReveal>
@@ -210,7 +207,7 @@ export default function PremiumHeadshotsPage() {
                     Selection & Fast Delivery
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    We review your session together and help you select your best images. Only pay for the photos you love. Professionally edited images delivered within 48 hours, ready for LinkedIn and your website.
+                    I sit with you to review and select your best images — you only pay for the ones you love. Professionally edited and delivered within 48 hours, ready for LinkedIn, your website, and anywhere else you need them.
                   </p>
                 </div>
               </SectionReveal>
@@ -399,7 +396,7 @@ export default function PremiumHeadshotsPage() {
 
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
-                { title: 'Guided Session - Unlimited Time', desc: 'Work with our professional photographers throughout your entire session. We guide you through posing, expression, and confidence so you look and feel your absolute best.' },
+                { title: 'Guided Session - Unlimited Time', desc: 'I work with you through your entire session — coaching posing, expression, and confidence in real-time so you look and feel your absolute best.' },
                 { title: 'Unlimited Wardrobe Changes', desc: "Bring multiple outfits and change as many times as you'd like. We'll help you select the best looks for your professional brand." },
                 { title: 'Real-Time Image Review', desc: "See your photos as we shoot them. We review images together in real-time and adjust on the fly so you know exactly what's working." },
                 { title: 'Guided Image Selection', desc: 'We sit down together and help you select your best images. You choose only the photos you love—no filler, no pressure.' },
@@ -435,7 +432,12 @@ export default function PremiumHeadshotsPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">What Clients Say</h2>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Imagine Updating Your LinkedIn Tomorrow</h2>
+                <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
+                  A headshot that finally looks like you — confident, approachable, professional. One that makes you proud to share it. Here&apos;s what that experience looks like for clients who&apos;ve been through it.
+                </p>
+              </div>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-6">
               <SectionReveal>
