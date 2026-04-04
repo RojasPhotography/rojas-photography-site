@@ -129,16 +129,16 @@ export default function CommercialPhotographyPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">We Create Brand Imagery That&apos;s Authentically Yours</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">I Know How Frustrating Generic Imagery Can Be</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  <strong>We understand the frustration of generic stock photos.</strong> Your brand is unique—your imagery should be too. That&apos;s exactly why we specialize in custom commercial photography that tells your specific story.
+                  You&apos;ve built something real — a product, a space, a brand with its own personality — and stock photos don&apos;t come close to showing it. I&apos;ve heard this from nearly every commercial client I work with. The imagery they have doesn&apos;t match the quality of what they actually do.
+                </p>
+                <p className="font-semibold text-[var(--color-text-dark)]">
+                  I&apos;m Alfonso Rojas. With 15+ years in corporate environments, I understand business context and brand positioning — not just how to operate a camera. I&apos;ve photographed businesses across the Central Valley, from healthcare organizations and law firms to manufacturing companies and retailers, and I bring that business understanding to every shoot.
                 </p>
                 <p>
-                  <strong>We&apos;ve photographed countless businesses across Modesto and the Central Valley</strong>—from healthcare organizations and law firms to tech startups and manufacturing companies. We bring 15+ years of corporate experience, which means we understand business context, brand positioning, and what actually converts customers.
-                </p>
-                <p>
-                  We don&apos;t just shoot photos. We create visual storytelling that differentiates your brand, connects with your audience, and strengthens your marketing—whether you need product photography, architectural shots, lifestyle imagery, or a complete brand photography library.
+                  I don&apos;t just shoot photos. I work with you to understand what your brand needs to communicate — and then I build imagery around that, whether it&apos;s product photography, architectural shots, lifestyle imagery, or a complete brand library.
                 </p>
               </div>
             </SectionReveal>
@@ -149,7 +149,7 @@ export default function CommercialPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Our Commercial Photography Process</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">How I Work With You</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-8">
               <SectionReveal>
@@ -157,7 +157,7 @@ export default function CommercialPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">01</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Project Discovery</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    We start with a detailed conversation about your brand vision, target audience, marketing goals, and the message you want to communicate. We review your brand guidelines, visual style preferences, and specific deliverable needs—whether you need product shots, architectural photography, team photos, or lifestyle imagery.
+                    I start with a detailed conversation about your brand vision, target audience, and what you need the imagery to communicate. I review your brand guidelines, visual preferences, and deliverable needs before we ever pick up a camera.
                   </p>
                 </div>
               </SectionReveal>
@@ -166,7 +166,7 @@ export default function CommercialPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">02</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Execution</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    We bring professional equipment, lighting, and expertise to your location (or studio). We direct every shot with intention—ensuring your products look compelling, your spaces feel inviting, and your brand story comes through authentically. We capture what makes your business unique, not generic templates.
+                    I bring professional equipment and lighting to your location. I direct every shot with intention — your products look compelling, your spaces feel inviting, and your brand story comes through authentically, not like a generic template.
                   </p>
                 </div>
               </SectionReveal>
@@ -175,7 +175,7 @@ export default function CommercialPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">03</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Editing & Delivery</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    Your images are professionally edited, color-corrected for brand consistency, and delivered within 48-72 hours. Every image is ready for immediate use on your website, social media, marketing materials, and advertising. You get authentic brand photography that differentiates you—not stock photo mediocrity.
+                    Your images are professionally edited, color-corrected for brand consistency, and delivered within 48-72 hours — ready for immediate use on your website, social media, and marketing materials. Authentic imagery that differentiates you, not stock photo mediocrity.
                   </p>
                 </div>
               </SectionReveal>
@@ -264,7 +264,7 @@ export default function CommercialPhotographyPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What We Offer</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What I Offer</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
@@ -317,14 +317,14 @@ export default function CommercialPhotographyPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Choose Rojas Photography</h2>
+              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Work With Me</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: 'Corporate Experience', desc: 'We understand business. 15+ years in corporate environments means we know what works.' },
-                { title: 'Professional Equipment & Expertise', desc: 'Cutting-edge cameras, professional lighting, and expert direction ensure standout commercial images.' },
-                { title: 'Fast Turnaround', desc: 'Professional images delivered within 48-72 hours without compromising quality.' },
-                { title: 'Local Central Valley Team', desc: 'Based in Modesto, serving Stockton, Fresno, Turlock, and beyond.' },
+                { title: 'Corporate Experience', desc: '15+ years in corporate environments means I understand your brand context, not just how to operate a camera.' },
+                { title: 'Professional Equipment', desc: 'Professional lighting, cameras, and expert direction — every shot is intentional.' },
+                { title: 'Fast Turnaround', desc: 'Images delivered within 48-72 hours without compromising quality.' },
+                { title: 'Local to the Central Valley', desc: 'Based in Modesto, serving Stockton, Fresno, Turlock, and beyond.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
                   <div className="flex gap-4">
@@ -344,7 +344,12 @@ export default function CommercialPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">What Clients Say</h2>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Imagine Opening Your Website and Finally Feeling Proud of It</h2>
+                <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
+                  Imagery that actually looks like your business. Photos you want to put in front of clients. A brand presence that reflects the quality of what you do. Here&apos;s what that experience looks like.
+                </p>
+              </div>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-6">
               <SectionReveal>

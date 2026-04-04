@@ -134,16 +134,16 @@ export default function EventPhotographyPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Reliable Event Photography You Can Count On</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">I Understand the Pressure You&apos;re Under</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  <strong>We understand the pressure of event photography.</strong> There&apos;s no second chance to capture the keynote, the award ceremony, or the networking moments. That&apos;s exactly why we specialize in reliable, professional event coverage with fast delivery—because your event deserves documentation as professional as the event itself.
+                  You&apos;ve planned this event for months. There are sponsors to satisfy, executives to photograph, moments that cannot be missed — and you need a photographer who gets all of that without you having to manage them through it. The last thing you need is another variable to worry about on the day of.
+                </p>
+                <p className="font-semibold text-[var(--color-text-dark)]">
+                  I&apos;m Alfonso Rojas. I show up early, stay until the end, anticipate moments before they happen, and deliver professionally edited photos within 24-48 hours — every single time. Organizations like Comcast, Save Mart, the California Lawyers Association, and Valley First Credit Union trust me with their events because reliability isn&apos;t something I negotiate on.
                 </p>
                 <p>
-                  <strong>We&apos;ve covered 500+ corporate events across Modesto and the Central Valley</strong>—from intimate executive dinners to 1,000+ person conferences. Organizations like Comcast, Save Mart, California Lawyers Association, and Valley First Credit Union trust us because we show up early, stay until the end, and deliver professionally edited photos within 24-48 hours. <em>Every single time.</em>
-                </p>
-                <p>
-                  We don&apos;t just "take photos"—we anticipate moments, capture candid connections, coordinate with your event timeline, and deliver complete coverage so you have marketing assets, social media content, and sponsor documentation ready immediately.
+                  I don&apos;t just take photos — I coordinate with your event timeline, capture the candid connections alongside the formal moments, and make sure you walk away with complete coverage and marketing-ready assets, not just a folder of snapshots.
                 </p>
               </div>
             </SectionReveal>
@@ -154,7 +154,7 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Our Event Photography Process</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">How I Approach Your Event</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-8">
               <SectionReveal>
@@ -162,7 +162,7 @@ export default function EventPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">01</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Pre-Event Planning</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    We discuss your event schedule, key moments to prioritize, important people to photograph, sponsor requirements, and photography goals. We coordinate with your event planner or AV team to ensure seamless integration. Based on your event scope, we can deploy multiple photographers for complete coverage.
+                    I review your event schedule, key moments to prioritize, important people to photograph, and sponsor requirements. I coordinate with your event planner or AV team directly so nothing falls through the cracks on the day of.
                   </p>
                 </div>
               </SectionReveal>
@@ -171,7 +171,7 @@ export default function EventPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">02</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Coverage</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    We arrive early to scout lighting and key locations. Throughout your event, we capture candid moments, posed group photos, speaker presentations, attendee networking, sponsor activations, and all key moments. Professional, unobtrusive coverage that doesn&apos;t disrupt the experience—we blend in while capturing everything.
+                    I arrive early to scout lighting and key locations. Throughout the event, I capture candid moments, posed group photos, speaker presentations, networking, and sponsor activations — unobtrusively, without disrupting the experience.
                   </p>
                 </div>
               </SectionReveal>
@@ -180,7 +180,7 @@ export default function EventPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">03</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Rapid Delivery</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    Photos professionally edited, color-corrected, and delivered within 24-48 hours via secure online private gallery. Attendees can view, download, and share immediately. Perfect for real-time social media updates, event follow-up, and sponsor deliverables. You get complete coverage while the event is still fresh.
+                    Photos edited, color-corrected, and delivered within 24-48 hours via a private gallery. Attendees can download and share immediately. Your sponsors get their deliverables, your social media gets content, and you get everything while the event is still fresh.
                   </p>
                 </div>
               </SectionReveal>
@@ -275,7 +275,7 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What We Offer</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What I Cover</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
@@ -346,14 +346,14 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Choose Rojas Photography for Your Event</h2>
+              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Event Organizers Trust Me</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: 'Corporate Event Experience', desc: "We've covered events for Comcast, Save Mart, California Lawyers Association, and dozens of Central Valley businesses." },
-                { title: 'Professional & Unobtrusive', desc: 'We blend into your event while capturing everything. Professional photographers who understand not to interrupt the experience.' },
-                { title: 'Fast Turnaround', desc: 'Event photos delivered within 24-48 hours. Perfect for real-time social media updates and event follow-up.' },
-                { title: 'Local Central Valley Service', desc: 'Based in Modesto, serving Stockton, Fresno, Turlock, and beyond.' },
+                { title: 'Proven Track Record', desc: "I've covered events for Comcast, Save Mart, the California Lawyers Association, and dozens of Central Valley organizations." },
+                { title: 'Professional & Unobtrusive', desc: 'I blend into the event while capturing everything — you and your guests won\'t feel like you\'re being photographed.' },
+                { title: 'Fast Delivery', desc: 'Event photos delivered within 24-48 hours — ready for social media, sponsors, and follow-up while the event is still top of mind.' },
+                { title: 'Local to the Central Valley', desc: 'Based in Modesto, serving Stockton, Fresno, Turlock, the Bay Area, and beyond.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
                   <div className="flex gap-4">
@@ -373,7 +373,12 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">What Event Organizers Say</h2>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Imagine Leaving Your Event With Everything You Need</h2>
+                <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
+                  Sponsor deliverables handled. Social media content ready. A gallery of professional photos that make the event look as good as it actually was. Here&apos;s what event organizers say about working with me.
+                </p>
+              </div>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-6">
               <SectionReveal>
