@@ -117,17 +117,17 @@ export default function HomePage() {
           <SectionReveal>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
-                Corporate Photography & Video Production in Modesto
+                I Know What It Feels Like to Be Undersold
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
+                <p>
+                  You've put years into building something real — a team, a reputation, a standard of work you're proud of. And then someone visits your website or finds your LinkedIn and the imagery doesn't come close to reflecting any of it. That gap is frustrating. I get it.
+                </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  Here's what makes us different: We're not just photographers—we're visual storytelling partners.
+                  I'm Alfonso Rojas. With 15+ years in corporate leadership before picking up a camera, I understand business from the inside — which means I know how to translate what you've built into imagery that actually shows it.
                 </p>
                 <p>
-                  With 15+ years in corporate leadership, we understand business from the inside. We take time to understand your organization's story, collaborate closely to ensure your imagery and video content reflects who you really are, and bring a strategic perspective beyond just artistic execution.
-                </p>
-                <p>
-                  We've worked with professionals across the Central Valley—from <Link href="/premium-headshots" className="text-[var(--color-primary)] hover:underline">executive headshots</Link> to <Link href="/on-site-photography" className="text-[var(--color-primary)] hover:underline">on-site team photography</Link>, <Link href="/commercial" className="text-[var(--color-primary)] hover:underline">commercial imagery</Link>, and <Link href="/video" className="text-[var(--color-primary)] hover:underline">video production</Link>—helping organizations tell their story visually. Not as vendors, but as trusted partners who care about getting it right.
+                  I've helped 500+ professionals across the Central Valley — from <Link href="/premium-headshots" className="text-[var(--color-primary)] hover:underline">executive headshots</Link> to <Link href="/on-site-photography" className="text-[var(--color-primary)] hover:underline">on-site team photography</Link>, <Link href="/commercial" className="text-[var(--color-primary)] hover:underline">commercial imagery</Link>, and <Link href="/video" className="text-[var(--color-primary)] hover:underline">video production</Link> — create visuals they're genuinely proud to put in front of clients. Not as a vendor. As a partner who cares about getting it right.
                 </p>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl md:text-5xl font-bold text-center text-[var(--color-text-dark)] mb-16">
-                Our Collaborative Storytelling Process
+                How I Work With You
               </h2>
             </SectionReveal>
 
@@ -155,7 +155,7 @@ export default function HomePage() {
                     Discovery & Story Development
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    We have a real conversation about your organization—your values, your people, your story. This collaborative planning session helps us understand what you need your imagery and video to communicate.
+                    We start with a real conversation about your organization — your values, your people, your story. I need to understand what you need your imagery to communicate before I pick up a camera.
                   </p>
                 </div>
               </SectionReveal>
@@ -169,7 +169,7 @@ export default function HomePage() {
                     Collaborative Creation
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    You're not just a subject—you're a partner. We work together to capture authentic moments that tell your story, whether through photography or video content that reflects your brand values.
+                    You're not just a subject — you're a collaborator. I work with you on set to capture authentic moments, not posed performances. The result feels like you, because it is.
                   </p>
                 </div>
               </SectionReveal>
@@ -183,7 +183,7 @@ export default function HomePage() {
                     Story-Driven Delivery
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    Receive polished imagery and video content that authentically tells your story (24-48 hours for photos, 2-4 weeks for video)—ready for your website, LinkedIn, and all marketing materials.
+                    You receive polished, professional imagery you're proud to put in front of anyone — delivered within 24-48 hours for photos, 2-4 weeks for video — ready for your website, LinkedIn, and every marketing touchpoint.
                   </p>
                 </div>
               </SectionReveal>
@@ -196,7 +196,7 @@ export default function HomePage() {
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
               <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                Don't let generic imagery tell your story wrong.
+                You&apos;ve worked too hard to be undersold by a photo.
               </p>
               <Link
                 href="/discovery-call"
@@ -214,10 +214,10 @@ export default function HomePage() {
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
-                  How We Help Tell Your Story
+                  How I Can Help
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  Visual storytelling solutions for businesses across Modesto and the Central Valley
+                  Photography and video for professionals across Modesto and the Central Valley
                 </p>
               </div>
             </SectionReveal>
@@ -531,17 +531,17 @@ export default function HomePage() {
           <div className="max-w-4xl mx-auto text-center">
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
-                When Your Story Isn't Told Visually, You Lose Connection
+                Outdated Imagery Costs You More Than You Think
               </h2>
               <div className="text-lg text-[var(--color-text-body)] leading-relaxed space-y-4">
                 <p>
-                  Without authentic visual storytelling, your audience sees generic imagery that doesn't connect emotionally. Potential clients can't see the real people and values behind your business. Your marketing feels transactional instead of relational.
+                  Every time a prospect visits your website or finds your LinkedIn, they're making a judgment call. If your photos don't reflect the quality of your work, they move on — and you never know it happened.
                 </p>
                 <p>
-                  You look like everyone else—no story, no differentiation. The culture and values you've built remain invisible to those who need to see them.
+                  Generic imagery makes you look like everyone else. It undermines trust before you ever get a chance to speak. And the longer you wait, the more opportunities quietly walk past you.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  Your organization has worked too hard building your story to let mediocre imagery tell it wrong.
+                  You've worked too hard to be undersold by a photo.
                 </p>
               </div>
             </SectionReveal>
@@ -606,8 +606,11 @@ export default function HomePage() {
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
-                  What Clients Say
+                  Imagine Sharing Imagery You&apos;re Actually Proud Of
                 </h2>
+                <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
+                  A headshot that finally looks like you. A team photo that shows your culture. Brand imagery that makes the right people take notice. That&apos;s what working together looks like — here&apos;s what clients say.
+                </p>
               </div>
             </SectionReveal>
 
