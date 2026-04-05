@@ -15,6 +15,7 @@ export default function ContactFormEmbed() {
       {isMounted && (
         <iframe
           name="lc_contact_form"
+          title="Contact and quote request form"
           frameBorder={0}
           width="100%"
           height="600"

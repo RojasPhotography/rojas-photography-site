@@ -41,6 +41,7 @@ export default function FAQSection({ faqs, heading = 'Frequently Asked Questions
                   </h3>
                   <ChevronDown
                     size={20}
+                    aria-hidden="true"
                     className={`flex-shrink-0 text-[var(--color-primary)] transition-transform duration-300 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}

@@ -294,6 +294,14 @@ export default function FresnoHeadshotsPage() {
                     href: '/event-photography',
                     cta: 'Learn More',
                   },
+                  {
+                    icon: Camera,
+                    title: 'Headshot Booth',
+                    desc: 'I set up a professional headshot station at your Fresno event, Fresno State campus, hospital, or office. High-volume, polished, and priced by the hour.',
+                    price: 'Priced by the hour',
+                    href: '/headshot-booth',
+                    cta: 'Learn More',
+                  },
                 ].map((service) => (
                   <SectionReveal key={service.title}>
                     <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 flex flex-col h-full border border-gray-100 hover:border-[var(--color-primary)] transition-colors duration-300">
@@ -330,7 +338,7 @@ export default function FresnoHeadshotsPage() {
               <SectionReveal>
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Why Fresno Professionals Choose Rojas Photography
+                    Why Fresno Professionals Choose Me
                   </h2>
                 </div>
               </SectionReveal>
@@ -338,20 +346,20 @@ export default function FresnoHeadshotsPage() {
               <div className="grid md:grid-cols-2 gap-10">
                 {[
                   {
-                    title: 'We Understand Fresno\'s Diverse Professional Community',
-                    desc: 'From Fresno State faculty needing academic headshots to Community Regional and Saint Agnes Medical Center healthcare professionals, agricultural business leaders building their brands, and legal professionals requiring authoritative imagery — we understand the unique needs of Fresno\'s varied professional sectors. Our experience across industries shows in every session.',
+                    title: 'I Understand Fresno\'s Diverse Professional Community',
+                    desc: 'From Fresno State faculty needing academic headshots to Community Regional and Saint Agnes Medical Center healthcare professionals, agricultural business leaders building their brands, and legal professionals requiring authoritative imagery — I understand the unique needs of Fresno\'s varied professional sectors. My experience across industries shows in every session.',
                   },
                   {
-                    title: 'Premium Studio or On-Site at Your Fresno Location',
-                    desc: 'Our professional studio in Modesto offers premium lighting and environment for executive headshots (90 minutes from Fresno). For teams, we bring our full studio to your Fresno State campus, Community Regional, Saint Agnes, law firm, agricultural business, or corporate office — efficient, professional team photography without disrupting your operations.',
+                    title: 'Premium Studio or I Come to Your Fresno Location',
+                    desc: 'My professional studio in Modesto offers premium lighting and environment for executive headshots (90 minutes from Fresno). For teams, I bring my full studio to your Fresno State campus, Community Regional, Saint Agnes, law firm, agricultural business, or corporate office — efficient, professional team photography without disrupting your operations.',
                   },
                   {
                     title: 'Corporate Leadership Experience Across Industries',
-                    desc: 'Alfonso\'s 15+ years of corporate leadership experience means we understand professional branding across healthcare, academia, legal, agricultural, and corporate sectors. We have photographed 500+ executives and professionals. Whether you need academic credibility, healthcare professionalism, legal authority, or executive presence — we deliver.',
+                    desc: 'I\'m Alfonso Rojas, and my 15+ years of corporate leadership experience means I understand professional branding across healthcare, academia, legal, agricultural, and corporate sectors. I\'ve photographed 500+ executives and professionals. Whether you need academic credibility, healthcare professionalism, legal authority, or executive presence — I deliver.',
                   },
                   {
                     title: 'Fast Turnaround for Central Valley\'s Largest City',
-                    desc: 'Fresno professionals work on demanding timelines. Most clients receive professionally edited headshots within 48 hours. On-site team photography delivers in 24 hours. New faculty directory? Hospital website update? Firm expansion? Agricultural business launch? We deliver professional imagery when you need it.',
+                    desc: 'Fresno professionals work on demanding timelines. Most clients receive professionally edited headshots within 48 hours. On-site team photography delivers in 24 hours. New faculty directory? Hospital website update? Firm expansion? Agricultural business launch? I deliver professional imagery when you need it.',
                   },
                 ].map((item) => (
                   <SectionReveal key={item.title}>
@@ -381,7 +389,7 @@ export default function FresnoHeadshotsPage() {
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">
-                  Our Work
+                  My Work
                 </h2>
               </SectionReveal>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -404,6 +412,20 @@ export default function FresnoHeadshotsPage() {
                   </SectionReveal>
                 ))}
               </div>
+            </div>
+          </section>
+
+          {/* SB7: Success Vision */}
+          <section className="py-20 px-8 bg-white">
+            <div className="max-w-4xl mx-auto text-center">
+              <SectionReveal>
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
+                  Imagine Sharing Imagery You&apos;re Actually Proud to Put in Your Directory or on Your Website
+                </h2>
+                <p className="text-lg text-[var(--color-text-body)] leading-relaxed max-w-2xl mx-auto">
+                  Imagine a headshot that communicates your expertise before anyone reads your bio. Whether you&apos;re a Fresno State professor, a physician at Community Regional, or a business executive — I deliver imagery that reflects the professional you&apos;ve worked hard to become.
+                </p>
+              </SectionReveal>
             </div>
           </section>
 
@@ -447,27 +469,27 @@ export default function FresnoHeadshotsPage() {
               {
                 question: 'Do you offer professional headshots in Fresno, CA?',
                 answer:
-                  'Yes! We serve Fresno professionals including Fresno State faculty and staff, Community Regional Medical Center and Saint Agnes Medical Center healthcare workers, legal professionals, agricultural business leaders, and corporate executives across Fresno County and the Central Valley. We offer both in-studio sessions at our Modesto studio (90 minutes from Fresno) and on-site photography at your Fresno office, campus, hospital, or business location.',
+                  'Yes! I serve Fresno professionals including Fresno State faculty and staff, Community Regional Medical Center and Saint Agnes Medical Center healthcare workers, legal professionals, agricultural business leaders, and corporate executives across Fresno County and the Central Valley. I offer both in-studio sessions at my Modesto studio (90 minutes from Fresno) and on-site photography at your Fresno office, campus, hospital, or business location.',
               },
               {
                 question: 'How far is your studio from Fresno?',
                 answer:
-                  'Our professional studio is in Modesto, approximately 90 minutes from Fresno via Highway 99. Many Fresno professionals value the drive for our premium studio environment, professional lighting, and executive-level results. For teams or organizations preferring on-site service, we bring our full studio to your Fresno location — Fresno State campus, Community Regional, Saint Agnes, your law firm, or business office. A travel fee applies for on-site visits.',
+                  'My professional studio is in Modesto, approximately 90 minutes from Fresno via Highway 99. Many Fresno professionals value the drive for my premium studio environment, professional lighting, and executive-level results. For teams or organizations preferring on-site service, I bring my full studio to your Fresno location — Fresno State campus, Community Regional, Saint Agnes, your law firm, or business office. A travel fee applies for on-site visits.',
               },
               {
                 question: 'What do Fresno headshot sessions cost?',
                 answer:
-                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Fresno healthcare teams, university departments, law firms, or agricultural businesses needing on-site photography, we provide customized pricing based on your team size and requirements. Contact us for a personalized quote.',
+                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Fresno healthcare teams, university departments, law firms, or agricultural businesses needing on-site photography, I provide customized pricing based on your team size and requirements. Contact me for a personalized quote.',
               },
               {
                 question: 'Do you work with Fresno State faculty and healthcare professionals?',
                 answer:
-                  'Absolutely! We regularly serve Fresno State faculty, administrators, and researchers who need professional headshots for university websites, academic profiles, grant applications, and conference materials. We also work with Community Regional Medical Center and Saint Agnes Medical Center physicians, nurses, administrators, and healthcare professionals who need credible, professional headshots for hospital websites, medical directories, and professional profiles. We understand both academic and healthcare professional imagery needs.',
+                  'Absolutely! I regularly serve Fresno State faculty, administrators, and researchers who need professional headshots for university websites, academic profiles, grant applications, and conference materials. I also work with Community Regional Medical Center and Saint Agnes Medical Center physicians, nurses, administrators, and healthcare professionals who need credible, professional headshots for hospital websites, medical directories, and professional profiles. I understand both academic and healthcare professional imagery needs.',
               },
               {
                 question: 'Why do Fresno professionals choose Rojas Photography?',
                 answer:
-                  'Fresno professionals choose Rojas Photography because we understand the Central Valley business, academic, healthcare, and agricultural communities. With 15+ years of corporate leadership experience and 500+ executives photographed, we bring professionalism and expertise to every session. Our guided approach eliminates the stress of professional photography, helping Fresno State faculty, healthcare workers, legal professionals, agricultural business leaders, and executives present themselves with confidence on LinkedIn, their websites, and all professional materials.',
+                  'Fresno professionals choose me because I understand the Central Valley business, academic, healthcare, and agricultural communities. With 15+ years of corporate leadership experience and 500+ executives photographed, I bring professionalism and expertise to every session. My guided approach eliminates the stress of professional photography, helping Fresno State faculty, healthcare workers, legal professionals, agricultural business leaders, and executives present themselves with confidence on LinkedIn, their websites, and all professional materials.',
               },
             ]}
             heading="Fresno Headshot Questions Answered"

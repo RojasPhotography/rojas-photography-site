@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Camera, Users, Briefcase, Video, Calendar } from 'lucide-react';
+import { Camera, Users, Briefcase, Video, Calendar, Aperture } from 'lucide-react';
 import HeroSection from './components/HeroSection';
 import SectionReveal from './components/SectionReveal';
 import TestimonialCard from './components/TestimonialCard';
 import CTASection from './components/CTASection';
 import SchemaScript from './components/SchemaScript';
 import NewsletterSignup from './components/NewsletterSignup';
-import { generateLocalBusinessSchema } from './lib/schema';
+import { generateLocalBusinessSchema, generateWebSiteSchema, generatePersonSchema, generateFAQSchema } from './lib/schema';
+import FAQSection from './components/FAQSection';
 
 export const metadata: Metadata = {
   title: 'Corporate Photography Modesto CA | Professional Headshots & Video',
@@ -44,6 +45,36 @@ export default function HomePage() {
   return (
     <>
       <SchemaScript schema={generateLocalBusinessSchema()} />
+      <SchemaScript schema={generateWebSiteSchema()} />
+      {generatePersonSchema().map((person, i) => (
+        <SchemaScript key={i} schema={person} />
+      ))}
+      <SchemaScript schema={generateFAQSchema([
+        {
+          question: 'Who is Alfonso Rojas?',
+          answer: 'Alfonso Rojas is the founder and lead photographer of Rojas Photography, based in Modesto, CA. He has 15+ years of corporate leadership experience and is FAA Part 107 certified for drone operations. He has photographed 500+ executives and professionals across the Central Valley and holds 60+ five-star Google reviews.',
+        },
+        {
+          question: 'What is Rojas Photography?',
+          answer: 'Rojas Photography is a professional corporate photography and video studio based in Modesto, CA, founded and operated by Alfonso Rojas. Services include executive headshots, on-site team photography, headshot booth events, commercial photography, video production, and corporate event coverage throughout the Central Valley.',
+        },
+        {
+          question: 'Where is Rojas Photography located?',
+          answer: 'Rojas Photography is located in Modesto, CA 95350, in the heart of the Central Valley. The studio serves clients in Modesto, Stockton, Turlock, Fresno, Sacramento, Merced, and throughout Central Valley California. On-site photography is available at client locations throughout California.',
+        },
+        {
+          question: 'How much does a professional headshot cost in Modesto, CA?',
+          answer: 'A professional headshot session at Rojas Photography in Modesto costs $150 for the session fee, plus $150 per image selected. There is no minimum number of images to purchase — you only pay for the photos you love. For on-site team photography and headshot booth events, pricing is customized based on team size and scope.',
+        },
+        {
+          question: 'What areas does Rojas Photography serve in California?',
+          answer: 'Rojas Photography is based in Modesto, CA and serves the entire Central Valley including Stockton, Turlock, Fresno, Sacramento, Merced, Ceres, Riverbank, Oakdale, Tracy, Manteca, Lodi, and Clovis. On-site photography is available throughout California.',
+        },
+        {
+          question: 'Does Rojas Photography offer on-site headshots for businesses?',
+          answer: 'Yes. Alfonso Rojas brings a complete professional studio setup — lighting, backdrop, and camera equipment — directly to your office, medical facility, law firm, or business. On-site photography is priced per person and is ideal for contracted team headshots. For high-volume events, a headshot booth service is also available, priced by the hour.',
+        },
+      ])} />
       <div className="min-h-screen bg-white">
       {/* Hero Section - SB7: A Character */}
       <HeroSection
@@ -77,6 +108,7 @@ export default function HomePage() {
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -225,7 +257,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Premium Headshots */}
               <SectionReveal>
-                <Link href="/premium-headshots" className="block group">
+                <Link href="/premium-headshots" aria-label="Learn more about Premium Headshots" className="block group">
                   <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
                     {/* Background Image */}
                     <Image
@@ -245,7 +277,7 @@ export default function HomePage() {
                         Premium Headshots
                       </h3>
                       <p className="text-white/90 mb-4 leading-relaxed">
-                        Headshots that tell the story of who your team really is. We collaborate to capture authentic portraits that show personality and professionalism—not stiff, corporate photos.
+                        Headshots that tell the story of who you really are. I guide you through the session to capture authentic portraits that show personality and professionalism—not stiff, corporate photos.
                       </p>
                       <span className="text-white font-semibold group-hover:underline">
                         Learn More →
@@ -257,7 +289,7 @@ export default function HomePage() {
 
               {/* On-Site Photography */}
               <SectionReveal>
-                <Link href="/on-site-photography" className="block group">
+                <Link href="/on-site-photography" aria-label="Learn more about On-Site Photography" className="block group">
                   <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
                     {/* Background Image */}
                     <Image
@@ -277,7 +309,36 @@ export default function HomePage() {
                         On-Site Photography
                       </h3>
                       <p className="text-white/90 mb-4 leading-relaxed">
-                        We come to your organization, understand your culture, and create team imagery that tells your story authentically. Not just a lineup of faces—a visual narrative of your people.
+                        I come to your organization, understand your culture, and create team imagery that tells your story authentically. Not just a lineup of faces—a visual narrative of your people.
+                      </p>
+                      <span className="text-white font-semibold group-hover:underline">
+                        Learn More →
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </SectionReveal>
+
+              {/* Headshot Booth */}
+              <SectionReveal>
+                <Link href="/headshot-booth" aria-label="Learn more about Headshot Booth" className="block group">
+                  <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                    <Image
+                      src="/images/kaiser-bts-headshots1.jpeg"
+                      alt="Headshot Booth - High-volume event headshots"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
+                    <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                      <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                        <Aperture className="text-white" size={28} />
+                      </div>
+                      <h3 className="text-2xl font-bold text-white mb-3">
+                        Headshot Booth
+                      </h3>
+                      <p className="text-white/90 mb-4 leading-relaxed">
+                        I set up a professional headshot station at your event or office. High-volume, fast-moving, and polished — every attendee walks away with a photo they&apos;re proud to use.
                       </p>
                       <span className="text-white font-semibold group-hover:underline">
                         Learn More →
@@ -289,7 +350,7 @@ export default function HomePage() {
 
               {/* Commercial Photography */}
               <SectionReveal>
-                <Link href="/commercial" className="block group">
+                <Link href="/commercial" aria-label="Learn more about Commercial Photography" className="block group">
                   <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
                     {/* Background Image */}
                     <Image
@@ -309,7 +370,7 @@ export default function HomePage() {
                         Commercial Photography
                       </h3>
                       <p className="text-white/90 mb-4 leading-relaxed">
-                        Brand imagery that tells your story to customers. We collaborate to understand your values and create visuals that communicate them authentically—products, spaces, and people.
+                        Brand imagery that tells your story to customers. I collaborate to understand your values and create visuals that communicate them authentically—products, spaces, and people.
                       </p>
                       <span className="text-white font-semibold group-hover:underline">
                         Learn More →
@@ -321,7 +382,7 @@ export default function HomePage() {
 
               {/* Video Production */}
               <SectionReveal>
-                <Link href="/video" className="block group">
+                <Link href="/video" aria-label="Learn more about Video Production" className="block group">
                   <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
                     {/* Background Image */}
                     <Image
@@ -341,7 +402,7 @@ export default function HomePage() {
                         Video Production
                       </h3>
                       <p className="text-white/90 mb-4 leading-relaxed">
-                        Your story deserves motion. We partner with you to create video content that connects emotionally—brand stories, testimonials, culture videos, and aerial footage that feels authentic, not scripted.
+                        Your story deserves motion. I partner with you to create video content that connects emotionally—brand stories, testimonials, culture videos, and aerial footage that feels authentic, not scripted.
                       </p>
                       <span className="text-white font-semibold group-hover:underline">
                         Learn More →
@@ -353,7 +414,7 @@ export default function HomePage() {
 
               {/* Event Photography */}
               <SectionReveal>
-                <Link href="/event-photography" className="block group">
+                <Link href="/event-photography" aria-label="Learn more about Event Photography" className="block group">
                   <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
                     {/* Background Image */}
                     <Image
@@ -373,7 +434,7 @@ export default function HomePage() {
                         Event Photography
                       </h3>
                       <p className="text-white/90 mb-4 leading-relaxed">
-                        We don't just document your events—we capture the story. The moments, connections, and culture. Your event has a narrative; we tell it through photos and video.
+                        I don't just document your events—I capture the story. The moments, connections, and culture. Your event has a narrative; I tell it through photos and video.
                       </p>
                       <span className="text-white font-semibold group-hover:underline">
                         Learn More →
@@ -392,10 +453,10 @@ export default function HomePage() {
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
-                  Our Work
+                  My Work
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  Visual storytelling for businesses across the Central Valley—photography and video that tells your story authentically
+                  Visual storytelling for businesses across the Central Valley — photography and video that reflects the quality of who you are
                 </p>
               </div>
             </SectionReveal>
@@ -556,7 +617,7 @@ export default function HomePage() {
                 Ready to Tell Your Story Visually?
               </h2>
               <p className="text-lg mb-8 text-white/90">
-                Schedule a free discovery call. We'll discuss your organization's story, show you examples of our work, and create a custom plan. Zero pressure. Zero obligation.
+                Schedule a free discovery call. I'll discuss your goals, show you examples of my work, and put together a custom plan. Zero pressure. Zero obligation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -648,7 +709,7 @@ export default function HomePage() {
                 Your Story Deserves to Be Told Authentically
               </h2>
               <p className="text-[var(--color-text-body)] mb-6">
-                Join hundreds of Central Valley professionals and organizations who've partnered with us to tell their story visually. Your authentic narrative is one conversation away.
+                Join hundreds of Central Valley professionals who've trusted me to tell their story visually. Your authentic narrative is one conversation away.
               </p>
               <Link
                 href="/discovery-call"
@@ -703,7 +764,7 @@ export default function HomePage() {
                 <div className="text-center">
                   <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">FAA</div>
                   <p className="text-[var(--color-text-dark)] font-semibold mb-2">Part 107 Certified</p>
-                  <p className="text-sm text-[var(--color-text-body)]">Licensed drone pilots</p>
+                  <p className="text-sm text-[var(--color-text-body)]">Licensed drone operator</p>
                 </div>
               </SectionReveal>
             </div>
@@ -711,7 +772,7 @@ export default function HomePage() {
             <SectionReveal>
               <div className="mt-16 p-8 bg-[var(--color-bg-warm)] rounded-xl text-center">
                 <p className="text-lg text-[var(--color-text-body)] leading-relaxed">
-                  We partner with businesses across Modesto, Stockton, Fresno, Turlock, Merced, Sacramento, and the East Bay—helping organizations tell their story through professional photography and video content you can trust.
+                  I partner with businesses across Modesto, Stockton, Fresno, Turlock, Merced, Sacramento, and the East Bay — helping organizations tell their story through professional photography and video content you can trust.
                 </p>
               </div>
             </SectionReveal>
@@ -739,16 +800,16 @@ export default function HomePage() {
                     Meet Alfonso & Niomi
                   </h2>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
-                    With 15+ years in corporate leadership, we understand what businesses need. We've partnered with professionals across the Central Valley to create authentic photography and video content that tells their story and builds credibility.
+                    With 15+ years in corporate leadership, I understand what businesses need. I've partnered with professionals across the Central Valley to create authentic photography and video content that tells their story and builds credibility.
                   </p>
                   <p className="text-[var(--color-text-body)] leading-relaxed mb-8">
-                    Visual storytelling isn't about being &ldquo;photogenic.&rdquo; It's about presenting your authentic organizational story with confidence—through imagery and video that connects.
+                    Visual storytelling isn't about being &ldquo;photogenic.&rdquo; It's about presenting your authentic story with confidence — through imagery and video that connects.
                   </p>
                   <Link
                     href="/about-rojas-photography"
                     className="btn-outline px-8 py-3 font-semibold rounded-full inline-block"
                   >
-                    Learn More About Us
+                    Learn More About Me
                   </Link>
                 </div>
               </SectionReveal>
@@ -764,6 +825,33 @@ export default function HomePage() {
             </SectionReveal>
           </div>
         </section>
+
+        {/* FAQ Section - AEO */}
+        <FAQSection
+          faqs={[
+            {
+              question: 'How much does a professional headshot cost in Modesto?',
+              answer: 'My studio headshot sessions are $150 for the session, plus $150 per image you select. There is no minimum — you only pay for the photos you love. For on-site team photography, I provide custom quotes based on team size. For headshot booth events, pricing is hourly.',
+            },
+            {
+              question: 'Do you travel for on-site photography outside of Modesto?',
+              answer: 'Yes. I regularly travel throughout the Central Valley — Stockton, Turlock, Fresno, Sacramento, Merced, and beyond. I bring my full professional studio setup to your office, facility, or event. A travel fee applies for locations outside the immediate Modesto area.',
+            },
+            {
+              question: 'What is the difference between a headshot booth and on-site photography?',
+              answer: 'A headshot booth is a high-volume service priced by the hour — ideal for expos, conferences, and company events where the goal is moving many people through quickly. On-site photography is a contracted, per-person service where I spend dedicated time with each individual, providing personal coaching on posing and expression. Both involve me coming to your location with professional equipment.',
+            },
+            {
+              question: 'How quickly will I receive my photos?',
+              answer: 'Studio headshot sessions are delivered to a private online gallery within 48 hours. On-site team photography typically delivers within 24 hours. For corporate events with SpotMyPhotos live delivery (full-day bookings), guests can access their photos in real time during the event.',
+            },
+            {
+              question: 'What should I wear to a headshot session?',
+              answer: 'I send every client a preparation guide before their session with specific wardrobe recommendations. Generally, solid colors and professional attire photograph best. Bring multiple outfits — sessions include unlimited wardrobe changes at no extra charge. I guide you through everything in real time so you never have to guess.',
+            },
+          ]}
+          heading="Common Questions"
+        />
 
         {/* CTA + Contact */}
         <CTASection primaryLabel="Book Your Discovery Call" />

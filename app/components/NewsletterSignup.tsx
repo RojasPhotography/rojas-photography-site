@@ -52,21 +52,30 @@ export default function NewsletterSignup() {
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid sm:grid-cols-2 gap-4">
-            <input
-              type="text"
-              placeholder="Your name (optional)"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[var(--color-text-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] bg-white"
-            />
-            <input
-              type="email"
-              placeholder="Your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[var(--color-text-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] bg-white"
-            />
+            <div>
+              <label htmlFor="newsletter-name" className="sr-only">Your name (optional)</label>
+              <input
+                id="newsletter-name"
+                type="text"
+                placeholder="Your name (optional)"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[var(--color-text-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] bg-white"
+              />
+            </div>
+            <div>
+              <label htmlFor="newsletter-email" className="sr-only">Email address (required)</label>
+              <input
+                id="newsletter-email"
+                type="email"
+                placeholder="Your email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                aria-required="true"
+                className="w-full px-4 py-3 rounded-xl border border-gray-200 text-[var(--color-text-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] bg-white"
+              />
+            </div>
           </div>
           {status === 'error' && (
             <p className="text-red-600 text-sm">{message}</p>

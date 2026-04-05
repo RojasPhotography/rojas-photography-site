@@ -294,6 +294,14 @@ export default function SacramentoHeadshotsPage() {
                     href: '/event-photography',
                     cta: 'Learn More',
                   },
+                  {
+                    icon: Camera,
+                    title: 'Headshot Booth',
+                    desc: 'I set up a professional headshot station at your Sacramento event, Capitol office, law firm, or conference. High-volume, polished, and priced by the hour.',
+                    price: 'Priced by the hour',
+                    href: '/headshot-booth',
+                    cta: 'Learn More',
+                  },
                 ].map((service) => (
                   <SectionReveal key={service.title}>
                     <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 flex flex-col h-full border border-gray-100 hover:border-[var(--color-primary)] transition-colors duration-300">
@@ -330,7 +338,7 @@ export default function SacramentoHeadshotsPage() {
               <SectionReveal>
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Why Sacramento Professionals Choose Rojas Photography
+                    Why Sacramento Professionals Choose Me
                   </h2>
                 </div>
               </SectionReveal>
@@ -338,20 +346,20 @@ export default function SacramentoHeadshotsPage() {
               <div className="grid md:grid-cols-2 gap-10">
                 {[
                   {
-                    title: 'We Understand Executive Presence and Authority',
-                    desc: 'From state legislators and government officials to legal professionals and healthcare executives — we understand that your headshot must communicate authority, expertise, and trustworthiness. Our 15+ years of corporate leadership experience shows in every session. We help you project the credibility your position demands.',
+                    title: 'I Understand Executive Presence and Authority',
+                    desc: 'From state legislators and government officials to legal professionals and healthcare executives — I understand that your headshot must communicate authority, expertise, and trustworthiness. My 15+ years of corporate leadership experience shows in every session. I help you project the credibility your position demands.',
                   },
                   {
-                    title: 'Premium Studio or Convenient On-Site Service',
-                    desc: 'Our professional studio in Modesto offers premium lighting and environment for executive headshots that stand out (90 minutes from Sacramento). For busy legislative offices, law firms, healthcare teams, or corporate groups, we bring our full studio to your Sacramento location — efficient, professional, and convenient.',
+                    title: 'Premium Studio or I Come to You',
+                    desc: 'My professional studio in Modesto offers premium lighting and environment for executive headshots that stand out (90 minutes from Sacramento). For busy legislative offices, law firms, healthcare teams, or corporate groups, I bring my full studio to your Sacramento location — efficient, professional, and convenient.',
                   },
                   {
                     title: 'Trusted by Government and Legal Professionals',
-                    desc: 'We have photographed 500+ executives and professionals across government, legal, healthcare, and business sectors. Sacramento legislators, lobbyists, attorneys, and healthcare leaders trust us because we understand the professional standards required in high-stakes fields. Your reputation matters — we deliver imagery that supports it.',
+                    desc: 'I\'ve photographed 500+ executives and professionals across government, legal, healthcare, and business sectors. Sacramento legislators, lobbyists, attorneys, and healthcare leaders trust me because I understand the professional standards required in high-stakes fields. Your reputation matters — I deliver imagery that supports it.',
                   },
                   {
                     title: 'Fast Turnaround for Busy Professionals',
-                    desc: 'Sacramento professionals work on tight deadlines. Most clients receive professionally edited headshots within 48 hours. On-site team photography delivers in 24 hours. Campaign launch? New website? Firm directory update? We deliver professional imagery when you need it, without compromising quality.',
+                    desc: 'Sacramento professionals work on tight deadlines. Most clients receive professionally edited headshots within 48 hours. On-site team photography delivers in 24 hours. Campaign launch? New website? Firm directory update? I deliver professional imagery when you need it, without compromising quality.',
                   },
                 ].map((item) => (
                   <SectionReveal key={item.title}>
@@ -381,7 +389,7 @@ export default function SacramentoHeadshotsPage() {
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">
-                  Our Work
+                  My Work
                 </h2>
               </SectionReveal>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -404,6 +412,20 @@ export default function SacramentoHeadshotsPage() {
                   </SectionReveal>
                 ))}
               </div>
+            </div>
+          </section>
+
+          {/* SB7: Success Vision */}
+          <section className="py-20 px-8 bg-white">
+            <div className="max-w-4xl mx-auto text-center">
+              <SectionReveal>
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
+                  Imagine a Profile Photo That Communicates Your Authority Before You Say a Word
+                </h2>
+                <p className="text-lg text-[var(--color-text-body)] leading-relaxed max-w-2xl mx-auto">
+                  Imagine walking into a meeting, a legislative session, or a courtroom knowing your online image already has people&apos;s trust. That&apos;s what a great headshot does — and that&apos;s exactly what I deliver for Sacramento professionals who can&apos;t afford to leave a weak first impression.
+                </p>
+              </SectionReveal>
             </div>
           </section>
 
@@ -447,27 +469,27 @@ export default function SacramentoHeadshotsPage() {
               {
                 question: 'Do you offer professional headshots in Sacramento, CA?',
                 answer:
-                  'Yes! We serve Sacramento professionals including state legislators, government officials, lobbyists, legal professionals at Capitol-area law firms, UC Davis Medical Center healthcare workers, and business executives across the Sacramento region. We offer both in-studio sessions at our Modesto studio (90 minutes from Sacramento) and on-site photography at your Sacramento office, Capitol location, hospital, or business. Government and legal professionals particularly value our professional, executive-level approach to headshots.',
+                  'Yes! I serve Sacramento professionals including state legislators, government officials, lobbyists, legal professionals at Capitol-area law firms, UC Davis Medical Center healthcare workers, and business executives across the Sacramento region. I offer both in-studio sessions at my Modesto studio (90 minutes from Sacramento) and on-site photography at your Sacramento office, Capitol location, hospital, or business. Government and legal professionals particularly value my professional, executive-level approach to headshots.',
               },
               {
                 question: 'How far is your studio from Sacramento?',
                 answer:
-                  'Our professional studio is in Modesto, approximately 90 minutes from Sacramento via Highway 99. Sacramento professionals value our premium studio environment for executive headshots that communicate authority and expertise. For busy legislators, legal teams, healthcare departments, or corporate groups, we bring our full professional studio to your Sacramento location — a travel fee applies. We make it convenient for you.',
+                  'My professional studio is in Modesto, approximately 90 minutes from Sacramento via Highway 99. Sacramento professionals value my premium studio environment for executive headshots that communicate authority and expertise. For busy legislators, legal teams, healthcare departments, or corporate groups, I bring my full professional studio to your Sacramento location — a travel fee applies. I make it convenient for you.',
               },
               {
                 question: 'What do Sacramento headshot sessions cost?',
                 answer:
-                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Sacramento legislative offices, law firms, healthcare teams, or corporate groups needing on-site photography, we provide customized pricing based on your team size and requirements. Contact us for a personalized quote tailored to your organization.',
+                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Sacramento legislative offices, law firms, healthcare teams, or corporate groups needing on-site photography, I provide customized pricing based on your team size and requirements. Contact me for a personalized quote tailored to your organization.',
               },
               {
                 question: 'Do you work with state legislators, lobbyists, and legal professionals?',
                 answer:
-                  'Absolutely! We regularly serve California state legislators, lobbyists, government officials, and legal professionals who need authoritative, credible headshots for official websites, campaign materials, legislative directories, firm websites, and professional profiles. We understand the unique needs of government and legal professionals — your headshot must communicate expertise, trustworthiness, and executive presence. We deliver exactly that.',
+                  'Absolutely! I regularly serve California state legislators, lobbyists, government officials, and legal professionals who need authoritative, credible headshots for official websites, campaign materials, legislative directories, firm websites, and professional profiles. I understand the unique needs of government and legal professionals — your headshot must communicate expertise, trustworthiness, and executive presence. I deliver exactly that.',
               },
               {
                 question: 'Why do Sacramento professionals choose Rojas Photography?',
                 answer:
-                  'Sacramento professionals choose Rojas Photography because we bring 15+ years of corporate leadership experience and understand what executive presence looks like. We have photographed 500+ executives and professionals across government, legal, healthcare, and business sectors. Our guided sessions eliminate the stress of professional photography, helping legislators, legal professionals, healthcare leaders, and business executives present themselves with confidence and authority on every platform.',
+                  'Sacramento professionals choose me because I bring 15+ years of corporate leadership experience and understand what executive presence looks like. I\'ve photographed 500+ executives and professionals across government, legal, healthcare, and business sectors. My guided sessions eliminate the stress of professional photography, helping legislators, legal professionals, healthcare leaders, and business executives present themselves with confidence and authority on every platform.',
               },
             ]}
             heading="Sacramento Headshot Questions Answered"

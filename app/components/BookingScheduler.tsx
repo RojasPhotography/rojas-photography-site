@@ -21,6 +21,7 @@ export default function BookingScheduler({
     isMounted && (
       <iframe
         name="hats_scheduler"
+        title="Headshot session booking scheduler"
         style={{ margin: '20px', minHeight: `${height}px` }}
         frameBorder={0}
         width="100%"

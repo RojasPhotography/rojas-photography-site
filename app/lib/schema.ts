@@ -5,14 +5,19 @@
 export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'ProfessionalService',
     '@id': 'https://rojasphotography.net',
     name: 'Rojas Photography',
-    image: 'https://rojasphotography.net/images/Alfonso+Niomi-0026.jpg',
+    alternateName: 'Rojas Photography Modesto',
+    image: [
+      'https://rojasphotography.net/images/Alfonso+Niomi-0026.jpg',
+      'https://rojasphotography.net/images/headshots/headshot-executive-ceo.jpg',
+    ],
     description:
-      'Professional corporate photography and video services in Modesto and Central Valley',
+      'Professional corporate photography and video services in Modesto and Central Valley, CA. Specializing in executive headshots, on-site team photography, headshot booths, commercial photography, video production, and corporate event coverage. Founded and operated by Alfonso Rojas, FAA Part 107 certified, with 15+ years of corporate leadership experience.',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: 'Modesto',
       addressLocality: 'Modesto',
       addressRegion: 'CA',
       postalCode: '95350',
@@ -23,6 +28,7 @@ export function generateLocalBusinessSchema() {
       latitude: 37.6391,
       longitude: -120.9969,
     },
+    hasMap: 'https://maps.google.com/?q=Rojas+Photography+Modesto+CA',
     areaServed: [
       { '@type': 'City', name: 'Modesto' },
       { '@type': 'City', name: 'Stockton' },
@@ -30,21 +36,75 @@ export function generateLocalBusinessSchema() {
       { '@type': 'City', name: 'Turlock' },
       { '@type': 'City', name: 'Merced' },
       { '@type': 'City', name: 'Sacramento' },
-      { '@type': 'City', name: 'East Bay' },
+      { '@type': 'City', name: 'Ceres' },
+      { '@type': 'City', name: 'Riverbank' },
+      { '@type': 'City', name: 'Lodi' },
     ],
     telephone: '+1-209-380-3727',
     email: 'alfonso@rojasphotography.net',
     url: 'https://rojasphotography.net',
     priceRange: '$$',
+    currenciesAccepted: 'USD',
+    paymentAccepted: 'Cash, Credit Card, Check',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',
       reviewCount: '60',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    founder: {
+      '@type': 'Person',
+      name: 'Alfonso Rojas',
+      jobTitle: 'Founder & Lead Photographer',
+      url: 'https://rojasphotography.net/about-rojas-photography',
+    },
+    employee: {
+      '@type': 'Person',
+      name: 'Alfonso Rojas',
+      jobTitle: 'Founder & Lead Photographer',
+    },
+    knowsAbout: [
+      'Corporate Photography',
+      'Executive Headshots',
+      'Professional Headshots',
+      'On-Site Team Photography',
+      'Headshot Booth Events',
+      'Commercial Photography',
+      'Corporate Video Production',
+      'Drone Photography',
+      'Event Photography',
+      'LinkedIn Headshots',
+      'Business Branding Photography',
+    ],
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'FAA Part 107 Remote Pilot Certificate',
+      recognizedBy: {
+        '@type': 'Organization',
+        name: 'Federal Aviation Administration',
+      },
     },
     sameAs: [
       'https://www.instagram.com/rojasphotographymodesto/',
       'https://www.facebook.com/rojasphotography/',
     ],
+  };
+}
+
+export function generateWebSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': 'https://rojasphotography.net/#website',
+    url: 'https://rojasphotography.net',
+    name: 'Rojas Photography',
+    description:
+      'Professional corporate photography and video services in Modesto and Central Valley, CA. Executive headshots, on-site photography, commercial photography, video production, and event coverage.',
+    publisher: {
+      '@id': 'https://rojasphotography.net',
+    },
+    inLanguage: 'en-US',
   };
 }
 

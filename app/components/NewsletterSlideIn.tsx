@@ -51,6 +51,9 @@ export default function NewsletterSlideIn() {
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="newsletter-slidein-title"
       className={`fixed bottom-6 right-6 z-50 w-[340px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transition-all duration-500 ease-out ${
         visible ? 'translate-y-0 opacity-100' : 'translate-y-12 opacity-0 pointer-events-none'
       }`}
@@ -85,7 +88,7 @@ export default function NewsletterSlideIn() {
           </div>
         ) : (
           <>
-            <h3 className="text-[var(--color-text-dark)] font-bold text-base mb-1 pr-6">
+            <h3 id="newsletter-slidein-title" className="text-[var(--color-text-dark)] font-bold text-base mb-1 pr-6">
               Join Our Monthly Newsletter
             </h3>
             <p className="text-[var(--color-text-muted)] text-sm mb-4 leading-relaxed">
@@ -93,19 +96,24 @@ export default function NewsletterSlideIn() {
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-3">
+              <label htmlFor="slidein-newsletter-name" className="sr-only">Your name</label>
               <input
+                id="slidein-newsletter-name"
                 type="text"
                 placeholder="Your name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm text-[var(--color-text-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
               />
+              <label htmlFor="slidein-newsletter-email" className="sr-only">Email address (required)</label>
               <input
+                id="slidein-newsletter-email"
                 type="email"
                 placeholder="Your email address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                aria-required="true"
                 className="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm text-[var(--color-text-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
               />
               {status === 'error' && (

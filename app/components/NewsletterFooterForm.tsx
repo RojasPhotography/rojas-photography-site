@@ -32,19 +32,24 @@ export default function NewsletterFooterForm() {
         <p className="text-red-400 text-xs mb-2">Something went wrong. Try again.</p>
       )}
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
+        <label htmlFor="footer-newsletter-name" className="sr-only">Your name</label>
         <input
+          id="footer-newsletter-name"
           type="text"
           placeholder="Your name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           className="flex-1 min-w-0 px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-white/40"
         />
+        <label htmlFor="footer-newsletter-email" className="sr-only">Email address (required)</label>
         <input
+          id="footer-newsletter-email"
           type="email"
           placeholder="Your email address"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          aria-required="true"
           className="flex-1 min-w-0 px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-500 text-sm focus:outline-none focus:border-white/40"
         />
         <button

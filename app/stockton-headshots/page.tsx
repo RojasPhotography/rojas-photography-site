@@ -294,6 +294,14 @@ export default function StocktonHeadshotsPage() {
                     href: '/event-photography',
                     cta: 'Learn More',
                   },
+                  {
+                    icon: Camera,
+                    title: 'Headshot Booth',
+                    desc: 'I set up a professional headshot station at your Stockton event or office. High-volume, fast-moving, and polished — every attendee walks away with a photo they\'re proud to use.',
+                    price: 'Priced by the hour',
+                    href: '/headshot-booth',
+                    cta: 'Learn More',
+                  },
                 ].map((service) => (
                   <SectionReveal key={service.title}>
                     <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 flex flex-col h-full border border-gray-100 hover:border-[var(--color-primary)] transition-colors duration-300">
@@ -330,7 +338,7 @@ export default function StocktonHeadshotsPage() {
               <SectionReveal>
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Why Stockton Professionals Choose Rojas Photography
+                    Why Stockton Professionals Choose Me
                   </h2>
                 </div>
               </SectionReveal>
@@ -338,16 +346,16 @@ export default function StocktonHeadshotsPage() {
               <div className="grid md:grid-cols-2 gap-10">
                 {[
                   {
-                    title: 'We Understand the Stockton Business Community',
-                    desc: 'From healthcare professionals at Dignity Health and St. Joseph\'s Medical Center, to attorneys at downtown law firms, to executives at Port of Stockton — we understand what Stockton\'s business leaders need from their professional image.',
+                    title: 'I Understand the Stockton Business Community',
+                    desc: 'From healthcare professionals at Dignity Health and St. Joseph\'s Medical Center, to attorneys at downtown law firms, to executives at Port of Stockton — I understand what Stockton\'s business leaders need from their professional image.',
                   },
                   {
                     title: 'Corporate Experience You Can See',
-                    desc: 'Alfonso brings 15+ years of corporate leadership experience to every session. He knows how executives think and what they need. You\'re not just hiring a photographer — you\'re working with someone who\'s been in the boardroom.',
+                    desc: 'I\'m Alfonso Rojas, and I bring 15+ years of corporate leadership experience to every session. I know how executives think and what they need. You\'re not just hiring a photographer — you\'re working with someone who\'s been in the boardroom.',
                   },
                   {
-                    title: 'In-Studio or We Come to You',
-                    desc: 'Our professional studio is 35-40 minutes from downtown Stockton. We\'re also happy to travel to your Stockton location — for individuals or your entire team. A travel fee applies for on-site visits.',
+                    title: 'In-Studio or I Come to You',
+                    desc: 'My professional studio is 35-40 minutes from downtown Stockton. I\'m also happy to travel to your Stockton location — for individuals or your entire team. A travel fee applies for on-site visits.',
                   },
                   {
                     title: 'Real Results, Real Fast',
@@ -381,7 +389,7 @@ export default function StocktonHeadshotsPage() {
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">
-                  Our Work
+                  My Work
                 </h2>
               </SectionReveal>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -404,6 +412,20 @@ export default function StocktonHeadshotsPage() {
                   </SectionReveal>
                 ))}
               </div>
+            </div>
+          </section>
+
+          {/* SB7: Success Vision */}
+          <section className="py-20 px-8 bg-white">
+            <div className="max-w-4xl mx-auto text-center">
+              <SectionReveal>
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
+                  Imagine Having a Headshot That Actually Matches Your Professional Reputation
+                </h2>
+                <p className="text-lg text-[var(--color-text-body)] leading-relaxed max-w-2xl mx-auto">
+                  Imagine a profile photo that makes clients feel confident before they ever reach out. One that looks like the professional you are — polished, approachable, credible. That&apos;s what I deliver for every Stockton professional I work with.
+                </p>
+              </SectionReveal>
             </div>
           </section>
 
@@ -447,27 +469,27 @@ export default function StocktonHeadshotsPage() {
               {
                 question: 'Do you offer professional headshots in Stockton, CA?',
                 answer:
-                  'Yes! We regularly serve business professionals and executives across Stockton and San Joaquin County. We offer both in-studio sessions at our Modesto studio (35-40 minutes from Stockton) and on-site photography at your Stockton office or business location. Most Stockton clients choose the in-studio option for the best quality results.',
+                  'Yes! I regularly serve business professionals and executives across Stockton and San Joaquin County. I offer both in-studio sessions at my Modesto studio (35-40 minutes from Stockton) and on-site photography at your Stockton office or business location. Most Stockton clients choose the in-studio option for the best quality results.',
               },
               {
                 question: 'How far is your studio from Stockton?',
                 answer:
-                  'Our professional studio is located in Modesto, approximately 35-40 minutes from downtown Stockton via Highway 99. Many Stockton clients make the short drive for our controlled studio environment with professional lighting and backdrops. We are also happy to travel to your Stockton location for on-site sessions — a travel fee applies. Contact us and we\'ll build a plan that works for you.',
+                  'My professional studio is located in Modesto, approximately 35-40 minutes from downtown Stockton via Highway 99. Many Stockton clients make the short drive for the controlled studio environment with professional lighting and backdrops. I\'m also happy to travel to your Stockton location for on-site sessions — a travel fee applies. Contact me and I\'ll build a plan that works for you.',
               },
               {
                 question: 'What do headshot sessions cost for Stockton professionals?',
                 answer:
-                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no pressure. For Stockton teams needing on-site photography, pricing is customized based on your needs. Contact us for a personalized quote.',
+                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no pressure. For Stockton teams needing on-site photography, pricing is customized based on your needs. Contact me for a personalized quote.',
               },
               {
                 question: 'Do you photograph Stockton corporate events and teams?',
                 answer:
-                  'Absolutely! We serve Stockton businesses across all industries — healthcare, legal, financial services, and corporate teams throughout San Joaquin County. Our on-site photography brings our complete studio setup to your Stockton location so your full team gets polished headshots without disrupting the workday. Edited images delivered within 24 hours.',
+                  'Absolutely! I serve Stockton businesses across all industries — healthcare, legal, financial services, and corporate teams throughout San Joaquin County. My on-site photography brings my complete studio setup to your Stockton location so your full team gets polished headshots without disrupting the workday. Edited images delivered within 24 hours.',
               },
               {
                 question: 'Why do Stockton professionals choose Rojas Photography?',
                 answer:
-                  'Stockton professionals choose Rojas Photography because we understand business. With 15+ years of corporate leadership experience, we\'ve helped 500+ executives across the Central Valley present themselves with confidence. We have 60+ Five-Star reviews and are trusted by organizations like Comcast, Save Mart, and the California Lawyers Association. Our guided sessions make professional photography comfortable and stress-free.',
+                  'Stockton professionals choose me because I understand business. With 15+ years of corporate leadership experience, I\'ve helped 500+ executives across the Central Valley present themselves with confidence. I have 60+ Five-Star reviews and am trusted by organizations like Comcast, Save Mart, and the California Lawyers Association. My guided sessions make professional photography comfortable and stress-free.',
               },
             ]}
             heading="Stockton Headshot Questions Answered"

@@ -99,6 +99,7 @@ export default function Navigation() {
                 className="nav-link text-sm font-medium tracking-wide hover:text-[var(--color-primary)] transition-all duration-200 flex items-center gap-1.5 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--color-primary)] hover:after:w-full after:transition-all after:duration-300"
                 aria-haspopup="true"
                 aria-expanded={desktopServicesOpen}
+                aria-controls="desktop-services-menu"
               >
                 Services
                 <svg
@@ -120,7 +121,7 @@ export default function Navigation() {
               </button>
 
               {/* Dropdown Menu */}
-              <div className={`absolute left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-xl shadow-xl transition-all duration-300 border border-gray-100 py-3 overflow-hidden ${
+              <div id="desktop-services-menu" className={`absolute left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-xl shadow-xl transition-all duration-300 border border-gray-100 py-3 overflow-hidden ${
                 desktopServicesOpen
                   ? 'opacity-100 visible translate-y-0'
                   : 'opacity-0 invisible translate-y-2 pointer-events-none'
@@ -256,6 +257,7 @@ export default function Navigation() {
                 className="w-full text-left text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-3.5 rounded-lg transition-all duration-200 flex items-center justify-between border-l-4 border-transparent hover:border-[var(--color-primary)]"
                 onClick={() => setServicesOpen(!servicesOpen)}
                 aria-expanded={servicesOpen}
+                aria-controls="mobile-services-menu"
               >
                 Services
                 <svg
@@ -277,6 +279,7 @@ export default function Navigation() {
 
               {/* Services Submenu */}
               <div
+                id="mobile-services-menu"
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
                   servicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}

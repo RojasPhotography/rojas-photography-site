@@ -263,22 +263,22 @@ export default function ModestoHeadshotsPage() {
                 <SectionReveal>
                   <div className="space-y-5">
                     <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
-                      We&apos;re Modesto Locals — This Is Our Home
+                      I Know What Modesto Professionals Are Up Against
                     </h2>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      Rojas Photography is based right here in Modesto. We are not a photographer who drives in from the Bay Area or Sacramento. We live and work in the Central Valley, and we understand the business community, the professional culture, and the relationships that drive it.
+                      Most people come to me not because they want a photo — but because they&apos;re embarrassed by the one they have. Outdated. Phone quality. Or just wrong. It doesn&apos;t look like how you carry yourself in a room, and you know it.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      With 15+ years of corporate leadership experience — working alongside CEOs, CFOs, attorneys, healthcare executives, and business owners — we bring more than a camera to your session. We understand how professionals think, how they want to be perceived, and what it takes to earn trust before you ever say a word.
+                      I&apos;m Alfonso Rojas — a Modesto-based photographer with 15+ years of corporate leadership experience working alongside CEOs, CFOs, attorneys, and healthcare executives. I built this business right here in the Central Valley because I understand the community, the professional culture, and the relationships that drive it.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      That&apos;s why we guide every session with real-time coaching on posing, expression, and angles — because the right headshot isn&apos;t just taken, it&apos;s directed.
+                      That&apos;s why I guide every session with real-time coaching on posing, expression, and angles — because the right headshot isn&apos;t just taken, it&apos;s directed.
                     </p>
                     <Link
                       href="/about-rojas-photography"
                       className="inline-block text-[var(--color-primary)] font-semibold hover:underline"
                     >
-                      Learn more about us →
+                      Learn more about me →
                     </Link>
                   </div>
                 </SectionReveal>
@@ -306,8 +306,8 @@ export default function ModestoHeadshotsPage() {
                   },
                   {
                     step: '02',
-                    title: 'We Guide You Through It',
-                    desc: 'You are never alone in this process. We review what we\'re capturing with you in real time, talk through what\'s working and what we want to adjust, and guide your posing and expression throughout. Most sessions run 60–90 minutes with unlimited wardrobe changes.',
+                    title: 'I Guide You Through It',
+                    desc: 'You are never alone in this process. I review what I\'m capturing with you in real time, talk through what\'s working and what to adjust, and guide your posing and expression throughout. Most sessions run 60–90 minutes with unlimited wardrobe changes.',
                   },
                   {
                     step: '03',
@@ -379,10 +379,10 @@ export default function ModestoHeadshotsPage() {
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
-                  Who We Photograph in Modesto
+                  Who I Photograph in Modesto
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
-                  From downtown law firms to agricultural businesses, healthcare organizations to financial services — we know the Modesto professional community.
+                  From downtown law firms to agricultural businesses, healthcare organizations to financial services — I know the Modesto professional community.
                 </p>
               </SectionReveal>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -441,46 +441,103 @@ export default function ModestoHeadshotsPage() {
                   Beyond headshots — full-service visual content for Modesto businesses, organizations, and professionals.
                 </p>
               </SectionReveal>
-              <div className="grid md:grid-cols-2 gap-6">
-                {[
-                  {
-                    icon: Camera,
-                    title: 'Premium Studio Headshots',
-                    desc: 'Individual sessions at our Modesto studio. Professional lighting, guided posing, unlimited wardrobe changes, and 48-hour delivery. $150 session + $150/image.',
-                    href: '/premium-headshots',
-                  },
-                  {
-                    icon: Users,
-                    title: 'On-Site Team Photography',
-                    desc: 'We bring the studio to your Modesto office, medical facility, or business. Efficient team headshots without pulling staff away from their day. Custom pricing based on team size.',
-                    href: '/on-site-photography',
-                  },
-                  {
-                    icon: Building2,
-                    title: 'Commercial Photography',
-                    desc: 'Brand imagery, facility photography, product shots, and marketing visuals for Modesto businesses. Delivered in 48–72 hours.',
-                    href: '/commercial',
-                  },
-                  {
-                    icon: Star,
-                    title: 'Corporate Event Photography',
-                    desc: 'Professional coverage for Modesto conferences, galas, fundraisers, and business events. Real-time delivery via SpotMyPhotos facial recognition on full-day bookings.',
-                    href: '/event-photography',
-                  },
-                ].map((service) => (
-                  <SectionReveal key={service.title}>
-                    <div className="flex gap-5 p-7 bg-[var(--color-bg-warm)] rounded-xl border border-gray-100 hover:border-[var(--color-primary)] transition-colors duration-300 h-full">
-                      <service.icon size={28} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
-                      <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-2 text-lg">{service.title}</h3>
-                        <p className="text-[var(--color-text-body)] text-sm leading-relaxed mb-3">{service.desc}</p>
-                        <Link href={service.href} className="text-[var(--color-primary)] text-sm font-semibold hover:underline">
-                          Learn more →
-                        </Link>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <SectionReveal>
+                  <Link href="/premium-headshots" className="block group">
+                    <div className="relative h-[360px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                      <Image src="/images/headshots/headshot-executive-ceo.jpg" alt="Premium studio headshots Modesto" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
+                      <div className="relative z-10 p-7 h-full flex flex-col justify-end">
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                          <Camera className="text-white" size={22} />
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-2">Premium Studio Headshots</h3>
+                        <p className="text-white/85 text-sm leading-relaxed mb-3">Individual sessions at my Modesto studio. Guided posing, unlimited wardrobe changes, 48-hour delivery. $150 session + $150/image.</p>
+                        <span className="text-white text-sm font-semibold group-hover:underline">Learn more →</span>
                       </div>
                     </div>
-                  </SectionReveal>
-                ))}
+                  </Link>
+                </SectionReveal>
+                <SectionReveal>
+                  <Link href="/on-site-photography" className="block group">
+                    <div className="relative h-[360px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                      <Image src="/images/BB Individual Headshot Session.png" alt="On-site team photography Modesto" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
+                      <div className="relative z-10 p-7 h-full flex flex-col justify-end">
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                          <Users className="text-white" size={22} />
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-2">On-Site Team Photography</h3>
+                        <p className="text-white/85 text-sm leading-relaxed mb-3">I bring the studio to your Modesto office or facility. Efficient team headshots without pulling staff away from their day. Custom pricing.</p>
+                        <span className="text-white text-sm font-semibold group-hover:underline">Learn more →</span>
+                      </div>
+                    </div>
+                  </Link>
+                </SectionReveal>
+                <SectionReveal>
+                  <Link href="/headshot-booth" className="block group">
+                    <div className="relative h-[360px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                      <Image src="/images/kaiser-bts-headshots1.jpeg" alt="Headshot booth Modesto events" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
+                      <div className="relative z-10 p-7 h-full flex flex-col justify-end">
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                          <Star className="text-white" size={22} />
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-2">Headshot Booth</h3>
+                        <p className="text-white/85 text-sm leading-relaxed mb-3">I set up at your event or office and move attendees through quickly. High-volume, polished, and priced by the hour.</p>
+                        <span className="text-white text-sm font-semibold group-hover:underline">Learn more →</span>
+                      </div>
+                    </div>
+                  </Link>
+                </SectionReveal>
+                <SectionReveal>
+                  <Link href="/commercial" className="block group">
+                    <div className="relative h-[360px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                      <Image src="/images/DoctorOffice 4.jpg" alt="Commercial photography Modesto" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
+                      <div className="relative z-10 p-7 h-full flex flex-col justify-end">
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                          <Building2 className="text-white" size={22} />
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-2">Commercial Photography</h3>
+                        <p className="text-white/85 text-sm leading-relaxed mb-3">Brand imagery, facility photography, product shots, and marketing visuals for Modesto businesses. Delivered in 48–72 hours.</p>
+                        <span className="text-white text-sm font-semibold group-hover:underline">Learn more →</span>
+                      </div>
+                    </div>
+                  </Link>
+                </SectionReveal>
+                <SectionReveal>
+                  <Link href="/video" className="block group">
+                    <div className="relative h-[360px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                      <Image src="/images/BBSI-Corp-Video.jpg" alt="Video production Modesto" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
+                      <div className="relative z-10 p-7 h-full flex flex-col justify-end">
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                          <Video className="text-white" size={22} />
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-2">Video Production</h3>
+                        <p className="text-white/85 text-sm leading-relaxed mb-3">Brand videos, testimonials, culture content, and FAA Part 107 certified drone footage for Modesto businesses.</p>
+                        <span className="text-white text-sm font-semibold group-hover:underline">Learn more →</span>
+                      </div>
+                    </div>
+                  </Link>
+                </SectionReveal>
+                <SectionReveal>
+                  <Link href="/event-photography" className="block group">
+                    <div className="relative h-[360px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                      <Image src="/images/CLA AM 25 335.jpg" alt="Corporate event photography Modesto" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
+                      <div className="relative z-10 p-7 h-full flex flex-col justify-end">
+                        <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                          <Camera className="text-white" size={22} />
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-2">Corporate Event Photography</h3>
+                        <p className="text-white/85 text-sm leading-relaxed mb-3">Professional coverage for Modesto conferences, galas, and fundraisers. Real-time delivery via SpotMyPhotos on full-day bookings.</p>
+                        <span className="text-white text-sm font-semibold group-hover:underline">Learn more →</span>
+                      </div>
+                    </div>
+                  </Link>
+                </SectionReveal>
               </div>
             </div>
           </section>
@@ -508,6 +565,20 @@ export default function ModestoHeadshotsPage() {
                     Book Your Session
                   </Link>
                 </div>
+              </SectionReveal>
+            </div>
+          </section>
+
+          {/* SB7: Success Vision */}
+          <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
+            <div className="max-w-4xl mx-auto text-center">
+              <SectionReveal>
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
+                  Imagine Opening LinkedIn and Actually Feeling Proud of Your Photo
+                </h2>
+                <p className="text-lg text-[var(--color-text-body)] leading-relaxed max-w-2xl mx-auto">
+                  Imagine a headshot that stops people mid-scroll. One that makes clients feel confident before they ever call you. One that looks exactly like how you carry yourself when you&apos;re at your best — in the boardroom, in the courtroom, in the exam room. That&apos;s what I work toward in every session.
+                </p>
               </SectionReveal>
             </div>
           </section>
@@ -552,27 +623,27 @@ export default function ModestoHeadshotsPage() {
               {
                 question: 'Where is Rojas Photography located in Modesto?',
                 answer:
-                  'Rojas Photography is based right here in Modesto, CA. Our professional studio is in the Central Valley — no travel fee, no commute. We serve Modesto professionals, businesses, healthcare organizations, legal firms, agricultural companies, and Stanislaus County employees. We also travel throughout California for on-site team photography.',
+                  'I\'m based right here in Modesto, CA. My professional studio is in the Central Valley — no travel fee, no commute. I serve Modesto professionals, businesses, healthcare organizations, legal firms, agricultural companies, and Stanislaus County employees. I also travel throughout California for on-site team photography.',
               },
               {
                 question: 'How much do professional headshots cost in Modesto?',
                 answer:
-                  'Professional headshot sessions at our Modesto studio are $150, plus $150 per image you select. You only pay for the images you love — no packages, no minimums, no forced purchases. For teams and on-site photography, we provide customized quotes based on your team size and location. Contact us for a personalized quote.',
+                  'Professional headshot sessions at my Modesto studio are $150, plus $150 per image you select. You only pay for the images you love — no packages, no minimums, no forced purchases. For teams and on-site photography, I provide customized quotes based on your team size and location. Contact me for a personalized quote.',
               },
               {
                 question: 'How long does a headshot session take?',
                 answer:
-                  'Most sessions run 60–90 minutes, though we can move faster if your schedule requires it. There is no hard time limit — we work at your pace. Sessions include unlimited wardrobe changes, real-time coaching on posing and expression, and immediate image review. Your professionally edited images are delivered within 48 hours.',
+                  'Most sessions run 60–90 minutes, though I can move faster if your schedule requires it. There is no hard time limit — I work at your pace. Sessions include unlimited wardrobe changes, real-time coaching on posing and expression, and immediate image review. Your professionally edited images are delivered within 48 hours.',
               },
               {
                 question: 'Do you offer on-site headshot photography for Modesto businesses?',
                 answer:
-                  'Yes. We bring our full professional studio setup — lighting, backdrop, camera equipment — directly to your Modesto office, medical facility, law firm, or business location. On-site photography is ideal for teams, avoiding disruption to your workday, and capturing staff in their professional environment. We have photographed teams for Save Mart, Comcast, Valley First Credit Union, and many other Central Valley organizations.',
+                  'Yes. I bring my full professional studio setup — lighting, backdrop, camera equipment — directly to your Modesto office, medical facility, law firm, or business location. On-site photography is ideal for teams, avoiding disruption to your workday, and capturing staff in their professional environment. I\'ve photographed teams for Save Mart, Comcast, Valley First Credit Union, and many other Central Valley organizations.',
               },
               {
                 question: 'Why do Modesto professionals choose Rojas Photography?',
                 answer:
-                  'We are Modesto locals — this is our home and our community. With 15+ years of corporate leadership experience, we understand the professional culture of the Central Valley. We have photographed 500+ professionals across healthcare, legal, agriculture, finance, and corporate sectors. Our guided approach makes even camera-shy professionals look confident and authentic. Images delivered within 48 hours.',
+                  'I\'m a Modesto local — this is my home and my community. With 15+ years of corporate leadership experience, I understand the professional culture of the Central Valley. I\'ve photographed 500+ professionals across healthcare, legal, agriculture, finance, and corporate sectors. My guided approach makes even camera-shy professionals look confident and authentic. Images delivered within 48 hours.',
               },
             ]}
             heading="Modesto Headshot Questions Answered"

@@ -15,6 +15,7 @@ export default function SchedulerEmbed() {
       {isMounted && (
         <iframe
           name="hats_scheduler_discovery"
+          title="Discovery call scheduling form"
           style={{ margin: '20px', minHeight: '900px' }}
           frameBorder={0}
           width="100%"
