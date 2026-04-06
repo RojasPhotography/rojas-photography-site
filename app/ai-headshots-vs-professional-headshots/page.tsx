@@ -57,7 +57,7 @@ const faqs = [
   {
     question: 'How long does a professional headshot session take?',
     answer:
-      'A professional headshot session at Rojas Photography takes 60–90 minutes. That includes a brief consultation before the shoot, multiple wardrobe changes, full expression and posing coaching throughout, and review of images before you leave. Final edited images are delivered within 48 hours.',
+      'A professional headshot session at Rojas Photography takes 60–90 minutes. That includes a brief consultation before the shoot, multiple wardrobe changes, full expression and posing coaching throughout, and review of images before you leave. Final edited images are delivered within 48 hours. Most professionals update their headshot annually or every other year.',
   },
   {
     question: 'Are AI headshot tools safe for my privacy?',

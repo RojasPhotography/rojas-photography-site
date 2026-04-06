@@ -44,7 +44,7 @@ const faqs = [
   {
     question: 'How often should I update my LinkedIn headshot?',
     answer:
-      'Update your LinkedIn photo every 3–5 years, or sooner if your appearance has changed significantly — new hairstyle, weight change, or a major career transition. Your photo should look like you would look walking into a meeting today. An outdated headshot that no longer resembles you erodes the trust your profile is supposed to build.',
+      'Update your LinkedIn photo annually, or every other year at minimum. Your headshot is a living part of your professional brand — not a one-time task. Careers evolve, appearances change, and the standards for professional imagery rise every year. A photo that looked current two years ago can quietly signal stagnation today. If your headshot no longer looks like you walking into a meeting, it is already costing you.',
   },
 ];
 
