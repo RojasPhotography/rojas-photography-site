@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     question: 'What should I do before my headshot session?',
-    answer: 'Get a full night of sleep — tired eyes show on camera. Get a haircut 1–2 weeks before (not the day before — hair needs to settle). Steam or iron all outfits the night before. Arrive with your skin moisturized and hair styled as you would for an important meeting. If you wear makeup, apply it as you would for a significant professional event. Do not dramatically change your appearance the day of the session.',
+    answer: 'Get a full night of sleep — tired eyes show on camera. Get a haircut one week before (not the day before — hair needs to settle). Steam or iron all outfits the night before. Arrive with your skin moisturized and hair styled as you would for an important meeting. If you wear makeup, apply it as you would for a significant professional event. Do not dramatically change your appearance the day of the session.',
   },
   {
     question: 'How early should I arrive for my headshot session?',

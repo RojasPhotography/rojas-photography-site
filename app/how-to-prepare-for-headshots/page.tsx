@@ -13,7 +13,7 @@ const faqs = [
   {
     question: 'When should I get a haircut before a headshot session?',
     answer:
-      'Schedule your haircut 5-7 days before your session — not the day before. A fresh cut looks slightly too tight on camera and your hair needs a few days to settle into its natural shape. If you color your hair, do it at least one week before to allow color to settle and avoid any scalp redness.',
+      'Schedule your haircut one week before your session — not the day before. A fresh cut looks slightly too tight on camera and your hair needs a few days to settle into its natural shape. If you color your hair, do it at least one week before to allow color to settle and avoid any scalp redness.',
   },
   {
     question: 'Should I wear makeup for a professional headshot?',
@@ -23,7 +23,7 @@ const faqs = [
   {
     question: 'What colors should I wear for a professional headshot?',
     answer:
-      'Solid, muted tones photograph best: navy, charcoal, forest green, burgundy, and black are all excellent choices. Navy in particular signals trust and competence (backed by color psychology research). Avoid white — it can wash out against lighter backgrounds. Avoid neon or very bright colors that draw attention away from your face.',
+      'Solid, muted tones photograph best: navy, charcoal, forest green, burgundy, white, and black are all excellent choices. Navy in particular signals trust and competence (backed by color psychology research). White works particularly well against darker backgrounds. Avoid neon or very bright colors that draw attention away from your face.',
   },
   {
     question: 'How many outfits should I bring to a headshot session?',
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: 'What should I avoid the night before a headshot session?',
     answer:
-      'Avoid alcohol (it shows in your skin and eyes), salty foods (cause facial puffiness), and late nights (dark circles are difficult to remove in editing). Skip trying new skincare products that could cause a reaction. Do not get a new haircut the day before — schedule it 5-7 days in advance.',
+      'Avoid alcohol (it shows in your skin and eyes), salty foods (cause facial puffiness), and late nights (dark circles are difficult to remove in editing). Skip trying new skincare products that could cause a reaction. Do not get a new haircut the day before — schedule it one week in advance.',
   },
   {
     question: 'How do I look natural and not stiff in headshots?',
@@ -48,7 +48,7 @@ const faqs = [
   {
     question: 'What should I do with my headshots after the session?',
     answer:
-      'Update your LinkedIn profile photo first — profiles with professional photos get 14x more views and 36x more connection requests. Then update your company website bio, email signature, and any professional directory listings. For LinkedIn, use a square crop (400x400px minimum). For website headers, you may want a wider crop — we can provide both during selection.',
+      'Update your LinkedIn profile photo first — profiles with professional photos receive significantly more profile views, connection requests, and messages than profiles without one. Then update your company website bio, email signature, and any professional directory listings. For LinkedIn, use a square crop (400x400px minimum). For website headers, you may want a wider crop — we can provide both during selection.',
   },
 ];
 
@@ -98,7 +98,7 @@ const wearDo = [
 const wearDont = [
   'Busy patterns — stripes, plaids, florals (cause visual distortion on camera)',
   'Logos or branding on clothing',
-  'Bright white against light backgrounds',
+  'Matching your clothing color to your background (e.g., all white against a white background)',
   'Neon or very saturated colors that pull focus from your face',
   'Distracting statement jewelry',
   'Brand new outfits you\'ve never worn before',
@@ -179,7 +179,7 @@ export default function HowToPrepareForHeadshotsPage() {
                       Studies show that people form a first impression in as little as 100 milliseconds — and your headshot is often the first impression clients, employers, or partners have of you before they ever meet you.
                     </p>
                     <p>
-                      LinkedIn profiles with professional photos receive <strong className="text-[var(--color-text-dark)]">14x more views</strong> and <strong className="text-[var(--color-text-dark)]">36x more messages</strong> than those without. The stakes are real.
+                      LinkedIn profiles with professional photos receive significantly more views, connection requests, and messages than profiles without one. The stakes are real.
                     </p>
                   </div>
                   <div>
@@ -317,7 +317,7 @@ export default function HowToPrepareForHeadshotsPage() {
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 h-full">
                     <h3 className="text-lg font-bold text-[var(--color-text-dark)] mb-4">Timing Your Haircut</h3>
                     <p className="text-[var(--color-text-body)] text-sm leading-relaxed mb-4">
-                      Schedule your haircut <strong>5-7 days before</strong> your session — not the day before. A brand-new cut looks too tight on camera and needs a few days to relax into its natural shape.
+                      Schedule your haircut <strong>one week before</strong> your session — not the day before. A brand-new cut looks too tight on camera and needs a few days to relax into its natural shape.
                     </p>
                     <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
                       If you color your hair, do it at least one week before to allow the color to settle and avoid any scalp redness or irritation.
@@ -342,7 +342,7 @@ export default function HowToPrepareForHeadshotsPage() {
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Shave the morning of your session — give yourself enough time before you arrive for any redness to settle</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />If you wear a beard, trim and shape it a day or two before — not the morning of</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Trim nose and ear hair — small details show clearly in close-up photography</li>
-                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Get a haircut 5-7 days before — not the day before — so it looks natural and settled</li>
+                      <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Get a haircut one week before — not the day before — so it looks natural and settled</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Clean your glasses if you wear them — smudges are very visible in photos</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring a razor and grooming supplies for touch-ups between outfit changes</li>
                     </ul>
@@ -656,7 +656,7 @@ export default function HowToPrepareForHeadshotsPage() {
                 <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed">
                   <div>
                     <h3 className="font-bold text-[var(--color-text-dark)] mb-3">Update LinkedIn First</h3>
-                    <p className="text-sm mb-4">Profiles with professional photos get 14x more views and 36x more connection requests. LinkedIn profile photos should be a square crop, minimum 400x400 pixels. Upload the highest resolution version you have.</p>
+                    <p className="text-sm mb-4">Profiles with professional photos receive significantly more views and connection requests. LinkedIn profile photos should be a square crop, minimum 400x400 pixels. Upload the highest resolution version you have.</p>
                     <h3 className="font-bold text-[var(--color-text-dark)] mb-3">Then Update These</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Company website bio page</li>

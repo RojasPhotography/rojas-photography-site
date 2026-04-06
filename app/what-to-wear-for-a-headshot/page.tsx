@@ -222,7 +222,7 @@ export default function WhatToWearHeadshotPage() {
                   'Get a full night of sleep — tired eyes show in headshots',
                   'Plan hair and grooming — styled as you would for an important meeting',
                   'If you wear makeup, test your look under bright lighting in advance',
-                  'Get a haircut 1–2 weeks before — not the day before (hair needs to settle)',
+                  'Get a haircut one week before — not the day before (hair needs to settle)',
                 ].map(item => (
                   <SectionReveal key={item}>
                     <div className="flex gap-3 p-4 bg-white rounded-xl border border-gray-100">
