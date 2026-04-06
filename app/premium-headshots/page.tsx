@@ -236,7 +236,7 @@ export default function PremiumHeadshotsPage() {
         <section className="py-16 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-text-dark)]">
+              <h2 id="portfolio" className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-text-dark)]">
                 Our Premium Corporate Headshots
               </h2>
               <p className="text-center text-[var(--color-text-body)] mb-12 max-w-2xl mx-auto">

@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /newsletter-admin
 Disallow: /*.json$
 Disallow: /*?*sort=
 

@@ -53,9 +53,9 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Corporate Event Photography Cost | 2026 Pricing Guide',
+  title: 'Corporate Event Photography Cost: $1,500–$4,500 | 2026 Guide',
   description:
-    'How much does corporate event photography cost? 2026 pricing guide — Modesto & Central Valley. Hourly rates, packages & what\'s included. Quote in 24 hrs.',
+    'Corporate event photography costs $1,500–$4,500 in California. See exact 2026 rates, what\'s included, and how to budget. Serving Modesto & Central Valley.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/corporate-event-photography-cost',

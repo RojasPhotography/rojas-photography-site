@@ -50,7 +50,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/portfolio',
-        destination: '/premium-headshots',
+        destination: '/premium-headshots#portfolio',
         permanent: true,
       },
       {
@@ -91,6 +91,26 @@ const nextConfig: NextConfig = {
       {
         source: '/blog/d1x7zcz1wa76p87677zy9gqhgv8qar',
         destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-much-does-corporate-event-photography-cost-a-complete-pricing-guide-for-2025',
+        destination: '/corporate-event-photography-cost',
+        permanent: true,
+      },
+      {
+        source: '/blog/the-power-of-first-impressions-how-your-eras-headshot-can-make-or-break-your-residency-application',
+        destination: '/eras-headshots',
+        permanent: true,
+      },
+      {
+        source: '/blog/why-your-corporate-event-needs-storytelling-photography-not-just-documentation',
+        destination: '/event-photography',
+        permanent: true,
+      },
+      {
+        source: '/blog/the-art-of-invisible-enhancement-why-ai-headshots-cant-compete-with-professional-post-production',
+        destination: '/premium-headshots',
         permanent: true,
       },
     ];
