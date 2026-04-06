@@ -110,7 +110,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/blog/the-art-of-invisible-enhancement-why-ai-headshots-cant-compete-with-professional-post-production',
-        destination: '/premium-headshots',
+        destination: '/ai-headshots-vs-professional-headshots',
         permanent: true,
       },
     ];
