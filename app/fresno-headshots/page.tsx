@@ -95,7 +95,7 @@ function generateFresnoFAQSchema() {
         name: 'How far is your studio from Fresno?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our professional studio is in Modesto, approximately 90 minutes from Fresno via Highway 99. Many Fresno professionals value the drive for our premium studio environment, professional lighting, and executive-level results. For teams or organizations preferring on-site service, we bring our full studio to your Fresno location — Fresno State campus, Community Regional, Saint Agnes, your law firm, or business office. A travel fee applies for on-site visits.',
+          text: 'Our professional studio is in Modesto, approximately 90 minutes from Fresno via Highway 99. We also bring our full portable professional studio — lighting, backdrops, and all equipment — directly to your Fresno location: Fresno State campus, Community Regional, Saint Agnes, your law firm, conference room, or office. The same high-end results, in the comfort of your location. A travel fee applies for on-site visits.',
         },
       },
       {
@@ -474,7 +474,7 @@ export default function FresnoHeadshotsPage() {
               {
                 question: 'How far is your studio from Fresno?',
                 answer:
-                  'My professional studio is in Modesto, approximately 90 minutes from Fresno via Highway 99. Many Fresno professionals value the drive for my premium studio environment, professional lighting, and executive-level results. For teams or organizations preferring on-site service, I bring my full studio to your Fresno location — Fresno State campus, Community Regional, Saint Agnes, your law firm, or business office. A travel fee applies for on-site visits.',
+                  'My professional studio is in Modesto, approximately 90 minutes from Fresno via Highway 99. I also bring my full portable professional studio — lighting, backdrops, and all equipment — directly to your Fresno location: Fresno State campus, Community Regional, Saint Agnes, your law firm, conference room, or office. The same high-end results, in the comfort of your location. A travel fee applies for on-site visits.',
               },
               {
                 question: 'What do Fresno headshot sessions cost?',

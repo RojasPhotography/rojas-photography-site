@@ -469,7 +469,7 @@ export default function TurlockHeadshotsPage() {
               {
                 question: 'Do you offer professional headshots in Turlock, CA?',
                 answer:
-                  'Yes! I regularly serve Turlock business professionals, CSU Stanislaus faculty, and corporate teams across Stanislaus County. I offer both in-studio sessions at my Modesto studio (15-20 minutes from Turlock) and on-site photography at your Turlock office or campus location. Many Turlock clients make the short drive to my studio for the best quality results.',
+                  'Yes! I regularly serve Turlock business professionals, CSU Stanislaus faculty, and corporate teams across Stanislaus County. I offer both in-studio sessions at my Modesto studio (15-20 minutes from Turlock) and on-site photography at your Turlock office or campus location. My portable professional studio — lighting, backdrops, and full equipment — produces the same high-end results on-site as in the studio. You choose what is most convenient.',
               },
               {
                 question: 'How far is your studio from Turlock?',

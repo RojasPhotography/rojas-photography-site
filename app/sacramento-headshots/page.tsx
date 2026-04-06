@@ -95,7 +95,7 @@ function generateSacramentoFAQSchema() {
         name: 'How far is your studio from Sacramento?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our professional studio is in Modesto, approximately 90 minutes from Sacramento via Highway 99. Sacramento professionals value our premium studio environment for executive headshots that communicate authority and expertise. For busy legislators, legal teams, healthcare departments, or corporate groups, we bring our full professional studio to your Sacramento location — a travel fee applies. We make it convenient for you.',
+          text: 'Our professional studio is in Modesto, approximately 90 minutes from Sacramento via Highway 99. We also bring our full portable professional studio — lighting, backdrops, and all equipment — directly to your Sacramento office, conference room, or breakroom. The same high-end results, in the comfort of your location. A travel fee applies for on-site visits.',
         },
       },
       {
@@ -474,7 +474,7 @@ export default function SacramentoHeadshotsPage() {
               {
                 question: 'How far is your studio from Sacramento?',
                 answer:
-                  'My professional studio is in Modesto, approximately 90 minutes from Sacramento via Highway 99. Sacramento professionals value my premium studio environment for executive headshots that communicate authority and expertise. For busy legislators, legal teams, healthcare departments, or corporate groups, I bring my full professional studio to your Sacramento location — a travel fee applies. I make it convenient for you.',
+                  'My professional studio is in Modesto, approximately 90 minutes from Sacramento via Highway 99. I also bring my full portable professional studio — lighting, backdrops, and all equipment — directly to your Sacramento office, conference room, or breakroom. The same high-end results, in the comfort of your location. A travel fee applies for on-site visits.',
               },
               {
                 question: 'What do Sacramento headshot sessions cost?',

@@ -13,11 +13,11 @@ import { generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 const faqs = [
   {
     question: 'Do you offer professional headshots in Stockton, CA?',
-    answer: 'Yes. We regularly serve business professionals and executives across Stockton and San Joaquin County. We offer both in-studio sessions at our Modesto studio (35–40 minutes from Stockton via Highway 99) and on-site photography at your Stockton office or location. Most Stockton clients choose the in-studio option for the best quality results.',
+    answer: 'Yes. We regularly serve business professionals and executives across Stockton and San Joaquin County. We offer both in-studio sessions at our Modesto studio (35–40 minutes from Stockton via Highway 99) and on-site photography at your Stockton office. Our portable professional studio — lighting, backdrops, and full equipment — produces the same high-end results on-site as in the studio. You choose what is most convenient.',
   },
   {
     question: 'How far is your studio from Stockton?',
-    answer: 'Our studio is in Modesto, approximately 35–40 minutes from downtown Stockton via Highway 99. Many Stockton clients make the short drive for the controlled studio environment, professional lighting, and backdrop options. We also travel to your Stockton location for on-site sessions — a travel fee applies.',
+    answer: 'Our studio is in Modesto, approximately 35–40 minutes from downtown Stockton via Highway 99. We also bring our full professional portable studio — lighting, backdrops, and equipment — directly to your Stockton office, conference room, or breakroom. The same quality results either way. A travel fee applies for on-site visits.',
   },
   {
     question: 'What do headshot sessions cost for Stockton professionals?',

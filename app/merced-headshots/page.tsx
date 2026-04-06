@@ -95,7 +95,7 @@ function generateMercedFAQSchema() {
         name: 'How far is your studio from Merced?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Our professional studio is in Modesto, approximately 50 minutes from downtown Merced via Highway 99. Many Merced professionals appreciate the drive for our premium studio environment and professional lighting. For teams or organizations preferring on-site service, we bring our full studio to your Merced location — a travel fee applies. Contact us to discuss which option works best for your needs.',
+          text: 'Our professional studio is in Modesto, approximately 50 minutes from downtown Merced via Highway 99. We also bring our full portable professional studio — lighting, backdrops, and all equipment — directly to your Merced office, conference room, or breakroom. The same high-end results, in the comfort of your location. A travel fee applies for on-site visits.',
         },
       },
       {
@@ -474,7 +474,7 @@ export default function MercedHeadshotsPage() {
               {
                 question: 'How far is your studio from Merced?',
                 answer:
-                  'My professional studio is in Modesto, approximately 50 minutes from downtown Merced via Highway 99. Many Merced professionals appreciate the drive for my premium studio environment and professional lighting. For teams or organizations preferring on-site service, I bring my full studio to your Merced location — a travel fee applies. Contact me to discuss which option works best for your needs.',
+                  'My professional studio is in Modesto, approximately 50 minutes from downtown Merced via Highway 99. I also bring my full portable professional studio — lighting, backdrops, and all equipment — directly to your Merced office, conference room, or breakroom. The same high-end results, in the comfort of your location. A travel fee applies for on-site visits.',
               },
               {
                 question: 'What do Merced headshot sessions cost?',
