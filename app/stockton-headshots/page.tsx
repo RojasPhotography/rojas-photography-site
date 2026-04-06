@@ -8,323 +8,152 @@ import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
-import { generateBreadcrumbSchema } from '../lib/schema';
+import { generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 
-function generateStocktonSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    '@id': 'https://rojasphotography.net/stockton-headshots',
-    name: 'Rojas Photography – Stockton Headshots',
-    image: 'https://rojasphotography.net/images/Alfonso+Niomi-0026.jpg',
-    description:
-      'Professional corporate headshots and photography services in Stockton, CA. Serving executives, attorneys, and business professionals across San Joaquin County.',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Modesto',
-      addressRegion: 'CA',
-      postalCode: '95350',
-      addressCountry: 'US',
-    },
-    areaServed: [
-      { '@type': 'City', name: 'Stockton' },
-      { '@type': 'City', name: 'Modesto' },
-      { '@type': 'City', name: 'Lodi' },
-      { '@type': 'City', name: 'Tracy' },
-      { '@type': 'City', name: 'Manteca' },
-    ],
-    telephone: '+1-209-380-3727',
-    email: 'alfonso@rojasphotography.net',
-    url: 'https://rojasphotography.net/stockton-headshots',
-    priceRange: '$$',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '60',
-    },
-  };
-}
-
-function generateStocktonServiceSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    name: 'Professional Headshots in Stockton, CA',
-    description:
-      'Professional corporate headshots and photography services for executives, attorneys, and business professionals in Stockton and San Joaquin County.',
-    provider: {
-      '@type': 'LocalBusiness',
-      name: 'Rojas Photography',
-      telephone: '+1-209-380-3727',
-      url: 'https://rojasphotography.net',
-    },
-    areaServed: {
-      '@type': 'City',
-      name: 'Stockton',
-      containedInPlace: {
-        '@type': 'State',
-        name: 'California',
-      },
-    },
-    url: 'https://rojasphotography.net/stockton-headshots',
-    image: 'https://rojasphotography.net/images/Gina-0026 (1).jpg',
-    offers: {
-      '@type': 'Offer',
-      priceCurrency: 'USD',
-      price: '150',
-      description: 'Professional headshot session fee. Image selection priced separately.',
-    },
-  };
-}
-
-function generateStocktonFAQSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Do you offer professional headshots in Stockton, CA?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes! We regularly serve business professionals and executives across Stockton and San Joaquin County. We offer both in-studio sessions at our Modesto studio (40 minutes from Stockton) and on-site photography at your Stockton office or business location. Most Stockton clients choose the in-studio option for the best quality results.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How far is your studio from Stockton?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Our studio is located in Modesto, approximately 35-40 minutes from downtown Stockton via Highway 99. Many Stockton clients make the short drive for our professional studio environment with controlled lighting, professional backdrops, and a comfortable setup. We are also happy to travel to your Stockton location for on-site sessions — a travel fee applies. Contact us and we will build a plan that works for you.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What do Stockton headshot sessions cost?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no pressure. For Stockton teams needing on-site photography, pricing is customized based on your needs. Contact us for a personalized quote.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you photograph Stockton corporate events and teams?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Absolutely! We serve Stockton businesses across all industries — healthcare, legal, financial services, and corporate teams throughout San Joaquin County. Our on-site photography brings our complete studio setup to your Stockton location — professional lighting, cameras, and backdrops — so your full team gets polished headshots without disrupting the workday. Edited images delivered within 24 hours.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Why do Stockton professionals choose Rojas Photography?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Stockton professionals choose Rojas Photography because we understand business. With 15+ years of corporate leadership experience, we know what executives, attorneys, healthcare professionals, and business leaders need from their professional imagery. We have photographed 500+ executives across the Central Valley and maintain 60+ Five-Star reviews. Our guided sessions eliminate the awkwardness of professional photos, helping you look confident and authentic on LinkedIn, your company website, and all professional materials.',
-        },
-      },
-    ],
-  };
-}
+const faqs = [
+  {
+    question: 'Do you offer professional headshots in Stockton, CA?',
+    answer: 'Yes. We regularly serve business professionals and executives across Stockton and San Joaquin County. We offer both in-studio sessions at our Modesto studio (35–40 minutes from Stockton via Highway 99) and on-site photography at your Stockton office or location. Most Stockton clients choose the in-studio option for the best quality results.',
+  },
+  {
+    question: 'How far is your studio from Stockton?',
+    answer: 'Our studio is in Modesto, approximately 35–40 minutes from downtown Stockton via Highway 99. Many Stockton clients make the short drive for the controlled studio environment, professional lighting, and backdrop options. We also travel to your Stockton location for on-site sessions — a travel fee applies.',
+  },
+  {
+    question: 'What do headshot sessions cost for Stockton professionals?',
+    answer: '$150 for the session and $150 per final edited image you select. You only pay for the images you love — no package minimums. For Stockton teams needing on-site photography, pricing is customized by team size. Contact us for a quote.',
+  },
+  {
+    question: 'Do you photograph Stockton corporate teams and events?',
+    answer: 'Yes. We serve Stockton businesses across healthcare, legal, financial services, and corporate teams throughout San Joaquin County. On-site sessions bring our complete studio setup to your Stockton location so your full team gets consistent, polished headshots without disrupting the workday. Team photos delivered within 24 hours.',
+  },
+  {
+    question: 'How long does a headshot session take?',
+    answer: 'Individual sessions take 60–90 minutes including consultation, expression coaching, multiple wardrobe changes, and a frame review before you leave. On-site team sessions run approximately 10–20 minutes per person — a team of 20 can typically be completed in a half-day.',
+  },
+  {
+    question: 'Why do Stockton professionals choose Rojas Photography?',
+    answer: 'Stockton professionals choose Rojas Photography because we understand business. With 15+ years of corporate leadership experience, we know what executives, attorneys, healthcare professionals, and business leaders need from their professional imagery. We have photographed 500+ professionals across the Central Valley and maintain 60+ five-star reviews.',
+  },
+];
 
 export const metadata: Metadata = {
-  title: 'Professional Headshots Stockton CA | Rojas Photography',
-  description:
-    'Professional headshots in Stockton, CA for executives, attorneys & business teams. Serving San Joaquin County. $150 session fee. Book today.',
+  title: 'Professional Headshots Stockton CA | $150 Session | Rojas Photography',
+  description: 'Professional headshots in Stockton, CA for executives, attorneys, healthcare, and business teams. $150 session. In-studio or on-site. 48-hour delivery. San Joaquin County.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/stockton-headshots',
   },
   openGraph: {
     title: 'Professional Headshots in Stockton, CA | Rojas Photography',
-    description:
-      'Polished corporate headshots for Stockton executives, attorneys & business professionals. In-studio or on-site. Trusted by 500+ Central Valley professionals.',
+    description: 'Polished corporate headshots for Stockton executives, attorneys & business professionals. In-studio or on-site. $150 session. 48-hour delivery.',
     url: 'https://rojasphotography.net/stockton-headshots',
     type: 'website',
-    images: [
-      {
-        url: '/images/Gina-0026 (1).jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Professional headshots Stockton CA - Rojas Photography',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Professional Headshots in Stockton, CA | Rojas Photography',
-    description:
-      'Professional headshots for Stockton executives, attorneys & business teams. $150 session fee. Serving San Joaquin County.',
-    images: ['/images/Gina-0026 (1).jpg'],
+    images: [{ url: '/images/Gina-0026 (1).jpg', alt: 'Professional headshots Stockton CA — Rojas Photography' }],
   },
 };
+
+const industries = [
+  { name: 'Healthcare & Medical', orgs: 'Dignity Health, Dameron Hospital, San Joaquin General', note: 'White coat and business professional options — photographed for Healthgrades, Doximity, and hospital directories.' },
+  { name: 'Legal & Attorneys', orgs: 'San Joaquin County Bar Association, downtown law firms', note: 'Authority-forward headshots for Avvo, Martindale-Hubbell, and firm directories.' },
+  { name: 'Port of Stockton & Logistics', orgs: 'Executives, operations leaders, and logistics professionals', note: 'Executive headshots for LinkedIn, company directories, and press materials.' },
+  { name: 'University of the Pacific', orgs: 'Faculty, administrators, and department leadership', note: 'Academic professional headshots balancing authority with approachability.' },
+  { name: 'Financial Services', orgs: 'Financial advisors, bankers, CPAs, and insurance professionals', note: 'High-trust professional imagery for FINRA profiles, firm websites, and client-facing platforms.' },
+  { name: 'Real Estate', orgs: 'Stockton and San Joaquin County real estate agents', note: 'High-contrast headshots optimized for yard signs, Zillow, Realtor.com, and marketing materials.' },
+];
+
+const services = [
+  { icon: Camera, title: 'In-Studio Headshots', desc: 'Professional session at our Modesto studio — 35 minutes from Stockton. Guided coaching, multiple wardrobe changes, frame review before you leave.', price: '$150 session + $150/image', href: '/premium-headshots' },
+  { icon: Users, title: 'On-Site Team Photography', desc: 'We bring our complete studio to your Stockton office. Your full team photographed in consistent lighting and background without leaving the building.', price: 'Custom quote', href: '/on-site-photography' },
+  { icon: Building2, title: 'Commercial Photography', desc: 'Brand imagery, product, architectural, and marketing visuals for Stockton businesses and commercial real estate.', price: 'Custom quote', href: '/commercial' },
+  { icon: Video, title: 'Video Production', desc: 'Corporate video, brand films, testimonials, and FAA Part 107 certified drone footage for Stockton businesses.', price: 'Custom quote', href: '/video' },
+  { icon: Star, title: 'Event Photography', desc: 'Professional coverage for Stockton corporate events, conferences, award ceremonies, and business gatherings. 24–48 hour delivery.', price: 'Custom quote', href: '/event-photography' },
+  { icon: Camera, title: 'Headshot Booth', desc: 'A professional headshot station set up at your Stockton event or office — high volume, fast-moving, and polished.', price: 'Priced by the hour', href: '/headshot-booth' },
+];
 
 export default function StocktonHeadshotsPage() {
   return (
     <>
-      <SchemaScript schema={generateStocktonSchema()} />
-      <SchemaScript schema={generateStocktonServiceSchema()} />
-      <SchemaScript schema={generateStocktonFAQSchema()} />
+      <SchemaScript schema={{
+        '@context': 'https://schema.org',
+        '@type': 'LocalBusiness',
+        '@id': 'https://rojasphotography.net/stockton-headshots',
+        name: 'Rojas Photography – Stockton Headshots',
+        image: 'https://rojasphotography.net/images/Alfonso+Niomi-0026.jpg',
+        description: 'Professional headshots and photography services for executives, attorneys, and business professionals in Stockton and San Joaquin County.',
+        address: { '@type': 'PostalAddress', addressLocality: 'Modesto', addressRegion: 'CA', postalCode: '95350', addressCountry: 'US' },
+        areaServed: [
+          { '@type': 'City', name: 'Stockton' },
+          { '@type': 'City', name: 'Lodi' },
+          { '@type': 'City', name: 'Tracy' },
+          { '@type': 'City', name: 'Manteca' },
+        ],
+        telephone: '+1-209-380-3727',
+        email: 'alfonso@rojasphotography.net',
+        url: 'https://rojasphotography.net/stockton-headshots',
+        priceRange: '$$',
+        aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', reviewCount: '60' },
+      }} />
+      <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([
         { name: 'Home', url: 'https://rojasphotography.net' },
         { name: 'Stockton Headshots', url: 'https://rojasphotography.net/stockton-headshots' },
       ])} />
+
       <div className="min-h-screen bg-white">
-        <HeroSection
-          image="/images/Hero Image1.jpg"
-          title="Professional Headshots in Stockton, CA"
-          tag="Serving Stockton & San Joaquin County"
-          fullHeight={false}
-        >
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-            <Link
-              href="/discovery-call"
-              className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-            >
-              Book Your Session
-            </Link>
-            <a
-              href="tel:2093803727"
-              className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-            >
-              Call 209-380-3727
-            </a>
+        <HeroSection image="/images/Hero Image1.jpg" title="Professional Headshots in Stockton, CA" tag="Serving Stockton & San Joaquin County | Rojas Photography" objectPosition="center 30%" fullHeight={false}>
+          <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">Your headshot is the first thing Stockton clients, employers, and colleagues see before you ever meet. Make sure it earns the meeting.</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/premium-headshots#booking-heading" className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">Book Your Session</Link>
+            <a href="tel:2093803727" className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">Call 209-380-3727</a>
           </div>
         </HeroSection>
 
         <main id="main-content">
-          {/* Intro Section */}
-          <section className="py-20 md:py-28 px-8 bg-white">
-            <div className="max-w-4xl mx-auto">
-              <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
-                  Corporate Photography Serving Stockton & San Joaquin County
-                </h2>
-                <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6 text-center">
-                  Stockton&apos;s business community is growing fast. From the healthcare professionals at Dignity Health and Dameron Hospital to the legal firms downtown, the executives at the Port of Stockton, and the faculty at University of the Pacific — every professional in Stockton deserves photography that reflects their credibility and expertise.
-                </p>
-                <p className="text-[var(--color-text-body)] leading-relaxed text-center">
-                  Rojas Photography serves Stockton executives, attorneys, business owners, and corporate teams with professional headshots, on-site team photography, commercial photography, video production, and event coverage. Our Modesto studio is just 35-40 minutes away — or we come to you.
-                </p>
-              </SectionReveal>
-            </div>
-          </section>
 
           {/* Stats Bar */}
           <SectionReveal>
-            <section className="py-12 px-8 bg-[var(--color-bg-warm)] border-y border-gray-100">
+            <section className="py-12 px-8 bg-[var(--color-bg-warm)] border-b border-gray-100">
               <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
-                <div>
-                  <p className="text-3xl font-bold text-[var(--color-primary)]">500+</p>
-                  <p className="text-sm text-[var(--color-text-muted)]">Executives Photographed</p>
-                </div>
+                <div><p className="text-3xl font-bold text-[var(--color-primary)]">500+</p><p className="text-sm text-[var(--color-text-muted)]">Professionals Photographed</p></div>
                 <div className="hidden md:block w-px h-10 bg-gray-200" />
-                <div>
-                  <p className="text-3xl font-bold text-[var(--color-primary)]">60+</p>
-                  <p className="text-sm text-[var(--color-text-muted)]">Five-Star Reviews</p>
-                </div>
+                <div><p className="text-3xl font-bold text-[var(--color-primary)]">60+</p><p className="text-sm text-[var(--color-text-muted)]">Five-Star Reviews</p></div>
                 <div className="hidden md:block w-px h-10 bg-gray-200" />
-                <div>
-                  <p className="text-3xl font-bold text-[var(--color-primary)]">15+</p>
-                  <p className="text-sm text-[var(--color-text-muted)]">Years Experience</p>
-                </div>
+                <div><p className="text-3xl font-bold text-[var(--color-primary)]">48 hrs</p><p className="text-sm text-[var(--color-text-muted)]">Delivery Time</p></div>
                 <div className="hidden md:block w-px h-10 bg-gray-200" />
-                <div>
-                  <p className="text-sm text-[var(--color-text-muted)]">Trusted by</p>
-                  <p className="font-semibold text-[var(--color-text-dark)]">
-                    Comcast &middot; Save Mart &middot; CLA
-                  </p>
-                </div>
+                <div><p className="text-sm text-[var(--color-text-muted)]">Trusted by</p><p className="font-semibold text-[var(--color-text-dark)]">Comcast · Save Mart · CLA</p></div>
               </div>
             </section>
           </SectionReveal>
 
-          {/* Services Section */}
-          <section className="py-20 md:py-28 px-8 bg-white">
-            <div className="max-w-6xl mx-auto">
+          {/* Character + Problem */}
+          <section className="py-16 md:py-20 px-8 bg-white">
+            <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Photography Services Available in Stockton
-                  </h2>
-                  <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
-                    Full-service corporate photography for Stockton businesses — from individual headshots to full team shoots and commercial projects.
-                  </p>
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">Stockton Is Growing. Your Professional Image Should Keep Up.</h2>
+                <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
+                  <p>Stockton&apos;s business community is expanding — healthcare systems, logistics at the Port, legal practices, financial services, and a growing tech presence across San Joaquin County. In every one of these industries, your professional image is doing work before you walk in the room.</p>
+                  <p>An outdated photo on LinkedIn, a low-quality headshot on your firm directory, or a mismatched image across platforms quietly signals that you haven&apos;t kept up. It costs you credibility before you have a chance to demonstrate it.</p>
+                  <p>A polished, current headshot from a professional session tells the right story — that you take your work seriously, and you are who you say you are.</p>
                 </div>
               </SectionReveal>
+            </div>
+          </section>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  {
-                    icon: Camera,
-                    title: 'In-Studio Headshots',
-                    desc: 'Professional headshot sessions at our Modesto studio, 35 minutes from Stockton. Guided posing, real-time review, and 48-hour delivery.',
-                    price: '$150 session + $150/image',
-                    href: '/premium-headshots',
-                    cta: 'Learn More',
-                  },
-                  {
-                    icon: Users,
-                    title: 'On-Site Team Photography',
-                    desc: 'We bring our full studio to your Stockton office. We photograph your full team without disrupting the workday — a travel fee applies for on-site visits.',
-                    price: 'Custom pricing',
-                    href: '/on-site-photography',
-                    cta: 'Learn More',
-                  },
-                  {
-                    icon: Building2,
-                    title: 'Commercial Photography',
-                    desc: 'Brand imagery, product photography, architectural shots, and marketing visuals for Stockton businesses and real estate professionals.',
-                    price: 'Custom pricing',
-                    href: '/commercial',
-                    cta: 'Learn More',
-                  },
-                  {
-                    icon: Video,
-                    title: 'Video Production',
-                    desc: 'Corporate video content for Stockton businesses — brand videos, testimonials, product demos, and FAA Part 107 certified drone footage.',
-                    price: 'Custom pricing',
-                    href: '/video',
-                    cta: 'Learn More',
-                  },
-                  {
-                    icon: Star,
-                    title: 'Event Photography',
-                    desc: 'Professional coverage for Stockton corporate events, conferences, award ceremonies, and business gatherings. 24-48 hour turnaround.',
-                    price: 'Custom pricing',
-                    href: '/event-photography',
-                    cta: 'Learn More',
-                  },
-                  {
-                    icon: Camera,
-                    title: 'Headshot Booth',
-                    desc: 'I set up a professional headshot station at your Stockton event or office. High-volume, fast-moving, and polished — every attendee walks away with a photo they\'re proud to use.',
-                    price: 'Priced by the hour',
-                    href: '/headshot-booth',
-                    cta: 'Learn More',
-                  },
-                ].map((service) => (
-                  <SectionReveal key={service.title}>
-                    <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 flex flex-col h-full border border-gray-100 hover:border-[var(--color-primary)] transition-colors duration-300">
-                      <service.icon
-                        size={32}
-                        className="text-[var(--color-primary)] mb-4"
-                        aria-hidden="true"
-                      />
-                      <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">
-                        {service.title}
-                      </h3>
-                      <p className="text-[var(--color-text-body)] text-sm leading-relaxed mb-4 flex-1">
-                        {service.desc}
-                      </p>
-                      <p className="text-sm font-semibold text-[var(--color-primary)] mb-4">
-                        {service.price}
-                      </p>
-                      <Link
-                        href={service.href}
-                        className="btn-outline text-sm font-semibold px-6 py-2.5 rounded-full text-center inline-block"
-                      >
-                        {service.cta}
-                      </Link>
+          {/* Industries */}
+          <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
+            <div className="max-w-5xl mx-auto">
+              <SectionReveal>
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">Serving Stockton&apos;s Professional Community</h2>
+                <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">Every industry in San Joaquin County has its own visual standard. We know what professional credibility looks like in each one.</p>
+              </SectionReveal>
+              <div className="space-y-4">
+                {industries.map(item => (
+                  <SectionReveal key={item.name}>
+                    <div className="bg-white rounded-xl p-6 border border-gray-100">
+                      <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.name}</h3>
+                      <p className="text-sm text-[var(--color-text-muted)] mb-2">{item.orgs}</p>
+                      <p className="text-sm text-[var(--color-text-body)] leading-relaxed">{item.note}</p>
                     </div>
                   </SectionReveal>
                 ))}
@@ -332,51 +161,47 @@ export default function StocktonHeadshotsPage() {
             </div>
           </section>
 
-          {/* Why Stockton Professionals Choose Us */}
-          <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
+          {/* Services */}
+          <section className="py-20 px-8 bg-white">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <div className="text-center mb-16">
-                  <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Why Stockton Professionals Choose Me
-                  </h2>
-                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">Photography Services Available in Stockton</h2>
+                <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">Full-service corporate photography for Stockton businesses — individual headshots through full team and commercial projects.</p>
               </SectionReveal>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {services.map(service => (
+                  <SectionReveal key={service.title}>
+                    <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 flex flex-col h-full border border-gray-100 hover:border-[var(--color-primary)] transition-colors duration-300">
+                      <service.icon size={32} className="text-[var(--color-primary)] mb-4" aria-hidden="true" />
+                      <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">{service.title}</h3>
+                      <p className="text-[var(--color-text-body)] text-sm leading-relaxed mb-4 flex-1">{service.desc}</p>
+                      <p className="text-sm font-semibold text-[var(--color-primary)] mb-4">{service.price}</p>
+                      <Link href={service.href} className="btn-outline text-sm font-semibold px-6 py-2.5 rounded-full text-center inline-block">Learn More</Link>
+                    </div>
+                  </SectionReveal>
+                ))}
+              </div>
+            </div>
+          </section>
 
-              <div className="grid md:grid-cols-2 gap-10">
+          {/* The Plan — 3 steps */}
+          <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
+            <div className="max-w-4xl mx-auto">
+              <SectionReveal>
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">How It Works</h2>
+                <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-xl mx-auto">Three steps. No awkwardness. Images you will actually use.</p>
+              </SectionReveal>
+              <div className="grid md:grid-cols-3 gap-6">
                 {[
-                  {
-                    title: 'I Understand the Stockton Business Community',
-                    desc: 'From healthcare professionals at Dignity Health and St. Joseph\'s Medical Center, to attorneys at downtown law firms, to executives at Port of Stockton — I understand what Stockton\'s business leaders need from their professional image.',
-                  },
-                  {
-                    title: 'Corporate Experience You Can See',
-                    desc: 'I\'m Alfonso Rojas, and I bring 15+ years of corporate leadership experience to every session. I know how executives think and what they need. You\'re not just hiring a photographer — you\'re working with someone who\'s been in the boardroom.',
-                  },
-                  {
-                    title: 'In-Studio or I Come to You',
-                    desc: 'My professional studio is 35-40 minutes from downtown Stockton. I\'m also happy to travel to your Stockton location — for individuals or your entire team. A travel fee applies for on-site visits.',
-                  },
-                  {
-                    title: 'Real Results, Real Fast',
-                    desc: 'Most Stockton clients receive their professionally edited headshots within 48 hours. On-site team photography delivers in 24 hours. Professional imagery that makes an impact, delivered when you need it.',
-                  },
-                ].map((item) => (
-                  <SectionReveal key={item.title}>
-                    <div className="flex gap-4">
-                      <CheckCircle2
-                        size={22}
-                        className="text-[var(--color-primary)] flex-shrink-0 mt-1"
-                        aria-hidden="true"
-                      />
-                      <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-2">
-                          {item.title}
-                        </h3>
-                        <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                          {item.desc}
-                        </p>
-                      </div>
+                  { step: '1', title: 'Book Online', desc: 'Schedule your session at rojasphotography.net. Choose in-studio (Modesto) or request an on-site quote for your Stockton location.' },
+                  { step: '2', title: 'Get Coached', desc: 'Alfonso guides your expression, posture, and energy throughout the session. You leave looking like the professional you are — not stiff or forced.' },
+                  { step: '3', title: 'Receive Your Images', desc: 'Review your best frames before you leave. Professionally edited images delivered within 48 hours. Ready for LinkedIn, your firm directory, and everywhere else.' },
+                ].map(item => (
+                  <SectionReveal key={item.step}>
+                    <div className="bg-white rounded-xl p-8 border border-gray-100 text-center h-full">
+                      <div className="w-12 h-12 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">{item.step}</div>
+                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-3">{item.title}</h3>
+                      <p className="text-sm text-[var(--color-text-body)] leading-relaxed">{item.desc}</p>
                     </div>
                   </SectionReveal>
                 ))}
@@ -386,119 +211,68 @@ export default function StocktonHeadshotsPage() {
 
           {/* Portfolio Preview */}
           <section className="py-20 px-8 bg-white">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">
-                  My Work
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">The Work</h2>
               </SectionReveal>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {[
-                  { src: '/images/Gina-0026 (1).jpg', alt: 'Professional headshot - Stockton executive woman' },
-                  { src: '/images/Miguel-(2 of 6) (1).jpg', alt: 'Corporate headshot - Stockton executive man' },
-                  { src: '/images/Joyce-0029.jpg', alt: 'Business headshot - Stockton professional woman' },
-                ].map((img) => (
-                  <SectionReveal
-                    key={img.src}
-                    className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative"
-                  >
-                    <Image
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      sizes="(max-width: 768px) 50vw, 33vw"
-                      className="object-cover"
-                    />
+                  { src: '/images/Gina-0026 (1).jpg', alt: 'Professional headshot — Stockton executive' },
+                  { src: '/images/Miguel-(2 of 6) (1).jpg', alt: 'Corporate headshot — Stockton business professional' },
+                  { src: '/images/Joyce-0029.jpg', alt: 'Business headshot — Stockton professional' },
+                ].map(img => (
+                  <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden aspect-[3/4] relative">
+                    <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 50vw, 33vw" className="object-cover" />
                   </SectionReveal>
                 ))}
               </div>
             </div>
           </section>
 
-          {/* SB7: Success Vision */}
-          <section className="py-20 px-8 bg-white">
-            <div className="max-w-4xl mx-auto text-center">
+          {/* Success Vision */}
+          <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
+            <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
-                  Imagine Having a Headshot That Actually Matches Your Professional Reputation
-                </h2>
-                <p className="text-lg text-[var(--color-text-body)] leading-relaxed max-w-2xl mx-auto">
-                  Imagine a profile photo that makes clients feel confident before they ever reach out. One that looks like the professional you are — polished, approachable, credible. That&apos;s what I deliver for every Stockton professional I work with.
-                </p>
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">What a Great Headshot Does for You</h2>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {[
+                    'Your LinkedIn profile earns views, connection requests, and messages from the right people',
+                    'Clients and employers feel confident before they ever reach out',
+                    'Your image on your firm directory, website, and marketing materials is consistent and current',
+                    'You look like who you actually are — a credible, capable professional',
+                  ].map(item => (
+                    <div key={item} className="flex gap-3 p-5 bg-white rounded-xl border border-gray-100">
+                      <CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
+                      <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
               </SectionReveal>
             </div>
           </section>
 
           {/* Testimonials */}
-          <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
+          <section className="py-20 px-8 bg-white">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
-                  What Clients Say
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">What Clients Say</h2>
               </SectionReveal>
               <div className="grid md:grid-cols-3 gap-6">
                 <SectionReveal>
-                  <TestimonialCard
-                    name="Catherine Luke"
-                    role="CEO"
-                    quote="Professional, efficient, and high-quality. Within days, our new employee had a corporate headshot ready for our website and LinkedIn. Highly recommended for any business."
-                  />
+                  <TestimonialCard name="Catherine Luke" role="CEO" quote="Professional, efficient, and high-quality. Within days, our new employee had a corporate headshot ready for our website and LinkedIn. Highly recommended for any business." />
                 </SectionReveal>
                 <SectionReveal>
-                  <TestimonialCard
-                    name="Joyce Ulrich"
-                    role="Entrepreneur, Modesto"
-                    quote="Alfonso and Niomi create a comfortable environment that puts you at ease immediately. The professional headshots turned out beautifully—exactly what I needed for my business."
-                  />
+                  <TestimonialCard name="Joyce Ulrich" role="Entrepreneur, Modesto" quote="Alfonso and Niomi create a comfortable environment that puts you at ease immediately. The professional headshots turned out beautifully — exactly what I needed for my business." />
                 </SectionReveal>
                 <SectionReveal>
-                  <TestimonialCard
-                    name="Courtnay Lynch"
-                    role="VP of People & Culture, Valley First Credit Union"
-                    quote="Alfonso and Niomi captured our corporate event beautifully. Professional, responsive, easy to work with. They understand business and deliver results."
-                  />
+                  <TestimonialCard name="Courtnay Lynch" role="VP of People & Culture, Valley First Credit Union" quote="Alfonso and Niomi captured our corporate event beautifully. Professional, responsive, easy to work with. They understand business and deliver results." />
                 </SectionReveal>
               </div>
             </div>
           </section>
 
-          {/* FAQ */}
-          <FAQSection
-            faqs={[
-              {
-                question: 'Do you offer professional headshots in Stockton, CA?',
-                answer:
-                  'Yes! I regularly serve business professionals and executives across Stockton and San Joaquin County. I offer both in-studio sessions at my Modesto studio (35-40 minutes from Stockton) and on-site photography at your Stockton office or business location. Most Stockton clients choose the in-studio option for the best quality results.',
-              },
-              {
-                question: 'How far is your studio from Stockton?',
-                answer:
-                  'My professional studio is located in Modesto, approximately 35-40 minutes from downtown Stockton via Highway 99. Many Stockton clients make the short drive for the controlled studio environment with professional lighting and backdrops. I\'m also happy to travel to your Stockton location for on-site sessions — a travel fee applies. Contact me and I\'ll build a plan that works for you.',
-              },
-              {
-                question: 'What do headshot sessions cost for Stockton professionals?',
-                answer:
-                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no pressure. For Stockton teams needing on-site photography, pricing is customized based on your needs. Contact me for a personalized quote.',
-              },
-              {
-                question: 'Do you photograph Stockton corporate events and teams?',
-                answer:
-                  'Absolutely! I serve Stockton businesses across all industries — healthcare, legal, financial services, and corporate teams throughout San Joaquin County. My on-site photography brings my complete studio setup to your Stockton location so your full team gets polished headshots without disrupting the workday. Edited images delivered within 24 hours.',
-              },
-              {
-                question: 'Why do Stockton professionals choose Rojas Photography?',
-                answer:
-                  'Stockton professionals choose me because I understand business. With 15+ years of corporate leadership experience, I\'ve helped 500+ executives across the Central Valley present themselves with confidence. I have 60+ Five-Star reviews and am trusted by organizations like Comcast, Save Mart, and the California Lawyers Association. My guided sessions make professional photography comfortable and stress-free.',
-              },
-            ]}
-            heading="Stockton Headshot Questions Answered"
-          />
-
-          <CTASection
-            heading="Ready to Book Your Stockton Headshot Session?"
-            subheading="Join 500+ Central Valley professionals who trust Rojas Photography. In-studio in Modesto or on-site at your Stockton location."
-          />
+          <FAQSection faqs={faqs} heading="Stockton Headshots — Frequently Asked Questions" />
+          <CTASection heading="Ready to Book Your Stockton Headshot?" subheading="$150 session. Expression coaching included. 48-hour delivery. In-studio in Modesto or on-site at your Stockton location." primaryLabel="Book Your Session" primaryHref="/premium-headshots#booking-heading" showContactInfo={false} />
         </main>
       </div>
     </>

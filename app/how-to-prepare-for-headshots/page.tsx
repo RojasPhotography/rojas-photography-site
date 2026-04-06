@@ -254,8 +254,11 @@ export default function HowToPrepareForHeadshotsPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
                   What to Wear for Your Professional Headshot
                 </h2>
-                <p className="text-center text-[var(--color-text-body)] mb-14 max-w-2xl mx-auto text-lg">
+                <p className="text-center text-[var(--color-text-body)] mb-6 max-w-2xl mx-auto text-lg">
                   Clothing is one of the most controllable factors in your headshot results.
+                </p>
+                <p className="text-center mb-12">
+                  <Link href="/what-to-wear-for-a-headshot" className="text-[var(--color-primary)] underline text-sm font-medium">See the complete wardrobe guide — including industry-by-industry recommendations →</Link>
                 </p>
               </SectionReveal>
 
@@ -301,6 +304,16 @@ export default function HowToPrepareForHeadshotsPage() {
                   </p>
                 </div>
               </SectionReveal>
+            </div>
+          </section>
+
+          {/* Not sure which photographer to choose? */}
+          <section className="py-10 px-8 bg-white border-b border-gray-100">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-[var(--color-text-body)]">
+                Not sure how to evaluate photographers before you book?{' '}
+                <Link href="/how-to-choose-a-headshot-photographer" className="text-[var(--color-primary)] underline font-medium">Read the complete guide to choosing a headshot photographer →</Link>
+              </p>
             </div>
           </section>
 
