@@ -63,12 +63,12 @@ const industries = [
 ];
 
 const services = [
-  { icon: Camera, title: 'In-Studio Headshots', desc: 'Professional session at our Modesto studio — 35 minutes from Stockton. Guided coaching, multiple wardrobe changes, frame review before you leave.', price: '$150 session + $150/image', href: '/premium-headshots' },
-  { icon: Users, title: 'On-Site Team Photography', desc: 'We bring our complete studio to your Stockton office. Your full team photographed in consistent lighting and background without leaving the building.', price: 'Custom quote', href: '/on-site-photography' },
-  { icon: Building2, title: 'Commercial Photography', desc: 'Brand imagery, product, architectural, and marketing visuals for Stockton businesses and commercial real estate.', price: 'Custom quote', href: '/commercial' },
-  { icon: Video, title: 'Video Production', desc: 'Corporate video, brand films, testimonials, and FAA Part 107 certified drone footage for Stockton businesses.', price: 'Custom quote', href: '/video' },
-  { icon: Star, title: 'Event Photography', desc: 'Professional coverage for Stockton corporate events, conferences, award ceremonies, and business gatherings. 24–48 hour delivery.', price: 'Custom quote', href: '/event-photography' },
-  { icon: Camera, title: 'Headshot Booth', desc: 'A professional headshot station set up at your Stockton event or office — high volume, fast-moving, and polished.', price: 'Priced by the hour', href: '/headshot-booth' },
+  { icon: Camera, title: 'In-Studio Headshots', desc: 'Professional session at our Modesto studio — 35 minutes from Stockton. Guided coaching, multiple wardrobe changes, frame review before you leave.', price: '$150 session + $150/image', href: '/premium-headshots', img: '/images/headshots/headshot-ceo-nutrition.jpg', alt: 'Professional headshot session' },
+  { icon: Users, title: 'On-Site Team Photography', desc: 'We bring our complete studio to your Stockton office. Your full team photographed in consistent lighting and background without leaving the building.', price: 'Custom quote', href: '/on-site-photography', img: '/images/BB Individual Headshot Session.png', alt: 'On-site team headshot photography' },
+  { icon: Building2, title: 'Commercial Photography', desc: 'Brand imagery, product, architectural, and marketing visuals for Stockton businesses and commercial real estate.', price: 'Custom quote', href: '/commercial', img: '/images/DoctorOffice 4.jpg', alt: 'Commercial photography for businesses' },
+  { icon: Video, title: 'Video Production', desc: 'Corporate video, brand films, testimonials, and FAA Part 107 certified drone footage for Stockton businesses.', price: 'Custom quote', href: '/video', img: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production' },
+  { icon: Star, title: 'Event Photography', desc: 'Professional coverage for Stockton corporate events, conferences, award ceremonies, and business gatherings. 24–48 hour delivery.', price: 'Custom quote', href: '/event-photography', img: '/images/CLA AM 25 335.jpg', alt: 'Corporate event photography coverage' },
+  { icon: Camera, title: 'Headshot Booth', desc: 'A professional headshot station set up at your Stockton event or office — high volume, fast-moving, and polished.', price: 'Priced by the hour', href: '/headshot-booth', img: '/images/kaiser-bts-headshots1.jpeg', alt: 'Headshot booth at corporate event' },
 ];
 
 export default function StocktonHeadshotsPage() {
@@ -171,13 +171,21 @@ export default function StocktonHeadshotsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {services.map(service => (
                   <SectionReveal key={service.title}>
-                    <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 flex flex-col h-full border border-gray-100 hover:border-[var(--color-primary)] transition-colors duration-300">
-                      <service.icon size={32} className="text-[var(--color-primary)] mb-4" aria-hidden="true" />
-                      <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">{service.title}</h3>
-                      <p className="text-[var(--color-text-body)] text-sm leading-relaxed mb-4 flex-1">{service.desc}</p>
-                      <p className="text-sm font-semibold text-[var(--color-primary)] mb-4">{service.price}</p>
-                      <Link href={service.href} className="btn-outline text-sm font-semibold px-6 py-2.5 rounded-full text-center inline-block">Learn More</Link>
-                    </div>
+                    <Link href={service.href} aria-label={`Learn more about ${service.title}`} className="block group">
+                      <div className="relative h-[380px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                        <Image src={service.img} alt={service.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
+                        <div className="relative z-10 p-8 h-full flex flex-col justify-end">
+                          <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                            <service.icon className="text-white" size={24} aria-hidden="true" />
+                          </div>
+                          <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                          <p className="text-white/90 text-sm leading-relaxed mb-3">{service.desc}</p>
+                          <p className="text-white/70 text-xs mb-3">{service.price}</p>
+                          <span className="text-white font-semibold text-sm group-hover:underline">Learn More →</span>
+                        </div>
+                      </div>
+                    </Link>
                   </SectionReveal>
                 ))}
               </div>

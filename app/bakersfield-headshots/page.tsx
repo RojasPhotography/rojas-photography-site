@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { CheckCircle2 } from 'lucide-react';
+import Image from 'next/image';
+import { Camera, Users, Building2, Video, Star } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import TestimonialCard from '../components/TestimonialCard';
@@ -61,12 +62,12 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { name: 'In-Studio Headshots', detail: 'Studio in Modesto, CA — $150 session + $150/image' },
-  { name: 'On-Site Team Photography', detail: 'We come to you in Bakersfield — custom quote by team size' },
-  { name: 'Commercial Photography', detail: 'Product, brand, and architectural photography — custom quote' },
-  { name: 'Video Production', detail: 'Corporate video, testimonials, drone — custom quote' },
-  { name: 'Event Photography', detail: 'Conferences, galas, corporate events — custom quote' },
-  { name: 'Headshot Booth', detail: 'Live event headshot booth — hourly rates' },
+  { icon: Camera, name: 'In-Studio Headshots', detail: 'Studio in Modesto, CA — $150 session + $150/image', href: '/premium-headshots', img: '/images/headshots/headshot-ceo-nutrition.jpg', alt: 'Professional headshot session' },
+  { icon: Users, name: 'On-Site Team Photography', detail: 'We bring our full portable studio to you in Bakersfield — custom quote by team size', href: '/on-site-photography', img: '/images/BB Individual Headshot Session.png', alt: 'On-site team headshot photography' },
+  { icon: Building2, name: 'Commercial Photography', detail: 'Product, brand, and architectural photography — custom quote', href: '/commercial', img: '/images/DoctorOffice 4.jpg', alt: 'Commercial photography for businesses' },
+  { icon: Video, name: 'Video Production', detail: 'Corporate video, testimonials, drone — custom quote', href: '/video', img: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production' },
+  { icon: Star, name: 'Event Photography', detail: 'Conferences, galas, corporate events — custom quote', href: '/event-photography', img: '/images/CLA AM 25 335.jpg', alt: 'Corporate event photography coverage' },
+  { icon: Camera, name: 'Headshot Booth', detail: 'Live event headshot booth — hourly rates', href: '/headshot-booth', img: '/images/kaiser-bts-headshots1.jpeg', alt: 'Headshot booth at corporate event' },
 ];
 
 const reasons = [
@@ -121,15 +122,20 @@ export default function BakersfieldHeadshotsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
                 {services.map(s => (
                   <SectionReveal key={s.name}>
-                    <div className="bg-[var(--color-bg-warm)] rounded-xl p-6 border border-gray-100 h-full">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
-                        <div>
-                          <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{s.name}</h3>
-                          <p className="text-sm text-[var(--color-text-body)]">{s.detail}</p>
+                    <Link href={s.href} aria-label={`Learn more about ${s.name}`} className="block group">
+                      <div className="relative h-[340px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
+                        <Image src={s.img} alt={s.alt} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80" />
+                        <div className="relative z-10 p-7 h-full flex flex-col justify-end">
+                          <div className="w-11 h-11 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
+                            <s.icon className="text-white" size={22} aria-hidden="true" />
+                          </div>
+                          <h3 className="text-lg font-bold text-white mb-2">{s.name}</h3>
+                          <p className="text-white/80 text-sm leading-relaxed mb-3">{s.detail}</p>
+                          <span className="text-white font-semibold text-sm group-hover:underline">Learn More →</span>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                   </SectionReveal>
                 ))}
               </div>
