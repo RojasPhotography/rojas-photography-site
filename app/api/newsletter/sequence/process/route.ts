@@ -48,7 +48,9 @@ export async function POST(request: Request) {
   let failed = 0;
 
   for (const item of dueItems) {
-    const seqEmail = item.sequence_emails as {
+    const seqEmail = (Array.isArray(item.sequence_emails)
+      ? item.sequence_emails[0]
+      : item.sequence_emails) as {
       id: number;
       position: number;
       subject: string;
