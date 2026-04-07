@@ -292,10 +292,10 @@ export default function NewsletterAdmin() {
         if (seqEmail.json_content) {
           bee.load(JSON.parse(seqEmail.json_content));
         } else {
-          bee.load({});
+          bee.load({ page: { rows: [] }, comments: [] } as unknown as Parameters<typeof bee.load>[0]);
         }
       } catch {
-        bee.load({});
+        bee.load({ page: { rows: [] }, comments: [] } as unknown as Parameters<typeof bee.load>[0]);
       }
     }
 
@@ -535,7 +535,7 @@ export default function NewsletterAdmin() {
                       setSequenceSubject('');
                       setHtmlContent('');
                       setJsonContent('');
-                      if (bee) bee.load({});
+                      if (bee) bee.load({ page: { rows: [] }, comments: [] } as unknown as Parameters<typeof bee.load>[0]);
                     }}
                     className="px-3 py-2 rounded-xl border border-gray-200 text-sm text-[var(--color-text-muted)] hover:bg-gray-50 transition-colors"
                   >
