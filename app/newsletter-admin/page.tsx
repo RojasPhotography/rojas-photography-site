@@ -62,6 +62,7 @@ export default function NewsletterAdmin() {
   const [editingSequenceId, setEditingSequenceId] = useState<number | null>(null);
   const [sequenceSubject, setSequenceSubject] = useState('');
   const [sequenceSaveStatus, setSequenceSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
+  const [sequenceTestStatus, setSequenceTestStatus] = useState<Record<number, 'idle' | 'loading' | 'sent' | 'error'>>({});
   const pendingSequenceSave = useRef(false);
 
   const [bee, setBee] = useState<BeefreeSDK | null>(null);
@@ -318,6 +319,27 @@ export default function NewsletterAdmin() {
       body: JSON.stringify({ password, id, is_active }),
     });
     loadSequence();
+  }
+
+  async function sendSequenceTest(seqEmail: SequenceEmail) {
+    if (!seqEmail.html_content) return;
+    setSequenceTestStatus((prev) => ({ ...prev, [seqEmail.id]: 'loading' }));
+    try {
+      const res = await fetch('/api/newsletter/test-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          password,
+          subject: seqEmail.subject,
+          html_content: seqEmail.html_content,
+        }),
+      });
+      setSequenceTestStatus((prev) => ({ ...prev, [seqEmail.id]: res.ok ? 'sent' : 'error' }));
+      setTimeout(() => setSequenceTestStatus((prev) => ({ ...prev, [seqEmail.id]: 'idle' })), 4000);
+    } catch {
+      setSequenceTestStatus((prev) => ({ ...prev, [seqEmail.id]: 'error' }));
+      setTimeout(() => setSequenceTestStatus((prev) => ({ ...prev, [seqEmail.id]: 'idle' })), 4000);
+    }
   }
 
   async function handleTestEmail() {
@@ -685,6 +707,18 @@ export default function NewsletterAdmin() {
 
                     {/* Actions */}
                     <div className="flex items-center gap-2 flex-shrink-0">
+                      {seqEmail.html_content && (
+                        <button
+                          onClick={() => sendSequenceTest(seqEmail)}
+                          disabled={sequenceTestStatus[seqEmail.id] === 'loading'}
+                          className="px-3 py-1 text-xs rounded-full border border-blue-200 text-blue-700 hover:bg-blue-50 font-medium transition-colors disabled:opacity-60"
+                        >
+                          {sequenceTestStatus[seqEmail.id] === 'loading' ? 'Sending...' :
+                           sequenceTestStatus[seqEmail.id] === 'sent' ? '✓ Sent!' :
+                           sequenceTestStatus[seqEmail.id] === 'error' ? 'Failed' :
+                           'Send Test'}
+                        </button>
+                      )}
                       <button
                         onClick={() => toggleSequenceEmail(seqEmail.id, !seqEmail.is_active)}
                         className={`px-3 py-1 text-xs rounded-full border font-medium transition-colors ${
