@@ -35,7 +35,7 @@ export default function NewsletterSlideIn() {
       const res = await fetch('/api/newsletter/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name }),
+        body: JSON.stringify({ email, name, source_page: window.location.pathname }),
       });
       const data = await res.json();
       if (res.ok || data.error === 'Already subscribed') {

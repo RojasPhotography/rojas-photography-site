@@ -14,7 +14,7 @@ export default function NewsletterFooterForm() {
       const res = await fetch('/api/newsletter/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name }),
+        body: JSON.stringify({ email, name, source_page: window.location.pathname }),
       });
       setStatus(res.ok ? 'success' : 'error');
     } catch {

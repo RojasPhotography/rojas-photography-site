@@ -26,6 +26,17 @@ interface Subscriber {
   subscribed_at: string;
 }
 
+interface SequenceEmail {
+  id: number;
+  position: number;
+  delay_days: number;
+  subject: string;
+  html_content: string | null;
+  json_content: string | null;
+  is_active: boolean;
+  stats: { pending: number; sent: number };
+}
+
 export default function NewsletterAdmin() {
   const [password, setPassword] = useState('');
   const [authenticated, setAuthenticated] = useState(false);
@@ -45,6 +56,13 @@ export default function NewsletterAdmin() {
 
   const [history, setHistory] = useState<SentNewsletter[]>([]);
   const [showHistory, setShowHistory] = useState(false);
+
+  const [sequenceEmails, setSequenceEmails] = useState<SequenceEmail[]>([]);
+  const [showSequence, setShowSequence] = useState(false);
+  const [editingSequenceId, setEditingSequenceId] = useState<number | null>(null);
+  const [sequenceSubject, setSequenceSubject] = useState('');
+  const [sequenceSaveStatus, setSequenceSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
+  const pendingSequenceSave = useRef(false);
 
   const [bee, setBee] = useState<BeefreeSDK | null>(null);
   const [editorReady, setEditorReady] = useState(false);
@@ -88,6 +106,12 @@ export default function NewsletterAdmin() {
     if (Array.isArray(data)) setSubscribers(data);
   }, [password]);
 
+  const loadSequence = useCallback(async () => {
+    const res = await fetch(`/api/newsletter/sequence?password=${encodeURIComponent(password)}`);
+    const data = await res.json();
+    if (Array.isArray(data)) setSequenceEmails(data);
+  }, [password]);
+
   const loadHistory = useCallback(async () => {
     const res = await fetch('/api/newsletter/drafts?status=sent');
     const data = await res.json();
@@ -128,6 +152,10 @@ export default function NewsletterAdmin() {
             if (pendingDraftSave.current) {
               pendingDraftSave.current = false;
               saveDraftWithContent(pageJson, pageHtml);
+            }
+            if (pendingSequenceSave.current) {
+              pendingSequenceSave.current = false;
+              saveSequenceEmailWithContent(pageJson, pageHtml);
             }
           },
           onSaveAsTemplate: (_pageJson: string) => {},
@@ -221,6 +249,75 @@ export default function NewsletterAdmin() {
       setJsonContent('');
     }
     loadDrafts();
+  }
+
+  async function saveSequenceEmailWithContent(json: string, html: string) {
+    if (editingSequenceId === null) return;
+    setSequenceSaveStatus('saving');
+    try {
+      const res = await fetch('/api/newsletter/sequence', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          password,
+          id: editingSequenceId,
+          subject: sequenceSubject,
+          html_content: html,
+          json_content: json,
+        }),
+      });
+      if (res.ok) {
+        setSequenceSaveStatus('saved');
+        loadSequence();
+        setTimeout(() => setSequenceSaveStatus('idle'), 3000);
+      } else {
+        setSequenceSaveStatus('error');
+      }
+    } catch {
+      setSequenceSaveStatus('error');
+    }
+  }
+
+  function editSequenceEmail(seqEmail: SequenceEmail) {
+    setEditingSequenceId(seqEmail.id);
+    setSequenceSubject(seqEmail.subject);
+    setCurrentDraftId(null);
+    setSubject('');
+    setHtmlContent('');
+    setJsonContent('');
+    setShowSequence(false);
+
+    if (bee) {
+      try {
+        if (seqEmail.json_content) {
+          bee.load(JSON.parse(seqEmail.json_content));
+        } else {
+          bee.load({});
+        }
+      } catch {
+        bee.load({});
+      }
+    }
+
+    // Scroll to editor
+    setTimeout(() => {
+      document.getElementById('beefree-editor')?.scrollIntoView({ behavior: 'smooth' });
+    }, 100);
+  }
+
+  function saveSequenceEmail() {
+    if (!bee) return;
+    pendingSequenceSave.current = true;
+    bee.save();
+  }
+
+  async function toggleSequenceEmail(id: number, is_active: boolean) {
+    await fetch('/api/newsletter/sequence', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password, id, is_active }),
+    });
+    loadSequence();
   }
 
   async function handleTestEmail() {
@@ -351,12 +448,27 @@ export default function NewsletterAdmin() {
             </div>
 
             <div className="flex items-center gap-3 flex-wrap">
+              {/* Sequence button */}
+              <button
+                onClick={() => {
+                  setShowSequence(!showSequence);
+                  setShowSubscribers(false);
+                  setShowDrafts(false);
+                  setShowHistory(false);
+                  if (!showSequence) loadSequence();
+                }}
+                className={`px-4 py-2 rounded-xl border text-sm font-medium transition-colors ${showSequence ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]' : 'border-gray-200 text-[var(--color-text-dark)] hover:bg-gray-50'}`}
+              >
+                Welcome Sequence
+              </button>
+
               {/* Subscribers button */}
               <button
                 onClick={() => {
                   setShowSubscribers(!showSubscribers);
                   setShowDrafts(false);
                   setShowHistory(false);
+                  setShowSequence(false);
                   if (!showSubscribers) loadSubscribers();
                 }}
                 className="relative px-4 py-2 rounded-xl border border-gray-200 text-sm font-medium text-[var(--color-text-dark)] hover:bg-gray-50 transition-colors"
@@ -373,6 +485,7 @@ export default function NewsletterAdmin() {
                   setShowHistory(!showHistory);
                   setShowDrafts(false);
                   setShowSubscribers(false);
+                  setShowSequence(false);
                   if (!showHistory) loadHistory();
                 }}
                 className="px-4 py-2 rounded-xl border border-gray-200 text-sm font-medium text-[var(--color-text-dark)] hover:bg-gray-50 transition-colors"
@@ -386,6 +499,7 @@ export default function NewsletterAdmin() {
                   setShowDrafts(!showDrafts);
                   setShowSubscribers(false);
                   setShowHistory(false);
+                  setShowSequence(false);
                 }}
                 className="relative px-4 py-2 rounded-xl border border-gray-200 text-sm font-medium text-[var(--color-text-dark)] hover:bg-gray-50 transition-colors"
               >
@@ -395,7 +509,43 @@ export default function NewsletterAdmin() {
                 )}
               </button>
 
-              {/* Save Draft button */}
+              {/* Sequence email editing controls */}
+              {editingSequenceId !== null && (
+                <>
+                  <span className="text-xs text-[var(--color-text-muted)] hidden sm:inline">
+                    Editing: <strong>Email {sequenceEmails.find(e => e.id === editingSequenceId)?.position}</strong>
+                  </span>
+                  <input
+                    type="text"
+                    value={sequenceSubject}
+                    onChange={(e) => setSequenceSubject(e.target.value)}
+                    placeholder="Sequence email subject..."
+                    className="px-4 py-2 rounded-xl border border-amber-300 bg-amber-50 focus:outline-none focus:ring-2 focus:ring-amber-400 w-64 text-sm"
+                  />
+                  <button
+                    onClick={saveSequenceEmail}
+                    disabled={sequenceSaveStatus === 'saving'}
+                    className="px-4 py-2 rounded-xl border border-amber-400 bg-amber-50 text-sm font-medium text-amber-800 hover:bg-amber-100 transition-colors disabled:opacity-60"
+                  >
+                    {sequenceSaveStatus === 'saving' ? 'Saving...' : sequenceSaveStatus === 'saved' ? '✓ Saved!' : 'Save Sequence Email'}
+                  </button>
+                  <button
+                    onClick={() => {
+                      setEditingSequenceId(null);
+                      setSequenceSubject('');
+                      setHtmlContent('');
+                      setJsonContent('');
+                      if (bee) bee.load({});
+                    }}
+                    className="px-3 py-2 rounded-xl border border-gray-200 text-sm text-[var(--color-text-muted)] hover:bg-gray-50 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                </>
+              )}
+
+              {/* Save Draft button — hidden when editing sequence email */}
+              {editingSequenceId === null && (
               <button
                 onClick={saveDraft}
                 disabled={status === 'saving'}
@@ -403,6 +553,7 @@ export default function NewsletterAdmin() {
               >
                 {status === 'saving' ? 'Saving...' : currentDraftId ? 'Update Draft' : 'Save Draft'}
               </button>
+              )}
 
               {/* Test Email button */}
               <button
@@ -475,6 +626,93 @@ export default function NewsletterAdmin() {
           )}
         </div>
       </div>
+
+      {/* Welcome Sequence Panel */}
+      {showSequence && (
+        <div className="max-w-7xl mx-auto px-6 pt-4">
+          <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+            <div className="flex items-center justify-between mb-2">
+              <h2 className="font-bold text-[var(--color-text-dark)]">Welcome Sequence</h2>
+              <span className="text-xs text-[var(--color-text-muted)]">Emails are sent automatically after signup</span>
+            </div>
+            <p className="text-sm text-[var(--color-text-muted)] mb-5">
+              Each new subscriber automatically receives these emails on a drip schedule. Click <strong>Edit</strong> on any email to open it in the visual editor below.
+            </p>
+
+            {sequenceEmails.length === 0 ? (
+              <p className="text-sm text-[var(--color-text-muted)]">No sequence emails found. Run the Supabase setup SQL first.</p>
+            ) : (
+              <div className="space-y-3">
+                {sequenceEmails.map((seqEmail) => (
+                  <div
+                    key={seqEmail.id}
+                    className={`flex items-center gap-4 p-4 rounded-xl border transition-colors ${editingSequenceId === seqEmail.id ? 'border-amber-300 bg-amber-50' : 'border-gray-100 hover:bg-gray-50'}`}
+                  >
+                    {/* Position badge */}
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[var(--color-primary)] text-white flex flex-col items-center justify-center">
+                      <span className="text-xs font-bold leading-none">Email</span>
+                      <span className="text-lg font-bold leading-none">{seqEmail.position}</span>
+                    </div>
+
+                    {/* Info */}
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <p className="font-medium text-[var(--color-text-dark)] text-sm truncate">
+                          {seqEmail.subject || <em className="text-gray-400">No subject set</em>}
+                        </p>
+                        {!seqEmail.is_active && (
+                          <span className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full">Disabled</span>
+                        )}
+                        {editingSequenceId === seqEmail.id && (
+                          <span className="text-xs bg-amber-200 text-amber-800 px-2 py-0.5 rounded-full font-medium">Editing</span>
+                        )}
+                      </div>
+                      <div className="flex items-center gap-4 mt-1 text-xs text-[var(--color-text-muted)]">
+                        <span>
+                          {seqEmail.position === 1
+                            ? 'Sent immediately on signup'
+                            : `Sent ${seqEmail.delay_days} days after signup`}
+                        </span>
+                        <span>{seqEmail.stats.sent} sent</span>
+                        {seqEmail.stats.pending > 0 && (
+                          <span className="text-amber-600">{seqEmail.stats.pending} queued</span>
+                        )}
+                        {!seqEmail.html_content && (
+                          <span className="text-red-500">No content yet</span>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Actions */}
+                    <div className="flex items-center gap-2 flex-shrink-0">
+                      <button
+                        onClick={() => toggleSequenceEmail(seqEmail.id, !seqEmail.is_active)}
+                        className={`px-3 py-1 text-xs rounded-full border font-medium transition-colors ${
+                          seqEmail.is_active
+                            ? 'border-gray-200 text-gray-500 hover:bg-gray-100'
+                            : 'border-green-200 text-green-700 hover:bg-green-50'
+                        }`}
+                      >
+                        {seqEmail.is_active ? 'Disable' : 'Enable'}
+                      </button>
+                      <button
+                        onClick={() => editSequenceEmail(seqEmail)}
+                        className="px-3 py-1 text-xs font-semibold bg-[var(--color-primary)] text-white rounded-full hover:opacity-90 transition-opacity"
+                      >
+                        Edit
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <p className="text-xs text-[var(--color-text-muted)] mt-4">
+              Tip: Use <code className="bg-gray-100 px-1 rounded">&#123;&#123;first_name&#125;&#125;</code> anywhere in the email body to personalize with the subscriber&apos;s first name.
+            </p>
+          </div>
+        </div>
+      )}
 
       {/* Subscribers Panel */}
       {showSubscribers && (
@@ -629,10 +867,17 @@ export default function NewsletterAdmin() {
         </div>
       )}
 
-      {editorReady && !htmlContent && (
+      {editorReady && !htmlContent && editingSequenceId === null && (
         <div className="max-w-7xl mx-auto px-6 pt-4">
           <div className="bg-blue-50 border border-blue-200 rounded-xl px-4 py-3 text-blue-800 text-sm">
-            💡 Design your email below, then click <strong>Save</strong> in the editor toolbar. Send yourself a test email before sending to all subscribers.
+            💡 Design a newsletter below and hit <strong>Send Newsletter</strong>, or open <strong>Welcome Sequence</strong> to edit your automated drip emails.
+          </div>
+        </div>
+      )}
+      {editorReady && editingSequenceId !== null && (
+        <div className="max-w-7xl mx-auto px-6 pt-4">
+          <div className="bg-amber-50 border border-amber-200 rounded-xl px-4 py-3 text-amber-800 text-sm">
+            ✏️ You&apos;re editing <strong>Email {sequenceEmails.find(e => e.id === editingSequenceId)?.position}</strong> of the welcome sequence. Design it below, then click <strong>Save Sequence Email</strong> above.
           </div>
         </div>
       )}

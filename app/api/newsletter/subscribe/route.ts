@@ -6,7 +6,7 @@ export async function POST(request: Request) {
   try {
     const supabase = getSupabase();
     const resend = new Resend(process.env.RESEND_API_KEY);
-    const { email, name } = await request.json();
+    const { email, name, source_page } = await request.json();
 
     if (!email) {
       return NextResponse.json({ error: 'Email is required' }, { status: 400 });
@@ -26,14 +26,43 @@ export async function POST(request: Request) {
       // Reactivate if previously unsubscribed
       await supabase
         .from('subscribers')
-        .update({ is_active: true, unsubscribed_at: null, name: name || null, subscribed_at: new Date().toISOString() })
+        .update({ is_active: true, unsubscribed_at: null, name: name || null, subscribed_at: new Date().toISOString(), source_page: source_page || null })
         .eq('email', email);
     } else {
       const { error } = await supabase
         .from('subscribers')
-        .insert({ email, name: name || null, is_active: true, subscribed_at: new Date().toISOString() });
+        .insert({ email, name: name || null, is_active: true, subscribed_at: new Date().toISOString(), source_page: source_page || null });
 
       if (error) throw error;
+    }
+
+    // Queue welcome sequence emails 2–5 (email 1 is sent inline below)
+    try {
+      const { data: sequenceEmails } = await supabase
+        .from('sequence_emails')
+        .select('id, position, delay_days')
+        .eq('is_active', true)
+        .gt('position', 1)
+        .order('position', { ascending: true });
+
+      if (sequenceEmails && sequenceEmails.length > 0) {
+        const now = new Date();
+        const queueItems = sequenceEmails.map((seqEmail) => {
+          const scheduledFor = new Date(now);
+          scheduledFor.setDate(scheduledFor.getDate() + seqEmail.delay_days);
+          return {
+            subscriber_email: email,
+            sequence_email_id: seqEmail.id,
+            scheduled_for: scheduledFor.toISOString(),
+            status: 'pending',
+          };
+        });
+
+        await supabase.from('sequence_queue').insert(queueItems);
+      }
+    } catch (queueError) {
+      console.error('Failed to queue sequence emails:', queueError);
+      // Don't block — subscription already succeeded
     }
 
     // Send welcome email — wrapped separately so a failed email doesn't block subscription
@@ -182,7 +211,8 @@ export async function POST(request: Request) {
             <div style="padding: 28px 32px;">
               <p style="font-size: 15px; margin: 0 0 12px;"><strong>Name:</strong> ${name || '(not provided)'}</p>
               <p style="font-size: 15px; margin: 0 0 12px;"><strong>Email:</strong> ${email}</p>
-              <p style="font-size: 15px; margin: 0 0 0;"><strong>Signed up:</strong> ${new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', dateStyle: 'full', timeStyle: 'short' })}</p>
+              <p style="font-size: 15px; margin: 0 0 12px;"><strong>Signed up:</strong> ${new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', dateStyle: 'full', timeStyle: 'short' })}</p>
+              <p style="font-size: 15px; margin: 0 0 0;"><strong>Source page:</strong> ${source_page || '(unknown)'}</p>
             </div>
           </div>
         `,
