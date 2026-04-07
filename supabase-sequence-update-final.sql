@@ -98,7 +98,7 @@ html_content = '<!DOCTYPE html>
         </td>
         <td style="vertical-align:top;padding-bottom:24px;">
           <p style="font-size:15px;font-weight:bold;color:#0f3d2a;margin:0 0 6px;">We handle everything.</p>
-          <p style="font-size:15px;line-height:1.7;color:#555;margin:0;">Wardrobe guidance, location, scheduling, coordination — all handled before we arrive. On the day of the shoot, we come to you. Most team shoots wrap in 90 minutes. Events are covered start to finish. You don''t need to be comfortable on camera. That''s our job.</p>
+          <p style="font-size:15px;line-height:1.7;color:#555;margin:0;">Wardrobe guidance, location, scheduling, coordination — all handled before we arrive. On the day of the shoot, we come to you. Events are covered start to finish. You don''t need to be comfortable on camera. That''s our job.</p>
         </td>
       </tr>
       <tr>
@@ -107,7 +107,7 @@ html_content = '<!DOCTYPE html>
         </td>
         <td style="vertical-align:top;">
           <p style="font-size:15px;font-weight:bold;color:#0f3d2a;margin:0 0 6px;">Images you''ll actually use.</p>
-          <p style="font-size:15px;line-height:1.7;color:#555;margin:0;">Professionally edited and delivered within 5–7 business days. High-resolution, web-ready, commercially licensed. Not a gallery you archive — imagery you put to work immediately.</p>
+          <p style="font-size:15px;line-height:1.7;color:#555;margin:0;">Professionally edited and delivered within 48 hours for headshots, and within 5–7 business days for larger projects. High-resolution, web-ready, commercially licensed. Not a gallery you archive — imagery you put to work immediately.</p>
         </td>
       </tr>
     </table>
@@ -219,7 +219,7 @@ html_content = '<!DOCTYPE html>
     </div>
     <div style="text-align:center;padding:20px;border:1px solid #e8e0d5;border-radius:12px;margin-bottom:28px;">
       <p style="font-size:28px;margin:0 0 4px;">★★★★★</p>
-      <p style="font-size:22px;font-weight:bold;color:#0f3d2a;margin:0 0 4px;">50+ Five-Star Reviews</p>
+      <p style="font-size:22px;font-weight:bold;color:#0f3d2a;margin:0 0 4px;">60+ Five-Star Reviews</p>
       <p style="font-size:14px;color:#888;margin:0;">on Google</p>
     </div>
     <p style="font-size:16px;line-height:1.75;color:#444;margin:0 0 16px;">
