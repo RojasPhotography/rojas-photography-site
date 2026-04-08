@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'Do you provide photos during the event?',
     answer:
-      'Yes! We photograph throughout your entire event and deliver professionally edited photos within 24-48 hours via our secure online private gallery. Attendees can view, download, and share photos immediately, making it perfect for real-time social media updates, event follow-up, and attendee engagement. This rapid delivery enables live social media updates during and immediately after your event.',
+      'Yes — your complete, professionally edited gallery is delivered within 5–7 business days via a secure private online gallery. We also offer a premium add-on that automatically delivers attendees their own photos using face recognition technology — even while the event is still happening. This is ideal for real-time social sharing, attendee engagement, and sponsor documentation.',
   },
   {
     question: 'How many photos do we receive from our event?',
@@ -44,7 +44,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Corporate Event Photography Modesto | Conference & Gala Photography',
   description:
-    'Professional event photography in Modesto and Central Valley. Conference photography, gala coverage, product launches, and corporate event documentation. 24-hour delivery.',
+    'Professional event photography in Modesto and Central Valley. Conference photography, gala coverage, product launches, and corporate event documentation. Delivered in 5–7 business days.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/event-photography',
@@ -69,9 +69,10 @@ export default function EventPhotographyPage() {
     <>
       <SchemaScript schema={generateServiceSchema({
         name: 'Corporate Event Photography',
-        description: 'Professional event photography for conferences, galas, fundraisers, and corporate gatherings in Modesto and Central Valley. 24-hour delivery.',
+        description: 'Professional event photography for conferences, galas, fundraisers, and corporate gatherings in Modesto and Central Valley. Delivered in 5–7 business days.',
         url: 'https://rojasphotography.net/event-photography',
         image: 'https://rojasphotography.net/images/CLA AM 25 201.jpg',
+        aggregateRating: { ratingValue: '5', reviewCount: '60' },
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([
@@ -94,6 +95,7 @@ export default function EventPhotographyPage() {
             Schedule Discovery Call
           </Link>
         </div>
+        <p className="text-white/70 text-sm mt-5">Starting from $1,500 &nbsp;·&nbsp; Custom quotes in 24 hours &nbsp;·&nbsp; No commitment required</p>
       </HeroSection>
 
       {/* Definition Box */}
@@ -105,6 +107,19 @@ export default function EventPhotographyPage() {
           {serviceDefinitions.eventPhotography.context}
         </p>
       </DefinitionBox>
+
+      {/* Fast Delivery Callout */}
+      <div className="bg-[var(--color-primary-dark)] py-4 px-8">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-3 text-center md:text-left">
+          <span className="text-2xl">⚡</span>
+          <p className="text-white font-semibold text-base md:text-lg">
+            Fast Delivery — Professionally edited photos delivered to your gallery within 5–7 business days. Ask about real-time attendee delivery.
+          </p>
+          <Link href="/contact-quote" className="flex-shrink-0 bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-6 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap">
+            Get a Quote
+          </Link>
+        </div>
+      </div>
 
       <main id="main-content">
         {/* SB7: Has a Problem */}
@@ -140,7 +155,7 @@ export default function EventPhotographyPage() {
                   You&apos;ve planned this event for months. There are sponsors to satisfy, executives to photograph, moments that cannot be missed — and you need a photographer who gets all of that without you having to manage them through it. The last thing you need is another variable to worry about on the day of.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  I&apos;m Alfonso Rojas. I show up early, stay until the end, anticipate moments before they happen, and deliver professionally edited photos within 24-48 hours — every single time. Organizations like Comcast, Save Mart, the California Lawyers Association, and Valley First Credit Union trust me with their events because reliability isn&apos;t something I negotiate on.
+                  I&apos;m Alfonso Rojas. I show up early, stay until the end, anticipate moments before they happen, and deliver professionally edited photos within 5–7 business days — every single time. Organizations like Comcast, Save Mart, the California Lawyers Association, and Valley First Credit Union trust me with their events because reliability isn&apos;t something I negotiate on.
                 </p>
                 <p>
                   I don&apos;t just take photos — I coordinate with your event timeline, capture the candid connections alongside the formal moments, and make sure you walk away with complete coverage and marketing-ready assets, not just a folder of snapshots.
@@ -180,11 +195,50 @@ export default function EventPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">03</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Rapid Delivery</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    Photos edited, color-corrected, and delivered within 24-48 hours via a private gallery. Attendees can download and share immediately. Your sponsors get their deliverables, your social media gets content, and you get everything while the event is still fresh.
+                    Photos edited, color-corrected, and delivered within 5–7 business days via a private gallery. With our real-time delivery add-on, attendees can receive their own photos automatically using face recognition — even while the event is still in progress. Sponsors get their deliverables, your team gets content, and you have everything documented professionally.
                   </p>
                 </div>
               </SectionReveal>
             </div>
+          </div>
+        </section>
+
+        {/* Real-Time Attendee Delivery Add-On Feature */}
+        <section className="py-16 px-8 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <SectionReveal>
+              <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 md:p-12 border border-[var(--color-border-light)]">
+                <p className="text-sm font-bold uppercase tracking-widest text-[var(--color-primary)] mb-3">Premium Add-On</p>
+                <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-4">
+                  Attendees Receive Their Own Photos — Automatically, While the Event Is Happening
+                </h2>
+                <p className="text-[var(--color-text-body)] leading-relaxed mb-6">
+                  We offer a premium real-time photo delivery add-on that uses face recognition technology to automatically identify and send attendees the photos they appear in — within seconds of the shot being taken.
+                </p>
+                <p className="text-[var(--color-text-body)] leading-relaxed mb-6">
+                  Attendees register once with their phone or email. From that point on, every photo they appear in is delivered directly to them — no searching through hundreds of images, no waiting days for a download link. They get their photos instantly, while they&apos;re still at your event.
+                </p>
+                <div className="grid md:grid-cols-3 gap-6 mt-8">
+                  <div className="text-center">
+                    <p className="text-3xl font-bold text-[var(--color-primary)]">Real-Time</p>
+                    <p className="text-sm text-[var(--color-text-muted)] mt-1">Photos delivered seconds after capture</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-3xl font-bold text-[var(--color-primary)]">Personal</p>
+                    <p className="text-sm text-[var(--color-text-muted)] mt-1">Each attendee only sees photos they&apos;re in</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="text-3xl font-bold text-[var(--color-primary)]">Instant Sharing</p>
+                    <p className="text-sm text-[var(--color-text-muted)] mt-1">Attendees share on social before they leave</p>
+                  </div>
+                </div>
+                <div className="mt-8">
+                  <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
+                    Ask About This Add-On
+                  </Link>
+                </div>
+              </div>
+            </SectionReveal>
           </div>
         </section>
 
@@ -225,26 +279,23 @@ export default function EventPhotographyPage() {
           </div>
         </section>
 
-        {/* SB7: Helps Avoid Failure (Stakes) */}
+        {/* SB7: Success Vision */}
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Bad Event Photography Destroys Months of Planning</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">What Your Event Looks Like When It Goes Right</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  When your photographer fails—shows up late, misses key moments, delivers blurry photos, or ghosts you completely—you don&apos;t just lose photos. You lose everything.
+                  Your event ends. Within 5–7 business days, a private gallery lands in your inbox — hundreds of professionally edited photos. The keynote speaker. The award presentations. The networking moments your team spent months setting up. All of it, documented beautifully.
                 </p>
                 <p>
-                  Your sponsors paid for visibility. They want photos of their branded activations, their executives networking, their logo in the background. No photos = broken sponsor commitments = lost relationships and future funding.
+                  Your marketing team gets to work immediately. Social posts go up while the energy is still fresh. Sponsors receive their deliverables the next morning. Your event recap email goes out with photos that make attendees proud they were there.
                 </p>
                 <p>
-                  Your marketing team needs content. Social media posts. Website updates. Email follow-ups. Without professional event photos, your $50,000 conference produces <em>zero</em> marketing assets. The event happened, but digitally it might as well not exist.
+                  Attendees don&apos;t wonder where the photos are. They&apos;re already sharing them. Your event doesn&apos;t just happen — it lives on.
                 </p>
                 <p>
-                  Your attendees expect documentation. They want photos of themselves networking, learning, celebrating. Without photos, the event feels incomplete—attendees feel undervalued, and your reputation suffers.
-                </p>
-                <p>
-                  <strong>Events happen once.</strong> There are no do-overs. Unreliable photography doesn&apos;t just fail to capture moments—it wastes your entire event investment and damages your professional credibility.
+                  <strong>That&apos;s the standard we hold ourselves to for every single event.</strong> Not a lucky outcome — a guaranteed one.
                 </p>
               </div>
             </SectionReveal>
@@ -283,9 +334,9 @@ export default function EventPhotographyPage() {
                 { title: 'Multiple Photographers', desc: 'For larger events, we deploy multiple photographers to ensure complete coverage across all areas.' },
                 { title: 'Candid & Posed Photography', desc: 'Authentic moments and genuine interactions, plus professionally posed group photos and speaker shots.' },
                 { title: 'Step & Repeat Photography', desc: 'Professional step and repeat backdrop photography. Perfect for sponsor recognition and brand activation.' },
-                { title: 'Rapid Photo Delivery', desc: 'Event photos available within 24-48 hours. Perfect for social media during and after your event.' },
+                { title: 'Fast Photo Delivery', desc: 'Complete professionally edited gallery delivered within 5–7 business days. Add-on available for real-time attendee delivery using face recognition.' },
                 { title: 'Professional Editing & Curation', desc: 'All photos professionally edited and color-corrected. We deliver only the best shots—curated for quality.' },
-                { title: 'Online Gallery & Download', desc: 'Photos delivered via secure online private gallery. Attendees can view, download, and share.' },
+                { title: 'Online Gallery & Download', desc: 'Photos delivered via secure private gallery. With our real-time delivery add-on, attendees receive their individual photos automatically — no browsing required.' },
                 { title: 'Flexible Event Types', desc: 'We cover all event types: conferences, galas, fundraisers, product launches, award ceremonies, and more.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
@@ -352,7 +403,7 @@ export default function EventPhotographyPage() {
               {[
                 { title: 'Proven Track Record', desc: "I've covered events for Comcast, Save Mart, the California Lawyers Association, and dozens of Central Valley organizations." },
                 { title: 'Professional & Unobtrusive', desc: 'I blend into the event while capturing everything — you and your guests won\'t feel like you\'re being photographed.' },
-                { title: 'Fast Delivery', desc: 'Event photos delivered within 24-48 hours — ready for social media, sponsors, and follow-up while the event is still top of mind.' },
+                { title: 'Fast Delivery', desc: 'Full edited gallery delivered within 5–7 business days. Ask about our add-on for real-time face recognition delivery to attendees during your event.' },
                 { title: 'Local to the Central Valley', desc: 'Based in Modesto, serving Stockton, Fresno, Turlock, the Bay Area, and beyond.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
@@ -380,12 +431,9 @@ export default function EventPhotographyPage() {
                 </p>
               </div>
             </SectionReveal>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-1 max-w-2xl mx-auto gap-6">
               <SectionReveal>
                 <TestimonialCard name="Courtnay Lynch" role="VP of People & Culture, Valley First Credit Union" quote="Alfonso and Niomi captured our corporate event beautifully. Professional, responsive, easy to work with. They understand business and deliver results." />
-              </SectionReveal>
-              <SectionReveal>
-                <TestimonialCard name="Event Organizer" role="Corporate Client" quote="From planning to delivery, Rojas Photography was excellent. They understood our event goals, captured everything we needed, and delivered photos quickly." />
               </SectionReveal>
             </div>
           </div>
