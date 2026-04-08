@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'Do you provide photos during the event?',
     answer:
-      'Yes — your complete, professionally edited gallery is delivered within 5–7 business days via a secure private online gallery. We also offer a premium add-on that automatically delivers attendees their own photos using face recognition technology — even while the event is still happening. This is ideal for real-time social sharing, attendee engagement, and sponsor documentation.',
+      'Standard delivery is 5–7 business days — your complete, professionally edited gallery delivered via a secure private online gallery. We also offer a premium real-time add-on: you get access to all photos immediately as they\'re taken, and each attendee automatically receives their own photos using face recognition technology within seconds of capture. It also includes a custom branded landing page with your sponsor logos, making it a powerful tool for attendee engagement and sponsor ROI.',
   },
   {
     question: 'How many photos do we receive from our event?',
@@ -113,7 +113,7 @@ export default function EventPhotographyPage() {
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-3 text-center md:text-left">
           <span className="text-2xl">⚡</span>
           <p className="text-white font-semibold text-base md:text-lg">
-            Fast Delivery — Professionally edited photos delivered to your gallery within 5–7 business days. Ask about real-time attendee delivery.
+            Standard delivery: 5–7 business days. &nbsp;·&nbsp; With our real-time add-on: you and your attendees get photos instantly.
           </p>
           <Link href="/contact-quote" className="flex-shrink-0 bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-6 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap">
             Get a Quote
@@ -203,40 +203,60 @@ export default function EventPhotographyPage() {
           </div>
         </section>
 
-        {/* Real-Time Attendee Delivery Add-On Feature */}
+        {/* Real-Time Delivery + Sponsorship Add-On Feature */}
         <section className="py-16 px-8 bg-white">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <SectionReveal>
-              <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 md:p-12 border border-[var(--color-border-light)]">
+              <div className="text-center mb-10">
                 <p className="text-sm font-bold uppercase tracking-widest text-[var(--color-primary)] mb-3">Premium Add-On</p>
-                <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-4">
-                  Attendees Receive Their Own Photos — Automatically, While the Event Is Happening
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
+                  Turn Your Event Photos Into a Sponsorship Asset
                 </h2>
-                <p className="text-[var(--color-text-body)] leading-relaxed mb-6">
-                  We offer a premium real-time photo delivery add-on that uses face recognition technology to automatically identify and send attendees the photos they appear in — within seconds of the shot being taken.
+                <p className="text-lg text-[var(--color-text-body)] max-w-2xl mx-auto leading-relaxed">
+                  We offer a premium real-time photo experience that goes far beyond fast delivery — it transforms your event photography into a powerful tool for attendee engagement and sponsor ROI.
                 </p>
-                <p className="text-[var(--color-text-body)] leading-relaxed mb-6">
-                  Attendees register once with their phone or email. From that point on, every photo they appear in is delivered directly to them — no searching through hundreds of images, no waiting days for a download link. They get their photos instantly, while they&apos;re still at your event.
-                </p>
-                <div className="grid md:grid-cols-3 gap-6 mt-8">
-                  <div className="text-center">
-                    <p className="text-3xl font-bold text-[var(--color-primary)]">Real-Time</p>
-                    <p className="text-sm text-[var(--color-text-muted)] mt-1">Photos delivered seconds after capture</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-3xl font-bold text-[var(--color-primary)]">Personal</p>
-                    <p className="text-sm text-[var(--color-text-muted)] mt-1">Each attendee only sees photos they&apos;re in</p>
-                  </div>
-                  <div className="text-center">
-                    <p className="text-3xl font-bold text-[var(--color-primary)]">Instant Sharing</p>
-                    <p className="text-sm text-[var(--color-text-muted)] mt-1">Attendees share on social before they leave</p>
-                  </div>
+              </div>
+            </SectionReveal>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Benefit 1: Real-time delivery */}
+              <SectionReveal>
+                <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 h-full border border-[var(--color-border-light)]">
+                  <div className="text-4xl mb-4">⚡</div>
+                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
+                    All Photos Delivered Instantly — For You and Every Attendee
+                  </h3>
+                  <p className="text-[var(--color-text-body)] leading-relaxed mb-4">
+                    You get access to every photo in real time — no waiting days for your gallery. Attendees register once with their phone or email, and from that point on, every photo they appear in is automatically sent to them using face recognition technology, within seconds of the shot being taken.
+                  </p>
+                  <p className="text-[var(--color-text-body)] leading-relaxed">
+                    They don&apos;t browse through hundreds of photos. Their photos find them. They&apos;re sharing on social media before they leave the room.
+                  </p>
                 </div>
-                <div className="mt-8">
-                  <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
-                    Ask About This Add-On
-                  </Link>
+              </SectionReveal>
+
+              {/* Benefit 2: Sponsorship tool */}
+              <SectionReveal>
+                <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 h-full border border-[var(--color-border-light)]">
+                  <div className="text-4xl mb-4">🏆</div>
+                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
+                    A Custom Branded Experience That Helps You Sell Sponsorships
+                  </h3>
+                  <p className="text-[var(--color-text-body)] leading-relaxed mb-4">
+                    We build a custom branded landing page for your event featuring all of your sponsor logos. Every photo is delivered through that branded experience — so your sponsors get visibility every time an attendee views or shares their photos.
+                  </p>
+                  <p className="text-[var(--color-text-body)] leading-relaxed">
+                    That&apos;s not just event coverage — it&apos;s a sponsorship deliverable you can pitch before the event. Sponsors love it because their logo travels with every photo shared on social media, long after the event is over.
+                  </p>
                 </div>
+              </SectionReveal>
+            </div>
+
+            <SectionReveal>
+              <div className="mt-8 text-center">
+                <Link href="/contact-quote" className="btn-primary px-10 py-4 text-base font-semibold rounded-full inline-block">
+                  Ask About This Add-On
+                </Link>
               </div>
             </SectionReveal>
           </div>
@@ -286,13 +306,13 @@ export default function EventPhotographyPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">What Your Event Looks Like When It Goes Right</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  Your event ends. Within 5–7 business days, a private gallery lands in your inbox — hundreds of professionally edited photos. The keynote speaker. The award presentations. The networking moments your team spent months setting up. All of it, documented beautifully.
+                  Your event ends. Your gallery is ready — whether that&apos;s in real time if you&apos;ve added our premium delivery service, or within 5–7 business days with our standard package. Hundreds of professionally edited photos: the keynote speaker, award presentations, the networking moments your team spent months setting up. All of it, documented beautifully.
                 </p>
                 <p>
-                  Your marketing team gets to work immediately. Social posts go up while the energy is still fresh. Sponsors receive their deliverables the next morning. Your event recap email goes out with photos that make attendees proud they were there.
+                  Your marketing team gets to work immediately. Social posts go up while the energy is still fresh. Sponsors see their logos in every photo your attendees are already sharing. Your event recap email goes out with images that make attendees proud they were there.
                 </p>
                 <p>
-                  Attendees don&apos;t wonder where the photos are. They&apos;re already sharing them. Your event doesn&apos;t just happen — it lives on.
+                  Attendees don&apos;t wonder where the photos are. Their photos already found them. Your event doesn&apos;t just happen — it lives on.
                 </p>
                 <p>
                   <strong>That&apos;s the standard we hold ourselves to for every single event.</strong> Not a lucky outcome — a guaranteed one.
