@@ -93,6 +93,17 @@ const nextConfig: NextConfig = {
         destination: '/',
         permanent: true,
       },
+      // Cover alternate slug variation seen in GSC
+      {
+        source: '/blog/d1x7zcz1wa76p876772y9gghqv8par',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/group-headshot-questionnaire',
+        destination: '/contact-quote',
+        permanent: true,
+      },
       {
         source: '/blog/how-much-does-corporate-event-photography-cost-a-complete-pricing-guide-for-2025',
         destination: '/corporate-event-photography-cost',
