@@ -451,12 +451,15 @@ export default function EventPhotographyPage() {
                 </p>
               </div>
             </SectionReveal>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               <SectionReveal>
                 <TestimonialCard name="Courtnay Lynch" role="VP of People & Culture, Valley First Credit Union" quote="Alfonso and Niomi captured our corporate event beautifully. Professional, responsive, easy to work with. They understand business and deliver results." />
               </SectionReveal>
               <SectionReveal>
                 <TestimonialCard name="Haley Baker" role="Corporate Event Client · Google Review" quote="We had Rojas Photography take photos and video at a company event and they were fantastic. We booked them with somewhat short notice and they were able to step in and make it work. They offered a QR code access for our team to get immediate photos that contained their faces during the event. The quality of the photos were excellent. Both Alfonso and Niomi are personable and easy to work with." />
+              </SectionReveal>
+              <SectionReveal>
+                <TestimonialCard name="Curt Zimmerman" role="Corporate Event Client · Google Review" quote="I hosted a client appreciation event and Rojas Photography was AMAZING in capturing moments and couple shots at the event. Pictures were branded with my company logo and able to view instantly for all of my clients to enjoy. I HIGHLY recommend Alfonso & Niomi for your next event." />
               </SectionReveal>
             </div>
           </div>
