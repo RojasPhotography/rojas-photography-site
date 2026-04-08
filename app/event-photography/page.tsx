@@ -451,7 +451,7 @@ export default function EventPhotographyPage() {
                 </p>
               </div>
             </SectionReveal>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               <SectionReveal>
                 <TestimonialCard name="Courtnay Lynch" role="VP of People & Culture, Valley First Credit Union" quote="Alfonso and Niomi captured our corporate event beautifully. Professional, responsive, easy to work with. They understand business and deliver results." />
               </SectionReveal>
@@ -461,8 +461,11 @@ export default function EventPhotographyPage() {
               <SectionReveal>
                 <TestimonialCard name="Curt Zimmerman" role="Corporate Event Client · Google Review" quote="I hosted a client appreciation event and Rojas Photography was AMAZING in capturing moments and couple shots at the event. Pictures were branded with my company logo and able to view instantly for all of my clients to enjoy. I HIGHLY recommend Alfonso & Niomi for your next event." />
               </SectionReveal>
-              <SectionReveal>
+              <SectionReveal className="md:col-start-1">
                 <TestimonialCard name="Reyna Perales" role="Nonprofit Fundraiser Gala Client · Google Review" quote="Alfonso and Niomi were fantastic to work with and highly professional. They did our staff headshots and also handled the photography at our fundraiser gala. For both events, they did an incredible job — making our team feel confident during the headshots and capturing all the perfect moments and memories that truly showcased our gala." />
+              </SectionReveal>
+              <SectionReveal>
+                <TestimonialCard name="Karrie Mitten" role="Google Review" quote="Niomi and Alfonso are absolutely top notch! Their attention to detail and their true passion for what they do shines through! I can't wait to book them again!" />
               </SectionReveal>
             </div>
           </div>
