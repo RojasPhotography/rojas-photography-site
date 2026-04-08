@@ -95,7 +95,6 @@ export default function EventPhotographyPage() {
             Schedule Discovery Call
           </Link>
         </div>
-        <p className="text-white/70 text-sm mt-5">Starting from $1,500 &nbsp;·&nbsp; Custom quotes in 24 hours &nbsp;·&nbsp; No commitment required</p>
       </HeroSection>
 
       {/* Definition Box */}
