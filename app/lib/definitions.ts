@@ -27,7 +27,7 @@ export const serviceDefinitions = {
   eventPhotography: {
     term: 'Corporate Event Photography',
     definition: `Corporate event photography is professional documentation of business events, capturing moments, speakers, attendees, and key activities. Our event coverage includes candid moments and authentic interactions, posed group photos and formal shots, speaker and presentation photography, step-and-repeat backdrop photography, networking moments and connections, and event details and signage.`,
-    context: `Professional event photography creates lasting records, enables real-time social media updates, and documents sponsorship visibility. A 4-hour event typically produces 300-500 edited photos delivered within 24-48 hours.`,
+    context: `Professional event photography gives your organization a library of on-brand images ready for social media, sponsorship deliverables, marketing materials, and internal communications — content that works for you long after the event is over.`,
   },
 };
 

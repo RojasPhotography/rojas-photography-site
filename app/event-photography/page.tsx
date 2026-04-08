@@ -26,7 +26,7 @@ const faqs = [
   {
     question: 'How many photos do we receive from our event?',
     answer:
-      'Event photo counts depend on duration and coverage needs. A 4-hour event with one photographer typically produces 300-500 professionally curated photos. A full-day (8-hour) event typically produces 600-800+ photos. All photos are professionally color-corrected and edited to the same high standard. For example, recent events: a 3-hour corporate meeting produced 280 photos, a 4-hour conference produced 480 photos, and a 6-hour gala produced 620 photos.',
+      'You\'ll receive a generous gallery of professionally edited, color-corrected images — enough to cover every key moment, speaker, and interaction throughout your event. Every photo is ready to use: post on social media, send to sponsors, add to your website, or include in event recaps. The images are delivered via a private online gallery, ready to download and share immediately.',
   },
   {
     question: 'Can you handle large corporate events?',
