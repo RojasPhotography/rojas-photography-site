@@ -134,7 +134,7 @@ export default function EventPhotographyPage() {
                   You hire a photographer. They show up late. They miss key moments — the award presentation, the keynote speaker, the networking conversations your attendees came for. The photos come back blurry, dark, or unusable. Weeks pass with nothing delivered. Your sponsors are waiting. Your social media is silent.
                 </p>
                 <p>
-                  It doesn&apos;t matter if it&apos;s a 50-person mixer or a 500-person gala — when the photography fails, everything you built around that event loses its proof. The moments happened. Nobody can show for it.
+                  And underneath all of it is a feeling that&apos;s hard to shake: <em>I recommended this person. I put my name on it. If this goes wrong, that&apos;s on me.</em> You shouldn&apos;t have to carry that weight on top of everything else you&apos;re managing.
                 </p>
                 <p>
                   <strong>Events happen once.</strong> There are no do-overs. An unreliable photographer doesn&apos;t just miss shots — they erase months of work and leave you with nothing to show your board, your sponsors, or next year&apos;s attendees.
@@ -199,6 +199,24 @@ export default function EventPhotographyPage() {
                 </div>
               </SectionReveal>
             </div>
+          </div>
+        </section>
+
+        {/* SB7: Avoid Failure */}
+        <section className="py-12 px-8 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <SectionReveal>
+              <div className="border-l-4 border-red-400 bg-red-50 rounded-r-xl p-8">
+                <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">What&apos;s at stake if you get this wrong</h3>
+                <ul className="space-y-2 text-[var(--color-text-body)] leading-relaxed">
+                  <li>— Sponsors who paid for visibility get nothing to show for it</li>
+                  <li>— Your board or leadership asks for photos and you have none worth sharing</li>
+                  <li>— Attendees feel like the event wasn&apos;t worth documenting</li>
+                  <li>— Next year&apos;s promotion has no assets to build from</li>
+                  <li>— You spend months planning an event that disappears the moment it ends</li>
+                </ul>
+              </div>
+            </SectionReveal>
           </div>
         </section>
 
