@@ -125,19 +125,19 @@ export default function EventPhotographyPage() {
         <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Events Can&apos;t Be Redone—Bad Photography Ruins Everything</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Every Event Happens Once. The Photos Have to Be Right.</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  You&apos;re planning a major conference, gala, or corporate event. Hundreds of guests. Important speakers. Sponsors expecting professional coverage. Your reputation is on the line.
+                  Whether you&apos;re putting on a chamber gala for 200 people, a nonprofit fundraiser, a credit union member appreciation night, or a large-scale conference — you&apos;ve put real time, money, and reputation into making it happen. The photography has to match.
                 </p>
                 <p>
-                  You hire a photographer. They show up late. They miss key moments—the keynote speech, the award presentation, the VIP networking. Half the photos are blurry, poorly lit, or unusable. Your event planner nightmare becomes reality: you have a $50,000 event with zero marketing assets to show for it.
+                  You hire a photographer. They show up late. They miss key moments — the award presentation, the keynote speaker, the networking conversations your attendees came for. The photos come back blurry, dark, or unusable. Weeks pass with nothing delivered. Your sponsors are waiting. Your social media is silent.
                 </p>
                 <p>
-                  Or worse—the photographer ghosts you after the event. Weeks pass with no photos delivered. Your sponsors are asking for images. Your social media is silent. Attendees are wondering if photos even exist.
+                  It doesn&apos;t matter if it&apos;s a 50-person mixer or a 500-person gala — when the photography fails, everything you built around that event loses its proof. The moments happened. Nobody can show for it.
                 </p>
                 <p>
-                  <strong>Events happen once.</strong> There are no do-overs. An unreliable photographer doesn&apos;t just fail to capture moments—they destroy months of planning, waste your budget, and damage your professional reputation.
+                  <strong>Events happen once.</strong> There are no do-overs. An unreliable photographer doesn&apos;t just miss shots — they erase months of work and leave you with nothing to show your board, your sponsors, or next year&apos;s attendees.
                 </p>
               </div>
             </SectionReveal>
@@ -148,16 +148,16 @@ export default function EventPhotographyPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">I Understand the Pressure You&apos;re Under</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">I Work With Organizations of Every Size — And I Treat Every Event the Same Way</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  You&apos;ve planned this event for months. There are sponsors to satisfy, executives to photograph, moments that cannot be missed — and you need a photographer who gets all of that without you having to manage them through it. The last thing you need is another variable to worry about on the day of.
+                  I&apos;ve photographed intimate 40-person nonprofit dinners and large-scale multi-day conferences for thousands of attendees. The size of the event doesn&apos;t change how I show up. Every client gets the same preparation, the same professionalism, and the same quality of work.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  I&apos;m Alfonso Rojas. I show up early, stay until the end, anticipate moments before they happen, and deliver professionally edited photos within 5–7 business days — every single time. Organizations like Comcast, Save Mart, the California Lawyers Association, and Valley First Credit Union trust me with their events because reliability isn&apos;t something I negotiate on.
+                  I&apos;m Alfonso Rojas, based in Modesto. I know this region — the venues, the organizations, and what Central Valley event organizers need. I show up early, stay until the end, anticipate moments before they happen, and deliver professionally edited photos within 5–7 business days, every time. Organizations like the California Lawyers Association, Valley First Credit Union, Comcast, and Save Mart trust me because I treat their events like they matter — because they do.
                 </p>
                 <p>
-                  I don&apos;t just take photos — I coordinate with your event timeline, capture the candid connections alongside the formal moments, and make sure you walk away with complete coverage and marketing-ready assets, not just a folder of snapshots.
+                  I don&apos;t just take photos — I coordinate with your timeline, communicate with your team, and make sure you walk away with complete coverage and marketing-ready images, not just a folder of snapshots.
                 </p>
               </div>
             </SectionReveal>
@@ -381,34 +381,57 @@ export default function EventPhotographyPage() {
           </div>
         </section>
 
-        {/* Event Types */}
+        {/* Event Types — Central Valley Focused */}
         <section className="py-20 px-8 bg-white">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-[var(--color-text-dark)] mb-8">Events We Cover</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h4 className="font-bold text-[var(--color-text-dark)] mb-4">Corporate Events</h4>
-                  <ul className="text-[var(--color-text-body)] text-sm space-y-2">
-                    <li>&#10003; Company conferences and conventions</li>
-                    <li>&#10003; Annual meetings and celebrations</li>
-                    <li>&#10003; Product launches and reveals</li>
-                    <li>&#10003; Corporate retreats and team building</li>
-                    <li>&#10003; Award ceremonies and recognition events</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold text-[var(--color-text-dark)] mb-4">Professional & Social Events</h4>
-                  <ul className="text-[var(--color-text-body)] text-sm space-y-2">
-                    <li>&#10003; Galas and formal dinners</li>
-                    <li>&#10003; Fundraisers and charity events</li>
-                    <li>&#10003; Networking events and mixers</li>
-                    <li>&#10003; Trade shows and exhibitions</li>
-                    <li>&#10003; Grand openings and celebrations</li>
-                  </ul>
-                </div>
-              </div>
+              <h2 className="text-3xl font-bold text-[var(--color-text-dark)] mb-4">Events We Cover Across the Central Valley & Beyond</h2>
+              <p className="text-[var(--color-text-body)] text-lg mb-12 leading-relaxed max-w-3xl">
+                From intimate nonprofit dinners to regional conferences, we work with the organizations that drive this community — and we bring the same level of professionalism to every one.
+              </p>
             </SectionReveal>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                {
+                  category: 'Nonprofits & Associations',
+                  items: ['Fundraiser galas & benefit dinners', 'Annual member events', 'Award ceremonies', 'Board & donor appreciation events', 'Community recognition nights'],
+                },
+                {
+                  category: 'Business & Professional',
+                  items: ['Chamber of Commerce events & expos', 'Client appreciation events', 'Grand openings & ribbon cuttings', 'Corporate conferences & retreats', 'Product launches'],
+                },
+                {
+                  category: 'Industry & Trade',
+                  items: ['Agricultural industry conferences', 'Legal & professional association events', 'Real estate & finance events', 'Healthcare organization galas', 'Credit union member events'],
+                },
+                {
+                  category: 'Formal & Social Events',
+                  items: ['Black tie galas & formal dinners', 'Networking events & mixers', 'Trade shows & exhibitions', 'Step & repeat / brand activations', 'Multi-day conferences'],
+                },
+                {
+                  category: 'Education & Government',
+                  items: ['University & college events', 'School foundation fundraisers', 'City & county public events', 'Recognition & commencement events', 'Training & seminar photography'],
+                },
+                {
+                  category: 'Bay Area & Regional',
+                  items: ['Large-scale corporate conferences', 'Tech & innovation summits', 'Multi-photographer team coverage', 'Statewide association events', 'High-profile galas & receptions'],
+                },
+              ].map((group) => (
+                <SectionReveal key={group.category}>
+                  <div className="bg-[var(--color-bg-warm)] rounded-xl p-6 h-full">
+                    <h4 className="font-bold text-[var(--color-text-dark)] mb-4 text-base">{group.category}</h4>
+                    <ul className="text-[var(--color-text-body)] text-sm space-y-2">
+                      {group.items.map((item) => (
+                        <li key={item} className="flex gap-2">
+                          <span className="text-[var(--color-primary)] font-bold flex-shrink-0">✓</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </SectionReveal>
+              ))}
+            </div>
           </div>
         </section>
 
@@ -420,10 +443,10 @@ export default function EventPhotographyPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: 'Proven Track Record', desc: "I've covered events for Comcast, Save Mart, the California Lawyers Association, and dozens of Central Valley organizations." },
+                { title: 'Local Expertise, Regional Reach', desc: "Based in Modesto, I know the Central Valley — the venues, the organizations, the community. I serve clients from Stockton and Fresno to Sacramento and the Bay Area, with the same local commitment everywhere I go." },
+                { title: 'Every Event Gets My Full Attention', desc: "A 50-person chamber mixer gets the same preparation and professionalism as a 500-person gala. I review your schedule, communicate with your team, and show up ready — every time." },
                 { title: 'Professional & Unobtrusive', desc: 'I blend into the event while capturing everything — you and your guests won\'t feel like you\'re being photographed.' },
                 { title: 'Fast Delivery', desc: 'Full edited gallery delivered within 5–7 business days. Ask about our add-on for real-time face recognition delivery to attendees during your event.' },
-                { title: 'Local to the Central Valley', desc: 'Based in Modesto, serving Stockton, Fresno, Turlock, the Bay Area, and beyond.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
                   <div className="flex gap-4">
