@@ -44,7 +44,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Corporate Event Photography Modesto | Conference & Gala Photography',
   description:
-    'Professional event photography in Modesto and Central Valley. Conference photography, gala coverage, product launches, and corporate event documentation. Delivered in 5–7 business days.',
+    'Event photography Modesto • Conferences, galas, product launches • 5-7 day delivery • Professional documentation • Central Valley corporate events → Book your date',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/event-photography',

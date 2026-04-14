@@ -44,7 +44,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Corporate Video Production Modesto CA | Drone Videography',
   description:
-    'Professional corporate video production in Modesto and Central Valley. Business videos, testimonials, drone videography, and promotional content. Part 107 certified.',
+    'Corporate video Modesto • Business promos, testimonials, drone footage • Part 107 certified • Central Valley companies • Professional editing included → Get started',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/video',

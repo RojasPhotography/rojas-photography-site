@@ -44,7 +44,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Professional Headshots Modesto CA | $150 Session | Rojas Photography',
   description:
-    'Premium corporate headshots in Modesto. Guided studio sessions with real-time coaching. $150 session + $150/image. Trusted by 500+ executives. Book today.',
+    'Professional headshots Modesto • 48-hour delivery • Real-time posing coaching • 500+ Central Valley execs trust us • $150 session • Same-week slots → Book now',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/premium-headshots',

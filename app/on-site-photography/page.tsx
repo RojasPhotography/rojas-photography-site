@@ -44,7 +44,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'On-Site Corporate Headshots Modesto | Team Photography Service',
   description:
-    'Professional on-site headshots and team photography in Modesto and Central Valley. We bring our studio to you for group photos, employee headshots, and corporate photography.',
+    'On-site headshots Modesto • We come to you • Team photos, employee headshots, group shots • No travel time wasted • Entire team done in hours → Get quote',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/on-site-photography',
