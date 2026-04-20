@@ -307,19 +307,28 @@ export default function PremiumHeadshotsPage() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-[var(--color-text-body)] text-lg mb-10">
-                No packages, no minimums. You only pay for the images you love.
+                Two parts: a session fee to book your time, plus a per-image fee for only the photos you love. No packages, no minimums.
               </p>
-              <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto mb-6">
-                <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
-                  <p className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wide mb-2">Session Fee</p>
-                  <p className="text-5xl font-bold text-[var(--color-primary)] mb-3">$150</p>
-                  <p className="text-[var(--color-text-body)] text-sm">Unlimited time, real-time coaching &amp; wardrobe changes</p>
+              <div className="relative max-w-2xl mx-auto mb-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                    <p className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wide mb-2">Session Fee</p>
+                    <p className="text-5xl font-bold text-[var(--color-primary)] mb-3">$150</p>
+                    <p className="text-[var(--color-text-body)] text-sm">Unlimited time, real-time coaching &amp; wardrobe changes</p>
+                  </div>
+                  <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
+                    <p className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wide mb-2">Per Image</p>
+                    <p className="text-5xl font-bold text-[var(--color-primary)] mb-3">$150</p>
+                    <p className="text-[var(--color-text-body)] text-sm">Professionally edited &amp; delivered within 48 hours</p>
+                  </div>
                 </div>
-                <div className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm">
-                  <p className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wide mb-2">Per Image</p>
-                  <p className="text-5xl font-bold text-[var(--color-primary)] mb-3">$150</p>
-                  <p className="text-[var(--color-text-body)] text-sm">Professionally edited &amp; delivered within 48 hours</p>
+                <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 hidden md:flex items-center">
+                  <span className="bg-[var(--color-bg-warm)] border border-gray-200 text-[var(--color-text-dark)] font-bold text-lg w-9 h-9 rounded-full flex items-center justify-center shadow-sm">+</span>
                 </div>
+              </div>
+              <div className="bg-white border border-gray-200 rounded-xl px-6 py-4 max-w-2xl mx-auto mb-4 text-left">
+                <p className="text-sm font-semibold text-[var(--color-text-dark)] mb-1">How your total is calculated:</p>
+                <p className="text-[var(--color-text-body)] text-sm"><span className="font-semibold">$150 session fee</span> + <span className="font-semibold">$150 × images you select</span> = your total</p>
               </div>
               <p className="text-[var(--color-text-muted)] text-sm mb-10">Rush delivery available — 24-hour turnaround for an additional $75</p>
               <a
