@@ -1,10 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Navigation() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
@@ -51,6 +53,18 @@ export default function Navigation() {
   const toggleDesktopServices = () => {
     setDesktopServicesOpen(!desktopServicesOpen);
   };
+
+  if (pathname === '/newsletter') {
+    return (
+      <nav className="bg-white border-b border-gray-100 px-6 py-4 fixed w-full top-0 z-50" role="navigation" aria-label="Main navigation">
+        <div className="max-w-7xl mx-auto flex justify-center">
+          <Link href="/" aria-label="Rojas Photography Home">
+            <Image src="/images/Rojas Photography Logo 24.6.png" alt="Rojas Photography" width={160} height={36} className="h-9 w-auto" priority />
+          </Link>
+        </div>
+      </nav>
+    );
+  }
 
   return (
     <>
