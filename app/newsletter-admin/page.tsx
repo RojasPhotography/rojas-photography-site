@@ -252,6 +252,22 @@ export default function NewsletterAdmin() {
     loadDrafts();
   }
 
+  async function duplicateDraft(draft: Draft) {
+    const res = await fetch(`/api/newsletter/drafts?id=${draft.id}`);
+    const full = await res.json();
+    await fetch('/api/newsletter/drafts', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        password,
+        subject: `Copy of ${draft.subject || 'Untitled Draft'}`,
+        content: full.content,
+        html_content: full.html_content,
+      }),
+    });
+    loadDrafts();
+  }
+
   async function saveSequenceEmailWithContent(json: string, html: string) {
     if (editingSequenceId === null) return;
     setSequenceSaveStatus('saving');
@@ -879,6 +895,12 @@ export default function NewsletterAdmin() {
                         className="px-3 py-1 text-xs font-semibold bg-[var(--color-primary)] text-white rounded-full hover:opacity-90"
                       >
                         Load
+                      </button>
+                      <button
+                        onClick={() => duplicateDraft(draft)}
+                        className="px-3 py-1 text-xs font-semibold border border-gray-300 text-gray-600 rounded-full hover:bg-gray-50"
+                      >
+                        Duplicate
                       </button>
                       <button
                         onClick={() => deleteDraft(draft.id)}
