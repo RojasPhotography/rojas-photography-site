@@ -2,8 +2,8 @@ import { getSupabase } from '@/app/lib/supabase-server';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-// Called by Vercel Cron every hour — processes pending sequence emails that are due
-export async function POST(request: Request) {
+// Called by Vercel Cron daily — processes pending sequence emails that are due
+export async function GET(request: Request) {
   // Verify cron secret or admin password
   const authHeader = request.headers.get('authorization');
   const cronSecret = process.env.CRON_SECRET;
