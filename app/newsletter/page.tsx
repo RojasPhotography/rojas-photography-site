@@ -92,7 +92,7 @@ export default function NewsletterPage() {
         <div className="max-w-xl mx-auto text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-[var(--color-primary)] mb-4">Free Monthly Newsletter</p>
           <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-text-dark)] leading-tight mb-4">
-            Most professionals lose clients before they say a word.
+            They Google you before they call.
           </h1>
           <p className="text-[var(--color-text-body)] text-lg leading-relaxed mb-8">
             Your headshot, your team page, your event photos — every month, Alfonso & Niomi share real stories and practical tips to help Central Valley professionals make their imagery work for them.
