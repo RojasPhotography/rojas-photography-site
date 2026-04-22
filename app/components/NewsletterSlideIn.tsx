@@ -9,6 +9,7 @@ export default function NewsletterSlideIn() {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   useEffect(() => {
+    if (window.location.pathname === '/newsletter') return;
     if (sessionStorage.getItem('newsletter_slide_dismissed')) return;
 
     function handleScroll() {

@@ -5,7 +5,7 @@ import NewsletterSignup from '../components/NewsletterSignup';
 
 export const metadata: Metadata = {
   title: 'Join the Newsletter | Rojas Photography',
-  description: 'Behind-the-scenes photography tips, real client stories, and exclusive offers for Central Valley professionals. Join 400+ subscribers. Free, no spam.',
+  description: 'Behind-the-scenes photography tips, real client stories, and exclusive offers for Central Valley professionals. Join 500+ subscribers. Free, no spam.',
   alternates: {
     canonical: 'https://rojasphotography.net/newsletter',
   },
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/Rojas Photography Logo 24.6.png',
-        alt: 'Rojas Photography',
+        url: '/images/Alfonso+Niomi-0026.jpg',
+        alt: 'Alfonso and Niomi Rojas',
       },
     ],
   },
@@ -37,20 +37,11 @@ export default function NewsletterPage() {
       {/* Hero */}
       <section className="bg-[var(--color-primary-dark)] pt-28 pb-16 px-6 text-center">
         <div className="max-w-2xl mx-auto">
-          <div className="mb-8 flex justify-center">
-            <Image
-              src="/images/Rojas Photography Logo 24.6.png"
-              alt="Rojas Photography"
-              width={180}
-              height={60}
-              className="brightness-0 invert"
-            />
-          </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Photography insights for<br />Central Valley professionals.
           </h1>
           <p className="text-white/80 text-lg md:text-xl leading-relaxed">
-            Join 400+ business owners, executives, and organizations who get behind-the-scenes content, real client stories, and photography tips — straight from Alfonso & Niomi.
+            Join 500+ professionals across Modesto and the Central Valley who get behind-the-scenes content, real client stories, and photography tips — straight from Alfonso & Niomi.
           </p>
         </div>
       </section>
@@ -65,8 +56,8 @@ export default function NewsletterPage() {
 
           {/* What you'll get */}
           <div>
-            <h2 className="text-xl font-bold text-[var(--color-text-dark)] mb-6">What you'll get</h2>
-            <ul className="space-y-4">
+            <h2 className="text-xl font-bold text-[var(--color-text-dark)] mb-6">What you&apos;ll get</h2>
+            <ul className="space-y-4 mb-10">
               {perks.map((perk) => (
                 <li key={perk} className="flex items-start gap-3">
                   <CheckCircle2 size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
@@ -75,12 +66,24 @@ export default function NewsletterPage() {
               ))}
             </ul>
 
-            <div className="mt-10 bg-white rounded-2xl p-6 border border-gray-100">
-              <p className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wide mb-3">From Alfonso & Niomi</p>
-              <p className="text-[var(--color-text-body)] leading-relaxed text-sm">
-                "We started this newsletter to share what we actually see behind the lens — the real stories of businesses leveling up their image, the shoots that surprised us, and the tips we wish every professional knew before stepping in front of a camera."
-              </p>
-              <p className="text-sm font-semibold text-[var(--color-text-dark)] mt-3">— Alfonso & Niomi Rojas</p>
+            {/* Photo + quote */}
+            <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 shadow-sm">
+              <div className="relative h-56 w-full">
+                <Image
+                  src="/images/Alfonso+Niomi-0026.jpg"
+                  alt="Alfonso and Niomi Rojas — Rojas Photography"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+              <div className="p-6">
+                <p className="text-[var(--color-text-body)] leading-relaxed text-sm">
+                  &ldquo;We started this newsletter to share what we actually see behind the lens — the real stories of businesses leveling up their image, the shoots that surprised us, and the tips we wish every professional knew before stepping in front of a camera.&rdquo;
+                </p>
+                <p className="text-sm font-semibold text-[var(--color-text-dark)] mt-3">— Alfonso & Niomi Rojas</p>
+                <p className="text-xs text-[var(--color-text-muted)]">Rojas Photography · Modesto, CA</p>
+              </div>
             </div>
           </div>
         </div>
