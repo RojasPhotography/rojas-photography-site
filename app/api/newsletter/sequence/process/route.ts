@@ -4,11 +4,16 @@ import { NextResponse } from 'next/server';
 
 // Called by Vercel Cron daily — processes pending sequence emails that are due
 export async function GET(request: Request) {
-  // Verify cron secret or admin password
   const authHeader = request.headers.get('authorization');
   const cronSecret = process.env.CRON_SECRET;
+  const adminPassword = process.env.NEWSLETTER_ADMIN_PASSWORD;
+  const { searchParams } = new URL(request.url);
+  const queryPassword = searchParams.get('password');
 
-  if (cronSecret && authHeader !== `Bearer ${cronSecret}`) {
+  const validCron = cronSecret && authHeader === `Bearer ${cronSecret}`;
+  const validAdmin = adminPassword && queryPassword === adminPassword;
+
+  if (cronSecret && !validCron && !validAdmin) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
