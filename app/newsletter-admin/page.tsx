@@ -69,6 +69,11 @@ export default function NewsletterAdmin() {
   const [editorReady, setEditorReady] = useState(false);
   const pendingDraftSave = useRef(false);
 
+  const subjectRef = useRef(subject);
+  const currentDraftIdRef = useRef(currentDraftId);
+  useEffect(() => { subjectRef.current = subject; }, [subject]);
+  useEffect(() => { currentDraftIdRef.current = currentDraftId; }, [currentDraftId]);
+
   const [status, setStatus] = useState<'idle' | 'loading' | 'saving' | 'success' | 'error'>('idle');
   const [result, setResult] = useState('');
   const [testEmailStatus, setTestEmailStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -202,8 +207,8 @@ export default function NewsletterAdmin() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           password,
-          id: currentDraftId,
-          subject: subject || 'Untitled Draft',
+          id: currentDraftIdRef.current,
+          subject: subjectRef.current || 'Untitled Draft',
           content: json,
           html_content: html,
         }),
