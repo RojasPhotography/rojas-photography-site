@@ -3,6 +3,10 @@
     {
       "path": "/api/newsletter/sequence/process",
       "schedule": "0 9 * * *"
+    },
+    {
+      "path": "/api/keep-alive",
+      "schedule": "0 12 * * *"
     }
   ]
 }
