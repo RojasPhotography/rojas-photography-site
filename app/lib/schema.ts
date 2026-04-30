@@ -112,7 +112,7 @@ export function generateOrganizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    '@id': 'https://rojasphotography.net',
+    '@id': 'https://rojasphotography.net/#organization',
     name: 'Rojas Photography',
     url: 'https://rojasphotography.net',
     logo: 'https://rojasphotography.net/images/Rojas Photography Logo 24.6.png',
