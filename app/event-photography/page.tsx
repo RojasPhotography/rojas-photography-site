@@ -72,7 +72,6 @@ export default function EventPhotographyPage() {
         description: 'Professional event photography for conferences, galas, fundraisers, and corporate gatherings in Modesto and Central Valley. Delivered in 5–7 business days.',
         url: 'https://rojasphotography.net/event-photography',
         image: 'https://rojasphotography.net/images/CLA AM 25 201.jpg',
-        aggregateRating: { ratingValue: '5', reviewCount: '60' },
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([

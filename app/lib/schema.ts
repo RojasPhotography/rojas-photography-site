@@ -135,10 +135,6 @@ interface ServiceSchemaOptions {
   description: string;
   url: string;
   image?: string;
-  aggregateRating?: {
-    ratingValue: string;
-    reviewCount: string;
-  };
 }
 
 export function generateServiceSchema(options: ServiceSchemaOptions) {
@@ -159,15 +155,6 @@ export function generateServiceSchema(options: ServiceSchemaOptions) {
       { '@type': 'City', name: 'Central Valley' },
     ],
     ...(options.image && { image: options.image }),
-    ...(options.aggregateRating && {
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: options.aggregateRating.ratingValue,
-        reviewCount: options.aggregateRating.reviewCount,
-        bestRating: '5',
-        worstRating: '1',
-      },
-    }),
     url: options.url,
   };
 }
