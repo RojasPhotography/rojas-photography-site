@@ -549,18 +549,14 @@ async function gen(cohort, type) {
   document.getElementById('modal').classList.add('active');
 
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
+    const res = await fetch('/api/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 1000,
-        messages: [{ role: 'user', content: buildPrompt(cohort, type) }]
-      })
+      body: JSON.stringify({ prompt: buildPrompt(cohort, type) })
     });
 
     const data = await res.json();
-    currentText = data.content?.[0]?.text || 'No content returned. Please try again.';
+    currentText = data.text || 'No content returned. Please try again.';
     document.getElementById('mcontent').textContent = currentText;
     document.getElementById('mactions').style.display = 'flex';
   } catch(e) {
