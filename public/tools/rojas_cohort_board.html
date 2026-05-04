@@ -275,37 +275,41 @@ header p {
 
 .modal-close:hover { color: var(--text); }
 
-.modal-content {
+.ready-banner {
+  background: rgba(31,107,77,0.15);
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ready-banner-text {
   font-size: 13px;
-  color: var(--text);
+  color: #4aaa80;
+  font-weight: 600;
+}
+
+.ready-banner-sub {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.modal-content {
+  font-size: 12px;
+  color: #7a8a9a;
   line-height: 1.7;
   white-space: pre-wrap;
   background: rgba(255,255,255,0.02);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 14px;
-  min-height: 100px;
+  max-height: 220px;
+  overflow-y: auto;
 }
-
-.modal-loading {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--muted);
-  font-size: 12px;
-  font-family: 'DM Mono', monospace;
-}
-
-.spinner {
-  width: 14px; height: 14px;
-  border: 2px solid var(--border);
-  border-top-color: var(--green-bright);
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-  flex-shrink: 0;
-}
-
-@keyframes spin { to { transform: rotate(360deg); } }
 
 .modal-actions {
   display: flex;
@@ -314,7 +318,7 @@ header p {
 }
 
 .copy-btn {
-  padding: 7px 14px;
+  padding: 8px 16px;
   background: var(--green-glow);
   border: 1px solid var(--green);
   border-radius: 6px;
@@ -322,9 +326,27 @@ header p {
   font-family: 'DM Mono', monospace;
   font-size: 11px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 .copy-btn:hover { background: rgba(31,107,77,0.25); }
+
+.claude-btn {
+  padding: 8px 16px;
+  background: #1a2840;
+  border: 1px solid #2a4a70;
+  border-radius: 6px;
+  color: #6aaadd;
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.claude-btn:hover { background: rgba(42,111,168,0.2); }
 </style>
 </head>
 <body>
@@ -495,16 +517,22 @@ header p {
   <div class="modal">
     <div class="modal-header">
       <div>
-        <div class="modal-title" id="mtitle">Generating...</div>
+        <div class="modal-title" id="mtitle"></div>
         <div class="modal-sub" id="msub"></div>
       </div>
       <button class="modal-close" onclick="closeModal()">✕</button>
     </div>
-    <div class="modal-content" id="mcontent">
-      <div class="modal-loading"><div class="spinner"></div> Generating with Claude AI...</div>
+    <div class="ready-banner">
+      <div style="font-size:22px">✅</div>
+      <div>
+        <div class="ready-banner-text">Prompt copied to clipboard!</div>
+        <div class="ready-banner-sub">Open Claude.ai, paste it in, and hit send.</div>
+      </div>
     </div>
-    <div class="modal-actions" id="mactions" style="display:none">
-      <button class="copy-btn" id="copybtn" onclick="copyIt()">📋 Copy to clipboard</button>
+    <div class="modal-content" id="mcontent"></div>
+    <div class="modal-actions">
+      <button class="copy-btn" id="copybtn" onclick="copyIt()">📋 Copy again</button>
+      <a class="claude-btn" href="https://claude.ai" target="_blank">↗ Open Claude.ai</a>
     </div>
   </div>
 </div>
@@ -513,14 +541,14 @@ header p {
 let currentText = '';
 
 const TYPE_LABELS = {
-  full_set: '5-Piece Content Set',
-  reel: 'Reel Script',
-  linkedin: 'LinkedIn Post',
-  carousel: 'Carousel Slides',
-  outreach: 'Outreach Message',
-  referral: 'Referral Ask Script',
-  bni: 'BNI Chapter Presentation',
-  sponsor: 'Chapter Sponsor Pitch'
+  full_set: '✦ 5-Piece Content Set',
+  reel: '🎬 Reel Script',
+  linkedin: '💼 LinkedIn Post',
+  carousel: '📱 Carousel Slides',
+  outreach: '✉️ Outreach Message',
+  referral: '🤝 Referral Ask Script',
+  bni: '🎤 BNI Presentation',
+  sponsor: '🤝 Sponsor Pitch'
 };
 
 function buildPrompt(cohort, type) {
@@ -540,28 +568,15 @@ function buildPrompt(cohort, type) {
   return prompts[type] || prompts.outreach;
 }
 
-async function gen(cohort, type) {
-  currentText = '';
+function gen(cohort, type) {
+  currentText = buildPrompt(cohort, type);
+
   document.getElementById('mtitle').textContent = TYPE_LABELS[type] || type;
   document.getElementById('msub').textContent = cohort;
-  document.getElementById('mcontent').innerHTML = '<div class="modal-loading"><div class="spinner"></div> Generating with Claude AI...</div>';
-  document.getElementById('mactions').style.display = 'none';
+  document.getElementById('mcontent').textContent = currentText;
   document.getElementById('modal').classList.add('active');
 
-  try {
-    const res = await fetch('/api/generate', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt: buildPrompt(cohort, type) })
-    });
-
-    const data = await res.json();
-    currentText = data.text || 'No content returned. Please try again.';
-    document.getElementById('mcontent').textContent = currentText;
-    document.getElementById('mactions').style.display = 'flex';
-  } catch(e) {
-    document.getElementById('mcontent').textContent = 'Error connecting to Claude. Please try again.';
-  }
+  navigator.clipboard.writeText(currentText).catch(() => {});
 }
 
 function closeModal() {
