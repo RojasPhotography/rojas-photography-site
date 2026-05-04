@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rojas Photography — Content Cohort Board</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap');
+
+:root {
+  --bg: #0a0c0f;
+  --surface: #111418;
+  --card: #161b20;
+  --border: #1e252c;
+  --green: #1F6B4D;
+  --green-bright: #2a9068;
+  --green-glow: rgba(31,107,77,0.15);
+  --gold: #c8902a;
+  --blue: #2a6fa8;
+  --text: #d0d8e0;
+  --muted: #5a6875;
+  --white: #f0f4f8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  padding: 20px;
+}
+
+header {
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--border);
+}
+
+header h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+header h1 span { color: var(--green-bright); }
+
+header p {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  margin-top: 3px;
+}
+
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green-bright);
+}
+
+.section-label.ext::before { background: var(--blue); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--green);
+  opacity: 0.7;
+}
+
+.card.ext::before { background: var(--blue); }
+.card.multi::before { background: var(--gold); }
+
+.card-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+}
+
+.card-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
+
+.tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: rgba(31,107,77,0.12);
+  color: #4aaa80;
+  border: 1px solid rgba(31,107,77,0.2);
+}
+
+.tag.blue {
+  background: rgba(42,111,168,0.12);
+  color: #6aaadd;
+  border-color: rgba(42,111,168,0.2);
+}
+
+.tag.gold {
+  background: rgba(200,144,42,0.12);
+  color: #e0b060;
+  border-color: rgba(200,144,42,0.2);
+}
+
+.hook {
+  font-size: 10.5px;
+  color: #90a0b0;
+  line-height: 1.5;
+  font-style: italic;
+  padding: 7px 9px;
+  background: rgba(255,255,255,0.025);
+  border-radius: 5px;
+  border-left: 2px solid var(--green);
+}
+
+.card.ext .hook { border-left-color: var(--blue); }
+.card.multi .hook { border-left-color: var(--gold); }
+
+.find {
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.find strong { color: #7a8a9a; font-weight: 500; }
+
+.full-set-btn {
+  width: 100%;
+  padding: 7px;
+  background: #0f1a14;
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  color: var(--green-bright);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition: all 0.15s;
+}
+
+.full-set-btn:hover { background: var(--green-glow); color: #5ad4a0; }
+
+.card.ext .full-set-btn { background: rgba(42,111,168,0.08); border-color: var(--blue); color: #6aaadd; }
+.card.ext .full-set-btn:hover { background: rgba(42,111,168,0.15); }
+
+.card.multi .full-set-btn { background: rgba(200,144,42,0.08); border-color: var(--gold); color: #e0b060; }
+.card.multi .full-set-btn:hover { background: rgba(200,144,42,0.15); }
+
+.actions { display: flex; flex-direction: column; gap: 4px; }
+
+.action-btn {
+  width: 100%;
+  padding: 5px 9px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: #8090a0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.15s;
+}
+
+.action-btn:hover { background: #1a2028; border-color: #2a3540; color: var(--text); }
+
+/* Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.active { display: flex; }
+
+.modal {
+  background: #141a20;
+  border: 1px solid #2a3540;
+  border-radius: 12px;
+  padding: 22px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 10px;
+}
+
+.modal-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.modal-sub {
+  font-size: 11px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  margin-top: 2px;
+}
+
+.modal-close {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  border-radius: 5px;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.modal-close:hover { color: var(--text); }
+
+.modal-content {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.7;
+  white-space: pre-wrap;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  min-height: 100px;
+}
+
+.modal-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-family: 'DM Mono', monospace;
+}
+
+.spinner {
+  width: 14px; height: 14px;
+  border: 2px solid var(--border);
+  border-top-color: var(--green-bright);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.copy-btn {
+  padding: 7px 14px;
+  background: var(--green-glow);
+  border: 1px solid var(--green);
+  border-radius: 6px;
+  color: var(--green-bright);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.copy-btn:hover { background: rgba(31,107,77,0.25); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Rojas Photography <span>/ Content Cohort Board</span></h1>
+  <p>Your 10 target cohorts — click any button to generate content instantly</p>
+</header>
+
+<div class="section-label">Already Proven — Build These First</div>
+
+<div class="grid">
+  <!-- 01 -->
+  <div class="card">
+    <div class="card-num">01</div>
+    <div class="card-title">Real estate agents</div>
+    <div class="tags"><span class="tag">Proven</span><span class="tag">Headshots</span><span class="tag">Branding</span></div>
+    <div class="hook">"Your headshot needs to match the price of the homes you're selling."</div>
+    <div class="find"><strong>Find them:</strong> KW, RE/MAX, Compass, C21 offices · Local MLS events · CAR chapter · Realtor Facebook groups</div>
+    <button class="full-set-btn" onclick="gen('Real estate agents','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('Real estate agents','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('Real estate agents','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Real estate agents','carousel')">📱 Carousel slides</button>
+      <button class="action-btn" onclick="gen('Real estate agents','outreach')">✉️ Outreach message</button>
+    </div>
+  </div>
+  <!-- 02 -->
+  <div class="card">
+    <div class="card-num">02</div>
+    <div class="card-title">Accountants & bookkeepers</div>
+    <div class="tags"><span class="tag">Proven</span><span class="tag">Headshots</span><span class="tag">Teams</span></div>
+    <div class="hook">"Tax season just ended. You helped everyone get their finances in order. Now it's your turn."</div>
+    <div class="find"><strong>Find them:</strong> CalCPA Central Valley chapter · Bookkeeper Facebook groups · UWM / Rocket local brokers · First American, Fidelity, Old Republic title offices</div>
+    <button class="full-set-btn" onclick="gen('Accountants & bookkeepers','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('Accountants & bookkeepers','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('Accountants & bookkeepers','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Accountants & bookkeepers','carousel')">📱 Carousel slides</button>
+      <button class="action-btn" onclick="gen('Accountants & bookkeepers','outreach')">✉️ Outreach message</button>
+    </div>
+  </div>
+  <!-- 03 -->
+  <div class="card">
+    <div class="card-num">03</div>
+    <div class="card-title">Entrepreneurs & small business owners</div>
+    <div class="tags"><span class="tag">Proven</span><span class="tag">Headshots</span><span class="tag">Branding</span></div>
+    <div class="hook">"You built a real business. Your brand photo shouldn't look like a side hustle."</div>
+    <div class="find"><strong>Find them:</strong> Chamber of Commerce · SCORE · BNI chapters · Local entrepreneur Facebook groups · Modesto / Stockton startup events</div>
+    <button class="full-set-btn" onclick="gen('Entrepreneurs & small business owners','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('Entrepreneurs & small business owners','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('Entrepreneurs & small business owners','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Entrepreneurs & small business owners','carousel')">📱 Carousel slides</button>
+      <button class="action-btn" onclick="gen('Entrepreneurs & small business owners','outreach')">✉️ Outreach message</button>
+    </div>
+  </div>
+  <!-- 04 -->
+  <div class="card">
+    <div class="card-num">04</div>
+    <div class="card-title">School districts & education companies</div>
+    <div class="tags"><span class="tag">Proven</span><span class="tag">On-site Teams</span></div>
+    <div class="hook">"Parents look up your staff page before they ever walk through the door."</div>
+    <div class="find"><strong>Find them:</strong> Ceres, Modesto City, Turlock, Stockton unified districts · MJC · Delta College · CSU Stanislaus · Private schools</div>
+    <button class="full-set-btn" onclick="gen('School districts & education companies','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('School districts & education companies','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('School districts & education companies','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('School districts & education companies','carousel')">📱 Carousel slides</button>
+      <button class="action-btn" onclick="gen('School districts & education companies','outreach')">✉️ Outreach email</button>
+    </div>
+  </div>
+  <!-- 05 -->
+  <div class="card">
+    <div class="card-num">05</div>
+    <div class="card-title">Corporate headshot day (Comcast model)</div>
+    <div class="tags"><span class="tag">Proven</span><span class="tag">Headshot Booth</span><span class="tag">Events</span></div>
+    <div class="hook">"One booking. 40 employees. Done in a day. We bring the studio to you."</div>
+    <div class="find"><strong>Find them:</strong> HR directors at 50+ employee companies · LinkedIn HR title search · Hospitals · Banks & credit unions · Large retailers</div>
+    <button class="full-set-btn" onclick="gen('Corporate headshot day','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('Corporate headshot day','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('Corporate headshot day','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Corporate headshot day','carousel')">📱 Carousel slides</button>
+      <button class="action-btn" onclick="gen('Corporate headshot day','outreach')">✉️ Outreach email</button>
+    </div>
+  </div>
+</div>
+
+<div class="section-label ext">Natural Extensions — Already in Your Orbit</div>
+
+<div class="grid">
+  <!-- 06 -->
+  <div class="card ext">
+    <div class="card-num">06</div>
+    <div class="card-title">Mortgage & title professionals</div>
+    <div class="tags"><span class="tag blue">Extend from realtors</span><span class="tag">Headshots</span></div>
+    <div class="hook">"Every realtor you work with has a loan officer and a title rep. One intro gets you in the door."</div>
+    <div class="find"><strong>Find them:</strong> UWM / Rocket local brokers · First American, Fidelity, Old Republic title offices · Mortgage broker associations · LinkedIn search</div>
+    <button class="full-set-btn" onclick="gen('Mortgage & title professionals','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('Mortgage & title professionals','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('Mortgage & title professionals','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Mortgage & title professionals','carousel')">📱 Carousel slides</button>
+      <button class="action-btn" onclick="gen('Mortgage & title professionals','referral')">🤝 Referral ask script</button>
+    </div>
+  </div>
+  <!-- 07 -->
+  <div class="card ext">
+    <div class="card-num">07</div>
+    <div class="card-title">Financial advisors & insurance agents</div>
+    <div class="tags"><span class="tag blue">Extend from accountants</span><span class="tag">Headshots</span></div>
+    <div class="hook">"Your entire business is built on trust. Your photo is doing the trust-building work 24/7."</div>
+    <div class="find"><strong>Find them:</strong> FPA Central Valley · NAIFA chapter · Independent advisors on LinkedIn · State Farm / Allstate / Farmers offices · Edward Jones branches</div>
+    <button class="full-set-btn" onclick="gen('Financial advisors & insurance agents','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('Financial advisors & insurance agents','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('Financial advisors & insurance agents','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Financial advisors & insurance agents','outreach')">✉️ Outreach message</button>
+    </div>
+  </div>
+  <!-- 08 -->
+  <div class="card ext">
+    <div class="card-num">08</div>
+    <div class="card-title">Attorneys & small law firms</div>
+    <div class="tags"><span class="tag blue">High-value extension</span><span class="tag">Headshots</span><span class="tag">Teams</span></div>
+    <div class="hook">"Clients judge attorneys before the consultation. Your photo is doing the first impression for you."</div>
+    <div class="find"><strong>Find them:</strong> San Joaquin County Bar · Stanislaus County Bar · Solo attorneys on LinkedIn · Legal referral networks · Martindale-Hubbell local listings</div>
+    <button class="full-set-btn" onclick="gen('Attorneys & small law firms','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('Attorneys & small law firms','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('Attorneys & small law firms','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Attorneys & small law firms','outreach')">✉️ Outreach email</button>
+    </div>
+  </div>
+  <!-- 09 -->
+  <div class="card ext">
+    <div class="card-num">09</div>
+    <div class="card-title">Healthcare professionals</div>
+    <div class="tags"><span class="tag blue">Large local market</span><span class="tag">Headshots</span><span class="tag">Teams</span></div>
+    <div class="hook">"Patients choose their doctor, dentist, and chiropractor online — before they ever call."</div>
+    <div class="find"><strong>Find them:</strong> Medical groups (Doctors Medical, Sutter, Emanuel) · DSO dental groups · Chiropractic associations · Private physicians on LinkedIn</div>
+    <button class="full-set-btn" onclick="gen('Healthcare professionals','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('Healthcare professionals','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('Healthcare professionals','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Healthcare professionals','outreach')">✉️ Outreach email</button>
+    </div>
+  </div>
+  <!-- 10 -->
+  <div class="card multi">
+    <div class="card-num">10</div>
+    <div class="card-title">BNI chapters & Chamber members</div>
+    <div class="tags"><span class="tag gold">Multiplier</span><span class="tag">All services</span></div>
+    <div class="hook">"Every BNI chapter is full of realtors, accountants, attorneys, and advisors. One chapter relationship feeds every other cohort."</div>
+    <div class="find"><strong>Find them:</strong> BNI Central Valley chapters (Modesto, Stockton, Turlock) · Modesto Chamber · Stockton Chamber · Ceres Chamber · SEDWA</div>
+    <button class="full-set-btn" onclick="gen('BNI chapters & Chamber members','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('BNI chapters & Chamber members','bni')">🎤 BNI chapter presentation</button>
+      <button class="action-btn" onclick="gen('BNI chapters & Chamber members','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('BNI chapters & Chamber members','sponsor')">🤝 Chapter sponsor pitch</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title" id="mtitle">Generating...</div>
+        <div class="modal-sub" id="msub"></div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-content" id="mcontent">
+      <div class="modal-loading"><div class="spinner"></div> Generating with Claude AI...</div>
+    </div>
+    <div class="modal-actions" id="mactions" style="display:none">
+      <button class="copy-btn" id="copybtn" onclick="copyIt()">📋 Copy to clipboard</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let currentText = '';
+
+const TYPE_LABELS = {
+  full_set: '5-Piece Content Set',
+  reel: 'Reel Script',
+  linkedin: 'LinkedIn Post',
+  carousel: 'Carousel Slides',
+  outreach: 'Outreach Message',
+  referral: 'Referral Ask Script',
+  bni: 'BNI Chapter Presentation',
+  sponsor: 'Chapter Sponsor Pitch'
+};
+
+function buildPrompt(cohort, type) {
+  const base = `You are a content strategist for Rojas Photography LLC, a premium corporate photography and videography business in Modesto, CA run by Alfonso and Niomi Rojas. Alfonso is the client-facing lead. Brand color: Rolex deep green. Contact: 209-380-3727, alfonso@rojasphotography.net. Standard headshot pricing: $150/person (1 image), $300 onsite travel fee, delivered via SpotMyPhotos. The business serves corporate clients including Save Mart, Comcast, and California Lawyers Association.`;
+  
+  const prompts = {
+    full_set: `${base}\n\nGenerate 5 distinct content pieces for targeting the "${cohort}" cohort. For each include: content type, hook/headline, 2-3 sentence core message, and call to action. Make it feel premium, authentic, and locally relevant to the Central Valley / Modesto market.`,
+    reel: `${base}\n\nWrite a punchy 30-second Instagram/TikTok Reel script targeting "${cohort}". Include: Hook (first 3 seconds to stop the scroll), Problem identification, Solution positioning, Social proof element, Call to action. Alfonso is on camera — write in first person. Keep it conversational and locally grounded.`,
+    linkedin: `${base}\n\nWrite a LinkedIn post targeting "${cohort}". Alfonso is the author. Open with a scroll-stopping hook, tell a short story or share an insight, position professional photography as a business investment, end with a soft CTA. Tone: warm, professional, locally grounded. 150-250 words. Max 3 relevant hashtags at the end.`,
+    carousel: `${base}\n\nCreate a 5-slide Instagram carousel for "${cohort}". For each slide: slide number, bold headline, 2-3 line body copy. Slide 1 = strong hook. Slides 2-4 = value. Slide 5 = CTA. Topic: why professional photography matters for this specific cohort. Punchy and visually driven.`,
+    outreach: `${base}\n\nWrite a cold outreach message for Alfonso to send to "${cohort}" prospects on LinkedIn or via email. Under 150 words, personal not spammy, reference something specific about their profession, offer clear value, soft CTA. Include Alfonso's contact info naturally.`,
+    referral: `${base}\n\nWrite a referral ask script for Alfonso to use with "${cohort}" clients or contacts. Word-for-word script he can say in person or adapt as a message. Natural, not salesy. Include both an in-person version and a shorter text/DM version.`,
+    bni: `${base}\n\nWrite a 60-second BNI chapter presentation script for Alfonso targeting "${cohort}" referral sources. Include: attention-grabbing opener, what Rojas Photography does (1 sentence), ideal referral description (specific), memory hook or tagline, ask. Make it memorable enough that members know exactly who to refer.`,
+    sponsor: `${base}\n\nWrite a chapter sponsorship pitch for Alfonso to present to a "${cohort}" BNI/Chamber group. Include: value proposition, what Rojas Photography offers as sponsor (headshot day, event coverage, etc.), pricing anchor, CTA. Under 200 words. Frame as a win-win partnership.`
+  };
+  
+  return prompts[type] || prompts.outreach;
+}
+
+async function gen(cohort, type) {
+  currentText = '';
+  document.getElementById('mtitle').textContent = TYPE_LABELS[type] || type;
+  document.getElementById('msub').textContent = cohort;
+  document.getElementById('mcontent').innerHTML = '<div class="modal-loading"><div class="spinner"></div> Generating with Claude AI...</div>';
+  document.getElementById('mactions').style.display = 'none';
+  document.getElementById('modal').classList.add('active');
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1000,
+        messages: [{ role: 'user', content: buildPrompt(cohort, type) }]
+      })
+    });
+
+    const data = await res.json();
+    currentText = data.content?.[0]?.text || 'No content returned. Please try again.';
+    document.getElementById('mcontent').textContent = currentText;
+    document.getElementById('mactions').style.display = 'flex';
+  } catch(e) {
+    document.getElementById('mcontent').textContent = 'Error connecting to Claude. Please try again.';
+  }
+}
+
+function closeModal() {
+  document.getElementById('modal').classList.remove('active');
+}
+
+function copyIt() {
+  navigator.clipboard.writeText(currentText).then(() => {
+    const btn = document.getElementById('copybtn');
+    btn.textContent = '✓ Copied!';
+    setTimeout(() => btn.textContent = '📋 Copy to clipboard', 2000);
+  });
+}
+
+document.getElementById('modal').addEventListener('click', function(e) {
+  if (e.target === this) closeModal();
+});
+</script>
+</body>
+</html>
