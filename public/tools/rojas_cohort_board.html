@@ -552,19 +552,172 @@ const TYPE_LABELS = {
 };
 
 function buildPrompt(cohort, type) {
-  const base = `You are a content strategist for Rojas Photography LLC, a premium corporate photography and videography business in Modesto, CA run by Alfonso and Niomi Rojas. Alfonso is the client-facing lead. Brand color: Rolex deep green. Contact: 209-380-3727, alfonso@rojasphotography.net. Standard headshot pricing: $150/person (1 image), $300 onsite travel fee, delivered via SpotMyPhotos. The business serves corporate clients including Save Mart, Comcast, and California Lawyers Association.`;
-  
+
+  const base = `
+ABOUT ROJAS PHOTOGRAPHY:
+Alfonso and Niomi Rojas run Rojas Photography LLC in Modesto, CA — a premium corporate photography and videography studio serving the Central Valley. Alfonso is the lead photographer and the face of the brand. Niomi runs operations. They've worked with Save Mart, Comcast, California Lawyers Association, Kaiser, and 500+ executives and professionals. Headshot pricing: $150 session + $150/image. On-site team photography available with a $300 travel fee. Delivered via SpotMyPhotos within 48 hours. 60+ five-star Google reviews. FAA Part 107 certified for drone. Contact: 209-380-3727, alfonso@rojasphotography.net.
+
+ALFONSO'S VOICE:
+Warm, grounded, direct. Former corporate leader (15+ years in management). He understands what it's like to be the client — to be judged before you walk in the room. He's not a "photographer who does business" — he's a business person who happens to be a photographer. He talks like a real person, not a brand. No buzzwords. No hype. He leads with empathy and curiosity about the client's world.
+
+TWO FRAMEWORKS TO EMBED IN EVERYTHING YOU WRITE:
+
+1. STORYBRAND (Donald Miller):
+- The CLIENT is always the hero — not Alfonso, not Rojas Photography.
+- Alfonso is the GUIDE (think Yoda to Luke, Gandalf to Frodo). He's been through it, he understands, and he has a clear simple plan.
+- Every piece of content should address THREE levels of the client's problem:
+    * External problem: something visible and practical (e.g. "my headshot is 8 years old")
+    * Internal problem: how it makes them FEEL (e.g. "I feel like I'm not being taken seriously")
+    * Philosophical problem: the deeper truth/injustice (e.g. "professionals who work hard deserve to look their best")
+- Show what SUCCESS looks like after working with Alfonso. Also show what FAILURE looks like if they don't act.
+- Keep the plan simple: 1 step, 2 steps, 3 steps max.
+- NEVER make Alfonso the hero. He's the guide who helps the client win.
+
+2. GARY VAYNERCHUK (GaryVee):
+- Lead with pure value — educate, entertain, or tell a real story — before asking for ANYTHING.
+- Content should feel like a smart friend sharing something useful, not a brand pushing a product.
+- "Document don't create" — real moments, real client stories, real observations from the field beat polished marketing copy every time.
+- Use the Jab-Jab-Jab-Right Hook structure: give value 3 times, ask once — and even the ask should feel generous.
+- Platform-native: LinkedIn posts sound like LinkedIn. Reels sound like real people talking on camera. Not like ads.
+- No clickbait. No fake urgency. No "DM me for pricing." Real talk only.
+- The audience can smell inauthenticity from a mile away. Be specific, be human, be honest.
+
+TARGET COHORT FOR THIS CONTENT: "${cohort}"
+`;
+
   const prompts = {
-    full_set: `${base}\n\nGenerate 5 distinct content pieces for targeting the "${cohort}" cohort. For each include: content type, hook/headline, 2-3 sentence core message, and call to action. Make it feel premium, authentic, and locally relevant to the Central Valley / Modesto market.`,
-    reel: `${base}\n\nWrite a punchy 30-second Instagram/TikTok Reel script targeting "${cohort}". Include: Hook (first 3 seconds to stop the scroll), Problem identification, Solution positioning, Social proof element, Call to action. Alfonso is on camera — write in first person. Keep it conversational and locally grounded.`,
-    linkedin: `${base}\n\nWrite a LinkedIn post targeting "${cohort}". Alfonso is the author. Open with a scroll-stopping hook, tell a short story or share an insight, position professional photography as a business investment, end with a soft CTA. Tone: warm, professional, locally grounded. 150-250 words. Max 3 relevant hashtags at the end.`,
-    carousel: `${base}\n\nCreate a 5-slide Instagram carousel for "${cohort}". For each slide: slide number, bold headline, 2-3 line body copy. Slide 1 = strong hook. Slides 2-4 = value. Slide 5 = CTA. Topic: why professional photography matters for this specific cohort. Punchy and visually driven.`,
-    outreach: `${base}\n\nWrite a cold outreach message for Alfonso to send to "${cohort}" prospects on LinkedIn or via email. Under 150 words, personal not spammy, reference something specific about their profession, offer clear value, soft CTA. Include Alfonso's contact info naturally.`,
-    referral: `${base}\n\nWrite a referral ask script for Alfonso to use with "${cohort}" clients or contacts. Word-for-word script he can say in person or adapt as a message. Natural, not salesy. Include both an in-person version and a shorter text/DM version.`,
-    bni: `${base}\n\nWrite a 60-second BNI chapter presentation script for Alfonso targeting "${cohort}" referral sources. Include: attention-grabbing opener, what Rojas Photography does (1 sentence), ideal referral description (specific), memory hook or tagline, ask. Make it memorable enough that members know exactly who to refer.`,
-    sponsor: `${base}\n\nWrite a chapter sponsorship pitch for Alfonso to present to a "${cohort}" BNI/Chamber group. Include: value proposition, what Rojas Photography offers as sponsor (headshot day, event coverage, etc.), pricing anchor, CTA. Under 200 words. Frame as a win-win partnership.`
+
+    full_set: `${base}
+TASK: Generate a 5-piece content set for the "${cohort}" cohort. This is a content CALENDAR — five distinct pieces that together tell a complete story and serve the audience across a week or two of posting. Do NOT repeat the same angle. Each piece should stand alone and deliver standalone value.
+
+For each piece, include:
+- Content type and platform
+- Hook / headline (the very first line someone sees)
+- Full content or detailed outline
+- Why this piece serves the cohort (1 sentence)
+
+FRAMEWORK RULES:
+- Pieces 1-3: Pure value (GaryVee jabs) — educate, share a story, or challenge an assumption. Zero selling.
+- Piece 4: StoryBrand — client as hero facing a real problem, Alfonso as guide with a clear plan, paint the transformation.
+- Piece 5: The "right hook" — a soft, generous ask that feels like a natural next step, not a pitch.
+- In every piece, the client cohort is the hero. Alfonso is the guide who's been there and has the answer.
+- Be specific to the "${cohort}" world. Use their vocabulary, their context, their real-world pressures.
+`,
+
+    reel: `${base}
+TASK: Write a 30-second Instagram/TikTok Reel script for Alfonso speaking directly to "${cohort}". Alfonso is on camera — write in first person, in his natural voice.
+
+STRUCTURE (GaryVee documentary style + StoryBrand):
+- Seconds 0-3: Pattern interrupt. Open with a specific, true observation about the "${cohort}" world that makes them stop scrolling. NOT a question. NOT "Hey guys." A statement that makes them think "wait, that's me."
+- Seconds 4-15: Empathy and truth. Show you understand their internal reality — not just the surface problem but how it MAKES THEM FEEL. Alfonso shares a real moment or observation from his actual work. This is pure value — no mention of services.
+- Seconds 16-25: The shift. A simple insight or reframe that changes how they see the problem. The guide offering wisdom.
+- Seconds 26-30: One gentle, specific next step. Not "book now." Something that feels like a natural move — like checking something, thinking about something, or a low-pressure invitation.
+
+RULES:
+- Alfonso never positions himself as the hero. He's the guy who's been in their world and noticed something important.
+- No feature lists. No pricing mentions. No "DM me."
+- Should feel like something a smart friend said, not an ad.
+- Conversational. Real. Locally grounded to Central Valley / Modesto.
+`,
+
+    linkedin: `${base}
+TASK: Write a LinkedIn post for Alfonso targeting "${cohort}". Alfonso is the author. 180-250 words. Max 3 hashtags at the very end.
+
+STRUCTURE (StoryBrand + GaryVee):
+- Line 1: A single, specific sentence that stops the scroll. It should speak directly to the "${cohort}" world — their reality, their tension, or a truth they haven't put into words yet. NOT a generic hook. NOT "I want to talk about..."
+- Lines 2-5: Meet them where they are. Name the external problem AND the internal feeling. Show you understand their world from the inside — not as a photographer looking in, but as someone who has worked alongside people like them. This is the empathy step.
+- Middle section: Tell a brief, specific story from a real client interaction (or a plausible composite). The CLIENT is the hero of the story. Alfonso is just the guide who helped them see something or get something done.
+- Near end: A simple truth or reframe — the philosophical layer. What does this say about how professionals deserve to be seen?
+- Final line: One soft, clear call to action. Not "book a session." Something generous — an offer to answer a question, share something useful, or take a small easy step.
+
+RULES:
+- Never position Alfonso as the hero.
+- No buzzwords (no "brand storytelling," "elevate," "stand out," "game-changer").
+- Sound like a real person, not a LinkedIn influencer.
+- Be specific to the "${cohort}" profession — use their world, their language.
+`,
+
+    carousel: `${base}
+TASK: Write a 6-slide Instagram carousel for "${cohort}". This is a GaryVee "jab" — pure educational value, no selling.
+
+SLIDE STRUCTURE:
+- Slide 1 (Hook): A bold, specific statement that makes a "${cohort}" professional stop and save this post. Frame it as something they need to know — not something you're selling.
+- Slides 2-5 (Value): Each slide teaches ONE thing. Pure insight. Could be: a mistake people make, a truth about perception in their industry, a real example, a comparison, a reframe. No selling on any of these slides.
+- Slide 6 (Right Hook): Only NOW do you invite action — and it should feel like a natural next step, not a pitch. Offer something generous: a free consult, an answer to a question, a resource. Something that feels like MORE giving.
+
+RULES:
+- Each slide: bold headline (5-7 words max) + 2-3 lines of body copy. Short. Readable. Swipeable.
+- The "${cohort}" professional is the hero on every slide — the content is FOR them, not about Rojas Photography.
+- No pricing. No "book now." No feature lists.
+- GaryVee rule: if slides 2-5 feel even slightly like an ad, rewrite them as pure education.
+`,
+
+    outreach: `${base}
+TASK: Write a cold outreach message Alfonso can send to a "${cohort}" professional on LinkedIn or via email. Under 120 words.
+
+FRAMEWORK (GaryVee: give before you get):
+- Open with a genuine, specific observation about their world — something that proves Alfonso has actually thought about the "${cohort}" profession, not just copy-pasted a template.
+- Give something: a useful insight, a relevant observation, or a genuine compliment about something specific. No strings attached.
+- One sentence about what Alfonso does — framed around what it does FOR people like them, not what Rojas Photography is.
+- The ask, if any, should be the smallest possible step. Not "book a session." Maybe: "Would it be useful if I sent over a couple examples of how I've worked with [similar profession] teams?" or similar.
+- End with zero pressure. Make it easy to ignore AND easy to respond to.
+
+RULES:
+- Sound like a real human, not a template.
+- Never start with "I" — start with THEM.
+- No superlatives. No "world-class" or "premium" or "elevate."
+- If it feels like a sales pitch, rewrite it as a conversation starter.
+`,
+
+    referral: `${base}
+TASK: Write a referral ask script for Alfonso to use with "${cohort}" clients or people in his network who know that cohort.
+
+Write TWO versions:
+1. In-person / phone version (60-90 seconds, word-for-word): Natural, warm, story-based. Alfonso shares a quick win from a recent client that the referral source can relate to — THEN makes the ask. The ask should feel like he's doing the referral source a favor by giving them something useful to pass along.
+2. Text / DM version (under 60 words): Casual, direct, no pressure. Easy to forward. Easy to say yes or no to.
+
+RULES (StoryBrand):
+- The client Alfonso helped is the hero of the story — not Alfonso.
+- Alfonso is the guide who helped someone like the referral source's contact get a win.
+- Make the referral source feel good about passing the name along — like they're helping a colleague, not promoting a vendor.
+- Zero sales language. This is a conversation between people who trust each other.
+`,
+
+    bni: `${base}
+TASK: Write a 60-second BNI chapter presentation script for Alfonso. The room is full of people who can refer him to "${cohort}" clients.
+
+STRUCTURE:
+- Opening (5 sec): One specific, true sentence that makes the room nod — something about the "${cohort}" world they all recognize.
+- The story (25 sec): A brief, real client story. The client is the hero. Alfonso helped them solve a real problem. Be specific — name the industry, the situation, the outcome. Make it memorable and referrable.
+- The ask (20 sec): Paint a crystal-clear picture of the IDEAL referral — specific title, specific situation, specific trigger ("you know someone who just got promoted," "a law firm that just updated their website," etc.). Make it so specific that people immediately think of a name.
+- The hook (10 sec): One memorable line or tagline that sticks in their head when they leave the room.
+
+RULES (GaryVee + StoryBrand):
+- Alfonso is the guide. His client is the hero. The BNI members are heroes too — they get to help someone by making an introduction.
+- No feature lists. No pricing.
+- Specific beats generic every time. The more specific the referral ask, the more referrals he gets.
+`,
+
+    sponsor: `${base}
+TASK: Write a sponsorship pitch for Alfonso to present to a "${cohort}" BNI chapter or Chamber group. Under 200 words.
+
+FRAMEWORK (StoryBrand):
+- Open by naming what the chapter members WANT for their businesses — not what Rojas Photography does.
+- Show that Alfonso understands the challenge (members need to look credible and get more referrals — a great headshot helps both).
+- Present the sponsorship as Alfonso's way of SERVING the chapter, not promoting himself.
+- Offer something concrete and generous: a headshot day for members, event coverage, something with clear value.
+- Make the plan simple: here's what it looks like, here's what members get, here's how we do it.
+- End with a clear, low-pressure next step.
+
+RULES:
+- The chapter members are the heroes who benefit.
+- Alfonso is the guide offering something genuinely useful.
+- No superlatives. No "world-class photography."
+- Frame pricing as an anchor that makes the value obvious — not as a sales point.
+- Should feel like a generous offer from a fellow business owner, not a vendor pitch.
+`
   };
-  
+
   return prompts[type] || prompts.outreach;
 }
 
