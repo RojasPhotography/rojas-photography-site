@@ -17,6 +17,9 @@
   --green-glow: rgba(31,107,77,0.15);
   --gold: #c8902a;
   --blue: #2a6fa8;
+  --purple: #7c3aed;
+  --purple-bright: #9f67f5;
+  --purple-glow: rgba(124,58,237,0.15);
   --text: #d0d8e0;
   --muted: #5a6875;
   --white: #f0f4f8;
@@ -108,6 +111,7 @@ header p {
 
 .card.ext::before { background: var(--blue); }
 .card.multi::before { background: var(--gold); }
+.card.video::before { background: var(--purple); }
 
 .card-num {
   font-family: 'DM Mono', monospace;
@@ -160,6 +164,7 @@ header p {
 
 .card.ext .hook { border-left-color: var(--blue); }
 .card.multi .hook { border-left-color: var(--gold); }
+.card.video .hook { border-left-color: var(--purple); }
 
 .find {
   font-size: 10px;
@@ -193,6 +198,17 @@ header p {
 
 .card.multi .full-set-btn { background: rgba(200,144,42,0.08); border-color: var(--gold); color: #e0b060; }
 .card.multi .full-set-btn:hover { background: rgba(200,144,42,0.15); }
+
+.card.video .full-set-btn { background: rgba(124,58,237,0.08); border-color: var(--purple); color: var(--purple-bright); }
+.card.video .full-set-btn:hover { background: rgba(124,58,237,0.15); }
+
+.tag.purple {
+  background: rgba(124,58,237,0.12);
+  color: var(--purple-bright);
+  border-color: rgba(124,58,237,0.2);
+}
+
+.section-label.video::before { background: var(--purple-bright); }
 
 .actions { display: flex; flex-direction: column; gap: 4px; }
 
@@ -512,6 +528,56 @@ header p {
   </div>
 </div>
 
+<div class="section-label video">Video & Drone Services — Real Work, Real Proof</div>
+
+<div class="grid">
+  <!-- 11 -->
+  <div class="card video">
+    <div class="card-num">11</div>
+    <div class="card-title">Corporate testimonial & interview video</div>
+    <div class="tags"><span class="tag purple">Proven</span><span class="tag purple">Video</span><span class="tag purple">Dual Format</span></div>
+    <div class="hook">"Your clients will say things about you that you'd never say about yourself. Most businesses never capture it."</div>
+    <div class="find"><strong>Proof:</strong> BBSI — 5-min testimonial, 2 on-camera, b-roll, delivered vertical + horizontal · <strong>Find them:</strong> HR/staffing firms · Financial advisors · Insurance agencies · Law firms · Any professional service with clients who love them</div>
+    <button class="full-set-btn" onclick="gen('Corporate testimonial & interview video','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('Corporate testimonial & interview video','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('Corporate testimonial & interview video','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Corporate testimonial & interview video','outreach')">✉️ Outreach message</button>
+      <button class="action-btn" onclick="gen('Corporate testimonial & interview video','video_pitch')">🎥 Video project pitch</button>
+    </div>
+  </div>
+  <!-- 12 -->
+  <div class="card video">
+    <div class="card-num">12</div>
+    <div class="card-title">Church & non-profit video</div>
+    <div class="tags"><span class="tag purple">Proven</span><span class="tag purple">Video</span><span class="tag purple">Multi-Cam</span></div>
+    <div class="hook">"The stories happening inside your walls deserve to be seen outside them."</div>
+    <div class="find"><strong>Proof:</strong> Active church client — multi-camera, b-roll, music, interviews + promotional video · <strong>Find them:</strong> Central Valley churches · Faith-based orgs · Non-profits · Ministry networks · Churches refer each other heavily</div>
+    <button class="full-set-btn" onclick="gen('Church & non-profit video','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('Church & non-profit video','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('Church & non-profit video','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Church & non-profit video','outreach')">✉️ Outreach message</button>
+      <button class="action-btn" onclick="gen('Church & non-profit video','video_pitch')">🎥 Video project pitch</button>
+    </div>
+  </div>
+  <!-- 13 -->
+  <div class="card video">
+    <div class="card-num">13</div>
+    <div class="card-title">Drone aerial video & photography</div>
+    <div class="tags"><span class="tag purple">FAA Part 107</span><span class="tag purple">Drone</span><span class="tag purple">Standalone + Add-on</span></div>
+    <div class="hook">"Ground photos show what you built. Aerial shows the full story — scale, setting, and craftsmanship no ground shot can capture."</div>
+    <div class="find"><strong>Proof:</strong> Hospital exterior aerials · High-end landscape portfolio shoot · <strong>Find them:</strong> Landscape & hardscape companies · Commercial real estate · General contractors · Vineyards & agriculture · Architects</div>
+    <button class="full-set-btn" onclick="gen('Drone aerial video & photography','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="actions">
+      <button class="action-btn" onclick="gen('Drone aerial video & photography','reel')">🎬 Reel script</button>
+      <button class="action-btn" onclick="gen('Drone aerial video & photography','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Drone aerial video & photography','outreach')">✉️ Outreach message</button>
+      <button class="action-btn" onclick="gen('Drone aerial video & photography','video_pitch')">🎥 Drone project pitch</button>
+    </div>
+  </div>
+</div>
+
 <!-- Modal -->
 <div class="modal-overlay" id="modal">
   <div class="modal">
@@ -548,14 +614,29 @@ const TYPE_LABELS = {
   outreach: '✉️ Outreach Message',
   referral: '🤝 Referral Ask Script',
   bni: '🎤 BNI Presentation',
-  sponsor: '🤝 Sponsor Pitch'
+  sponsor: '🤝 Sponsor Pitch',
+  video_pitch: '🎥 Video Project Pitch'
 };
 
 function buildPrompt(cohort, type) {
 
   const base = `
 ABOUT ROJAS PHOTOGRAPHY:
-Alfonso and Niomi Rojas run Rojas Photography LLC in Modesto, CA — a premium corporate photography and videography studio serving the Central Valley. Alfonso is the lead photographer and the face of the brand. Niomi runs operations. They've worked with Save Mart, Comcast, California Lawyers Association, Kaiser, and 500+ executives and professionals. Headshot pricing: $150 session + $150/image. On-site team photography available with a $300 travel fee. Delivered via SpotMyPhotos within 48 hours. 60+ five-star Google reviews. FAA Part 107 certified for drone. Contact: 209-380-3727, alfonso@rojasphotography.net.
+Alfonso and Niomi Rojas run Rojas Photography LLC in Modesto, CA — a premium corporate photography and videography studio serving the Central Valley. Alfonso is the lead photographer/videographer and the face of the brand. Niomi runs operations. They've worked with Save Mart, Comcast, California Lawyers Association, Kaiser, and 500+ executives and professionals. 60+ five-star Google reviews. Contact: 209-380-3727, alfonso@rojasphotography.net.
+
+PHOTOGRAPHY SERVICES & PRICING:
+- In-studio headshots: $150 session + $150/image. Delivered via SpotMyPhotos within 48 hours.
+- On-site team photography: $300 travel fee + per-person pricing. Delivered within 48 hours.
+- Headshot booth events: hourly pricing, ideal for large corporate events.
+
+VIDEO SERVICES & PRICING:
+- Corporate testimonial & interview video: $2,500–$3,500. Multi-camera setup, b-roll, professional lighting, music. Delivered in BOTH vertical (Reels/TikTok/LinkedIn) AND horizontal (YouTube/website) formats — every client gets both without asking. Up to 2 on-camera subjects. 2 rounds of revisions included. Proof: BBSI client interview (5-min final, 2 on-camera, b-roll, dual format delivered).
+- Church & non-profit promotional video: $1,500–$2,500. Multi-camera, b-roll, music, interviews. Ideal for promos, event recaps, annual appeals. Proof: active ongoing church client.
+- Social media video clips: $500–$1,000/clip or packaged. Short-form content optimized for platform.
+- Drone aerial video & photography: $500–$750 standalone. FAA Part 107 certified — commercially legal, insurable, no liability risk for client. Can be bundled as add-on to any photo or video project. Proof: hospital exterior aerials, high-end landscape portfolio shoot.
+
+KEY DIFFERENTIATOR — DUAL FORMAT DELIVERY:
+Every video project is delivered in both vertical AND horizontal format at no extra charge. This means the client immediately has content for their website, YouTube, LinkedIn, Instagram Reels, and TikTok without any extra editing requests. Most local videographers deliver one format. Alfonso delivers both as standard.
 
 ALFONSO'S VOICE:
 Warm, grounded, direct. Former corporate leader (15+ years in management). He understands what it's like to be the client — to be judged before you walk in the room. He's not a "photographer who does business" — he's a business person who happens to be a photographer. He talks like a real person, not a brand. No buzzwords. No hype. He leads with empathy and curiosity about the client's world.
@@ -696,6 +777,25 @@ RULES (GaryVee + StoryBrand):
 - Alfonso is the guide. His client is the hero. The BNI members are heroes too — they get to help someone by making an introduction.
 - No feature lists. No pricing.
 - Specific beats generic every time. The more specific the referral ask, the more referrals he gets.
+`,
+
+    video_pitch: `${base}
+TASK: Write a verbal or written video project pitch for Alfonso to present to a "${cohort}" prospect. This is the pitch he gives when someone says "tell me more about your video services" — in person, on a call, or via email follow-up.
+
+STRUCTURE (StoryBrand + GaryVee):
+- Open by naming what the prospect WANTS — not what Alfonso does. What outcome are they chasing? More trust from their audience? More clients? A story worth telling? Name it specifically for the "${cohort}" world.
+- Name the problem standing in their way — both the external problem (they don't have the video) and the internal feeling (they feel like their story isn't being told, or they've seen bad video before and don't trust the process).
+- Alfonso as the guide: briefly establish credibility through a specific example (BBSI testimonial, church promo, hospital aerials — pick the most relevant for this cohort). One sentence. The work speaks, not Alfonso.
+- The simple plan: 1) We talk through what you want the video to do. 2) I handle everything — shoot, edit, music. 3) You get the finished video in both vertical and horizontal formats, ready for every platform. Make it sound easy because it is.
+- The transformation: paint what success looks like after the video exists — not "you'll have a great video" but the real outcome (clients who trust them before the first call, staff who feel proud, donors who give, etc.).
+- Soft close: a low-pressure next step. Not "book now." Maybe: "I'd love to see the space and talk through what you're trying to say."
+
+RULES:
+- The prospect's audience (their customers, congregation, clients) are the heroes of the video — make that clear.
+- The prospect is the hero of the pitch — Alfonso is the guide helping them tell a story worth telling.
+- Never lead with equipment, camera specs, or credentials. Lead with outcome.
+- Dual-format delivery (vertical + horizontal) should feel like a natural bonus, not a feature list item.
+- Under 250 words. Should be speakable out loud without sounding like a script.
 `,
 
     sponsor: `${base}
