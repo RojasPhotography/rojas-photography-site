@@ -515,15 +515,16 @@ header p {
   <!-- 10 -->
   <div class="card multi">
     <div class="card-num">10</div>
-    <div class="card-title">BNI chapters & Chamber members</div>
-    <div class="tags"><span class="tag gold">Multiplier</span><span class="tag">All services</span></div>
-    <div class="hook">"Every BNI chapter is full of realtors, accountants, attorneys, and advisors. One chapter relationship feeds every other cohort."</div>
-    <div class="find"><strong>Find them:</strong> BNI Central Valley chapters (Modesto, Stockton, Turlock) · Modesto Chamber · Stockton Chamber · Ceres Chamber · SEDWA</div>
-    <button class="full-set-btn" onclick="gen('BNI chapters & Chamber members','full_set')">✦ 5 content ideas (full set)</button>
+    <div class="card-title">Chamber of Commerce members</div>
+    <div class="tags"><span class="tag gold">Multiplier</span><span class="tag">Already a Member</span><span class="tag">All services</span></div>
+    <div class="hook">"You're already in the room. Every Chamber mixer is full of realtors, attorneys, accountants, and business owners — every cohort on this board in one place."</div>
+    <div class="find"><strong>Already a member:</strong> Modesto Chamber · Also attend: Stockton Chamber · Ceres Chamber · Turlock Chamber · SEDWA · Ribbon cuttings, mixers, and committee work are the highest-ROI activities</div>
+    <button class="full-set-btn" onclick="gen('Chamber of Commerce members','full_set')">✦ 5 content ideas (full set)</button>
     <div class="actions">
-      <button class="action-btn" onclick="gen('BNI chapters & Chamber members','bni')">🎤 BNI chapter presentation</button>
-      <button class="action-btn" onclick="gen('BNI chapters & Chamber members','linkedin')">💼 LinkedIn post</button>
-      <button class="action-btn" onclick="gen('BNI chapters & Chamber members','sponsor')">🤝 Chapter sponsor pitch</button>
+      <button class="action-btn" onclick="gen('Chamber of Commerce members','linkedin')">💼 LinkedIn post</button>
+      <button class="action-btn" onclick="gen('Chamber of Commerce members','outreach')">✉️ Follow-up message</button>
+      <button class="action-btn" onclick="gen('Chamber of Commerce members','referral')">🤝 Referral ask script</button>
+      <button class="action-btn" onclick="gen('Chamber of Commerce members','sponsor')">🎯 Event sponsor pitch</button>
     </div>
   </div>
 </div>
@@ -613,8 +614,7 @@ const TYPE_LABELS = {
   carousel: '📱 Carousel Slides',
   outreach: '✉️ Outreach Message',
   referral: '🤝 Referral Ask Script',
-  bni: '🎤 BNI Presentation',
-  sponsor: '🤝 Sponsor Pitch',
+  sponsor: '🎯 Event Sponsor Pitch',
   video_pitch: '🎥 Video Project Pitch'
 };
 
@@ -764,21 +764,6 @@ RULES (StoryBrand):
 - Zero sales language. This is a conversation between people who trust each other.
 `,
 
-    bni: `${base}
-TASK: Write a 60-second BNI chapter presentation script for Alfonso. The room is full of people who can refer him to "${cohort}" clients.
-
-STRUCTURE:
-- Opening (5 sec): One specific, true sentence that makes the room nod — something about the "${cohort}" world they all recognize.
-- The story (25 sec): A brief, real client story. The client is the hero. Alfonso helped them solve a real problem. Be specific — name the industry, the situation, the outcome. Make it memorable and referrable.
-- The ask (20 sec): Paint a crystal-clear picture of the IDEAL referral — specific title, specific situation, specific trigger ("you know someone who just got promoted," "a law firm that just updated their website," etc.). Make it so specific that people immediately think of a name.
-- The hook (10 sec): One memorable line or tagline that sticks in their head when they leave the room.
-
-RULES (GaryVee + StoryBrand):
-- Alfonso is the guide. His client is the hero. The BNI members are heroes too — they get to help someone by making an introduction.
-- No feature lists. No pricing.
-- Specific beats generic every time. The more specific the referral ask, the more referrals he gets.
-`,
-
     video_pitch: `${base}
 TASK: Write a verbal or written video project pitch for Alfonso to present to a "${cohort}" prospect. This is the pitch he gives when someone says "tell me more about your video services" — in person, on a call, or via email follow-up.
 
@@ -799,22 +784,21 @@ RULES:
 `,
 
     sponsor: `${base}
-TASK: Write a sponsorship pitch for Alfonso to present to a "${cohort}" BNI chapter or Chamber group. Under 200 words.
+TASK: Write an event sponsorship pitch for Alfonso to present to a "${cohort}" Chamber of Commerce event organizer or board member. Under 200 words.
+
+CONTEXT: Alfonso and Niomi are already active Chamber members. This is not a cold pitch — it's a fellow member offering to add value to a Chamber event. The relationship already exists. The pitch should feel like a generous offer from a trusted community member, not a vendor trying to buy visibility.
 
 FRAMEWORK (StoryBrand):
-- Open by naming what the chapter members WANT for their businesses — not what Rojas Photography does.
-- Show that Alfonso understands the challenge (members need to look credible and get more referrals — a great headshot helps both).
-- Present the sponsorship as Alfonso's way of SERVING the chapter, not promoting himself.
-- Offer something concrete and generous: a headshot day for members, event coverage, something with clear value.
-- Make the plan simple: here's what it looks like, here's what members get, here's how we do it.
-- End with a clear, low-pressure next step.
+- Open by naming what the event organizers WANT — a memorable event where attendees feel valued and leave with something tangible.
+- Alfonso's offer: sponsor a headshot station or event photography coverage at a Chamber mixer, ribbon cutting, or annual event. Every attendee walks away with a professional photo — something they'll actually use and remember.
+- Make the plan simple: Alfonso shows up, sets up, handles everything. The Chamber gets a premium experience to offer their members at no extra work.
+- End with a specific, easy next step.
 
 RULES:
-- The chapter members are the heroes who benefit.
-- Alfonso is the guide offering something genuinely useful.
-- No superlatives. No "world-class photography."
-- Frame pricing as an anchor that makes the value obvious — not as a sales point.
-- Should feel like a generous offer from a fellow business owner, not a vendor pitch.
+- Alfonso is a fellow Chamber member offering something genuinely useful to the community — not a vendor buying a logo placement.
+- The Chamber members are the heroes who benefit from a great headshot or a memorable event.
+- No superlatives. No "world-class."
+- Drone add-on or video coverage can be mentioned as an option if relevant to the event scale.
 `
   };
 
