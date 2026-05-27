@@ -4,7 +4,7 @@ import { CheckCircle2, XCircle, AlertTriangle } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import FAQSection from '../components/FAQSection';
-import CTASection from '../components/CTASection';
+import BookingScheduler from '../components/BookingScheduler';
 import SchemaScript from '../components/SchemaScript';
 import { generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 
@@ -74,7 +74,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'AI Headshots vs. Professional Headshots: The Honest 2026 Guide',
   description:
-    'We tested the top AI headshot tools and reviewed recruiter research. Here is the honest comparison — when AI is acceptable, when it falls short, and what professional headshots actually deliver.',
+    'Recruiters detected AI headshots only 39% of the time — but that\'s not the real risk. The data-backed 2026 breakdown, including when AI headshots are actually acceptable.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/ai-headshots-vs-professional-headshots',
@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'AI Headshots vs. Professional Headshots: The Honest 2026 Comparison',
     description:
-      'We tested the top AI headshot tools and reviewed recruiter research. Here is the honest comparison — when AI is acceptable, when it falls short, and what professional headshots actually deliver.',
+      'Recruiter research, side-by-side quality comparisons, and honest scoring — the complete 2026 breakdown of AI vs. professional headshots, including when AI is actually fine.',
     url: 'https://rojasphotography.net/ai-headshots-vs-professional-headshots',
     type: 'article',
     images: [
@@ -128,7 +128,7 @@ export default function AIHeadshotsVsProfessionalPage() {
               Read the Comparison
             </Link>
             <Link
-              href="/premium-headshots#booking-heading"
+              href="#book-session"
               className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
             >
               Book a Real Session
@@ -731,7 +731,7 @@ export default function AIHeadshotsVsProfessionalPage() {
                       <div className="text-sm text-[var(--color-text-muted)]">15+ years corporate leadership · 500+ professionals photographed · 60+ five-star reviews</div>
                     </div>
                     <Link
-                      href="/premium-headshots#booking-heading"
+                      href="#book-session"
                       className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block text-center whitespace-nowrap flex-shrink-0"
                     >
                       Book Your Session — $150
@@ -785,13 +785,20 @@ export default function AIHeadshotsVsProfessionalPage() {
             heading="AI Headshots vs. Professional Headshots — Frequently Asked Questions"
           />
 
-          <CTASection
-            heading="Ready for a Headshot That Actually Looks Like You?"
-            subheading="$150 session. $150 per image. No minimums. Real coaching. 48-hour delivery. Serving Modesto, Stockton, Fresno, Sacramento, and all of California."
-            primaryLabel="Book Your Session"
-            primaryHref="/premium-headshots#booking-heading"
-            showContactInfo={false}
-          />
+          <section id="book-session" className="py-20 px-8 bg-[var(--color-bg-warm)]">
+            <div className="max-w-4xl mx-auto">
+              <SectionReveal>
+                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                  Ready for a Headshot That Actually Looks Like You?
+                </h2>
+                <p className="text-center text-[var(--color-text-muted)] text-lg mb-10">
+                  $150 session · $150 per final edited image · No minimums · 48-hour delivery<br />
+                  Serving Modesto, Stockton, Fresno, Sacramento & all of Central Valley
+                </p>
+              </SectionReveal>
+              <BookingScheduler height={750} />
+            </div>
+          </section>
         </main>
       </div>
     </>

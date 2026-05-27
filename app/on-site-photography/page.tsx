@@ -42,17 +42,17 @@ const faqs = [
 
 
 export const metadata: Metadata = {
-  title: 'On-Site Corporate Headshots Modesto | Team Photography Service',
+  title: 'On-Site Corporate Headshots | We Come to You | Modesto CA',
   description:
-    'On-site headshots Modesto • We come to you • Team photos, employee headshots, group shots • No travel time wasted • Entire team done in hours → Get quote',
+    'Full studio at your office. Every person coached individually — headshots and team photos delivered in 24 hours. No travel required. Modesto & Central Valley.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/on-site-photography',
   },
   openGraph: {
-    title: 'On-Site Corporate Headshots in Modesto | Rojas Photography',
+    title: 'On-Site Corporate Headshots | We Come to Your Office | Rojas Photography',
     description:
-      'Bring professional studio photography to your office. Team headshots, group photos, and corporate photography at your location in Modesto and Central Valley.',
+      'We bring professional lighting, backdrops, and coaching to your location. Individual headshots and team photos — every person coached, delivered in 24 hours. Modesto & Central Valley.',
     url: 'https://rojasphotography.net/on-site-photography',
     type: 'website',
     images: [

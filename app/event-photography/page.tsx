@@ -42,9 +42,9 @@ const faqs = [
 
 
 export const metadata: Metadata = {
-  title: 'Corporate Event Photography Modesto | Conference & Gala Photography',
+  title: 'Corporate Event Photography Modesto | Conferences, Galas & Summits',
   description:
-    'Event photography Modesto • Conferences, galas, product launches • 5-7 day delivery • Professional documentation • Central Valley corporate events → Book your date',
+    'Conferences, galas, product launches, and fundraisers — event photography that tells your brand story, not just documents it. Modesto & Central Valley.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/event-photography',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Corporate Event Photography in Modesto | Rojas Photography',
     description:
-      'Professional event coverage for conferences, galas, fundraisers, product launches, and corporate gatherings. Fast delivery with expert photography.',
+      'Conferences, galas, product launches, corporate summits — event photography in Modesto & Central Valley that tells your brand story with fast, consistent delivery.',
     url: 'https://rojasphotography.net/event-photography',
     type: 'website',
     images: [
