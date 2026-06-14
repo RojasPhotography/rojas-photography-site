@@ -64,6 +64,7 @@ export default function NewsletterAdmin() {
   const [sequenceSaveStatus, setSequenceSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [sequenceTestStatus, setSequenceTestStatus] = useState<Record<number, 'idle' | 'loading' | 'sent' | 'error'>>({});
   const pendingSequenceSave = useRef(false);
+  const [previewHtml, setPreviewHtml] = useState<string | null>(null);
 
   const [bee, setBee] = useState<BeefreeSDK | null>(null);
   const [editorReady, setEditorReady] = useState(false);
@@ -301,6 +302,14 @@ export default function NewsletterAdmin() {
   }
 
   function editSequenceEmail(seqEmail: SequenceEmail) {
+    // Warn if email has custom HTML but no BeefreeSDK JSON — editor will show blank and could overwrite content
+    if (seqEmail.html_content && !seqEmail.json_content) {
+      const proceed = window.confirm(
+        'This email has existing HTML content that cannot be loaded in the visual editor.\n\nOpening the editor will show a blank canvas. If you click "Save Sequence Email", the existing content will be overwritten with blank.\n\nClick OK to open the editor anyway, or Cancel to keep the existing content safe.'
+      );
+      if (!proceed) return;
+    }
+
     setEditingSequenceId(seqEmail.id);
     setSequenceSubject(seqEmail.subject);
     setCurrentDraftId(null);
@@ -730,6 +739,14 @@ export default function NewsletterAdmin() {
                     <div className="flex items-center gap-2 flex-shrink-0">
                       {seqEmail.html_content && (
                         <button
+                          onClick={() => setPreviewHtml(seqEmail.html_content)}
+                          className="px-3 py-1 text-xs rounded-full border border-purple-200 text-purple-700 hover:bg-purple-50 font-medium transition-colors"
+                        >
+                          Preview
+                        </button>
+                      )}
+                      {seqEmail.html_content && (
+                        <button
                           onClick={() => sendSequenceTest(seqEmail)}
                           disabled={sequenceTestStatus[seqEmail.id] === 'loading'}
                           className="px-3 py-1 text-xs rounded-full border border-blue-200 text-blue-700 hover:bg-blue-50 font-medium transition-colors disabled:opacity-60"
@@ -750,12 +767,18 @@ export default function NewsletterAdmin() {
                       >
                         {seqEmail.is_active ? 'Disable' : 'Enable'}
                       </button>
-                      <button
-                        onClick={() => editSequenceEmail(seqEmail)}
-                        className="px-3 py-1 text-xs font-semibold bg-[var(--color-primary)] text-white rounded-full hover:opacity-90 transition-opacity"
-                      >
-                        Edit
-                      </button>
+                      {seqEmail.position === 1 ? (
+                        <span className="px-3 py-1 text-xs rounded-full border border-amber-200 text-amber-700 bg-amber-50 font-medium">
+                          Sent via code
+                        </span>
+                      ) : (
+                        <button
+                          onClick={() => editSequenceEmail(seqEmail)}
+                          className="px-3 py-1 text-xs font-semibold bg-[var(--color-primary)] text-white rounded-full hover:opacity-90 transition-opacity"
+                        >
+                          Edit
+                        </button>
+                      )}
                     </div>
                   </div>
                 ))}
@@ -951,6 +974,31 @@ export default function NewsletterAdmin() {
           className="rounded-xl overflow-hidden border border-gray-200 bg-white"
         />
       </div>
+
+      {/* Email Preview Modal */}
+      {previewHtml && (
+        <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
+          <div className="bg-white rounded-2xl w-full max-w-2xl flex flex-col shadow-2xl" style={{ maxHeight: '90vh' }}>
+            <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 flex-shrink-0">
+              <h3 className="font-bold text-[var(--color-text-dark)]">Email Preview</h3>
+              <button
+                onClick={() => setPreviewHtml(null)}
+                className="text-gray-400 hover:text-gray-600 text-3xl leading-none"
+              >
+                ×
+              </button>
+            </div>
+            <div className="overflow-auto flex-1 rounded-b-2xl">
+              <iframe
+                srcDoc={previewHtml}
+                className="w-full border-0"
+                style={{ height: '75vh' }}
+                title="Email Preview"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -98,6 +98,7 @@ export async function GET(request: Request) {
     try {
       await resend.emails.send({
         from: 'Alfonso & Niomi Rojas <alfonso@rojasphotography.net>',
+        replyTo: ['alfonso@rojasphotography.net', 'niomi@rojasphotography.net'],
         to: item.subscriber_email,
         subject: seqEmail.subject,
         html: personalizedHtml,
