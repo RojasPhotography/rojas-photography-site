@@ -209,14 +209,14 @@ export default function FinanceHeadshotsPage() {
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
-                  I Understand What Finance Professionals Need
+                  We Understand What Finance Professionals Need
                 </h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed mb-10">
                   <p>
-                    I understand that in financial services, your image is part of your value proposition. A generic headshot signals generic service. I work with financial professionals across the Central Valley — advisors, bankers, CPAs, and insurance professionals who understand that their professional brand is inseparable from their results.
+                    We understand that in financial services, your image is part of your value proposition. A generic headshot signals generic service. We work with financial professionals across the Central Valley — advisors, bankers, CPAs, and insurance professionals who understand that their professional brand is inseparable from their results.
                   </p>
                   <p>
-                    Before I was a photographer, I spent 15 years in corporate leadership. I know what it looks like when a professional takes their work seriously — and I know how to capture that in an image. The expression that communicates both warmth and authority is not something you arrive at by accident. It requires coaching and calibration.
+                    Before we picked up a camera, we spent 15+ years in corporate leadership and operations. We know what it looks like when a professional takes their work seriously — and we know how to capture that in an image. The expression that communicates both warmth and authority is not something you arrive at by accident. It requires coaching and calibration.
                   </p>
                 </div>
               </SectionReveal>
