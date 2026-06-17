@@ -13,17 +13,17 @@ const faqs = [
   {
     question: 'How does a headshot booth work at an event?',
     answer:
-      'I arrive before your event starts, set up a complete professional studio (lighting, backdrop, cameras), and your attendees flow through one at a time throughout the day. Each person gets a quick coached session — typically 5-10 minutes — and walks away with a professional headshot. All images are edited and delivered within 24 hours via a private online gallery.',
+      'We arrive before your event starts, set up a complete professional studio (lighting, backdrop, cameras), and your attendees flow through one at a time throughout the day. Each person gets a quick coached session — typically 5-10 minutes — and walks away with a professional headshot. All images are edited and delivered within 24 hours via a private online gallery.',
   },
   {
     question: 'How many people can you photograph per hour?',
     answer:
-      'Typically 6-10 people per hour depending on the flow of your event and how much coaching each person needs. For large events, I recommend scheduling specific time slots to keep lines moving and avoid bottlenecks.',
+      'Typically 6-10 people per hour depending on the flow of your event and how much coaching each person needs. For large events, we recommend scheduling specific time slots to keep lines moving and avoid bottlenecks.',
   },
   {
     question: 'How is a headshot booth priced?',
     answer:
-      'Headshot booths are priced by the hour, making it easy to budget based on your event length and expected attendance. Contact me with your event details for a custom quote — I\'ll give you a clear, flat-rate price with no surprises.',
+      'Headshot booths are priced by the hour, making it easy to budget based on your event length and expected attendance. Contact us with your event details for a custom quote — we\'ll give you a clear, flat-rate price with no surprises.',
   },
   {
     question: 'What kinds of events work well with a headshot booth?',
@@ -33,19 +33,19 @@ const faqs = [
   {
     question: 'What do you bring to the event?',
     answer:
-      'Everything. I bring professional lighting rigs, quality backdrops, high-end cameras, and all necessary gear. I set up and break down completely — your venue just needs a reasonably sized space (roughly 10x10 feet) and access to power.',
+      'Everything. We bring professional lighting rigs, quality backdrops, high-end cameras, and all necessary gear. We set up and break down completely — your venue just needs a reasonably sized space (roughly 10x10 feet) and access to power.',
   },
   {
     question: 'Do attendees get to see and select their photos?',
     answer:
-      'For high-volume booth sessions, all images are edited and delivered to a shared gallery within 24 hours where attendees can download their photos. For smaller groups, on-site selection can be arranged — just let me know your preference when booking.',
+      'For high-volume booth sessions, all images are edited and delivered to a shared gallery within 24 hours where attendees can download their photos. For smaller groups, on-site selection can be arranged — just let us know your preference when booking.',
   },
 ];
 
 export const metadata: Metadata = {
   title: 'Headshot Booth Modesto | Corporate Event Headshots | Rojas Photography',
   description:
-    'Professional headshot booth for corporate events, expos, and training days in Modesto and Central Valley. I bring the studio to your event and move attendees through efficiently. Priced by the hour.',
+    'Professional headshot booth for corporate events, expos, and training days in Modesto and Central Valley. We bring the studio to your event and move attendees through efficiently. Priced by the hour.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/headshot-booth',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Headshot Booth for Corporate Events | Rojas Photography Modesto',
     description:
-      'A professional headshot booth for your expo, training day, or corporate event. I set up at your location and photograph attendees efficiently — everyone walks away with a great photo.',
+      'A professional headshot booth for your expo, training day, or corporate event. We set up at your location and photograph attendees efficiently — everyone walks away with a great photo.',
     url: 'https://rojasphotography.net/headshot-booth',
     type: 'website',
     images: [
@@ -90,7 +90,7 @@ export default function HeadshotBoothPage() {
         fullHeight
       >
         <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-          I set up a complete professional studio at your expo, training day, or corporate event — and move your attendees through efficiently so everyone walks away with a great photo.
+          We set up a complete professional studio at your expo, training day, or corporate event — and move your attendees through efficiently so everyone walks away with a great photo.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
           <Link
@@ -143,17 +143,17 @@ export default function HeadshotBoothPage() {
           <SectionReveal>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
-                I&apos;ve Run Booths at Events Across the Central Valley
+                We&apos;ve Run Booths at Events Across the Central Valley
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  I know what it takes to keep a headshot booth running smoothly at a busy event — when there&apos;s a line forming, a schedule to keep, and attendees who have three minutes before their next session. I&apos;ve been in that environment enough times to have it dialed in.
+                  We know what it takes to keep a headshot booth running smoothly at a busy event — when there&apos;s a line forming, a schedule to keep, and attendees who have three minutes before their next session. We&apos;ve been in that environment enough times to have it dialed in.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  I&apos;m Alfonso Rojas. I bring a complete professional studio to your event, coach each person quickly through posing and expression, and keep things moving without sacrificing the quality of the photo. Every attendee gets a real headshot — not a rushed snapshot.
+                  We&apos;re Alfonso and Niomi Rojas. We bring a complete professional studio to your event, coach each person quickly through posing and expression, and keep things moving without sacrificing the quality of the photo. Every attendee gets a real headshot — not a rushed snapshot.
                 </p>
                 <p>
-                  With 15+ years in corporate leadership and 500+ professionals photographed across the Central Valley, I understand how events work and how to operate inside them without creating chaos.
+                  With 15+ years in corporate leadership and 500+ professionals photographed across the Central Valley, we understand how events work and how to operate inside them without creating chaos.
                 </p>
               </div>
             </div>
@@ -177,16 +177,16 @@ export default function HeadshotBoothPage() {
                   <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">1</div>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">Book the Booth</h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    Tell me your event date, location, expected attendance, and how many hours you need coverage. I&apos;ll send you a flat-rate quote and confirm everything well before the event.
+                    Tell us your event date, location, expected attendance, and how many hours you need coverage. We&apos;ll send you a flat-rate quote and confirm everything well before the event.
                   </p>
                 </div>
               </SectionReveal>
               <SectionReveal>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">2</div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">I Set Up, You Focus on Your Event</h3>
+                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">We Set Up, You Focus on Your Event</h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    I arrive early, set up the full studio, and am ready before your first attendee walks in. You don&apos;t manage a thing — I handle setup, flow, coaching, and breakdown completely.
+                    We arrive early, set up the full studio, and are ready before your first attendee walks in. You don&apos;t manage a thing — we handle setup, flow, coaching, and breakdown completely.
                   </p>
                 </div>
               </SectionReveal>
@@ -250,11 +250,11 @@ export default function HeadshotBoothPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
-                { title: 'Complete Studio Setup at Your Venue', desc: 'I bring professional lighting, backdrops, and cameras. All you need is a 10x10 space and access to power — I handle everything else.' },
+                { title: 'Complete Studio Setup at Your Venue', desc: 'We bring professional lighting, backdrops, and cameras. All you need is a 10x10 space and access to power — we handle everything else.' },
                 { title: 'Individual Coaching for Every Attendee', desc: 'Every person gets real-time guidance on posing and expression — even in a fast-moving booth format. No one just stands there guessing.' },
-                { title: 'Efficient Flow Management', desc: 'I keep things moving without rushing people. Attendees typically spend 5-10 minutes in the booth and leave confident they got a great shot.' },
+                { title: 'Efficient Flow Management', desc: 'We keep things moving without rushing people. Attendees typically spend 5-10 minutes in the booth and leave confident they got a great shot.' },
                 { title: 'Consistent Results Across Your Group', desc: 'Same lighting, same backdrop, same quality from the first person to the last. Your team looks cohesive across every photo.' },
-                { title: 'Full Setup & Breakdown', desc: 'I arrive early, set up before your event starts, and break down completely when we\'re done. Zero logistics on your end.' },
+                { title: 'Full Setup & Breakdown', desc: 'We arrive early, set up before your event starts, and break down completely when we\'re done. Zero logistics on your end.' },
                 { title: 'Delivered Within 24 Hours', desc: 'All edited photos delivered via a shared private gallery within 24 hours — attendees can download their images immediately for LinkedIn, directories, and marketing.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
@@ -315,7 +315,7 @@ export default function HeadshotBoothPage() {
                 Ready to Add a Headshot Booth to Your Event?
               </h2>
               <p className="text-lg mb-8 text-white/90">
-                Tell me about your event and I&apos;ll send you a flat-rate quote. No surprises, no packages — just a clear price for the coverage you need.
+                Tell us about your event and we&apos;ll send you a flat-rate quote. No surprises, no packages — just a clear price for the coverage you need.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -343,7 +343,7 @@ export default function HeadshotBoothPage() {
 
         <CTASection
           heading="Let&apos;s Talk About Your Event"
-          subheading="Schedule a free discovery call and I'll help you figure out exactly what you need for your event size and format."
+          subheading="Schedule a free discovery call and we'll help you figure out exactly what you need for your event size and format."
           primaryHref="/contact-quote"
           primaryLabel="Request a Quote"
         />
