@@ -716,13 +716,13 @@ export default function AIHeadshotsVsProfessionalPage() {
               <SectionReveal>
                 <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm">
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
-                    I have photographed over 500 professionals across California — attorneys, physicians, executives, financial advisors, real estate agents, and medical students applying for residency. I know what it feels like to stand in front of a camera and not know what to do with your face. That moment of uncertainty is exactly why coaching is at the center of every session I run.
+                    We have photographed over 500 professionals across California — attorneys, physicians, executives, financial advisors, real estate agents, and medical students applying for residency. We know what it feels like to stand in front of a camera and not know what to do with your face. That moment of uncertainty is exactly why coaching is at the center of every session we run.
                   </p>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
-                    Before I was a photographer, I spent 15 years in corporate leadership. I understand what professional credibility looks like — and what undermines it. I know the difference between a headshot that makes someone want to connect with you and one that creates just enough distance to lose the opportunity.
+                    Before we picked up a camera, we spent 15+ years in corporate leadership and operations. We understand what professional credibility looks like — and what undermines it. We know the difference between a headshot that makes someone want to connect with you and one that creates just enough distance to lose the opportunity.
                   </p>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-8">
-                    If you are weighing AI against a professional session, I am not going to tell you AI is useless. Some situations call for a pragmatic solution. But if your headshot is going to be seen by a client, a recruiter, a program director, or a hiring manager before you ever speak to them — you should be represented by something that looks like you on your best day. Because it is.
+                    If you are weighing AI against a professional session, we are not going to tell you AI is useless. Some situations call for a pragmatic solution. But if your headshot is going to be seen by a client, a recruiter, a program director, or a hiring manager before you ever speak to them — you should be represented by something that looks like you on your best day. Because it is.
                   </p>
                   <div className="flex flex-col sm:flex-row items-center gap-6 pt-2 border-t border-gray-100">
                     <div>
