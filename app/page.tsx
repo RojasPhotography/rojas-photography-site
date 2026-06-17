@@ -121,6 +121,30 @@ export default function HomePage() {
         </div>
       </HeroSection>
 
+      {/* Proof Bar - client trust + stats (CLAUDE.md target structure #3) */}
+      <SectionReveal>
+        <section className="py-10 md:py-12 px-8 bg-[var(--color-bg-warm)] border-b border-gray-100">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14 text-center">
+            <div>
+              <p className="text-3xl font-bold text-[var(--color-primary)]">500+</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Executives photographed</p>
+            </div>
+            <div className="hidden md:block w-px h-10 bg-gray-200" />
+            <div>
+              <p className="text-3xl font-bold text-[var(--color-primary)]">60+ &#9733;</p>
+              <p className="text-sm text-[var(--color-text-muted)]">Five-star Google reviews</p>
+            </div>
+            <div className="hidden md:block w-px h-10 bg-gray-200" />
+            <div>
+              <p className="text-sm text-[var(--color-text-muted)]">Trusted by</p>
+              <p className="font-semibold text-[var(--color-text-dark)]">
+                Comcast &middot; Save Mart &middot; CalPERS &middot; CLA
+              </p>
+            </div>
+          </div>
+        </section>
+      </SectionReveal>
+
       {/* Two Lanes - Signature vs Express (the Premium Barbell) */}
       <TwoLanes />
 
@@ -640,30 +664,6 @@ export default function HomePage() {
             </SectionReveal>
           </div>
         </section>
-
-        {/* Social Proof Bar */}
-        <SectionReveal>
-          <section className="py-12 px-8 bg-[var(--color-bg-warm)] border-y border-gray-100">
-            <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
-              <div>
-                <p className="text-3xl font-bold text-[var(--color-primary)]">500+</p>
-                <p className="text-sm text-[var(--color-text-muted)]">Professionals Photographed</p>
-              </div>
-              <div className="hidden md:block w-px h-10 bg-gray-200" />
-              <div>
-                <p className="text-3xl font-bold text-[var(--color-primary)]">60+</p>
-                <p className="text-sm text-[var(--color-text-muted)]">Five-Star Reviews</p>
-              </div>
-              <div className="hidden md:block w-px h-10 bg-gray-200" />
-              <div>
-                <p className="text-sm text-[var(--color-text-muted)]">Trusted by</p>
-                <p className="font-semibold text-[var(--color-text-dark)]">
-                  Comcast &middot; Save Mart &middot; CLA
-                </p>
-              </div>
-            </div>
-          </section>
-        </SectionReveal>
 
         {/* Testimonials - Kept Authentic */}
         <section className="py-20 md:py-28 px-8 bg-white">
