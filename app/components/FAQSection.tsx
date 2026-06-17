@@ -47,16 +47,16 @@ export default function FAQSection({ faqs, heading = 'Frequently Asked Questions
                     }`}
                   />
                 </button>
-                {openIndex === index && (
-                  <div
-                    id={`faq-${index}`}
-                    className="px-6 py-4 bg-gray-50 border-t border-gray-200"
-                  >
-                    <p className="text-[var(--color-text-body)] leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
+                <div
+                  id={`faq-${index}`}
+                  role="region"
+                  hidden={openIndex !== index}
+                  className="px-6 py-4 bg-gray-50 border-t border-gray-200"
+                >
+                  <p className="text-[var(--color-text-body)] leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
             </SectionReveal>
           ))}
