@@ -263,22 +263,22 @@ export default function ModestoHeadshotsPage() {
                 <SectionReveal>
                   <div className="space-y-5">
                     <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
-                      I Know What Modesto Professionals Are Up Against
+                      We Know What Modesto Professionals Are Up Against
                     </h2>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      Most people come to me not because they want a photo — but because they&apos;re embarrassed by the one they have. Outdated. Phone quality. Or just wrong. It doesn&apos;t look like how you carry yourself in a room, and you know it.
+                      Most people come to us not because they want a photo — but because they&apos;re embarrassed by the one they have. Outdated. Phone quality. Or just wrong. It doesn&apos;t look like how you carry yourself in a room, and you know it.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      I&apos;m Alfonso Rojas — a Modesto-based photographer with 15+ years of corporate leadership experience working alongside CEOs, CFOs, attorneys, and healthcare executives. I built this business right here in the Central Valley because I understand the community, the professional culture, and the relationships that drive it.
+                      We&apos;re Alfonso and Niomi Rojas — Modesto-based photographers with 15+ years of corporate leadership experience working alongside CEOs, CFOs, attorneys, and healthcare executives. We built this business right here in the Central Valley because we understand the community, the professional culture, and the relationships that drive it.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      That&apos;s why I guide every session with real-time coaching on posing, expression, and angles — because the right headshot isn&apos;t just taken, it&apos;s directed.
+                      That&apos;s why we guide every session with real-time coaching on posing, expression, and angles — because the right headshot isn&apos;t just taken, it&apos;s directed.
                     </p>
                     <Link
                       href="/about-rojas-photography"
                       className="inline-block text-[var(--color-primary)] font-semibold hover:underline"
                     >
-                      Learn more about me →
+                      Learn more about us →
                     </Link>
                   </div>
                 </SectionReveal>
@@ -306,8 +306,8 @@ export default function ModestoHeadshotsPage() {
                   },
                   {
                     step: '02',
-                    title: 'I Guide You Through It',
-                    desc: 'You are never alone in this process. I review what I\'m capturing with you in real time, talk through what\'s working and what to adjust, and guide your posing and expression throughout. Most sessions run 60–90 minutes with unlimited wardrobe changes.',
+                    title: 'We Guide You Through It',
+                    desc: 'You are never alone in this process. We review what we\'re capturing with you in real time, talk through what\'s working and what to adjust, and guide your posing and expression throughout. Most sessions run 60–90 minutes with unlimited wardrobe changes.',
                   },
                   {
                     step: '03',
@@ -379,10 +379,10 @@ export default function ModestoHeadshotsPage() {
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
-                  Who I Photograph in Modesto
+                  Who We Photograph in Modesto
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
-                  From downtown law firms to agricultural businesses, healthcare organizations to financial services — I know the Modesto professional community.
+                  From downtown law firms to agricultural businesses, healthcare organizations to financial services — we know the Modesto professional community.
                 </p>
               </SectionReveal>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -577,7 +577,7 @@ export default function ModestoHeadshotsPage() {
                   Imagine Opening LinkedIn and Actually Feeling Proud of Your Photo
                 </h2>
                 <p className="text-lg text-[var(--color-text-body)] leading-relaxed max-w-2xl mx-auto">
-                  Imagine a headshot that stops people mid-scroll. One that makes clients feel confident before they ever call you. One that looks exactly like how you carry yourself when you&apos;re at your best — in the boardroom, in the courtroom, in the exam room. That&apos;s what I work toward in every session.
+                  Imagine a headshot that stops people mid-scroll. One that makes clients feel confident before they ever call you. One that looks exactly like how you carry yourself when you&apos;re at your best — in the boardroom, in the courtroom, in the exam room. That&apos;s what we work toward in every session.
                 </p>
               </SectionReveal>
             </div>
@@ -623,27 +623,27 @@ export default function ModestoHeadshotsPage() {
               {
                 question: 'Where is Rojas Photography located in Modesto?',
                 answer:
-                  'I\'m based right here in Modesto, CA. My professional studio is in the Central Valley — no travel fee, no commute. I serve Modesto professionals, businesses, healthcare organizations, legal firms, agricultural companies, and Stanislaus County employees. I also travel throughout California for on-site team photography.',
+                  'We\'re based right here in Modesto, CA. Our professional studio is in the Central Valley — no travel fee, no commute. We serve Modesto professionals, businesses, healthcare organizations, legal firms, agricultural companies, and Stanislaus County employees. We also travel throughout California for on-site team photography.',
               },
               {
                 question: 'How much do professional headshots cost in Modesto?',
                 answer:
-                  'Professional headshot sessions at my Modesto studio are $150, plus $150 per image you select. You only pay for the images you love — no packages, no minimums, no forced purchases. For teams and on-site photography, I provide customized quotes based on your team size and location. Contact me for a personalized quote.',
+                  'Professional headshot sessions at our Modesto studio are $150, plus $150 per image you select. You only pay for the images you love — no packages, no minimums, no forced purchases. For teams and on-site photography, we provide customized quotes based on your team size and location. Contact us for a personalized quote.',
               },
               {
                 question: 'How long does a headshot session take?',
                 answer:
-                  'Most sessions run 60–90 minutes, though I can move faster if your schedule requires it. There is no hard time limit — I work at your pace. Sessions include unlimited wardrobe changes, real-time coaching on posing and expression, and immediate image review. Your professionally edited images are delivered within 48 hours.',
+                  'Most sessions run 60–90 minutes, though we can move faster if your schedule requires it. There is no hard time limit — we work at your pace. Sessions include unlimited wardrobe changes, real-time coaching on posing and expression, and immediate image review. Your professionally edited images are delivered within 48 hours.',
               },
               {
                 question: 'Do you offer on-site headshot photography for Modesto businesses?',
                 answer:
-                  'Yes. I bring my full professional studio setup — lighting, backdrop, camera equipment — directly to your Modesto office, medical facility, law firm, or business location. On-site photography is ideal for teams, avoiding disruption to your workday, and capturing staff in their professional environment. I\'ve photographed teams for Save Mart, Comcast, Valley First Credit Union, and many other Central Valley organizations.',
+                  'Yes. We bring our full professional studio setup — lighting, backdrop, camera equipment — directly to your Modesto office, medical facility, law firm, or business location. On-site photography is ideal for teams, avoiding disruption to your workday, and capturing staff in their professional environment. We\'ve photographed teams for Save Mart, Comcast, Valley First Credit Union, and many other Central Valley organizations.',
               },
               {
                 question: 'Why do Modesto professionals choose Rojas Photography?',
                 answer:
-                  'I\'m a Modesto local — this is my home and my community. With 15+ years of corporate leadership experience, I understand the professional culture of the Central Valley. I\'ve photographed 500+ professionals across healthcare, legal, agriculture, finance, and corporate sectors. My guided approach makes even camera-shy professionals look confident and authentic. Images delivered within 48 hours.',
+                  'We\'re Modesto locals — this is our home and our community. With 15+ years of corporate leadership experience, we understand the professional culture of the Central Valley. We\'ve photographed 500+ professionals across healthcare, legal, agriculture, finance, and corporate sectors. Our guided approach makes even camera-shy professionals look confident and authentic. Images delivered within 48 hours.',
               },
             ]}
             heading="Modesto Headshot Questions Answered"
