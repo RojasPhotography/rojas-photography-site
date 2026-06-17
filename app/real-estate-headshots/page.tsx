@@ -201,7 +201,7 @@ export default function RealEstateHeadshotsPage() {
                   One Session. Every Platform Covered.
                 </h2>
                 <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-10 text-center max-w-2xl mx-auto">
-                  I understand that real estate agents use their headshot more broadly and more publicly than almost any other profession. A single session with multiple looks gives you everything you need for every format.
+                  We understand that real estate agents use their headshot more broadly and more publicly than almost any other profession. A single session with multiple looks gives you everything you need for every format.
                 </p>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-5">
