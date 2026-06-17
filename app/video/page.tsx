@@ -134,16 +134,16 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">I Know What It Takes to Make People Comfortable on Camera</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">We Know What It Takes to Make People Comfortable on Camera</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  Most people freeze the moment a camera points at them. They read from a script and it sounds like exactly that — a script. I&apos;ve seen it enough times to know that the problem isn&apos;t the person, it&apos;s the process. Nobody relaxes when they feel like they&apos;re performing.
+                  Most people freeze the moment a camera points at them. They read from a script and it sounds like exactly that — a script. We&apos;ve seen it enough times to know that the problem isn&apos;t the person, it&apos;s the process. Nobody relaxes when they feel like they&apos;re performing.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  I&apos;m Alfonso Rojas. I guide conversations, not scripts. With 15+ years of storytelling experience, <strong>FAA Part 107 drone certification</strong>, and a background in corporate environments, I produce video for businesses across the Central Valley that actually connects — because it feels real, not rehearsed.
+                  We&apos;re Alfonso and Niomi Rojas. We guide conversations, not scripts. With 15+ years of storytelling experience, <strong>FAA Part 107 drone certification</strong>, and a background in corporate environments, we produce video for businesses across the Central Valley that actually connects — because it feels real, not rehearsed.
                 </p>
                 <p>
-                  Whether you need a 15-second social clip, a 3-minute brand video, or aerial drone footage, I build the narrative around your story — not a template — and I make sure your team feels comfortable enough to show up as themselves.
+                  Whether you need a 15-second social clip, a 3-minute brand video, or aerial drone footage, we build the narrative around your story — not a template — and we make sure your team feels comfortable enough to show up as themselves.
                 </p>
               </div>
             </SectionReveal>
@@ -154,7 +154,7 @@ export default function VideoServicesPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">How I Work With You</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">How We Work With You</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-4 gap-8">
               <SectionReveal>
@@ -162,7 +162,7 @@ export default function VideoServicesPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">01</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Story Development</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I start by learning your video goals, audience, key messages, and tone. I develop the narrative structure and shot list — not a rigid script that feels forced when your team is on camera.
+                    We start by learning your video goals, audience, key messages, and tone. We develop the narrative structure and shot list — not a rigid script that feels forced when your team is on camera.
                   </p>
                 </div>
               </SectionReveal>
@@ -171,7 +171,7 @@ export default function VideoServicesPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">02</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Production</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I arrive with professional cameras, audio, lighting, and drones when needed. I guide your team through conversational interviews — not stiff scripts — capturing authentic moments at your location, in studio, or wherever your story lives.
+                    We arrive with professional cameras, audio, lighting, and drones when needed. We guide your team through conversational interviews — not stiff scripts — capturing authentic moments at your location, in studio, or wherever your story lives.
                   </p>
                 </div>
               </SectionReveal>
@@ -180,7 +180,7 @@ export default function VideoServicesPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">03</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Editing</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I edit with color grading, sound design, motion graphics, and professional music. The narrative is crafted to maximize engagement while keeping the authenticity intact. Every frame is intentional.
+                    We edit with color grading, sound design, motion graphics, and professional music. The narrative is crafted to maximize engagement while keeping the authenticity intact. Every frame is intentional.
                   </p>
                 </div>
               </SectionReveal>
@@ -278,7 +278,7 @@ export default function VideoServicesPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What I Offer</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What We Offer</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
@@ -318,7 +318,7 @@ export default function VideoServicesPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-[var(--color-text-dark)] mb-8">Video Services I Provide</h2>
+              <h2 className="text-3xl font-bold text-[var(--color-text-dark)] mb-8">Video Services We Provide</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h4 className="font-bold text-[var(--color-text-dark)] mb-4">Corporate & Marketing Videos</h4>
@@ -349,7 +349,7 @@ export default function VideoServicesPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Work With Me</h2>
+              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Work With Us</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
@@ -379,7 +379,7 @@ export default function VideoServicesPage() {
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Imagine Sharing a Video You&apos;re Actually Proud to Put on Your Website</h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
-                  Authentic, professional video that sounds like your team — not a script. Content that connects with your audience and makes people want to reach out. Here&apos;s what clients say about working with me.
+                  Authentic, professional video that sounds like your team — not a script. Content that connects with your audience and makes people want to reach out. Here&apos;s what clients say about working with us.
                 </p>
               </div>
             </SectionReveal>
