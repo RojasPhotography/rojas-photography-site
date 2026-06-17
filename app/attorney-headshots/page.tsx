@@ -254,13 +254,13 @@ export default function AttorneyHeadshotsPage() {
                 <SectionReveal>
                   <div className="space-y-5">
                     <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
-                      I Understand What Legal Professionals Need
+                      We Understand What Legal Professionals Need
                     </h2>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      I know the pressure of projecting authority while remaining approachable — that balance is everything in legal professional branding. Too formal, and clients feel they cannot talk to you. Too relaxed, and they question whether you will fight hard enough for them.
+                      We know the pressure of projecting authority while remaining approachable — that balance is everything in legal professional branding. Too formal, and clients feel they cannot talk to you. Too relaxed, and they question whether you will fight hard enough for them.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      I have photographed attorneys across practice areas throughout the Central Valley — including members of the California Lawyers Association — and I bring 15+ years of corporate professional experience to every session. I understand how serious professionals want to be seen, and I know how to get you there.
+                      We have photographed attorneys across practice areas throughout the Central Valley — including members of the California Lawyers Association — and we bring 15+ years of corporate professional experience to every session. We understand how serious professionals want to be seen, and we know how to get you there.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
                       You are not the hero of this story — your client is. Your headshot should communicate that you are the trusted guide who can help them navigate the most difficult situation of their life. That is the look we are after.
