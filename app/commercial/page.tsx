@@ -129,16 +129,16 @@ export default function CommercialPhotographyPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">I Know How Frustrating Generic Imagery Can Be</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">We Know How Frustrating Generic Imagery Can Be</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  You&apos;ve built something real — a product, a space, a brand with its own personality — and stock photos don&apos;t come close to showing it. I&apos;ve heard this from nearly every commercial client I work with. The imagery they have doesn&apos;t match the quality of what they actually do.
+                  You&apos;ve built something real — a product, a space, a brand with its own personality — and stock photos don&apos;t come close to showing it. We&apos;ve heard this from nearly every commercial client we work with. The imagery they have doesn&apos;t match the quality of what they actually do.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  I&apos;m Alfonso Rojas. With 15+ years in corporate environments, I understand business context and brand positioning — not just how to operate a camera. I&apos;ve photographed businesses across the Central Valley, from healthcare organizations and law firms to manufacturing companies and retailers, and I bring that business understanding to every shoot.
+                  We&apos;re Alfonso and Niomi Rojas. With 15+ years in corporate environments, we understand business context and brand positioning — not just how to operate a camera. We&apos;ve photographed businesses across the Central Valley, from healthcare organizations and law firms to manufacturing companies and retailers, and we bring that business understanding to every shoot.
                 </p>
                 <p>
-                  I don&apos;t just shoot photos. I work with you to understand what your brand needs to communicate — and then I build imagery around that, whether it&apos;s product photography, architectural shots, lifestyle imagery, or a complete brand library.
+                  We don&apos;t just shoot photos. We work with you to understand what your brand needs to communicate — and then we build imagery around that, whether it&apos;s product photography, architectural shots, lifestyle imagery, or a complete brand library.
                 </p>
               </div>
             </SectionReveal>
@@ -149,7 +149,7 @@ export default function CommercialPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">How I Work With You</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">How We Work With You</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-8">
               <SectionReveal>
@@ -157,7 +157,7 @@ export default function CommercialPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">01</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Project Discovery</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I start with a detailed conversation about your brand vision, target audience, and what you need the imagery to communicate. I review your brand guidelines, visual preferences, and deliverable needs before we ever pick up a camera.
+                    We start with a detailed conversation about your brand vision, target audience, and what you need the imagery to communicate. We review your brand guidelines, visual preferences, and deliverable needs before we ever pick up a camera.
                   </p>
                 </div>
               </SectionReveal>
@@ -166,7 +166,7 @@ export default function CommercialPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">02</span>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Execution</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I bring professional equipment and lighting to your location. I direct every shot with intention — your products look compelling, your spaces feel inviting, and your brand story comes through authentically, not like a generic template.
+                    We bring professional equipment and lighting to your location. We direct every shot with intention — your products look compelling, your spaces feel inviting, and your brand story comes through authentically, not like a generic template.
                   </p>
                 </div>
               </SectionReveal>
@@ -264,7 +264,7 @@ export default function CommercialPhotographyPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What I Offer</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What We Offer</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
@@ -317,11 +317,11 @@ export default function CommercialPhotographyPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Work With Me</h2>
+              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Work With Us</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: 'Corporate Experience', desc: '15+ years in corporate environments means I understand your brand context, not just how to operate a camera.' },
+                { title: 'Corporate Experience', desc: '15+ years in corporate environments means we understand your brand context, not just how to operate a camera.' },
                 { title: 'Professional Equipment', desc: 'Professional lighting, cameras, and expert direction — every shot is intentional.' },
                 { title: 'Fast Turnaround', desc: 'Images delivered within 48-72 hours without compromising quality.' },
                 { title: 'Local to the Central Valley', desc: 'Based in Modesto, serving Stockton, Fresno, Turlock, and beyond.' },
