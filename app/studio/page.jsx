@@ -89,7 +89,7 @@ export default function StudioPage() {
                 padding: '12px',
                 borderRadius: '8px',
                 border: 'none',
-                background: '#1a5c3c',
+                background: '#1F6B4D',
                 color: '#fff',
                 fontSize: '15px',
                 fontWeight: '600',

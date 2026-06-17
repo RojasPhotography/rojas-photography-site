@@ -19,7 +19,7 @@ export async function GET(request: Request) {
     `<html><body style="font-family: sans-serif; text-align: center; padding: 60px; color: #333;">
       <h2>You've been unsubscribed.</h2>
       <p>You won't receive any more emails from Rojas Photography.</p>
-      <a href="https://rojasphotography.net" style="color: #1a5c3c;">Return to website</a>
+      <a href="https://rojasphotography.net" style="color: #1F6B4D;">Return to website</a>
     </body></html>`,
     { headers: { 'Content-Type': 'text/html' } }
   );
