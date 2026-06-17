@@ -7,6 +7,7 @@ import SectionReveal from './components/SectionReveal';
 import TestimonialCard from './components/TestimonialCard';
 import CTASection from './components/CTASection';
 import SchemaScript from './components/SchemaScript';
+import TwoLanes from './components/TwoLanes';
 import GoogleReviews from './components/GoogleReviews';
 import { generateLocalBusinessSchema, generateWebSiteSchema, generatePersonSchema, generateFAQSchema } from './lib/schema';
 import FAQSection from './components/FAQSection';
@@ -119,6 +120,9 @@ export default function HomePage() {
           </svg>
         </div>
       </HeroSection>
+
+      {/* Two Lanes - Signature vs Express (the Premium Barbell) */}
+      <TwoLanes />
 
       {/* Problem Section - SB7: Has a Problem */}
       <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
