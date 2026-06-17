@@ -16,27 +16,27 @@ const faqs = [
   {
     question: 'How does on-site corporate photography work?',
     answer:
-      'I schedule a date with your organization, arrive with a complete professional studio (lighting rigs, backdrops, cameras), and photograph your team at your location. For teams of 10+, I set up a custom scheduling system so employees can book their own time slots. Each person receives individual coaching and guided attention — not a rushed assembly line. Photos are professionally edited and delivered within 24 hours via a private online gallery.',
+      'We schedule a date with your organization, arrive with a complete professional studio (lighting rigs, backdrops, cameras), and photograph your team at your location. For teams of 10+, we set up a custom scheduling system so employees can book their own time slots. Each person receives individual coaching and guided attention — not a rushed assembly line. Photos are professionally edited and delivered within 24 hours via a private online gallery.',
   },
   {
     question: 'Do you bring a full studio setup on-site?',
     answer:
-      'Yes. I bring professional lighting rigs, quality backdrops, high-end cameras, and all necessary gear. I handle setup and breakdown completely so your team doesn\'t need to travel to a studio and you don\'t need to manage a thing. All you need is a reasonably sized space at your location.',
+      'Yes. We bring professional lighting rigs, quality backdrops, high-end cameras, and all necessary gear. We handle setup and breakdown completely so your team doesn\'t need to travel to a studio and you don\'t need to manage a thing. All you need is a reasonably sized space at your location.',
   },
   {
     question: 'How is on-site photography priced?',
     answer:
-      'On-site photography is priced per person, reflecting the individual time and coaching each employee receives. This is different from a headshot booth (which is priced by the hour for high-volume events). For a custom quote based on your team size and location, contact me directly.',
+      'On-site photography is priced per person, reflecting the individual time and coaching each employee receives. This is different from a headshot booth (which is priced by the hour for high-volume events). For a custom quote based on your team size and location, contact us directly.',
   },
   {
     question: 'What\'s the difference between on-site photography and a headshot booth?',
     answer:
-      'On-site photography is a contracted session where I come to your organization and spend individual time with each employee — coaching posture, expression, and angles to get the best possible result. It\'s priced per person. A headshot booth is designed for events and expos where the goal is moving a large group through efficiently — priced by the hour. If you\'re not sure which fits your need, reach out and I\'ll help you figure it out.',
+      'On-site photography is a contracted session where we come to your organization and spend individual time with each employee — coaching posture, expression, and angles to get the best possible result. It\'s priced per person. A headshot booth is designed for events and expos where the goal is moving a large group through efficiently — priced by the hour. If you\'re not sure which fits your need, reach out and we\'ll help you figure it out.',
   },
   {
     question: 'Can we do team group photos in addition to individual headshots?',
     answer:
-      'Absolutely. Most organizations invest in both — individual headshots for company directories and LinkedIn, plus a professional group photo for the website and marketing materials. I handle both in the same session so nothing gets scheduled separately.',
+      'Absolutely. Most organizations invest in both — individual headshots for company directories and LinkedIn, plus a professional group photo for the website and marketing materials. We handle both in the same session so nothing gets scheduled separately.',
   },
 ];
 
@@ -141,17 +141,17 @@ export default function OnSitePhotographyPage() {
           <SectionReveal>
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
-                I Know How Much Goes Into Coordinating This
+                We Know How Much Goes Into Coordinating This
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  Wrangling a team of 20, 30, or 50+ people for photos is no small task — especially when everyone is busy and nobody wants to leave the office. I've seen how disruptive it gets, and I built my on-site service specifically to take that burden off your plate.
+                  Wrangling a team of 20, 30, or 50+ people for photos is no small task — especially when everyone is busy and nobody wants to leave the office. We've seen how disruptive it gets, and we built our on-site service specifically to take that burden off your plate.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  I'm Alfonso Rojas. I bring a complete professional studio — lighting, backdrops, cameras, everything — directly to your location. Your team stays at work, I come to them, and we move through efficiently without derailing anyone's day.
+                  We're Alfonso and Niomi Rojas. We bring a complete professional studio — lighting, backdrops, cameras, everything — directly to your location. Your team stays at work, we come to them, and we move through efficiently without derailing anyone's day.
                 </p>
                 <p>
-                  I've photographed 500+ professionals across the Central Valley — law firms, healthcare organizations, corporate offices, school districts — and with 15+ years in corporate leadership, I understand how to operate inside a business environment without disrupting it.
+                  We've photographed 500+ professionals across the Central Valley — law firms, healthcare organizations, corporate offices, school districts — and with 15+ years in corporate leadership and operations, we understand how to operate inside a business environment without disrupting it.
                 </p>
               </div>
             </div>
@@ -165,7 +165,7 @@ export default function OnSitePhotographyPage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl md:text-5xl font-bold text-center text-[var(--color-text-dark)] mb-16">
-                How I Work With Your Team
+                How We Work With Your Team
               </h2>
             </SectionReveal>
 
@@ -179,7 +179,7 @@ export default function OnSitePhotographyPage() {
                     Discovery & Planning
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    I start by learning your team size, location, timeline, and what you need the photos for. For teams of 10+, I set up an online scheduling system so employees can book their own time slots without you having to coordinate every one.
+                    We start by learning your team size, location, timeline, and what you need the photos for. For teams of 10+, we set up an online scheduling system so employees can book their own time slots without you having to coordinate every one.
                   </p>
                 </div>
               </SectionReveal>
@@ -193,7 +193,7 @@ export default function OnSitePhotographyPage() {
                     On-Site Setup & Sessions
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    I arrive, set up the full studio at your location, and your team comes to me throughout the day — no travel, no disruption. I coach everyone through posing so results are consistent across your entire organization.
+                    We arrive, set up the full studio at your location, and your team comes to us throughout the day — no travel, no disruption. We coach everyone through posing so results are consistent across your entire organization.
                   </p>
                 </div>
               </SectionReveal>
@@ -220,7 +220,7 @@ export default function OnSitePhotographyPage() {
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
               <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                Stop coordinating travel to studios. I come to you.
+                Stop coordinating travel to studios. We come to you.
               </p>
               <Link
                 href="/contact-quote"
@@ -288,7 +288,7 @@ export default function OnSitePhotographyPage() {
                 Ready for Consistent Team Headshots?
               </h2>
               <p className="text-lg mb-8 text-white/90">
-                Get a custom quote for your organization. I'll bring my professional studio to your office and photograph your entire team efficiently — with zero travel required on their end.
+                Get a custom quote for your organization. We'll bring our professional studio to your office and photograph your entire team efficiently — with zero travel required on their end.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -316,11 +316,11 @@ export default function OnSitePhotographyPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
-                { title: 'Full Studio Setup at Your Location', desc: 'I bring my complete professional studio to your office — all equipment, lighting, and direction. No one on your team needs to leave the building.' },
-                { title: 'Individual Headshots & Team Photos', desc: 'Individual executive headshots, team portraits, group photos, and building photography if needed. I handle everything with expert guidance so you don\'t have to manage a thing.' },
-                { title: 'Custom Employee Scheduling', desc: 'For organizations with 10+ employees, I create a custom online calendar so your team members can book their own time slots — no back-and-forth coordination needed.' },
-                { title: 'Real-Time Coaching for Every Person', desc: 'I coach each person through posing and expression as we shoot. Everyone sees their photos in real-time so there are no surprises at delivery.' },
-                { title: 'No Disruption to Your Workday', desc: 'I set up, work efficiently, and break down — all while your business keeps running. Employees step away for 10-15 minutes and get back to work.' },
+                { title: 'Full Studio Setup at Your Location', desc: 'We bring our complete professional studio to your office — all equipment, lighting, and direction. No one on your team needs to leave the building.' },
+                { title: 'Individual Headshots & Team Photos', desc: 'Individual executive headshots, team portraits, group photos, and building photography if needed. We handle everything with expert guidance so you don\'t have to manage a thing.' },
+                { title: 'Custom Employee Scheduling', desc: 'For organizations with 10+ employees, we create a custom online calendar so your team members can book their own time slots — no back-and-forth coordination needed.' },
+                { title: 'Real-Time Coaching for Every Person', desc: 'We coach each person through posing and expression as we shoot. Everyone sees their photos in real-time so there are no surprises at delivery.' },
+                { title: 'No Disruption to Your Workday', desc: 'We set up, work efficiently, and break down — all while your business keeps running. Employees step away for 10-15 minutes and get back to work.' },
                 { title: 'Delivered Within 24 Hours', desc: 'Every image is professionally edited and delivered via private online gallery within 24 hours — ready for LinkedIn, your website, and marketing materials.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
@@ -390,7 +390,7 @@ export default function OnSitePhotographyPage() {
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Imagine Your Entire Team Updated by Tomorrow</h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
-                  Consistent headshots across every employee. A &quot;Meet the Team&quot; page you&apos;re proud to send clients to. New hires photographed the same day they start. Here&apos;s what that looks like for organizations I&apos;ve worked with.
+                  Consistent headshots across every employee. A &quot;Meet the Team&quot; page you&apos;re proud to send clients to. New hires photographed the same day they start. Here&apos;s what that looks like for organizations we&apos;ve worked with.
                 </p>
               </div>
             </SectionReveal>
@@ -412,7 +412,7 @@ export default function OnSitePhotographyPage() {
                 Your Team Deserves Professional Headshots
               </h2>
               <p className="text-[var(--color-text-body)] mb-6 leading-relaxed">
-                Join hundreds of Central Valley organizations who&apos;ve trusted me to handle their team photography efficiently and professionally. Consistent team imagery is one quote away.
+                Join hundreds of Central Valley organizations who&apos;ve trusted us to handle their team photography efficiently and professionally. Consistent team imagery is one quote away.
               </p>
               <Link
                 href="/contact-quote"
