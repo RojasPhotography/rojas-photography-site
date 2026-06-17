@@ -7,7 +7,7 @@ import SectionReveal from './components/SectionReveal';
 import TestimonialCard from './components/TestimonialCard';
 import CTASection from './components/CTASection';
 import SchemaScript from './components/SchemaScript';
-import NewsletterSignup from './components/NewsletterSignup';
+import GoogleReviews from './components/GoogleReviews';
 import { generateLocalBusinessSchema, generateWebSiteSchema, generatePersonSchema, generateFAQSchema } from './lib/schema';
 import FAQSection from './components/FAQSection';
 
@@ -92,14 +92,14 @@ export default function HomePage() {
             href="/discovery-call"
             className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
           >
-            Book Your Discovery Call
+            Book a Signature session
           </Link>
-          <a
-            href="tel:2093803727"
+          <Link
+            href="/on-site-photography"
             className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
           >
-            Call 209-380-3727
-          </a>
+            Headshot days for teams
+          </Link>
         </div>
         {/* Scroll indicator */}
         <div className="mt-16 animate-bounce">
@@ -701,6 +701,9 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Live Google Reviews - renders only when Places API env vars are set */}
+        <GoogleReviews />
+
         {/* Discovery Call CTA #2 - After Testimonials */}
         <section className="py-12 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-2xl mx-auto text-center">
@@ -814,15 +817,6 @@ export default function HomePage() {
                 </div>
               </SectionReveal>
             </div>
-          </div>
-        </section>
-
-        {/* Newsletter Section */}
-        <section className="py-20 px-8 bg-white">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <NewsletterSignup />
-            </SectionReveal>
           </div>
         </section>
 
