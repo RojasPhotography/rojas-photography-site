@@ -462,7 +462,7 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Event Organizers Trust Me</h2>
+              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Event Organizers Trust Us</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
