@@ -43,9 +43,9 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Student Headshots Modesto CA | $150 Session & Image',
+  title: 'Student Headshots in Modesto, CA | Rojas Photography',
   description:
-    'Professional student headshots in Modesto, CA. $150 includes your session and one edited image. Perfect for LinkedIn, internships, ERAS & first jobs. Book today.',
+    'Professional student headshots in Modesto, CA. Your session plus one edited image — perfect for LinkedIn, internships, ERAS & first jobs. Book today.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/student-headshots',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Student Headshots in Modesto, CA | Rojas Photography',
     description:
-      'Professional headshots for college students — LinkedIn, internships, ERAS applications & first jobs. $150 includes session + one edited image. 48-hour delivery.',
+      'Professional headshots for college students — LinkedIn, internships, ERAS applications & first jobs. Session plus one edited image. 48-hour delivery.',
     url: 'https://rojasphotography.net/student-headshots',
     type: 'website',
     images: [
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Student Headshots in Modesto, CA | Rojas Photography',
     description:
-      'Professional student headshots. $150 includes session + one edited image. 48-hour delivery. Modesto, CA.',
+      'Professional student headshots in Modesto, CA. Session plus one edited image. 48-hour delivery.',
     images: ['/images/headshots/headshot-ceo-nutrition.jpg'],
   },
 };
