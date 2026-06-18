@@ -56,7 +56,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Healthcare Professional Headshots | Doctors, Nurses & Medical Staff | Rojas Photography',
   description:
-    'Professional headshots for doctors, nurses, and medical staff in Modesto & Central Valley. Patients judge before they call. $150 session. 48-hr delivery.',
+    'Professional headshots for doctors, nurses, and medical staff in Modesto & Central Valley. Patients judge before they call. 48-hr delivery.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/healthcare-headshots',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Healthcare Professional Headshots | Doctors, Nurses & Medical Staff | Rojas Photography',
     description:
-      'Professional headshots for doctors, nurses, and medical staff in Modesto & Central Valley. Patients judge before they call. $150 session. 48-hr delivery.',
+      'Professional headshots for doctors, nurses, and medical staff in Modesto & Central Valley. Patients judge before they call. 48-hr delivery.',
     url: 'https://rojasphotography.net/healthcare-headshots',
     type: 'article',
     images: [
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Healthcare Professional Headshots | Doctors, Nurses & Medical Staff | Rojas Photography',
     description:
-      'Professional headshots for doctors, nurses, and medical staff in Modesto & Central Valley. $150 session + $150/image. 48-hour delivery.',
+      'Professional headshots for doctors, nurses, and medical staff in Modesto & Central Valley. 48-hour delivery.',
     images: ['/images/headshots/headshot-healthcare-executive-01.jpg'],
   },
 };

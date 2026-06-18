@@ -55,7 +55,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Real Estate Agent Headshots | Professional Photography for Realtors | Rojas Photography',
   description:
-    'Professional headshots for real estate agents and realtors in Modesto & Central Valley. Your face is your brand — make it work. $150 session. 48-hr delivery.',
+    'Professional headshots for real estate agents and realtors in Modesto & Central Valley. Your face is your brand — make it work. 48-hr delivery.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/real-estate-headshots',
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Real Estate Agent Headshots | Professional Photography for Realtors | Rojas Photography',
     description:
-      'Professional headshots for real estate agents and realtors in Modesto & Central Valley. Your face is your brand — make it work. $150 session. 48-hr delivery.',
+      'Professional headshots for real estate agents and realtors in Modesto & Central Valley. Your face is your brand — make it work. 48-hr delivery.',
     url: 'https://rojasphotography.net/real-estate-headshots',
     type: 'article',
     images: [{ url: '/images/Hero Image1.jpg', alt: 'Professional real estate headshots — Rojas Photography Modesto CA' }],

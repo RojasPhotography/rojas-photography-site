@@ -55,7 +55,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'ERAS Headshots for Medical Students | Rojas Photography',
   description:
-    'ERAS-ready headshots for medical students applying for residency. $150 includes session & one edited image. Proper format, 48-hr delivery. Modesto, CA. Book today.',
+    'ERAS-ready headshots for medical students applying for residency. Includes your session and one edited image. Proper format, 48-hr delivery. Modesto, CA. Book today.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/eras-headshots',
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'ERAS Headshots for Medical Students | Rojas Photography',
     description:
-      'Professional ERAS headshots for medical residency applications. $150 student rate — session + one edited, ERAS-ready image. 48-hour delivery. Modesto, CA.',
+      'Professional ERAS headshots for medical residency applications. Session plus one edited, ERAS-ready image. 48-hour delivery. Modesto, CA.',
     url: 'https://rojasphotography.net/eras-headshots',
     type: 'website',
     images: [
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'ERAS Headshots for Medical Students | Rojas Photography',
     description:
-      'ERAS-ready headshots for medical residency applications. $150 student rate. 48-hour delivery. Modesto, CA.',
+      'ERAS-ready headshots for medical residency applications. 48-hour delivery. Modesto, CA.',
     images: ['/images/headshots/headshot-healthcare-executive-01.jpg'],
   },
 };

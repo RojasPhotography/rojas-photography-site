@@ -51,7 +51,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'LinkedIn Headshots Modesto CA | Rojas Photography',
   description:
-    'LinkedIn headshots in Modesto & Central Valley. Professional profile photos that build trust and get you noticed. $150 session. 48-hr delivery. Book today.',
+    'LinkedIn headshots in Modesto & Central Valley. Professional profile photos that build trust and get you noticed. 48-hr delivery. Book today.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/linkedin-headshots',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'LinkedIn Headshots in Modesto, CA | Rojas Photography',
     description:
-      'Professional LinkedIn headshots for Central Valley executives, attorneys, healthcare professionals & business owners. $150 session. 48-hour delivery.',
+      'Professional LinkedIn headshots for Central Valley executives, attorneys, healthcare professionals & business owners. 48-hour delivery.',
     url: 'https://rojasphotography.net/linkedin-headshots',
     type: 'website',
     images: [
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'LinkedIn Headshots in Modesto, CA | Rojas Photography',
     description:
-      'Professional LinkedIn profile photos for Central Valley professionals. $150 session + $150/image. 48-hour delivery.',
+      'Professional LinkedIn profile photos for Central Valley professionals. 48-hour delivery.',
     images: ['/images/headshots/headshot-finance-ceo.jpg'],
   },
 };

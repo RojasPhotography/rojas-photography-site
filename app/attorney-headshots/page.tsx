@@ -56,7 +56,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Attorney Headshots | Professional Headshots for Lawyers | Rojas Photography',
   description:
-    'Professional headshots for attorneys and lawyers in Modesto & Central Valley. Build trust before clients ever meet you. $150 session. 48-hr delivery.',
+    'Professional headshots for attorneys and lawyers in Modesto & Central Valley. Build trust before clients ever meet you. 48-hr delivery.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/attorney-headshots',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Attorney Headshots | Professional Headshots for Lawyers | Rojas Photography',
     description:
-      'Professional headshots for attorneys and lawyers in Modesto & Central Valley. Build trust before clients ever meet you. $150 session. 48-hr delivery.',
+      'Professional headshots for attorneys and lawyers in Modesto & Central Valley. Build trust before clients ever meet you. 48-hr delivery.',
     url: 'https://rojasphotography.net/attorney-headshots',
     type: 'article',
     images: [
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Attorney Headshots | Professional Headshots for Lawyers | Rojas Photography',
     description:
-      'Professional headshots for attorneys and lawyers in Modesto & Central Valley. $150 session + $150/image. 48-hour delivery.',
+      'Professional headshots for attorneys and lawyers in Modesto & Central Valley. 48-hour delivery.',
     images: ['/images/headshots/headshot-attorney-01.jpg'],
   },
 };

@@ -55,7 +55,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Finance Professional Headshots | Financial Advisors, Bankers & Wealth Managers | Rojas Photography',
   description:
-    'Professional headshots for financial advisors, bankers, and wealth managers in Modesto & Central Valley. Trust is your foundation — your image should reflect it. $150 session.',
+    'Professional headshots for financial advisors, bankers, and wealth managers in Modesto & Central Valley. Trust is your foundation — your image should reflect it.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/finance-headshots',
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Finance Professional Headshots | Financial Advisors, Bankers & Wealth Managers | Rojas Photography',
     description:
-      'Professional headshots for financial advisors, bankers, and wealth managers in Modesto & Central Valley. Trust is your foundation — your image should reflect it. $150 session.',
+      'Professional headshots for financial advisors, bankers, and wealth managers in Modesto & Central Valley. Trust is your foundation — your image should reflect it.',
     url: 'https://rojasphotography.net/finance-headshots',
     type: 'article',
     images: [{ url: '/images/Hero Image1.jpg', alt: 'Professional finance headshots — Rojas Photography Modesto CA' }],
