@@ -1,7 +1,13 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import NewsletterFooterForm from './NewsletterFooterForm';
 
 export default function Footer() {
+  const pathname = usePathname();
+  // Design-exploration preview routes render their own footer.
+  if (pathname?.startsWith('/redesign')) return null;
   return (
     <footer
       className="bg-[var(--color-primary-dark)] text-gray-400 py-16 px-8"

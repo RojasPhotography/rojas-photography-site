@@ -54,6 +54,11 @@ export default function Navigation() {
     setDesktopServicesOpen(!desktopServicesOpen);
   };
 
+  // Design-exploration preview routes render their own full-bleed chrome.
+  if (pathname.startsWith('/redesign')) {
+    return null;
+  }
+
   if (pathname === '/newsletter') {
     return (
       <nav className="bg-white border-b border-gray-100 px-6 py-4 fixed w-full top-0 z-50" role="navigation" aria-label="Main navigation">
