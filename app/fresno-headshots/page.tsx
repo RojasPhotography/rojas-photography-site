@@ -129,7 +129,7 @@ function generateFresnoFAQSchema() {
 export const metadata: Metadata = {
   title: 'Professional Headshots Fresno CA | Rojas Photography',
   description:
-    'Professional headshots in Fresno, CA for Fresno State faculty, Community Regional & Saint Agnes Medical staff, legal professionals & business executives. $150 session. Book today.',
+    'Professional headshots in Fresno, CA for Fresno State faculty, Community Regional & Saint Agnes Medical staff, legal professionals & business executives. Book today.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/fresno-headshots',
@@ -153,7 +153,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Professional Headshots in Fresno, CA | Rojas Photography',
     description:
-      'Professional headshots for Fresno professionals, Fresno State faculty & healthcare workers. $150 session fee. 90 minutes from Modesto.',
+      'Professional headshots for Fresno professionals, Fresno State faculty & healthcare workers. 90 minutes from Modesto.',
     images: ['/images/Alfonso+Niomi-0026.jpg'],
   },
 };

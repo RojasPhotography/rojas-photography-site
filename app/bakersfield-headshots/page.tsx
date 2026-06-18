@@ -46,7 +46,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Professional Headshots in Bakersfield, CA | Rojas Photography',
   description:
-    'Professional headshots in Bakersfield, CA. Oil & energy, healthcare, legal, and agricultural business professionals. $150 session. On-site available throughout Kern County.',
+    'Professional headshots in Bakersfield, CA. Oil & energy, healthcare, legal, and agricultural business professionals. On-site available throughout Kern County.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/bakersfield-headshots',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Professional Headshots in Bakersfield, CA | Rojas Photography',
     description:
-      'Professional headshots in Bakersfield, CA. Oil & energy, healthcare, legal, and agricultural business professionals. $150 session. On-site available.',
+      'Professional headshots in Bakersfield, CA. Oil & energy, healthcare, legal, and agricultural business professionals. On-site available.',
     url: 'https://rojasphotography.net/bakersfield-headshots',
     type: 'website',
     images: [{ url: '/images/Hero Image1.jpg', alt: 'Professional headshots Bakersfield CA — Rojas Photography' }],

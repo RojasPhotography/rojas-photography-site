@@ -129,7 +129,7 @@ function generateModestoFAQSchema() {
 export const metadata: Metadata = {
   title: 'Professional Headshots Modesto CA | Rojas Photography',
   description:
-    'Modesto\'s top corporate headshot photographer. Studio sessions & on-site team photography for executives, healthcare, legal & business professionals. $150 session. Book today.',
+    'Modesto\'s top corporate headshot photographer. Studio sessions & on-site team photography for executives, healthcare, legal & business professionals. Book today.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/modesto-headshots',
@@ -153,7 +153,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Professional Headshots in Modesto, CA | Rojas Photography',
     description:
-      'Corporate headshots for Modesto professionals. Studio sessions & on-site team photography. $150 session fee. 48-hour delivery.',
+      'Corporate headshots for Modesto professionals. Studio sessions & on-site team photography. 48-hour delivery.',
     images: ['/images/headshots/headshot-executive-ceo.jpg'],
   },
 };

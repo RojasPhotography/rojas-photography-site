@@ -129,7 +129,7 @@ function generateMercedFAQSchema() {
 export const metadata: Metadata = {
   title: 'Professional Headshots Merced CA | Rojas Photography',
   description:
-    'Professional headshots in Merced, CA for UC Merced faculty, Mercy Medical Center professionals & business executives. 50 min from studio. $150 session. Book today.',
+    'Professional headshots in Merced, CA for UC Merced faculty, Mercy Medical Center professionals & business executives. 50 min from studio. Book today.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/merced-headshots',
@@ -153,7 +153,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Professional Headshots in Merced, CA | Rojas Photography',
     description:
-      'Professional headshots for Merced professionals, UC Merced faculty & healthcare workers. $150 session fee. 50 minutes from Modesto.',
+      'Professional headshots for Merced professionals, UC Merced faculty & healthcare workers. 50 minutes from Modesto.',
     images: ['/images/Joyce-0029.jpg'],
   },
 };

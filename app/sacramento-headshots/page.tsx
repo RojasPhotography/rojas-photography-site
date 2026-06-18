@@ -129,7 +129,7 @@ function generateSacramentoFAQSchema() {
 export const metadata: Metadata = {
   title: 'Professional Headshots Sacramento CA | Rojas Photography',
   description:
-    'Professional headshots in Sacramento, CA for legislators, government officials, legal professionals & UC Davis Medical staff. 90 min from studio. $150 session. Book today.',
+    'Professional headshots in Sacramento, CA for legislators, government officials, legal professionals & UC Davis Medical staff. 90 min from studio. Book today.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/sacramento-headshots',
@@ -153,7 +153,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Professional Headshots in Sacramento, CA | Rojas Photography',
     description:
-      'Professional headshots for Sacramento legislators, legal professionals & healthcare workers. $150 session fee. 90 minutes from Modesto.',
+      'Professional headshots for Sacramento legislators, legal professionals & healthcare workers. 90 minutes from Modesto.',
     images: ['/images/Gina-0026 (1).jpg'],
   },
 };
