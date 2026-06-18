@@ -97,12 +97,25 @@ export default function Footer() {
               LOCATIONS
             </h4>
             <ul className="text-sm space-y-3">
-              <li>Modesto</li>
-              <li>Stockton</li>
-              <li>Fresno</li>
-              <li>Turlock</li>
-              <li>Sacramento</li>
-              <li>East Bay</li>
+              {[
+                { name: 'Modesto', href: '/modesto-headshots' },
+                { name: 'Stockton', href: '/stockton-headshots' },
+                { name: 'Tracy', href: '/tracy-headshots' },
+                { name: 'Fresno', href: '/fresno-headshots' },
+                { name: 'Turlock', href: '/turlock-headshots' },
+                { name: 'Merced', href: '/merced-headshots' },
+                { name: 'Sacramento', href: '/sacramento-headshots' },
+                { name: 'East Bay', href: '/east-bay-headshots' },
+              ].map((loc) => (
+                <li key={loc.href}>
+                  <Link
+                    href={loc.href}
+                    className="hover:text-[var(--color-primary-light)] transition-colors"
+                  >
+                    {loc.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
           <div>
