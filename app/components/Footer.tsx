@@ -52,6 +52,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/annual-headshot-programs"
+                  className="hover:text-[var(--color-primary-light)] transition-colors"
+                >
+                  Annual Headshot Programs
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/headshot-booth"
                   className="hover:text-[var(--color-primary-light)] transition-colors"
                 >

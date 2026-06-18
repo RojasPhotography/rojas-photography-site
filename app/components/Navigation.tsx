@@ -155,6 +155,13 @@ export default function Navigation() {
                   On-Site Photography
                 </Link>
                 <Link
+                  href="/annual-headshot-programs"
+                  className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
+                  onClick={() => setDesktopServicesOpen(false)}
+                >
+                  Annual Headshot Programs
+                </Link>
+                <Link
                   href="/headshot-booth"
                   className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
                   onClick={() => setDesktopServicesOpen(false)}
@@ -312,6 +319,13 @@ export default function Navigation() {
                     onClick={closeMenu}
                   >
                     On-Site Photography
+                  </Link>
+                  <Link
+                    href="/annual-headshot-programs"
+                    className="block text-base text-[var(--color-text-body)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-2.5 rounded-lg transition-all duration-200"
+                    onClick={closeMenu}
+                  >
+                    Annual Headshot Programs
                   </Link>
                   <Link
                     href="/headshot-booth"

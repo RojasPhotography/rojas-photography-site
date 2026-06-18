@@ -708,6 +708,28 @@ export default function HomePage() {
         {/* Live Google Reviews - renders only when Places API env vars are set */}
         <GoogleReviews />
 
+        {/* Annual Programs Band */}
+        <SectionReveal>
+          <section className="py-16 px-8 bg-[var(--color-bg-warm)] border-y border-gray-100">
+            <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 text-center md:text-left">
+              <div className="flex-1">
+                <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-3">
+                  Hiring all year? Keep every headshot consistent.
+                </h2>
+                <p className="text-[var(--color-text-body)] leading-relaxed">
+                  Our <Link href="/annual-headshot-programs" className="text-[var(--color-primary)] font-semibold hover:underline">annual headshot programs for companies</Link> photograph new hires as they join and refresh your whole team on a schedule — one locked-in look across your directory, website, and LinkedIn.
+                </p>
+              </div>
+              <Link
+                href="/annual-headshot-programs"
+                className="btn-primary px-8 py-4 text-base font-semibold rounded-full inline-block whitespace-nowrap shrink-0"
+              >
+                Explore programs
+              </Link>
+            </div>
+          </section>
+        </SectionReveal>
+
         {/* Discovery Call CTA #2 - After Testimonials */}
         <section className="py-12 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-2xl mx-auto text-center">
