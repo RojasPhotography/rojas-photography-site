@@ -2,6 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   trailingSlash: false,
+  images: {
+    // Serve AVIF first (smaller + sharper than WebP), then WebP fallback.
+    formats: ['image/avif', 'image/webp'],
+    // Higher default quality than Next's 75 — full-res sources will look crisp.
+    qualities: [75, 85, 90],
+    // Cache optimized variants for 30 days so we don't re-encode constantly.
+    minimumCacheTTL: 2592000,
+  },
   async redirects() {
     return [
       // www → non-www (covers both http and https)

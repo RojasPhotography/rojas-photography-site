@@ -9,17 +9,35 @@ export const metadata: Metadata = {
 
 const directions = [
   {
-    href: '/redesign/editorial',
+    href: '/redesign/studio',
     no: '01',
+    name: 'Studio',
+    vibe: 'Charcoal · bold sans · big photography',
+    desc: 'Modern, dark, and photography-forward — the look of a top-tier headshot studio. Flanking portraits, a wall of 500+ faces, grayscale client logos, green accent. Built to your references.',
+    img: '/images/headshots/headshot-attorney-01.jpg',
+    tag: 'Recommended',
+  },
+  {
+    href: '/redesign/atelier',
+    no: '02',
+    name: 'Maison',
+    vibe: 'Emerald lacquer · gold foil · Bodoni',
+    desc: 'Couture-house luxury. High-contrast Bodoni headlines, champagne-gold hairlines, photography matted like fine art. The ornate take.',
+    img: '/images/headshots/headshot-comcast-executive.jpg',
+    tag: 'Ornate',
+  },
+  {
+    href: '/redesign/editorial',
+    no: '03',
     name: 'Editorial Gallery',
     vibe: 'Warm ivory · serif · green + gold',
     desc: 'Magazine-grade and timeless. Oversized serif headlines, asymmetric grid, photography framed like gallery plates. Premium and approachable.',
     img: '/images/headshots/headshot-executive-ceo.jpg',
-    tag: 'Recommended',
+    tag: 'Timeless',
   },
   {
     href: '/redesign/noir',
-    no: '02',
+    no: '04',
     name: 'Cinematic Noir',
     vibe: 'Near-black · forest green · gold · film grain',
     desc: 'Dark, dramatic, unforgettable. Full-bleed cinematic hero with slow motion and grain. The boldest, most differentiated direction.',
@@ -28,7 +46,7 @@ const directions = [
   },
   {
     href: '/redesign/minimal',
-    no: '03',
+    no: '05',
     name: 'Modern Minimal',
     vibe: 'Pure white · hairlines · vast air',
     desc: 'Swiss and architectural. Huge negative space, restrained motion, the photography does all the talking. Quiet, confident luxury.',
@@ -48,14 +66,14 @@ export default function RedesignHub() {
       <section className="px-6 md:px-12 pt-16 md:pt-24 pb-12 max-w-4xl">
         <p className="text-xs uppercase tracking-[0.22em] text-[var(--color-primary-light)] mb-6">2026 Design Exploration</p>
         <h1 className="font-[family-name:var(--font-heading)] text-4xl md:text-6xl leading-[1.05] mb-6">
-          Three directions. One studio.
+          Five directions. One studio.
         </h1>
         <p className="text-lg text-white/70 leading-relaxed">
           Each is a real, clickable prototype of a high-end 2026 homepage — built on your brand green, your real photography, and full accessibility. Your live site is untouched. Open each, see how it feels, then tell me which one to take all the way.
         </p>
       </section>
 
-      <section className="px-6 md:px-12 pb-24 grid md:grid-cols-3 gap-6">
+      <section className="px-6 md:px-12 pb-24 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {directions.map((d) => (
           <Link key={d.href} href={d.href} className="group block">
             <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-white/10">

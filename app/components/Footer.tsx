@@ -8,9 +8,10 @@ export default function Footer() {
   const pathname = usePathname();
   // Design-exploration preview routes render their own footer.
   if (pathname?.startsWith('/redesign')) return null;
+  const isHome = pathname === '/';
   return (
     <footer
-      className="bg-[var(--color-primary-dark)] text-gray-400 py-16 px-8"
+      className={`${isHome ? 'bg-[#0C0D0F] border-t border-white/10' : 'bg-[var(--color-primary-dark)]'} text-gray-400 py-16 px-8`}
       role="contentinfo"
     >
       <div className="max-w-6xl mx-auto">

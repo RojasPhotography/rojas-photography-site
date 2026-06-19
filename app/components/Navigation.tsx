@@ -10,6 +10,15 @@ export default function Navigation() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Homepage nav is transparent over the dark hero, solid on scroll.
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -71,6 +80,14 @@ export default function Navigation() {
     );
   }
 
+  const isHome = pathname === '/';
+  const navClass = !isHome
+    ? 'bg-white/95 backdrop-blur-md text-[var(--color-text-dark)] border-b border-gray-100 shadow-sm'
+    : scrolled
+      ? 'home-nav text-white bg-[#0C0D0F]/90 backdrop-blur-md border-b border-white/10'
+      : 'home-nav text-white bg-gradient-to-b from-black/55 via-black/25 to-transparent';
+  const burgerBar = isHome ? 'bg-white' : 'bg-[var(--color-text-dark)]';
+
   return (
     <>
       <a
@@ -81,7 +98,7 @@ export default function Navigation() {
       </a>
 
       <nav
-        className="bg-white/95 backdrop-blur-md text-[var(--color-text-dark)] px-4 sm:px-6 md:px-8 py-4 fixed w-full top-0 z-50 border-b border-gray-100 shadow-sm"
+        className={`${navClass} px-4 sm:px-6 md:px-8 py-4 fixed w-full top-0 z-50 transition-all duration-300`}
         role="navigation"
         aria-label="Main navigation"
       >
@@ -92,14 +109,20 @@ export default function Navigation() {
             className="flex items-center flex-shrink-0 transition-transform hover:scale-105 duration-300"
             aria-label="Rojas Photography Home"
           >
-            <Image
-              src="/images/Rojas Photography Logo 24.6.png"
-              alt="Rojas Photography"
-              width={200}
-              height={40}
-              className="h-9 sm:h-10 w-auto"
-              priority
-            />
+            {isHome ? (
+              <span className="font-[family-name:var(--font-heading)] text-lg sm:text-xl uppercase tracking-[0.22em] text-white leading-none">
+                Rojas <span className="text-white/65">Photography</span>
+              </span>
+            ) : (
+              <Image
+                src="/images/Rojas Photography Logo 24.6.png"
+                alt="Rojas Photography"
+                width={200}
+                height={40}
+                className="h-9 sm:h-10 w-auto"
+                priority
+              />
+            )}
           </Link>
 
           {/* Desktop Navigation */}
@@ -229,17 +252,17 @@ export default function Navigation() {
             aria-expanded={menuOpen}
           >
             <span
-              className={`block w-6 h-0.5 bg-[var(--color-text-dark)] transition-all duration-300 ease-out ${
+              className={`block w-6 h-0.5 ${burgerBar} transition-all duration-300 ease-out ${
                 menuOpen ? 'rotate-45 translate-y-[5px]' : ''
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-[var(--color-text-dark)] my-1.5 transition-all duration-300 ease-out ${
+              className={`block w-6 h-0.5 ${burgerBar} my-1.5 transition-all duration-300 ease-out ${
                 menuOpen ? 'opacity-0 scale-0' : ''
               }`}
             />
             <span
-              className={`block w-6 h-0.5 bg-[var(--color-text-dark)] transition-all duration-300 ease-out ${
+              className={`block w-6 h-0.5 ${burgerBar} transition-all duration-300 ease-out ${
                 menuOpen ? '-rotate-45 -translate-y-[5px]' : ''
               }`}
             />

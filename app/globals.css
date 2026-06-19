@@ -119,6 +119,11 @@ a:focus-visible, button:focus-visible {
   transform: translateY(-1px);
 }
 
+/* Homepage dark nav — lighten link hover for contrast on dark */
+.home-nav .nav-link:hover {
+  color: #37B07C;
+}
+
 /* Navigation Enhancements */
 @keyframes slideInRight {
   from {
