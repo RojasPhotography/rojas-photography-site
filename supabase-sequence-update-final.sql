@@ -83,7 +83,7 @@ UPDATE sequence_emails SET
     </div>
     <p style="font-size:16px;line-height:1.75;color:#444;margin:0 0 16px;">We didn''t know any of that when she was standing in front of our camera. We were just doing what we always do. But that''s the thing about this work — you don''t always know what a photograph means to someone until after.</p>
     <p style="font-size:16px;line-height:1.75;color:#444;margin:0 0 28px;">That''s why we treat every single person who steps in front of our camera the same way. Because we never know whose moment it is.</p>
-    <a href="https://rojasphotography.net/commercial" style="display:inline-block;background:#0f3d2a;color:#fff;padding:14px 32px;text-decoration:none;border-radius:50px;font-size:15px;font-weight:bold;">See Our Work →</a>
+    <a href="https://rojasphotography.net/premium-headshots" style="display:inline-block;background:#0f3d2a;color:#fff;padding:14px 32px;text-decoration:none;border-radius:50px;font-size:15px;font-weight:bold;">See Our Work →</a>
     <p style="font-size:16px;line-height:1.75;color:#444;margin:28px 0 4px;">With gratitude,</p>
     <p style="font-size:16px;line-height:1.75;color:#444;margin:0;">— Alfonso &amp; Niomi</p>
   </div>
