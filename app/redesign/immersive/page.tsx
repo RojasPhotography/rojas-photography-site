@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import fs from 'fs';
+import path from 'path';
 import { Fraunces, Hanken_Grotesk } from 'next/font/google';
 
 const fraunces = Fraunces({ subsets: ['latin'], weight: ['400', '500', '600', '700'], style: ['normal', 'italic'], variable: '--im-display', display: 'swap' });
@@ -57,6 +59,8 @@ const css = `
 .im-face{ position:relative; flex:0 0 auto; width:230px; height:300px; overflow:hidden; border-radius:3px; }
 .im-face img{ filter:grayscale(1) brightness(.82); transition:filter .6s, transform .9s cubic-bezier(.16,1,.3,1); }
 .im-face:hover img{ filter:grayscale(0) brightness(1); transform:scale(1.06); }
+.im-tile img{ transition:transform 1s cubic-bezier(.16,1,.3,1), filter .6s; filter:brightness(.96); }
+.im-tile:hover img{ transform:scale(1.05); filter:brightness(1.04); }
 
 /* lane panels */
 .im-panel{ position:relative; overflow:hidden; }
@@ -75,15 +79,33 @@ const css = `
 }
 `;
 
-const wall = [
+// Curated fallback faces (used until you drop your own into /public/images/gallery)
+const headshotWall = [
   'headshot-finance-ceo.jpg', 'headshot-attorney-02.jpg', 'headshot-comcast-executive.jpg', 'headshot-attorney-03.jpg',
   'headshot-healthcare-executive-01.jpg', 'headshot-executive-ceo.jpg', 'headshot-cpa-finance-01.jpg', 'headshot-attorney-01.jpg',
   'headshot-realtor-01.jpg', 'headshot-finance-cpa.jpg',
-];
+].map((f) => `/images/headshots/${f}`);
+
+// Auto-read everything you drop into /public/images/gallery
+function readGallery(): string[] {
+  try {
+    return fs
+      .readdirSync(path.join(process.cwd(), 'public/images/gallery'))
+      .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
+      .sort()
+      .map((f) => `/images/gallery/${f}`);
+  } catch {
+    return [];
+  }
+}
+const galleryPaths = readGallery();
+// Moving wall: prefer your gallery once there are enough, else the curated set
+const wallPaths = galleryPaths.length >= 6 ? galleryPaths : headshotWall;
+
 const clients = ['COMCAST', 'SAVE MART', 'CALIFORNIA LAWYERS ASSN', 'KAISER PERMANENTE', 'VALLEY FIRST CREDIT UNION'];
 
 export default function Immersive() {
-  const marquee = [...wall, ...wall];
+  const marquee = [...wallPaths, ...wallPaths];
   return (
     <div className={`im ${fraunces.variable} ${hanken.variable}`}>
       <style dangerouslySetInnerHTML={{ __html: css }} />
@@ -143,11 +165,31 @@ export default function Immersive() {
         <div className="im-track">
           {marquee.map((src, i) => (
             <div key={i} className="im-face mr-4">
-              <Image src={`/images/headshots/${src}`} alt="" fill sizes="230px" className="object-cover" style={{ objectPosition: '50% 20%' }} />
+              <Image src={src} alt="" fill sizes="230px" className="object-cover" style={{ objectPosition: '50% 20%' }} />
             </div>
           ))}
         </div>
       </section>
+
+      {/* GALLERY GRID — auto-reads /public/images/gallery */}
+      {galleryPaths.length > 0 && (
+        <section className="max-w-[1320px] mx-auto px-6 md:px-10 py-20 md:py-28">
+          <div className="im-rv mb-10 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="im-label im-em">The gallery</p>
+              <h2 className="im-disp mt-4 text-[30px] md:text-[42px] leading-tight font-medium">Faces from the studio.</h2>
+            </div>
+            <Link href="/portfolio" className="im-label im-link im-em">See the full portfolio &rarr;</Link>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-4">
+            {galleryPaths.map((src, i) => (
+              <div key={src} className="im-tile relative aspect-[4/5] overflow-hidden rounded-sm">
+                <Image src={src} alt={`Professional headshot ${i + 1} by Rojas Photography in Modesto`} fill sizes="(max-width:768px) 50vw, 25vw" className="object-cover" style={{ objectPosition: '50% 18%' }} loading="lazy" />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* STATEMENT */}
       <section id="about" className="max-w-[1100px] mx-auto px-6 md:px-10 py-28 md:py-40">
