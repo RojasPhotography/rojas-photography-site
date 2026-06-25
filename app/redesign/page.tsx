@@ -9,13 +9,22 @@ export const metadata: Metadata = {
 
 const directions = [
   {
+    href: '/redesign/immersive',
+    no: '07',
+    name: 'Immersive',
+    vibe: 'Full-bleed · cinematic · motion · headshot-led',
+    desc: 'The boldest direction. A full-screen portrait hero that slow-zooms, an auto-scrolling wall of 1,000+ faces, scroll-reveal statements, and two full-height service panels (studio headshots vs. we-come-to-you team days) with real buttons. Photography takes over the screen.',
+    img: '/images/headshots/headshot-finance-ceo.jpg',
+    tag: 'Newest',
+  },
+  {
     href: '/redesign/editorial-v2',
     no: '06',
     name: 'Warm Editorial',
     vibe: 'Cream · serif · deep green · headshot-led',
-    desc: 'Headshot-first and premium. Logo top-left, an oversized serif headline, a charcoal-background executive hero, dual CTAs split into the two lanes (individual / team), and a trusted-by bar. The newest direction, built from your mockup.',
+    desc: 'Headshot-first and premium. Logo top-left, an oversized serif headline, a charcoal-background executive hero, dual CTAs split into the two lanes (individual / team), and a trusted-by bar. The warm, light take.',
     img: '/images/headshots/headshot-attorney-02.jpg',
-    tag: 'Newest',
+    tag: 'Light',
   },
   {
     href: '/redesign/studio',
@@ -75,7 +84,7 @@ export default function RedesignHub() {
       <section className="px-6 md:px-12 pt-16 md:pt-24 pb-12 max-w-4xl">
         <p className="text-xs uppercase tracking-[0.22em] text-[var(--color-primary-light)] mb-6">2026 Design Exploration</p>
         <h1 className="font-[family-name:var(--font-heading)] text-4xl md:text-6xl leading-[1.05] mb-6">
-          Six directions. One studio.
+          Seven directions. One studio.
         </h1>
         <p className="text-lg text-white/70 leading-relaxed">
           Each is a real, clickable prototype of a high-end 2026 homepage — built on your brand green, your real photography, and full accessibility. Your live site is untouched. Open each, see how it feels, then tell me which one to take all the way.
