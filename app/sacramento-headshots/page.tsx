@@ -358,7 +358,7 @@ export default function SacramentoHeadshotsPage() {
                   },
                   {
                     title: 'Fast Turnaround for Busy Professionals',
-                    desc: 'Sacramento professionals work on tight deadlines. Most clients receive professionally edited headshots within 48 hours. On-site team photography delivers in 24 hours. Campaign launch? New website? Firm directory update? I deliver professional imagery when you need it, without compromising quality.',
+                    desc: 'Sacramento professionals work on tight deadlines. Most clients receive professionally edited headshots within 48 hours. On-site team photography delivers the same day. Campaign launch? New website? Firm directory update? I deliver professional imagery when you need it, without compromising quality.',
                   },
                 ].map((item) => (
                   <SectionReveal key={item.title}>

@@ -310,7 +310,7 @@ export default function TurlockHeadshotsPage() {
                   },
                   {
                     title: 'Fast Turnaround, Professional Results',
-                    desc: 'Most Turlock clients receive professionally edited headshots within 48 hours. On-site team photography delivers in 24 hours. Professional imagery that builds credibility, delivered when you need it.',
+                    desc: 'Most Turlock clients receive professionally edited headshots within 48 hours. On-site team photography delivers the same day. Professional imagery that builds credibility, delivered when you need it.',
                   },
                 ].map((item) => (
                   <SectionReveal key={item.title}>

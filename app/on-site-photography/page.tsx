@@ -44,7 +44,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'On-Site Corporate Headshots | We Come to You | Modesto CA',
   description:
-    'Full studio at your office. Every person coached individually — headshots and team photos delivered in 24 hours. No travel required. Modesto & Central Valley.',
+    'Full studio at your office. Every person coached individually — headshots and team photos delivered the same day. No travel required. Modesto & Central Valley.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/on-site-photography',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'On-Site Corporate Headshots | We Come to Your Office | Rojas Photography',
     description:
-      'We bring professional lighting, backdrops, and coaching to your location. Individual headshots and team photos — every person coached, delivered in 24 hours. Modesto & Central Valley.',
+      'We bring professional lighting, backdrops, and coaching to your location. Individual headshots and team photos — every person coached, delivered the same day. Modesto & Central Valley.',
     url: 'https://rojasphotography.net/on-site-photography',
     type: 'website',
     images: [
@@ -207,7 +207,7 @@ export default function OnSitePhotographyPage() {
                     Immediate Delivery
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    Professionally edited images delivered within 24 hours via online private gallery. Your team can download photos immediately for LinkedIn, your website, and all marketing materials.
+                    Professionally edited images delivered the same day via online private gallery. Your team can download photos immediately for LinkedIn, your website, and all marketing materials.
                   </p>
                 </div>
               </SectionReveal>
@@ -321,7 +321,7 @@ export default function OnSitePhotographyPage() {
                 { title: 'Custom Employee Scheduling', desc: 'For organizations with 10+ employees, I create a custom online calendar so your team members can book their own time slots — no back-and-forth coordination needed.' },
                 { title: 'Real-Time Coaching for Every Person', desc: 'I coach each person through posing and expression as we shoot. Everyone sees their photos in real-time so there are no surprises at delivery.' },
                 { title: 'No Disruption to Your Workday', desc: 'I set up, work efficiently, and break down — all while your business keeps running. Employees step away for 10-15 minutes and get back to work.' },
-                { title: 'Delivered Within 24 Hours', desc: 'Every image is professionally edited and delivered via private online gallery within 24 hours — ready for LinkedIn, your website, and marketing materials.' },
+                { title: 'Delivered Same Day', desc: 'Every image is professionally edited and delivered via private online gallery the same day — ready for LinkedIn, your website, and marketing materials.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
                   <div className="flex gap-4">

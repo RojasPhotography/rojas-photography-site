@@ -256,7 +256,7 @@ export default function HomePage() {
                     Story-Driven Delivery
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    You receive polished, professional imagery you're proud to put in front of anyone — delivered within 24-48 hours for photos, 2-4 weeks for video — ready for your website, LinkedIn, and every marketing touchpoint.
+                    You receive polished, professional imagery you're proud to put in front of anyone — same-day delivery for on-site team headshots, within 48 hours for studio sessions, 2-4 weeks for video — ready for your website, LinkedIn, and every marketing touchpoint.
                   </p>
                 </div>
               </SectionReveal>
@@ -345,7 +345,7 @@ export default function HomePage() {
                     We bring the complete studio — lighting, backdrop, and direction — to your office, firm, or facility anywhere in the Central Valley. Your whole team photographed in one visit, without anyone leaving the building.
                   </p>
                   <ul className="space-y-3 text-[var(--color-text-body)] mb-8">
-                    {['Full studio setup at your office', 'A consistent, on-brand look across the entire team', 'Galleries delivered within 24 hours'].map((item) => (
+                    {['Full studio setup at your office', 'A consistent, on-brand look across the entire team', 'Galleries delivered the same day'].map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <span className="text-[var(--color-primary)] font-bold mt-0.5" aria-hidden="true">✓</span>
                         <span>{item}</span>
@@ -816,7 +816,7 @@ export default function HomePage() {
             },
             {
               question: 'How quickly will I receive my photos?',
-              answer: 'Studio headshot sessions are delivered to a private online gallery within 48 hours. On-site team photography typically delivers within 24 hours. For corporate events with SpotMyPhotos live delivery (full-day bookings), guests can access their photos in real time during the event.',
+              answer: 'Studio headshot sessions are delivered to a private online gallery within 48 hours. On-site team photography is delivered the same day. For corporate events with SpotMyPhotos live delivery (full-day bookings), guests can access their photos in real time during the event.',
             },
             {
               question: 'What should I wear to a headshot session?',

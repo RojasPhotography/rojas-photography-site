@@ -12,7 +12,7 @@ export const serviceDefinitions = {
   onsitePhotography: {
     term: 'On-Site Corporate Photography',
     definition: `On-site corporate photography is professional headshot and team photography services delivered at your office, school, or business location. We bring our complete studio setup—professional lighting, cameras, and backdrops—to photograph your team without disrupting workflow. This service is ideal for organizations with 10+ employees.`,
-    context: `On-site approach saves travel time and keeps your team in their familiar environment. Most organizations photograph 20-30+ people per day with turnaround in 24 hours.`,
+    context: `On-site approach saves travel time and keeps your team in their familiar environment. Most organizations photograph 20-30+ people per day with same-day turnaround.`,
   },
   commercialPhotography: {
     term: 'Commercial Photography',
@@ -63,7 +63,7 @@ export const comparisons = {
       {
         feature: 'Turnaround',
         option1: '48 hours',
-        option2: '24 hours',
+        option2: 'Same day',
       },
     ],
   },
@@ -137,7 +137,7 @@ export const statistics = {
   eventPhotos8Hour: '600-800+',
   eventPhotoTurnaround: '24-48 hours',
   headphotoTurnaround: '48 hours',
-  onSiteTurnaround: '24 hours',
+  onSiteTurnaround: 'Same day',
   videoProductionTimeline: '2-4 weeks',
   videoEngagementLift: '80%',
   videoConversionLift: '47%',

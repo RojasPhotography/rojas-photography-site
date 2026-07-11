@@ -124,7 +124,7 @@ export default function HowLongHeadshotSessionPage() {
               <SectionReveal>
                 <div className="mt-8 bg-white rounded-xl p-7 border border-gray-100 text-center">
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    <strong className="text-[var(--color-text-dark)]">On-site team delivery:</strong> Edited images from on-site team sessions are delivered within 24 hours — faster than individual studio sessions — because team sessions are optimized for volume.{' '}
+                    <strong className="text-[var(--color-text-dark)]">On-site team delivery:</strong> Edited images from on-site team sessions are delivered the same day — faster than individual studio sessions — because team sessions are optimized for volume.{' '}
                     <Link href="/on-site-photography" className="text-[var(--color-primary)] underline">Learn more about on-site team photography.</Link>
                   </p>
                 </div>

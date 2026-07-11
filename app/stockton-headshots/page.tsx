@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: 'Do you photograph Stockton corporate teams and events?',
-    answer: 'Yes. We serve Stockton businesses across healthcare, legal, financial services, and corporate teams throughout San Joaquin County. On-site sessions bring our complete studio setup to your Stockton location so your full team gets consistent, polished headshots without disrupting the workday. Team photos delivered within 24 hours.',
+    answer: 'Yes. We serve Stockton businesses across healthcare, legal, financial services, and corporate teams throughout San Joaquin County. On-site sessions bring our complete studio setup to your Stockton location so your full team gets consistent, polished headshots without disrupting the workday. Team photos delivered the same day.',
   },
   {
     question: 'How long does a headshot session take?',
