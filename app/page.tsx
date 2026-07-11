@@ -45,25 +45,37 @@ const otherServices = [
     href: '/headshot-booth',
     name: 'Headshot Booth for Events',
     icon: Aperture,
-    desc: 'A professional headshot station at your conference, expo, or office — high-volume and fast-moving, so every attendee walks away with a photo they’re proud to use.',
+    img: '/images/kaiser-bts-headshots1.jpeg',
+    pos: '50% 30%',
+    alt: 'Headshot booth session at a Kaiser corporate event — high-volume event headshots by Rojas Photography',
+    desc: 'High-volume headshot stations for conferences, expos, and company events.',
   },
   {
     href: '/event-photography',
     name: 'Corporate Event Photography',
     icon: Calendar,
-    desc: 'Full coverage of conferences, galas, and company events across the Central Valley — the moments, connections, and culture that tell your event’s story.',
+    img: '/images/CLA AM 25 335.jpg',
+    pos: '40% 50%',
+    alt: 'Corporate event photography at the California Lawyers Association annual meeting — Central Valley event coverage',
+    desc: 'Conferences, galas, and company events across the Central Valley.',
   },
   {
     href: '/commercial',
     name: 'Commercial Photography',
     icon: Briefcase,
-    desc: 'Brand imagery for your website and marketing — products, spaces, and people, photographed to communicate your values authentically.',
+    img: '/images/DoctorOffice 4.jpg',
+    pos: '50% 25%',
+    alt: 'Commercial photography of a Modesto medical office — brand imagery by Rojas Photography',
+    desc: 'Brand imagery for your website and marketing — products, spaces, and people.',
   },
   {
     href: '/video',
     name: 'Video Production',
     icon: Video,
-    desc: 'Brand stories, testimonials, culture videos, and FAA-certified aerial footage that connects emotionally — authentic, not scripted.',
+    img: '/images/BBSI-Corp-Video.jpg',
+    pos: '50% 30%',
+    alt: 'Corporate video production shoot for BBSI — professional business videography in the Central Valley',
+    desc: 'Brand stories, testimonials, and FAA-certified aerial footage.',
   },
 ];
 
@@ -514,8 +526,8 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Beyond Headshots — other services, deliberately low-key */}
-        <section className="py-16 md:py-20 px-8 bg-white border-t border-gray-100">
+        {/* Beyond Headshots — other services, photo-led but compact */}
+        <section id="beyond-headshots" className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-12">
@@ -527,19 +539,31 @@ export default function HomePage() {
                 </p>
               </div>
             </SectionReveal>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {otherServices.map((s) => (
                 <SectionReveal key={s.href}>
                   <Link
                     href={s.href}
-                    className="block group h-full border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-[var(--color-primary)] transition-all"
+                    aria-label={`Learn more about ${s.name}`}
+                    className="group relative block h-[320px] rounded-xl overflow-hidden hover:shadow-2xl transition-all"
                   >
-                    <s.icon className="text-[var(--color-primary)] mb-4" size={26} />
-                    <h3 className="text-lg font-bold text-[var(--color-text-dark)] mb-2">{s.name}</h3>
-                    <p className="text-sm text-[var(--color-text-body)] leading-relaxed mb-4">{s.desc}</p>
-                    <span className="text-[var(--color-primary)] text-sm font-semibold group-hover:underline">
-                      Learn More →
-                    </span>
+                    <Image
+                      src={s.img}
+                      alt={s.alt}
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      style={{ objectPosition: s.pos }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-black/15 via-black/45 to-black/85" />
+                    <div className="absolute inset-0 p-6 flex flex-col justify-end">
+                      <s.icon className="text-white/90 mb-3" size={22} aria-hidden="true" />
+                      <h3 className="text-xl font-bold text-white mb-2">{s.name}</h3>
+                      <p className="text-white/85 text-sm leading-snug mb-3">{s.desc}</p>
+                      <span className="text-white text-sm font-semibold group-hover:underline">
+                        Learn More →
+                      </span>
+                    </div>
                   </Link>
                 </SectionReveal>
               ))}
