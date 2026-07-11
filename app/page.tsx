@@ -225,10 +225,10 @@ export default function HomePage() {
                     1
                   </div>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
-                    Discovery & Story Development
+                    Book in Minutes — or Start a Conversation
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    We start with a real conversation about your organization — your values, your people, your story. We need to understand what you need your imagery to communicate before we pick up a camera.
+                    Studio sessions book online in minutes — pick a time and you&apos;re set. For teams and custom projects, we start with a real conversation about your organization, so we understand what your imagery needs to communicate before we pick up a camera.
                   </p>
                 </div>
               </SectionReveal>
@@ -272,10 +272,10 @@ export default function HomePage() {
                 You&apos;ve worked too hard to be undersold by a photo.
               </p>
               <Link
-                href="/discovery-call"
+                href="/premium-headshots#booking-heading"
                 className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
               >
-                Book Your Discovery Call
+                Book a Studio Session
               </Link>
             </SectionReveal>
           </div>
@@ -322,7 +322,7 @@ export default function HomePage() {
                     Your gallery is delivered within 48 hours, and you only pay for the images you love.
                   </p>
                   <Link
-                    href="/premium-headshots"
+                    href="/premium-headshots#booking-heading"
                     className="btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-block"
                   >
                     Book a Studio Headshot Session →
@@ -544,6 +544,19 @@ export default function HomePage() {
                 </SectionReveal>
               ))}
             </div>
+            <SectionReveal>
+              <div className="mt-12 text-center">
+                <p className="text-[var(--color-text-body)] mb-5">
+                  Not sure where to start? Larger and custom projects — team headshot days, commercial shoots, video — begin with a free, zero-pressure conversation.
+                </p>
+                <Link
+                  href="/discovery-call"
+                  className="btn-outline px-8 py-3 font-semibold rounded-full inline-block"
+                >
+                  Book a Free Discovery Call
+                </Link>
+              </div>
+            </SectionReveal>
           </div>
         </section>
 
@@ -574,17 +587,17 @@ export default function HomePage() {
           <div className="max-w-3xl mx-auto text-center">
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Tell Your Story Visually?
+                Ready for a Headshot You&apos;re Proud Of?
               </h2>
               <p className="text-lg mb-8 text-white/90">
-                Schedule a free discovery call. We'll discuss your goals, show you examples of our work, and put together a custom plan. Zero pressure. Zero obligation.
+                Studio sessions book online in minutes — pick your time and you're set. Prefer to talk it through first? Call us directly and we'll point you to the right session.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/discovery-call"
+                  href="/premium-headshots#booking-heading"
                   className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Book Your Discovery Call
+                  Book Your Session
                 </Link>
                 <a
                   href="tel:2093803727"
@@ -669,13 +682,13 @@ export default function HomePage() {
                 Your Story Deserves to Be Told Authentically
               </h2>
               <p className="text-[var(--color-text-body)] mb-6">
-                Join hundreds of Central Valley professionals who've trusted us to tell their story visually. Your authentic narrative is one conversation away.
+                Join hundreds of Central Valley professionals who've trusted us to tell their story visually. Your session is a few clicks away.
               </p>
               <Link
-                href="/discovery-call"
+                href="/premium-headshots#booking-heading"
                 className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block"
               >
-                Book Your Discovery Call
+                Book Your Session
               </Link>
             </SectionReveal>
           </div>
@@ -814,7 +827,11 @@ export default function HomePage() {
         />
 
         {/* CTA + Contact */}
-        <CTASection primaryLabel="Book Your Discovery Call" />
+        <CTASection
+          primaryHref="/premium-headshots#booking-heading"
+          primaryLabel="Book a Studio Session"
+          subheading="Studio sessions book online in minutes. For team headshot days and custom projects, call us or start with a free discovery call."
+        />
       </main>
       </div>
     </>
