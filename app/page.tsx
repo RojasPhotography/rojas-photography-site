@@ -131,11 +131,12 @@ export default function HomePage() {
             Corporate Headshots · Modesto &amp; the Central Valley
           </p>
           <h1 className="hero-rise text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-[-0.01em] max-w-[17ch]" style={{ animationDelay: '0.22s' }}>
-            The headshot your reputation has been waiting for.
+            The headshot your reputation deserves.
           </h1>
           <p className="hero-rise text-lg md:text-xl max-w-2xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.38s' }}>
-            We&rsquo;re Alfonso and Niomi Rojas. We photograph the executives, attorneys, and teams of the
-            Central Valley — in our Modesto studio, or on location at your office.
+            Most professionals are quietly undersold by their photo. In one session — in our Modesto
+            studio or on location at your office — you&rsquo;ll have a headshot that matches the
+            reputation you&rsquo;ve built.
           </p>
           <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
             <Link

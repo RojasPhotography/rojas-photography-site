@@ -200,14 +200,16 @@ a:focus-visible, button:focus-visible {
   position: absolute;
   bottom: -4px;
   left: 0;
-  width: 0;
+  width: 100%;
   height: 2px;
   background: var(--color-primary);
-  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .nav-link:hover::after {
-  width: 100%;
+  transform: scaleX(1);
 }
 
 /* Smooth touch feedback */
