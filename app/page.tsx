@@ -126,18 +126,18 @@ export default function HomePage() {
           aria-hidden="true"
           style={{ background: 'linear-gradient(0deg, rgba(15,46,30,.8) 4%, rgba(15,46,30,.35) 24%, transparent 48%)' }}
         />
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-8 pb-16 md:pb-24 pt-24 text-white">
-          <p className="text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.2em] mb-6 uppercase">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-8 pb-14 md:pb-20 pt-24 text-white">
+          <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase" style={{ animationDelay: '0.1s' }}>
             Corporate Headshots · Modesto &amp; the Central Valley
           </p>
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] max-w-[17ch]">
+          <h1 className="hero-rise text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-[-0.01em] max-w-[17ch]" style={{ animationDelay: '0.22s' }}>
             The headshot your reputation has been waiting for.
           </h1>
-          <p className="text-lg md:text-xl max-w-2xl leading-relaxed text-white/90 mb-10">
+          <p className="hero-rise text-lg md:text-xl max-w-2xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.38s' }}>
             We&rsquo;re Alfonso and Niomi Rojas. We photograph the executives, attorneys, and teams of the
             Central Valley — in our Modesto studio, or on location at your office.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
             <Link
               href="/premium-headshots"
               className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
@@ -151,7 +151,7 @@ export default function HomePage() {
               Headshot Day for Your Team →
             </Link>
           </div>
-          <div className="mt-10 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70">
+          <div className="hero-rise mt-12 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.68s' }}>
             <span>500+ executives photographed</span>
             <span className="text-[var(--color-primary-light)]" aria-hidden="true">★</span>
             <span>60+ five-star Google reviews</span>
@@ -221,7 +221,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8">
               <SectionReveal>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                  <div className="w-16 h-16 bg-[var(--color-primary)] ring-8 ring-[var(--color-primary-light)]/60 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl" style={{ fontFamily: 'var(--font-heading)' }}>
                     1
                   </div>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
@@ -235,7 +235,7 @@ export default function HomePage() {
 
               <SectionReveal>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                  <div className="w-16 h-16 bg-[var(--color-primary)] ring-8 ring-[var(--color-primary-light)]/60 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl" style={{ fontFamily: 'var(--font-heading)' }}>
                     2
                   </div>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
@@ -249,7 +249,7 @@ export default function HomePage() {
 
               <SectionReveal>
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
+                  <div className="w-16 h-16 bg-[var(--color-primary)] ring-8 ring-[var(--color-primary-light)]/60 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl" style={{ fontFamily: 'var(--font-heading)' }}>
                     3
                   </div>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
@@ -265,7 +265,10 @@ export default function HomePage() {
         </section>
 
         {/* Urgent CTA Before Services - Early Conversion Opportunity */}
-        <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
+        <section
+          className="py-12 px-8 text-center"
+          style={{ background: 'radial-gradient(90% 140% at 50% -30%, rgba(255,255,255,.1), transparent 60%), linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 80%)' }}
+        >
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
               <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
@@ -286,6 +289,9 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
+                <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">
+                  Our Headshot Services
+                </p>
                 <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
                   Professional Headshots in Modesto — Two Ways
                 </h2>
@@ -298,7 +304,7 @@ export default function HomePage() {
             {/* Lane 1 — Studio */}
             <SectionReveal>
               <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mb-16 md:mb-24">
-                <Link href="/premium-headshots" className="block group rounded-xl overflow-hidden relative aspect-[4/3] hover:shadow-2xl transition-all">
+                <Link href="/premium-headshots" className="block group rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5 hover:shadow-2xl transition-all">
                   <Image
                     src="/images/headshots/headshot-attorney-02.jpg"
                     alt="Professional studio headshot of an attorney at the Rojas Photography studio in Modesto"
@@ -359,7 +365,7 @@ export default function HomePage() {
                     Plan a Headshot Day for Your Team →
                   </Link>
                 </div>
-                <Link href="/on-site-photography" className="md:order-2 order-1 block group rounded-xl overflow-hidden relative aspect-[4/3] hover:shadow-2xl transition-all">
+                <Link href="/on-site-photography" className="md:order-2 order-1 block group rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5 hover:shadow-2xl transition-all">
                   <Image
                     src="/images/Kaiser BTS Headshots.png"
                     alt="On-location corporate team headshot day at a Kaiser office in the Central Valley"
@@ -379,6 +385,9 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
+                <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">
+                  The Rojas Look
+                </p>
                 <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
                   Our Work
                 </h2>
@@ -519,6 +528,9 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-12">
+                <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">
+                  More From the Studio
+                </p>
                 <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-3">
                   Beyond Headshots
                 </h2>
@@ -592,7 +604,10 @@ export default function HomePage() {
         </section>
 
         {/* Discovery Call CTA #1 - After Portfolio - SB7: Call to Action */}
-        <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
+        <section
+          className="py-16 px-8 text-white"
+          style={{ background: 'radial-gradient(90% 140% at 50% -30%, rgba(255,255,255,.1), transparent 60%), linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 80%)' }}
+        >
           <div className="max-w-3xl mx-auto text-center">
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -624,12 +639,12 @@ export default function HomePage() {
           <section className="py-12 px-8 bg-[var(--color-bg-warm)] border-y border-gray-100">
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
               <div>
-                <p className="text-3xl font-bold text-[var(--color-primary)]">500+</p>
+                <p className="text-3xl font-bold text-[var(--color-primary)]" style={{ fontFamily: 'var(--font-heading)' }}>500+</p>
                 <p className="text-sm text-[var(--color-text-muted)]">Professionals Photographed</p>
               </div>
               <div className="hidden md:block w-px h-10 bg-gray-200" />
               <div>
-                <p className="text-3xl font-bold text-[var(--color-primary)]">60+</p>
+                <p className="text-3xl font-bold text-[var(--color-primary)]" style={{ fontFamily: 'var(--font-heading)' }}>60+</p>
                 <p className="text-sm text-[var(--color-text-muted)]">Five-Star Reviews</p>
               </div>
               <div className="hidden md:block w-px h-10 bg-gray-200" />
@@ -648,6 +663,9 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
+                <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">
+                  Client Stories
+                </p>
                 <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
                   Imagine Sharing Imagery You&apos;re Actually Proud Of
                 </h2>
@@ -720,7 +738,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-4 gap-8">
               <SectionReveal>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">15+</div>
+                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>15+</div>
                   <p className="text-[var(--color-text-dark)] font-semibold mb-2">Years Experience</p>
                   <p className="text-sm text-[var(--color-text-body)]">Corporate leadership background</p>
                 </div>
@@ -728,7 +746,7 @@ export default function HomePage() {
 
               <SectionReveal>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">500+</div>
+                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>500+</div>
                   <p className="text-[var(--color-text-dark)] font-semibold mb-2">Professionals Photographed</p>
                   <p className="text-sm text-[var(--color-text-body)]">CEOs, attorneys, business leaders</p>
                 </div>
@@ -736,7 +754,7 @@ export default function HomePage() {
 
               <SectionReveal>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">60+</div>
+                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>60+</div>
                   <p className="text-[var(--color-text-dark)] font-semibold mb-2">Five-Star Reviews</p>
                   <p className="text-sm text-[var(--color-text-body)]">Proven client satisfaction</p>
                 </div>
@@ -744,7 +762,7 @@ export default function HomePage() {
 
               <SectionReveal>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2">FAA</div>
+                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>FAA</div>
                   <p className="text-[var(--color-text-dark)] font-semibold mb-2">Part 107 Certified</p>
                   <p className="text-sm text-[var(--color-text-body)]">Licensed drone operator</p>
                 </div>
@@ -778,6 +796,9 @@ export default function HomePage() {
               </SectionReveal>
               <SectionReveal>
                 <div>
+                  <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">
+                    The Photographers
+                  </p>
                   <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
                     Meet Alfonso & Niomi
                   </h2>
