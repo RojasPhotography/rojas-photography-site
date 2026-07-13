@@ -179,7 +179,7 @@ export default function StudentHeadshotsPage() {
                     'Real-time posing & expression coaching',
                     'Unlimited wardrobe changes',
                     'Professional editing & color correction',
-                    '48-hour delivery to private gallery',
+                    '48-hour delivery to your inbox',
                   ].map(item => (
                     <div key={item} className="flex gap-2 text-sm text-[var(--color-text-body)]">
                       <CheckCircle2 size={15} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />

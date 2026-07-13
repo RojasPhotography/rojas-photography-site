@@ -244,7 +244,7 @@ export default function LinkedInHeadshotsPage() {
                   {
                     step: '03',
                     title: '48-Hour Delivery',
-                    desc: 'Your professionally edited selections arrive in a private online gallery within 48 hours — ready to upload to LinkedIn, your website, your bio, and anywhere else your name appears.',
+                    desc: 'Your professionally edited selections arrive in your inbox within 48 hours — ready to upload to LinkedIn, your website, your bio, and anywhere else your name appears.',
                   },
                 ].map((item) => (
                   <SectionReveal key={item.step}>

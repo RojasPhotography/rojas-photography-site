@@ -18,7 +18,7 @@ const faqs = [
   {
     question: 'What is included in a professional headshot session?',
     answer:
-      'A professional headshot session should include: pre-session consultation, professional studio lighting, real-time posing and expression coaching, unlimited wardrobe changes, immediate image review, professional editing and color correction, and delivery via a private online gallery. At Rojas Photography, all of this is included with every session — delivered within 48 hours.',
+      'A professional headshot session should include: pre-session consultation, professional studio lighting, real-time posing and expression coaching, unlimited wardrobe changes, immediate image review, professional editing and color correction, and delivery straight to your inbox. At Rojas Photography, all of this is included with every session — delivered within 48 hours.',
   },
   {
     question: 'Is it better to pay per image or buy a package?',
@@ -88,7 +88,7 @@ const pricingOptions = [
       'Real-time posing & expression coaching',
       'Unlimited wardrobe changes',
       'Professional editing & color correction',
-      '48-hour delivery to private gallery',
+      '48-hour delivery to your inbox',
       'No minimum image purchase',
     ],
     note: 'For executives, attorneys, healthcare professionals, financial advisors, real estate agents, and business owners.',

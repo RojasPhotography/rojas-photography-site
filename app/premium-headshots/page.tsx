@@ -17,7 +17,7 @@ const faqs = [
   {
     question: 'How much do professional headshots cost in Modesto?',
     answer:
-      'Rojas Photography professional headshot sessions are priced at $150 for the session fee, plus $150 per image you select. This transparent, flexible pricing means you only pay for the photos you love with no package minimums or surprise costs. All images are professionally edited and delivered within 48 hours via online private gallery, ready for LinkedIn, your website, and business marketing materials.',
+      'Rojas Photography professional headshot sessions are priced at $150 for the session fee, plus $150 per image you select. This transparent, flexible pricing means you only pay for the photos you love with no package minimums or surprise costs. You choose and purchase your favorites in the studio; your professionally edited images arrive in your inbox within 48 hours, ready for LinkedIn, your website, and business marketing materials.',
   },
   {
     question: 'What should I wear for corporate headshot photos?',

@@ -312,7 +312,7 @@ export default function ModestoHeadshotsPage() {
                   {
                     step: '03',
                     title: 'Receive Your Images in 48 Hours',
-                    desc: 'Professionally edited, color-corrected images delivered to a private online gallery within 48 hours. Select only the images you love — $150 per image, no minimum purchase required.',
+                    desc: 'You select and purchase your favorite images with us in the studio — $150 per image, no minimum. Professionally edited, color-corrected finals delivered to your inbox within 48 hours.',
                   },
                 ].map((item) => (
                   <SectionReveal key={item.step}>

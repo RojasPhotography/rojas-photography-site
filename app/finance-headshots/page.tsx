@@ -106,7 +106,7 @@ const sessionIncludes = [
   'Unlimited wardrobe changes — bring multiple options',
   'Images reviewed together before you leave the session',
   'Professional retouching on all selected images',
-  '48-hour delivery to a private online gallery',
+  '48-hour delivery to your inbox',
   'High-resolution files ready for firm bio, broker-dealer directory, and LinkedIn',
   'Compliance-ready formats available on request',
 ];
@@ -227,7 +227,7 @@ export default function FinanceHeadshotsPage() {
                     {[
                       'Pre-session consultation — discuss your clientele, your firm, and the platforms your photo will appear on (firm bio, broker-dealer directory, LinkedIn, marketing materials)',
                       'Coached studio session — expression guidance for the precise blend of trustworthiness and approachability that finance clients need to see',
-                      '48-hour delivery — edited images in your private gallery, ready for every directory and compliance requirement',
+                      '48-hour delivery — edited images in your inbox, ready for every directory and compliance requirement',
                     ].map((step, i) => (
                       <li key={i} className="flex gap-3 text-[var(--color-text-body)] leading-relaxed">
                         <span className="w-6 h-6 bg-[var(--color-primary)] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">

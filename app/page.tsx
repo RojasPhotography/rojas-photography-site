@@ -251,7 +251,7 @@ export default function HomePage() {
                     For executives, attorneys, and personal brands who need one photograph that carries their name. We guide you through every pose and expression — unlimited wardrobe changes, personal direction from both of us, and hand-finished retouching.
                   </p>
                   <p className="text-[var(--color-text-body)] leading-relaxed mb-8">
-                    Your gallery is delivered within 48 hours, and you only pay for the images you love.
+                    We review every image together in the studio — you choose and purchase your favorites before you leave, and the edited finals arrive in your inbox within 48 hours.
                   </p>
                   <Link
                     href="/premium-headshots#booking-heading"
@@ -570,7 +570,7 @@ export default function HomePage() {
                   Call 209-380-3727
                 </a>
               </div>
-              <p className="text-white/60 text-sm mt-5">In our Modesto studio · gallery within 48 hours · pay only for the images you keep</p>
+              <p className="text-white/60 text-sm mt-5">In our Modesto studio · pick your favorites before you leave · edited images in your inbox within 48 hours</p>
             </SectionReveal>
           </div>
         </section>
@@ -592,7 +592,7 @@ export default function HomePage() {
             },
             {
               question: 'How quickly will I receive my photos?',
-              answer: 'Studio headshot sessions are delivered to a private online gallery within 48 hours. On-site team photography is delivered the same day. For corporate events with SpotMyPhotos live delivery (full-day bookings), guests can access their photos in real time during the event.',
+              answer: 'For studio sessions, you review, choose, and purchase your favorite images with us before you leave; the edited finals arrive in your inbox within 48 hours. On-site team photography is delivered the same day. For corporate events with SpotMyPhotos live delivery (full-day bookings), guests can access their photos in real time during the event.',
             },
             {
               question: 'What should I wear to a headshot session?',
