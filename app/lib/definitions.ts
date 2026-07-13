@@ -52,7 +52,7 @@ export const comparisons = {
       },
       {
         feature: 'Duration',
-        option1: '30-45 minutes per person',
+        option1: 'Up to 3 hours per session',
         option2: 'Custom (typically 4-6 hours)',
       },
       {

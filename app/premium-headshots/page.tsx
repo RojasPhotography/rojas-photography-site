@@ -27,7 +27,7 @@ const faqs = [
   {
     question: 'How long does a professional headshot session take?',
     answer:
-      'Our guided sessions include unlimited coaching time. Most sessions run 60-90 minutes, though we can move faster if you need to get in and out quickly. During your session, we guide you through posing, expression, and styling in real-time. Your professionally edited images are delivered within 48 hours. For time-sensitive needs, we offer rush delivery (additional $75 fee) with 24-hour turnaround.',
+      'Our guided sessions include unlimited coaching time. Sessions can run up to 3 hours — no hard time limit, at your pace — though we can move faster if you need to get in and out quickly. During your session, we guide you through posing, expression, and styling in real-time. Your professionally edited images are delivered within 48 hours. For time-sensitive needs, we offer rush delivery (additional $75 fee) with 24-hour turnaround.',
   },
   {
     question: 'Do you provide makeup and styling for headshots?',

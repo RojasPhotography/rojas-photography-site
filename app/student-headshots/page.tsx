@@ -28,7 +28,7 @@ const faqs = [
   {
     question: 'How long does a student headshot session take?',
     answer:
-      'Sessions typically run 60–90 minutes, though we can move faster if needed. We guide you through posing and expression in real time — most students are surprised at how comfortable and natural the process feels. Your edited image is delivered within 48 hours.',
+      'Sessions can run up to 3 hours, though we can move faster if needed. We guide you through posing and expression in real time — most students are surprised at how comfortable and natural the process feels. Your edited image is delivered within 48 hours.',
   },
   {
     question: 'Do you offer ERAS headshots for medical students?',

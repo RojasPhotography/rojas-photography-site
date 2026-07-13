@@ -67,8 +67,8 @@ export default function HowLongHeadshotSessionPage() {
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
                 <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
-                  <p><strong className="text-[var(--color-text-dark)]">A professional headshot session takes 60–90 minutes for most individuals.</strong> This includes a brief consultation at the start, real-time expression and posing coaching throughout, multiple wardrobe changes, and a review of your best frames before you leave.</p>
-                  <p>At Rojas Photography, sessions are never rushed. 60–90 minutes is the standard for individual sessions and unlimited wardrobe changes are included — you are not working against a clock.</p>
+                  <p><strong className="text-[var(--color-text-dark)]">A professional headshot session at Rojas Photography can take up to 3 hours — unhurried, with no hard time limit.</strong> This includes a brief consultation at the start, real-time expression and posing coaching throughout, multiple wardrobe changes, and a review of your best frames before you leave.</p>
+                  <p>At Rojas Photography, sessions are never rushed. We block up to 3 hours for individual sessions and unlimited wardrobe changes are included — you are not working against a clock.</p>
                 </div>
               </SectionReveal>
             </div>
@@ -158,7 +158,7 @@ export default function HowLongHeadshotSessionPage() {
           </section>
 
           <FAQSection faqs={faqs} heading="Headshot Session Length — Frequently Asked Questions" />
-          <CTASection heading="Ready to Book Your Session?" subheading="60–90 minutes. $150 session. $150 per image. 48-hour delivery. Modesto, CA." primaryLabel="Book Your Session" primaryHref="/premium-headshots#booking-heading" showContactInfo={false} />
+          <CTASection heading="Ready to Book Your Session?" subheading="Up to 3 hours. $150 session. $150 per image. 48-hour delivery. Modesto, CA." primaryLabel="Book Your Session" primaryHref="/premium-headshots#booking-heading" showContactInfo={false} />
         </main>
       </div>
     </>

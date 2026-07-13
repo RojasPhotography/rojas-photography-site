@@ -38,7 +38,7 @@ const faqs = [
   {
     question: 'How long does a headshot session take?',
     answer:
-      'Sessions at Rojas Photography typically run 60–90 minutes, though we can move faster if needed. There is no hard time limit. Sessions include unlimited wardrobe changes and real-time coaching throughout. Your professionally edited images are delivered within 48 hours.',
+      'Sessions at Rojas Photography can run up to 3 hours — there is no hard time limit, and we can move faster if needed. Sessions include unlimited wardrobe changes and real-time coaching throughout. Your professionally edited images are delivered within 48 hours.',
   },
   {
     question: 'Can I get headshots for my entire team?',
