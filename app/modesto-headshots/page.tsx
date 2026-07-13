@@ -103,7 +103,7 @@ function generateModestoFAQSchema() {
         name: 'How long does a headshot session take in Modesto?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Most sessions run 60–90 minutes, though we can move faster if your schedule requires it. There is no hard time limit — we work at your pace. Sessions include unlimited wardrobe changes, real-time coaching on posing and expression, and immediate image review. Your professionally edited images are delivered within 48 hours.',
+          text: 'Sessions can run up to 3 hours — there is no hard time limit, and we work at your pace. We can move faster if your schedule requires it. Sessions include unlimited wardrobe changes, real-time coaching on posing and expression, and immediate image review. Your professionally edited images are delivered within 48 hours.',
         },
       },
       {
@@ -312,7 +312,7 @@ export default function ModestoHeadshotsPage() {
                   {
                     step: '03',
                     title: 'Receive Your Images in 48 Hours',
-                    desc: 'Professionally edited, color-corrected images delivered to a private online gallery within 48 hours. Select only the images you love — $150 per image, no minimum purchase required.',
+                    desc: 'You select and purchase your favorite images with us in the studio — $150 per image, no minimum. Professionally edited, color-corrected finals delivered to your inbox within 48 hours.',
                   },
                 ].map((item) => (
                   <SectionReveal key={item.step}>
@@ -633,7 +633,7 @@ export default function ModestoHeadshotsPage() {
               {
                 question: 'How long does a headshot session take?',
                 answer:
-                  'Most sessions run 60–90 minutes, though I can move faster if your schedule requires it. There is no hard time limit — I work at your pace. Sessions include unlimited wardrobe changes, real-time coaching on posing and expression, and immediate image review. Your professionally edited images are delivered within 48 hours.',
+                  'Sessions can run up to 3 hours — there is no hard time limit, and I work at your pace. I can move faster if your schedule requires it. Sessions include unlimited wardrobe changes, real-time coaching on posing and expression, and immediate image review. Your professionally edited images are delivered within 48 hours.',
               },
               {
                 question: 'Do you offer on-site headshot photography for Modesto businesses?',

@@ -310,7 +310,7 @@ export default function MercedHeadshotsPage() {
                   },
                   {
                     title: 'Fast Turnaround, Professional Results',
-                    desc: 'Most Merced clients receive professionally edited headshots within 48 hours. On-site team photography delivers in 24 hours. Professional imagery that builds credibility and trust, delivered when you need it for your website, LinkedIn, or marketing materials.',
+                    desc: 'Most Merced clients receive professionally edited headshots within 48 hours. On-site team photography delivers the same day. Professional imagery that builds credibility and trust, delivered when you need it for your website, LinkedIn, or marketing materials.',
                   },
                 ].map((item) => (
                   <SectionReveal key={item.title}>

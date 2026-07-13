@@ -13,7 +13,7 @@ const faqs = [
   {
     question: 'How does a headshot booth work at an event?',
     answer:
-      'I arrive before your event starts, set up a complete professional studio (lighting, backdrop, cameras), and your attendees flow through one at a time throughout the day. Each person gets a quick coached session — typically 5-10 minutes — and walks away with a professional headshot. All images are edited and delivered within 24 hours via a private online gallery.',
+      'I arrive before your event starts, set up a complete professional studio (lighting, backdrop, cameras), and your attendees flow through one at a time throughout the day. Each person gets a quick coached session — typically 5-10 minutes — and walks away with a professional headshot. All images are edited and delivered the same day via a private online gallery.',
   },
   {
     question: 'How many people can you photograph per hour?',
@@ -38,7 +38,7 @@ const faqs = [
   {
     question: 'Do attendees get to see and select their photos?',
     answer:
-      'For high-volume booth sessions, all images are edited and delivered to a shared gallery within 24 hours where attendees can download their photos. For smaller groups, on-site selection can be arranged — just let me know your preference when booking.',
+      'For high-volume booth sessions, all images are edited and delivered to a shared gallery the same day, where attendees can download their photos. For smaller groups, on-site selection can be arranged — just let me know your preference when booking.',
   },
 ];
 
@@ -195,7 +195,7 @@ export default function HeadshotBoothPage() {
                   <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">3</div>
                   <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">Everyone Gets Their Photo</h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    Attendees flow through, get coached quickly, and leave with confidence they got a great shot. Edited photos delivered within 24 hours via a shared online gallery.
+                    Attendees flow through, get coached quickly, and leave with confidence they got a great shot. Edited photos delivered the same day via a shared online gallery.
                   </p>
                 </div>
               </SectionReveal>
@@ -255,7 +255,7 @@ export default function HeadshotBoothPage() {
                 { title: 'Efficient Flow Management', desc: 'I keep things moving without rushing people. Attendees typically spend 5-10 minutes in the booth and leave confident they got a great shot.' },
                 { title: 'Consistent Results Across Your Group', desc: 'Same lighting, same backdrop, same quality from the first person to the last. Your team looks cohesive across every photo.' },
                 { title: 'Full Setup & Breakdown', desc: 'I arrive early, set up before your event starts, and break down completely when we\'re done. Zero logistics on your end.' },
-                { title: 'Delivered Within 24 Hours', desc: 'All edited photos delivered via a shared private gallery within 24 hours — attendees can download their images immediately for LinkedIn, directories, and marketing.' },
+                { title: 'Delivered Same Day', desc: 'All edited photos delivered via a shared private gallery the same day — attendees can download their images immediately for LinkedIn, directories, and marketing.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
                   <div className="flex gap-4">

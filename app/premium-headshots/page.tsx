@@ -17,7 +17,7 @@ const faqs = [
   {
     question: 'How much do professional headshots cost in Modesto?',
     answer:
-      'Rojas Photography professional headshot sessions are priced at $150 for the session fee, plus $150 per image you select. This transparent, flexible pricing means you only pay for the photos you love with no package minimums or surprise costs. All images are professionally edited and delivered within 48 hours via online private gallery, ready for LinkedIn, your website, and business marketing materials.',
+      'Rojas Photography professional headshot sessions are priced at $150 for the session fee, plus $150 per image you select. This transparent, flexible pricing means you only pay for the photos you love with no package minimums or surprise costs. You choose and purchase your favorites in the studio; your professionally edited images arrive in your inbox within 48 hours, ready for LinkedIn, your website, and business marketing materials.',
   },
   {
     question: 'What should I wear for corporate headshot photos?',
@@ -27,7 +27,7 @@ const faqs = [
   {
     question: 'How long does a professional headshot session take?',
     answer:
-      'Our guided sessions include unlimited coaching time. Most sessions run 60-90 minutes, though we can move faster if you need to get in and out quickly. During your session, we guide you through posing, expression, and styling in real-time. Your professionally edited images are delivered within 48 hours. For time-sensitive needs, we offer rush delivery (additional $75 fee) with 24-hour turnaround.',
+      'Our guided sessions include unlimited coaching time. Sessions can run up to 3 hours — no hard time limit, at your pace — though we can move faster if you need to get in and out quickly. During your session, we guide you through posing, expression, and styling in real-time. Your professionally edited images are delivered within 48 hours. For time-sensitive needs, we offer rush delivery (additional $75 fee) with 24-hour turnaround.',
   },
   {
     question: 'Do you provide makeup and styling for headshots?',
@@ -42,9 +42,9 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Professional Headshots Modesto CA | $150 Session | Rojas Photography',
+  title: 'Professional Headshots Modesto CA | Rojas Photography',
   description:
-    'Professional headshots Modesto • 48-hour delivery • Real-time posing coaching • 500+ Central Valley execs trust us • $150 session • Same-week slots → Book now',
+    'Guided professional headshots in our Modesto studio. Two photographers, real-time coaching, 48-hour delivery — the headshot your reputation deserves.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/premium-headshots',

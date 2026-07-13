@@ -310,7 +310,7 @@ export default function FresnoHeadshotsPage() {
                   },
                   {
                     title: 'Fast Turnaround for Central Valley\'s Largest City',
-                    desc: 'Fresno professionals work on demanding timelines. Most clients receive professionally edited headshots within 48 hours. On-site team photography delivers in 24 hours. New faculty directory? Hospital website update? Firm expansion? Agricultural business launch? I deliver professional imagery when you need it.',
+                    desc: 'Fresno professionals work on demanding timelines. Most clients receive professionally edited headshots within 48 hours. On-site team photography delivers the same day. New faculty directory? Hospital website update? Firm expansion? Agricultural business launch? I deliver professional imagery when you need it.',
                   },
                 ].map((item) => (
                   <SectionReveal key={item.title}>

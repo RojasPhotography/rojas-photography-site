@@ -10,7 +10,7 @@
 - **Owner:** Alfonso Rojas — Rojas Photography LLC, Modesto, CA
 
 ## The business
-Premium corporate photography & video studio serving Modesto / Central Valley, run by **Alfonso and Niomi Rojas** (they shoot together). Known clients: Save Mart, Comcast, CalPERS, California Lawyers Association, Kaiser, Tenet Health. Reputation: well known locally and intentionally **premium / expensive** — protect that positioning in every decision.
+Premium corporate photography & video studio serving Modesto / Central Valley, run by **Alfonso and Niomi Rojas** (they shoot together). Known clients: Save Mart, Comcast, California Lawyers Association, Kaiser, Tenet Health. (NOT CalPERS — bid submitted, never hired; never list them as a client.) Reputation: well known locally and intentionally **premium / expensive** — protect that positioning in every decision.
 
 ## Strategy we're building toward: the "Premium Barbell"
 The site currently sells one thing (premium individual headshots) to one audience. The business is really **two lanes**, and the site should reflect that:
@@ -31,7 +31,7 @@ Mid-tier guardrail: Express must always feel like a *different experience* (fast
 ## Homepage target structure (top → bottom)
 1. **Nav** — logo · Work · Signature · Teams & Events · About · Contact · "Book a session" (green button).
 2. **Hero** — image-led. Headline + **two CTAs:** "Book a Signature session" (primary) and "Headshot days for teams" (secondary). *This dual path is the #1 fix.*
-3. **Proof bar** — client logos (Save Mart, Comcast, CalPERS, CLA) + "500+ executives · 60+ ★ reviews."
+3. **Proof bar** — client logos (Save Mart, Comcast, Kaiser, CLA) + "500+ executives · 60+ ★ reviews."
 4. **Two lanes** — side-by-side cards: Signature (for the individual) vs Express (for teams & events). *The key missing section.*
 5. **What we do** — a curated **four** services (see below), each a descriptive link. Not all services.
 6. **Portfolio grid** — "The Rojas look."

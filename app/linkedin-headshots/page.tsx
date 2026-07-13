@@ -19,7 +19,7 @@ const faqs = [
   {
     question: 'How much does a LinkedIn headshot cost?',
     answer:
-      'At Rojas Photography, LinkedIn headshot sessions are $150, with images at $150 each. Most LinkedIn clients select 1–3 images — one primary profile photo and a couple of alternates for different platforms. There is no minimum purchase — you only pay for the images you love. Sessions run 60–90 minutes and images are delivered within 48 hours.',
+      'At Rojas Photography, LinkedIn headshot sessions are $150, with images at $150 each. Most LinkedIn clients select 1–3 images — one primary profile photo and a couple of alternates for different platforms. There is no minimum purchase — you only pay for the images you love. Sessions run up to 3 hours and images are delivered within 48 hours.',
   },
   {
     question: 'Should I smile in my LinkedIn photo?',
@@ -239,12 +239,12 @@ export default function LinkedInHeadshotsPage() {
                   {
                     step: '02',
                     title: 'Guided Session',
-                    desc: 'Arrive at our Modesto studio. We handle everything — lighting, posing, expression coaching, wardrobe changes. Sessions run 60–90 minutes. Before you leave, we review your images together and you select your favorites.',
+                    desc: 'Arrive at our Modesto studio. We handle everything — lighting, posing, expression coaching, wardrobe changes. Sessions run up to 3 hours. Before you leave, we review your images together and you select your favorites.',
                   },
                   {
                     step: '03',
                     title: '48-Hour Delivery',
-                    desc: 'Your professionally edited selections arrive in a private online gallery within 48 hours — ready to upload to LinkedIn, your website, your bio, and anywhere else your name appears.',
+                    desc: 'Your professionally edited selections arrive in your inbox within 48 hours — ready to upload to LinkedIn, your website, your bio, and anywhere else your name appears.',
                   },
                 ].map((item) => (
                   <SectionReveal key={item.step}>

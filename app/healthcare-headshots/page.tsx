@@ -140,7 +140,7 @@ const sessionIncludes = [
   'Guidance calibrated for clinical authority and human warmth',
   'Images reviewed together before you leave the session',
   'Professional retouching on all selected images',
-  '48-hour delivery to a private online gallery',
+  '48-hour delivery to your inbox',
   'High-resolution files ready for hospital directories, ZocDoc, Healthgrades, LinkedIn, and print',
 ];
 
@@ -275,7 +275,7 @@ export default function HealthcareHeadshotsPage() {
                         {[
                           'Pre-session consultation — we discuss your specialty, your clinical setting, and the patient audience you serve',
                           'Coached studio or on-site session — white coat guidance, expression coaching for warmth and competence, posture calibration',
-                          '48-hour delivery — edited images in your private gallery, ready for every directory and platform where you appear',
+                          '48-hour delivery — edited images in your inbox, ready for every directory and platform where you appear',
                         ].map((step, i) => (
                           <li key={i} className="flex gap-3 text-[var(--color-text-body)] text-sm leading-relaxed">
                             <span className="w-6 h-6 bg-[var(--color-primary)] text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 mt-0.5">

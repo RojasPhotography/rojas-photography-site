@@ -28,7 +28,7 @@ const faqs = [
   {
     question: 'How long does a student headshot session take?',
     answer:
-      'Sessions typically run 60–90 minutes, though we can move faster if needed. We guide you through posing and expression in real time — most students are surprised at how comfortable and natural the process feels. Your edited image is delivered within 48 hours.',
+      'Sessions can run up to 3 hours, though we can move faster if needed. We guide you through posing and expression in real time — most students are surprised at how comfortable and natural the process feels. Your edited image is delivered within 48 hours.',
   },
   {
     question: 'Do you offer ERAS headshots for medical students?',
@@ -43,9 +43,9 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Student Headshots Modesto CA | $150 Session & Image',
+  title: 'Student Headshots Modesto CA | Rojas Photography',
   description:
-    'Professional student headshots in Modesto, CA. $150 includes your session and one edited image. Perfect for LinkedIn, internships, ERAS & first jobs. Book today.',
+    'Professional student headshots in Modesto, CA — one guided session, one polished image. Perfect for LinkedIn, internships, ERAS & first jobs. Book today.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/student-headshots',
@@ -179,7 +179,7 @@ export default function StudentHeadshotsPage() {
                     'Real-time posing & expression coaching',
                     'Unlimited wardrobe changes',
                     'Professional editing & color correction',
-                    '48-hour delivery to private gallery',
+                    '48-hour delivery to your inbox',
                   ].map(item => (
                     <div key={item} className="flex gap-2 text-sm text-[var(--color-text-body)]">
                       <CheckCircle2 size={15} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />

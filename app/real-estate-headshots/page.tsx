@@ -96,7 +96,7 @@ const sessionIncludes = [
   'Multiple expressions and angles for different marketing uses',
   'Images reviewed together before you leave',
   'Professional retouching on all selected images',
-  '48-hour delivery to a private online gallery',
+  '48-hour delivery to your inbox',
   'Full commercial usage rights — yard signs, print, digital, social',
 ];
 
