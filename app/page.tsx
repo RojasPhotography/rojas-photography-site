@@ -130,7 +130,7 @@ export default function HomePage() {
           <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase" style={{ animationDelay: '0.1s' }}>
             Corporate Headshots · Modesto &amp; the Central Valley
           </p>
-          <h1 className="hero-rise text-4xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-[1.02] tracking-[-0.01em] max-w-[17ch]" style={{ animationDelay: '0.22s' }}>
+          <h1 className="hero-rise text-4xl sm:text-6xl lg:text-7xl mb-6 leading-[1.02] tracking-[-0.01em] max-w-[17ch]" style={{ animationDelay: '0.22s' }}>
             The headshot your reputation deserves.
           </h1>
           <p className="hero-rise text-lg md:text-xl max-w-2xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.38s' }}>
@@ -140,7 +140,7 @@ export default function HomePage() {
           </p>
           <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
             <Link
-              href="/premium-headshots"
+              href="/premium-headshots#booking-heading"
               className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
             >
               Book a Studio Session
@@ -154,9 +154,9 @@ export default function HomePage() {
           </div>
           <div className="hero-rise mt-12 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.68s' }}>
             <span>500+ executives photographed</span>
-            <span className="text-[var(--color-primary-light)]" aria-hidden="true">★</span>
+            <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
             <span>60+ five-star Google reviews</span>
-            <span className="text-[var(--color-primary-light)]" aria-hidden="true">★</span>
+            <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
             <span>Two photographers, every session</span>
           </div>
         </div>
@@ -166,7 +166,7 @@ export default function HomePage() {
       <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
         <div className="max-w-4xl mx-auto">
           <SectionReveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-8">
+            <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-8">
               Your Story Deserves More Than Generic Photography
             </h2>
             <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed">
@@ -190,7 +190,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto">
           <SectionReveal>
             <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
                 We Know What It Feels Like to Be Undersold
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
@@ -214,7 +214,7 @@ export default function HomePage() {
         <section className="py-20 md:py-28 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-5xl font-bold text-center text-[var(--color-text-dark)] mb-16">
+              <h2 className="text-3xl md:text-5xl text-center text-[var(--color-text-dark)] mb-16">
                 How We Work With You
               </h2>
             </SectionReveal>
@@ -225,7 +225,7 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-[var(--color-primary)] ring-8 ring-[var(--color-primary-light)]/60 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl" style={{ fontFamily: 'var(--font-heading)' }}>
                     1
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     Book in Minutes — or Start a Conversation
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
@@ -239,7 +239,7 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-[var(--color-primary)] ring-8 ring-[var(--color-primary-light)]/60 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl" style={{ fontFamily: 'var(--font-heading)' }}>
                     2
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     Collaborative Creation
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
@@ -253,7 +253,7 @@ export default function HomePage() {
                   <div className="w-16 h-16 bg-[var(--color-primary)] ring-8 ring-[var(--color-primary-light)]/60 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl" style={{ fontFamily: 'var(--font-heading)' }}>
                     3
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     Story-Driven Delivery
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
@@ -281,6 +281,7 @@ export default function HomePage() {
               >
                 Book a Studio Session
               </Link>
+              <p className="text-white/60 text-sm mt-4">In our Modesto studio · gallery within 48 hours · pay only for the images you keep</p>
             </SectionReveal>
           </div>
         </section>
@@ -290,10 +291,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
-                <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">
-                  Our Headshot Services
-                </p>
-                <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
                   Professional Headshots in Modesto — Two Ways
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
@@ -317,9 +315,9 @@ export default function HomePage() {
                 </Link>
                 <div>
                   <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.2em] uppercase mb-3">
-                    01 · In Our Modesto Studio
+                    In Our Modesto Studio
                   </p>
-                  <h3 className="text-2xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-5">
+                  <h3 className="text-2xl md:text-4xl text-[var(--color-text-dark)] mb-5">
                     Studio Headshots
                   </h3>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
@@ -332,7 +330,7 @@ export default function HomePage() {
                     href="/premium-headshots#booking-heading"
                     className="btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-block"
                   >
-                    Book a Studio Headshot Session →
+                    Book a Studio Session →
                   </Link>
                 </div>
               </div>
@@ -343,9 +341,9 @@ export default function HomePage() {
               <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
                 <div className="md:order-1 order-2">
                   <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.2em] uppercase mb-3">
-                    02 · We Come to You
+                    We Come to You
                   </p>
-                  <h3 className="text-2xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-5">
+                  <h3 className="text-2xl md:text-4xl text-[var(--color-text-dark)] mb-5">
                     On-Location Headshots
                   </h3>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
@@ -386,10 +384,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
-                <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">
-                  The Rojas Look
-                </p>
-                <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
                   Our Work
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
@@ -529,10 +524,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-12">
-                <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">
-                  More From the Studio
-                </p>
-                <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-3">
+                <h2 className="text-2xl md:text-3xl text-[var(--color-text-dark)] mb-3">
                   Beyond Headshots
                 </h2>
                 <p className="text-[var(--color-text-muted)] max-w-2xl mx-auto">
@@ -556,7 +548,7 @@ export default function HomePage() {
                       <s.icon className="text-[var(--color-primary-light)]" size={22} aria-hidden="true" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-2">{s.name}</h3>
+                      <h3 className="text-xl text-white mb-2">{s.name}</h3>
                       <p className="text-white/80 text-sm leading-snug mb-4">{s.desc}</p>
                       <span className="text-[var(--color-primary-light)] text-sm font-semibold group-hover:underline">
                         Learn More →
@@ -586,7 +578,7 @@ export default function HomePage() {
         <section className="py-16 px-8 bg-white border-y border-gray-100">
           <div className="max-w-4xl mx-auto text-center">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
                 Outdated Imagery Costs You More Than You Think
               </h2>
               <div className="text-lg text-[var(--color-text-body)] leading-relaxed space-y-4">
@@ -611,7 +603,7 @@ export default function HomePage() {
         >
           <div className="max-w-3xl mx-auto text-center">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl mb-4">
                 Ready for a Headshot You&apos;re Proud Of?
               </h2>
               <p className="text-lg mb-8 text-white/90">
@@ -622,7 +614,7 @@ export default function HomePage() {
                   href="/premium-headshots#booking-heading"
                   className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Book Your Session
+                  Book a Studio Session
                 </Link>
                 <a
                   href="tel:2093803727"
@@ -631,6 +623,7 @@ export default function HomePage() {
                   Call 209-380-3727
                 </a>
               </div>
+              <p className="text-white/60 text-sm mt-5">In our Modesto studio · gallery within 48 hours · pay only for the images you keep</p>
             </SectionReveal>
           </div>
         </section>
@@ -640,12 +633,12 @@ export default function HomePage() {
           <section className="py-12 px-8 bg-[var(--color-bg-warm)] border-y border-gray-100">
             <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
               <div>
-                <p className="text-3xl font-bold text-[var(--color-primary)]" style={{ fontFamily: 'var(--font-heading)' }}>500+</p>
+                <p className="text-3xl text-[var(--color-primary)]" style={{ fontFamily: 'var(--font-heading)' }}>500+</p>
                 <p className="text-sm text-[var(--color-text-muted)]">Professionals Photographed</p>
               </div>
               <div className="hidden md:block w-px h-10 bg-gray-200" />
               <div>
-                <p className="text-3xl font-bold text-[var(--color-primary)]" style={{ fontFamily: 'var(--font-heading)' }}>60+</p>
+                <p className="text-3xl text-[var(--color-primary)]" style={{ fontFamily: 'var(--font-heading)' }}>60+</p>
                 <p className="text-sm text-[var(--color-text-muted)]">Five-Star Reviews</p>
               </div>
               <div className="hidden md:block w-px h-10 bg-gray-200" />
@@ -664,10 +657,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
-                <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">
-                  Client Stories
-                </p>
-                <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
                   Imagine Sharing Imagery You&apos;re Actually Proud Of
                 </h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
@@ -706,7 +696,7 @@ export default function HomePage() {
         <section className="py-12 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-2xl mx-auto text-center">
             <SectionReveal>
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-4">
+              <h2 className="text-2xl md:text-3xl text-[var(--color-text-dark)] mb-4">
                 Your Story Deserves to Be Told Authentically
               </h2>
               <p className="text-[var(--color-text-body)] mb-6">
@@ -716,7 +706,7 @@ export default function HomePage() {
                 href="/premium-headshots#booking-heading"
                 className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block"
               >
-                Book Your Session
+                Book a Studio Session
               </Link>
             </SectionReveal>
           </div>
@@ -727,7 +717,7 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">
                   Trusted by Central Valley Businesses
                 </h2>
                 <p className="text-lg text-[var(--color-text-muted)]">
@@ -739,7 +729,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-4 gap-8">
               <SectionReveal>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>15+</div>
+                  <div className="text-4xl text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>15+</div>
                   <p className="text-[var(--color-text-dark)] font-semibold mb-2">Years Experience</p>
                   <p className="text-sm text-[var(--color-text-body)]">Corporate leadership background</p>
                 </div>
@@ -747,7 +737,7 @@ export default function HomePage() {
 
               <SectionReveal>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>500+</div>
+                  <div className="text-4xl text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>500+</div>
                   <p className="text-[var(--color-text-dark)] font-semibold mb-2">Professionals Photographed</p>
                   <p className="text-sm text-[var(--color-text-body)]">CEOs, attorneys, business leaders</p>
                 </div>
@@ -755,7 +745,7 @@ export default function HomePage() {
 
               <SectionReveal>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>60+</div>
+                  <div className="text-4xl text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>60+</div>
                   <p className="text-[var(--color-text-dark)] font-semibold mb-2">Five-Star Reviews</p>
                   <p className="text-sm text-[var(--color-text-body)]">Proven client satisfaction</p>
                 </div>
@@ -763,7 +753,7 @@ export default function HomePage() {
 
               <SectionReveal>
                 <div className="text-center">
-                  <div className="text-4xl font-bold text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>FAA</div>
+                  <div className="text-4xl text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>FAA</div>
                   <p className="text-[var(--color-text-dark)] font-semibold mb-2">Part 107 Certified</p>
                   <p className="text-sm text-[var(--color-text-body)]">Licensed drone operator</p>
                 </div>
@@ -797,10 +787,7 @@ export default function HomePage() {
               </SectionReveal>
               <SectionReveal>
                 <div>
-                  <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">
-                    The Photographers
-                  </p>
-                  <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
+                  <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
                     Meet Alfonso & Niomi
                   </h2>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">

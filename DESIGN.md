@@ -144,7 +144,7 @@ Flat at rest. Depth exists for exactly two reasons: a *state response* (cards an
 ### Shadow Vocabulary
 - **Gallery frame** (`box-shadow: shadow-xl` + `ring-1 ring-black/5`): Featured lane portraits at rest — a mounted print, not a floating card.
 - **Hover lift** (`shadow-2xl`, often with `translateY(-4px)`): The only motion-shadow. Applied to interactive cards on hover.
-- **Green glow** (`0 12px 32px rgba(26, 92, 60, 0.12)`): Service-card hover — the shadow is tinted with the brand green, never plain black.
+- **Green glow** (`0 12px 32px rgba(31, 107, 77, 0.12)`): Service-card hover — the shadow is tinted with the brand green, never plain black.
 
 ### Named Rules
 **The Flat-at-Rest Rule.** If an element casts a shadow while nobody is interacting with it, it must be a photograph. Everything else earns depth through hover.

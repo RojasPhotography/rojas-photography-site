@@ -22,7 +22,7 @@
     "shadows": [
       { "name": "gallery-frame", "value": "0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1)", "purpose": "Featured lane portraits at rest — a mounted print. Pairs with a 1px black/5 ring." },
       { "name": "hover-lift", "value": "0 25px 50px -12px rgba(0,0,0,0.25)", "purpose": "Interactive cards on hover, usually with translateY(-4px). The only motion-shadow." },
-      { "name": "green-glow", "value": "0 12px 32px rgba(26, 92, 60, 0.12)", "purpose": "Service-card hover; brand-tinted, never plain black." }
+      { "name": "green-glow", "value": "0 12px 32px rgba(31, 107, 77, 0.12)", "purpose": "Service-card hover; brand-tinted, never plain black." }
     ],
     "motion": [
       { "name": "ease-settle", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Default easing for reveals and entrances — settles, never bounces." },

@@ -21,7 +21,7 @@ export default function FAQSection({ faqs, heading = 'Frequently Asked Questions
     <section className="py-20 px-8 bg-white">
       <div className="max-w-4xl mx-auto">
         <SectionReveal>
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+          <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">
             {heading}
           </h2>
         </SectionReveal>

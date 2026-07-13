@@ -21,7 +21,7 @@ export default function Footer() {
 
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           <div>
-            <h4 className="text-white font-bold text-lg mb-6 font-[family-name:var(--font-heading)]">
+            <h4 className="text-white text-lg mb-6 font-[family-name:var(--font-heading)]">
               ROJAS PHOTOGRAPHY
             </h4>
             <p className="text-sm leading-relaxed">
@@ -30,7 +30,7 @@ export default function Footer() {
             </p>
           </div>
           <nav>
-            <h4 className="text-white font-bold text-sm mb-6 tracking-wider">
+            <h4 className="text-white text-sm mb-6 tracking-wider">
               SERVICES
             </h4>
             <ul className="text-sm space-y-3">
@@ -77,7 +77,7 @@ export default function Footer() {
             </ul>
           </nav>
           <nav>
-            <h4 className="text-white font-bold text-sm mb-6 tracking-wider">
+            <h4 className="text-white text-sm mb-6 tracking-wider">
               LOCATIONS
             </h4>
             <ul className="text-sm space-y-3">
@@ -90,7 +90,7 @@ export default function Footer() {
             </ul>
           </nav>
           <div>
-            <h4 className="text-white font-bold text-sm mb-6 tracking-wider">
+            <h4 className="text-white text-sm mb-6 tracking-wider">
               CONTACT
             </h4>
             <p className="text-sm mb-2">

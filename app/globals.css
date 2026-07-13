@@ -113,7 +113,7 @@ a:focus-visible, button:focus-visible {
 }
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(26, 92, 60, 0.12);
+  box-shadow: 0 12px 32px rgba(31, 107, 77, 0.12);
 }
 
 /* Smooth image hover zoom */

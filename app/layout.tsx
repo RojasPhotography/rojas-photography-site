@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import SchemaScript from "./components/SchemaScript";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import MicrosoftClarity from "./components/MicrosoftClarity";
-import NewsletterSlideIn from "./components/NewsletterSlideIn";
 import { generateOrganizationSchema } from "./lib/schema";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -53,7 +52,7 @@ export default function RootLayout({
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
-        <meta name="theme-color" content="#1a5c3c" />
+        <meta name="theme-color" content="#1F6B4D" />
       </head>
       <body
         className={`${dmSerifDisplay.variable} ${dmSans.variable} antialiased`}
@@ -64,7 +63,6 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
-        <NewsletterSlideIn />
       </body>
     </html>
   );

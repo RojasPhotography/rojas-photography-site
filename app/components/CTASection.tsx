@@ -29,7 +29,7 @@ export default function CTASection({
   return (
     <section className={`py-24 md:py-32 px-8 ${bgClass}`}>
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className={`text-3xl md:text-5xl font-bold mb-6 ${dark ? 'text-white' : 'text-[var(--color-text-dark)]'}`}>
+        <h2 className={`text-3xl md:text-5xl mb-6 ${dark ? 'text-white' : 'text-[var(--color-text-dark)]'}`}>
           {heading}
         </h2>
         <p className={`text-lg ${textClass} mb-12 max-w-2xl mx-auto leading-relaxed`}>
