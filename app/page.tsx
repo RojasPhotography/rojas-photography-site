@@ -358,14 +358,25 @@ export default function HomePage() {
                 />
               </SectionReveal>
 
-              {/* Medium Wide - Commercial */}
-              <SectionReveal className="md:col-span-2 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
+              {/* Small - Executive */}
+              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/MOVE Stanislaus-(3 of 28).jpg"
-                  alt="Commercial photography Modesto - Business team photography"
+                  src="/images/headshots/headshot-executive-02.jpg"
+                  alt="Executive headshot Modesto CA - Corporate leadership photography"
                   fill
-                  className="object-cover object-[50%_20%]"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-[55%_30%]"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+              </SectionReveal>
+
+              {/* Small - CPA Finance */}
+              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
+                <Image
+                  src="/images/headshots/headshot-cpa-finance-01.jpg"
+                  alt="CPA finance professional headshot Modesto - Accounting photography"
+                  fill
+                  className="object-cover object-[50%_25%]"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </SectionReveal>
 
