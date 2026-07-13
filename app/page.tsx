@@ -6,7 +6,6 @@ import SectionReveal from './components/SectionReveal';
 import TestimonialCard from './components/TestimonialCard';
 import CTASection from './components/CTASection';
 import SchemaScript from './components/SchemaScript';
-import NewsletterSignup from './components/NewsletterSignup';
 import { generateLocalBusinessSchema, generateWebSiteSchema, generatePersonSchema, generateFAQSchema } from './lib/schema';
 import FAQSection from './components/FAQSection';
 
@@ -102,6 +101,7 @@ export default function HomePage() {
         },
       ])} />
       <div className="min-h-screen bg-white">
+      <main id="main-content">
       {/* Hero — full-bleed portrait, dual CTA (studio vs on-location) */}
       <section
         className="relative w-full min-h-screen flex items-end overflow-hidden pt-20"
@@ -149,7 +149,7 @@ export default function HomePage() {
               href="/on-site-photography"
               className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
             >
-              Headshot Day for Your Team →
+              Headshot Day for Your Team →
             </Link>
           </div>
           <div className="hero-rise mt-12 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.68s' }}>
@@ -213,7 +213,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <main id="main-content">
         {/* Two lanes — Studio vs On-Location headshots */}
         <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
@@ -246,7 +245,7 @@ export default function HomePage() {
                     In Our Modesto Studio
                   </p>
                   <h3 className="text-2xl md:text-4xl text-[var(--color-text-dark)] mb-5">
-                    Studio Headshots
+                    Headshots for One
                   </h3>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
                     For executives, attorneys, and personal brands who need one photograph that carries their name. We guide you through every pose and expression — unlimited wardrobe changes, personal direction from both of us, and hand-finished retouching.
@@ -258,8 +257,11 @@ export default function HomePage() {
                     href="/premium-headshots#booking-heading"
                     className="btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-block"
                   >
-                    Book a Studio Session →
+                    Book a Studio Session
                   </Link>
+                  <p className="text-sm text-[var(--color-text-muted)] mt-4">
+                    Sessions are $150, plus $150 per finished image you choose. No minimum.
+                  </p>
                 </div>
               </div>
             </SectionReveal>
@@ -272,10 +274,10 @@ export default function HomePage() {
                     We Come to You
                   </p>
                   <h3 className="text-2xl md:text-4xl text-[var(--color-text-dark)] mb-5">
-                    On-Location Headshots
+                    Headshots for Teams
                   </h3>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
-                    We bring the complete studio — lighting, backdrop, and direction — to your office, firm, or facility anywhere in the Central Valley. Your whole team photographed in one visit, without anyone leaving the building.
+                    We bring the complete studio — lighting, backdrop, and direction — to your office, firm, or facility anywhere in the Central Valley. From a few partners to a company of 200 — everyone photographed in one visit, without leaving the building.
                   </p>
                   <ul className="space-y-3 text-[var(--color-text-body)] mb-8">
                     {['Full studio setup at your office', 'A consistent, on-brand look across the entire team', 'Galleries delivered the same day'].map((item) => (
@@ -289,7 +291,7 @@ export default function HomePage() {
                     href="/on-site-photography"
                     className="btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-block"
                   >
-                    Plan a Headshot Day for Your Team →
+                    Plan a Headshot Day for Your Team
                   </Link>
                 </div>
                 <Link href="/on-site-photography" className="md:order-2 order-1 block group rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5 hover:shadow-2xl transition-all">
@@ -326,10 +328,10 @@ export default function HomePage() {
               {/* Large Featured - CEO Nutrition */}
               <SectionReveal className="md:col-span-2 md:row-span-2 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/headshots/headshot-ceo-nutrition.jpg"
-                  alt="Professional CEO headshot Modesto - Executive corporate photography"
+                  src="/images/headshots/headshot-executive-ceo.jpg"
+                  alt="Executive CEO headshot Modesto - Premium corporate photography"
                   fill
-                  className="object-cover object-[70%_50%]"
+                  className="object-cover object-[50%_25%]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </SectionReveal>
@@ -417,7 +419,7 @@ export default function HomePage() {
                   src="/images/DoctorOffice 4.jpg"
                   alt="Commercial architectural photography Modesto - Professional business photography"
                   fill
-                  className="object-cover object-[50%_25%] scale-90"
+                  className="object-cover object-[50%_30%]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </SectionReveal>
@@ -487,49 +489,9 @@ export default function HomePage() {
               ))}
             </div>
             <SectionReveal>
-              <div className="mt-12 text-center">
-                <p className="text-[var(--color-text-body)] mb-5">
-                  Not sure where to start? Larger and custom projects — team headshot days, commercial shoots, video — begin with a free, zero-pressure conversation.
-                </p>
-                <Link
-                  href="/discovery-call"
-                  className="btn-outline px-8 py-3 font-semibold rounded-full inline-block"
-                >
-                  Book a Free Discovery Call
-                </Link>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* Discovery Call CTA #1 - After Portfolio - SB7: Call to Action */}
-        <section
-          className="py-16 px-8 text-white"
-          style={{ background: 'radial-gradient(90% 140% at 50% -30%, rgba(255,255,255,.1), transparent 60%), linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 80%)' }}
-        >
-          <div className="max-w-3xl mx-auto text-center">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl mb-4">
-                Ready for a Headshot You&apos;re Proud Of?
-              </h2>
-              <p className="text-lg mb-8 text-white/90">
-                Studio sessions book online in minutes — pick your time and you're set. Prefer to talk it through first? Call us directly and we'll point you to the right session.
+              <p className="mt-12 text-center text-[var(--color-text-body)]">
+                Larger or custom project? <Link href="/discovery-call" className="text-[var(--color-primary)] font-semibold hover:underline">Book a free, zero-pressure discovery call →</Link>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/premium-headshots#booking-heading"
-                  className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-                >
-                  Book a Studio Session
-                </Link>
-                <a
-                  href="tel:2093803727"
-                  className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-                >
-                  Call 209-380-3727
-                </a>
-              </div>
-              <p className="text-white/60 text-sm mt-5">In our Modesto studio · gallery within 48 hours · pay only for the images you keep</p>
             </SectionReveal>
           </div>
         </section>
@@ -540,7 +502,7 @@ export default function HomePage() {
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
-                  Imagine Sharing Imagery You&apos;re Actually Proud Of
+                  What Central Valley Professionals Say About Working With Us
                 </h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
                   A headshot that finally looks like you. A team photo that shows your culture. Brand imagery that makes the right people take notice. That&apos;s what working together looks like — here&apos;s what clients say.
@@ -571,14 +533,44 @@ export default function HomePage() {
                 />
               </SectionReveal>
             </div>
+            <SectionReveal>
+              <p className="text-center mt-10">
+                <a href="https://g.page/r/CdOO4Sj3FR_lEBM/review" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold hover:underline">
+                  See our 60+ five-star Google reviews →
+                </a>
+              </p>
+            </SectionReveal>
           </div>
         </section>
 
-        {/* Newsletter Section */}
-        <section className="py-20 px-8 bg-white">
-          <div className="max-w-2xl mx-auto">
+        {/* Discovery Call CTA #1 - After Portfolio - SB7: Call to Action */}
+        <section
+          className="py-16 px-8 text-white"
+          style={{ background: 'radial-gradient(90% 140% at 50% -30%, rgba(255,255,255,.1), transparent 60%), linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 80%)' }}
+        >
+          <div className="max-w-3xl mx-auto text-center">
             <SectionReveal>
-              <NewsletterSignup />
+              <h2 className="text-3xl md:text-4xl mb-4">
+                Ready for a Headshot You&apos;re Proud Of?
+              </h2>
+              <p className="text-lg mb-8 text-white/90">
+                You'll spend the session with both of us — Alfonso and Niomi. Studio sessions book online in minutes — pick your time and you're set. Prefer to talk it through first? Call us directly and we'll point you to the right session.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/premium-headshots#booking-heading"
+                  className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+                >
+                  Book a Studio Session
+                </Link>
+                <a
+                  href="tel:2093803727"
+                  className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+                >
+                  Call 209-380-3727
+                </a>
+              </div>
+              <p className="text-white/60 text-sm mt-5">In our Modesto studio · gallery within 48 hours · pay only for the images you keep</p>
             </SectionReveal>
           </div>
         </section>

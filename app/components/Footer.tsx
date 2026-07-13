@@ -39,7 +39,7 @@ export default function Footer() {
                   href="/premium-headshots"
                   className="hover:text-[var(--color-primary-light)] transition-colors"
                 >
-                  In-Studio Headshots
+                  Headshots for One
                 </Link>
               </li>
               <li>
@@ -47,7 +47,7 @@ export default function Footer() {
                   href="/on-site-photography"
                   className="hover:text-[var(--color-primary-light)] transition-colors"
                 >
-                  On-Site Photography
+                  Headshots for Teams
                 </Link>
               </li>
               <li>
