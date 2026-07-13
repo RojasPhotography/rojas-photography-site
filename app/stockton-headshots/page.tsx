@@ -38,15 +38,15 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Professional Headshots Stockton CA | $150 Session | Rojas Photography',
-  description: 'Professional headshots in Stockton, CA for executives, attorneys, healthcare, and business teams. $150 session. In-studio or on-site. 48-hour delivery. San Joaquin County.',
+  title: 'Professional Headshots Stockton CA | Rojas Photography',
+  description: 'Professional headshots in Stockton, CA for executives, attorneys, healthcare, and business teams. In-studio or on-site. 48-hour delivery. San Joaquin County.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/stockton-headshots',
   },
   openGraph: {
     title: 'Professional Headshots in Stockton, CA | Rojas Photography',
-    description: 'Polished corporate headshots for Stockton executives, attorneys & business professionals. In-studio or on-site. $150 session. 48-hour delivery.',
+    description: 'Polished corporate headshots for Stockton executives, attorneys & business professionals. In-studio or on-site. 48-hour delivery.',
     url: 'https://rojasphotography.net/stockton-headshots',
     type: 'website',
     images: [{ url: '/images/Gina-0026 (1).jpg', alt: 'Professional headshots Stockton CA — Rojas Photography' }],

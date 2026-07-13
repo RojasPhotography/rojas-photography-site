@@ -43,9 +43,9 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Student Headshots Modesto CA | $150 Session & Image',
+  title: 'Student Headshots Modesto CA | Rojas Photography',
   description:
-    'Professional student headshots in Modesto, CA. $150 includes your session and one edited image. Perfect for LinkedIn, internships, ERAS & first jobs. Book today.',
+    'Professional student headshots in Modesto, CA — one guided session, one polished image. Perfect for LinkedIn, internships, ERAS & first jobs. Book today.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/student-headshots',

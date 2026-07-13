@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-12T00:00:00Z",
+  "title": "Design System: Rojas Photography",
+  "extensions": {
+    "colorMeta": {
+      "rojas-green": { "role": "primary", "displayName": "Rojas Green", "canonical": "#1F6B4D", "tonalRamp": ["oklch(15% 0.05 160)", "oklch(25% 0.07 160)", "oklch(35% 0.08 160)", "oklch(45% 0.09 160)", "oklch(55% 0.09 160)", "oklch(70% 0.08 160)", "oklch(85% 0.06 160)", "oklch(95% 0.03 160)"] },
+      "forest-ink": { "role": "primary", "displayName": "Forest Ink", "canonical": "#0f2e1e", "tonalRamp": ["oklch(12% 0.04 160)", "oklch(20% 0.05 160)", "oklch(28% 0.06 160)", "oklch(36% 0.07 160)", "oklch(46% 0.07 160)", "oklch(60% 0.06 160)", "oklch(78% 0.05 160)", "oklch(92% 0.03 160)"] },
+      "mint-whisper": { "role": "primary", "displayName": "Mint Whisper", "canonical": "#d1fae5", "tonalRamp": ["oklch(30% 0.06 165)", "oklch(42% 0.08 165)", "oklch(54% 0.09 165)", "oklch(66% 0.1 165)", "oklch(76% 0.1 165)", "oklch(84% 0.09 165)", "oklch(92% 0.06 165)", "oklch(97% 0.03 165)"] },
+      "gold-star": { "role": "secondary", "displayName": "Gold Star", "canonical": "#b8860b", "tonalRamp": ["oklch(25% 0.07 85)", "oklch(35% 0.09 85)", "oklch(45% 0.11 85)", "oklch(55% 0.12 85)", "oklch(65% 0.13 85)", "oklch(75% 0.11 85)", "oklch(85% 0.08 85)", "oklch(94% 0.04 85)"] },
+      "warm-paper": { "role": "neutral", "displayName": "Warm Paper", "canonical": "#fafaf8", "tonalRamp": ["oklch(20% 0.004 95)", "oklch(35% 0.004 95)", "oklch(50% 0.004 95)", "oklch(65% 0.004 95)", "oklch(78% 0.004 95)", "oklch(88% 0.004 95)", "oklch(95% 0.004 95)", "oklch(98.5% 0.003 95)"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#1a1a1a", "tonalRamp": ["oklch(12% 0 0)", "oklch(20% 0 0)", "oklch(30% 0 0)", "oklch(42% 0 0)", "oklch(56% 0 0)", "oklch(72% 0 0)", "oklch(86% 0 0)", "oklch(96% 0 0)"] },
+      "slate-body": { "role": "neutral", "displayName": "Slate Body", "canonical": "#374151", "tonalRamp": ["oklch(18% 0.02 265)", "oklch(26% 0.025 265)", "oklch(34% 0.03 265)", "oklch(44% 0.03 265)", "oklch(56% 0.025 265)", "oklch(70% 0.02 265)", "oklch(84% 0.012 265)", "oklch(95% 0.006 265)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only; one per page." },
+      "headline": { "displayName": "Headline", "purpose": "Section H2s; every one carries a keyword." },
+      "title": { "displayName": "Title", "purpose": "Card and lane H3s." },
+      "body": { "displayName": "Body", "purpose": "DM Sans paragraphs, 65-75ch max; white/80+ on green, never gray." },
+      "label": { "displayName": "Label", "purpose": "Uppercase eyebrow kickers and proof lines; 0.22em tracking." }
+    },
+    "shadows": [
+      { "name": "gallery-frame", "value": "0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1)", "purpose": "Featured lane portraits at rest — a mounted print. Pairs with a 1px black/5 ring." },
+      { "name": "hover-lift", "value": "0 25px 50px -12px rgba(0,0,0,0.25)", "purpose": "Interactive cards on hover, usually with translateY(-4px). The only motion-shadow." },
+      { "name": "green-glow", "value": "0 12px 32px rgba(26, 92, 60, 0.12)", "purpose": "Service-card hover; brand-tinted, never plain black." }
+    ],
+    "motion": [
+      { "name": "ease-settle", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Default easing for reveals and entrances — settles, never bounces." },
+      { "name": "reveal-up", "value": "0.7s ease-settle, opacity 0→1 + translateY(32px→0)", "purpose": "Scroll-triggered section reveals, staggered 0.1s per sibling." },
+      { "name": "hero-rise", "value": "0.9s ease-settle, staggered 0.1-0.68s", "purpose": "One choreographed hero entrance per page load." },
+      { "name": "hover-zoom", "value": "transform 0.5s ease, scale(1.05)", "purpose": "Images inside photo tiles on hover." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The booking CTA — Rojas Green pill, deepens to Forest Ink on hover.",
+      "html": "<button class=\"ds-btn-primary\">Book a Studio Session</button>",
+      "css": ".ds-btn-primary { background: var(--color-primary, #1F6B4D); color: #fff; padding: 16px 40px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 1.125rem; font-weight: 600; border: none; border-radius: 9999px; cursor: pointer; transition: background-color 0.2s ease, transform 0.2s ease; } .ds-btn-primary:hover { background: var(--color-primary-dark, #0f2e1e); transform: translateY(-1px); } .ds-btn-primary:focus-visible { outline: 3px solid var(--color-primary, #1F6B4D); outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action — green border, fills green on hover.",
+      "html": "<button class=\"ds-btn-outline\">Book a Free Discovery Call</button>",
+      "css": ".ds-btn-outline { background: transparent; color: var(--color-primary, #1F6B4D); padding: 12px 32px; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 600; border: 2px solid var(--color-primary, #1F6B4D); border-radius: 9999px; cursor: pointer; transition: all 0.2s ease; } .ds-btn-outline:hover { background: var(--color-primary, #1F6B4D); color: #fff; transform: translateY(-1px); } .ds-btn-outline:focus-visible { outline: 3px solid var(--color-primary, #1F6B4D); outline-offset: 2px; }"
+    },
+    {
+      "name": "Inverse Button",
+      "kind": "button",
+      "refersTo": "button-inverse",
+      "description": "The CTA on green bands — white pill, Forest Ink text.",
+      "html": "<div class=\"ds-band-demo\"><button class=\"ds-btn-inverse\">Book Your Session</button></div>",
+      "css": ".ds-band-demo { background: radial-gradient(90% 140% at 50% -30%, rgba(255,255,255,.1), transparent 60%), linear-gradient(160deg, #1F6B4D 0%, #0f2e1e 80%); padding: 32px; border-radius: 12px; display: inline-block; } .ds-btn-inverse { background: #fff; color: var(--color-primary-dark, #0f2e1e); padding: 16px 40px; font-family: 'DM Sans', system-ui, sans-serif; font-size: 1.125rem; font-weight: 600; border: none; border-radius: 9999px; cursor: pointer; transition: background-color 0.2s ease; } .ds-btn-inverse:hover { background: #f3f4f6; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "description": "DM Sans link with a scaleX green underline on hover.",
+      "html": "<a href=\"#\" class=\"ds-nav-link\">Services</a>",
+      "css": ".ds-nav-link { position: relative; display: inline-block; color: #1a1a1a; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 500; text-decoration: none; padding-bottom: 4px; } .ds-nav-link::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--color-primary, #1F6B4D); transform: scaleX(0); transform-origin: left; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav-link:hover::after { transform: scaleX(1); }"
+    },
+    {
+      "name": "Green Service Card",
+      "kind": "card",
+      "refersTo": "card-green",
+      "description": "The signature Bloom Rule card — gradient green, icon chip, Mint Whisper link.",
+      "html": "<a href=\"#\" class=\"ds-card-green\"><span class=\"ds-card-green-chip\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#d1fae5\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"6\" width=\"14\" height=\"12\" rx=\"2\"/><path d=\"m22 8-6 4 6 4V8Z\"/></svg></span><span class=\"ds-card-green-body\"><span class=\"ds-card-green-title\">Video Production</span><span class=\"ds-card-green-desc\">Brand stories, testimonials, and FAA-certified aerial footage.</span><span class=\"ds-card-green-link\">Learn More →</span></span></a>",
+      "css": ".ds-card-green { display: flex; flex-direction: column; justify-content: space-between; width: 260px; height: 280px; padding: 28px; border-radius: 12px; text-decoration: none; background: radial-gradient(120% 80% at 85% -10%, rgba(255,255,255,.14), transparent 60%), linear-gradient(160deg, #1F6B4D 0%, #0f2e1e 100%); transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s; } .ds-card-green:hover { transform: translateY(-4px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); } .ds-card-green-chip { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 9999px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); } .ds-card-green-body { display: flex; flex-direction: column; gap: 8px; } .ds-card-green-title { color: #fff; font-family: 'DM Serif Display', Georgia, serif; font-size: 1.25rem; } .ds-card-green-desc { color: rgba(255,255,255,0.8); font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.875rem; line-height: 1.4; } .ds-card-green-link { color: #d1fae5; font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.875rem; font-weight: 600; } .ds-card-green:hover .ds-card-green-link { text-decoration: underline; }"
+    },
+    {
+      "name": "Testimonial Card",
+      "kind": "card",
+      "refersTo": "card-surface",
+      "description": "White surface card with Gold Star rating — gold appears nowhere else.",
+      "html": "<figure class=\"ds-card-testimonial\"><span class=\"ds-card-stars\">★★★★★</span><blockquote class=\"ds-card-quote\">“Alfonso and Niomi create a comfortable environment that puts you at ease immediately.”</blockquote><figcaption class=\"ds-card-name\">Joyce Ulrich — Entrepreneur, Modesto</figcaption></figure>",
+      "css": ".ds-card-testimonial { width: 300px; margin: 0; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 32px; font-family: 'DM Sans', system-ui, sans-serif; } .ds-card-stars { color: var(--color-accent, #b8860b); letter-spacing: 0.2em; font-size: 0.875rem; } .ds-card-quote { color: #374151; line-height: 1.6; margin: 16px 0 24px; } .ds-card-name { color: #6b7280; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Eyebrow Label",
+      "kind": "custom",
+      "description": "Uppercase tracked kicker above section headings.",
+      "html": "<p class=\"ds-eyebrow\">Our Headshot Services</p>",
+      "css": ".ds-eyebrow { color: var(--color-primary, #1F6B4D); font-family: 'DM Sans', system-ui, sans-serif; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; margin: 0; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Corner Office",
+    "overview": "This is the design language of executive confidence: a well-appointed office rendered as a website. Deep green leather, serif numerals, framed portraits on quiet walls. The photography — real clients, real light — carries every page; the design's job is to hang it well and stay out of the argument. Whites and warm papers do the walls, Rojas Green does the upholstery, and DM Serif Display speaks only when something deserves letterhead. The system is quiet and confident: soft pill buttons, gentle lifts on hover, one green voice used with intent.",
+    "keyCharacteristics": [
+      "Photography-first: full-bleed portraits and image tiles do the visual heavy lifting",
+      "One committed brand color (Rojas Green) with a dark forest anchor and a mint whisper for accents on green",
+      "Serif display voice reserved for headings and numerals; humanist sans for everything read",
+      "Flat at rest; depth appears only as a response to hover or as a gallery frame",
+      "Motion is choreographed once (hero entrance), then restrained"
+    ],
+    "rules": [
+      { "name": "The One Green Rule", "body": "Every green on the site comes from the Rojas Green ↔ Forest Ink ramp. No second green, ever. Green bands are the brand moments; between them, pages stay paper-quiet so the portraits win.", "section": "colors" },
+      { "name": "The Bloom Rule", "body": "Green surfaces are never flat fills. They carry the signature gradient: a subtle white radial bloom at the top edge over a 160deg Rojas Green → Forest Ink linear gradient.", "section": "colors" },
+      { "name": "The Serif Speaks Rule", "body": "DM Serif Display appears only in headings and featured numerals. It never sets a paragraph.", "section": "typography" },
+      { "name": "The Flat-at-Rest Rule", "body": "If an element casts a shadow while nobody is interacting with it, it must be a photograph. Everything else earns depth through hover.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do let photography carry every section that has any — the design frames; it does not perform.",
+      "Do answer \"individual or team?\" within the first viewport of any page, with one CTA path for each.",
+      "Do use the Bloom Rule gradient on every green surface, and Mint Whisper — never gray — for secondary text on green.",
+      "Do keep AA contrast everywhere: Slate Body (#374151) is the floor for paragraph text on light ground; white/80 is the floor on green.",
+      "Do honor prefers-reduced-motion for every entrance and reveal.",
+      "Do give every image descriptive, keyword-bearing alt text."
+    ],
+    "donts": [
+      "Don't let anything read as discounted or volume-cheap — the team lane is a different experience, never a cheaper Signature.",
+      "Don't put prices in page titles or meta descriptions.",
+      "Don't reach for ornate, couture, fashion-house luxury — no filigree, no script faces, no drop caps.",
+      "Don't rebuild the old failure: six equal service cards competing at once.",
+      "Don't introduce a second accent hue, use Gold Star outside testimonial stars, or set gray text on green ground.",
+      "Don't animate layout properties; transforms and opacity only.",
+      "Don't use solo \"I\" voice anywhere in UI copy — \"we, Alfonso & Niomi,\" always."
+    ]
+  }
+}
