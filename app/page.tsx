@@ -315,10 +315,10 @@ export default function HomePage() {
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
-                  Our Work
+                  The Rojas Look
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  Visual storytelling for businesses across the Central Valley — photography and video that reflects the quality of who you are
+                  A sample of the executives, attorneys, and teams we&apos;ve photographed across Modesto and the Central Valley
                 </p>
               </div>
             </SectionReveal>
@@ -405,32 +405,43 @@ export default function HomePage() {
               {/* Large Featured - Event */}
               <SectionReveal className="md:col-span-2 md:row-span-2 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/CLA AM 25 335.jpg"
-                  alt="Corporate event photography Central Valley - Professional event coverage"
+                  src="/images/headshots/headshot-comcast-executive.jpg"
+                  alt="Comcast executive headshot Modesto - Premium corporate photography"
                   fill
-                  className="object-cover object-[40%_50%]"
+                  className="object-cover object-[60%_30%]"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </SectionReveal>
 
-              {/* Medium Wide - Doctor Office */}
-              <SectionReveal className="md:col-span-2 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
+              {/* Small - Healthcare Executive */}
+              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/DoctorOffice 4.jpg"
-                  alt="Commercial architectural photography Modesto - Professional business photography"
+                  src="/images/headshots/headshot-healthcare-executive-01.jpg"
+                  alt="Healthcare executive headshot Modesto - Professional medical photography"
                   fill
-                  className="object-cover object-[50%_30%]"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-[50%_25%]"
+                  sizes="(max-width: 768px) 100vw, 25vw"
+                />
+              </SectionReveal>
+
+              {/* Small - Finance CEO */}
+              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
+                <Image
+                  src="/images/headshots/headshot-finance-ceo.jpg"
+                  alt="Finance CEO headshot Modesto - Executive financial photography"
+                  fill
+                  className="object-cover object-[50%_25%]"
+                  sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </SectionReveal>
 
               {/* Small - On-Site Session */}
               <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/BB Individual Headshot Session.png"
-                  alt="On-site corporate photography Modesto - Team headshot sessions"
+                  src="/images/headshots/headshot-kaiser-medical-01.jpg"
+                  alt="Kaiser medical professional headshot Modesto - Healthcare photography"
                   fill
-                  className="object-cover object-[50%_30%]"
+                  className="object-cover object-[50%_25%]"
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </SectionReveal>
@@ -438,10 +449,10 @@ export default function HomePage() {
               {/* Small - Video Production */}
               <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/BBSI-Corp-Video.jpg"
-                  alt="Corporate video production Central Valley - Professional business videography"
+                  src="/images/headshots/headshot-financial-advisor-01.jpg"
+                  alt="Financial advisor headshot Modesto - Professional business photography"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[50%_25%]"
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
               </SectionReveal>
