@@ -66,6 +66,20 @@ const otherServices = [
   },
 ];
 
+const portfolio: { src: string; alt: string; pos: string; wide?: boolean }[] = [
+  { src: '/images/headshots/headshot-attorney-03.jpg', alt: 'Attorney headshot Modesto CA - Professional legal photography', pos: '50% 25%' },
+  { src: '/images/headshots/headshot-executive-02.jpg', alt: 'Executive headshot Modesto CA - Corporate leadership photography', pos: '55% 30%' },
+  { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot Modesto - Professional medical photography', pos: '50% 25%' },
+  { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Finance CEO headshot Modesto - Executive financial photography', pos: '50% 25%' },
+  { src: '/images/headshots/headshot-realtor-01.jpg', alt: 'Real estate agent headshot Modesto - Professional realtor photography', pos: '50% 25%' },
+  { src: '/images/Move Staff Group 9.jpg', alt: 'On-site team photography Modesto - Corporate group headshots', pos: '50% 35%', wide: true },
+  { src: '/images/headshots/headshot-cpa-finance-01.jpg', alt: 'CPA finance professional headshot Modesto - Accounting photography', pos: '50% 25%' },
+  { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Comcast executive headshot Modesto - Premium corporate photography', pos: '60% 30%' },
+  { src: '/images/headshots/headshot-kaiser-medical-01.jpg', alt: 'Kaiser medical professional headshot Modesto - Healthcare photography', pos: '50% 25%' },
+  { src: '/images/headshots/headshot-financial-advisor-01.jpg', alt: 'Financial advisor headshot Modesto - Professional business photography', pos: '50% 25%' },
+  { src: '/images/headshots/headshot-executive-ceo.jpg', alt: 'Executive CEO headshot Modesto - Premium corporate photography', pos: '50% 25%' },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -309,7 +323,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Portfolio Bento Grid */}
+        {/* Portfolio grid — The Rojas Look */}
         <section className="py-20 md:py-28 px-8 bg-white">
           <div className="max-w-7xl mx-auto">
             <SectionReveal>
@@ -322,151 +336,19 @@ export default function HomePage() {
                 </p>
               </div>
             </SectionReveal>
-
-            {/* Bento Grid Layout */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[280px]">
-              {/* Large Featured - CEO Nutrition */}
-              <SectionReveal className="md:col-span-2 md:row-span-2 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/headshots/headshot-executive-ceo.jpg"
-                  alt="Executive CEO headshot Modesto - Premium corporate photography"
-                  fill
-                  className="object-cover object-[50%_25%]"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </SectionReveal>
-
-              {/* Small - Attorney Headshot */}
-              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/headshots/headshot-attorney-03.jpg"
-                  alt="Attorney headshot Modesto CA - Professional legal photography"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-              </SectionReveal>
-
-              {/* Small - Joyce Headshot */}
-              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/Joyce-0029.jpg"
-                  alt="Business professional headshot Central Valley - Corporate photography"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-              </SectionReveal>
-
-              {/* Small - Executive */}
-              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/headshots/headshot-executive-02.jpg"
-                  alt="Executive headshot Modesto CA - Corporate leadership photography"
-                  fill
-                  className="object-cover object-[55%_30%]"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-              </SectionReveal>
-
-              {/* Small - CPA Finance */}
-              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/headshots/headshot-cpa-finance-01.jpg"
-                  alt="CPA finance professional headshot Modesto - Accounting photography"
-                  fill
-                  className="object-cover object-[50%_25%]"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-              </SectionReveal>
-
-              {/* Small - Realtor Headshot */}
-              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/headshots/headshot-realtor-01.jpg"
-                  alt="Real estate agent headshot Modesto - Professional realtor photography"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-              </SectionReveal>
-
-              {/* Medium Wide - Team Group Photo */}
-              <SectionReveal className="md:col-span-2 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/Move Staff Group 9.jpg"
-                  alt="On-site team photography Modesto - Corporate group headshots"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </SectionReveal>
-
-              {/* Small - Miguel Headshot */}
-              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/Miguel-(2 of 6) (1).jpg"
-                  alt="Executive headshot Modesto CA - Professional corporate photography"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-              </SectionReveal>
-
-              {/* Large Featured - Event */}
-              <SectionReveal className="md:col-span-2 md:row-span-2 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/headshots/headshot-comcast-executive.jpg"
-                  alt="Comcast executive headshot Modesto - Premium corporate photography"
-                  fill
-                  className="object-cover object-[60%_30%]"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </SectionReveal>
-
-              {/* Small - Healthcare Executive */}
-              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/headshots/headshot-healthcare-executive-01.jpg"
-                  alt="Healthcare executive headshot Modesto - Professional medical photography"
-                  fill
-                  className="object-cover object-[50%_25%]"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-              </SectionReveal>
-
-              {/* Small - Finance CEO */}
-              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/headshots/headshot-finance-ceo.jpg"
-                  alt="Finance CEO headshot Modesto - Executive financial photography"
-                  fill
-                  className="object-cover object-[50%_25%]"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-              </SectionReveal>
-
-              {/* Small - On-Site Session */}
-              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/headshots/headshot-kaiser-medical-01.jpg"
-                  alt="Kaiser medical professional headshot Modesto - Healthcare photography"
-                  fill
-                  className="object-cover object-[50%_25%]"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-              </SectionReveal>
-
-              {/* Small - Video Production */}
-              <SectionReveal className="md:col-span-1 md:row-span-1 img-hover-zoom rounded-xl overflow-hidden relative">
-                <Image
-                  src="/images/headshots/headshot-financial-advisor-01.jpg"
-                  alt="Financial advisor headshot Modesto - Professional business photography"
-                  fill
-                  className="object-cover object-[50%_25%]"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-              </SectionReveal>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[220px] md:auto-rows-[280px]">
+              {portfolio.map((t) => (
+                <SectionReveal key={t.src} className={`img-hover-zoom rounded-xl overflow-hidden relative ${t.wide ? 'col-span-2' : ''}`}>
+                  <Image
+                    src={t.src}
+                    alt={t.alt}
+                    fill
+                    sizes={t.wide ? '(max-width: 768px) 100vw, 50vw' : '(max-width: 768px) 50vw, 25vw'}
+                    className="object-cover"
+                    style={{ objectPosition: t.pos }}
+                  />
+                </SectionReveal>
+              ))}
             </div>
           </div>
         </section>
