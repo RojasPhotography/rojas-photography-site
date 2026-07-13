@@ -162,130 +162,58 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Problem Section - SB7: Has a Problem */}
-      <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
-        <div className="max-w-4xl mx-auto">
+      {/* Proof bar — the names they already know */}
+      <SectionReveal>
+        <section className="py-10 px-8 bg-[var(--color-bg-warm)] border-b border-gray-100" aria-label="Clients who trust Rojas Photography">
+          <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-center">
+            <span className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] font-semibold">Trusted by</span>
+            {['Save Mart', 'Comcast', 'CalPERS', 'California Lawyers Association', 'Kaiser Permanente', 'Tenet Health'].map((c) => (
+              <span key={c} className="text-[var(--color-text-dark)] text-sm md:text-base tracking-[0.04em]" style={{ fontFamily: 'var(--font-heading)' }}>{c}</span>
+            ))}
+          </div>
+        </section>
+      </SectionReveal>
+
+      {/* The guides — SB7: problem + guide, humans up front */}
+      <section className="py-16 md:py-24 px-8 bg-white">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <SectionReveal>
-            <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-8">
-              Your Story Deserves More Than Generic Photography
-            </h2>
-            <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed">
-              <div>
-                <p className="mb-4">
-                  Many businesses struggle with photography and video that feels transactional, not collaborative. Images that look professional but don't tell their story. Photographers who don't take time to understand their organization.
-                </p>
-              </div>
-              <div>
-                <p className="mb-4">
-                  Your business has a unique story—your values, your people, your culture. Your imagery and video content should tell that story authentically, not just fill space on a website or social media.
-                </p>
-              </div>
+            <div className="rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5">
+              <Image
+                src="/images/Alfonso+Niomi-0026.jpg"
+                alt="Alfonso and Niomi Rojas - Founders of Rojas Photography"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover object-[50%_20%]"
+              />
             </div>
           </SectionReveal>
-        </div>
-      </section>
-
-      {/* Intro Section - SB7: Meets a Guide */}
-      <section className="py-16 md:py-20 px-8 bg-white border-b border-gray-100">
-        <div className="max-w-4xl mx-auto">
           <SectionReveal>
-            <div className="text-center">
+            <div>
               <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
-                We Know What It Feels Like to Be Undersold
+                Meet Alfonso &amp; Niomi — Two Photographers, Every Session
               </h2>
-              <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
-                <p>
-                  You've put years into building something real — a team, a reputation, a standard of work you're proud of. And then someone visits your website or finds your LinkedIn and the imagery doesn't come close to reflecting any of it. That gap is frustrating. We get it.
-                </p>
-                <p className="font-semibold text-[var(--color-text-dark)]">
-                  We're Alfonso and Niomi Rojas. With a background in corporate leadership and operations before we picked up a camera, we understand business from the inside — which means we know how to translate what you've built into imagery that actually shows it.
-                </p>
-                <p>
-                  We've helped 500+ professionals across the Central Valley — from <Link href="/premium-headshots" className="text-[var(--color-primary)] hover:underline">executive headshots</Link> to <Link href="/on-site-photography" className="text-[var(--color-primary)] hover:underline">on-site team photography</Link>, <Link href="/commercial" className="text-[var(--color-primary)] hover:underline">commercial imagery</Link>, and <Link href="/video" className="text-[var(--color-primary)] hover:underline">video production</Link> — create visuals they're genuinely proud to put in front of clients. Not as a vendor. As partners who care about getting it right.
-                </p>
-              </div>
+              <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
+                You've put years into building something real — a team, a reputation, a standard of work you're proud of. Then someone finds your LinkedIn and the photo doesn't come close to reflecting any of it. That gap is frustrating. We get it.
+              </p>
+              <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
+                With a background in corporate leadership and operations before we picked up a camera, we understand business from the inside. We've helped 500+ professionals — from <Link href="/premium-headshots" className="text-[var(--color-primary)] hover:underline">executive headshots</Link> to <Link href="/on-site-photography" className="text-[var(--color-primary)] hover:underline">on-site team photography</Link>, <Link href="/commercial" className="text-[var(--color-primary)] hover:underline">commercial imagery</Link>, and <Link href="/video" className="text-[var(--color-primary)] hover:underline">video production</Link> — create visuals they're genuinely proud to put in front of clients. Not as a vendor. As partners who care about getting it right.
+              </p>
+              <p className="text-[var(--color-text-body)] leading-relaxed mb-8">
+                We photograph businesses across Modesto, Stockton, Fresno, Turlock, Merced, Sacramento, and the East Bay.
+              </p>
+              <Link
+                href="/about-rojas-photography"
+                className="btn-outline px-8 py-3 font-semibold rounded-full inline-block"
+              >
+                More About Us
+              </Link>
             </div>
           </SectionReveal>
         </div>
       </section>
 
       <main id="main-content">
-        {/* The Plan Section - SB7: Who Gives Them a Plan */}
-        <section className="py-20 md:py-28 px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-5xl text-center text-[var(--color-text-dark)] mb-16">
-                How We Work With You
-              </h2>
-            </SectionReveal>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] ring-8 ring-[var(--color-primary-light)]/60 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl" style={{ fontFamily: 'var(--font-heading)' }}>
-                    1
-                  </div>
-                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
-                    Book in Minutes — or Start a Conversation
-                  </h3>
-                  <p className="text-[var(--color-text-body)] leading-relaxed">
-                    Studio sessions book online in minutes — pick a time and you&apos;re set. For teams and custom projects, we start with a real conversation about your organization, so we understand what your imagery needs to communicate before we pick up a camera.
-                  </p>
-                </div>
-              </SectionReveal>
-
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] ring-8 ring-[var(--color-primary-light)]/60 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl" style={{ fontFamily: 'var(--font-heading)' }}>
-                    2
-                  </div>
-                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
-                    Collaborative Creation
-                  </h3>
-                  <p className="text-[var(--color-text-body)] leading-relaxed">
-                    You're not just a subject — you're a collaborator. We work with you on set to capture authentic moments, not posed performances. The result feels like you, because it is.
-                  </p>
-                </div>
-              </SectionReveal>
-
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-[var(--color-primary)] ring-8 ring-[var(--color-primary-light)]/60 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl" style={{ fontFamily: 'var(--font-heading)' }}>
-                    3
-                  </div>
-                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
-                    Story-Driven Delivery
-                  </h3>
-                  <p className="text-[var(--color-text-body)] leading-relaxed">
-                    You receive polished, professional imagery you're proud to put in front of anyone — same-day delivery for on-site team headshots, within 48 hours for studio sessions, 2-4 weeks for video — ready for your website, LinkedIn, and every marketing touchpoint.
-                  </p>
-                </div>
-              </SectionReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* Urgent CTA Before Services - Early Conversion Opportunity */}
-        <section
-          className="py-12 px-8 text-center"
-          style={{ background: 'radial-gradient(90% 140% at 50% -30%, rgba(255,255,255,.1), transparent 60%), linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 80%)' }}
-        >
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                You&apos;ve worked too hard to be undersold by a photo.
-              </p>
-              <Link
-                href="/premium-headshots#booking-heading"
-                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-              >
-                Book a Studio Session
-              </Link>
-              <p className="text-white/60 text-sm mt-4">In our Modesto studio · gallery within 48 hours · pay only for the images you keep</p>
-            </SectionReveal>
-          </div>
-        </section>
-
         {/* Two lanes — Studio vs On-Location headshots */}
         <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
@@ -574,28 +502,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Stakes Section - SB7: Helps Avoid Failure */}
-        <section className="py-16 px-8 bg-white border-y border-gray-100">
-          <div className="max-w-4xl mx-auto text-center">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
-                Outdated Imagery Costs You More Than You Think
-              </h2>
-              <div className="text-lg text-[var(--color-text-body)] leading-relaxed space-y-4">
-                <p>
-                  Every time a prospect visits your website or finds your LinkedIn, they're making a judgment call. If your photos don't reflect the quality of your work, they move on — and you never know it happened.
-                </p>
-                <p>
-                  Generic imagery makes you look like everyone else. It undermines trust before you ever get a chance to speak. And the longer you wait, the more opportunities quietly walk past you.
-                </p>
-                <p className="font-semibold text-[var(--color-text-dark)]">
-                  You've worked too hard to be undersold by a photo.
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
         {/* Discovery Call CTA #1 - After Portfolio - SB7: Call to Action */}
         <section
           className="py-16 px-8 text-white"
@@ -627,30 +533,6 @@ export default function HomePage() {
             </SectionReveal>
           </div>
         </section>
-
-        {/* Social Proof Bar */}
-        <SectionReveal>
-          <section className="py-12 px-8 bg-[var(--color-bg-warm)] border-y border-gray-100">
-            <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 text-center">
-              <div>
-                <p className="text-3xl text-[var(--color-primary)]" style={{ fontFamily: 'var(--font-heading)' }}>500+</p>
-                <p className="text-sm text-[var(--color-text-muted)]">Professionals Photographed</p>
-              </div>
-              <div className="hidden md:block w-px h-10 bg-gray-200" />
-              <div>
-                <p className="text-3xl text-[var(--color-primary)]" style={{ fontFamily: 'var(--font-heading)' }}>60+</p>
-                <p className="text-sm text-[var(--color-text-muted)]">Five-Star Reviews</p>
-              </div>
-              <div className="hidden md:block w-px h-10 bg-gray-200" />
-              <div>
-                <p className="text-sm text-[var(--color-text-muted)]">Trusted by</p>
-                <p className="font-semibold text-[var(--color-text-dark)]">
-                  Comcast &middot; Save Mart &middot; CLA
-                </p>
-              </div>
-            </div>
-          </section>
-        </SectionReveal>
 
         {/* Testimonials - Kept Authentic */}
         <section className="py-20 md:py-28 px-8 bg-white">
@@ -687,122 +569,6 @@ export default function HomePage() {
                   role="VP of People & Culture, Valley First Credit Union"
                   quote="Alfonso and Niomi captured our corporate event beautifully. Professional, responsive, easy to work with. They understand business and deliver results."
                 />
-              </SectionReveal>
-            </div>
-          </div>
-        </section>
-
-        {/* Discovery Call CTA #2 - After Testimonials */}
-        <section className="py-12 px-8 bg-[var(--color-bg-warm)]">
-          <div className="max-w-2xl mx-auto text-center">
-            <SectionReveal>
-              <h2 className="text-2xl md:text-3xl text-[var(--color-text-dark)] mb-4">
-                Your Story Deserves to Be Told Authentically
-              </h2>
-              <p className="text-[var(--color-text-body)] mb-6">
-                Join hundreds of Central Valley professionals who've trusted us to tell their story visually. Your session is a few clicks away.
-              </p>
-              <Link
-                href="/premium-headshots#booking-heading"
-                className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block"
-              >
-                Book a Studio Session
-              </Link>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* Authority & Credentials Section */}
-        <section className="py-20 md:py-28 px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <SectionReveal>
-              <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">
-                  Trusted by Central Valley Businesses
-                </h2>
-                <p className="text-lg text-[var(--color-text-muted)]">
-                  Experience, expertise, and proven results
-                </p>
-              </div>
-            </SectionReveal>
-
-            <div className="grid md:grid-cols-4 gap-8">
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="text-4xl text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>15+</div>
-                  <p className="text-[var(--color-text-dark)] font-semibold mb-2">Years Experience</p>
-                  <p className="text-sm text-[var(--color-text-body)]">Corporate leadership background</p>
-                </div>
-              </SectionReveal>
-
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="text-4xl text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>500+</div>
-                  <p className="text-[var(--color-text-dark)] font-semibold mb-2">Professionals Photographed</p>
-                  <p className="text-sm text-[var(--color-text-body)]">CEOs, attorneys, business leaders</p>
-                </div>
-              </SectionReveal>
-
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="text-4xl text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>60+</div>
-                  <p className="text-[var(--color-text-dark)] font-semibold mb-2">Five-Star Reviews</p>
-                  <p className="text-sm text-[var(--color-text-body)]">Proven client satisfaction</p>
-                </div>
-              </SectionReveal>
-
-              <SectionReveal>
-                <div className="text-center">
-                  <div className="text-4xl text-[var(--color-primary)] mb-2" style={{ fontFamily: 'var(--font-heading)' }}>FAA</div>
-                  <p className="text-[var(--color-text-dark)] font-semibold mb-2">Part 107 Certified</p>
-                  <p className="text-sm text-[var(--color-text-body)]">Licensed drone operator</p>
-                </div>
-              </SectionReveal>
-            </div>
-
-            <SectionReveal>
-              <div className="mt-16 p-8 bg-[var(--color-bg-warm)] rounded-xl text-center">
-                <p className="text-lg text-[var(--color-text-body)] leading-relaxed">
-                  We partner with businesses across Modesto, Stockton, Fresno, Turlock, Merced, Sacramento, and the East Bay — helping organizations tell their story through professional photography and video content you can trust.
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* About Teaser - SB7: Success Vision */}
-        <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <SectionReveal>
-                <div className="rounded-2xl overflow-hidden relative aspect-[4/3]">
-                  <Image
-                    src="/images/Alfonso+Niomi-0026.jpg"
-                    alt="Alfonso and Niomi Rojas - Founders of Rojas Photography"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover object-[50%_20%]"
-                  />
-                </div>
-              </SectionReveal>
-              <SectionReveal>
-                <div>
-                  <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
-                    Meet Alfonso & Niomi
-                  </h2>
-                  <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
-                    With 15+ years in corporate leadership and operations between us, we understand what businesses need. We've partnered with professionals across the Central Valley to create authentic photography and video content that tells their story and builds credibility.
-                  </p>
-                  <p className="text-[var(--color-text-body)] leading-relaxed mb-8">
-                    Visual storytelling isn't about being &ldquo;photogenic.&rdquo; It's about presenting your authentic story with confidence — through imagery and video that connects.
-                  </p>
-                  <Link
-                    href="/about-rojas-photography"
-                    className="btn-outline px-8 py-3 font-semibold rounded-full inline-block"
-                  >
-                    Learn More About Us
-                  </Link>
-                </div>
               </SectionReveal>
             </div>
           </div>
