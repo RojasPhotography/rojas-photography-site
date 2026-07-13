@@ -67,6 +67,10 @@ const otherServices = [
 ];
 
 const portfolio: { src: string; alt: string; pos: string; wide?: boolean }[] = [
+  { src: '/images/headshots/headshot-financial-advisor-01.jpg', alt: 'Financial advisor headshot Modesto - Professional business photography', pos: '50% 28%' },
+  { src: '/images/headshots/headshot-executive.jpg', alt: 'Executive headshot Modesto CA - Corporate business photography', pos: '50% 28%' },
+  { src: '/images/headshots/headshot-realestate-agent.jpg', alt: 'Real estate agent headshot Modesto - Professional realtor photography', pos: '50% 28%' },
+  { src: '/images/headshots/headshot-mortgage-lender-02.jpg', alt: 'Mortgage professional headshot Modesto - Financial services photography', pos: '50% 26%' },
   { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot Modesto CA - Professional law firm photography', pos: '58% 30%' },
   { src: '/images/headshots/headshot-executive-02.jpg', alt: 'Executive headshot Modesto CA - Corporate leadership photography', pos: '55% 30%' },
   { src: '/images/headshots/headshot-attorney-11.jpg', alt: 'Lawyer headshot Modesto - Modern attorney portrait photography', pos: '58% 32%' },
