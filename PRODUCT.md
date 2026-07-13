@@ -24,7 +24,7 @@ THE name for premium corporate photography in Modesto and the Central Valley —
 
 - Primary CTA: Book a Studio Session (self-serve scheduler). Secondary: Headshot Day for Your Team; a free discovery call is the entry point for custom and larger projects only.
 - The line a visitor remembers after 10 seconds: **"The headshot your reputation deserves."**
-- Belief ladder: (1) these photos are clearly better than what I have → (2) serious companies trust them — Kaiser, Comcast, Save Mart, CalPERS, California Lawyers Association, Tenet Health → (3) booking is easy and delivery is fast (same-day for on-site teams and booths, 48 hours for studio) → book.
+- Belief ladder: (1) these photos are clearly better than what I have → (2) serious companies trust them — Kaiser, Comcast, Save Mart, California Lawyers Association, Tenet Health → (3) booking is easy and delivery is fast (same-day for on-site teams and booths, 48 hours for studio) → book.
 - Proof on hand: the client names above; 500+ executives photographed; 60+ five-star Google reviews; named testimonials (Catherine Luke, Joyce Ulrich, Courtnay Lynch) already in the code; a live Google-reviews component ships once its API env vars are set.
 
 ## Brand Personality

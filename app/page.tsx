@@ -167,7 +167,7 @@ export default function HomePage() {
         <section className="py-10 px-8 bg-[var(--color-bg-warm)] border-b border-gray-100" aria-label="Clients who trust Rojas Photography">
           <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-center">
             <span className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] font-semibold">Trusted by</span>
-            {['Save Mart', 'Comcast', 'CalPERS', 'California Lawyers Association', 'Kaiser Permanente', 'Tenet Health'].map((c) => (
+            {['Save Mart', 'Comcast', 'California Lawyers Association', 'Kaiser Permanente', 'Tenet Health'].map((c) => (
               <span key={c} className="text-[var(--color-text-dark)] text-sm md:text-base tracking-[0.04em]" style={{ fontFamily: 'var(--font-heading)' }}>{c}</span>
             ))}
           </div>
