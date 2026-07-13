@@ -277,10 +277,10 @@ export default function HomePage() {
                     Headshots for Teams
                   </h3>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
-                    We bring the complete studio — lighting, backdrop, and direction — to your office, firm, or facility anywhere in the Central Valley. From a few partners to a company of 200 — everyone photographed in one visit, without leaving the building.
+                    We bring the complete studio — lighting, backdrop, and direction — to your office, firm, or facility anywhere in the Central Valley. From a handful of partners to hundreds of employees — everyone photographed without leaving the building.
                   </p>
                   <ul className="space-y-3 text-[var(--color-text-body)] mb-8">
-                    {['Full studio setup at your office', 'A consistent, on-brand look across the entire team', 'Galleries delivered the same day'].map((item) => (
+                    {['Full studio setup at your office', 'A consistent, on-brand look across the entire team', 'Galleries delivered the same day', 'Multiple headshot stations — or a multi-day schedule — for large teams and shift-based workplaces'].map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <span className="text-[var(--color-primary)] font-bold mt-0.5" aria-hidden="true">✓</span>
                         <span>{item}</span>
