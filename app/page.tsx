@@ -130,13 +130,13 @@ export default function HomePage() {
         aria-label="Corporate headshots in Modesto and the Central Valley"
       >
         <Image
-          src="/images/headshots/headshot-ceo-nutrition.jpg"
+          src="/images/headshots/headshot-ceo-nutrition-02.jpg"
           alt="Executive headshot photographed by Rojas Photography in Modesto, California"
           fill
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ objectPosition: '62% 22%' }}
+          style={{ objectPosition: '60% 35%' }}
         />
         <div
           className="absolute inset-0"
@@ -147,6 +147,11 @@ export default function HomePage() {
           className="absolute inset-0"
           aria-hidden="true"
           style={{ background: 'linear-gradient(0deg, rgba(15,46,30,.8) 4%, rgba(15,46,30,.35) 24%, transparent 48%)' }}
+        />
+        <div
+          className="absolute inset-0 md:hidden"
+          aria-hidden="true"
+          style={{ background: 'rgba(15,46,30,.42)' }}
         />
         <div className="relative z-10 w-full max-w-6xl mx-auto px-8 pb-14 md:pb-20 pt-24 text-white">
           <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase" style={{ animationDelay: '0.1s' }}>

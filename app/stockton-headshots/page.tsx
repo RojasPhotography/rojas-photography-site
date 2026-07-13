@@ -63,7 +63,7 @@ const industries = [
 ];
 
 const services = [
-  { icon: Camera, title: 'In-Studio Headshots', desc: 'Professional session at our Modesto studio — 35 minutes from Stockton. Guided coaching, multiple wardrobe changes, frame review before you leave.', price: '$150 session + $150/image', href: '/premium-headshots', img: '/images/headshots/headshot-ceo-nutrition.jpg', alt: 'Professional headshot session' },
+  { icon: Camera, title: 'In-Studio Headshots', desc: 'Professional session at our Modesto studio — 35 minutes from Stockton. Guided coaching, multiple wardrobe changes, frame review before you leave.', price: '$150 session + $150/image', href: '/premium-headshots', img: '/images/headshots/headshot-ceo-nutrition-02.jpg', alt: 'Professional headshot session' },
   { icon: Users, title: 'On-Site Team Photography', desc: 'We bring our complete studio to your Stockton office. Your full team photographed in consistent lighting and background without leaving the building.', price: 'Custom quote', href: '/on-site-photography', img: '/images/BB Individual Headshot Session.png', alt: 'On-site team headshot photography' },
   { icon: Building2, title: 'Commercial Photography', desc: 'Brand imagery, product, architectural, and marketing visuals for Stockton businesses and commercial real estate.', price: 'Custom quote', href: '/commercial', img: '/images/DoctorOffice 4.jpg', alt: 'Commercial photography for businesses' },
   { icon: Video, title: 'Video Production', desc: 'Corporate video, brand films, testimonials, and FAA Part 107 certified drone footage for Stockton businesses.', price: 'Custom quote', href: '/video', img: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production' },
