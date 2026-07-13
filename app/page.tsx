@@ -10,17 +10,17 @@ import { generateLocalBusinessSchema, generateWebSiteSchema, generatePersonSchem
 import FAQSection from './components/FAQSection';
 
 export const metadata: Metadata = {
-  title: 'Corporate Photography Modesto CA | Professional Headshots & Video',
+  title: 'Corporate Photography Modesto CA | Professional Headshots',
   description:
-    'Expert corporate photography in Modesto and Central Valley. Professional headshots, on-site photography, commercial photography, video production, and event coverage. Trusted by 500+ executives.',
+    'Premium corporate headshots in Modesto & the Central Valley — in our studio or at your office. Two photographers, every session. Trusted by 500+ executives.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net',
   },
   openGraph: {
-    title: 'Corporate Photography Modesto CA | Professional Headshots & Video',
+    title: 'Corporate Photography Modesto CA | Professional Headshots',
     description:
-      'Professional corporate photography services in Modesto and Central Valley. In-studio headshots, on-site photography, commercial photography, video production, and event coverage.',
+      'Premium corporate headshots in Modesto & the Central Valley — in our studio or at your office. Two photographers, every session. Trusted by 500+ executives.',
     url: 'https://rojasphotography.net',
     type: 'website',
     images: [
@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Corporate Photography Modesto CA | Professional Headshots & Video',
+    title: 'Corporate Photography Modesto CA | Professional Headshots',
     description:
-      'Expert corporate photography in Modesto and Central Valley. Professional headshots, on-site photography, commercial photography, video production, and event coverage. Trusted by 500+ executives.',
+      'Premium corporate headshots in Modesto & the Central Valley — in our studio or at your office. Two photographers, every session. Trusted by 500+ executives.',
     images: ['/images/Kaiser BTS Headshots.png'],
   },
 };
