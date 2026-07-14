@@ -134,6 +134,7 @@ export default function HomePage() {
           alt="Executive headshot photographed by Rojas Photography in Modesto, California"
           fill
           priority
+          quality={90}
           sizes="100vw"
           className="object-cover"
           style={{ objectPosition: '60% 35%' }}
