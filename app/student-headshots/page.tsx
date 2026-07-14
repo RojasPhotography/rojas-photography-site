@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/headshots/headshot-ceo-nutrition.jpg',
+        url: '/images/headshots/headshot-ceo-nutrition-02.jpg',
         alt: 'Student headshots Modesto CA — Rojas Photography',
       },
     ],
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: 'Student Headshots in Modesto, CA | Rojas Photography',
     description:
       'Professional student headshots. $150 includes session + one edited image. 48-hour delivery. Modesto, CA.',
-    images: ['/images/headshots/headshot-ceo-nutrition.jpg'],
+    images: ['/images/headshots/headshot-ceo-nutrition-02.jpg'],
   },
 };
 
@@ -203,7 +203,7 @@ export default function StudentHeadshotsPage() {
             <div className="max-w-5xl mx-auto">
               <div className="grid grid-cols-3 gap-4">
                 {[
-                  { src: '/images/headshots/headshot-ceo-nutrition.jpg', alt: 'Student professional headshot — Rojas Photography Modesto' },
+                  { src: '/images/headshots/headshot-ceo-nutrition-02.jpg', alt: 'Student professional headshot — Rojas Photography Modesto' },
                   { src: '/images/headshots/headshot-sales-manager-01.jpg', alt: 'Young professional headshot — Central Valley CA' },
                   { src: '/images/headshots/headshot-financial-advisor-01.jpg', alt: 'Student headshot for LinkedIn — Modesto CA' },
                 ].map((img) => (

@@ -260,7 +260,7 @@ export default function SacramentoHeadshotsPage() {
                     desc: 'Executive headshot sessions at our premium Modesto studio, 90 minutes from Sacramento. Professional lighting, guided posing, real-time review, and 48-hour delivery.',
                     price: '$150 session + $150/image',
                     href: '/premium-headshots',
-                    img: '/images/headshots/headshot-ceo-nutrition.jpg',
+                    img: '/images/headshots/headshot-ceo-nutrition-02.jpg',
                     alt: 'Professional headshot session — Rojas Photography',
                   },
                   {

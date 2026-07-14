@@ -81,7 +81,7 @@ export default function PremiumHeadshotsPage() {
       <div className="min-h-screen bg-white">
       {/* Hero Section - SB7: A Character */}
       <HeroSection
-        image="/images/headshots/headshot-ceo-nutrition.jpg"
+        image="/images/headshots/headshot-ceo-nutrition-02.jpg"
         title="Professional Headshots Shouldn't Feel Awkward."
         tag="Premium Corporate Headshots | Modesto, CA"
         objectPosition="70% 33%"
@@ -246,7 +246,7 @@ export default function PremiumHeadshotsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Row 1: CEO & Nutrition Executives */}
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
-                <Image src="/images/headshots/headshot-ceo-nutrition.jpg" alt="Nutrition business owner headshot - Modesto wellness professional photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover object-[85%_50%]" />
+                <Image src="/images/headshots/headshot-ceo-nutrition-02.jpg" alt="Nutrition business owner headshot - Modesto wellness professional photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover object-[60%_40%]" />
               </SectionReveal>
               <SectionReveal className="img-hover-zoom rounded-xl overflow-hidden relative aspect-square">
                 <Image src="/images/headshots/headshot-attorney-03.jpg" alt="Professional headshot for attorney - Modesto legal photography" fill sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover" />

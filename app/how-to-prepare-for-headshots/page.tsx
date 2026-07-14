@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: '/images/headshots/headshot-ceo-nutrition.jpg',
+        url: '/images/headshots/headshot-ceo-nutrition-02.jpg',
         alt: 'Professional corporate headshot - Rojas Photography Modesto CA',
       },
     ],
@@ -140,7 +140,7 @@ export default function HowToPrepareForHeadshotsPage() {
 
         {/* SB7: A Character with a Goal */}
         <HeroSection
-          image="/images/headshots/headshot-ceo-nutrition.jpg"
+          image="/images/headshots/headshot-ceo-nutrition-02.jpg"
           title="How to Prepare for a Professional Headshot"
           tag="Complete Preparation Guide | Rojas Photography — Modesto, CA"
           objectPosition="70% 33%"

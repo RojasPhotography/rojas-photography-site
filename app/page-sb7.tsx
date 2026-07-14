@@ -210,7 +210,7 @@ export default function HomePage() {
                   <div className="relative h-[400px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
                     {/* Background Image */}
                     <Image
-                      src="/images/headshots/headshot-ceo-nutrition.jpg"
+                      src="/images/headshots/headshot-ceo-nutrition-02.jpg"
                       alt="Premium Headshots - Professional corporate headshot"
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -386,7 +386,7 @@ export default function HomePage() {
               {/* Large Featured - CEO Nutrition */}
               <SectionReveal className="md:col-span-2 md:row-span-2 img-hover-zoom rounded-xl overflow-hidden relative">
                 <Image
-                  src="/images/headshots/headshot-ceo-nutrition.jpg"
+                  src="/images/headshots/headshot-ceo-nutrition-02.jpg"
                   alt="Professional CEO headshot Modesto - Executive corporate photography"
                   fill
                   className="object-cover object-[70%_50%]"

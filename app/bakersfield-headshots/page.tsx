@@ -62,7 +62,7 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { icon: Camera, name: 'In-Studio Headshots', detail: 'Studio in Modesto, CA — $150 session + $150/image', href: '/premium-headshots', img: '/images/headshots/headshot-ceo-nutrition.jpg', alt: 'Professional headshot session' },
+  { icon: Camera, name: 'In-Studio Headshots', detail: 'Studio in Modesto, CA — $150 session + $150/image', href: '/premium-headshots', img: '/images/headshots/headshot-ceo-nutrition-02.jpg', alt: 'Professional headshot session' },
   { icon: Users, name: 'On-Site Team Photography', detail: 'We bring our full portable studio to you in Bakersfield — custom quote by team size', href: '/on-site-photography', img: '/images/BB Individual Headshot Session.png', alt: 'On-site team headshot photography' },
   { icon: Building2, name: 'Commercial Photography', detail: 'Product, brand, and architectural photography — custom quote', href: '/commercial', img: '/images/DoctorOffice 4.jpg', alt: 'Commercial photography for businesses' },
   { icon: Video, name: 'Video Production', detail: 'Corporate video, testimonials, drone — custom quote', href: '/video', img: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production' },
