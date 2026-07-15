@@ -141,7 +141,7 @@ export default function HomePage() {
         </div>
 
         {/* Portrait band with overlaid subhead + CTAs */}
-        <div className="relative w-full h-[52vh] min-h-[460px] max-h-[640px] overflow-hidden">
+        <div className="relative w-full h-[62vh] min-h-[540px] max-h-[720px] overflow-hidden">
           <Image
             src="/images/headshots/headshot-ceo-nutrition-02.jpg"
             alt="Executive headshot photographed by Rojas Photography in Modesto, California"
@@ -150,7 +150,7 @@ export default function HomePage() {
             quality={90}
             sizes="100vw"
             className="object-cover"
-            style={{ objectPosition: '66% 26%' }}
+            style={{ objectPosition: '66% 16%' }}
           />
           {/* soften the seam from the headline zone above */}
           <div className="absolute inset-0" aria-hidden="true" style={{ background: 'linear-gradient(180deg, var(--color-primary-dark) 0%, rgba(15,46,30,0) 20%)' }} />
