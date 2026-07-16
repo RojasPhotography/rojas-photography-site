@@ -81,12 +81,21 @@ export default function Footer() {
               LOCATIONS
             </h4>
             <ul className="text-sm space-y-3">
-              <li>Modesto</li>
-              <li>Stockton</li>
-              <li>Fresno</li>
-              <li>Turlock</li>
-              <li>Sacramento</li>
-              <li>East Bay</li>
+              {[
+                { href: '/modesto-headshots', label: 'Modesto' },
+                { href: '/stockton-headshots', label: 'Stockton' },
+                { href: '/fresno-headshots', label: 'Fresno' },
+                { href: '/turlock-headshots', label: 'Turlock' },
+                { href: '/sacramento-headshots', label: 'Sacramento' },
+                { href: '/merced-headshots', label: 'Merced' },
+                { href: '/bakersfield-headshots', label: 'Bakersfield' },
+              ].map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="hover:text-[var(--color-primary-light)] transition-colors">
+                    {l.label} Headshots
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
           <div>
@@ -126,11 +135,58 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Headshots by profession */}
+        <nav className="border-t border-gray-700/50 pt-8 mb-8">
+          <h4 className="text-white text-sm mb-4 tracking-wider">HEADSHOTS BY PROFESSION</h4>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            {[
+              { href: '/attorney-headshots', label: 'Attorney Headshots' },
+              { href: '/healthcare-headshots', label: 'Healthcare Headshots' },
+              { href: '/real-estate-headshots', label: 'Real Estate Headshots' },
+              { href: '/finance-headshots', label: 'Finance Headshots' },
+              { href: '/linkedin-headshots', label: 'LinkedIn Headshots' },
+              { href: '/student-headshots', label: 'Student & Grad Headshots' },
+            ].map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="hover:text-[var(--color-primary-light)] transition-colors">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Popular guides */}
+        <nav className="mb-10">
+          <h4 className="text-white text-sm mb-4 tracking-wider">HEADSHOT GUIDES</h4>
+          <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            {[
+              { href: '/professional-headshot-cost', label: 'How much a headshot costs' },
+              { href: '/what-to-wear-for-a-headshot', label: 'What to wear' },
+              { href: '/how-to-prepare-for-headshots', label: 'How to prepare' },
+              { href: '/best-background-for-headshot', label: 'Best background' },
+              { href: '/how-long-does-a-headshot-session-take', label: 'How long a session takes' },
+              { href: '/how-many-photos-from-a-headshot', label: 'How many photos you get' },
+              { href: '/how-often-to-update-headshot', label: 'How often to update' },
+              { href: '/headshot-vs-portrait', label: 'Headshot vs. portrait' },
+              { href: '/how-to-choose-a-headshot-photographer', label: 'Choosing a photographer' },
+              { href: '/do-you-need-professional-headshot-linkedin', label: 'Do you need a pro LinkedIn photo?' },
+              { href: '/ai-headshots-vs-professional-headshots', label: 'AI vs. professional headshots' },
+            ].map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="hover:text-[var(--color-primary-light)] transition-colors">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         <div className="border-t border-gray-700/50 pt-8 text-center text-sm">
           <p>
             &copy; {new Date().getFullYear()} Rojas Photography. Professional
             Corporate Headshots in Modesto, Stockton, Fresno, Turlock,
-            Sacramento &amp; East Bay. All rights reserved.
+            Sacramento &amp; the East Bay. All rights reserved.
           </p>
         </div>
       </div>

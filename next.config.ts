@@ -124,6 +124,37 @@ const nextConfig: NextConfig = {
         destination: '/ai-headshots-vs-professional-headshots',
         permanent: true,
       },
+      // Remaining old Squarespace 404s reported in Search Console (Jul 2026)
+      {
+        source: '/event-headshot-booth',
+        destination: '/headshot-booth',
+        permanent: true,
+      },
+      {
+        source: '/get-started',
+        destination: '/discovery-call',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-to-expect-from-your-professional-headshot-experience',
+        destination: '/how-to-prepare-for-headshots',
+        permanent: true,
+      },
+      {
+        source: '/blog/beyond-the-shoot-the-complete-professional-headshot-experience-that-transforms-your-business-presence',
+        destination: '/premium-headshots',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-makes-a-professional-headshot-worth-every-dollar-secrets-from-the-industrys-best',
+        destination: '/professional-headshot-cost',
+        permanent: true,
+      },
+      {
+        source: '/blog/invhra226dbxr9vq4yxli6uow651dv',
+        destination: '/',
+        permanent: true,
+      },
     ];
   },
 };
