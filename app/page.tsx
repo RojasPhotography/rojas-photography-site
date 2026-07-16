@@ -124,27 +124,47 @@ export default function HomePage() {
       ])} />
       <div className="min-h-screen bg-white">
       <main id="main-content">
-      {/* Hero — framed portrait "print" on green, headline beside it */}
+      {/* Hero — framed portrait "print" on green; headline top-left, copy below, photo right */}
       <section
         className="relative w-full pt-20"
         aria-label="Corporate headshots in Modesto and the Central Valley"
         style={{ background: 'radial-gradient(120% 100% at 12% 0%, rgba(255,255,255,.05), transparent 55%), linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 92%)' }}
       >
-        <div className="max-w-6xl mx-auto px-8 py-14 md:py-20 grid md:grid-cols-2 gap-10 md:gap-14 items-center text-white">
-          {/* Copy */}
-          <div className="order-2 md:order-1">
+        <div className="max-w-6xl mx-auto px-8 py-14 md:py-20 grid md:grid-cols-[1.22fr_0.78fr] md:auto-rows-min gap-x-10 md:gap-x-12 gap-y-7 items-start text-white">
+          {/* Headline — col 1 row 1 · first on mobile */}
+          <div className="order-1 md:col-start-1 md:row-start-1">
             <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-5 uppercase" style={{ animationDelay: '0.1s' }}>
               Corporate Headshots · Modesto &amp; the Central Valley
             </p>
-            <h1 className="hero-rise text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-[-0.01em] mb-6 max-w-[15ch]" style={{ animationDelay: '0.22s' }}>
+            <h1 className="hero-rise text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-[-0.01em] max-w-[15ch]" style={{ animationDelay: '0.22s' }}>
               The headshot your reputation deserves.
             </h1>
+          </div>
+
+          {/* Framed print — col 2, spans both rows · second on mobile */}
+          <div className="order-2 md:col-start-2 md:row-start-1 md:row-span-2 md:self-center hero-rise" style={{ animationDelay: '0.3s' }}>
+            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
+              <Image
+                src="/images/headshots/headshot-ceo-nutrition-02.jpg"
+                alt="Executive headshot photographed by Rojas Photography in Modesto, California"
+                fill
+                priority
+                quality={90}
+                sizes="(max-width: 768px) 100vw, 45vw"
+                className="object-cover"
+                style={{ objectPosition: '55% 22%' }}
+              />
+            </div>
+          </div>
+
+          {/* Subhead + CTAs — col 1 row 2 · third on mobile */}
+          <div className="order-3 md:col-start-1 md:row-start-2">
             <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-9" style={{ animationDelay: '0.38s' }}>
               Most professionals are quietly undersold by their photo. In one session — in our Modesto
               studio or on location at your office — you&rsquo;ll have a headshot that matches the
               reputation you&rsquo;ve built.
             </p>
-            <div className="hero-rise flex flex-col items-stretch sm:flex-row sm:items-start gap-4" style={{ animationDelay: '0.52s' }}>
+            <div className="hero-rise flex flex-col items-stretch sm:flex-row sm:items-start flex-wrap gap-4" style={{ animationDelay: '0.52s' }}>
               <Link
                 href="/premium-headshots#booking-heading"
                 className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center whitespace-nowrap"
@@ -157,21 +177,6 @@ export default function HomePage() {
               >
                 Headshot Day for Your Team →
               </Link>
-            </div>
-          </div>
-          {/* Framed print */}
-          <div className="order-1 md:order-2 hero-rise" style={{ animationDelay: '0.3s' }}>
-            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
-              <Image
-                src="/images/headshots/headshot-ceo-nutrition-02.jpg"
-                alt="Executive headshot photographed by Rojas Photography in Modesto, California"
-                fill
-                priority
-                quality={90}
-                sizes="(max-width: 768px) 100vw, 45vw"
-                className="object-cover"
-                style={{ objectPosition: '55% 22%' }}
-              />
             </div>
           </div>
         </div>
