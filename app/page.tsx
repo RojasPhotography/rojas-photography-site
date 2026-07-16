@@ -132,11 +132,11 @@ export default function HomePage() {
       >
         <div className="max-w-6xl mx-auto px-8 py-14 md:py-20 grid md:grid-cols-[1.22fr_0.78fr] md:auto-rows-min gap-x-10 md:gap-x-12 gap-y-7 items-start text-white">
           {/* Headline — col 1 row 1 · first on mobile */}
-          <div className="order-1 md:col-start-1 md:row-start-1">
+          <div className="order-1 md:col-start-1 md:row-start-1 text-center md:text-left">
             <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-5 uppercase" style={{ animationDelay: '0.1s' }}>
               Corporate Headshots · Modesto &amp; the Central Valley
             </p>
-            <h1 className="hero-rise text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-[-0.01em] max-w-[15ch]" style={{ animationDelay: '0.22s' }}>
+            <h1 className="hero-rise text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-[-0.01em] max-w-[15ch] mx-auto md:mx-0" style={{ animationDelay: '0.22s' }}>
               The headshot your reputation deserves.
             </h1>
           </div>
@@ -158,13 +158,13 @@ export default function HomePage() {
           </div>
 
           {/* Subhead + CTAs — col 1 row 2 · third on mobile */}
-          <div className="order-3 md:col-start-1 md:row-start-2">
-            <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-9" style={{ animationDelay: '0.38s' }}>
+          <div className="order-3 md:col-start-1 md:row-start-2 text-center md:text-left">
+            <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-9 mx-auto md:mx-0" style={{ animationDelay: '0.38s' }}>
               Most professionals are quietly undersold by their photo. In one session — in our Modesto
               studio or on location at your office — you&rsquo;ll have a headshot that matches the
               reputation you&rsquo;ve built.
             </p>
-            <div className="hero-rise flex flex-col items-stretch sm:flex-row sm:items-start flex-wrap gap-4" style={{ animationDelay: '0.52s' }}>
+            <div className="hero-rise flex flex-col items-center sm:flex-row sm:items-start sm:justify-start flex-wrap gap-4" style={{ animationDelay: '0.52s' }}>
               <Link
                 href="/premium-headshots#booking-heading"
                 className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center whitespace-nowrap"
