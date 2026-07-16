@@ -143,7 +143,7 @@ export default function HomePage() {
 
           {/* Framed print — col 2, spans both rows · second on mobile */}
           <div className="order-2 md:col-start-2 md:row-start-1 md:row-span-2 md:self-center hero-rise" style={{ animationDelay: '0.3s' }}>
-            <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
+            <div className="relative w-full aspect-[5/6] rounded-xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
               <Image
                 src="/images/headshots/headshot-ceo-nutrition-02.jpg"
                 alt="Executive headshot photographed by Rojas Photography in Modesto, California"
@@ -152,7 +152,7 @@ export default function HomePage() {
                 quality={90}
                 sizes="(max-width: 768px) 100vw, 45vw"
                 className="object-cover"
-                style={{ objectPosition: '55% 22%' }}
+                style={{ objectPosition: '56% 20%' }}
               />
             </div>
           </div>
