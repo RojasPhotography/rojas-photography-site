@@ -150,7 +150,7 @@ export default function HomePage() {
             quality={90}
             sizes="100vw"
             className="object-cover"
-            style={{ objectPosition: '66% 16%' }}
+            style={{ objectPosition: '66% 46%' }}
           />
           {/* soften the seam from the headline zone above */}
           <div className="absolute inset-0" aria-hidden="true" style={{ background: 'linear-gradient(180deg, var(--color-primary-dark) 0%, rgba(15,46,30,0) 20%)' }} />
