@@ -1,9 +1,11 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { CheckCircle2, Clock, Target, Users } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import CTASection from '../components/CTASection';
 import SchedulerEmbed from '../components/SchedulerEmbed';
+import TestimonialCard from '../components/TestimonialCard';
 import SchemaScript from '../components/SchemaScript';
 import { generateBreadcrumbSchema } from '../lib/schema';
 
@@ -108,6 +110,62 @@ export default function DiscoveryCallPage() {
                     </div>
                   </div>
                 </div>
+              </SectionReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Social proof — the work + client voices (esp. for Instagram visitors) */}
+        <section className="py-20 px-8 bg-white border-y border-gray-100">
+          <div className="max-w-6xl mx-auto">
+            <SectionReveal>
+              <div className="text-center mb-12">
+                <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">The Work Speaks for Itself</p>
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
+                  Headshots Professionals Are Proud to Use
+                </h2>
+                <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
+                  A sample of the executives, attorneys, and business leaders we&apos;ve photographed across Modesto and the Central Valley.
+                </p>
+              </div>
+            </SectionReveal>
+
+            <SectionReveal>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-16">
+                {[
+                  { src: '/images/headshots/headshot-executive-02.jpg', alt: 'Executive headshot in Modesto — Rojas Photography', pos: '55% 25%' },
+                  { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Comcast executive headshot in Modesto — Rojas Photography', pos: '60% 30%' },
+                  { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot in Modesto — Rojas Photography', pos: '58% 30%' },
+                  { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Finance CEO headshot in Modesto — Rojas Photography', pos: '50% 25%' },
+                ].map((p) => (
+                  <div key={p.src} className="relative aspect-[4/5] rounded-xl overflow-hidden ring-1 ring-black/5 shadow-sm">
+                    <Image
+                      src={p.src}
+                      alt={p.alt}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                      className="object-cover"
+                      style={{ objectPosition: p.pos }}
+                    />
+                  </div>
+                ))}
+              </div>
+            </SectionReveal>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              <SectionReveal>
+                <TestimonialCard
+                  name="Catherine Luke"
+                  role="CEO"
+                  quote="Professional, efficient, and high-quality. Within days, our new employee had a corporate headshot ready for our website and LinkedIn. Highly recommended for any business."
+                />
+              </SectionReveal>
+              <SectionReveal>
+                <TestimonialCard
+                  name="Joyce Ulrich"
+                  role="Entrepreneur, Modesto"
+                  quote="Alfonso and Niomi create a comfortable environment that puts you at ease immediately. The professional headshots turned out beautifully—exactly what I needed for my business."
+                />
               </SectionReveal>
             </div>
           </div>
