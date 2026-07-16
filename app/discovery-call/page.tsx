@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { CheckCircle2, Clock, Target, Users } from 'lucide-react';
-import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import CTASection from '../components/CTASection';
 import SchedulerEmbed from '../components/SchedulerEmbed';
@@ -47,18 +46,55 @@ export default function DiscoveryCallPage() {
         { name: 'Discovery Call', url: 'https://rojasphotography.net/discovery-call' },
       ])} />
     <div className="min-h-screen bg-white">
-      <HeroSection
-        title="Schedule Your Discovery Call"
-        subtitle="Let's discuss your professional photography needs and create a customized solution that works for you."
-        gradient
-      />
+      {/* Hero — meet the two people you'll actually talk to */}
+      <section
+        className="relative w-full pt-20"
+        aria-label="Book a free discovery call with Alfonso and Niomi Rojas"
+        style={{ background: 'radial-gradient(120% 100% at 15% 0%, rgba(255,255,255,.05), transparent 55%), linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 92%)' }}
+      >
+        <div className="max-w-6xl mx-auto px-8 py-14 md:py-20 grid md:grid-cols-[1.1fr_0.9fr] gap-10 md:gap-14 items-center text-white">
+          <div className="order-2 md:order-1 text-center md:text-left">
+            <p className="text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-5 uppercase">
+              Free · 20–30 Minutes · No Pressure
+            </p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-[-0.01em] mb-6 max-w-[16ch] mx-auto md:mx-0">
+              Let&rsquo;s talk before you book.
+            </h1>
+            <p className="text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-8 mx-auto md:mx-0">
+              A relaxed discovery call with Alfonso and Niomi — the two photographers who&rsquo;ll be
+              at your session. We&rsquo;ll learn your goals, answer your questions, and map out the
+              right plan. No pressure, no upselling.
+            </p>
+            <a
+              href="#calendar-heading"
+              className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+            >
+              Pick a time ↓
+            </a>
+          </div>
+          <div className="order-1 md:order-2">
+            <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
+              <Image
+                src="/images/Alfonso+Niomi-0026.jpg"
+                alt="Alfonso and Niomi Rojas, the two photographers behind Rojas Photography in Modesto"
+                fill
+                priority
+                quality={90}
+                sizes="(max-width: 768px) 100vw, 45vw"
+                className="object-cover"
+                style={{ objectPosition: '50% 25%' }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <main id="main-content">
         {/* What Happens */}
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-20 text-[var(--color-text-dark)]">
+              <h2 className="text-3xl md:text-4xl text-center mb-20 text-[var(--color-text-dark)]">
                 What Happens on a Discovery Call?
               </h2>
             </SectionReveal>
@@ -79,7 +115,7 @@ export default function DiscoveryCallPage() {
                       <div key={item.title} className="flex gap-4">
                         <item.icon size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
                         <div>
-                          <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.title}</h3>
+                          <h3 className="text-[var(--color-text-dark)] mb-1">{item.title}</h3>
                           <p className="text-[var(--color-text-body)] text-sm">{item.desc}</p>
                         </div>
                       </div>
@@ -90,7 +126,7 @@ export default function DiscoveryCallPage() {
 
               <SectionReveal>
                 <div className="bg-[var(--color-bg-warm)] p-10 rounded-2xl border border-gray-100">
-                  <h3 className="text-2xl font-bold text-[var(--color-text-dark)] mb-8">Discovery Call Details</h3>
+                  <h3 className="text-2xl text-[var(--color-text-dark)] mb-8">Discovery Call Details</h3>
                   <div className="space-y-6">
                     <div>
                       <p className="text-xs font-bold text-[var(--color-text-muted)] tracking-wider mb-1">DURATION</p>
@@ -121,7 +157,7 @@ export default function DiscoveryCallPage() {
             <SectionReveal>
               <div className="text-center mb-12">
                 <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.22em] uppercase mb-4">The Work Speaks for Itself</p>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">
                   Headshots Professionals Are Proud to Use
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
@@ -175,7 +211,7 @@ export default function DiscoveryCallPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]" aria-labelledby="calendar-heading">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 id="calendar-heading" className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-text-dark)]">
+              <h2 id="calendar-heading" className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">
                 Pick Your Time
               </h2>
               <p className="text-center text-[var(--color-text-body)] mb-16 text-lg">
@@ -193,36 +229,11 @@ export default function DiscoveryCallPage() {
           </div>
         </section>
 
-        {/* Why Schedule */}
-        <section className="py-20 px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
-                Why Schedule a Discovery Call?
-              </h2>
-            </SectionReveal>
-            <div className="grid md:grid-cols-3 gap-6">
-              {[
-                { title: 'Expert Guidance', desc: 'With 15+ years of corporate experience, we know what works for business professionals.' },
-                { title: 'Customized Solutions', desc: "Every business is different. We'll create a solution tailored to your needs." },
-                { title: 'No Hidden Fees', desc: "Transparent pricing and honest conversations. We'll tell you exactly what things cost." },
-              ].map((item) => (
-                <SectionReveal key={item.title}>
-                  <div className="bg-[var(--color-bg-warm)] p-8 rounded-xl">
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">{item.title}</h3>
-                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
-                  </div>
-                </SectionReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* FAQ */}
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+              <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">
                 Questions About Discovery Calls?
               </h2>
             </SectionReveal>
@@ -237,7 +248,7 @@ export default function DiscoveryCallPage() {
               ].map((item) => (
                 <SectionReveal key={item.q}>
                   <div>
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">{item.q}</h3>
+                    <h3 className="text-xl text-[var(--color-text-dark)] mb-3">{item.q}</h3>
                     <p className="text-[var(--color-text-body)] leading-relaxed">{item.a}</p>
                   </div>
                 </SectionReveal>
