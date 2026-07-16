@@ -124,66 +124,63 @@ export default function HomePage() {
       ])} />
       <div className="min-h-screen bg-white">
       <main id="main-content">
-      {/* Hero — framed portrait "print" on green; headline top-left, copy below, photo right */}
+      {/* Hero — full-bleed portrait, dual CTA (studio vs on-location) */}
       <section
-        className="relative w-full pt-20"
+        className="relative w-full min-h-screen flex items-end overflow-hidden pt-20"
         aria-label="Corporate headshots in Modesto and the Central Valley"
-        style={{ background: 'radial-gradient(120% 100% at 12% 0%, rgba(255,255,255,.05), transparent 55%), linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 92%)' }}
       >
-        <div className="max-w-6xl mx-auto px-8 py-14 md:py-20 grid md:grid-cols-[1.22fr_0.78fr] md:auto-rows-min gap-x-10 md:gap-x-12 gap-y-7 items-start text-white">
-          {/* Headline — col 1 row 1 · first on mobile */}
-          <div className="order-1 md:col-start-1 md:row-start-1 text-center md:text-left">
-            <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-5 uppercase" style={{ animationDelay: '0.1s' }}>
-              Corporate Headshots · Modesto &amp; the Central Valley
-            </p>
-            <h1 className="hero-rise text-4xl sm:text-5xl lg:text-6xl leading-[1.04] tracking-[-0.01em] max-w-[15ch] mx-auto md:mx-0" style={{ animationDelay: '0.22s' }}>
-              The headshot your reputation deserves.
-            </h1>
+        <Image
+          src="/images/headshots/headshot-ceo-nutrition-02.jpg"
+          alt="Executive headshot photographed by Rojas Photography in Modesto, California"
+          fill
+          priority
+          quality={90}
+          sizes="100vw"
+          className="object-cover"
+          style={{ objectPosition: '60% 35%' }}
+        />
+        <div
+          className="absolute inset-0"
+          aria-hidden="true"
+          style={{ background: 'linear-gradient(88deg, rgba(15,46,30,.92) 8%, rgba(15,46,30,.62) 40%, rgba(15,46,30,.08) 72%, rgba(15,46,30,.35) 100%)' }}
+        />
+        <div
+          className="absolute inset-0"
+          aria-hidden="true"
+          style={{ background: 'linear-gradient(0deg, rgba(15,46,30,.8) 4%, rgba(15,46,30,.35) 24%, transparent 48%)' }}
+        />
+        <div
+          className="absolute inset-0 md:hidden"
+          aria-hidden="true"
+          style={{ background: 'rgba(15,46,30,.42)' }}
+        />
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-8 pb-14 md:pb-20 pt-24 text-white">
+          <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase" style={{ animationDelay: '0.1s' }}>
+            Corporate Headshots · Modesto &amp; the Central Valley
+          </p>
+          <h1 className="hero-rise text-4xl sm:text-6xl lg:text-7xl mb-6 leading-[1.02] tracking-[-0.01em] max-w-[17ch]" style={{ animationDelay: '0.22s' }}>
+            The headshot your reputation deserves.
+          </h1>
+          <p className="hero-rise text-lg md:text-xl max-w-2xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.38s' }}>
+            Most professionals are quietly undersold by their photo. In one session — in our Modesto
+            studio or on location at your office — you&rsquo;ll have a headshot that matches the
+            reputation you&rsquo;ve built.
+          </p>
+          <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
+            <Link
+              href="/premium-headshots#booking-heading"
+              className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
+            >
+              Book a Studio Session
+            </Link>
+            <Link
+              href="/on-site-photography"
+              className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
+            >
+              Headshot Day for Your Team →
+            </Link>
           </div>
-
-          {/* Framed print — col 2, spans both rows · second on mobile */}
-          <div className="order-2 md:col-start-2 md:row-start-1 md:row-span-2 md:self-center hero-rise" style={{ animationDelay: '0.3s' }}>
-            <div className="relative w-full aspect-[5/6] rounded-xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
-              <Image
-                src="/images/headshots/headshot-ceo-nutrition-02.jpg"
-                alt="Executive headshot photographed by Rojas Photography in Modesto, California"
-                fill
-                priority
-                quality={90}
-                sizes="(max-width: 768px) 100vw, 45vw"
-                className="object-cover"
-                style={{ objectPosition: '56% 20%' }}
-              />
-            </div>
-          </div>
-
-          {/* Subhead + CTAs — col 1 row 2 · third on mobile */}
-          <div className="order-3 md:col-start-1 md:row-start-2 text-center md:text-left">
-            <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-9 mx-auto md:mx-0" style={{ animationDelay: '0.38s' }}>
-              Most professionals are quietly undersold by their photo. In one session — in our Modesto
-              studio or on location at your office — you&rsquo;ll have a headshot that matches the
-              reputation you&rsquo;ve built.
-            </p>
-            <div className="hero-rise flex flex-col items-center sm:flex-row sm:items-start sm:justify-start flex-wrap gap-4" style={{ animationDelay: '0.52s' }}>
-              <Link
-                href="/premium-headshots#booking-heading"
-                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-8 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center whitespace-nowrap"
-              >
-                Book a Studio Session
-              </Link>
-              <Link
-                href="/on-site-photography"
-                className="border-2 border-white/50 text-white hover:bg-white/10 px-8 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center whitespace-nowrap"
-              >
-                Headshot Day for Your Team →
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        {/* Proof bar */}
-        <div className="max-w-6xl mx-auto px-8 pb-10 md:pb-12">
-          <div className="hero-rise border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.68s' }}>
+          <div className="hero-rise mt-12 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.68s' }}>
             <span>500+ executives photographed</span>
             <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
             <span>60+ five-star Google reviews</span>
