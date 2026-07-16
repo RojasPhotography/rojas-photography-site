@@ -112,7 +112,7 @@ export default function BakersfieldHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   Corporate Photography Serving Bakersfield & Kern County
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -130,7 +130,7 @@ export default function BakersfieldHeadshotsPage() {
                           <div className="w-11 h-11 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">
                             <s.icon className="text-white" size={22} aria-hidden="true" />
                           </div>
-                          <h3 className="text-lg font-bold text-white mb-2">{s.name}</h3>
+                          <h3 className="text-lg text-white mb-2">{s.name}</h3>
                           <p className="text-white/80 text-sm leading-relaxed mb-3">{s.detail}</p>
                           <span className="text-white font-semibold text-sm group-hover:underline">Learn More →</span>
                         </div>
@@ -145,7 +145,7 @@ export default function BakersfieldHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   Why Bakersfield Professionals Choose Rojas Photography
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -158,7 +158,7 @@ export default function BakersfieldHeadshotsPage() {
                     <div className="flex gap-5 p-7 bg-white rounded-xl border border-gray-100 h-full">
                       <div className="w-10 h-10 bg-[var(--color-primary)] rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">{i + 1}</div>
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-2">{r.title}</h3>
+                        <h3 className="text-[var(--color-text-dark)] text-lg mb-2">{r.title}</h3>
                         <p className="text-[var(--color-text-body)] leading-relaxed text-sm">{r.desc}</p>
                       </div>
                     </div>
@@ -171,7 +171,7 @@ export default function BakersfieldHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">
                   Your Image Should Match Your Professional Reputation
                 </h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
@@ -192,7 +192,7 @@ export default function BakersfieldHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">What Clients Say</h2>
+                <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">What Clients Say</h2>
               </SectionReveal>
               <div className="grid md:grid-cols-3 gap-6">
                 <SectionReveal>

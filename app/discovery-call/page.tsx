@@ -243,7 +243,7 @@ export default function DiscoveryCallPage() {
                 { q: 'Is there a cost for the discovery call?', a: 'No, absolutely not. Discovery calls are completely free. No obligation to book anything.' },
                 { q: 'Can I do a video call instead of a phone call?', a: 'Yes! You can choose your preferred format when you schedule.' },
                 { q: "What if I'm not ready to book yet?", a: "Perfect! Discovery calls are for anyone considering professional photography. It's a great way to get answers." },
-                { q: 'How far in advance should I schedule?', a: 'Whenever works for you! We have availability throughout the week. You can also call us directly at 209-380-3727.' },
+                { q: 'How far in advance should we schedule?', a: 'Whenever works for you! We have availability throughout the week. You can also call us directly at 209-380-3727.' },
                 { q: 'How do I reschedule if I need to?', a: 'Just let us know! Call 209-380-3727 or email alfonso@rojasphotography.net. No penalties.' },
               ].map((item) => (
                 <SectionReveal key={item.q}>

@@ -22,7 +22,7 @@ const faqs = [
     answer: 'Get a full night of sleep — tired eyes show on camera. Get a haircut one week before (not the day before — hair needs to settle). Steam or iron all outfits the night before. Arrive with your skin moisturized and hair styled as you would for an important meeting. If you wear makeup, apply it as you would for a significant professional event. Do not dramatically change your appearance the day of the session.',
   },
   {
-    question: 'How early should I arrive for my headshot session?',
+    question: 'How early should we arrive for my headshot session?',
     answer: 'Arrive 5–10 minutes early. This gives you time to settle in, hang up your wardrobe, and start the consultation relaxed rather than rushed. Arriving stressed and hurried affects your expression and energy — the session goes better when you have a moment to arrive and decompress before we start.',
   },
   {
@@ -65,7 +65,7 @@ export default function HowLongHeadshotSessionPage() {
           <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
                 <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                   <p><strong className="text-[var(--color-text-dark)]">A professional headshot session at Rojas Photography can take up to 3 hours — unhurried, with no hard time limit.</strong> This includes a brief consultation at the start, real-time expression and posing coaching throughout, multiple wardrobe changes, and a review of your best frames before you leave.</p>
                   <p>At Rojas Photography, sessions are never rushed. We block up to 3 hours for individual sessions and unlimited wardrobe changes are included — you are not working against a clock.</p>
@@ -77,7 +77,7 @@ export default function HowLongHeadshotSessionPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">What Happens During a Session</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">What Happens During a Session</h2>
               </SectionReveal>
               <div className="space-y-4">
                 {[
@@ -91,7 +91,7 @@ export default function HowLongHeadshotSessionPage() {
                     <div className="flex gap-5 p-7 bg-[var(--color-bg-warm)] rounded-xl border border-gray-100">
                       <div className="w-10 h-10 bg-[var(--color-primary)] rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm">{item.step}</div>
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-2">{item.title}</h3>
+                        <h3 className="text-[var(--color-text-dark)] text-lg mb-2">{item.title}</h3>
                         <p className="text-[var(--color-text-body)] leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
@@ -104,7 +104,7 @@ export default function HowLongHeadshotSessionPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">Team & On-Site Session Timing</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">Team & On-Site Session Timing</h2>
               </SectionReveal>
               <div className="grid md:grid-cols-3 gap-5">
                 {[
@@ -135,7 +135,7 @@ export default function HowLongHeadshotSessionPage() {
           <section className="py-16 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-2xl font-bold text-center text-[var(--color-text-dark)] mb-8">Tips to Make the Most of Your Session Time</h2>
+                <h2 className="text-2xl text-center text-[var(--color-text-dark)] mb-8">Tips to Make the Most of Your Session Time</h2>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-4">
                 {[

@@ -22,7 +22,7 @@ const faqs = [
     answer: 'Yes — always update your headshot before an active job search. Recruiters and hiring managers view your LinkedIn profile before and after every interview. An outdated photo that does not match who shows up to the interview creates a subtle but real credibility gap. Invest in a current headshot before you start applying.',
   },
   {
-    question: 'How do I know if my headshot is outdated?',
+    question: 'How do we know if my headshot is outdated?',
     answer: 'Ask yourself: if someone looked at my headshot and then met me in person today, would they recognize me immediately without a second look? If the answer is no — different hair, significantly different appearance, or just a noticeably older version of you — your headshot is outdated.',
   },
   {
@@ -65,7 +65,7 @@ export default function HowOftenUpdateHeadshotPage() {
           <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
                 <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
                     <strong className="text-[var(--color-text-dark)]">Update your professional headshot annually, or every other year at minimum.</strong> This is not just about appearance changes — it is about keeping your professional brand current. In 2026, the standard for professional photography and the expectations of platforms like LinkedIn have risen significantly.
@@ -81,7 +81,7 @@ export default function HowOftenUpdateHeadshotPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">Update Frequency by Profession</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">Update Frequency by Profession</h2>
               </SectionReveal>
               <div className="space-y-4">
                 {[
@@ -117,7 +117,7 @@ export default function HowOftenUpdateHeadshotPage() {
                 <div className="flex gap-4 items-start">
                   <AlertTriangle size={24} className="text-amber-500 flex-shrink-0 mt-1" />
                   <div>
-                    <h2 className="text-2xl font-bold text-[var(--color-text-dark)] mb-4">Update Immediately If Any of These Apply</h2>
+                    <h2 className="text-2xl text-[var(--color-text-dark)] mb-4">Update Immediately If Any of These Apply</h2>
                     <ul className="space-y-3">
                       {[
                         'Your appearance has changed significantly (hair, weight, major style change)',

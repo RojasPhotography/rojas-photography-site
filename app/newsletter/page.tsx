@@ -91,7 +91,7 @@ export default function NewsletterPage() {
       <section className="pt-28 pb-16 px-6 bg-[var(--color-bg-warm)]">
         <div className="max-w-xl mx-auto text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-[var(--color-primary)] mb-4">Free Monthly Newsletter</p>
-          <h1 className="text-4xl md:text-5xl font-bold text-[var(--color-text-dark)] leading-tight mb-4">
+          <h1 className="text-4xl md:text-5xl text-[var(--color-text-dark)] leading-tight mb-4">
             They Google you before they call.
           </h1>
           <p className="text-[var(--color-text-body)] text-lg leading-relaxed mb-8">
@@ -114,12 +114,12 @@ export default function NewsletterPage() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-3xl mx-auto">
           <p className="text-center text-sm font-semibold uppercase tracking-widest text-[var(--color-primary)] mb-3">What&apos;s inside every issue</p>
-          <h2 className="text-3xl font-bold text-center text-[var(--color-text-dark)] mb-10">Not your average photography newsletter.</h2>
+          <h2 className="text-3xl text-center text-[var(--color-text-dark)] mb-10">Not your average photography newsletter.</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {perks.map((perk) => (
               <div key={perk.title} className="bg-[var(--color-bg-warm)] rounded-2xl p-6">
                 <CheckCircle2 size={22} className="text-[var(--color-primary)] mb-3" />
-                <h3 className="font-bold text-[var(--color-text-dark)] mb-2">{perk.title}</h3>
+                <h3 className="text-[var(--color-text-dark)] mb-2">{perk.title}</h3>
                 <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{perk.desc}</p>
               </div>
             ))}
@@ -157,7 +157,7 @@ export default function NewsletterPage() {
       {/* Bottom CTA */}
       <section className="py-16 px-6 bg-[var(--color-primary-dark)]">
         <div className="max-w-md mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-3">Ready to join?</h2>
+          <h2 className="text-3xl text-white mb-3">Ready to join?</h2>
           <p className="text-white/80 mb-8">It takes 10 seconds. One email a month. Cancel anytime.</p>
           <div className="bg-white rounded-2xl p-6">
             <SignupForm compact />

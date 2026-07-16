@@ -130,7 +130,7 @@ export default function StocktonHeadshotsPage() {
           <section className="py-16 md:py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">Stockton Is Growing. Your Professional Image Should Keep Up.</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">Stockton Is Growing. Your Professional Image Should Keep Up.</h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                   <p>Stockton&apos;s business community is expanding — healthcare systems, logistics at the Port, legal practices, financial services, and a growing tech presence across San Joaquin County. In every one of these industries, your professional image is doing work before you walk in the room.</p>
                   <p>An outdated photo on LinkedIn, a low-quality headshot on your firm directory, or a mismatched image across platforms quietly signals that you haven&apos;t kept up. It costs you credibility before you have a chance to demonstrate it.</p>
@@ -144,14 +144,14 @@ export default function StocktonHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">Serving Stockton&apos;s Professional Community</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">Serving Stockton&apos;s Professional Community</h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">Every industry in San Joaquin County has its own visual standard. We know what professional credibility looks like in each one.</p>
               </SectionReveal>
               <div className="space-y-4">
                 {industries.map(item => (
                   <SectionReveal key={item.name}>
                     <div className="bg-white rounded-xl p-6 border border-gray-100">
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.name}</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-1">{item.name}</h3>
                       <p className="text-sm text-[var(--color-text-muted)] mb-2">{item.orgs}</p>
                       <p className="text-sm text-[var(--color-text-body)] leading-relaxed">{item.note}</p>
                     </div>
@@ -165,7 +165,7 @@ export default function StocktonHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">Photography Services Available in Stockton</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">Photography Services Available in Stockton</h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">Full-service corporate photography for Stockton businesses — individual headshots through full team and commercial projects.</p>
               </SectionReveal>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -179,7 +179,7 @@ export default function StocktonHeadshotsPage() {
                           <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-5 group-hover:scale-110 transition-transform backdrop-blur-sm">
                             <service.icon className="text-white" size={24} aria-hidden="true" />
                           </div>
-                          <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
+                          <h3 className="text-xl text-white mb-2">{service.title}</h3>
                           <p className="text-white/90 text-sm leading-relaxed mb-3">{service.desc}</p>
                           <p className="text-white/70 text-xs mb-3">{service.price}</p>
                           <span className="text-white font-semibold text-sm group-hover:underline">Learn More →</span>
@@ -196,7 +196,7 @@ export default function StocktonHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">How It Works</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">How It Works</h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-xl mx-auto">Three steps. No awkwardness. Images you will actually use.</p>
               </SectionReveal>
               <div className="grid md:grid-cols-3 gap-6">
@@ -208,7 +208,7 @@ export default function StocktonHeadshotsPage() {
                   <SectionReveal key={item.step}>
                     <div className="bg-white rounded-xl p-8 border border-gray-100 text-center h-full">
                       <div className="w-12 h-12 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg">{item.step}</div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-3">{item.title}</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-3">{item.title}</h3>
                       <p className="text-sm text-[var(--color-text-body)] leading-relaxed">{item.desc}</p>
                     </div>
                   </SectionReveal>
@@ -221,7 +221,7 @@ export default function StocktonHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">The Work</h2>
+                <h2 className="text-3xl md:text-4xl text-center mb-12 text-[var(--color-text-dark)]">The Work</h2>
               </SectionReveal>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {[
@@ -241,7 +241,7 @@ export default function StocktonHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">What a Great Headshot Does for You</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">What a Great Headshot Does for You</h2>
                 <div className="grid md:grid-cols-2 gap-4">
                   {[
                     'Your LinkedIn profile earns views, connection requests, and messages from the right people',
@@ -263,7 +263,7 @@ export default function StocktonHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">What Clients Say</h2>
+                <h2 className="text-3xl md:text-4xl text-center mb-12 text-[var(--color-text-dark)]">What Clients Say</h2>
               </SectionReveal>
               <div className="grid md:grid-cols-3 gap-6">
                 <SectionReveal>

@@ -143,7 +143,7 @@ export default function RealEstateHeadshotsPage() {
           <section className="py-20 md:py-28 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   Your Face Is Everywhere — Make It Work For You
                 </h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
@@ -168,7 +168,7 @@ export default function RealEstateHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   What Your Real Estate Headshot Needs to Communicate
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -183,7 +183,7 @@ export default function RealEstateHeadshotsPage() {
                         {i + 1}
                       </div>
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-2">{item.quality}</h3>
+                        <h3 className="text-[var(--color-text-dark)] text-lg mb-2">{item.quality}</h3>
                         <p className="text-[var(--color-text-body)] leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
@@ -197,11 +197,11 @@ export default function RealEstateHeadshotsPage() {
           <section className="py-20 md:py-28 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   One Session. Every Platform Covered.
                 </h2>
                 <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-10 text-center max-w-2xl mx-auto">
-                  I understand that real estate agents use their headshot more broadly and more publicly than almost any other profession. A single session with multiple looks gives you everything you need for every format.
+                  We understand that real estate agents use their headshot more broadly and more publicly than almost any other profession. A single session with multiple looks gives you everything you need for every format.
                 </p>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-5">
@@ -215,7 +215,7 @@ export default function RealEstateHeadshotsPage() {
                     <div className="flex gap-4 p-6 bg-[var(--color-bg-warm)] rounded-xl border border-gray-100">
                       <CheckCircle2 size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.use}</h3>
+                        <h3 className="text-[var(--color-text-dark)] mb-1">{item.use}</h3>
                         <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
@@ -225,7 +225,7 @@ export default function RealEstateHeadshotsPage() {
               <SectionReveal>
                 <div className="mt-10 bg-[var(--color-bg-warm)] rounded-xl p-7 border border-gray-100">
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    <strong className="text-[var(--color-text-dark)]">My process:</strong> Before your session, we discuss your market, your brand, and every platform your photo will appear on. During your session, I coach you through multiple expressions and wardrobe looks so you leave with images tailored to each use — not just one generic headshot you will try to use everywhere.
+                    <strong className="text-[var(--color-text-dark)]">Our process:</strong> Before your session, we discuss your market, your brand, and every platform your photo will appear on. During your session, I coach you through multiple expressions and wardrobe looks so you leave with images tailored to each use — not just one generic headshot you will try to use everywhere.
                   </p>
                   <div className="mt-6">
                     <ol className="space-y-3">
@@ -254,7 +254,7 @@ export default function RealEstateHeadshotsPage() {
               <SectionReveal>
                 <div className="flex gap-4 mb-8 items-start">
                   <AlertTriangle size={28} className="text-amber-500 flex-shrink-0 mt-1" />
-                  <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
+                  <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)]">
                     The Cost of an Outdated Headshot
                   </h2>
                 </div>
@@ -277,14 +277,14 @@ export default function RealEstateHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-14">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-14">
                   What&apos;s Included in Your Session
                 </h2>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-6">
                 <SectionReveal>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 border border-gray-100 h-full">
-                    <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-5">Session Details</h3>
+                    <h3 className="text-[var(--color-text-dark)] text-lg mb-5">Session Details</h3>
                     <ul className="space-y-3">
                       {sessionIncludes.map(item => (
                         <li key={item} className="flex gap-2 text-sm text-[var(--color-text-body)]">
@@ -298,7 +298,7 @@ export default function RealEstateHeadshotsPage() {
                 <SectionReveal>
                   <div className="space-y-5">
                     <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 border border-gray-100">
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-3">Pricing</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-3">Pricing</h3>
                       <p className="text-[var(--color-text-body)] mb-2">
                         <strong className="text-[var(--color-text-dark)]">$150</strong> session fee
                       </p>
@@ -310,7 +310,7 @@ export default function RealEstateHeadshotsPage() {
                       </p>
                     </div>
                     <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 border border-gray-100">
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-3">Where We Serve</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-3">Where we Serve</h3>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed mb-3">
                         Studio in Modesto, CA — central to agents throughout the Central Valley including Stockton, Turlock, Merced, Fresno, and Sacramento.
                       </p>
@@ -336,7 +336,7 @@ export default function RealEstateHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+                <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">
                   What Clients Say
                 </h2>
               </SectionReveal>
@@ -370,7 +370,7 @@ export default function RealEstateHeadshotsPage() {
           <section className="py-14 px-8 bg-white">
             <div className="max-w-4xl mx-auto text-center">
               <SectionReveal>
-                <h3 className="font-bold text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
+                <h3 className="text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/what-to-wear-for-a-headshot" className="btn-outline px-6 py-2.5 text-sm font-semibold rounded-full inline-block">What to Wear</Link>
                   <Link href="/professional-headshot-cost" className="btn-outline px-6 py-2.5 text-sm font-semibold rounded-full inline-block">Headshot Pricing Guide</Link>

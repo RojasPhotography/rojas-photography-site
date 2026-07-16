@@ -64,7 +64,7 @@ export default function BestBackgroundHeadshotPage() {
           <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
                 <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                   <p><strong className="text-[var(--color-text-dark)]">For most professional headshots, a clean neutral background — white, light gray, or dark charcoal — is the best choice.</strong></p>
                   <p>Neutral backgrounds keep focus on your face, work across all professional directories, and photograph consistently. The right specific color depends on your industry, your skin tone, and what you want to communicate.</p>
@@ -76,7 +76,7 @@ export default function BestBackgroundHeadshotPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">Background Options — What Each Communicates</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">Background Options — What Each Communicates</h2>
               </SectionReveal>
               <div className="space-y-4">
                 {[
@@ -87,7 +87,7 @@ export default function BestBackgroundHeadshotPage() {
                 ].map(item => (
                   <SectionReveal key={item.bg}>
                     <div className="bg-[var(--color-bg-warm)] rounded-xl p-7 border border-gray-100">
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-3">{item.bg}</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-3">{item.bg}</h3>
                       <p className="text-sm text-[var(--color-text-muted)] mb-3"><strong>Best for:</strong> {item.when}</p>
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
@@ -109,7 +109,7 @@ export default function BestBackgroundHeadshotPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">What to Avoid</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">What to Avoid</h2>
               </SectionReveal>
               <div className="space-y-3">
                 {[

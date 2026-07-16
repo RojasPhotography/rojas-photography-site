@@ -154,7 +154,7 @@ export default function FinanceHeadshotsPage() {
           <section className="py-20 md:py-28 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   In Finance, Trust Is Everything — And It Starts Before You Speak
                 </h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
@@ -179,7 +179,7 @@ export default function FinanceHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   What Your Finance Headshot Needs to Communicate
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -194,7 +194,7 @@ export default function FinanceHeadshotsPage() {
                         {i + 1}
                       </div>
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-2">{item.quality}</h3>
+                        <h3 className="text-[var(--color-text-dark)] text-lg mb-2">{item.quality}</h3>
                         <p className="text-[var(--color-text-body)] leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
@@ -208,15 +208,15 @@ export default function FinanceHeadshotsPage() {
           <section className="py-20 md:py-28 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
-                  I Understand What Finance Professionals Need
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
+                  We Understand What Finance Professionals Need
                 </h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed mb-10">
                   <p>
-                    I understand that in financial services, your image is part of your value proposition. A generic headshot signals generic service. I work with financial professionals across the Central Valley — advisors, bankers, CPAs, and insurance professionals who understand that their professional brand is inseparable from their results.
+                    We understand that in financial services, your image is part of your value proposition. A generic headshot signals generic service. We work with financial professionals across the Central Valley — advisors, bankers, CPAs, and insurance professionals who understand that their professional brand is inseparable from their results.
                   </p>
                   <p>
-                    Before I was a photographer, I spent 15 years in corporate leadership. I know what it looks like when a professional takes their work seriously — and I know how to capture that in an image. The expression that communicates both warmth and authority is not something you arrive at by accident. It requires coaching and calibration.
+                    Before we picked up a camera, we spent 15+ years in corporate leadership. We know what it looks like when a professional takes their work seriously — and we know how to capture that in an image. The expression that communicates both warmth and authority is not something you arrive at by accident. It requires coaching and calibration.
                   </p>
                 </div>
               </SectionReveal>
@@ -246,8 +246,8 @@ export default function FinanceHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
-                  Finance Professionals We Photograph
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
+                  Finance Professionals we Photograph
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-12 max-w-2xl mx-auto">
                   Serving financial professionals across every discipline in the Central Valley and throughout California.
@@ -272,7 +272,7 @@ export default function FinanceHeadshotsPage() {
               <SectionReveal>
                 <div className="flex gap-4 mb-8 items-start">
                   <AlertTriangle size={28} className="text-amber-500 flex-shrink-0 mt-1" />
-                  <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
+                  <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)]">
                     The Silent Signal Your Headshot Sends
                   </h2>
                 </div>
@@ -295,14 +295,14 @@ export default function FinanceHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-14">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-14">
                   What&apos;s Included in Your Session
                 </h2>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-6">
                 <SectionReveal>
                   <div className="bg-white rounded-xl p-8 border border-gray-100 h-full">
-                    <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-5">Session Details</h3>
+                    <h3 className="text-[var(--color-text-dark)] text-lg mb-5">Session Details</h3>
                     <ul className="space-y-3">
                       {sessionIncludes.map(item => (
                         <li key={item} className="flex gap-2 text-sm text-[var(--color-text-body)]">
@@ -316,7 +316,7 @@ export default function FinanceHeadshotsPage() {
                 <SectionReveal>
                   <div className="space-y-5">
                     <div className="bg-white rounded-xl p-8 border border-gray-100">
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-3">Pricing</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-3">Pricing</h3>
                       <p className="text-[var(--color-text-body)] mb-2">
                         <strong className="text-[var(--color-text-dark)]">$150</strong> session fee
                       </p>
@@ -328,7 +328,7 @@ export default function FinanceHeadshotsPage() {
                       </p>
                     </div>
                     <div className="bg-white rounded-xl p-8 border border-gray-100">
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-3">Where We Serve</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-3">Where we Serve</h3>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed mb-3">
                         Studio in Modesto, CA — serving financial professionals throughout the Central Valley, Sacramento, and the Bay Area.
                       </p>
@@ -354,7 +354,7 @@ export default function FinanceHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+                <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">
                   What Clients Say
                 </h2>
               </SectionReveal>
@@ -388,7 +388,7 @@ export default function FinanceHeadshotsPage() {
           <section className="py-14 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto text-center">
               <SectionReveal>
-                <h3 className="font-bold text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
+                <h3 className="text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/what-to-wear-for-a-headshot" className="btn-outline px-6 py-2.5 text-sm font-semibold rounded-full inline-block">What to Wear</Link>
                   <Link href="/professional-headshot-cost" className="btn-outline px-6 py-2.5 text-sm font-semibold rounded-full inline-block">Headshot Pricing Guide</Link>

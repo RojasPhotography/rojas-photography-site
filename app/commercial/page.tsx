@@ -106,7 +106,7 @@ export default function CommercialPhotographyPage() {
         <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Generic Stock Photos Don&apos;t Tell Your Brand Story</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Generic Stock Photos Don&apos;t Tell Your Brand Story</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
                   You search stock photo sites and everything looks the same. Sterile office shots. Forced smiles. Posed handshakes that scream "fake business photo."
@@ -129,16 +129,16 @@ export default function CommercialPhotographyPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">I Know How Frustrating Generic Imagery Can Be</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">We Know How Frustrating Generic Imagery Can Be</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  You&apos;ve built something real — a product, a space, a brand with its own personality — and stock photos don&apos;t come close to showing it. I&apos;ve heard this from nearly every commercial client I work with. The imagery they have doesn&apos;t match the quality of what they actually do.
+                  You&apos;ve built something real — a product, a space, a brand with its own personality — and stock photos don&apos;t come close to showing it. I&apos;ve heard this from nearly every commercial client we work with. The imagery they have doesn&apos;t match the quality of what they actually do.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  I&apos;m Alfonso Rojas. With 15+ years in corporate environments, I understand business context and brand positioning — not just how to operate a camera. I&apos;ve photographed businesses across the Central Valley, from healthcare organizations and law firms to manufacturing companies and retailers, and I bring that business understanding to every shoot.
+                  We&apos;re Alfonso and Niomi Rojas. With 15+ years in corporate environments, we understand business context and brand positioning — not just how to operate a camera. We&apos;ve photographed businesses across the Central Valley, from healthcare organizations and law firms to manufacturing companies and retailers, and we bring that business understanding to every shoot.
                 </p>
                 <p>
-                  I don&apos;t just shoot photos. I work with you to understand what your brand needs to communicate — and then I build imagery around that, whether it&apos;s product photography, architectural shots, lifestyle imagery, or a complete brand library.
+                  We don&apos;t just shoot photos. We work with you to understand what your brand needs to communicate — and then I build imagery around that, whether it&apos;s product photography, architectural shots, lifestyle imagery, or a complete brand library.
                 </p>
               </div>
             </SectionReveal>
@@ -149,31 +149,31 @@ export default function CommercialPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">How I Work With You</h2>
+              <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">How we Work With You</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-8">
               <SectionReveal>
                 <div>
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">01</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Project Discovery</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Project Discovery</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I start with a detailed conversation about your brand vision, target audience, and what you need the imagery to communicate. I review your brand guidelines, visual preferences, and deliverable needs before we ever pick up a camera.
+                    We start with a detailed conversation about your brand vision, target audience, and what you need the imagery to communicate. We review your brand guidelines, visual preferences, and deliverable needs before we ever pick up a camera.
                   </p>
                 </div>
               </SectionReveal>
               <SectionReveal>
                 <div>
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">02</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Execution</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Professional Execution</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I bring professional equipment and lighting to your location. I direct every shot with intention — your products look compelling, your spaces feel inviting, and your brand story comes through authentically, not like a generic template.
+                    We bring professional equipment and lighting to your location. We direct every shot with intention — your products look compelling, your spaces feel inviting, and your brand story comes through authentically, not like a generic template.
                   </p>
                 </div>
               </SectionReveal>
               <SectionReveal>
                 <div>
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">03</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Editing & Delivery</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Editing & Delivery</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
                     Your images are professionally edited, color-corrected for brand consistency, and delivered within 48-72 hours — ready for immediate use on your website, social media, and marketing materials. Authentic imagery that differentiates you, not stock photo mediocrity.
                   </p>
@@ -201,7 +201,7 @@ export default function CommercialPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Commercial Photography in Modesto & Central Valley</h2>
+              <h2 className="text-3xl md:text-4xl text-center mb-12 text-[var(--color-text-dark)]">Commercial Photography in Modesto & Central Valley</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-4">
               {[
@@ -221,7 +221,7 @@ export default function CommercialPhotographyPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Generic Imagery Makes Your Brand Invisible</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Generic Imagery Makes Your Brand Invisible</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
                   When your website, social media, and marketing materials use the same stock photos as everyone else, your brand becomes invisible. You look exactly like your competitors—potential clients can&apos;t differentiate you, so they default to choosing based on price alone.
@@ -244,7 +244,7 @@ export default function CommercialPhotographyPage() {
         <section className="py-16 px-8 bg-white text-center">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Ready for Authentic Brand Photography?</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Ready for Authentic Brand Photography?</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Get a custom quote for your commercial photography project. We&apos;ll create professional imagery that tells your unique story and differentiates your brand.
               </p>
@@ -260,11 +260,11 @@ export default function CommercialPhotographyPage() {
           </div>
         </section>
 
-        {/* What We Offer */}
+        {/* What we Offer */}
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What I Offer</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-16 text-center">What I Offer</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
@@ -279,7 +279,7 @@ export default function CommercialPhotographyPage() {
                   <div className="flex gap-4">
                     <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-2">{item.title}</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
@@ -288,7 +288,7 @@ export default function CommercialPhotographyPage() {
             </div>
             <SectionReveal>
               <div className="bg-white p-8 rounded-xl border border-gray-100 max-w-sm mx-auto text-center shadow-sm">
-                <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-4">Pricing</h3>
+                <h3 className="text-2xl text-[var(--color-primary)] mb-4">Pricing</h3>
                 <p className="text-[var(--color-text-body)] mb-6">Custom pricing based on project scope and requirements.</p>
                 <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
                   Get Your Quote
@@ -302,7 +302,7 @@ export default function CommercialPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-[var(--color-text-dark)] mb-6">Who This Service Is For</h2>
+              <h2 className="text-3xl text-[var(--color-text-dark)] mb-6">Who This Service Is For</h2>
               <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
                 Commercial Photography is perfect for any business that needs professional visual content. Whether you&apos;re a retail business, restaurant, healthcare provider, manufacturing company, or service-based organization, professional imagery elevates your brand.
               </p>
@@ -317,11 +317,11 @@ export default function CommercialPhotographyPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Work With Me</h2>
+              <h2 className="text-3xl text-center mb-12 text-[var(--color-text-dark)]">Why Work With Me</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: 'Corporate Experience', desc: '15+ years in corporate environments means I understand your brand context, not just how to operate a camera.' },
+                { title: 'Corporate Experience', desc: '15+ years in corporate environments means we understand your brand context, not just how to operate a camera.' },
                 { title: 'Professional Equipment', desc: 'Professional lighting, cameras, and expert direction — every shot is intentional.' },
                 { title: 'Fast Turnaround', desc: 'Images delivered within 48-72 hours without compromising quality.' },
                 { title: 'Local to the Central Valley', desc: 'Based in Modesto, serving Stockton, Fresno, Turlock, and beyond.' },
@@ -330,7 +330,7 @@ export default function CommercialPhotographyPage() {
                   <div className="flex gap-4">
                     <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-2">{item.title}</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
                       <p className="text-[var(--color-text-body)] text-sm">{item.desc}</p>
                     </div>
                   </div>
@@ -345,7 +345,7 @@ export default function CommercialPhotographyPage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Imagine Opening Your Website and Finally Feeling Proud of It</h2>
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Imagine Opening Your Website and Finally Feeling Proud of It</h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
                   Imagery that actually looks like your business. Photos you want to put in front of clients. A brand presence that reflects the quality of what you do. Here&apos;s what that experience looks like.
                 </p>
@@ -366,7 +366,7 @@ export default function CommercialPhotographyPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)] text-center">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Your Brand Story Deserves Professional Photography</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Your Brand Story Deserves Professional Photography</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Join hundreds of Central Valley businesses who&apos;ve partnered with us for authentic, professional commercial photography. Differentiated brand imagery is one quote away.
               </p>
@@ -387,7 +387,7 @@ export default function CommercialPhotographyPage() {
         <section className="py-16 px-8 bg-white text-center">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Ready for Professional Commercial Photography?</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Ready for Professional Commercial Photography?</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Let&apos;s discuss your project and create compelling imagery that strengthens your brand.
               </p>

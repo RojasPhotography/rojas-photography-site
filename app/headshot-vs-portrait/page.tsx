@@ -64,7 +64,7 @@ export default function HeadshotVsPortraitPage() {
           <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
                 <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                   <p><strong className="text-[var(--color-text-dark)]">A headshot</strong> is a tightly framed professional photograph — typically face and shoulders — designed for a specific professional purpose: LinkedIn, a company directory, a press kit, a legal or medical profile.</p>
                   <p><strong className="text-[var(--color-text-dark)]">A portrait</strong> is broader and more expressive — it can include more of the body, the environment, or creative compositional elements. Portraits are used for personal branding, artistic contexts, website About pages, and editorial use.</p>
@@ -77,7 +77,7 @@ export default function HeadshotVsPortraitPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">Side-by-Side Comparison</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">Side-by-Side Comparison</h2>
               </SectionReveal>
               <SectionReveal>
                 <div className="overflow-x-auto rounded-xl border border-gray-100">
@@ -115,7 +115,7 @@ export default function HeadshotVsPortraitPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">Which One Do You Need?</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">Which One Do You Need?</h2>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-5">
                 {[
@@ -124,7 +124,7 @@ export default function HeadshotVsPortraitPage() {
                 ].map(col => (
                   <SectionReveal key={col.label}>
                     <div className="bg-white rounded-xl p-8 border border-gray-100 h-full">
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-4">{col.label}</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-4">{col.label}</h3>
                       <ul className="space-y-3">
                         {col.items.map(item => (
                           <li key={item} className="flex gap-2 text-sm text-[var(--color-text-body)]">

@@ -187,7 +187,7 @@ export default function HealthcareHeadshotsPage() {
           <section className="py-20 md:py-28 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   Patients Research You Before They Call
                 </h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
@@ -212,7 +212,7 @@ export default function HealthcareHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   What Your Healthcare Headshot Needs to Communicate
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -227,7 +227,7 @@ export default function HealthcareHeadshotsPage() {
                         {i + 1}
                       </div>
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-2">{item.quality}</h3>
+                        <h3 className="text-[var(--color-text-dark)] text-lg mb-2">{item.quality}</h3>
                         <p className="text-[var(--color-text-body)] leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
@@ -257,17 +257,17 @@ export default function HealthcareHeadshotsPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="space-y-5">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
-                      I Understand What Healthcare Professionals Need
+                    <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)]">
+                      We Understand What Healthcare Professionals Need
                     </h2>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
                       The balance between clinical authority and human warmth is unique to healthcare — and getting it wrong in either direction has real consequences. Too cold and clinical, and patients feel like numbers. Too casual, and you undermine the confidence they need to put their health in your hands.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      I have photographed healthcare professionals across the Central Valley, including staff at UC Davis Medical Center, Community Regional Medical Center, and Saint Agnes Medical Center. I also photograph ERAS medical residency headshots and understand the full range of healthcare professional photography — from medical students beginning their careers to hospital executives managing entire systems.
+                      We have photographed healthcare professionals across the Central Valley, including staff at UC Davis Medical Center, Community Regional Medical Center, and Saint Agnes Medical Center. I also photograph ERAS medical residency headshots and understand the full range of healthcare professional photography — from medical students beginning their careers to hospital executives managing entire systems.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      I know the difference between a headshot that makes a patient feel at ease and one that feels cold. That distinction is the entire job.
+                      We know the difference between a headshot that makes a patient feel at ease and one that feels cold. That distinction is the entire job.
                     </p>
                     <div className="pt-2">
                       <p className="text-sm font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-3">The Process</p>
@@ -296,7 +296,7 @@ export default function HealthcareHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   White Coat or Business Professional?
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -310,7 +310,7 @@ export default function HealthcareHeadshotsPage() {
                       <CheckCircle2 size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-1" />
                       <div>
                         <div className="flex flex-wrap items-center gap-3 mb-2">
-                          <h3 className="font-bold text-[var(--color-text-dark)] text-lg">{item.option}</h3>
+                          <h3 className="text-[var(--color-text-dark)] text-lg">{item.option}</h3>
                           <span className="text-xs bg-[var(--color-bg-warm)] border border-gray-200 text-[var(--color-text-muted)] px-3 py-1 rounded-full">
                             Best for: {item.best}
                           </span>
@@ -324,14 +324,14 @@ export default function HealthcareHeadshotsPage() {
             </div>
           </section>
 
-          {/* Specialties We Photograph */}
+          {/* Specialties we Photograph */}
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12 items-start">
                 <SectionReveal>
                   <div className="space-y-5">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
-                      Specialties We Photograph
+                    <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)]">
+                      Specialties we Photograph
                     </h2>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
                       We photograph healthcare professionals across every specialty and role — from newly graduated medical students to hospital system executives. Whether you wear a white coat daily or run the administrative side of a major health system, your professional image matters equally.
@@ -361,7 +361,7 @@ export default function HealthcareHeadshotsPage() {
               <SectionReveal>
                 <div className="flex gap-4 mb-8 items-start">
                   <AlertTriangle size={28} className="text-amber-500 flex-shrink-0 mt-1" aria-hidden="true" />
-                  <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
+                  <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)]">
                     A Headshot That Doesn&apos;t Reflect Your Care Costs You Patients
                   </h2>
                 </div>
@@ -387,7 +387,7 @@ export default function HealthcareHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   What&apos;s Included in Your Session
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -397,7 +397,7 @@ export default function HealthcareHeadshotsPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <SectionReveal>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 border border-gray-100 h-full">
-                    <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-5">Session Details</h3>
+                    <h3 className="text-[var(--color-text-dark)] text-lg mb-5">Session Details</h3>
                     <ul className="space-y-3">
                       {sessionIncludes.map(item => (
                         <li key={item} className="flex gap-2 text-sm text-[var(--color-text-body)]">
@@ -411,7 +411,7 @@ export default function HealthcareHeadshotsPage() {
                 <SectionReveal>
                   <div className="space-y-5">
                     <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 border border-gray-100">
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-3">Pricing</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-3">Pricing</h3>
                       <p className="text-[var(--color-text-body)] mb-2">
                         <strong className="text-[var(--color-text-dark)]">$150</strong> session fee
                       </p>
@@ -423,7 +423,7 @@ export default function HealthcareHeadshotsPage() {
                       </p>
                     </div>
                     <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 border border-gray-100">
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-3">Where We Serve</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-3">Where we Serve</h3>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed mb-3">
                         Our studio is in Modesto, CA — convenient for healthcare professionals at Community Regional, Memorial Medical Center, and throughout the Central Valley. We also serve Sacramento, Fresno, Stockton, and surrounding areas.
                       </p>
@@ -449,7 +449,7 @@ export default function HealthcareHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+                <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">
                   What Clients Say
                 </h2>
               </SectionReveal>
@@ -483,7 +483,7 @@ export default function HealthcareHeadshotsPage() {
           <section className="py-14 px-8 bg-white">
             <div className="max-w-4xl mx-auto text-center">
               <SectionReveal>
-                <h3 className="font-bold text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
+                <h3 className="text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/eras-headshots" className="btn-outline px-6 py-2.5 text-sm font-semibold rounded-full inline-block">
                     ERAS Residency Headshots

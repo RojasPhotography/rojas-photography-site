@@ -38,7 +38,7 @@ export default function NewsletterSignup() {
 
   return (
     <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 md:p-10">
-      <h3 className="text-2xl font-bold text-[var(--color-text-dark)] mb-2">
+      <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">
         Join Our Monthly Newsletter
       </h3>
       <p className="text-[var(--color-text-body)] mb-6">
