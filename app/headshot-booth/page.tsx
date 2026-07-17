@@ -228,9 +228,10 @@ export default function HeadshotBoothPage() {
                 See It in Action
               </h2>
             </SectionReveal>
-            <div className="grid md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
                 { src: '/images/Kaiser BTS Headshots.png', alt: 'Behind the scenes at Kaiser on-site headshot booth', objectPosition: 'center 40%' },
+                { src: '/images/comcast-livermore-booth-bts.jpg', alt: 'Headshot booth behind the scenes at a Comcast office in Livermore, CA', objectPosition: 'center 30%' },
                 { src: '/images/BB Individual Headshot Session.png', alt: 'Individual headshot session at corporate event', objectPosition: 'center 30%' },
                 { src: '/images/EsmilcoBTS.png', alt: 'Behind the scenes at on-site headshot event', objectPosition: 'center' },
               ].map((img) => (
