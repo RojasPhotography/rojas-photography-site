@@ -120,10 +120,10 @@ export default function VideoServicesPage() {
                   You <em>want</em> video content—you know it drives engagement and converts customers—but creating authentic video feels impossible. Your team freezes on camera. Everything comes out scripted and corporate. The final product looks professional but feels hollow.
                 </p>
                 <p>
-                  And the production companies you&apos;ve talked to either charge $15,000+ for a single video or deliver cheap, template-driven work that screams "budget production." You need something in between: professional quality with authentic storytelling that actually connects with your audience.
+                  Most options feel like a compromise: agencies that quote $15,000+ for a single video, or template-driven work that looks like everyone else's. What you actually want sits in between — polished, professional quality with authentic storytelling that connects with your audience.
                 </p>
                 <p>
-                  Meanwhile, your competitors with compelling video content are capturing attention on social media, building trust through testimonials, and converting leads you should be winning.
+                  Meanwhile, the brands with compelling video are the ones capturing attention on social media, building trust through testimonials, and staying top of mind.
                 </p>
               </div>
             </SectionReveal>
@@ -379,7 +379,7 @@ export default function VideoServicesPage() {
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Imagine Sharing a Video You&apos;re Actually Proud to Put on Your Website</h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
-                  Authentic, professional video that sounds like your team — not a script. Content that connects with your audience and makes people want to reach out. Here&apos;s what clients say about working with me.
+                  Authentic, professional video that sounds like your team — not a script. Content that connects with your audience and makes people want to reach out. Here&apos;s what clients say about working with us.
                 </p>
               </div>
             </SectionReveal>

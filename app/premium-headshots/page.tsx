@@ -145,7 +145,7 @@ export default function PremiumHeadshotsPage() {
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  Most people we work with feel the same way before they arrive: awkward in front of a camera, unsure how to pose, convinced they're just "not photogenic." That feeling is real — and it's exactly what I'm here to take off your plate.
+                  Most people we work with feel the same way before they arrive: awkward in front of a camera, unsure how to pose, convinced they're just "not photogenic." That feeling is real — and it's exactly what we're here to take off your plate.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
                   We&apos;re Alfonso and Niomi Rojas. We&apos;ve photographed 500+ professionals across Modesto and the Central Valley — CEOs, attorneys, realtors, healthcare executives — and we've spent 15+ years in corporate leadership ourselves. We know what a headshot needs to communicate, and we know how to get you there without it feeling forced.

@@ -36,7 +36,7 @@ const faqs = [
   {
     question: 'Can we do team group photos in addition to individual headshots?',
     answer:
-      'Absolutely. Most organizations invest in both — individual headshots for company directories and LinkedIn, plus a professional group photo for the website and marketing materials. I handle both in the same session so nothing gets scheduled separately.',
+      'Absolutely. Most organizations invest in both — individual headshots for company directories and LinkedIn, plus a professional group photo for the website and marketing materials. We handle both in the same session so nothing gets scheduled separately.',
   },
 ];
 
@@ -145,10 +145,10 @@ export default function OnSitePhotographyPage() {
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  Wrangling a team of 20, 30, or 50+ people for photos is no small task — especially when everyone is busy and nobody wants to leave the office. I've seen how disruptive it gets, and I built my on-site service specifically to take that burden off your plate.
+                  Wrangling a team of 20, 30, or 50+ people for photos is no small task — especially when everyone is busy and nobody wants to leave the office. We've seen how disruptive it gets, and we built our on-site service specifically to take that burden off your plate.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  We&apos;re Alfonso and Niomi Rojas. We bring a complete professional studio — lighting, backdrops, cameras, everything — directly to your location. Your team stays at work, I come to them, and we move through efficiently without derailing anyone's day.
+                  We&apos;re Alfonso and Niomi Rojas. We bring a complete professional studio — lighting, backdrops, cameras, everything — directly to your location. Your team stays at work, we come to them, and we move through efficiently without derailing anyone's day.
                 </p>
                 <p>
                   We've photographed 500+ professionals across the Central Valley — law firms, healthcare organizations, corporate offices, school districts — and with 15+ years in corporate leadership, we understand how to operate inside a business environment without disrupting it.
@@ -193,7 +193,7 @@ export default function OnSitePhotographyPage() {
                     On-Site Setup & Sessions
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    We arrive, set up the full studio at your location, and your team comes to me throughout the day — no travel, no disruption. I coach everyone through posing so results are consistent across your entire organization.
+                    We arrive, set up the full studio at your location, and your team comes to us throughout the day — no travel, no disruption. We coach everyone through posing so results are consistent across your entire organization.
                   </p>
                 </div>
               </SectionReveal>
@@ -220,7 +220,7 @@ export default function OnSitePhotographyPage() {
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
               <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                Stop coordinating travel to studios. I come to you.
+                Stop coordinating travel to studios. We come to you.
               </p>
               <Link
                 href="/contact-quote"
@@ -288,7 +288,7 @@ export default function OnSitePhotographyPage() {
                 Ready for Consistent Team Headshots?
               </h2>
               <p className="text-lg mb-8 text-white/90">
-                Get a custom quote for your organization. I'll bring our professional studio to your office and photograph your entire team efficiently — with zero travel required on their end.
+                Get a custom quote for your organization. We'll bring our professional studio to your office and photograph your entire team efficiently — with zero travel required on their end.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -317,9 +317,9 @@ export default function OnSitePhotographyPage() {
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
                 { title: 'Full Studio Setup at Your Location', desc: 'We bring my complete professional studio to your office — all equipment, lighting, and direction. No one on your team needs to leave the building.' },
-                { title: 'Individual Headshots & Team Photos', desc: 'Individual executive headshots, team portraits, group photos, and building photography if needed. I handle everything with expert guidance so you don\'t have to manage a thing.' },
+                { title: 'Individual Headshots & Team Photos', desc: 'Individual executive headshots, team portraits, group photos, and building photography if needed. We handle everything with expert guidance so you don\'t have to manage a thing.' },
                 { title: 'Custom Employee Scheduling', desc: 'For organizations with 10+ employees, we create a custom online calendar so your team members can book their own time slots — no back-and-forth coordination needed.' },
-                { title: 'Real-Time Coaching for Every Person', desc: 'I coach each person through posing and expression as we shoot. Everyone sees their photos in real-time so there are no surprises at delivery.' },
+                { title: 'Real-Time Coaching for Every Person', desc: 'We coach each person through posing and expression as we shoot. Everyone sees their photos in real-time so there are no surprises at delivery.' },
                 { title: 'No Disruption to Your Workday', desc: 'We set up, work efficiently, and break down — all while your business keeps running. Employees step away for 10-15 minutes and get back to work.' },
                 { title: 'Delivered Same Day', desc: 'Every image is professionally edited and delivered via private online gallery the same day — ready for LinkedIn, your website, and marketing materials.' },
               ].map((item) => (

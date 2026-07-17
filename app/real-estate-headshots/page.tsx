@@ -225,7 +225,7 @@ export default function RealEstateHeadshotsPage() {
               <SectionReveal>
                 <div className="mt-10 bg-[var(--color-bg-warm)] rounded-xl p-7 border border-gray-100">
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    <strong className="text-[var(--color-text-dark)]">Our process:</strong> Before your session, we discuss your market, your brand, and every platform your photo will appear on. During your session, I coach you through multiple expressions and wardrobe looks so you leave with images tailored to each use — not just one generic headshot you will try to use everywhere.
+                    <strong className="text-[var(--color-text-dark)]">Our process:</strong> Before your session, we discuss your market, your brand, and every platform your photo will appear on. During your session, we coach you through multiple expressions and wardrobe looks so you leave with images tailored to each use — not just one generic headshot you will try to use everywhere.
                   </p>
                   <div className="mt-6">
                     <ol className="space-y-3">

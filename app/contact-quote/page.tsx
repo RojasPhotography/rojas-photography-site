@@ -52,7 +52,7 @@ export default function ContactPage() {
       />
 
       <main id="main-content">
-        {/* Contact Methods */}
+        {/* Contact Usthods */}
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
