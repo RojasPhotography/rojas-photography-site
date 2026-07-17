@@ -492,7 +492,7 @@ export default function EventPhotographyPage() {
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Imagine Leaving Your Event With Everything You Need</h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
-                  Sponsor deliverables handled. Social media content ready. A gallery of professional photos that make the event look as good as it actually was. Here&apos;s what event organizers say about working with me.
+                  Sponsor deliverables handled. Social media content ready. A gallery of professional photos that make the event look as good as it actually was. Here&apos;s what event organizers say about working with us.
                 </p>
               </div>
             </SectionReveal>

@@ -266,10 +266,10 @@ export default function ModestoHeadshotsPage() {
                       We Know What Modesto Professionals Are Up Against
                     </h2>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      Most people come to me not because they want a photo — but because they&apos;re embarrassed by the one they have. Outdated. Phone quality. Or just wrong. It doesn&apos;t look like how you carry yourself in a room, and you know it.
+                      Most people come to us not because they want a photo — but because they&apos;re embarrassed by the one they have. Outdated. Phone quality. Or just wrong. It doesn&apos;t look like how you carry yourself in a room, and you know it.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      We&apos;re Alfonso and Niomi Rojas — Modesto-based photographers with 15+ years of corporate leadership experience working alongside CEOs, CFOs, attorneys, and healthcare executives. I built this business right here in the Central Valley because we understand the community, the professional culture, and the relationships that drive it.
+                      We&apos;re Alfonso and Niomi Rojas — Modesto-based photographers with 15+ years of corporate leadership experience working alongside CEOs, CFOs, attorneys, and healthcare executives. We built this business right here in the Central Valley because we understand the community, the professional culture, and the relationships that drive it.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
                       That&apos;s why we guide every session with real-time coaching on posing, expression, and angles — because the right headshot isn&apos;t just taken, it&apos;s directed.
@@ -278,7 +278,7 @@ export default function ModestoHeadshotsPage() {
                       href="/about-rojas-photography"
                       className="inline-block text-[var(--color-primary)] font-semibold hover:underline"
                     >
-                      Learn more about me →
+                      Learn more about us →
                     </Link>
                   </div>
                 </SectionReveal>
@@ -643,7 +643,7 @@ export default function ModestoHeadshotsPage() {
               {
                 question: 'Why do Modesto professionals choose Rojas Photography?',
                 answer:
-                  'I\'m a Modesto local — this is my home and my community. With 15+ years of corporate leadership experience, we understand the professional culture of the Central Valley. We\'ve photographed 500+ professionals across healthcare, legal, agriculture, finance, and corporate sectors. Our guided approach makes even camera-shy professionals look confident and authentic. Images delivered within 48 hours.',
+                  'We\'re Modesto locals — this is our home and our community. With 15+ years of corporate leadership experience, we understand the professional culture of the Central Valley. We\'ve photographed 500+ professionals across healthcare, legal, agriculture, finance, and corporate sectors. Our guided approach makes even camera-shy professionals look confident and authentic. Images delivered within 48 hours.',
               },
             ]}
             heading="Modesto Headshot Questions Answered"
