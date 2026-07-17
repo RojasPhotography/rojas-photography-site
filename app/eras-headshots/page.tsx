@@ -148,7 +148,7 @@ export default function ERASHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   Your ERAS Photo Is Seen Before Your Scores
                 </h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
@@ -196,8 +196,8 @@ export default function ERASHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
-                  ERAS Photo Requirements — We Handle All of This
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
+                  ERAS Photo Requirements — we Handle All of This
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
                   ERAS has specific technical and professional requirements for application photos. Every image we deliver meets all of them.
@@ -209,7 +209,7 @@ export default function ERASHeadshotsPage() {
                     <div className="flex gap-4 p-6 bg-[var(--color-bg-warm)] rounded-xl">
                       <CheckCircle2 size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-1" />
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.req}</h3>
+                        <h3 className="text-[var(--color-text-dark)] mb-1">{item.req}</h3>
                         <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.detail}</p>
                       </div>
                     </div>
@@ -247,7 +247,7 @@ export default function ERASHeadshotsPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="space-y-5">
-                    <h2 className="text-3xl font-bold text-[var(--color-text-dark)]">
+                    <h2 className="text-3xl text-[var(--color-text-dark)]">
                       We Have Photographed Medical Students. We Know What ERAS Needs.
                     </h2>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
@@ -269,7 +269,7 @@ export default function ERASHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-12 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-12 text-center">
                   When to Book Your ERAS Headshot
                 </h2>
               </SectionReveal>
@@ -307,7 +307,7 @@ export default function ERASHeadshotsPage() {
           <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white text-center">
             <div className="max-w-3xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="text-3xl md:text-4xl mb-4">
                   You Have Earned This Application. Represent It Well.
                 </h2>
                 <p className="text-lg text-white/90 mb-10 leading-relaxed">
@@ -327,7 +327,7 @@ export default function ERASHeadshotsPage() {
           <section className="py-12 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto text-center">
               <SectionReveal>
-                <h3 className="font-bold text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
+                <h3 className="text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/student-headshots" className="btn-outline px-6 py-2.5 text-sm font-semibold rounded-full inline-block">
                     Student Headshots

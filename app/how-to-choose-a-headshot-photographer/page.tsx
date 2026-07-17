@@ -30,7 +30,7 @@ const faqs = [
     answer: 'Ask: How long is the session and is there a time limit? Is expression and posture coaching included? How many final edited images are included? What is the turnaround time for delivery? Can I see examples from clients in my industry? Do you include commercial usage rights? What happens if I am not happy with the results? The answers tell you a lot about the photographer\'s process and what you can expect.',
   },
   {
-    question: 'How do I know if a headshot photographer\'s style is right for me?',
+    question: 'How do we know if a headshot photographer\'s style is right for me?',
     answer: 'Look at their portfolio with your specific use case in mind. If your headshot will appear on a legal directory, look for examples from attorneys. If you are in healthcare, look for medical professional examples. Review the lighting style — some photographers use very dramatic, high-contrast lighting that works for entertainment but can be too bold for corporate use. Ask if you can see examples from clients in your profession specifically.',
   },
   {
@@ -109,7 +109,7 @@ export default function HowToChooseHeadshotPhotographerPage() {
           <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">The One Thing Most People Get Wrong</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">The One Thing Most People Get Wrong</h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                   <p>Most professionals choose a headshot photographer the same way they pick a plumber — price, availability, and a few Google reviews. The result is a technically competent photo that does not actually represent them well professionally.</p>
                   <p>A headshot is not a picture of you. It is a crafted first impression — a professional signal that either earns trust before you open your mouth or costs you an opportunity before you ever get to speak. The photographer you choose determines which one it is.</p>
@@ -122,7 +122,7 @@ export default function HowToChooseHeadshotPhotographerPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">What to Look For: Green Flags</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">What to Look For: Green Flags</h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">These signals consistently identify photographers who produce results you will actually use confidently for years.</p>
               </SectionReveal>
               <div className="space-y-4">
@@ -131,7 +131,7 @@ export default function HowToChooseHeadshotPhotographerPage() {
                     <div className="flex gap-4 p-6 bg-[var(--color-bg-warm)] rounded-xl border border-gray-100">
                       <CheckCircle2 size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.flag}</h3>
+                        <h3 className="text-[var(--color-text-dark)] mb-1">{item.flag}</h3>
                         <p className="text-sm text-[var(--color-text-body)] leading-relaxed">{item.why}</p>
                       </div>
                     </div>
@@ -144,7 +144,7 @@ export default function HowToChooseHeadshotPhotographerPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">Red Flags to Watch For</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">Red Flags to Watch For</h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">These are signs that a session will produce results you will not use — or will need to redo.</p>
               </SectionReveal>
               <div className="space-y-4">
@@ -153,7 +153,7 @@ export default function HowToChooseHeadshotPhotographerPage() {
                     <div className="flex gap-4 p-6 bg-white rounded-xl border border-gray-100">
                       <XCircle size={20} className="text-red-400 flex-shrink-0 mt-0.5" />
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.flag}</h3>
+                        <h3 className="text-[var(--color-text-dark)] mb-1">{item.flag}</h3>
                         <p className="text-sm text-[var(--color-text-body)] leading-relaxed">{item.why}</p>
                       </div>
                     </div>
@@ -166,7 +166,7 @@ export default function HowToChooseHeadshotPhotographerPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">Questions to Ask Before You Book</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">Questions to Ask Before You Book</h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">These six questions reveal more about a photographer&apos;s process than any portfolio image.</p>
               </SectionReveal>
               <div className="space-y-4">
@@ -188,7 +188,7 @@ export default function HowToChooseHeadshotPhotographerPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">How Rojas Photography Approaches This</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">How Rojas Photography Approaches This</h2>
               </SectionReveal>
               <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm space-y-5 text-lg text-[var(--color-text-body)] leading-relaxed">
                 <SectionReveal>
@@ -222,7 +222,7 @@ export default function HowToChooseHeadshotPhotographerPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">What Happens If You Choose the Wrong Photographer</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">What Happens If You Choose the Wrong Photographer</h2>
               </SectionReveal>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                 <SectionReveal>

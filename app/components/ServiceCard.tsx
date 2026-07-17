@@ -29,7 +29,7 @@ export default function ServiceCard({
         />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-2 group-hover:text-[var(--color-primary)] transition-colors font-[family-name:var(--font-heading)]">
+        <h3 className="text-xl text-[var(--color-text-dark)] mb-2 group-hover:text-[var(--color-primary)] transition-colors font-[family-name:var(--font-heading)]">
           {title}
         </h3>
         <p className="text-sm text-[var(--color-text-body)] mb-4 leading-relaxed">

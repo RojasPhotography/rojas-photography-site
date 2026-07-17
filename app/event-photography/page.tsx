@@ -124,7 +124,7 @@ export default function EventPhotographyPage() {
         <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Every Event Happens Once. The Photos Have to Be Right.</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Every Event Happens Once. The Photos Have to Be Right.</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
                   Whether you&apos;re putting on a chamber gala for 200 people, a nonprofit fundraiser, a credit union member appreciation night, or a large-scale conference — you&apos;ve put real time, money, and reputation into making it happen. The photography has to match.
@@ -147,13 +147,13 @@ export default function EventPhotographyPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">I Work With Organizations of Every Size — And I Treat Every Event the Same Way</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">We Work With Organizations of Every Size — And I Treat Every Event the Same Way</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  I&apos;ve photographed intimate 40-person nonprofit dinners and large-scale multi-day conferences for thousands of attendees. The size of the event doesn&apos;t change how I show up. Every client gets the same preparation, the same professionalism, and the same quality of work.
+                  We&apos;ve photographed intimate 40-person nonprofit dinners and large-scale multi-day conferences for thousands of attendees. The size of the event doesn&apos;t change how I show up. Every client gets the same preparation, the same professionalism, and the same quality of work.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  I&apos;m Alfonso Rojas, based in Modesto. I know this region — the venues, the organizations, and what Central Valley event organizers need. I show up early, stay until the end, anticipate moments before they happen, and deliver professionally edited photos within 5–7 business days, every time. Organizations like the California Lawyers Association, Valley First Credit Union, Comcast, and Save Mart trust me because I treat their events like they matter — because they do.
+                  We&apos;re Alfonso and Niomi Rojas, based in Modesto. We know this region — the venues, the organizations, and what Central Valley event organizers need. I show up early, stay until the end, anticipate moments before they happen, and deliver professionally edited photos within 5–7 business days, every time. Organizations like the California Lawyers Association, Valley First Credit Union, Comcast, and Save Mart trust me because I treat their events like they matter — because they do.
                 </p>
                 <p>
                   I don&apos;t just take photos — I coordinate with your timeline, communicate with your team, and make sure you walk away with complete coverage and marketing-ready images, not just a folder of snapshots.
@@ -167,31 +167,31 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">How I Approach Your Event</h2>
+              <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">How I Approach Your Event</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-8">
               <SectionReveal>
                 <div>
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">01</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Pre-Event Planning</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Pre-Event Planning</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I review your event schedule, key moments to prioritize, important people to photograph, and sponsor requirements. I coordinate with your event planner or AV team directly so nothing falls through the cracks on the day of.
+                    We review your event schedule, key moments to prioritize, important people to photograph, and sponsor requirements. I coordinate with your event planner or AV team directly so nothing falls through the cracks on the day of.
                   </p>
                 </div>
               </SectionReveal>
               <SectionReveal>
                 <div>
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">02</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Coverage</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Professional Coverage</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I arrive early to scout lighting and key locations. Throughout the event, I capture candid moments, posed group photos, speaker presentations, networking, and sponsor activations — unobtrusively, without disrupting the experience.
+                    We arrive early to scout lighting and key locations. Throughout the event, we capture candid moments, posed group photos, speaker presentations, networking, and sponsor activations — unobtrusively, without disrupting the experience.
                   </p>
                 </div>
               </SectionReveal>
               <SectionReveal>
                 <div>
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">03</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Rapid Delivery</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Rapid Delivery</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
                     Photos edited, color-corrected, and delivered within 5–7 business days via a private gallery. With our real-time delivery add-on, attendees can receive their own photos automatically using face recognition — even while the event is still in progress. Sponsors get their deliverables, your team gets content, and you have everything documented professionally.
                   </p>
@@ -205,8 +205,8 @@ export default function EventPhotographyPage() {
         <section className="py-12 px-8 bg-white">
           <div className="max-w-3xl mx-auto">
             <SectionReveal>
-              <div className="border-l-4 border-red-400 bg-red-50 rounded-r-xl p-8">
-                <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">What&apos;s at stake if you get this wrong</h3>
+              <div className="bg-[var(--color-bg-warm)] border border-gray-200 rounded-xl p-8">
+                <h3 className="text-xl text-[var(--color-text-dark)] mb-3">What&apos;s at stake if you get this wrong</h3>
                 <ul className="space-y-2 text-[var(--color-text-body)] leading-relaxed">
                   <li>— Sponsors who paid for visibility get nothing to show for it</li>
                   <li>— Your board or leadership asks for photos and you have none worth sharing</li>
@@ -225,7 +225,7 @@ export default function EventPhotographyPage() {
             <SectionReveal>
               <div className="text-center mb-10">
                 <p className="text-sm font-bold uppercase tracking-widest text-[var(--color-primary)] mb-3">Premium Add-On</p>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">
                   Turn Your Event Photos Into a Sponsorship Asset
                 </h2>
                 <p className="text-lg text-[var(--color-text-body)] max-w-2xl mx-auto leading-relaxed">
@@ -239,7 +239,7 @@ export default function EventPhotographyPage() {
               <SectionReveal>
                 <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 h-full border border-[var(--color-border-light)]">
                   <div className="text-4xl mb-4">⚡</div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     All Photos Delivered Instantly — For You and Every Attendee
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed mb-4">
@@ -255,7 +255,7 @@ export default function EventPhotographyPage() {
               <SectionReveal>
                 <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 h-full border border-[var(--color-border-light)]">
                   <div className="text-4xl mb-4">🏆</div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     A Custom Branded Experience That Helps You Sell Sponsorships
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed mb-4">
@@ -296,7 +296,7 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Professional Event Photography in Modesto & Central Valley</h2>
+              <h2 className="text-3xl md:text-4xl text-center mb-12 text-[var(--color-text-dark)]">Professional Event Photography in Modesto & Central Valley</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-4">
               {[
@@ -325,7 +325,7 @@ export default function EventPhotographyPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">What Your Event Looks Like When It Goes Right</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">What Your Event Looks Like When It Goes Right</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
                   Your event ends. Your gallery is ready — whether that&apos;s in real time if you&apos;ve added our premium delivery service, or within 5–7 business days with our standard package. Hundreds of professionally edited photos: the keynote speaker, award presentations, the networking moments your team spent months setting up. All of it, documented beautifully.
@@ -348,7 +348,7 @@ export default function EventPhotographyPage() {
         <section className="py-16 px-8 bg-white text-center">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Ready for Reliable Event Coverage?</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Ready for Reliable Event Coverage?</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Get a custom quote for your event. We&apos;ll provide professional photography with fast delivery and complete coverage—so you can focus on running a successful event, not worrying about the photographer.
               </p>
@@ -364,11 +364,11 @@ export default function EventPhotographyPage() {
           </div>
         </section>
 
-        {/* What We Offer */}
+        {/* What we Offer */}
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What I Cover</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-16 text-center">What I Cover</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
@@ -385,7 +385,7 @@ export default function EventPhotographyPage() {
                   <div className="flex gap-4">
                     <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-2">{item.title}</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
@@ -394,7 +394,7 @@ export default function EventPhotographyPage() {
             </div>
             <SectionReveal>
               <div className="bg-white p-8 rounded-xl border border-gray-100 max-w-sm mx-auto text-center shadow-sm">
-                <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-4">Pricing</h3>
+                <h3 className="text-2xl text-[var(--color-primary)] mb-4">Pricing</h3>
                 <p className="text-[var(--color-text-body)] mb-6">Custom pricing based on event size, duration, and coverage needs.</p>
                 <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
                   Get Your Quote
@@ -408,7 +408,7 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-5xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-[var(--color-text-dark)] mb-4">Events We Cover Across the Central Valley & Beyond</h2>
+              <h2 className="text-3xl text-[var(--color-text-dark)] mb-4">Events we Cover Across the Central Valley & Beyond</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-12 leading-relaxed max-w-3xl">
                 From intimate nonprofit dinners to regional conferences, we work with the organizations that drive this community — and we bring the same level of professionalism to every one.
               </p>
@@ -442,7 +442,7 @@ export default function EventPhotographyPage() {
               ].map((group) => (
                 <SectionReveal key={group.category}>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-6 h-full">
-                    <h4 className="font-bold text-[var(--color-text-dark)] mb-4 text-base">{group.category}</h4>
+                    <h4 className="text-[var(--color-text-dark)] mb-4 text-base">{group.category}</h4>
                     <ul className="text-[var(--color-text-body)] text-sm space-y-2">
                       {group.items.map((item) => (
                         <li key={item} className="flex gap-2">
@@ -462,12 +462,12 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Event Organizers Trust Me</h2>
+              <h2 className="text-3xl text-center mb-12 text-[var(--color-text-dark)]">Why Event Organizers Trust Me</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: 'Local Expertise, Regional Reach', desc: "Based in Modesto, I know the Central Valley — the venues, the organizations, the community. I serve clients from Stockton and Fresno to Sacramento and the Bay Area, with the same local commitment everywhere I go." },
-                { title: 'Every Event Gets My Full Attention', desc: "A 50-person chamber mixer gets the same preparation and professionalism as a 500-person gala. I review your schedule, communicate with your team, and show up ready — every time." },
+                { title: 'Local Expertise, Regional Reach', desc: "Based in Modesto, we know the Central Valley — the venues, the organizations, the community. We serve clients from Stockton and Fresno to Sacramento and the Bay Area, with the same local commitment everywhere I go." },
+                { title: 'Every Event Gets My Full Attention', desc: "A 50-person chamber mixer gets the same preparation and professionalism as a 500-person gala. We review your schedule, communicate with your team, and show up ready — every time." },
                 { title: 'Professional & Unobtrusive', desc: 'I blend into the event while capturing everything — you and your guests won\'t feel like you\'re being photographed.' },
                 { title: 'Fast Delivery', desc: 'Full edited gallery delivered within 5–7 business days. Ask about our add-on for real-time face recognition delivery to attendees during your event.' },
               ].map((item) => (
@@ -475,7 +475,7 @@ export default function EventPhotographyPage() {
                   <div className="flex gap-4">
                     <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-2">{item.title}</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
                       <p className="text-[var(--color-text-body)] text-sm">{item.desc}</p>
                     </div>
                   </div>
@@ -490,7 +490,7 @@ export default function EventPhotographyPage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Imagine Leaving Your Event With Everything You Need</h2>
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Imagine Leaving Your Event With Everything You Need</h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
                   Sponsor deliverables handled. Social media content ready. A gallery of professional photos that make the event look as good as it actually was. Here&apos;s what event organizers say about working with me.
                 </p>
@@ -517,7 +517,7 @@ export default function EventPhotographyPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)] text-center">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Your Event Deserves Reliable Photography</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Your Event Deserves Reliable Photography</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Join hundreds of Central Valley organizations who&apos;ve trusted us for professional, reliable event coverage. Complete documentation with fast delivery is one quote away.
               </p>
@@ -532,7 +532,7 @@ export default function EventPhotographyPage() {
         <section className="py-12 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-3xl mx-auto text-center">
             <SectionReveal>
-              <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-dark)] mb-4">
+              <h2 className="text-2xl md:text-3xl text-[var(--color-text-dark)] mb-4">
                 Wondering About Event Photography Pricing?
               </h2>
               <p className="text-[var(--color-text-body)] text-lg mb-6 leading-relaxed">
@@ -558,7 +558,7 @@ export default function EventPhotographyPage() {
         <section className="py-16 px-8 bg-white text-center">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Ready to Capture Your Next Event?</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Ready to Capture Your Next Event?</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Let us document your event with professional photography. From planning to delivery, we handle everything.
               </p>

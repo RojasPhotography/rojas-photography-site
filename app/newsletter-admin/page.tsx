@@ -458,7 +458,7 @@ export default function NewsletterAdmin() {
     return (
       <div className="min-h-screen bg-[var(--color-bg-warm)] flex items-center justify-center px-4">
         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-10 w-full max-w-sm">
-          <h1 className="text-2xl font-bold text-[var(--color-text-dark)] mb-2">Newsletter Admin</h1>
+          <h1 className="text-2xl text-[var(--color-text-dark)] mb-2">Newsletter Admin</h1>
           <p className="text-[var(--color-text-muted)] text-sm mb-6">Rojas Photography</p>
           <form onSubmit={handleLogin} className="space-y-4">
             <input
@@ -491,7 +491,7 @@ export default function NewsletterAdmin() {
           <div className="flex flex-col sm:flex-row sm:items-center gap-4">
             <div className="flex-1">
               <div className="flex items-center gap-3">
-                <h1 className="text-2xl font-bold text-[var(--color-text-dark)]">Newsletter Admin</h1>
+                <h1 className="text-2xl text-[var(--color-text-dark)]">Newsletter Admin</h1>
                 {currentDraftId && (
                   <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full font-medium">Draft</span>
                 )}
@@ -684,7 +684,7 @@ export default function NewsletterAdmin() {
         <div className="max-w-7xl mx-auto px-6 pt-4">
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
             <div className="flex items-center justify-between mb-2">
-              <h2 className="font-bold text-[var(--color-text-dark)]">Welcome Sequence</h2>
+              <h2 className="text-[var(--color-text-dark)]">Welcome Sequence</h2>
               <span className="text-xs text-[var(--color-text-muted)]">Emails are sent automatically after signup</span>
             </div>
             <p className="text-sm text-[var(--color-text-muted)] mb-5">
@@ -797,7 +797,7 @@ export default function NewsletterAdmin() {
         <div className="max-w-7xl mx-auto px-6 pt-4">
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="font-bold text-[var(--color-text-dark)]">
+              <h2 className="text-[var(--color-text-dark)]">
                 Subscribers
                 <span className="ml-2 text-sm font-normal text-[var(--color-text-muted)]">
                   {activeCount} active · {subscribers.length - activeCount} unsubscribed
@@ -824,7 +824,13 @@ export default function NewsletterAdmin() {
                         <td className="py-2 pr-4 text-[var(--color-text-dark)]">{sub.email}</td>
                         <td className="py-2 pr-4 text-[var(--color-text-muted)]">{sub.name || '—'}</td>
                         <td className="py-2 pr-4">
-                          <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${sub.is_active ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'}`}>
+                          <span
+                            className={`px-2 py-0.5 rounded-full text-xs font-medium ${
+                              sub.is_active
+                                ? 'bg-green-100 text-green-700'
+                                : 'bg-gray-100 text-gray-700'
+                            }`}
+                          >
                             {sub.is_active ? 'Active' : 'Unsubscribed'}
                           </span>
                         </td>
@@ -855,7 +861,7 @@ export default function NewsletterAdmin() {
       {showHistory && (
         <div className="max-w-7xl mx-auto px-6 pt-4">
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
-            <h2 className="font-bold text-[var(--color-text-dark)] mb-4">Sent Newsletters</h2>
+            <h2 className="text-[var(--color-text-dark)] mb-4">Sent Newsletters</h2>
             {history.length === 0 ? (
               <p className="text-[var(--color-text-muted)] text-sm">No newsletters sent yet.</p>
             ) : (
@@ -904,7 +910,7 @@ export default function NewsletterAdmin() {
       {showDrafts && (
         <div className="max-w-7xl mx-auto px-6 pt-4">
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
-            <h2 className="font-bold text-[var(--color-text-dark)] mb-4">Saved Drafts</h2>
+            <h2 className="text-[var(--color-text-dark)] mb-4">Saved Drafts</h2>
             {drafts.length === 0 ? (
               <p className="text-[var(--color-text-muted)] text-sm">No drafts saved yet.</p>
             ) : (
@@ -980,7 +986,7 @@ export default function NewsletterAdmin() {
         <div className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
           <div className="bg-white rounded-2xl w-full max-w-2xl flex flex-col shadow-2xl" style={{ maxHeight: '90vh' }}>
             <div className="flex items-center justify-between px-6 py-4 border-b border-gray-100 flex-shrink-0">
-              <h3 className="font-bold text-[var(--color-text-dark)]">Email Preview</h3>
+              <h3 className="text-[var(--color-text-dark)]">Email Preview</h3>
               <button
                 onClick={() => setPreviewHtml(null)}
                 className="text-gray-400 hover:text-gray-600 text-3xl leading-none"

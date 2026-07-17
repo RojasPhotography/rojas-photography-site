@@ -145,7 +145,7 @@ export default function LinkedInHeadshotsPage() {
           <section className="py-20 md:py-28 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   Your LinkedIn Photo Is Working Against You
                 </h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
@@ -200,7 +200,7 @@ export default function LinkedInHeadshotsPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="space-y-5">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
+                    <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)]">
                       We Make LinkedIn Headshots Feel Natural — Because They Are
                     </h2>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
@@ -222,7 +222,7 @@ export default function LinkedInHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   Simple Process. Powerful Results.
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -250,7 +250,7 @@ export default function LinkedInHeadshotsPage() {
                   <SectionReveal key={item.step}>
                     <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm h-full">
                       <span className="text-5xl font-bold text-[var(--color-primary-light)]">{item.step}</span>
-                      <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">{item.title}</h3>
+                      <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">{item.title}</h3>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </SectionReveal>
@@ -258,7 +258,7 @@ export default function LinkedInHeadshotsPage() {
               </div>
               <SectionReveal>
                 <div className="mt-12 bg-white rounded-xl p-8 border border-gray-100">
-                  <h3 className="font-bold text-[var(--color-text-dark)] mb-4 text-lg">What We Deliver</h3>
+                  <h3 className="text-[var(--color-text-dark)] mb-4 text-lg">What we Deliver</h3>
                   <div className="grid md:grid-cols-2 gap-3">
                     {whatWeDeliver.map(item => (
                       <div key={item} className="flex gap-2 text-sm text-[var(--color-text-body)]">
@@ -289,7 +289,7 @@ export default function LinkedInHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   LinkedIn Headshots for Every Profession
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -302,7 +302,7 @@ export default function LinkedInHeadshotsPage() {
                     <div className="flex gap-4 p-6 bg-[var(--color-bg-warm)] rounded-xl">
                       <CheckCircle2 size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.industry}</h3>
+                        <h3 className="text-[var(--color-text-dark)] mb-1">{item.industry}</h3>
                         <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.detail}</p>
                       </div>
                     </div>
@@ -316,7 +316,7 @@ export default function LinkedInHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-primary-dark)] text-white">
             <div className="max-w-4xl mx-auto text-center">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <h2 className="text-3xl md:text-4xl mb-6">
                   Every Day Your Photo Is Outdated, It&apos;s Costing You
                 </h2>
                 <p className="text-lg text-white/90 mb-4 leading-relaxed max-w-2xl mx-auto">
@@ -339,7 +339,7 @@ export default function LinkedInHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+                <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">
                   What Clients Say
                 </h2>
               </SectionReveal>
@@ -373,7 +373,7 @@ export default function LinkedInHeadshotsPage() {
           <section className="py-14 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto text-center">
               <SectionReveal>
-                <h3 className="font-bold text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
+                <h3 className="text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/how-to-prepare-for-headshots" className="btn-outline px-6 py-2.5 text-sm font-semibold rounded-full inline-block">
                     How to Prepare for Your Session

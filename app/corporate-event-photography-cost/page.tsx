@@ -160,7 +160,7 @@ export default function CorporateEventPhotographyCostPage() {
           <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-8">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-8">
                   Why Corporate Event Photography Pricing Is Hard to Find
                 </h2>
                 <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed text-lg">
@@ -179,7 +179,7 @@ export default function CorporateEventPhotographyCostPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
                   How Much Does Corporate Event Photography Cost?
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
@@ -216,7 +216,7 @@ export default function CorporateEventPhotographyCostPage() {
 
               <SectionReveal>
                 <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 border border-gray-100">
-                  <h3 className="font-bold text-[var(--color-text-dark)] mb-3 text-lg">Multi-Photographer Events</h3>
+                  <h3 className="text-[var(--color-text-dark)] mb-3 text-lg">Multi-Photographer Events</h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
                     Large conferences, galas with 200+ attendees, and multi-room events benefit from 2+ photographers to ensure complete coverage. Multi-photographer coverage starts at <strong className="text-[var(--color-text-dark)]">$3,500</strong> and scales based on team size and duration. We coordinate our team to deliver consistent, cohesive coverage across your entire event.
                   </p>
@@ -256,7 +256,7 @@ export default function CorporateEventPhotographyCostPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
                   Pricing by Event Type
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">
@@ -297,7 +297,7 @@ export default function CorporateEventPhotographyCostPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
                   7 Factors That Affect Corporate Event Photography Pricing
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
@@ -312,7 +312,7 @@ export default function CorporateEventPhotographyCostPage() {
                         {i + 1}
                       </div>
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.factor}</h3>
+                        <h3 className="text-[var(--color-text-dark)] mb-1">{item.factor}</h3>
                         <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.detail}</p>
                       </div>
                     </div>
@@ -326,7 +326,7 @@ export default function CorporateEventPhotographyCostPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   Why Professional Event Photos Are Worth the Investment
                 </h2>
                 <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed">
@@ -366,7 +366,7 @@ export default function CorporateEventPhotographyCostPage() {
           <section className="py-20 px-8 bg-white border-y border-gray-100">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
                   Corporate Event Photography in Modesto & the Central Valley
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">
@@ -406,14 +406,14 @@ export default function CorporateEventPhotographyCostPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-12 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-12 text-center">
                   How to Choose the Right Corporate Event Photographer
                 </h2>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-10">
                 <SectionReveal>
                   <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-5">Questions to Ask</h3>
+                    <h3 className="text-xl text-[var(--color-text-dark)] mb-5">Questions to Ask</h3>
                     <ul className="space-y-3">
                       {whatToAsk.map(q => (
                         <li key={q} className="flex gap-3 text-[var(--color-text-body)] text-sm leading-relaxed">
@@ -426,7 +426,7 @@ export default function CorporateEventPhotographyCostPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-5 flex items-center gap-2">
+                    <h3 className="text-xl text-[var(--color-text-dark)] mb-5 flex items-center gap-2">
                       <AlertTriangle size={20} className="text-amber-500" /> Red Flags to Watch For
                     </h3>
                     <ul className="space-y-3">
@@ -447,7 +447,7 @@ export default function CorporateEventPhotographyCostPage() {
           <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
             <div className="max-w-3xl mx-auto text-center">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="text-3xl md:text-4xl mb-4">
                   Get a Quote for Your Event
                 </h2>
                 <p className="text-lg mb-8 text-white/90">

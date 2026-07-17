@@ -24,7 +24,7 @@ export default function ComparisonTable({
   return (
     <section className="py-12 px-8 bg-white">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold text-[var(--color-text-dark)] mb-8 text-center">
+        <h2 className="text-2xl text-[var(--color-text-dark)] mb-8 text-center">
           {title}
         </h2>
         <div className="overflow-x-auto">

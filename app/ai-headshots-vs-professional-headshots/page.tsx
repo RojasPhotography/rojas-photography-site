@@ -142,7 +142,7 @@ export default function AIHeadshotsVsProfessionalPage() {
           <section id="the-honest-answer" className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">
                   The Short Answer
                 </h2>
                 <p className="text-center text-[var(--color-text-muted)] mb-10 text-lg">
@@ -167,7 +167,7 @@ export default function AIHeadshotsVsProfessionalPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   How AI Headshot Tools Work
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
@@ -201,7 +201,7 @@ export default function AIHeadshotsVsProfessionalPage() {
                       <div className="w-10 h-10 bg-[var(--color-primary)] rounded-full flex items-center justify-center flex-shrink-0 text-white font-bold text-sm mb-4">
                         {item.step}
                       </div>
-                      <h3 className="text-lg font-bold text-[var(--color-text-dark)] mb-3">{item.title}</h3>
+                      <h3 className="text-lg text-[var(--color-text-dark)] mb-3">{item.title}</h3>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   ))}
@@ -209,7 +209,7 @@ export default function AIHeadshotsVsProfessionalPage() {
               </SectionReveal>
 
               <SectionReveal>
-                <h3 className="text-2xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h3 className="text-2xl text-[var(--color-text-dark)] mb-6 text-center">
                   Top AI Headshot Tools Compared (2026)
                 </h3>
                 <div className="overflow-x-auto rounded-xl border border-gray-100">
@@ -297,7 +297,7 @@ export default function AIHeadshotsVsProfessionalPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   The 7 Real Problems With AI Headshots
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
@@ -342,7 +342,7 @@ export default function AIHeadshotsVsProfessionalPage() {
                         {i + 1}
                       </div>
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-2">{item.title}</h3>
+                        <h3 className="text-[var(--color-text-dark)] text-lg mb-2">{item.title}</h3>
                         <p className="text-[var(--color-text-body)] leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
@@ -356,7 +356,7 @@ export default function AIHeadshotsVsProfessionalPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   What a Professional Session Actually Delivers
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
@@ -398,7 +398,7 @@ export default function AIHeadshotsVsProfessionalPage() {
                           size={20}
                           className="text-[var(--color-primary)] flex-shrink-0 mt-0.5"
                         />
-                        <h3 className="font-bold text-[var(--color-text-dark)] text-lg">{item.title}</h3>
+                        <h3 className="text-[var(--color-text-dark)] text-lg">{item.title}</h3>
                       </div>
                       <p className="text-[var(--color-text-body)] leading-relaxed text-sm pl-7">{item.desc}</p>
                     </div>
@@ -412,7 +412,7 @@ export default function AIHeadshotsVsProfessionalPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   When AI Headshots Are Actually Fine
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">
@@ -488,7 +488,7 @@ export default function AIHeadshotsVsProfessionalPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   What Recruiters Actually Think
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
@@ -546,7 +546,7 @@ export default function AIHeadshotsVsProfessionalPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   The Hidden Risks Nobody Talks About
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
@@ -559,7 +559,7 @@ export default function AIHeadshotsVsProfessionalPage() {
                   <div className="bg-white rounded-2xl p-8 border border-gray-100 h-full">
                     <div className="flex items-center gap-3 mb-5">
                       <AlertTriangle size={22} className="text-amber-500 flex-shrink-0" />
-                      <h3 className="text-xl font-bold text-[var(--color-text-dark)]">Racial Bias</h3>
+                      <h3 className="text-xl text-[var(--color-text-dark)]">Racial Bias</h3>
                     </div>
                     <p className="text-[var(--color-text-body)] leading-relaxed mb-4">
                       A 2024 JAMA Network Open study analyzing 1,000 AI-generated physician headshots found:
@@ -586,7 +586,7 @@ export default function AIHeadshotsVsProfessionalPage() {
                   <div className="bg-white rounded-2xl p-8 border border-gray-100 h-full">
                     <div className="flex items-center gap-3 mb-5">
                       <AlertTriangle size={22} className="text-amber-500 flex-shrink-0" />
-                      <h3 className="text-xl font-bold text-[var(--color-text-dark)]">Privacy Risks</h3>
+                      <h3 className="text-xl text-[var(--color-text-dark)]">Privacy Risks</h3>
                     </div>
                     <p className="text-[var(--color-text-body)] leading-relaxed mb-4">
                       Uploading 10–25 photos of your face constitutes biometric data — regulated under GDPR and CCPA. This is not a theoretical concern:
@@ -618,7 +618,7 @@ export default function AIHeadshotsVsProfessionalPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   The Real Cost Comparison
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
@@ -630,7 +630,7 @@ export default function AIHeadshotsVsProfessionalPage() {
                 <SectionReveal>
                   <div className="rounded-2xl border border-gray-200 overflow-hidden h-full">
                     <div className="bg-gray-100 px-8 py-5">
-                      <h3 className="text-xl font-bold text-[var(--color-text-dark)]">AI Headshot Tools</h3>
+                      <h3 className="text-xl text-[var(--color-text-dark)]">AI Headshot Tools</h3>
                     </div>
                     <div className="p-8">
                       <div className="text-4xl font-bold text-[var(--color-text-dark)] mb-1">$0–$69</div>
@@ -665,7 +665,7 @@ export default function AIHeadshotsVsProfessionalPage() {
                 <SectionReveal>
                   <div className="rounded-2xl border-2 border-[var(--color-primary)] overflow-hidden h-full">
                     <div className="bg-[var(--color-primary)] px-8 py-5">
-                      <h3 className="text-xl font-bold text-white">Rojas Photography</h3>
+                      <h3 className="text-xl text-white">Rojas Photography</h3>
                       <p className="text-white/80 text-sm mt-1">Professional headshots — Modesto, CA</p>
                     </div>
                     <div className="p-8">
@@ -709,20 +709,20 @@ export default function AIHeadshotsVsProfessionalPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)] border-y border-gray-100">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">
                   Your Career Deserves Better Than an Algorithm
                 </h2>
               </SectionReveal>
               <SectionReveal>
                 <div className="bg-white rounded-2xl p-8 md:p-10 border border-gray-100 shadow-sm">
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
-                    I have photographed over 500 professionals across California — attorneys, physicians, executives, financial advisors, real estate agents, and medical students applying for residency. I know what it feels like to stand in front of a camera and not know what to do with your face. That moment of uncertainty is exactly why coaching is at the center of every session I run.
+                    We have photographed over 500 professionals across California — attorneys, physicians, executives, financial advisors, real estate agents, and medical students applying for residency. We know what it feels like to stand in front of a camera and not know what to do with your face. That moment of uncertainty is exactly why coaching is at the center of every session I run.
                   </p>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
-                    Before I was a photographer, I spent 15 years in corporate leadership. I understand what professional credibility looks like — and what undermines it. I know the difference between a headshot that makes someone want to connect with you and one that creates just enough distance to lose the opportunity.
+                    Before we picked up a camera, we spent 15+ years in corporate leadership. We understand what professional credibility looks like — and what undermines it. We know the difference between a headshot that makes someone want to connect with you and one that creates just enough distance to lose the opportunity.
                   </p>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-8">
-                    If you are weighing AI against a professional session, I am not going to tell you AI is useless. Some situations call for a pragmatic solution. But if your headshot is going to be seen by a client, a recruiter, a program director, or a hiring manager before you ever speak to them — you should be represented by something that looks like you on your best day. Because it is.
+                    If you are weighing AI against a professional session, we are not going to tell you AI is useless. Some situations call for a pragmatic solution. But if your headshot is going to be seen by a client, a recruiter, a program director, or a hiring manager before you ever speak to them — you should be represented by something that looks like you on your best day. Because it is.
                   </p>
                   <div className="flex flex-col sm:flex-row items-center gap-6 pt-2 border-t border-gray-100">
                     <div>
@@ -746,7 +746,7 @@ export default function AIHeadshotsVsProfessionalPage() {
           <section className="py-16 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">
                   What Is at Stake
                 </h2>
               </SectionReveal>
@@ -788,7 +788,7 @@ export default function AIHeadshotsVsProfessionalPage() {
           <section id="book-session" className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   Ready for a Headshot That Actually Looks Like You?
                 </h2>
                 <p className="text-center text-[var(--color-text-muted)] text-lg mb-10">

@@ -46,7 +46,7 @@ export default function HeroSection({
               {tag}
             </p>
           )}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
             {title}
           </h1>
           {subtitle && (
@@ -75,7 +75,7 @@ export default function HeroSection({
             {tag}
           </p>
         )}
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl md:text-6xl mb-6 leading-tight">
           {title}
         </h1>
         {subtitle && (

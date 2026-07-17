@@ -66,7 +66,7 @@ export default function DoYouNeedLinkedInHeadshotPage() {
           <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
                 <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                   <p><strong className="text-[var(--color-text-dark)]">Yes — for most professionals in client-facing roles, a professional headshot is one of the highest-ROI investments you can make for your LinkedIn profile.</strong></p>
                   <p>LinkedIn&apos;s own data: profiles with a photo receive <strong className="text-[var(--color-text-dark)]">21x more profile views</strong>, <strong className="text-[var(--color-text-dark)]">9x more connection requests</strong>, and <strong className="text-[var(--color-text-dark)]">36x more messages</strong> than profiles without one. These statistics compare profiles with photos to profiles without — but the quality gap between a professional headshot and a selfie is meaningful. Recruiters and clients notice.</p>
@@ -79,7 +79,7 @@ export default function DoYouNeedLinkedInHeadshotPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">When You Absolutely Need One</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">When You Absolutely Need One</h2>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-5 mb-12">
                 {[

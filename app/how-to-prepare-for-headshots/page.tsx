@@ -26,7 +26,7 @@ const faqs = [
       'Solid, muted tones photograph best: navy, charcoal, forest green, burgundy, white, and black are all excellent choices. Navy in particular signals trust and competence (backed by color psychology research). White works particularly well against darker backgrounds. Avoid neon or very bright colors that draw attention away from your face.',
   },
   {
-    question: 'How many outfits should I bring to a headshot session?',
+    question: 'How many outfits should we bring to a headshot session?',
     answer:
       'Bring 2-4 outfits. Our sessions include unlimited wardrobe changes, so having options means you can shoot different looks for different uses — LinkedIn, your website bio, business cards, and marketing materials. Pack clothes on hangers in a garment bag to keep them wrinkle-free.',
   },
@@ -170,7 +170,7 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-8">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-8">
                   Why Most People Get Disappointing Headshots
                 </h2>
                 <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed text-lg">
@@ -199,7 +199,7 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-16 px-8 bg-white border-b border-gray-100">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   Quick Headshot Prep Checklist
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-10 text-lg">
@@ -207,7 +207,7 @@ export default function HowToPrepareForHeadshotsPage() {
                 </p>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-6">
-                    <h3 className="font-bold text-[var(--color-text-dark)] mb-4 text-lg">1 Week Before</h3>
+                    <h3 className="text-[var(--color-text-dark)] mb-4 text-lg">1 Week Before</h3>
                     <ul className="space-y-2 text-[var(--color-text-body)] text-sm">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Get a haircut (not the day before)</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Color your hair if needed (let it settle)</li>
@@ -216,7 +216,7 @@ export default function HowToPrepareForHeadshotsPage() {
                     </ul>
                   </div>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-6">
-                    <h3 className="font-bold text-[var(--color-text-dark)] mb-4 text-lg">Night Before</h3>
+                    <h3 className="text-[var(--color-text-dark)] mb-4 text-lg">Night Before</h3>
                     <ul className="space-y-2 text-[var(--color-text-body)] text-sm">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Steam/press outfits and hang in garment bag</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Skip alcohol and salty foods</li>
@@ -225,7 +225,7 @@ export default function HowToPrepareForHeadshotsPage() {
                     </ul>
                   </div>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-6">
-                    <h3 className="font-bold text-[var(--color-text-dark)] mb-4 text-lg">Day Of</h3>
+                    <h3 className="text-[var(--color-text-dark)] mb-4 text-lg">Day Of</h3>
                     <ul className="space-y-2 text-[var(--color-text-body)] text-sm">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Eat a light meal, avoid salty foods</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Apply makeup naturally — less is more</li>
@@ -234,7 +234,7 @@ export default function HowToPrepareForHeadshotsPage() {
                     </ul>
                   </div>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-6">
-                    <h3 className="font-bold text-[var(--color-text-dark)] mb-4 text-lg">Bring to Your Session</h3>
+                    <h3 className="text-[var(--color-text-dark)] mb-4 text-lg">Bring to Your Session</h3>
                     <ul className="space-y-2 text-[var(--color-text-body)] text-sm">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />2-4 outfit options on hangers</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Hair products and brush/comb</li>
@@ -251,7 +251,7 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
                   What to Wear for Your Professional Headshot
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-6 max-w-2xl mx-auto text-lg">
@@ -265,7 +265,7 @@ export default function HowToPrepareForHeadshotsPage() {
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <SectionReveal>
                   <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm h-full">
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-5 flex items-center gap-2">
+                    <h3 className="text-xl text-[var(--color-text-dark)] mb-5 flex items-center gap-2">
                       <CheckCircle2 size={20} className="text-[var(--color-primary)]" /> Do Wear
                     </h3>
                     <ul className="space-y-3">
@@ -281,7 +281,7 @@ export default function HowToPrepareForHeadshotsPage() {
 
                 <SectionReveal>
                   <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm h-full">
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-5 flex items-center gap-2">
+                    <h3 className="text-xl text-[var(--color-text-dark)] mb-5 flex items-center gap-2">
                       <XCircle size={20} className="text-red-400" /> Avoid
                     </h3>
                     <ul className="space-y-3">
@@ -298,7 +298,7 @@ export default function HowToPrepareForHeadshotsPage() {
 
               <SectionReveal>
                 <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">Why Patterns Are a Problem</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">Why Patterns Are a Problem</h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
                     Busy patterns like stripes, plaids, and small prints create a visual distortion called &ldquo;moiré effect&rdquo; when photographed and compressed digitally. The result is a distracting visual banding that pulls the viewer&apos;s eye away from your face — exactly the opposite of what you want. Solid colors keep all attention where it belongs.
                   </p>
@@ -321,14 +321,14 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-12 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-12 text-center">
                   Hair Preparation
                 </h2>
               </SectionReveal>
               <div className="grid md:grid-cols-3 gap-8">
                 <SectionReveal>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 h-full">
-                    <h3 className="text-lg font-bold text-[var(--color-text-dark)] mb-4">Timing Your Haircut</h3>
+                    <h3 className="text-lg text-[var(--color-text-dark)] mb-4">Timing Your Haircut</h3>
                     <p className="text-[var(--color-text-body)] text-sm leading-relaxed mb-4">
                       Schedule your haircut <strong>one week before</strong> your session — not the day before. A brand-new cut looks too tight on camera and needs a few days to relax into its natural shape.
                     </p>
@@ -339,7 +339,7 @@ export default function HowToPrepareForHeadshotsPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 h-full">
-                    <h3 className="text-lg font-bold text-[var(--color-text-dark)] mb-4">Day-of Hair Tips</h3>
+                    <h3 className="text-lg text-[var(--color-text-dark)] mb-4">Day-of Hair Tips</h3>
                     <ul className="space-y-3 text-[var(--color-text-body)] text-sm leading-relaxed">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Style hair as you would for an important meeting</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring products for touch-ups between outfit changes</li>
@@ -350,7 +350,7 @@ export default function HowToPrepareForHeadshotsPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 h-full">
-                    <h3 className="text-lg font-bold text-[var(--color-text-dark)] mb-4">For Men</h3>
+                    <h3 className="text-lg text-[var(--color-text-dark)] mb-4">For Men</h3>
                     <ul className="space-y-3 text-[var(--color-text-body)] text-sm leading-relaxed">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Shave the morning of your session — give yourself enough time before you arrive for any redness to settle</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />If you wear a beard, trim and shape it a day or two before — not the morning of</li>
@@ -369,14 +369,14 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-12 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-12 text-center">
                   Makeup & Grooming Tips
                 </h2>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-8">
                 <SectionReveal>
                   <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">For Women</h3>
+                    <h3 className="text-xl text-[var(--color-text-dark)] mb-4">For Women</h3>
                     <ul className="space-y-3 text-[var(--color-text-body)] text-sm leading-relaxed">
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Come with your natural, everyday makeup — the goal is to look like yourself at your best</li>
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Use matte products — avoid shimmer or glitter that reflects harshly in photos</li>
@@ -389,7 +389,7 @@ export default function HowToPrepareForHeadshotsPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">For Men</h3>
+                    <h3 className="text-xl text-[var(--color-text-dark)] mb-4">For Men</h3>
                     <ul className="space-y-3 text-[var(--color-text-body)] text-sm leading-relaxed">
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Moisturize the night before for healthy-looking skin — avoid heavy lotion the morning of</li>
                       <li className="flex gap-3"><CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring blotting papers in case of shine during the session</li>
@@ -407,7 +407,7 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-3xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
                   The Night Before Your Session
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg">
@@ -432,7 +432,7 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-3xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-12 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-12 text-center">
                   Day-of Session Checklist
                 </h2>
                 <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
@@ -453,7 +453,7 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   What to Expect at Your Session
                 </h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
@@ -489,7 +489,7 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
                   Headshot Preparation by Industry
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">
@@ -583,7 +583,7 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   How to Look Natural and Relaxed on Camera
                 </h2>
                 <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed">
@@ -592,7 +592,7 @@ export default function HowToPrepareForHeadshotsPage() {
                       Feeling stiff in front of a camera is normal. The good news: it&apos;s almost entirely solvable with the right photographer and a few simple techniques.
                     </p>
                     <div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-2">Before Your Session</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-2">Before Your Session</h3>
                       <ul className="space-y-2 text-sm">
                         <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Practice expressions in a mirror — find your natural resting face and a genuine smile</li>
                         <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Bring 2-3 reference photos of headshots you admire</li>
@@ -602,7 +602,7 @@ export default function HowToPrepareForHeadshotsPage() {
                   </div>
                   <div className="space-y-4">
                     <div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-2">During Your Session</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-2">During Your Session</h3>
                       <ul className="space-y-2 text-sm">
                         <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Take slow, deep breaths between shots — tension shows in your jaw and shoulders</li>
                         <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Shake out your hands and roll your shoulders before each set</li>
@@ -623,7 +623,7 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   What Retouching Is Included
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-10 text-lg max-w-2xl mx-auto">
@@ -631,8 +631,8 @@ export default function HowToPrepareForHeadshotsPage() {
                 </p>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
-                    <h3 className="font-bold text-[var(--color-text-dark)] mb-4 flex items-center gap-2">
-                      <CheckCircle2 size={20} className="text-[var(--color-primary)]" /> What We Retouch
+                    <h3 className="text-[var(--color-text-dark)] mb-4 flex items-center gap-2">
+                      <CheckCircle2 size={20} className="text-[var(--color-primary)]" /> What we Retouch
                     </h3>
                     <ul className="space-y-2 text-[var(--color-text-body)] text-sm leading-relaxed">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Temporary blemishes and breakouts</li>
@@ -644,8 +644,8 @@ export default function HowToPrepareForHeadshotsPage() {
                     </ul>
                   </div>
                   <div className="bg-white rounded-xl p-8 border border-gray-100 shadow-sm">
-                    <h3 className="font-bold text-[var(--color-text-dark)] mb-4 flex items-center gap-2">
-                      <XCircle size={20} className="text-red-400" /> What We Don&apos;t Alter
+                    <h3 className="text-[var(--color-text-dark)] mb-4 flex items-center gap-2">
+                      <XCircle size={20} className="text-red-400" /> What we Don&apos;t Alter
                     </h3>
                     <p className="text-[var(--color-text-body)] text-sm leading-relaxed mb-4">
                       Retouching is designed to present the best version of you — not a different person. We don&apos;t alter your permanent features, bone structure, eye color, or body shape.
@@ -663,14 +663,14 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   What to Do With Your Headshots After the Session
                 </h2>
                 <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed">
                   <div>
-                    <h3 className="font-bold text-[var(--color-text-dark)] mb-3">Update LinkedIn First</h3>
+                    <h3 className="text-[var(--color-text-dark)] mb-3">Update LinkedIn First</h3>
                     <p className="text-sm mb-4">Profiles with professional photos receive significantly more views and connection requests. LinkedIn profile photos should be a square crop, minimum 400x400 pixels. Upload the highest resolution version you have.</p>
-                    <h3 className="font-bold text-[var(--color-text-dark)] mb-3">Then Update These</h3>
+                    <h3 className="text-[var(--color-text-dark)] mb-3">Then Update These</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Company website bio page</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Professional email signature</li>
@@ -680,11 +680,11 @@ export default function HowToPrepareForHeadshotsPage() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="font-bold text-[var(--color-text-dark)] mb-3">How Often to Update</h3>
+                    <h3 className="text-[var(--color-text-dark)] mb-3">How Often to Update</h3>
                     <p className="text-sm mb-4">
                       Update your headshot every 2-3 years, or sooner if your appearance has changed significantly — new hairstyle, significant weight change, or a major career transition. An outdated headshot creates a disconnect when people meet you in person.
                     </p>
-                    <h3 className="font-bold text-[var(--color-text-dark)] mb-3">Image Sizing Guide</h3>
+                    <h3 className="text-[var(--color-text-dark)] mb-3">Image Sizing Guide</h3>
                     <ul className="space-y-2 text-sm">
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />LinkedIn: 400x400px (square)</li>
                       <li className="flex gap-3"><CheckCircle2 size={16} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />Website bio: varies — we can provide wider crops during selection</li>
@@ -721,7 +721,7 @@ export default function HowToPrepareForHeadshotsPage() {
           <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
             <div className="max-w-3xl mx-auto text-center">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="text-3xl md:text-4xl mb-4">
                   Ready to Put This Into Practice?
                 </h2>
                 <p className="text-lg mb-8 text-white/90">

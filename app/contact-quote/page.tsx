@@ -56,7 +56,7 @@ export default function ContactPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+              <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">
                 Get in Touch
               </h2>
             </SectionReveal>
@@ -71,7 +71,7 @@ export default function ContactPage() {
                     <div className="flex justify-center mb-6">
                       <item.icon size={36} className="text-[var(--color-primary)]" aria-hidden="true" />
                     </div>
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">{item.title}</h3>
+                    <h3 className="text-xl text-[var(--color-text-dark)] mb-3">{item.title}</h3>
                     <p className="text-[var(--color-text-body)] text-sm mb-4">{item.desc}</p>
                     {item.href ? (
                       <a href={item.href} className="text-[var(--color-primary)] font-bold text-lg hover:text-[var(--color-primary-dark)] transition-colors break-all">
@@ -91,7 +91,7 @@ export default function ContactPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-text-dark)]">
+              <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">
                 Request a Quote
               </h2>
               <p className="text-center text-[var(--color-text-body)] mb-16 text-lg">
@@ -113,7 +113,7 @@ export default function ContactPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+              <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">
                 Frequently Asked Questions
               </h2>
             </SectionReveal>
@@ -129,7 +129,7 @@ export default function ContactPage() {
               ].map((item) => (
                 <SectionReveal key={item.q}>
                   <div>
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">{item.q}</h3>
+                    <h3 className="text-xl text-[var(--color-text-dark)] mb-3">{item.q}</h3>
                     <p className="text-[var(--color-text-body)] leading-relaxed">{item.a}</p>
                   </div>
                 </SectionReveal>

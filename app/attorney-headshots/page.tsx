@@ -183,7 +183,7 @@ export default function AttorneyHeadshotsPage() {
           <section className="py-20 md:py-28 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   Your Clients Judge You Before You Speak
                 </h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
@@ -208,7 +208,7 @@ export default function AttorneyHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   What Your Attorney Headshot Needs to Communicate
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -223,7 +223,7 @@ export default function AttorneyHeadshotsPage() {
                         {i + 1}
                       </div>
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-2">{item.quality}</h3>
+                        <h3 className="text-[var(--color-text-dark)] text-lg mb-2">{item.quality}</h3>
                         <p className="text-[var(--color-text-body)] leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
@@ -253,14 +253,14 @@ export default function AttorneyHeadshotsPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="space-y-5">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
-                      I Understand What Legal Professionals Need
+                    <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)]">
+                      We Understand What Legal Professionals Need
                     </h2>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      I know the pressure of projecting authority while remaining approachable — that balance is everything in legal professional branding. Too formal, and clients feel they cannot talk to you. Too relaxed, and they question whether you will fight hard enough for them.
+                      We know the pressure of projecting authority while remaining approachable — that balance is everything in legal professional branding. Too formal, and clients feel they cannot talk to you. Too relaxed, and they question whether you will fight hard enough for them.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      I have photographed attorneys across practice areas throughout the Central Valley — including members of the California Lawyers Association — and I bring 15+ years of corporate professional experience to every session. I understand how serious professionals want to be seen, and I know how to get you there.
+                      We have photographed attorneys across practice areas throughout the Central Valley — including members of the California Lawyers Association — and we bring 15+ years of corporate professional experience to every session. We understand how serious professionals want to be seen, and we know how to get you there.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
                       You are not the hero of this story — your client is. Your headshot should communicate that you are the trusted guide who can help them navigate the most difficult situation of their life. That is the look we are after.
@@ -292,7 +292,7 @@ export default function AttorneyHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   The Right Look for Your Practice Area
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -305,7 +305,7 @@ export default function AttorneyHeadshotsPage() {
                     <div className="flex gap-4 p-6 bg-white rounded-xl border border-gray-100">
                       <CheckCircle2 size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.area}</h3>
+                        <h3 className="text-[var(--color-text-dark)] mb-1">{item.area}</h3>
                         <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.guidance}</p>
                       </div>
                     </div>
@@ -321,7 +321,7 @@ export default function AttorneyHeadshotsPage() {
               <SectionReveal>
                 <div className="flex gap-4 mb-8 items-start">
                   <AlertTriangle size={28} className="text-amber-500 flex-shrink-0 mt-1" aria-hidden="true" />
-                  <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
+                  <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)]">
                     A Bad Attorney Headshot Has Real Consequences
                   </h2>
                 </div>
@@ -347,7 +347,7 @@ export default function AttorneyHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   What&apos;s Included in Your Session
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -357,7 +357,7 @@ export default function AttorneyHeadshotsPage() {
               <div className="grid md:grid-cols-2 gap-6">
                 <SectionReveal>
                   <div className="bg-white rounded-xl p-8 border border-gray-100 h-full">
-                    <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-5">Session Details</h3>
+                    <h3 className="text-[var(--color-text-dark)] text-lg mb-5">Session Details</h3>
                     <ul className="space-y-3">
                       {sessionIncludes.map(item => (
                         <li key={item} className="flex gap-2 text-sm text-[var(--color-text-body)]">
@@ -371,7 +371,7 @@ export default function AttorneyHeadshotsPage() {
                 <SectionReveal>
                   <div className="space-y-5">
                     <div className="bg-white rounded-xl p-8 border border-gray-100">
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-3">Pricing</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-3">Pricing</h3>
                       <p className="text-[var(--color-text-body)] mb-2">
                         <strong className="text-[var(--color-text-dark)]">$150</strong> session fee
                       </p>
@@ -383,7 +383,7 @@ export default function AttorneyHeadshotsPage() {
                       </p>
                     </div>
                     <div className="bg-white rounded-xl p-8 border border-gray-100">
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-3">Where We Serve</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-3">Where we Serve</h3>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed mb-3">
                         Our studio is in Modesto, CA — convenient for attorneys throughout the Central Valley, including Stockton, Fresno, Sacramento, and surrounding areas.
                       </p>
@@ -409,7 +409,7 @@ export default function AttorneyHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">
+                <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">
                   What Clients Say
                 </h2>
               </SectionReveal>
@@ -443,7 +443,7 @@ export default function AttorneyHeadshotsPage() {
           <section className="py-14 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto text-center">
               <SectionReveal>
-                <h3 className="font-bold text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
+                <h3 className="text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/how-to-prepare-for-headshots" className="btn-outline px-6 py-2.5 text-sm font-semibold rounded-full inline-block">
                     How to Prepare for Your Session

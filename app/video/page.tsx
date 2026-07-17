@@ -111,7 +111,7 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Most Corporate Videos Feel Forced and Inauthentic</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Most Corporate Videos Feel Forced and Inauthentic</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
                   You watch corporate videos from competitors and they all feel the same. Stiff executives reading from scripts. Forced smiles and rehearsed talking points. Zero authenticity, zero connection.
@@ -134,16 +134,16 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">I Know What It Takes to Make People Comfortable on Camera</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">I Know What It Takes to Make People Comfortable on Camera</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
                   Most people freeze the moment a camera points at them. They read from a script and it sounds like exactly that — a script. I&apos;ve seen it enough times to know that the problem isn&apos;t the person, it&apos;s the process. Nobody relaxes when they feel like they&apos;re performing.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  I&apos;m Alfonso Rojas. I guide conversations, not scripts. With 15+ years of storytelling experience, <strong>FAA Part 107 drone certification</strong>, and a background in corporate environments, I produce video for businesses across the Central Valley that actually connects — because it feels real, not rehearsed.
+                  We&apos;re Alfonso and Niomi Rojas. We guide conversations, not scripts. With 15+ years of storytelling experience, <strong>FAA Part 107 drone certification</strong>, and a background in corporate environments, I produce video for businesses across the Central Valley that actually connects — because it feels real, not rehearsed.
                 </p>
                 <p>
-                  Whether you need a 15-second social clip, a 3-minute brand video, or aerial drone footage, I build the narrative around your story — not a template — and I make sure your team feels comfortable enough to show up as themselves.
+                  Whether you need a 15-second social clip, a 3-minute brand video, or aerial drone footage, we build the narrative around your story — not a template — and I make sure your team feels comfortable enough to show up as themselves.
                 </p>
               </div>
             </SectionReveal>
@@ -154,40 +154,40 @@ export default function VideoServicesPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">How I Work With You</h2>
+              <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">How we Work With You</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-4 gap-8">
               <SectionReveal>
                 <div>
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">01</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Story Development</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Story Development</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I start by learning your video goals, audience, key messages, and tone. I develop the narrative structure and shot list — not a rigid script that feels forced when your team is on camera.
+                    We start by learning your video goals, audience, key messages, and tone. We develop the narrative structure and shot list — not a rigid script that feels forced when your team is on camera.
                   </p>
                 </div>
               </SectionReveal>
               <SectionReveal>
                 <div>
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">02</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Production</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Professional Production</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I arrive with professional cameras, audio, lighting, and drones when needed. I guide your team through conversational interviews — not stiff scripts — capturing authentic moments at your location, in studio, or wherever your story lives.
+                    We arrive with professional cameras, audio, lighting, and drones when needed. We guide your team through conversational interviews — not stiff scripts — capturing authentic moments at your location, in studio, or wherever your story lives.
                   </p>
                 </div>
               </SectionReveal>
               <SectionReveal>
                 <div>
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">03</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Professional Editing</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Professional Editing</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    I edit with color grading, sound design, motion graphics, and professional music. The narrative is crafted to maximize engagement while keeping the authenticity intact. Every frame is intentional.
+                    We edit with color grading, sound design, motion graphics, and professional music. The narrative is crafted to maximize engagement while keeping the authenticity intact. Every frame is intentional.
                   </p>
                 </div>
               </SectionReveal>
               <SectionReveal>
                 <div>
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">04</span>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mt-4 mb-3">Multi-Format Delivery</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Multi-Format Delivery</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
                     Videos delivered in multiple formats optimized for different platforms—full resolution for websites, vertical for Instagram Stories, square for social feeds, and broadcast quality for professional use. Ready to publish immediately.
                   </p>
@@ -215,7 +215,7 @@ export default function VideoServicesPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Professional Video Production in Modesto & Central Valley</h2>
+              <h2 className="text-3xl md:text-4xl text-center mb-12 text-[var(--color-text-dark)]">Professional Video Production in Modesto & Central Valley</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-4">
               {[
@@ -235,7 +235,7 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">Inauthentic Video Pushes Customers Away</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Inauthentic Video Pushes Customers Away</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
                   When your corporate video feels scripted and fake, viewers click away within seconds. You&apos;ve invested thousands of dollars in production that actively <em>damages</em> your brand instead of building it.
@@ -258,7 +258,7 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-white text-center">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Ready for Authentic Video Content?</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Ready for Authentic Video Content?</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Get a custom quote for your video project. We&apos;ll create professional video content that connects with your audience through genuine storytelling—not scripted corporate speak.
               </p>
@@ -274,11 +274,11 @@ export default function VideoServicesPage() {
           </div>
         </section>
 
-        {/* What We Offer */}
+        {/* What we Offer */}
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What I Offer</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-16 text-center">What I Offer</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
@@ -295,7 +295,7 @@ export default function VideoServicesPage() {
                   <div className="flex gap-4">
                     <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-2">{item.title}</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
@@ -304,7 +304,7 @@ export default function VideoServicesPage() {
             </div>
             <SectionReveal>
               <div className="bg-white p-8 rounded-xl border border-gray-100 max-w-sm mx-auto text-center shadow-sm">
-                <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-4">Pricing</h3>
+                <h3 className="text-2xl text-[var(--color-primary)] mb-4">Pricing</h3>
                 <p className="text-[var(--color-text-body)] mb-6">Custom pricing based on project scope, length, and production needs.</p>
                 <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
                   Get Your Quote
@@ -318,10 +318,10 @@ export default function VideoServicesPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-[var(--color-text-dark)] mb-8">Video Services I Provide</h2>
+              <h2 className="text-3xl text-[var(--color-text-dark)] mb-8">Video Services I Provide</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="font-bold text-[var(--color-text-dark)] mb-4">Corporate & Marketing Videos</h4>
+                  <h4 className="text-[var(--color-text-dark)] mb-4">Corporate & Marketing Videos</h4>
                   <ul className="text-[var(--color-text-body)] text-sm space-y-2">
                     <li>&#10003; Company overview and brand videos</li>
                     <li>&#10003; Product demonstration videos</li>
@@ -331,7 +331,7 @@ export default function VideoServicesPage() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-bold text-[var(--color-text-dark)] mb-4">Aerial & Specialty Videos</h4>
+                  <h4 className="text-[var(--color-text-dark)] mb-4">Aerial & Specialty Videos</h4>
                   <ul className="text-[var(--color-text-body)] text-sm space-y-2">
                     <li>&#10003; Drone videography and aerial footage</li>
                     <li>&#10003; Commercial and construction documentation</li>
@@ -349,7 +349,7 @@ export default function VideoServicesPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl font-bold text-center mb-12 text-[var(--color-text-dark)]">Why Work With Me</h2>
+              <h2 className="text-3xl text-center mb-12 text-[var(--color-text-dark)]">Why Work With Me</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
@@ -362,7 +362,7 @@ export default function VideoServicesPage() {
                   <div className="flex gap-4">
                     <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-2">{item.title}</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
                       <p className="text-[var(--color-text-body)] text-sm">{item.desc}</p>
                     </div>
                   </div>
@@ -377,7 +377,7 @@ export default function VideoServicesPage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Imagine Sharing a Video You&apos;re Actually Proud to Put on Your Website</h2>
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Imagine Sharing a Video You&apos;re Actually Proud to Put on Your Website</h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
                   Authentic, professional video that sounds like your team — not a script. Content that connects with your audience and makes people want to reach out. Here&apos;s what clients say about working with me.
                 </p>
@@ -398,7 +398,7 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)] text-center">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Your Story Deserves Authentic Video</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Your Story Deserves Authentic Video</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Join hundreds of Central Valley businesses who&apos;ve partnered with us for genuine, professional video production. Authentic storytelling is one quote away.
               </p>
@@ -419,7 +419,7 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-white text-center">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Ready for Professional Video Services?</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Ready for Professional Video Services?</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Let&apos;s create compelling video content that engages your audience and drives business results.
               </p>

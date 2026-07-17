@@ -13,7 +13,7 @@ const faqs = [
   {
     question: 'How does a headshot booth work at an event?',
     answer:
-      'I arrive before your event starts, set up a complete professional studio (lighting, backdrop, cameras), and your attendees flow through one at a time throughout the day. Each person gets a quick coached session — typically 5-10 minutes — and walks away with a professional headshot. All images are edited and delivered the same day via a private online gallery.',
+      'We arrive before your event starts, set up a complete professional studio (lighting, backdrop, cameras), and your attendees flow through one at a time throughout the day. Each person gets a quick coached session — typically 5-10 minutes — and walks away with a professional headshot. All images are edited and delivered the same day via a private online gallery.',
   },
   {
     question: 'How many people can you photograph per hour?',
@@ -33,7 +33,7 @@ const faqs = [
   {
     question: 'What do you bring to the event?',
     answer:
-      'Everything. I bring professional lighting rigs, quality backdrops, high-end cameras, and all necessary gear. I set up and break down completely — your venue just needs a reasonably sized space (roughly 10x10 feet) and access to power.',
+      'Everything. We bring professional lighting rigs, quality backdrops, high-end cameras, and all necessary gear. We set up and break down completely — your venue just needs a reasonably sized space (roughly 10x10 feet) and access to power.',
   },
   {
     question: 'Do attendees get to see and select their photos?',
@@ -45,7 +45,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Headshot Booth Modesto | Corporate Event Headshots | Rojas Photography',
   description:
-    'Professional headshot booth for corporate events, expos, and training days in Modesto and Central Valley. I bring the studio to your event and move attendees through efficiently. Priced by the hour.',
+    'Professional headshot booth for corporate events, expos, and training days in Modesto and Central Valley. We bring the studio to your event and move attendees through efficiently. Priced by the hour.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/headshot-booth',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Headshot Booth for Corporate Events | Rojas Photography Modesto',
     description:
-      'A professional headshot booth for your expo, training day, or corporate event. I set up at your location and photograph attendees efficiently — everyone walks away with a great photo.',
+      'A professional headshot booth for your expo, training day, or corporate event. We set up at your location and photograph attendees efficiently — everyone walks away with a great photo.',
     url: 'https://rojasphotography.net/headshot-booth',
     type: 'website',
     images: [
@@ -90,7 +90,7 @@ export default function HeadshotBoothPage() {
         fullHeight
       >
         <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-          I set up a complete professional studio at your expo, training day, or corporate event — and move your attendees through efficiently so everyone walks away with a great photo.
+          We set up a complete professional studio at your expo, training day, or corporate event — and move your attendees through efficiently so everyone walks away with a great photo.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
           <Link
@@ -112,7 +112,7 @@ export default function HeadshotBoothPage() {
       <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
         <div className="max-w-4xl mx-auto">
           <SectionReveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-8">
+            <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-8">
               Most Event Headshots Are a Disorganized Mess
             </h2>
             <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed">
@@ -142,18 +142,18 @@ export default function HeadshotBoothPage() {
         <div className="max-w-4xl mx-auto">
           <SectionReveal>
             <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
                 I&apos;ve Run Booths at Events Across the Central Valley
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  I know what it takes to keep a headshot booth running smoothly at a busy event — when there&apos;s a line forming, a schedule to keep, and attendees who have three minutes before their next session. I&apos;ve been in that environment enough times to have it dialed in.
+                  We know what it takes to keep a headshot booth running smoothly at a busy event — when there&apos;s a line forming, a schedule to keep, and attendees who have three minutes before their next session. I&apos;ve been in that environment enough times to have it dialed in.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  I&apos;m Alfonso Rojas. I bring a complete professional studio to your event, coach each person quickly through posing and expression, and keep things moving without sacrificing the quality of the photo. Every attendee gets a real headshot — not a rushed snapshot.
+                  I&apos;m Alfonso Rojas. We bring a complete professional studio to your event, coach each person quickly through posing and expression, and keep things moving without sacrificing the quality of the photo. Every attendee gets a real headshot — not a rushed snapshot.
                 </p>
                 <p>
-                  With 15+ years in corporate leadership and 500+ professionals photographed across the Central Valley, I understand how events work and how to operate inside them without creating chaos.
+                  With 15+ years in corporate leadership and 500+ professionals photographed across the Central Valley, we understand how events work and how to operate inside them without creating chaos.
                 </p>
               </div>
             </div>
@@ -167,7 +167,7 @@ export default function HeadshotBoothPage() {
         <section className="py-20 md:py-28 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-5xl font-bold text-center text-[var(--color-text-dark)] mb-16">
+              <h2 className="text-3xl md:text-5xl text-center text-[var(--color-text-dark)] mb-16">
                 How It Works
               </h2>
             </SectionReveal>
@@ -175,7 +175,7 @@ export default function HeadshotBoothPage() {
               <SectionReveal>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">1</div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">Book the Booth</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">Book the Booth</h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
                     Tell me your event date, location, expected attendance, and how many hours you need coverage. I&apos;ll send you a flat-rate quote and confirm everything well before the event.
                   </p>
@@ -184,16 +184,16 @@ export default function HeadshotBoothPage() {
               <SectionReveal>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">2</div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">I Set Up, You Focus on Your Event</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">We Set Up, You Focus on Your Event</h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    I arrive early, set up the full studio, and am ready before your first attendee walks in. You don&apos;t manage a thing — I handle setup, flow, coaching, and breakdown completely.
+                    We arrive early, set up the full studio, and are ready before your first attendee walks in. You don&apos;t manage a thing — I handle setup, flow, coaching, and breakdown completely.
                   </p>
                 </div>
               </SectionReveal>
               <SectionReveal>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">3</div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">Everyone Gets Their Photo</h3>
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">Everyone Gets Their Photo</h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
                     Attendees flow through, get coached quickly, and leave with confidence they got a great shot. Edited photos delivered the same day via a shared online gallery.
                   </p>
@@ -224,7 +224,7 @@ export default function HeadshotBoothPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[var(--color-text-dark)]">
+              <h2 className="text-3xl md:text-4xl text-center mb-12 text-[var(--color-text-dark)]">
                 See It in Action
               </h2>
             </SectionReveal>
@@ -246,22 +246,22 @@ export default function HeadshotBoothPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">What&apos;s Included</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-16 text-center">What&apos;s Included</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
-                { title: 'Complete Studio Setup at Your Venue', desc: 'I bring professional lighting, backdrops, and cameras. All you need is a 10x10 space and access to power — I handle everything else.' },
+                { title: 'Complete Studio Setup at Your Venue', desc: 'We bring professional lighting, backdrops, and cameras. All you need is a 10x10 space and access to power — I handle everything else.' },
                 { title: 'Individual Coaching for Every Attendee', desc: 'Every person gets real-time guidance on posing and expression — even in a fast-moving booth format. No one just stands there guessing.' },
                 { title: 'Efficient Flow Management', desc: 'I keep things moving without rushing people. Attendees typically spend 5-10 minutes in the booth and leave confident they got a great shot.' },
                 { title: 'Consistent Results Across Your Group', desc: 'Same lighting, same backdrop, same quality from the first person to the last. Your team looks cohesive across every photo.' },
-                { title: 'Full Setup & Breakdown', desc: 'I arrive early, set up before your event starts, and break down completely when we\'re done. Zero logistics on your end.' },
+                { title: 'Full Setup & Breakdown', desc: 'We arrive early, set up before your event starts, and break down completely when we\'re done. Zero logistics on your end.' },
                 { title: 'Delivered Same Day', desc: 'All edited photos delivered via a shared private gallery the same day — attendees can download their images immediately for LinkedIn, directories, and marketing.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
                   <div className="flex gap-4">
                     <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-2">{item.title}</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
@@ -271,7 +271,7 @@ export default function HeadshotBoothPage() {
 
             <SectionReveal>
               <div className="bg-white p-8 rounded-xl border border-gray-100 max-w-sm mx-auto text-center shadow-sm">
-                <h3 className="text-2xl font-bold text-[var(--color-primary)] mb-4">Pricing</h3>
+                <h3 className="text-2xl text-[var(--color-primary)] mb-4">Pricing</h3>
                 <p className="text-[var(--color-text-body)] mb-2">Priced by the hour.</p>
                 <p className="text-[var(--color-text-muted)] text-sm mb-6">Custom quote based on event length and attendance.</p>
                 <Link
@@ -289,7 +289,7 @@ export default function HeadshotBoothPage() {
         <section className="py-16 px-8 bg-white border-y border-gray-100">
           <div className="max-w-4xl mx-auto text-center">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
                 A Poorly Run Booth Reflects on Your Event
               </h2>
               <div className="text-lg text-[var(--color-text-body)] leading-relaxed space-y-4">
@@ -311,7 +311,7 @@ export default function HeadshotBoothPage() {
         <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
           <div className="max-w-3xl mx-auto text-center">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl mb-4">
                 Ready to Add a Headshot Booth to Your Event?
               </h2>
               <p className="text-lg mb-8 text-white/90">
@@ -343,7 +343,7 @@ export default function HeadshotBoothPage() {
 
         <CTASection
           heading="Let&apos;s Talk About Your Event"
-          subheading="Schedule a free discovery call and I'll help you figure out exactly what you need for your event size and format."
+          subheading="Schedule a free discovery call and we&apos;ll help you figure out exactly what you need for your event size and format."
           primaryHref="/contact-quote"
           primaryLabel="Request a Quote"
         />

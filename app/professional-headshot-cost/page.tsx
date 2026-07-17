@@ -186,7 +186,7 @@ export default function ProfessionalHeadshotCostPage() {
           <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-8">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-8">
                   Why Headshot Pricing Is So Hard to Find
                 </h2>
                 <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed text-lg">
@@ -205,7 +205,7 @@ export default function ProfessionalHeadshotCostPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
                   Rojas Photography Headshot Pricing
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
@@ -293,7 +293,7 @@ export default function ProfessionalHeadshotCostPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
                   Pricing at Rojas Photography
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
@@ -331,7 +331,7 @@ export default function ProfessionalHeadshotCostPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
                   5 Things That Actually Determine Headshot Quality
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">
@@ -346,7 +346,7 @@ export default function ProfessionalHeadshotCostPage() {
                         {i + 1}
                       </div>
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.title}</h3>
+                        <h3 className="text-[var(--color-text-dark)] mb-1">{item.title}</h3>
                         <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
@@ -360,7 +360,7 @@ export default function ProfessionalHeadshotCostPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
                   Red Flags When Hiring a Headshot Photographer
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">
@@ -399,7 +399,7 @@ export default function ProfessionalHeadshotCostPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="space-y-5">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
+                    <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)]">
                       Corporate Headshots in Modesto & the Central Valley
                     </h2>
                     <p className="text-[var(--color-text-body)] leading-relaxed">

@@ -110,7 +110,7 @@ export default function PremiumHeadshotsPage() {
       <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
         <div className="max-w-4xl mx-auto">
           <SectionReveal>
-            <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-8">
+            <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-8">
               Generic Corporate Headshots Hurt Your Credibility
             </h2>
             <div className="grid md:grid-cols-2 gap-8 text-[var(--color-text-body)] leading-relaxed">
@@ -140,18 +140,18 @@ export default function PremiumHeadshotsPage() {
         <div className="max-w-4xl mx-auto">
           <SectionReveal>
             <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
-                I Know How It Feels to Be Camera-Shy
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
+                We Know How It Feels to Be Camera-Shy
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  Most people I work with feel the same way before they arrive: awkward in front of a camera, unsure how to pose, convinced they're just "not photogenic." That feeling is real — and it's exactly what I'm here to take off your plate.
+                  Most people we work with feel the same way before they arrive: awkward in front of a camera, unsure how to pose, convinced they're just "not photogenic." That feeling is real — and it's exactly what I'm here to take off your plate.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  I'm Alfonso Rojas. I've photographed 500+ professionals across Modesto and the Central Valley — CEOs, attorneys, realtors, healthcare executives — and I've spent 15+ years in corporate leadership myself. I know what a headshot needs to communicate, and I know how to get you there without it feeling forced.
+                  We&apos;re Alfonso and Niomi Rojas. We&apos;ve photographed 500+ professionals across Modesto and the Central Valley — CEOs, attorneys, realtors, healthcare executives — and we've spent 15+ years in corporate leadership ourselves. We know what a headshot needs to communicate, and we know how to get you there without it feeling forced.
                 </p>
                 <p>
-                  You're never alone in front of the camera. I guide your posing, coach your expression, adjust your angles, and review images with you in real-time so you can see exactly what's working as we go.
+                  You're never alone in front of the camera. We guide your posing, coach your expression, adjust your angles, and review images with you in real-time so you can see exactly what's working as we go.
                 </p>
               </div>
             </div>
@@ -164,8 +164,8 @@ export default function PremiumHeadshotsPage() {
         <section className="py-20 md:py-28 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-5xl font-bold text-center text-[var(--color-text-dark)] mb-16">
-                How I Work With You
+              <h2 className="text-3xl md:text-5xl text-center text-[var(--color-text-dark)] mb-16">
+                How we Work With You
               </h2>
             </SectionReveal>
 
@@ -175,11 +175,11 @@ export default function PremiumHeadshotsPage() {
                   <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
                     1
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     Pre-Session Consultation
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    I start by learning about your professional goals and the images you need, and I'll walk you through wardrobe guidance. If you're camera-shy or unsure what to expect, we'll cover all of it before you arrive.
+                    We start by learning about your professional goals and the images you need, and we&apos;ll walk you through wardrobe guidance. If you're camera-shy or unsure what to expect, we'll cover all of it before you arrive.
                   </p>
                 </div>
               </SectionReveal>
@@ -189,11 +189,11 @@ export default function PremiumHeadshotsPage() {
                   <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
                     2
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     Coached Studio Session
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    You're never on your own. I coach you through posing, expression, and angles the entire time. We review photos together as we shoot, adjust on the fly, and keep going until we have something you love.
+                    You're never on your own. We coach you through posing, expression, and angles the entire time. We review photos together as we shoot, adjust on the fly, and keep going until we have something you love.
                   </p>
                 </div>
               </SectionReveal>
@@ -203,11 +203,11 @@ export default function PremiumHeadshotsPage() {
                   <div className="w-16 h-16 bg-[var(--color-primary)] rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">
                     3
                   </div>
-                  <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-4">
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     Selection & Fast Delivery
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    I sit with you to review and select your best images — you only pay for the ones you love. Professionally edited and delivered within 48 hours, ready for LinkedIn, your website, and anywhere else you need them.
+                    We sit with you to review and select your best images — you only pay for the ones you love. Professionally edited and delivered within 48 hours, ready for LinkedIn, your website, and anywhere else you need them.
                   </p>
                 </div>
               </SectionReveal>
@@ -236,7 +236,7 @@ export default function PremiumHeadshotsPage() {
         <section className="py-16 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 id="portfolio" className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-text-dark)]">
+              <h2 id="portfolio" className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">
                 Our Premium Corporate Headshots
               </h2>
               <p className="text-center text-[var(--color-text-body)] mb-12 max-w-2xl mx-auto">
@@ -303,7 +303,7 @@ export default function PremiumHeadshotsPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-3xl mx-auto text-center">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">
                 Simple, Transparent Pricing
               </h2>
               <p className="text-[var(--color-text-body)] text-lg mb-10">
@@ -345,7 +345,7 @@ export default function PremiumHeadshotsPage() {
         <section className="py-16 px-8 bg-white border-y border-gray-100">
           <div className="max-w-4xl mx-auto text-center">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6">
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
                 A Bad Headshot Costs You Opportunities
               </h2>
               <div className="text-lg text-[var(--color-text-body)] leading-relaxed space-y-4">
@@ -370,7 +370,7 @@ export default function PremiumHeadshotsPage() {
         <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
           <div className="max-w-3xl mx-auto text-center">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-3xl md:text-4xl mb-4">
                 Ready for a Headshot That Builds Credibility?
               </h2>
               <p className="text-lg mb-8 text-white/90">
@@ -398,14 +398,14 @@ export default function PremiumHeadshotsPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-16 text-center">
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-16 text-center">
                 What&apos;s Included
               </h2>
             </SectionReveal>
 
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
-                { title: 'Guided Session - Unlimited Time', desc: 'I work with you through your entire session — coaching posing, expression, and confidence in real-time so you look and feel your absolute best.' },
+                { title: 'Guided Session - Unlimited Time', desc: 'We work with you through your entire session — coaching posing, expression, and confidence in real-time so you look and feel your absolute best.' },
                 { title: 'Unlimited Wardrobe Changes', desc: "Bring multiple outfits and change as many times as you'd like. We'll help you select the best looks for your professional brand." },
                 { title: 'Real-Time Image Review', desc: "See your photos as we shoot them. We review images together in real-time and adjust on the fly so you know exactly what's working." },
                 { title: 'Guided Image Selection', desc: 'We sit down together and help you select your best images. You choose only the photos you love—no filler, no pressure.' },
@@ -416,7 +416,7 @@ export default function PremiumHeadshotsPage() {
                   <div className="flex gap-4">
                     <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-2">{item.title}</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
@@ -442,7 +442,7 @@ export default function PremiumHeadshotsPage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-4">Imagine Updating Your LinkedIn Tomorrow</h2>
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Imagine Updating Your LinkedIn Tomorrow</h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
                   A headshot that finally looks like you — confident, approachable, professional. One that makes you proud to share it. Here&apos;s what that experience looks like for clients who&apos;ve been through it.
                 </p>
@@ -463,7 +463,7 @@ export default function PremiumHeadshotsPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]" aria-labelledby="booking-heading">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 id="booking-heading" className="text-3xl md:text-4xl font-bold text-center mb-4 text-[var(--color-text-dark)]">Schedule Your Session</h2>
+              <h2 id="booking-heading" className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">Schedule Your Session</h2>
               <p className="text-lg text-center text-[var(--color-text-body)] mb-16">Select your preferred date and time below to book your premium headshot session.</p>
             </SectionReveal>
 

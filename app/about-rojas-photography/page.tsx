@@ -54,7 +54,7 @@ export default function AboutPage() {
         <section className="py-20 md:py-28 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-5xl font-bold text-center mb-20 text-[var(--color-text-dark)]">Our Story</h2>
+              <h2 className="text-3xl md:text-5xl text-center mb-20 text-[var(--color-text-dark)]">Our Story</h2>
             </SectionReveal>
 
             <div className="grid md:grid-cols-2 gap-12 items-start mb-24">
@@ -117,7 +117,7 @@ export default function AboutPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-5xl font-bold text-center mb-20 text-[var(--color-text-dark)]">Meet Alfonso &amp; Niomi</h2>
+              <h2 className="text-3xl md:text-5xl text-center mb-20 text-[var(--color-text-dark)]">Meet Alfonso &amp; Niomi</h2>
             </SectionReveal>
 
             <div className="grid md:grid-cols-2 gap-16 mb-24">
@@ -128,7 +128,7 @@ export default function AboutPage() {
                       <Image src="/images/Alfonso-headshot.jpg" alt="Alfonso Rojas - Founder & Lead Photographer" fill sizes="224px" className="object-cover" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-[var(--color-text-dark)] mb-2">Alfonso Rojas</h3>
+                  <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Alfonso Rojas</h3>
                   <p className="text-[var(--color-primary)] font-semibold mb-6">Founder, Lead Photographer &amp; Visual Strategy Consultant</p>
                   <div className="space-y-4 mb-8">
                     <p className="text-[var(--color-text-body)] text-sm leading-relaxed">With 15+ years in manufacturing leadership and executive environments, Alfonso understands the pressures and expectations of professional leadership. As the lead photographer, he specializes in guiding clients through the session experience.</p>
@@ -148,7 +148,7 @@ export default function AboutPage() {
                       <Image src="/images/Niomi-headshot.jpg" alt="Niomi Rojas - Founder, Photographer & Operations Lead" fill sizes="224px" className="object-cover scale-110" style={{ objectPosition: '25% 45%' }} />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-[var(--color-text-dark)] mb-2">Niomi Rojas</h3>
+                  <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Niomi Rojas</h3>
                   <p className="text-[var(--color-primary)] font-semibold mb-6">Founder, Photographer &amp; Operations Lead</p>
                   <div className="space-y-4 mb-8">
                     <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Niomi brings corporate HR and operations expertise along with a keen eye for professional imagery. She specializes in making clients feel comfortable and confident during sessions, with an exceptional ability to connect with people.</p>
@@ -164,11 +164,11 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Why We Do This */}
+        {/* Why we Do This */}
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-5xl font-bold text-center mb-20 text-[var(--color-text-dark)]">Why We Do This</h2>
+              <h2 className="text-3xl md:text-5xl text-center mb-20 text-[var(--color-text-dark)]">Why we Do This</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-12">
               {[
@@ -181,7 +181,7 @@ export default function AboutPage() {
                     <div className="w-14 h-14 bg-[var(--color-primary)] rounded-full flex items-center justify-center mb-6">
                       <item.icon size={28} className="text-white" aria-hidden="true" />
                     </div>
-                    <h3 className="text-xl font-bold text-[var(--color-text-dark)] mb-3">{item.title}</h3>
+                    <h3 className="text-xl text-[var(--color-text-dark)] mb-3">{item.title}</h3>
                     <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </SectionReveal>
@@ -194,7 +194,7 @@ export default function AboutPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Trusted by Business Leaders</h2>
+              <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">Trusted by Business Leaders</h2>
             </SectionReveal>
             <SectionReveal>
               <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -217,7 +217,7 @@ export default function AboutPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-[var(--color-text-dark)]">Our Core Values</h2>
+              <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">Our Core Values</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10">
               {[
@@ -232,7 +232,7 @@ export default function AboutPage() {
                   <div className="flex gap-4">
                     <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
                     <div>
-                      <h3 className="font-bold text-[var(--color-text-dark)] mb-2">{item.title}</h3>
+                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
                       <p className="text-[var(--color-text-body)] text-sm">{item.desc}</p>
                     </div>
                   </div>

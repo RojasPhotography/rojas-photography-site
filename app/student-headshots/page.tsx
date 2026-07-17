@@ -147,7 +147,7 @@ export default function StudentHeadshotsPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)] mb-6 text-center">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
                   Your Career Starts Before You Graduate
                 </h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
@@ -221,7 +221,7 @@ export default function StudentHeadshotsPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
                   Where Your Headshot Will Work for You
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
@@ -234,7 +234,7 @@ export default function StudentHeadshotsPage() {
                     <div className="flex gap-4 p-6 bg-white rounded-xl border border-gray-100">
                       <CheckCircle2 size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.title}</h3>
+                        <h3 className="text-[var(--color-text-dark)] mb-1">{item.title}</h3>
                         <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                       </div>
                     </div>
@@ -261,7 +261,7 @@ export default function StudentHeadshotsPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="space-y-5">
-                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-dark)]">
+                    <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)]">
                       We Make It Easy — Even If You&apos;ve Never Done This Before
                     </h2>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
@@ -289,7 +289,7 @@ export default function StudentHeadshotsPage() {
           <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white text-center">
             <div className="max-w-3xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                <h2 className="text-3xl md:text-4xl mb-4">
                   Don&apos;t Let a Bad Photo Cost You Your First Opportunity
                 </h2>
                 <p className="text-lg text-white/90 mb-10 leading-relaxed">
@@ -309,7 +309,7 @@ export default function StudentHeadshotsPage() {
           <section className="py-12 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto text-center">
               <SectionReveal>
-                <h3 className="font-bold text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
+                <h3 className="text-[var(--color-text-dark)] mb-6 text-lg">Also Helpful</h3>
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link href="/eras-headshots" className="btn-outline px-6 py-2.5 text-sm font-semibold rounded-full inline-block">
                     ERAS Headshots for Medical Students

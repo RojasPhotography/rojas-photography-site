@@ -89,7 +89,7 @@ export default function NewsletterSlideIn() {
           </div>
         ) : (
           <>
-            <h3 id="newsletter-slidein-title" className="text-[var(--color-text-dark)] font-bold text-base mb-1 pr-6">
+            <h3 id="newsletter-slidein-title" className="text-[var(--color-text-dark)] text-base mb-1 pr-6">
               Join Our Monthly Newsletter
             </h3>
             <p className="text-[var(--color-text-muted)] text-sm mb-4 leading-relaxed">

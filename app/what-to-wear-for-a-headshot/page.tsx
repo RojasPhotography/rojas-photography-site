@@ -18,7 +18,7 @@ const faqs = [
     answer: 'It depends on your industry. Attorneys, financial professionals, and executives should typically wear a suit. Tech and creative professionals often look best in business casual — a polished top or open-collar button-down. Healthcare professionals benefit from a white coat or business professional. The rule of thumb: wear what you would wear to an important client meeting in your industry.',
   },
   {
-    question: 'Can I bring multiple outfits to my headshot session?',
+    question: 'Can we bring multiple outfits to my headshot session?',
     answer: 'Yes — unlimited wardrobe changes are included in every Rojas Photography session. Bring 2–3 outfits that represent different looks: one formal, one slightly more casual, and one with a different color. Having options gives you more versatility in your final images for different platforms and uses.',
   },
   {
@@ -123,7 +123,7 @@ export default function WhatToWearHeadshotPage() {
           <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">Why Wardrobe Matters More Than You Think</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">Why Wardrobe Matters More Than You Think</h2>
                 <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                   <p>A camera compresses depth and flattens color in ways that are not visible in a mirror. Patterns that look subtle in person — thin stripes, small checks, herringbone — can create visual noise on camera. A professional headshot is designed to draw attention to your face. Your clothing should frame it, not compete with it.</p>
                   <p>The most common wardrobe mistake is not wearing the wrong thing — it is wearing something that distracts. A bold pattern, an overly bright color, or a cluttered accessory can take up visual attention that should be spent on your expression and your presence.</p>
@@ -135,7 +135,7 @@ export default function WhatToWearHeadshotPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">The Best Colors for a Professional Headshot</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">The Best Colors for a Professional Headshot</h2>
                 <p className="text-center text-[var(--color-text-body)] mb-12 text-lg max-w-2xl mx-auto">These colors consistently photograph well, flatter a wide range of skin tones, and read as professional across all industries.</p>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-5">
@@ -151,7 +151,7 @@ export default function WhatToWearHeadshotPage() {
                     <div className="flex gap-4 p-6 bg-[var(--color-bg-warm)] rounded-xl border border-gray-100">
                       <CheckCircle2 size={18} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" />
                       <div>
-                        <h3 className="font-bold text-[var(--color-text-dark)] mb-1">{item.color}</h3>
+                        <h3 className="text-[var(--color-text-dark)] mb-1">{item.color}</h3>
                         <p className="text-sm text-[var(--color-text-body)] leading-relaxed">{item.why}</p>
                       </div>
                     </div>
@@ -164,14 +164,14 @@ export default function WhatToWearHeadshotPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-5xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">What to Wear by Industry</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">What to Wear by Industry</h2>
                 <p className="text-center text-[var(--color-text-body)] mb-14 text-lg max-w-2xl mx-auto">The right wardrobe for a corporate attorney is different from what works for a tech founder. Here is the breakdown.</p>
               </SectionReveal>
               <div className="space-y-5">
                 {industryGuide.map(item => (
                   <SectionReveal key={item.industry}>
                     <div className="bg-white rounded-xl p-7 border border-gray-100">
-                      <h3 className="font-bold text-[var(--color-text-dark)] text-lg mb-2">{item.industry}</h3>
+                      <h3 className="text-[var(--color-text-dark)] text-lg mb-2">{item.industry}</h3>
                       <p className="text-[var(--color-text-body)] leading-relaxed mb-3"><strong className="text-[var(--color-text-dark)]">Wear:</strong> {item.wear}</p>
                       <p className="text-sm text-[var(--color-text-muted)] italic">{item.note}</p>
                     </div>
@@ -184,7 +184,7 @@ export default function WhatToWearHeadshotPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">What to Avoid</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">What to Avoid</h2>
               </SectionReveal>
               <div className="space-y-3">
                 {[
@@ -211,7 +211,7 @@ export default function WhatToWearHeadshotPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">The Day-Before Checklist</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">The Day-Before Checklist</h2>
               </SectionReveal>
               <div className="grid md:grid-cols-2 gap-4">
                 {[

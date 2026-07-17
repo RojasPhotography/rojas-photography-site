@@ -65,7 +65,7 @@ export default function HowManyPhotosPage() {
           <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-6">The Direct Answer</h2>
                 <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
                     <strong className="text-[var(--color-text-dark)]">A professional headshot session typically delivers 2–5 final edited images.</strong> During the session, a photographer will take 50–200+ shots across multiple wardrobe changes and expressions — but the deliverable is a curated selection of the best, professionally edited.
@@ -81,7 +81,7 @@ export default function HowManyPhotosPage() {
           <section className="py-20 px-8 bg-white">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-4">Why the Number Is Small — And Why That Is a Good Thing</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">Why the Number Is Small — And Why That Is a Good Thing</h2>
                 <p className="text-center text-[var(--color-text-body)] mb-10 text-lg max-w-2xl mx-auto">A photographer who delivers 50 unedited images is giving you a proof sheet, not a headshot.</p>
               </SectionReveal>
               <SectionReveal>
@@ -96,7 +96,7 @@ export default function HowManyPhotosPage() {
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
-                <h2 className="text-3xl md:text-4xl font-bold text-center text-[var(--color-text-dark)] mb-10">How Many Images Do You Actually Need?</h2>
+                <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">How Many Images Do You Actually Need?</h2>
               </SectionReveal>
               <div className="space-y-4">
                 {[
