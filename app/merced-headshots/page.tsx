@@ -420,7 +420,7 @@ export default function MercedHeadshotsPage() {
               {
                 question: 'Do you offer professional headshots in Merced, CA?',
                 answer:
-                  'Yes! We serve Merced professionals including UC Merced faculty and staff, Mercy Medical Center healthcare workers, business owners, and corporate executives across Merced County. We offer both in-studio sessions at my Modesto studio (50 minutes from Merced) and on-site photography at your Merced location or UC campus. Healthcare professionals and educators particularly appreciate my professional approach to corporate photography.',
+                  'Yes! We serve Merced professionals including UC Merced faculty and staff, Mercy Medical Center healthcare workers, business owners, and corporate executives across Merced County. We offer both in-studio sessions at our Modesto studio (50 minutes from Merced) and on-site photography at your Merced location or UC campus. Healthcare professionals and educators particularly appreciate my professional approach to corporate photography.',
               },
               {
                 question: 'How far is your studio from Merced?',
@@ -430,7 +430,7 @@ export default function MercedHeadshotsPage() {
               {
                 question: 'What do Merced headshot sessions cost?',
                 answer:
-                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Merced healthcare teams, university departments, or corporate groups needing on-site photography, we provide customized pricing based on your team size and requirements. Contact me for a personalized quote.',
+                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Merced healthcare teams, university departments, or corporate groups needing on-site photography, we provide customized pricing based on your team size and requirements. Contact us for a personalized quote.',
               },
               {
                 question: 'Do you work with UC Merced faculty and Mercy Medical Center professionals?',

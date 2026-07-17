@@ -420,7 +420,7 @@ export default function FresnoHeadshotsPage() {
               {
                 question: 'Do you offer professional headshots in Fresno, CA?',
                 answer:
-                  'Yes! We serve Fresno professionals including Fresno State faculty and staff, Community Regional Medical Center and Saint Agnes Medical Center healthcare workers, legal professionals, agricultural business leaders, and corporate executives across Fresno County and the Central Valley. We offer both in-studio sessions at my Modesto studio (90 minutes from Fresno) and on-site photography at your Fresno office, campus, hospital, or business location.',
+                  'Yes! We serve Fresno professionals including Fresno State faculty and staff, Community Regional Medical Center and Saint Agnes Medical Center healthcare workers, legal professionals, agricultural business leaders, and corporate executives across Fresno County and the Central Valley. We offer both in-studio sessions at our Modesto studio (90 minutes from Fresno) and on-site photography at your Fresno office, campus, hospital, or business location.',
               },
               {
                 question: 'How far is your studio from Fresno?',
@@ -430,7 +430,7 @@ export default function FresnoHeadshotsPage() {
               {
                 question: 'What do Fresno headshot sessions cost?',
                 answer:
-                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Fresno healthcare teams, university departments, law firms, or agricultural businesses needing on-site photography, we provide customized pricing based on your team size and requirements. Contact me for a personalized quote.',
+                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Fresno healthcare teams, university departments, law firms, or agricultural businesses needing on-site photography, we provide customized pricing based on your team size and requirements. Contact us for a personalized quote.',
               },
               {
                 question: 'Do you work with Fresno State faculty and healthcare professionals?',

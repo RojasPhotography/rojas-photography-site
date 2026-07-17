@@ -31,7 +31,7 @@ const faqs = [
   {
     question: 'What\'s the difference between on-site photography and a headshot booth?',
     answer:
-      'On-site photography is a contracted session where we come to your organization and spend individual time with each employee — coaching posture, expression, and angles to get the best possible result. It\'s priced per person. A headshot booth is designed for events and expos where the goal is moving a large group through efficiently — priced by the hour. If you\'re not sure which fits your need, reach out and I\'ll help you figure it out.',
+      'On-site photography is a contracted session where we come to your organization and spend individual time with each employee — coaching posture, expression, and angles to get the best possible result. It\'s priced per person. A headshot booth is designed for events and expos where the goal is moving a large group through efficiently — priced by the hour. If you\'re not sure which fits your need, reach out and we\'ll help you figure it out.',
   },
   {
     question: 'Can we do team group photos in addition to individual headshots?',
