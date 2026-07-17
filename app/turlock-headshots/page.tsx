@@ -420,17 +420,17 @@ export default function TurlockHeadshotsPage() {
               {
                 question: 'Do you offer professional headshots in Turlock, CA?',
                 answer:
-                  'Yes! We regularly serve Turlock business professionals, CSU Stanislaus faculty, and corporate teams across Stanislaus County. We offer both in-studio sessions at my Modesto studio (15-20 minutes from Turlock) and on-site photography at your Turlock office or campus location. My portable professional studio — lighting, backdrops, and full equipment — produces the same high-end results on-site as in the studio. You choose what is most convenient.',
+                  'Yes! We regularly serve Turlock business professionals, CSU Stanislaus faculty, and corporate teams across Stanislaus County. We offer both in-studio sessions at our Modesto studio (15-20 minutes from Turlock) and on-site photography at your Turlock office or campus location. My portable professional studio — lighting, backdrops, and full equipment — produces the same high-end results on-site as in the studio. You choose what is most convenient.',
               },
               {
                 question: 'How far is your studio from Turlock?',
                 answer:
-                  'Our professional studio is in Modesto, just 15-20 minutes from downtown Turlock via Highway 99. This makes it incredibly convenient for Turlock professionals to get polished headshots without a long drive. I\'m also happy to travel to your Turlock location for on-site sessions — a travel fee applies. Contact me and I\'ll build a plan that works for you.',
+                  'Our professional studio is in Modesto, just 15-20 minutes from downtown Turlock via Highway 99. This makes it incredibly convenient for Turlock professionals to get polished headshots without a long drive. I\'m also happy to travel to your Turlock location for on-site sessions — a travel fee applies. Contact us and we\'ll build a plan that works for you.',
               },
               {
                 question: 'What do Turlock headshot sessions cost?',
                 answer:
-                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no pressure. For Turlock teams and organizations needing on-site photography, pricing is customized based on your needs. Contact me for a personalized quote.',
+                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no pressure. For Turlock teams and organizations needing on-site photography, pricing is customized based on your needs. Contact us for a personalized quote.',
               },
               {
                 question: 'Do you work with CSU Stanislaus faculty and staff?',

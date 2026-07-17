@@ -133,7 +133,7 @@ export default function EventPhotographyPage() {
                   You hire a photographer. They show up late. They miss key moments — the award presentation, the keynote speaker, the networking conversations your attendees came for. The photos come back blurry, dark, or unusable. Weeks pass with nothing delivered. Your sponsors are waiting. Your social media is silent.
                 </p>
                 <p>
-                  And underneath all of it is a feeling that&apos;s hard to shake: <em>I recommended this person. I put my name on it. If this goes wrong, that&apos;s on me.</em> You shouldn&apos;t have to carry that weight on top of everything else you&apos;re managing.
+                  And underneath all of it is a feeling that&apos;s hard to shake: <em>we recommended this person. I put my name on it. If this goes wrong, that&apos;s on me.</em> You shouldn&apos;t have to carry that weight on top of everything else you&apos;re managing.
                 </p>
                 <p>
                   <strong>Events happen once.</strong> There are no do-overs. An unreliable photographer doesn&apos;t just miss shots — they erase months of work and leave you with nothing to show your board, your sponsors, or next year&apos;s attendees.

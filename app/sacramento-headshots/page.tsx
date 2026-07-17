@@ -468,7 +468,7 @@ export default function SacramentoHeadshotsPage() {
               {
                 question: 'Do you offer professional headshots in Sacramento, CA?',
                 answer:
-                  'Yes! We serve Sacramento professionals including state legislators, government officials, lobbyists, legal professionals at Capitol-area law firms, UC Davis Medical Center healthcare workers, and business executives across the Sacramento region. We offer both in-studio sessions at my Modesto studio (90 minutes from Sacramento) and on-site photography at your Sacramento office, Capitol location, hospital, or business. Government and legal professionals particularly value my professional, executive-level approach to headshots.',
+                  'Yes! We serve Sacramento professionals including state legislators, government officials, lobbyists, legal professionals at Capitol-area law firms, UC Davis Medical Center healthcare workers, and business executives across the Sacramento region. We offer both in-studio sessions at our Modesto studio (90 minutes from Sacramento) and on-site photography at your Sacramento office, Capitol location, hospital, or business. Government and legal professionals particularly value my professional, executive-level approach to headshots.',
               },
               {
                 question: 'How far is your studio from Sacramento?',
@@ -478,7 +478,7 @@ export default function SacramentoHeadshotsPage() {
               {
                 question: 'What do Sacramento headshot sessions cost?',
                 answer:
-                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Sacramento legislative offices, law firms, healthcare teams, or corporate groups needing on-site photography, we provide customized pricing based on your team size and requirements. Contact me for a personalized quote tailored to your organization.',
+                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Sacramento legislative offices, law firms, healthcare teams, or corporate groups needing on-site photography, we provide customized pricing based on your team size and requirements. Contact us for a personalized quote tailored to your organization.',
               },
               {
                 question: 'Do you work with state legislators, lobbyists, and legal professionals?',

@@ -452,7 +452,7 @@ export default function ModestoHeadshotsPage() {
                           <Camera className="text-white" size={22} />
                         </div>
                         <h3 className="text-xl text-white mb-2">Premium Studio Headshots</h3>
-                        <p className="text-white/85 text-sm leading-relaxed mb-3">Individual sessions at my Modesto studio. Guided posing, unlimited wardrobe changes, 48-hour delivery. $150 session + $150/image.</p>
+                        <p className="text-white/85 text-sm leading-relaxed mb-3">Individual sessions at our Modesto studio. Guided posing, unlimited wardrobe changes, 48-hour delivery. $150 session + $150/image.</p>
                         <span className="text-white text-sm font-semibold group-hover:underline">Learn more →</span>
                       </div>
                     </div>
@@ -628,7 +628,7 @@ export default function ModestoHeadshotsPage() {
               {
                 question: 'How much do professional headshots cost in Modesto?',
                 answer:
-                  'Professional headshot sessions at my Modesto studio are $150, plus $150 per image you select. You only pay for the images you love — no packages, no minimums, no forced purchases. For teams and on-site photography, we provide customized quotes based on your team size and location. Contact me for a personalized quote.',
+                  'Professional headshot sessions at our Modesto studio are $150, plus $150 per image you select. You only pay for the images you love — no packages, no minimums, no forced purchases. For teams and on-site photography, we provide customized quotes based on your team size and location. Contact us for a personalized quote.',
               },
               {
                 question: 'How long does a headshot session take?',
