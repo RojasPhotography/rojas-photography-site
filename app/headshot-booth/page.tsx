@@ -282,6 +282,12 @@ export default function HeadshotBoothPage() {
                 </Link>
               </div>
             </SectionReveal>
+
+            <SectionReveal>
+              <p className="text-center text-[var(--color-text-body)] mt-10 max-w-2xl mx-auto">
+                A booth is built for <strong className="text-[var(--color-text-dark)]">speed and volume</strong> — moving a large group through efficiently. If you&rsquo;d rather each person get an unhurried, individually coached session, that&rsquo;s our <Link href="/annual-headshot-programs" className="text-[var(--color-primary)] hover:underline">coached team days &rarr;</Link>
+              </p>
+            </SectionReveal>
           </div>
         </section>
 

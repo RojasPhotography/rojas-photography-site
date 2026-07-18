@@ -277,6 +277,51 @@ export default function AnnualHeadshotProgramsPage() {
             </div>
           </section>
 
+          {/* Coached day vs booth — clear the pricing confusion */}
+          <section className="py-20 px-8 bg-white border-t border-gray-100">
+            <div className="max-w-5xl mx-auto">
+              <SectionReveal>
+                <div className="text-center mb-4">
+                  <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Coached Team Day or Headshot Booth?</h2>
+                  <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto mb-14">
+                    Both bring a complete studio to you. The real difference is <strong className="text-[var(--color-text-dark)]">attention per person</strong> — not the clock, and not the price.
+                  </p>
+                </div>
+              </SectionReveal>
+              <div className="grid md:grid-cols-2 gap-6">
+                <SectionReveal>
+                  <div className="h-full rounded-2xl border-2 border-[var(--color-primary)] p-8">
+                    <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Coached Team Day</h3>
+                    <p className="text-[var(--color-primary)] font-semibold text-sm mb-6">The premium experience — this program</p>
+                    <ul className="space-y-3 text-[var(--color-text-body)]">
+                      <li className="flex gap-3"><span className="text-[var(--color-primary)] font-bold" aria-hidden="true">•</span><span><strong className="text-[var(--color-text-dark)]">Best for</strong> teams where every headshot has to be its best — attorneys, executives, advisors, client-facing staff.</span></li>
+                      <li className="flex gap-3"><span className="text-[var(--color-primary)] font-bold" aria-hidden="true">•</span><span>An unhurried <strong className="text-[var(--color-text-dark)]">15 minutes per person</strong>, with real individual coaching on posing and expression.</span></li>
+                      <li className="flex gap-3"><span className="text-[var(--color-primary)] font-bold" aria-hidden="true">•</span><span>About <strong className="text-[var(--color-text-dark)]">16 people in a half day</strong> — depth over volume.</span></li>
+                      <li className="flex gap-3"><span className="text-[var(--color-primary)] font-bold" aria-hidden="true">•</span><span>You&rsquo;re investing in <strong className="text-[var(--color-text-dark)]">each person&rsquo;s best possible shot</strong>, matched across the team.</span></li>
+                    </ul>
+                  </div>
+                </SectionReveal>
+                <SectionReveal>
+                  <div className="h-full rounded-2xl border border-gray-200 p-8 bg-[var(--color-bg-warm)]">
+                    <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Headshot Booth</h3>
+                    <p className="text-[var(--color-text-muted)] font-semibold text-sm mb-6">The high-volume option</p>
+                    <ul className="space-y-3 text-[var(--color-text-body)]">
+                      <li className="flex gap-3"><span className="text-[var(--color-text-muted)] font-bold" aria-hidden="true">•</span><span><strong className="text-[var(--color-text-dark)]">Best for</strong> large all-hands and events where the goal is getting everyone done efficiently.</span></li>
+                      <li className="flex gap-3"><span className="text-[var(--color-text-muted)] font-bold" aria-hidden="true">•</span><span>A quick, coached pass — people flow through in a few minutes each.</span></li>
+                      <li className="flex gap-3"><span className="text-[var(--color-text-muted)] font-bold" aria-hidden="true">•</span><span><strong className="text-[var(--color-text-dark)]">50+ people</strong> in the same window — volume over depth.</span></li>
+                      <li className="flex gap-3"><span className="text-[var(--color-text-muted)] font-bold" aria-hidden="true">•</span><span>You&rsquo;re investing in <strong className="text-[var(--color-text-dark)]">fast, consistent coverage at scale</strong>. <Link href="/headshot-booth" className="text-[var(--color-primary)] hover:underline">See the booth &rarr;</Link></span></li>
+                    </ul>
+                  </div>
+                </SectionReveal>
+              </div>
+              <SectionReveal>
+                <p className="text-center text-[var(--color-text-body)] mt-10 max-w-2xl mx-auto">
+                  Same afternoon, two different jobs. If your team is small enough that each person&rsquo;s headshot matters, the coached day earns its individual attention. Photographing a big group fast? The booth is built for it — and we can run <strong className="text-[var(--color-text-dark)]">both</strong>, matched to the same look.
+                </p>
+              </SectionReveal>
+            </div>
+          </section>
+
           {/* Who it's for */}
           <section className="py-20 px-8 bg-white border-y border-gray-100">
             <div className="max-w-4xl mx-auto text-center">
