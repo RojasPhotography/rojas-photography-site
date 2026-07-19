@@ -252,7 +252,7 @@ export default function HeadshotBoothPage() {
               {[
                 { title: 'Complete Studio Setup at Your Venue', desc: 'We bring professional lighting, backdrops, and cameras. All you need is a 10x10 space and access to power — we handle everything else.' },
                 { title: 'Individual Coaching for Every Attendee', desc: 'Every person gets real-time guidance on posing and expression — even in a fast-moving booth format. No one just stands there guessing.' },
-                { title: 'Efficient Flow Management', desc: 'We keep things moving without rushing people. Attendees typically spend 5-10 minutes in the booth and leave confident they got a great shot.' },
+                { title: 'Self-Scheduling & Smooth Flow', desc: 'Attendees book their own time through an online calendar we set up and manage — reminders and confirmations included — so the day runs on schedule and no one on your team has to coordinate a thing.' },
                 { title: 'Consistent Results Across Your Group', desc: 'Same lighting, same backdrop, same quality from the first person to the last. Your team looks cohesive across every photo.' },
                 { title: 'Full Setup & Breakdown', desc: 'We arrive early, set up before your event starts, and break down completely when we\'re done. Zero logistics on your end.' },
                 { title: 'Delivered Same Day', desc: 'All edited photos delivered via a shared private gallery the same day — attendees can download their images immediately for LinkedIn, directories, and marketing.' },
@@ -281,6 +281,12 @@ export default function HeadshotBoothPage() {
                   Get Your Quote
                 </Link>
               </div>
+            </SectionReveal>
+
+            <SectionReveal>
+              <p className="text-center text-[var(--color-text-body)] mt-10 max-w-2xl mx-auto">
+                A booth is built for <strong className="text-[var(--color-text-dark)]">speed and volume</strong> — moving a large group through efficiently. If you&rsquo;d rather each person get an unhurried, individually coached session, that&rsquo;s our <Link href="/annual-headshot-programs" className="text-[var(--color-primary)] hover:underline">coached team days &rarr;</Link>
+              </p>
             </SectionReveal>
           </div>
         </section>
