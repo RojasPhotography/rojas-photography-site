@@ -68,6 +68,7 @@ export const metadata: Metadata = {
 const included = [
   { title: 'A Scheduled Team Day Each Year', desc: 'We come to your office once a year and refresh your entire team in one visit — coached, unhurried, everyone looking their best.' },
   { title: 'New Hires Photographed as They Join', desc: 'Pay-as-you-go individual sessions keep your directory current between team days. No one waits a year for a professional photo.' },
+  { title: 'Self-Scheduling, Fully Managed', desc: 'Your team books their own sessions through an online calendar, and we handle every reminder and confirmation. You coordinate nothing — we manage all the communication.' },
   { title: 'One Consistent Look, Every Time', desc: 'Same lighting, backdrop, and direction across every person — so your team page looks cohesive from the first hire to the newest.' },
   { title: 'Complete Studio, Brought to You', desc: 'Professional lighting, backdrops, and cameras set up at your office. All you need is a 10x10 space and access to power — we handle the rest.' },
   { title: 'Individual Coaching for Everyone', desc: 'Every person gets real-time direction on posing and expression — even executives who dread the camera walk away confident.' },
@@ -198,12 +199,20 @@ export default function AnnualHeadshotProgramsPage() {
             </div>
           </section>
 
-          {/* Early CTA */}
-          <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
-            <div className="max-w-2xl mx-auto">
+          {/* Hands-off scheduling — the managed-service differentiator */}
+          <section
+            className="py-20 px-8 text-center"
+            style={{ background: 'radial-gradient(90% 140% at 50% -30%, rgba(255,255,255,.1), transparent 60%), linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 80%)' }}
+          >
+            <div className="max-w-3xl mx-auto text-white">
               <SectionReveal>
-                <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                  Make a consistent, professional team page one less thing you have to manage.
+                <p className="text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] uppercase mb-5">Fully Managed</p>
+                <h2 className="text-3xl md:text-4xl mb-6">Your Team Books Themselves. You Do Nothing.</h2>
+                <p className="text-lg text-white/90 leading-relaxed mb-4">
+                  Every program includes an online scheduling calendar — your people pick their own time, and we handle every invitation, reminder, confirmation, and follow-up directly with them.
+                </p>
+                <p className="text-lg text-white/90 leading-relaxed mb-9">
+                  No spreadsheets, no chasing anyone down, nothing to coordinate on your end. From the first invite to the final gallery, we manage all of it — so keeping your whole team&rsquo;s headshots current is genuinely hands-off for you.
                 </p>
                 <Link
                   href="/contact-quote"
