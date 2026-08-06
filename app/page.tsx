@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Briefcase, Video, Calendar, Aperture } from 'lucide-react';
 import SectionReveal from './components/SectionReveal';
 import TestimonialCard from './components/TestimonialCard';
+import GoogleReviewsBadge from './components/GoogleReviewsBadge';
 import CTASection from './components/CTASection';
 import SchemaScript from './components/SchemaScript';
 import { generateLocalBusinessSchema, generateWebSiteSchema, generatePersonSchema, generateFAQSchema } from './lib/schema';
@@ -422,9 +423,10 @@ export default function HomePage() {
                 <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
                   What Central Valley Professionals Say About Working With Us
                 </h2>
-                <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
+                <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-8">
                   A headshot that finally looks like you. A team photo that shows your culture. Brand imagery that makes the right people take notice. That&apos;s what working together looks like — here&apos;s what clients say.
                 </p>
+                <GoogleReviewsBadge rating="5.0" count={64} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
               </div>
             </SectionReveal>
 
@@ -453,8 +455,8 @@ export default function HomePage() {
             </div>
             <SectionReveal>
               <p className="text-center mt-10">
-                <a href="https://g.page/r/CdOO4Sj3FR_lEBM/review" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold hover:underline">
-                  See our 60+ five-star Google reviews →
+                <a href="https://g.page/r/CdOO4Sj3FR_lEBM" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold hover:underline">
+                  Read all 64 reviews on Google →
                 </a>
               </p>
             </SectionReveal>
