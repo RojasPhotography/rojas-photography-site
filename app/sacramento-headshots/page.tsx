@@ -23,7 +23,7 @@ function generateSacramentoSchema() {
       '@type': 'PostalAddress',
       addressLocality: 'Modesto',
       addressRegion: 'CA',
-      postalCode: '95350',
+      postalCode: '95356',
       addressCountry: 'US',
     },
     areaServed: [
