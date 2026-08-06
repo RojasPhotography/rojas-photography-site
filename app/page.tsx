@@ -181,10 +181,11 @@ export default function HomePage() {
               Headshot Day for Your Team →
             </Link>
           </div>
-          <div className="hero-rise mt-12 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.68s' }}>
+          <div className="hero-rise mt-8" style={{ animationDelay: '0.6s' }}>
+            <GoogleReviewsBadge rating="5.0" count={64} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
+          </div>
+          <div className="hero-rise mt-10 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.72s' }}>
             <span>500+ executives photographed</span>
-            <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
-            <span>60+ five-star Google reviews</span>
             <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
             <span>Two photographers, every session</span>
           </div>
@@ -426,7 +427,6 @@ export default function HomePage() {
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-8">
                   A headshot that finally looks like you. A team photo that shows your culture. Brand imagery that makes the right people take notice. That&apos;s what working together looks like — here&apos;s what clients say.
                 </p>
-                <GoogleReviewsBadge rating="5.0" count={64} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
               </div>
             </SectionReveal>
 
