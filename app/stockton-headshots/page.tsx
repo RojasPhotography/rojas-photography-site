@@ -81,7 +81,7 @@ export default function StocktonHeadshotsPage() {
         name: 'Rojas Photography – Stockton Headshots',
         image: 'https://rojasphotography.net/images/Alfonso+Niomi-0026.jpg',
         description: 'Professional headshots and photography services for executives, attorneys, and business professionals in Stockton and San Joaquin County.',
-        address: { '@type': 'PostalAddress', addressLocality: 'Modesto', addressRegion: 'CA', postalCode: '95350', addressCountry: 'US' },
+        address: { '@type': 'PostalAddress', addressLocality: 'Modesto', addressRegion: 'CA', postalCode: '95356', addressCountry: 'US' },
         areaServed: [
           { '@type': 'City', name: 'Stockton' },
           { '@type': 'City', name: 'Lodi' },

@@ -108,7 +108,7 @@ export default function HomePage() {
         },
         {
           question: 'Where is Rojas Photography located?',
-          answer: 'Rojas Photography is located in Modesto, CA 95350, in the heart of the Central Valley. The studio serves clients in Modesto, Stockton, Turlock, Fresno, Sacramento, Merced, and throughout Central Valley California. On-site photography is available at client locations throughout California.',
+          answer: 'Rojas Photography is located in Modesto, CA 95356, in the heart of the Central Valley. The studio serves clients in Modesto, Stockton, Turlock, Fresno, Sacramento, Merced, and throughout Central Valley California. On-site photography is available at client locations throughout California.',
         },
         {
           question: 'How much does a professional headshot cost in Modesto, CA?',
