@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Camera, Video, Zap } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import TestimonialCard from '../components/TestimonialCard';
@@ -136,7 +136,6 @@ export default function ConferencePhotographyPage() {
         {/* Delivery / team callout */}
         <div className="bg-[var(--color-primary-dark)] py-4 px-8">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-3 text-center md:text-left">
-            <span className="text-2xl">⚡</span>
             <p className="text-white font-semibold text-base md:text-lg">
               Multi-photographer teams for multi-track days. &nbsp;·&nbsp; Edited gallery in 5–7 business days, with same-day highlights available.
             </p>
@@ -282,7 +281,7 @@ export default function ConferencePhotographyPage() {
               <div className="grid md:grid-cols-3 gap-6">
                 <SectionReveal>
                   <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 h-full border border-[var(--color-border-light)]">
-                    <div className="text-4xl mb-4">📸</div>
+                    <Camera size={32} className="text-[var(--color-primary)] mb-4" aria-hidden="true" />
                     <h3 className="text-xl text-[var(--color-text-dark)] mb-3">Attendee Headshot Station</h3>
                     <p className="text-[var(--color-text-body)] leading-relaxed text-sm">
                       A professional headshot studio on the conference floor. Attendees leave with a polished, updated photo — a perk they remember and a magnet for your sponsor area. See our{' '}
@@ -292,7 +291,7 @@ export default function ConferencePhotographyPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 h-full border border-[var(--color-border-light)]">
-                    <div className="text-4xl mb-4">🎬</div>
+                    <Video size={32} className="text-[var(--color-primary)] mb-4" aria-hidden="true" />
                     <h3 className="text-xl text-[var(--color-text-dark)] mb-3">Conference Highlight Video</h3>
                     <p className="text-[var(--color-text-body)] leading-relaxed text-sm">
                       A recap film that captures the energy of the room — keynotes, reactions, networking — perfect for promoting next year and proving ROI to sponsors. See our{' '}
@@ -302,7 +301,7 @@ export default function ConferencePhotographyPage() {
                 </SectionReveal>
                 <SectionReveal>
                   <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 h-full border border-[var(--color-border-light)]">
-                    <div className="text-4xl mb-4">⚡</div>
+                    <Zap size={32} className="text-[var(--color-primary)] mb-4" aria-hidden="true" />
                     <h3 className="text-xl text-[var(--color-text-dark)] mb-3">Real-Time & Sponsor Branding</h3>
                     <p className="text-[var(--color-text-body)] leading-relaxed text-sm">
                       Attendees receive their own photos automatically as they&apos;re taken, delivered through a branded landing page carrying your sponsor logos — so sponsor visibility travels with every share.
