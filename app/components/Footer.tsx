@@ -82,6 +82,14 @@ export default function Footer() {
                   Event Photography
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/conference-photography"
+                  className="hover:text-[var(--color-primary-light)] transition-colors"
+                >
+                  Conference Photography
+                </Link>
+              </li>
             </ul>
           </nav>
           <nav>
