@@ -7,6 +7,9 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 export interface GalleryImage {
   src: string;
   alt: string;
+  /** Intrinsic pixel dimensions. When provided, they prevent layout shift as images load. */
+  width?: number;
+  height?: number;
 }
 
 interface MasonryGalleryProps {
@@ -73,8 +76,8 @@ export default function MasonryGallery({
             <Image
               src={img.src}
               alt={img.alt}
-              width={0}
-              height={0}
+              width={img.width ?? 0}
+              height={img.height ?? 0}
               sizes="(max-width: 768px) 50vw, 33vw"
               className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
             />
