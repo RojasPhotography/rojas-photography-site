@@ -8,6 +8,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
+import MasonryGallery from '../components/MasonryGallery';
 import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 
 const faqs = [
@@ -321,8 +322,8 @@ export default function ConferencePhotographyPage() {
                   From the California Lawyers Association Annual Meeting to statewide professional conferences.
                 </p>
               </SectionReveal>
-              <div className="grid md:grid-cols-3 gap-4">
-                {[
+              <MasonryGallery
+                images={[
                   { src: '/images/CLA AM 25 335.jpg', alt: 'California Lawyers Association 2025 Annual Meeting stage and panel — conference photography' },
                   { src: '/images/CLA AM 25 201.jpg', alt: 'Panel discussion on stage at a professional conference — Rojas Photography' },
                   { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-103.jpg', alt: 'Engaged audience during a conference session — professional conference photography' },
@@ -332,12 +333,8 @@ export default function ConferencePhotographyPage() {
                   { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-69.jpg', alt: 'Professional conference networking moment — Rojas Photography' },
                   { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-111.jpg', alt: 'Conference session audience — professional event coverage' },
                   { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-137.jpg', alt: 'Candid conference networking photography' },
-                ].map((img) => (
-                  <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-72 relative">
-                    <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
-                  </SectionReveal>
-                ))}
-              </div>
+                ]}
+              />
             </div>
           </section>
 

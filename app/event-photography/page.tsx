@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle2, Zap, Trophy } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
@@ -9,6 +8,7 @@ import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
+import MasonryGallery from '../components/MasonryGallery';
 import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 import { serviceDefinitions, statistics } from '../lib/definitions';
 
@@ -297,26 +297,22 @@ export default function EventPhotographyPage() {
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-center mb-12 text-[var(--color-text-dark)]">Professional Event Photography in Modesto & Central Valley</h2>
             </SectionReveal>
-            <div className="grid md:grid-cols-3 gap-4">
-              {[
-                { src: '/images/CLA AM 25 201.jpg', alt: 'California Lawyers Association annual meeting - corporate event photography Modesto', extra: 'scale-125' },
-                { src: '/images/DSC_1638.jpg', alt: 'Professional gala and formal event photography Central Valley', extra: 'object-[center_40%]' },
-                { src: '/images/CLA AM 25 335.jpg', alt: 'Conference and networking event photography - Rojas Photography Central Valley', extra: 'object-left' },
-                { src: '/images/events/antitrust-salesforce/exterior-benz-stockton.jpg', alt: 'Mercedes-Benz corporate event photography Stockton - exterior venue shot', extra: '' },
-                { src: '/images/events/antitrust-salesforce/engaged-group-table.jpg', alt: 'Corporate event attendees networking at table - Stockton event photography', extra: '' },
-                { src: '/images/events/antitrust-salesforce/friends-networking.jpg', alt: 'Professional networking event photography - Central Valley corporate events', extra: '' },
-                { src: '/images/events/antitrust-salesforce/engaged-attendee.jpg', alt: 'Engaged corporate event attendee - professional event photography Stockton', extra: '' },
-                { src: '/images/events/antitrust-salesforce/laughing-attendee.jpg', alt: 'Candid moment at corporate event - authentic event photography Central Valley', extra: '' },
-                { src: '/images/events/antitrust-salesforce/wideshot-benz-logo.jpg', alt: 'Mercedes-Benz branded corporate event - wide venue shot Stockton CA', extra: '' },
-                { src: '/images/events/antitrust-salesforce/engaged-posed-group-table.jpg', alt: 'Group photo at corporate event table - professional event photography', extra: '' },
-                { src: '/images/events/antitrust-salesforce/engaged-attendee-side-profile.jpg', alt: 'Corporate event attendee candid shot - event photography Central Valley', extra: '' },
-                { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-69.jpg', alt: 'Anti-Trust corporate event photography at Salesforce San Francisco CA', extra: '' },
-              ].map((img) => (
-                <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-72 relative">
-                  <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className={`object-cover ${img.extra}`} />
-                </SectionReveal>
-              ))}
-            </div>
+            <MasonryGallery
+              images={[
+                { src: '/images/CLA AM 25 201.jpg', alt: 'California Lawyers Association annual meeting - corporate event photography Modesto' },
+                { src: '/images/DSC_1638.jpg', alt: 'Professional gala and formal event photography Central Valley' },
+                { src: '/images/CLA AM 25 335.jpg', alt: 'Conference and networking event photography - Rojas Photography Central Valley' },
+                { src: '/images/events/antitrust-salesforce/exterior-benz-stockton.jpg', alt: 'Mercedes-Benz corporate event photography Stockton - exterior venue shot' },
+                { src: '/images/events/antitrust-salesforce/engaged-group-table.jpg', alt: 'Corporate event attendees networking at table - Stockton event photography' },
+                { src: '/images/events/antitrust-salesforce/friends-networking.jpg', alt: 'Professional networking event photography - Central Valley corporate events' },
+                { src: '/images/events/antitrust-salesforce/engaged-attendee.jpg', alt: 'Engaged corporate event attendee - professional event photography Stockton' },
+                { src: '/images/events/antitrust-salesforce/laughing-attendee.jpg', alt: 'Candid moment at corporate event - authentic event photography Central Valley' },
+                { src: '/images/events/antitrust-salesforce/wideshot-benz-logo.jpg', alt: 'Mercedes-Benz branded corporate event - wide venue shot Stockton CA' },
+                { src: '/images/events/antitrust-salesforce/engaged-posed-group-table.jpg', alt: 'Group photo at corporate event table - professional event photography' },
+                { src: '/images/events/antitrust-salesforce/engaged-attendee-side-profile.jpg', alt: 'Corporate event attendee candid shot - event photography Central Valley' },
+                { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-69.jpg', alt: 'Anti-Trust corporate event photography at Salesforce San Francisco CA' },
+              ]}
+            />
           </div>
         </section>
 
