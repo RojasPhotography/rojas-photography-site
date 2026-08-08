@@ -79,6 +79,7 @@ export default function MasonryGallery({
               width={img.width ?? 0}
               height={img.height ?? 0}
               sizes="(max-width: 768px) 50vw, 33vw"
+              style={{ filter: 'saturate(1.08) contrast(1.04)' }}
               className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
             />
             <span className="absolute inset-0 bg-[var(--color-primary-dark)]/0 group-hover:bg-[var(--color-primary-dark)]/10 transition-colors duration-300" aria-hidden="true" />
@@ -132,6 +133,7 @@ export default function MasonryGallery({
               alt={images[openIndex].alt}
               fill
               sizes="90vw"
+              style={{ filter: 'saturate(1.08) contrast(1.04)' }}
               className="object-contain"
               priority
             />

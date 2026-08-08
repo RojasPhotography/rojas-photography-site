@@ -324,21 +324,21 @@ export default function ConferencePhotographyPage() {
               </SectionReveal>
               <MasonryGallery
                 images={[
+                  { src: '/images/events/conferences/cla-legislative-day-capitol.jpg', alt: 'Conference attendees at the California State Capitol in Sacramento — Legislative Day photography', width: 2560, height: 1706 },
                   { src: '/images/CLA AM 25 335.jpg', alt: 'California Lawyers Association 2025 Annual Meeting stage and panel — conference photography', width: 2048, height: 1365 },
-                  { src: '/images/events/conferences/cla-annual-meeting-keynote-room.jpg', alt: 'Keynote session at the California Lawyers Association Annual Meeting — conference photography Central Valley', width: 2048, height: 1365 },
-                  { src: '/images/events/conferences/cla-annual-meeting-panel-discussion.jpg', alt: 'Panel discussion on stage at the California Lawyers Association conference', width: 2048, height: 1365 },
+                  { src: '/images/events/conferences/cla-solo-small-firm-summit-keynote.jpg', alt: 'Keynote speaker at the CLA Solo & Small Firm Summit — conference photography', width: 2560, height: 1703 },
+                  { src: '/images/events/conferences/antitrust-summit-reception-audience.jpg', alt: 'Engaged audience at a conference reception in San Francisco — professional conference photography', width: 2560, height: 1709 },
+                  { src: '/images/events/conferences/cla-summer-mixer-networking.jpg', alt: 'Attendees networking at an evening legal association mixer — event photography', width: 2560, height: 1706 },
+                  { src: '/images/events/conferences/cla-legislative-day-panel.jpg', alt: 'Panel discussion at a Sacramento legal conference — conference photography Central Valley', width: 2560, height: 1709 },
                   { src: '/images/events/conferences/cla-annual-meeting-panelists.jpg', alt: 'Panelists on stage at a professional legal conference — Rojas Photography', width: 1365, height: 2048 },
-                  { src: '/images/events/conferences/cla-annual-meeting-panel-candid.jpg', alt: 'Candid moment among conference panelists — professional conference photography', width: 2048, height: 1365 },
-                  { src: '/images/events/conferences/cla-solo-small-firm-summit-keynote.jpg', alt: 'Keynote speaker at the CLA Solo & Small Firm Summit — conference photography', width: 6048, height: 4024 },
-                  { src: '/images/events/conferences/cla-annual-meeting-speaker-portrait.jpg', alt: 'Speaker addressing a panel at a professional conference — Central Valley conference photographer', width: 1365, height: 2048 },
-                  { src: '/images/events/conferences/cla-annual-meeting-panel-laughing.jpg', alt: 'Conference panel sharing a laugh on stage — corporate event photography', width: 5392, height: 3592 },
-                  { src: '/images/events/conferences/antitrust-summit-reception-audience.jpg', alt: 'Engaged audience at a conference reception — professional conference photography', width: 5988, height: 3997 },
                   { src: '/images/events/conferences/cla-annual-meeting-expo-booth.jpg', alt: 'Sponsor expo booth at the California Lawyers Association Annual Meeting', width: 2048, height: 1365 },
-                  { src: '/images/events/conferences/cla-solo-small-firm-summit-stage.jpg', alt: 'Speaker on stage at the CLA Solo & Small Firm Summit — conference photography', width: 6048, height: 4024 },
-                  { src: '/images/events/conferences/antitrust-summit-audience-candid.jpg', alt: 'Candid attendee reactions during a conference session — event photography', width: 5969, height: 3985 },
-                  { src: '/images/events/conferences/cla-annual-meeting-sponsor-booth.jpg', alt: 'Conference sponsor booth and attendees — expo floor photography Central Valley', width: 8256, height: 5504 },
-                  { src: '/images/events/conferences/cla-conference-networking.jpg', alt: 'Attendees networking outside a professional conference — Rojas Photography', width: 8256, height: 5504 },
-                  { src: '/images/events/conferences/cla-solo-small-firm-summit-panel.jpg', alt: 'Panelists on stage at the CLA Solo & Small Firm Summit — conference photography', width: 6048, height: 4024 },
+                  { src: '/images/events/conferences/cla-legislative-day-speaker.jpg', alt: 'Speaker at the podium during a Sacramento legal conference — conference photographer', width: 2560, height: 1706 },
+                  { src: '/images/events/conferences/cla-conference-networking.jpg', alt: 'Attendees networking outside a professional conference — Rojas Photography', width: 2560, height: 1706 },
+                  { src: '/images/events/conferences/cla-annual-meeting-panel-laughing.jpg', alt: 'Conference panel sharing a laugh on stage — corporate event photography', width: 2560, height: 1705 },
+                  { src: '/images/events/conferences/cla-summer-mixer-attendees.jpg', alt: 'Professionals connecting at a legal association summer mixer — networking photography', width: 2560, height: 1706 },
+                  { src: '/images/events/conferences/cla-annual-meeting-sponsor-booth.jpg', alt: 'Conference sponsor booth and attendees — expo floor photography Central Valley', width: 2560, height: 1706 },
+                  { src: '/images/events/conferences/antitrust-summit-audience-candid.jpg', alt: 'Candid attendee reactions during a conference session — event photography', width: 2560, height: 1709 },
+                  { src: '/images/events/conferences/cla-conference-speaker-portrait.jpg', alt: 'Speaker addressing a conference session — professional conference photography', width: 1363, height: 2048 },
                 ]}
               />
             </div>
