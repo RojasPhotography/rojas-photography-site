@@ -182,6 +182,13 @@ export default function Navigation() {
                 >
                   Event Photography
                 </Link>
+                <Link
+                  href="/conference-photography"
+                  className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
+                  onClick={() => setDesktopServicesOpen(false)}
+                >
+                  Conference Photography
+                </Link>
               </div>
             </div>
 
@@ -295,7 +302,7 @@ export default function Navigation() {
               <div
                 id="mobile-services-menu"
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  servicesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                  servicesOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className="pl-4 pt-2 pb-1 space-y-1">
@@ -340,6 +347,13 @@ export default function Navigation() {
                     onClick={closeMenu}
                   >
                     Event Photography
+                  </Link>
+                  <Link
+                    href="/conference-photography"
+                    className="block text-base text-[var(--color-text-body)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-2.5 rounded-lg transition-all duration-200"
+                    onClick={closeMenu}
+                  >
+                    Conference Photography
                   </Link>
                 </div>
               </div>
