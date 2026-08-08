@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Zap, Trophy } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import TestimonialCard from '../components/TestimonialCard';
@@ -109,7 +109,6 @@ export default function EventPhotographyPage() {
       {/* Fast Delivery Callout */}
       <div className="bg-[var(--color-primary-dark)] py-4 px-8">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-3 text-center md:text-left">
-          <span className="text-2xl">⚡</span>
           <p className="text-white font-semibold text-base md:text-lg">
             Standard delivery: 5–7 business days. &nbsp;·&nbsp; With our real-time add-on: you and your attendees get photos instantly.
           </p>
@@ -238,7 +237,7 @@ export default function EventPhotographyPage() {
               {/* Benefit 1: Real-time delivery */}
               <SectionReveal>
                 <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 h-full border border-[var(--color-border-light)]">
-                  <div className="text-4xl mb-4">⚡</div>
+                  <Zap size={32} className="text-[var(--color-primary)] mb-4" aria-hidden="true" />
                   <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     All Photos Delivered Instantly — For You and Every Attendee
                   </h3>
@@ -254,7 +253,7 @@ export default function EventPhotographyPage() {
               {/* Benefit 2: Sponsorship tool */}
               <SectionReveal>
                 <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 h-full border border-[var(--color-border-light)]">
-                  <div className="text-4xl mb-4">🏆</div>
+                  <Trophy size={32} className="text-[var(--color-primary)] mb-4" aria-hidden="true" />
                   <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     A Custom Branded Experience That Helps You Sell Sponsorships
                   </h3>
