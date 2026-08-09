@@ -9,6 +9,7 @@ import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
 import MasonryGallery from '../components/MasonryGallery';
+import ParallaxBand from '../components/ParallaxBand';
 import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 
 const faqs = [
@@ -225,19 +226,17 @@ export default function ConferencePhotographyPage() {
             </div>
           </section>
 
-          {/* Early CTA */}
-          <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
-            <div className="max-w-2xl mx-auto">
-              <SectionReveal>
-                <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                  Planning a conference or annual meeting? Let&apos;s make sure every room is covered.
-                </p>
-                <Link href="/contact-quote" className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">
-                  Request a Conference Quote
-                </Link>
-              </SectionReveal>
-            </div>
-          </section>
+          {/* Early CTA — parallax band */}
+          <ParallaxBand image="/images/events/conferences/cla-annual-meeting-panel-laughing.jpg" overlayOpacity={72}>
+            <SectionReveal>
+              <p className="text-white text-2xl md:text-3xl mb-6 leading-relaxed font-[family-name:var(--font-heading)]">
+                Planning a conference or annual meeting? Let&apos;s make sure every room is covered.
+              </p>
+              <Link href="/contact-quote" className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">
+                Request a Conference Quote
+              </Link>
+            </SectionReveal>
+          </ParallaxBand>
 
           {/* What we photograph */}
           <section className="py-20 px-8 bg-[var(--color-bg-warm)]">

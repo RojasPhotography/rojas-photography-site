@@ -224,3 +224,19 @@ a:focus-visible, button:focus-visible {
     transform: scale(0.98);
   }
 }
+
+/* Parallax "breather" band — fixed background photo the content scrolls over.
+   Desktop only: mobile falls back to a normal cover image (fixed attachment
+   is janky on iOS/Android), and motion-sensitive users get the same static
+   fallback. */
+.parallax-fixed {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  .parallax-fixed {
+    background-attachment: fixed;
+  }
+}
