@@ -8,6 +8,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
+import MasonryGallery from '../components/MasonryGallery';
 import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 
 const faqs = [
@@ -321,23 +322,23 @@ export default function ConferencePhotographyPage() {
                   From the California Lawyers Association Annual Meeting to statewide professional conferences.
                 </p>
               </SectionReveal>
-              <div className="grid md:grid-cols-3 gap-4">
-                {[
-                  { src: '/images/CLA AM 25 335.jpg', alt: 'California Lawyers Association 2025 Annual Meeting stage and panel — conference photography' },
-                  { src: '/images/CLA AM 25 201.jpg', alt: 'Panel discussion on stage at a professional conference — Rojas Photography' },
-                  { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-103.jpg', alt: 'Engaged audience during a conference session — professional conference photography' },
-                  { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-4.jpg', alt: 'Conference networking reception with skyline views — corporate event photography' },
-                  { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-19.jpg', alt: 'Attendees networking at a professional conference reception' },
-                  { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-49.jpg', alt: 'Conference attendees in conversation — candid event photography' },
-                  { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-69.jpg', alt: 'Professional conference networking moment — Rojas Photography' },
-                  { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-111.jpg', alt: 'Conference session audience — professional event coverage' },
-                  { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-137.jpg', alt: 'Candid conference networking photography' },
-                ].map((img) => (
-                  <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-72 relative">
-                    <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
-                  </SectionReveal>
-                ))}
-              </div>
+              <MasonryGallery
+                images={[
+                  { src: '/images/CLA AM 25 335.jpg', alt: 'California Lawyers Association 2025 Annual Meeting stage and panel — conference photography', width: 2048, height: 1365 },
+                  { src: '/images/events/conferences/cla-solo-small-firm-summit-keynote.jpg', alt: 'Keynote speaker at the CLA Solo & Small Firm Summit — conference photography', width: 2560, height: 1703 },
+                  { src: '/images/events/conferences/antitrust-summit-reception-audience.jpg', alt: 'Engaged audience at a conference reception in San Francisco — professional conference photography', width: 2560, height: 1709 },
+                  { src: '/images/events/conferences/cla-summer-mixer-networking.jpg', alt: 'Attendees networking at an evening legal association mixer — event photography', width: 2560, height: 1706 },
+                  { src: '/images/events/conferences/cla-legislative-day-panel.jpg', alt: 'Panel discussion at a Sacramento legal conference — conference photography Central Valley', width: 2560, height: 1709 },
+                  { src: '/images/events/conferences/cla-annual-meeting-panelists.jpg', alt: 'Panelists on stage at a professional legal conference — Rojas Photography', width: 1365, height: 2048 },
+                  { src: '/images/events/conferences/cla-annual-meeting-expo-booth.jpg', alt: 'Sponsor expo booth at the California Lawyers Association Annual Meeting', width: 2048, height: 1365 },
+                  { src: '/images/events/conferences/cla-legislative-day-speaker.jpg', alt: 'Speaker at the podium during a Sacramento legal conference — conference photographer', width: 2560, height: 1706 },
+                  { src: '/images/events/conferences/cla-conference-networking.jpg', alt: 'Attendees networking outside a professional conference — Rojas Photography', width: 2560, height: 1706 },
+                  { src: '/images/events/conferences/cla-annual-meeting-panel-laughing.jpg', alt: 'Conference panel sharing a laugh on stage — corporate event photography', width: 2560, height: 1705 },
+                  { src: '/images/events/conferences/cla-annual-meeting-sponsor-booth.jpg', alt: 'Conference sponsor booth and attendees — expo floor photography Central Valley', width: 2560, height: 1706 },
+                  { src: '/images/events/conferences/antitrust-summit-audience-candid.jpg', alt: 'Candid attendee reactions during a conference session — event photography', width: 2560, height: 1709 },
+                  { src: '/images/events/conferences/cla-conference-speaker-portrait.jpg', alt: 'Speaker addressing a conference session — professional conference photography', width: 1363, height: 2048 },
+                ]}
+              />
             </div>
           </section>
 
