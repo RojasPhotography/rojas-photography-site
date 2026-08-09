@@ -227,7 +227,7 @@ export default function ConferencePhotographyPage() {
           </section>
 
           {/* Early CTA — parallax band */}
-          <ParallaxBand image="/images/events/conferences/cla-annual-meeting-panel-laughing.jpg" overlayOpacity={72}>
+          <ParallaxBand image="/images/CLA AM 25 335.jpg" overlayOpacity={72}>
             <SectionReveal>
               <p className="text-white text-2xl md:text-3xl mb-6 leading-relaxed font-[family-name:var(--font-heading)]">
                 Planning a conference or annual meeting? Let&apos;s make sure every room is covered.
