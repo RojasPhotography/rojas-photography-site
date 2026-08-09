@@ -51,3 +51,11 @@ public/images/events/united-way/
 public/images/events/valley-first/
 public/images/events/veterans-parade/
 public/images/events/wfg-awards/
+
+# Raw conference-shoot originals (the featured clean-slug files are kept; these are not)
+public/images/events/conferences/DSC_*
+public/images/events/conferences/*DSC_*
+public/images/events/conferences/CLA AM*
+public/images/events/conferences/*Anti-Trust*
+public/images/events/conferences/*Legislative*
+public/images/events/conferences/README.txt
