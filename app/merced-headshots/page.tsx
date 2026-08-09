@@ -77,52 +77,48 @@ function generateMercedServiceSchema() {
   };
 }
 
+const mercedFaqs = [
+  {
+    question: 'Can you photograph a UC Merced department or research group on campus?',
+    answer:
+      'Yes. As UC Merced grows, we regularly set up on the Merced campus and photograph a department, lab, or research group in one visit — matched to a single consistent look for faculty profiles, research and lab pages, grant applications, and conference bios. Faculty who join later are easy to match to the same setup.',
+  },
+  {
+    question: 'How far is Merced from your studio, and is there a travel fee?',
+    answer:
+      'Merced is about 50 minutes south of our Modesto studio on Highway 99 — close enough that it&apos;s an easy trip for us. Individuals can book at the studio and choose their images the same day. For teams, we come to you on-site; a travel fee applies and is built into your quote up front.',
+  },
+  {
+    question: 'Do you do on-site headshots at ag and logistics operations around Merced?',
+    answer:
+      'We do. With the Highway 99/140 logistics corridor and operations like the Castle Commerce Center, Foster Farms, and Frito-Lay, Merced has a real industrial base. We photograph executives, operations leaders, and sales teams either in a clean office setting or on the floor, for company sites, trade directories, and LinkedIn.',
+  },
+  {
+    question: 'Can you match new hires to our existing team headshots?',
+    answer:
+      'Yes — we shoot to the same lighting, backdrop, and direction every time, so someone who starts after your team day is matched to the exact look. For growing UC departments, clinics, and companies that hire regularly, an annual program keeps the whole directory consistent.',
+  },
+  {
+    question: 'What’s the turnaround for a Merced session?',
+    answer:
+      'Studio sessions are professionally edited and delivered within 48 hours; on-site team days can deliver the same day. If a website launch, directory update, or grant deadline is driving the timeline, tell us and we&apos;ll plan around it.',
+  },
+  {
+    question: 'What does a Merced headshot session cost?',
+    answer:
+      'Individual studio sessions are $150 plus $150 per image you select — you only pay for the ones you love, no minimums. On-site team days for UC departments, healthcare, ag, and business groups are quoted by headcount and location. Contact us with your team size for a clear quote.',
+  },
+];
+
 function generateMercedFAQSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Do you offer professional headshots in Merced, CA?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes! We serve Merced professionals including UC Merced faculty and staff, Mercy Medical Center healthcare workers, business owners, and corporate executives across Merced County. We offer both in-studio sessions at our Modesto studio (50 minutes from Merced) and on-site photography at your Merced location or UC campus. Healthcare professionals and educators particularly appreciate our professional approach to corporate photography.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How far is your studio from Merced?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Our professional studio is in Modesto, approximately 50 minutes from downtown Merced via Highway 99. We also bring our full portable professional studio — lighting, backdrops, and all equipment — directly to your Merced office, conference room, or breakroom. The same high-end results, in the comfort of your location. A travel fee applies for on-site visits.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What do Merced headshot sessions cost?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Merced healthcare teams, university departments, or corporate groups needing on-site photography, we provide customized pricing based on your team size and requirements. Contact us for a personalized quote.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you work with UC Merced faculty and Mercy Medical Center professionals?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Absolutely! We regularly serve UC Merced faculty, researchers, and administrators who need professional headshots for university websites, academic profiles, grant applications, and conference materials. We also work with Mercy Medical Center physicians, nurses, administrators, and healthcare professionals who need credibility-building headshots for hospital websites, medical directories, and professional profiles. We understand the unique needs of both academic and healthcare professionals.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Why do Merced professionals choose Rojas Photography?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Merced professionals choose Rojas Photography because we understand the Central Valley business, academic, and healthcare communities. With 15+ years of corporate leadership experience and 500+ executives photographed, we bring professionalism and expertise to every session. Our guided approach eliminates the stress of professional photography, helping UC Merced faculty, healthcare workers, and business leaders present themselves with confidence on LinkedIn, their websites, and all professional materials.',
-        },
-      },
-    ],
+    mainEntity: mercedFaqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
   };
 }
 
@@ -197,13 +193,13 @@ export default function MercedHeadshotsPage() {
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
-                  Corporate Photography Serving Merced & Merced County
+                  Corporate Headshots for Merced — a Fast-Growing UC Town
                 </h2>
                 <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6 text-center">
-                  Merced&apos;s growing academic and healthcare communities need professional photography that communicates expertise and trust. Whether you&apos;re UC Merced faculty conducting groundbreaking research, a physician at Mercy Medical Center, or a business leader serving the gateway to Yosemite — your professional image matters.
+                  Merced is changing quickly. UC Merced — the youngest campus in the University of California system — is expanding fast and drawing researchers, faculty, and new institutions with it. Around that sit Mercy Medical Center, a deep agricultural base, and a growing logistics and manufacturing corridor where Highway 99 meets Highway 140 (think the Castle Commerce Center and major operations like Foster Farms and Frito-Lay). It&apos;s a community on the rise, and a current, professional headshot signals you&apos;re rising with it.
                 </p>
                 <p className="text-[var(--color-text-body)] leading-relaxed text-center">
-                  Rojas Photography serves Merced with professional headshots, on-site team photography, commercial photography, video production, and event coverage. Visit our Modesto studio (50 minutes from Merced) for premium studio sessions — or we bring our full setup to your UC campus, hospital, or Merced business location.
+                  We&apos;re Alfonso and Niomi Rojas, about 50 minutes north in Modesto — close enough that Merced is an easy trip for us. Book an individual session at the studio, or have us bring the full setup on-site to the UC Merced campus, Mercy Medical Center, an ag or logistics operation, or your downtown office. Same coached, professional headshot either way.
                 </p>
               </SectionReveal>
             </div>
@@ -283,13 +279,61 @@ export default function MercedHeadshotsPage() {
             </div>
           </section>
 
+          {/* Merced sectors — unique local content */}
+          <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
+            <div className="max-w-5xl mx-auto">
+              <SectionReveal>
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
+                  The Merced Professionals We Photograph
+                </h2>
+                <p className="text-lg text-[var(--color-text-muted)] text-center mb-14 max-w-2xl mx-auto">
+                  As Merced grows, so does the range of professionals who need a credible headshot. Here&apos;s how we approach the sectors driving that growth.
+                </p>
+              </SectionReveal>
+              <div className="grid md:grid-cols-2 gap-8">
+                <SectionReveal>
+                  <div className="bg-white rounded-xl p-8 h-full border border-gray-100">
+                    <h3 className="text-xl text-[var(--color-primary)] mb-3">UC Merced &amp; Research</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
+                      The UC&apos;s newest campus is hiring and building fast. Faculty, researchers, postdocs, and administrators need portraits that read as credible and current for university profiles, research and lab pages, grant applications, and conference bios. We photograph individuals at the studio or run a department day on the Merced campus, matched to one consistent look.
+                    </p>
+                  </div>
+                </SectionReveal>
+                <SectionReveal>
+                  <div className="bg-white rounded-xl p-8 h-full border border-gray-100">
+                    <h3 className="text-xl text-[var(--color-primary)] mb-3">Healthcare</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
+                      Mercy Medical Center and the practices around it keep Merced&apos;s healthcare community busy. We bring the studio on-site so physicians, nurses, and administrators can step in for an approachable, credible portrait between shifts — for provider directories and referral networks — and get right back to patients.
+                    </p>
+                  </div>
+                </SectionReveal>
+                <SectionReveal>
+                  <div className="bg-white rounded-xl p-8 h-full border border-gray-100">
+                    <h3 className="text-xl text-[var(--color-primary)] mb-3">Ag, Logistics &amp; Manufacturing</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
+                      Where Highway 99 meets Highway 140, Merced has become a hub for agriculture, distribution, and manufacturing — from the Castle Commerce Center to operations like Foster Farms and Frito-Lay. Executives, operations leaders, and sales teams need grounded, professional headshots for company sites, trade directories, and LinkedIn, shot in the office or on the floor.
+                    </p>
+                  </div>
+                </SectionReveal>
+                <SectionReveal>
+                  <div className="bg-white rounded-xl p-8 h-full border border-gray-100">
+                    <h3 className="text-xl text-[var(--color-primary)] mb-3">Downtown &amp; Small Business</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
+                      Merced&apos;s realtors, financial advisors, attorneys, and independent business owners build their reputations locally. A polished, current headshot on your website, yard signs, and marketing tells a growing community you&apos;re established and serious. Being under an hour away makes booking one simple.
+                    </p>
+                  </div>
+                </SectionReveal>
+              </div>
+            </div>
+          </section>
+
           {/* Why Merced Professionals Choose Us */}
           <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">
-                    Why Merced Professionals Choose Me
+                    Why Merced Professionals Choose Us
                   </h2>
                 </div>
               </SectionReveal>
@@ -301,7 +345,7 @@ export default function MercedHeadshotsPage() {
                     desc: 'From UC Merced faculty needing headshots for academic publications and university websites, to Mercy Medical Center physicians requiring professional imagery for hospital directories and medical profiles — we understand what credibility looks like in your field. My experience shows in every session.',
                   },
                   {
-                    title: 'Premium Studio or we Come to You',
+                    title: 'Premium Studio, or We Come to You',
                     desc: 'Our professional studio in Modesto offers premium lighting and environment for the highest quality results (50 minutes from Merced). For teams, we bring our full studio to your UC campus, hospital, or Merced business location — efficient team photography without disrupting your operations.',
                   },
                   {
@@ -340,7 +384,7 @@ export default function MercedHeadshotsPage() {
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl text-center mb-12 text-[var(--color-text-dark)]">
-                  My Work
+                  Our Work
                 </h2>
               </SectionReveal>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -416,33 +460,7 @@ export default function MercedHeadshotsPage() {
 
           {/* FAQ */}
           <FAQSection
-            faqs={[
-              {
-                question: 'Do you offer professional headshots in Merced, CA?',
-                answer:
-                  'Yes! We serve Merced professionals including UC Merced faculty and staff, Mercy Medical Center healthcare workers, business owners, and corporate executives across Merced County. We offer both in-studio sessions at our Modesto studio (50 minutes from Merced) and on-site photography at your Merced location or UC campus. Healthcare professionals and educators particularly appreciate my professional approach to corporate photography.',
-              },
-              {
-                question: 'How far is your studio from Merced?',
-                answer:
-                  'Our professional studio is in Modesto, approximately 50 minutes from downtown Merced via Highway 99. We also bring our full portable professional studio — lighting, backdrops, and all equipment — directly to your Merced office, conference room, or breakroom. The same high-end results, in the comfort of your location. A travel fee applies for on-site visits.',
-              },
-              {
-                question: 'What do Merced headshot sessions cost?',
-                answer:
-                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no forced purchases. For Merced healthcare teams, university departments, or corporate groups needing on-site photography, we provide customized pricing based on your team size and requirements. Contact us for a personalized quote.',
-              },
-              {
-                question: 'Do you work with UC Merced faculty and Mercy Medical Center professionals?',
-                answer:
-                  'Absolutely! We regularly serve UC Merced faculty, researchers, and administrators who need professional headshots for university websites, academic profiles, grant applications, and conference materials. I also work with Mercy Medical Center physicians, nurses, administrators, and healthcare professionals who need credibility-building headshots for hospital websites, medical directories, and professional profiles. We understand the unique needs of both academic and healthcare professionals.',
-              },
-              {
-                question: 'Why do Merced professionals choose Rojas Photography?',
-                answer:
-                  'Merced professionals choose us because we understand the Central Valley business, academic, and healthcare communities. With 15+ years of corporate leadership experience and 500+ executives photographed, we bring professionalism and expertise to every session. Our guided approach eliminates the stress of professional photography, helping UC Merced faculty, healthcare workers, and business leaders present themselves with confidence on LinkedIn, their websites, and all professional materials.',
-              },
-            ]}
+            faqs={mercedFaqs}
             heading="Merced Headshot Questions Answered"
           />
 
