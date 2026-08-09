@@ -77,52 +77,48 @@ function generateTurlockServiceSchema() {
   };
 }
 
+const turlockFaqs = [
+  {
+    question: 'You’re only 15 minutes away — should I just come to the studio?',
+    answer:
+      'For an individual headshot, yes — it’s an easy hop up Highway 99 to our Modesto studio, and you review and choose your images before you leave. For a team of more than a few people, it’s usually easier to have us come to you in Turlock; we bring the full studio and photograph everyone on-site without pulling them away from work for long.',
+  },
+  {
+    question: 'Can you photograph our CSU Stanislaus department or faculty on campus?',
+    answer:
+      'Yes. We set up on the Turlock campus and photograph a department, a college, or the full faculty in one visit, matched to a single consistent look for the university directory, research pages, and conference bios. New faculty who join later are easy to match to the same setup.',
+  },
+  {
+    question: 'Do you do on-site headshots at ag operations and processing facilities?',
+    answer:
+      'We do. Turlock is dairy and poultry country, and we’re comfortable photographing ag executives, sales teams, and family-business owners either in a clean office setting or out where the work happens. You get grounded, credible portraits for company sites, trade directories, and LinkedIn.',
+  },
+  {
+    question: 'Can you match a new hire to our team’s existing headshots later?',
+    answer:
+      'Yes — we shoot to the same lighting, backdrop, and direction every time, so someone who starts after your team day is matched to the exact look. Being local makes this painless. If you hire regularly, ask about an annual program.',
+  },
+  {
+    question: 'What’s the turnaround?',
+    answer:
+      'Studio sessions are professionally edited and delivered within 48 hours; on-site team days can deliver the same day. If you’re up against a website launch or directory deadline, tell us and we’ll plan around it.',
+  },
+  {
+    question: 'What does a Turlock headshot session cost?',
+    answer:
+      'Individual studio sessions are $150 plus $150 per image you select — you only pay for the ones you love, no minimums. On-site team days are quoted by headcount and location. Because Turlock is so close, travel is minimal. Contact us with your team size for a quick quote.',
+  },
+];
+
 function generateTurlockFAQSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'Do you offer professional headshots in Turlock, CA?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes! We regularly serve Turlock business professionals, CSU Stanislaus faculty, and corporate teams across Stanislaus County. We offer both in-studio sessions at our Modesto studio (15-20 minutes from Turlock) and on-site photography at your Turlock office or campus location. You\'ll get outstanding results whether you come to our studio or we come to your location.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'How far is your studio from Turlock?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Our professional studio is in Modesto, just 15-20 minutes from downtown Turlock via Highway 99. This makes it incredibly convenient for Turlock professionals to get polished headshots without a long drive. We are also happy to travel to your Turlock location for on-site sessions — a travel fee applies. Contact us and we will build a plan that works for you.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What do Turlock headshot sessions cost?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no pressure. For Turlock teams and organizations needing on-site photography, pricing is customized based on your needs. Contact us for a personalized quote.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you work with CSU Stanislaus faculty and staff?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Absolutely! We serve CSU Stanislaus faculty, staff, and administrators who need professional headshots for university websites, academic profiles, conference materials, and LinkedIn. We understand the professional imagery needs of educators and administrators. In-studio sessions or on-site at the Turlock campus both available.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Why do Turlock professionals choose Rojas Photography?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Turlock professionals choose Rojas Photography because we are just 15 minutes away in Modesto and understand the Central Valley business community. With 15+ years of corporate leadership experience, we have photographed 500+ executives and professionals. Our guided sessions eliminate the stress of professional photography, helping you present yourself with confidence on LinkedIn, your website, and all professional materials.',
-        },
-      },
-    ],
+    mainEntity: turlockFaqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: { '@type': 'Answer', text: f.answer },
+    })),
   };
 }
 
@@ -197,13 +193,13 @@ export default function TurlockHeadshotsPage() {
             <div className="max-w-4xl mx-auto">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 text-center">
-                  Corporate Photography Serving Turlock & Stanislaus County
+                  Corporate Headshots for Turlock — Practically Next Door
                 </h2>
                 <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6 text-center">
-                  Turlock&apos;s business and academic community deserves professional photography that reflects their expertise. From CSU Stanislaus faculty and administrators to downtown business owners, agricultural professionals, and corporate teams — every Turlock professional benefits from headshots that build credibility and trust.
+                  Turlock is our backyard. It&apos;s home to CSU Stanislaus — a university that pumps roughly $770 million a year into the regional economy — to Emanuel Medical Center, and to the agribusiness engine, from dairy processing to Foster Farms, that has defined this part of Stanislaus County for generations. It&apos;s a community built on relationships, where your reputation often arrives before you do, and your headshot is part of that reputation.
                 </p>
                 <p className="text-[var(--color-text-body)] leading-relaxed text-center">
-                  Rojas Photography serves Turlock with professional headshots, on-site team photography, commercial photography, video production, and event coverage. Our Modesto studio is just 15-20 minutes away via Highway 99 — or we come to you at your Turlock location or CSU Stanislaus campus.
+                  We&apos;re Alfonso and Niomi Rojas, and our studio sits about 15 minutes up Highway 99 in Modesto — close enough that Turlock is genuinely local for us, not a road trip. Book an individual session at the studio, or have us set up on-site at your downtown office, your ag operation, or the CSU Stanislaus campus. Same coached, professional headshot either way.
                 </p>
               </SectionReveal>
             </div>
@@ -283,13 +279,61 @@ export default function TurlockHeadshotsPage() {
             </div>
           </section>
 
+          {/* Turlock sectors — unique local content */}
+          <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
+            <div className="max-w-5xl mx-auto">
+              <SectionReveal>
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4 text-center">
+                  The Turlock Professionals We Photograph
+                </h2>
+                <p className="text-lg text-[var(--color-text-muted)] text-center mb-14 max-w-2xl mx-auto">
+                  Turlock&apos;s economy runs on four engines, and each one asks something different of a professional headshot.
+                </p>
+              </SectionReveal>
+              <div className="grid md:grid-cols-2 gap-8">
+                <SectionReveal>
+                  <div className="bg-white rounded-xl p-8 h-full border border-gray-100">
+                    <h3 className="text-xl text-[var(--color-primary)] mb-3">CSU Stanislaus &amp; Education</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
+                      Faculty, deans, and administrators need portraits that balance academic authority with approachability — for university profiles, research pages, conference bios, and grant materials. We photograph individuals at the studio or bring the setup to campus for a department or a full-college faculty refresh, matched to one consistent look.
+                    </p>
+                  </div>
+                </SectionReveal>
+                <SectionReveal>
+                  <div className="bg-white rounded-xl p-8 h-full border border-gray-100">
+                    <h3 className="text-xl text-[var(--color-primary)] mb-3">Healthcare</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
+                      Emanuel Medical Center and the clinics and practices around it run on tight clinical schedules. We bring the studio on-site so physicians, nurses, and administrators get a warm, credible portrait for provider directories and referral networks between patients — white coat or business professional, your call.
+                    </p>
+                  </div>
+                </SectionReveal>
+                <SectionReveal>
+                  <div className="bg-white rounded-xl p-8 h-full border border-gray-100">
+                    <h3 className="text-xl text-[var(--color-primary)] mb-3">Agriculture &amp; Agribusiness</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
+                      This is dairy and poultry country — from family operations to processors and the Foster Farms footprint. Ag executives, sales teams, and family-business owners need headshots that read as grounded and trustworthy for company sites, trade directories, and LinkedIn. We&apos;re comfortable shooting in a boardroom or out where the work actually happens.
+                    </p>
+                  </div>
+                </SectionReveal>
+                <SectionReveal>
+                  <div className="bg-white rounded-xl p-8 h-full border border-gray-100">
+                    <h3 className="text-xl text-[var(--color-primary)] mb-3">Downtown &amp; Small Business</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
+                      Turlock&apos;s downtown professionals — realtors, financial advisors, attorneys, insurance agents, and independent business owners — live and die on local reputation. A polished, current headshot on your yard signs, website, and marketing tells this community you take your work seriously. Being 15 minutes away means booking one is easy.
+                    </p>
+                  </div>
+                </SectionReveal>
+              </div>
+            </div>
+          </section>
+
           {/* Why Turlock Professionals Choose Us */}
           <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">
-                    Why Turlock Professionals Choose Me
+                    Why Turlock Professionals Choose Us
                   </h2>
                 </div>
               </SectionReveal>
@@ -302,7 +346,7 @@ export default function TurlockHeadshotsPage() {
                   },
                   {
                     title: 'I Understand Academia and Business',
-                    desc: 'From CSU Stanislaus faculty needing headshots for university websites and academic profiles, to Turlock business owners building their brand — we understand what professionals need from their imagery. My 15+ years of corporate experience shows in every session.',
+                    desc: 'From CSU Stanislaus faculty needing headshots for university websites and academic profiles, to Turlock business owners building their brand — we understand what professionals need from their imagery. Our 15+ years of corporate experience shows in every session.',
                   },
                   {
                     title: 'In-Studio or we Come to Your Location',
@@ -340,7 +384,7 @@ export default function TurlockHeadshotsPage() {
             <div className="max-w-6xl mx-auto">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl text-center mb-12 text-[var(--color-text-dark)]">
-                  My Work
+                  Our Work
                 </h2>
               </SectionReveal>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -374,7 +418,7 @@ export default function TurlockHeadshotsPage() {
                   Imagine Walking Into Your Next Client Meeting Knowing Your Online Image Is on Point
                 </h2>
                 <p className="text-lg text-[var(--color-text-body)] leading-relaxed max-w-2xl mx-auto">
-                  Imagine a headshot that builds trust before the first handshake. One that reflects your expertise whether you&apos;re a CSU faculty member, a business owner, or a corporate professional. I make that happen — and We&apos;re just 15 minutes away.
+                  Imagine a headshot that builds trust before the first handshake — one that reflects your expertise whether you&apos;re a CSU faculty member, a business owner, or a corporate professional. We make that happen, and we&apos;re just 15 minutes away.
                 </p>
               </SectionReveal>
             </div>
@@ -416,33 +460,7 @@ export default function TurlockHeadshotsPage() {
 
           {/* FAQ */}
           <FAQSection
-            faqs={[
-              {
-                question: 'Do you offer professional headshots in Turlock, CA?',
-                answer:
-                  'Yes! We regularly serve Turlock business professionals, CSU Stanislaus faculty, and corporate teams across Stanislaus County. We offer both in-studio sessions at our Modesto studio (15-20 minutes from Turlock) and on-site photography at your Turlock office or campus location. My portable professional studio — lighting, backdrops, and full equipment — produces the same high-end results on-site as in the studio. You choose what is most convenient.',
-              },
-              {
-                question: 'How far is your studio from Turlock?',
-                answer:
-                  'Our professional studio is in Modesto, just 15-20 minutes from downtown Turlock via Highway 99. This makes it incredibly convenient for Turlock professionals to get polished headshots without a long drive. I\'m also happy to travel to your Turlock location for on-site sessions — a travel fee applies. Contact us and we\'ll build a plan that works for you.',
-              },
-              {
-                question: 'What do Turlock headshot sessions cost?',
-                answer:
-                  'Professional headshot sessions are $150, plus $150 per image you select. You only pay for the images you love — no package minimums, no pressure. For Turlock teams and organizations needing on-site photography, pricing is customized based on your needs. Contact us for a personalized quote.',
-              },
-              {
-                question: 'Do you work with CSU Stanislaus faculty and staff?',
-                answer:
-                  'Absolutely! We serve CSU Stanislaus faculty, staff, and administrators who need professional headshots for university websites, academic profiles, conference materials, and LinkedIn. We understand the professional imagery needs of educators and administrators. In-studio sessions or on-site at the Turlock campus both available.',
-              },
-              {
-                question: 'Why do Turlock professionals choose Rojas Photography?',
-                answer:
-                  'Turlock professionals choose us because We\'re just 15 minutes away in Modesto and understand the Central Valley business community. With 15+ years of corporate leadership experience, We\'ve photographed 500+ executives and professionals. Our guided sessions eliminate the stress of professional photography, helping you present yourself with confidence on LinkedIn, your website, and all professional materials.',
-              },
-            ]}
+            faqs={turlockFaqs}
             heading="Turlock Headshot Questions Answered"
           />
 
