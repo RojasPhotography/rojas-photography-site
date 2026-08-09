@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { CheckCircle2, Zap, Trophy } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
+import ParallaxBand from '../components/ParallaxBand';
 import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
@@ -278,18 +279,16 @@ export default function EventPhotographyPage() {
         </section>
 
         {/* Urgent CTA After Plan - Early Conversion Opportunity */}
-        <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                Stop gambling with unreliable photographers. Get professional event coverage you can trust.
-              </p>
-              <Link href="/contact-quote" className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">
+        <ParallaxBand image="/images/events/gallery/corporate-reception-san-francisco.jpg" overlayOpacity={72}>
+          <SectionReveal>
+            <p className="text-white text-2xl md:text-3xl mb-6 leading-relaxed font-[family-name:var(--font-heading)]">
+              Stop gambling with unreliable photographers. Get professional event coverage you can trust.
+            </p>
+            <Link href="/contact-quote" className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">
                 Request a Quote
               </Link>
-            </SectionReveal>
-          </div>
-        </section>
+          </SectionReveal>
+        </ParallaxBand>
 
         {/* Gallery */}
         <section className="py-20 px-8 bg-white">

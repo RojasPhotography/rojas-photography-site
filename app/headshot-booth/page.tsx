@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
+import ParallaxBand from '../components/ParallaxBand';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
@@ -204,21 +205,19 @@ export default function HeadshotBoothPage() {
         </section>
 
         {/* Early CTA */}
-        <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                Make professional headshots the highlight of your next event.
-              </p>
-              <Link
+        <ParallaxBand image="/images/Kaiser BTS Headshots.png" overlayOpacity={72}>
+          <SectionReveal>
+            <p className="text-white text-2xl md:text-3xl mb-6 leading-relaxed font-[family-name:var(--font-heading)]">
+              Make professional headshots the highlight of your next event.
+            </p>
+            <Link
                 href="/contact-quote"
                 className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
               >
                 Request a Quote
               </Link>
-            </SectionReveal>
-          </div>
-        </section>
+          </SectionReveal>
+        </ParallaxBand>
 
         {/* Gallery */}
         <section className="py-20 px-8 bg-white">

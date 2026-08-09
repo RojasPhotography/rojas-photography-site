@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Briefcase, Video, Calendar, Aperture } from 'lucide-react';
 import SectionReveal from './components/SectionReveal';
+import ParallaxBand from './components/ParallaxBand';
 import TestimonialCard from './components/TestimonialCard';
 import GoogleReviewsBadge from './components/GoogleReviewsBadge';
 import CTASection from './components/CTASection';
@@ -463,37 +464,32 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Discovery Call CTA #1 - After Portfolio - SB7: Call to Action */}
-        <section
-          className="py-16 px-8 text-white"
-          style={{ background: 'radial-gradient(90% 140% at 50% -30%, rgba(255,255,255,.1), transparent 60%), linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 80%)' }}
-        >
-          <div className="max-w-3xl mx-auto text-center">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl mb-4">
-                Ready for a Headshot You&apos;re Proud Of?
-              </h2>
-              <p className="text-lg mb-8 text-white/90">
-                You'll spend the session with both of us — Alfonso and Niomi. Studio sessions book online in minutes — pick your time and you're set. Prefer to talk it through first? Call us directly and we'll point you to the right session.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/premium-headshots#booking-heading"
-                  className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-                >
-                  Book a Studio Session
-                </Link>
-                <a
-                  href="tel:2093803727"
-                  className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-                >
-                  Call 209-380-3727
-                </a>
-              </div>
-              <p className="text-white/60 text-sm mt-5">In our Modesto studio · pick your favorites before you leave · edited images in your inbox within 48 hours</p>
-            </SectionReveal>
-          </div>
-        </section>
+        {/* Discovery Call CTA #1 - After Portfolio - SB7: Call to Action — parallax band */}
+        <ParallaxBand image="/images/Alfonso+Niomi-0026.jpg" overlayOpacity={78} size="lg">
+          <SectionReveal>
+            <h2 className="text-3xl md:text-4xl mb-4 text-white">
+              Ready for a Headshot You&apos;re Proud Of?
+            </h2>
+            <p className="text-lg mb-8 text-white/90">
+              You&apos;ll spend the session with both of us — Alfonso and Niomi. Studio sessions book online in minutes — pick your time and you&apos;re set. Prefer to talk it through first? Call us directly and we&apos;ll point you to the right session.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/premium-headshots#booking-heading"
+                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+              >
+                Book a Studio Session
+              </Link>
+              <a
+                href="tel:2093803727"
+                className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+              >
+                Call 209-380-3727
+              </a>
+            </div>
+            <p className="text-white/60 text-sm mt-5">In our Modesto studio · pick your favorites before you leave · edited images in your inbox within 48 hours</p>
+          </SectionReveal>
+        </ParallaxBand>
 
         {/* FAQ Section - AEO */}
         <FAQSection
