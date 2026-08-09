@@ -291,7 +291,8 @@ export default function HomePage() {
                     Book a Studio Session
                   </Link>
                   <p className="text-sm text-[var(--color-text-muted)] mt-4">
-                    Sessions are $150, plus $150 per finished image you choose. No minimum.
+                    Sessions are $150, plus $150 per finished image you choose. No minimum.{' '}
+                    <Link href="/professional-headshot-cost" className="text-[var(--color-primary)] underline">See how headshot pricing works</Link>.
                   </p>
                 </div>
               </div>
