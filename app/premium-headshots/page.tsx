@@ -329,7 +329,11 @@ export default function PremiumHeadshotsPage() {
                 <p className="text-sm font-semibold text-[var(--color-text-dark)] mb-1">How your total is calculated:</p>
                 <p className="text-[var(--color-text-body)] text-sm"><span className="font-semibold">$150 session fee</span> + <span className="font-semibold">$150 × images you select</span> = your total</p>
               </div>
-              <p className="text-[var(--color-text-muted)] text-sm mb-10">Rush delivery available — 24-hour turnaround for an additional $75</p>
+              <p className="text-[var(--color-text-muted)] text-sm mb-2">Rush delivery available — 24-hour turnaround for an additional $75</p>
+              <p className="text-[var(--color-text-muted)] text-sm mb-10">
+                Want the full breakdown? Read our guide to{' '}
+                <Link href="/professional-headshot-cost" className="text-[var(--color-primary)] underline">how much a professional headshot costs</Link>.
+              </p>
               <a
                 href="#booking-heading"
                 className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block"
