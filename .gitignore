@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Organized-but-unfeatured event photo originals (kept on disk, out of the repo to stay lean)
+public/images/events/antitrust-2025/
+public/images/events/cla-annual-meeting/
+public/images/events/cla-la-mixer/
+public/images/events/cla-legislative-day/
+public/images/events/cla-solo-small-firm/
+public/images/events/misc/
+public/images/events/united-way/
+public/images/events/valley-first/
+public/images/events/veterans-parade/
+public/images/events/wfg-awards/
