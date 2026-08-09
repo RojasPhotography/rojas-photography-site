@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/CLA AM 25 201.jpg',
+        url: '/images/events/gallery/wfg-awards-red-carpet.jpg',
         alt: 'Corporate event photography - Modesto photographer',
       },
     ],
@@ -71,7 +71,7 @@ export default function EventPhotographyPage() {
         name: 'Corporate Event Photography',
         description: 'Professional event photography for conferences, galas, fundraisers, and corporate gatherings in Modesto and Central Valley. Delivered in 5–7 business days.',
         url: 'https://rojasphotography.net/event-photography',
-        image: 'https://rojasphotography.net/images/CLA AM 25 201.jpg',
+        image: 'https://rojasphotography.net/images/events/gallery/wfg-awards-red-carpet.jpg',
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([
@@ -299,18 +299,20 @@ export default function EventPhotographyPage() {
             </SectionReveal>
             <MasonryGallery
               images={[
-                { src: '/images/CLA AM 25 201.jpg', alt: 'California Lawyers Association annual meeting - corporate event photography Modesto' },
-                { src: '/images/DSC_1638.jpg', alt: 'Professional gala and formal event photography Central Valley' },
-                { src: '/images/CLA AM 25 335.jpg', alt: 'Conference and networking event photography - Rojas Photography Central Valley' },
-                { src: '/images/events/antitrust-salesforce/exterior-benz-stockton.jpg', alt: 'Mercedes-Benz corporate event photography Stockton - exterior venue shot' },
-                { src: '/images/events/antitrust-salesforce/engaged-group-table.jpg', alt: 'Corporate event attendees networking at table - Stockton event photography' },
-                { src: '/images/events/antitrust-salesforce/friends-networking.jpg', alt: 'Professional networking event photography - Central Valley corporate events' },
-                { src: '/images/events/antitrust-salesforce/engaged-attendee.jpg', alt: 'Engaged corporate event attendee - professional event photography Stockton' },
-                { src: '/images/events/antitrust-salesforce/laughing-attendee.jpg', alt: 'Candid moment at corporate event - authentic event photography Central Valley' },
-                { src: '/images/events/antitrust-salesforce/wideshot-benz-logo.jpg', alt: 'Mercedes-Benz branded corporate event - wide venue shot Stockton CA' },
-                { src: '/images/events/antitrust-salesforce/engaged-posed-group-table.jpg', alt: 'Group photo at corporate event table - professional event photography' },
-                { src: '/images/events/antitrust-salesforce/engaged-attendee-side-profile.jpg', alt: 'Corporate event attendee candid shot - event photography Central Valley' },
-                { src: '/images/events/antitrust-salesforce/Anti-Trust_SF-SalesForce-69.jpg', alt: 'Anti-Trust corporate event photography at Salesforce San Francisco CA' },
+                { src: '/images/events/gallery/wfg-awards-outdoor-group.jpg', alt: 'Company team celebrating at an outdoor awards event in Danville — corporate event photography', width: 2560, height: 1706 },
+                { src: '/images/events/gallery/wfg-awards-podium.jpg', alt: 'Award presentation at a corporate recognition gala — event photography Central Valley', width: 2560, height: 1706 },
+                { src: '/images/events/gallery/united-way-power-of-the-purse-stage.jpg', alt: 'United Way Power of the Purse fundraiser gala on stage at the Gallo Center, Modesto', width: 2560, height: 1703 },
+                { src: '/images/events/gallery/valley-first-celebration.jpg', alt: 'Guests celebrating at a Valley First Credit Union corporate event — Central Valley event photography', width: 2560, height: 1703 },
+                { src: '/images/events/gallery/corporate-reception-san-francisco.jpg', alt: 'Corporate networking reception with San Francisco skyline views — event photography', width: 2560, height: 1703 },
+                { src: '/images/events/gallery/wfg-awards-red-carpet.jpg', alt: 'Team on the red carpet at a corporate awards gala in Modesto — event photography', width: 2560, height: 1706 },
+                { src: '/images/events/gallery/united-way-keynote.jpg', alt: 'Keynote speaker at a nonprofit fundraiser gala — Modesto event photography', width: 2560, height: 1703 },
+                { src: '/images/events/gallery/corporate-dinner-tablescape.jpg', alt: 'Elegant award dinner tablescape at a corporate gala — event photography Central Valley', width: 2560, height: 1706 },
+                { src: '/images/events/gallery/wfg-awards-winner.jpg', alt: 'Award winner with trophy at a corporate recognition event — event photography', width: 1706, height: 2560 },
+                { src: '/images/events/gallery/valley-first-speaker.jpg', alt: 'Speaker at a Valley First Credit Union corporate event — Central Valley event photography', width: 2560, height: 1703 },
+                { src: '/images/events/gallery/united-way-gala-guests.jpg', alt: 'Guests at a nonprofit fundraiser gala at the Gallo Center, Modesto — event photography', width: 2560, height: 1703 },
+                { src: '/images/events/antitrust-salesforce/friends-networking.jpg', alt: 'Colleagues networking at a corporate holiday party in Stockton — event photography', width: 6048, height: 4024 },
+                { src: '/images/events/antitrust-salesforce/laughing-attendee.jpg', alt: 'Candid moment at a corporate holiday party — authentic event photography Central Valley', width: 6048, height: 4024 },
+                { src: '/images/DSC_1638.jpg', alt: 'Formal gala and evening event photography — Central Valley', width: 800, height: 1200 },
               ]}
             />
           </div>
