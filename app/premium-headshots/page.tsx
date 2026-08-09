@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
+import ParallaxBand from '../components/ParallaxBand';
 import TestimonialCard from '../components/TestimonialCard';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
@@ -216,21 +217,19 @@ export default function PremiumHeadshotsPage() {
         </section>
 
         {/* Urgent CTA Before Gallery - Early Conversion Opportunity */}
-        <section className="py-12 px-8 bg-[var(--color-primary-dark)] text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <p className="text-white/90 text-lg md:text-xl mb-6 leading-relaxed">
-                Don't settle for a stiff, awkward headshot that hurts your credibility.
-              </p>
-              <a
-                href="#booking-heading"
-                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-              >
-                Book Your Session
-              </a>
-            </SectionReveal>
-          </div>
-        </section>
+        <ParallaxBand image="/images/headshots/headshot-ceo-nutrition-02.jpg" overlayOpacity={72}>
+          <SectionReveal>
+            <p className="text-white text-2xl md:text-3xl mb-6 leading-relaxed font-[family-name:var(--font-heading)]">
+              Don&apos;t settle for a stiff, awkward headshot that hurts your credibility.
+            </p>
+            <a
+              href="#booking-heading"
+              className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+            >
+              Book Your Session
+            </a>
+          </SectionReveal>
+        </ParallaxBand>
 
         {/* Headshot Gallery */}
         <section className="py-16 px-8 bg-white">

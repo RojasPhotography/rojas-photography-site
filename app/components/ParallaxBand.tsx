@@ -6,6 +6,8 @@ interface ParallaxBandProps {
   children: React.ReactNode;
   /** Vertical padding size. */
   size?: 'sm' | 'md' | 'lg';
+  /** CSS background-position for the focal point (e.g. "center 22%"). Default "center". */
+  position?: string;
 }
 
 /**
@@ -22,13 +24,14 @@ export default function ParallaxBand({
   overlayOpacity = 70,
   children,
   size = 'md',
+  position = 'center',
 }: ParallaxBandProps) {
   const pad = size === 'lg' ? 'py-28 md:py-36' : size === 'sm' ? 'py-14 md:py-16' : 'py-20 md:py-28';
 
   return (
     <section
       className={`parallax-fixed relative px-8 text-center ${pad}`}
-      style={{ backgroundImage: `url("${image}")` }}
+      style={{ backgroundImage: `url("${image}")`, backgroundPosition: position }}
     >
       <div
         className="absolute inset-0"

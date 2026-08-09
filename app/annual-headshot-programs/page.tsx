@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
+import ParallaxBand from '../components/ParallaxBand';
 import CTASection from '../components/CTASection';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
@@ -365,33 +366,31 @@ export default function AnnualHeadshotProgramsPage() {
             </div>
           </section>
 
-          {/* CTA After Stakes */}
-          <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
-            <div className="max-w-3xl mx-auto text-center">
-              <SectionReveal>
-                <h2 className="text-3xl md:text-4xl mb-4">
-                  Ready to Put Your Team&rsquo;s Headshots on Autopilot?
-                </h2>
-                <p className="text-lg mb-8 text-white/90">
-                  Tell us your team size and we&rsquo;ll send you a flat-rate program quote. No packages, no surprises — just a clear plan to keep your directory consistent, year after year.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link
-                    href="/contact-quote"
-                    className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-                  >
-                    Request Your Program Quote
-                  </Link>
-                  <Link
-                    href="/discovery-call"
-                    className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-                  >
-                    Schedule a Discovery Call
-                  </Link>
-                </div>
-              </SectionReveal>
-            </div>
-          </section>
+          {/* CTA After Stakes — parallax band */}
+          <ParallaxBand image="/images/Move Staff Group 9.jpg" overlayOpacity={74} size="lg">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl mb-4 text-white">
+                Ready to Put Your Team&rsquo;s Headshots on Autopilot?
+              </h2>
+              <p className="text-lg mb-8 text-white/90">
+                Tell us your team size and we&rsquo;ll send you a flat-rate program quote. No packages, no surprises — just a clear plan to keep your directory consistent, year after year.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  href="/contact-quote"
+                  className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+                >
+                  Request Your Program Quote
+                </Link>
+                <Link
+                  href="/discovery-call"
+                  className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+                >
+                  Schedule a Discovery Call
+                </Link>
+              </div>
+            </SectionReveal>
+          </ParallaxBand>
 
           {/* FAQ */}
           <FAQSection

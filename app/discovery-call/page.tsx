@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import { CheckCircle2, Clock, Target, Users } from 'lucide-react';
 import SectionReveal from '../components/SectionReveal';
+import ParallaxBand from '../components/ParallaxBand';
 import CTASection from '../components/CTASection';
 import SchedulerEmbed from '../components/SchedulerEmbed';
 import TestimonialCard from '../components/TestimonialCard';
@@ -206,6 +207,15 @@ export default function DiscoveryCallPage() {
             </div>
           </div>
         </section>
+
+        {/* Parallax transition into the scheduler */}
+        <ParallaxBand image="/images/headshots/headshot-comcast-executive.jpg" overlayOpacity={74} size="sm">
+          <SectionReveal>
+            <p className="text-white text-2xl md:text-3xl leading-relaxed font-[family-name:var(--font-heading)]">
+              One quick conversation, and we&apos;ll map out the perfect session for you.
+            </p>
+          </SectionReveal>
+        </ParallaxBand>
 
         {/* Calendar Section - 17hats */}
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]" aria-labelledby="calendar-heading">
