@@ -465,7 +465,7 @@ export default function HomePage() {
         </section>
 
         {/* Discovery Call CTA #1 - After Portfolio - SB7: Call to Action — parallax band */}
-        <ParallaxBand image="/images/Alfonso+Niomi-0026.jpg" overlayOpacity={78} size="lg" position="center 20%">
+        <ParallaxBand image="/images/alfonso-niomi-band.jpg" overlayOpacity={78} size="lg" position="center 30%">
           <SectionReveal>
             <h2 className="text-3xl md:text-4xl mb-4 text-white">
               Ready for a Headshot You&apos;re Proud Of?
