@@ -305,6 +305,8 @@ export default function EventPhotographyPage() {
                 { src: '/images/events/gallery/valley-first-celebration.jpg', alt: 'Guests celebrating at a Valley First Credit Union corporate event — Central Valley event photography', width: 2560, height: 1703 },
                 { src: '/images/events/gallery/corporate-reception-san-francisco.jpg', alt: 'Corporate networking reception with San Francisco skyline views — event photography', width: 2560, height: 1703 },
                 { src: '/images/events/gallery/wfg-awards-red-carpet.jpg', alt: 'Team on the red carpet at a corporate awards gala in Modesto — event photography', width: 2560, height: 1706 },
+                { src: '/images/events/gallery/summer-mixer-attendees.jpg', alt: 'Guests connecting at an evening networking mixer — Central Valley event photography', width: 2560, height: 1706 },
+                { src: '/images/events/gallery/legislative-day-capitol.jpg', alt: 'Group event at the California State Capitol in Sacramento — event photography', width: 2560, height: 1706 },
                 { src: '/images/events/gallery/united-way-keynote.jpg', alt: 'Keynote speaker at a nonprofit fundraiser gala — Modesto event photography', width: 2560, height: 1703 },
                 { src: '/images/events/gallery/corporate-dinner-tablescape.jpg', alt: 'Elegant award dinner tablescape at a corporate gala — event photography Central Valley', width: 2560, height: 1706 },
                 { src: '/images/events/gallery/wfg-awards-winner.jpg', alt: 'Award winner with trophy at a corporate recognition event — event photography', width: 1706, height: 2560 },
