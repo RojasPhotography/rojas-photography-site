@@ -205,6 +205,76 @@ export default function HomePage() {
         </section>
       </SectionReveal>
 
+      {/* Intent paths — "which brings you here?" three-way router (a section, not a gate) */}
+      <section className="py-16 md:py-24 px-8 bg-[var(--color-bg-warm)]" aria-labelledby="paths-heading">
+        <div className="max-w-6xl mx-auto">
+          <SectionReveal>
+            <div className="text-center mb-12">
+              <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.2em] uppercase mb-3">Start Here</p>
+              <h2 id="paths-heading" className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">
+                Which brings you here?
+              </h2>
+              <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
+                Pick the path that fits — or keep scrolling to see the whole story.
+              </p>
+            </div>
+          </SectionReveal>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                href: '/premium-headshots',
+                eyebrow: 'For one',
+                title: 'Executive & Personal Headshots',
+                desc: 'One photograph that carries your name — for you, your LinkedIn, and your personal brand.',
+                img: '/images/headshots/headshot-executive-02.jpg',
+                alt: 'Executive headshot for an individual professional — Rojas Photography Modesto',
+                pos: '50% 20%',
+              },
+              {
+                href: '/on-site-photography',
+                eyebrow: 'For teams',
+                title: 'Team Headshots & Events',
+                desc: 'On-site headshot days, conferences, and company events across the Central Valley.',
+                img: '/images/Move Staff Group 9.jpg',
+                alt: 'On-site team headshot day for a Central Valley company — Rojas Photography',
+                pos: '50% 35%',
+              },
+              {
+                href: '/commercial',
+                eyebrow: 'For your brand',
+                title: 'Commercial & Video',
+                desc: 'Brand imagery, product photography, and video that make your business look its best.',
+                img: '/images/DoctorOffice 4.jpg',
+                alt: 'Commercial and brand photography for a Central Valley business — Rojas Photography',
+                pos: '50% 45%',
+              },
+            ].map((p) => (
+              <SectionReveal key={p.href}>
+                <Link href={p.href} className="block group rounded-2xl overflow-hidden relative h-[420px] shadow-lg ring-1 ring-black/5 hover:shadow-2xl transition-all">
+                  <Image
+                    src={p.img}
+                    alt={p.alt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    style={{ objectPosition: p.pos }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary-dark)] via-[var(--color-primary-dark)]/50 to-transparent" />
+                  <div className="relative z-10 h-full flex flex-col justify-end p-8 text-white">
+                    <p className="text-[var(--color-primary-light)] font-semibold text-xs tracking-[0.2em] uppercase mb-2">{p.eyebrow}</p>
+                    <h3 className="text-2xl mb-3 leading-tight">{p.title}</h3>
+                    <p className="text-white/85 text-sm leading-relaxed mb-4">{p.desc}</p>
+                    <span className="text-white font-semibold text-sm inline-flex items-center gap-1 group-hover:gap-2 transition-all">
+                      Explore <span aria-hidden="true">→</span>
+                    </span>
+                  </div>
+                </Link>
+              </SectionReveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* The guides — SB7: problem + guide, humans up front */}
       <section className="py-16 md:py-24 px-8 bg-white">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
