@@ -72,8 +72,10 @@ export default function NewsletterAdmin() {
 
   const subjectRef = useRef(subject);
   const currentDraftIdRef = useRef(currentDraftId);
+  const editingSequenceIdRef = useRef(editingSequenceId);
   useEffect(() => { subjectRef.current = subject; }, [subject]);
   useEffect(() => { currentDraftIdRef.current = currentDraftId; }, [currentDraftId]);
+  useEffect(() => { editingSequenceIdRef.current = editingSequenceId; }, [editingSequenceId]);
 
   const [status, setStatus] = useState<'idle' | 'loading' | 'saving' | 'success' | 'error'>('idle');
   const [result, setResult] = useState('');
@@ -156,14 +158,20 @@ export default function NewsletterAdmin() {
             setJsonContent(pageJson);
             setHtmlContent(pageHtml);
             setResult('');
-            if (pendingDraftSave.current) {
-              pendingDraftSave.current = false;
-              saveDraftWithContent(pageJson, pageHtml);
-            }
+            // Sequence email save (explicit "Save Sequence Email" button)
             if (pendingSequenceSave.current) {
               pendingSequenceSave.current = false;
               saveSequenceEmailWithContent(pageJson, pageHtml);
+              return;
             }
+            // While editing a sequence email, ignore a stray editor save so it
+            // doesn't create a stray newsletter draft.
+            if (editingSequenceIdRef.current !== null) return;
+            // Newsletter mode: ANY save persists the draft — whether it came from
+            // our "Save Draft" button or the editor's own Save button. No more
+            // silent, non-saving clicks.
+            pendingDraftSave.current = false;
+            saveDraftWithContent(pageJson, pageHtml);
           },
           onSaveAsTemplate: (_pageJson: string) => {},
           onError: (error: unknown) => {
