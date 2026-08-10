@@ -53,6 +53,7 @@ export default function NewsletterAdmin() {
 
   const [subscribers, setSubscribers] = useState<Subscriber[]>([]);
   const [showSubscribers, setShowSubscribers] = useState(false);
+  const [subscriberSearch, setSubscriberSearch] = useState('');
 
   const [history, setHistory] = useState<SentNewsletter[]>([]);
   const [showHistory, setShowHistory] = useState(false);
@@ -461,6 +462,14 @@ export default function NewsletterAdmin() {
 
   const activeCount = subscribers.filter((s) => s.is_active).length;
   const unsubscribedCount = subscribers.filter((s) => !s.is_active).length;
+  const subscriberQuery = subscriberSearch.trim().toLowerCase();
+  const filteredSubscribers = subscriberQuery
+    ? subscribers.filter(
+        (s) =>
+          s.email.toLowerCase().includes(subscriberQuery) ||
+          (s.name || '').toLowerCase().includes(subscriberQuery),
+      )
+    : subscribers;
 
   if (!authenticated) {
     return (
@@ -804,16 +813,25 @@ export default function NewsletterAdmin() {
       {showSubscribers && (
         <div className="max-w-7xl mx-auto px-6 pt-4">
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
-            <div className="flex items-center justify-between mb-4">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
               <h2 className="text-[var(--color-text-dark)]">
                 Subscribers
                 <span className="ml-2 text-sm font-normal text-[var(--color-text-muted)]">
                   {activeCount} active · {subscribers.length - activeCount} unsubscribed
                 </span>
               </h2>
+              <input
+                type="search"
+                value={subscriberSearch}
+                onChange={(e) => setSubscriberSearch(e.target.value)}
+                placeholder="Search by email or name…"
+                className="px-4 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] w-full sm:w-72 text-sm"
+              />
             </div>
             {subscribers.length === 0 ? (
               <p className="text-[var(--color-text-muted)] text-sm">No subscribers yet.</p>
+            ) : filteredSubscribers.length === 0 ? (
+              <p className="text-[var(--color-text-muted)] text-sm">No subscribers match &ldquo;{subscriberSearch}&rdquo;.</p>
             ) : (
               <div className="overflow-x-auto">
                 <table className="w-full text-sm">
@@ -827,7 +845,7 @@ export default function NewsletterAdmin() {
                     </tr>
                   </thead>
                   <tbody>
-                    {subscribers.map((sub) => (
+                    {filteredSubscribers.map((sub) => (
                       <tr key={sub.id} className="border-b border-gray-50 hover:bg-gray-50">
                         <td className="py-2 pr-4 text-[var(--color-text-dark)]">{sub.email}</td>
                         <td className="py-2 pr-4 text-[var(--color-text-muted)]">{sub.name || '—'}</td>
