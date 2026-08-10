@@ -325,6 +325,9 @@ export default function ConferencePhotographyPage() {
                 images={[
                   { src: '/images/CLA AM 25 335.jpg', alt: 'California Lawyers Association 2025 Annual Meeting stage and panel — conference photography', width: 2048, height: 1365 },
                   { src: '/images/events/conferences/cla-solo-small-firm-summit-keynote.jpg', alt: 'Keynote speaker at the CLA Solo & Small Firm Summit — conference photography', width: 2560, height: 1703 },
+                  { src: '/images/events/conferences/cla-solo-small-firm-summit-venue.jpg', alt: 'Outdoor conference lunch at the VEA hotel — CLA Solo & Small Firm Summit venue photography', width: 2560, height: 1703 },
+                  { src: '/images/events/conferences/cla-solo-small-firm-summit-outdoor-lunch.jpg', alt: 'Branded outdoor networking lunch at the CLA Solo & Small Firm Summit — conference photography', width: 2560, height: 1703 },
+                  { src: '/images/events/conferences/cla-solo-small-firm-summit-networking.jpg', alt: 'Attendees at an outdoor conference lunch — professional conference photography California', width: 2560, height: 1703 },
                   { src: '/images/events/conferences/antitrust-summit-reception-audience.jpg', alt: 'Engaged audience at a conference reception in San Francisco — professional conference photography', width: 2560, height: 1709 },
                   { src: '/images/events/conferences/cla-summer-mixer-networking.jpg', alt: 'Attendees networking at an evening legal association mixer — event photography', width: 2560, height: 1706 },
                   { src: '/images/events/conferences/cla-legislative-day-panel.jpg', alt: 'Panel discussion at a Sacramento legal conference — conference photography Central Valley', width: 2560, height: 1709 },
