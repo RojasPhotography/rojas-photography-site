@@ -10,6 +10,7 @@ import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
 import MasonryGallery from '../components/MasonryGallery';
 import ParallaxBand from '../components/ParallaxBand';
+import EventGalleryLinks from '../components/EventGalleryLinks';
 import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 
 const faqs = [
@@ -341,6 +342,40 @@ export default function ConferencePhotographyPage() {
                   { src: '/images/events/conferences/cla-conference-speaker-portrait.jpg', alt: 'Speaker addressing a conference session — professional conference photography', width: 1363, height: 2048 },
                 ]}
               />
+            </div>
+          </section>
+
+          {/* Full event galleries — link out to SpotMyPhotos highlights */}
+          <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
+            <div className="max-w-6xl mx-auto">
+              <SectionReveal>
+                <div className="text-center mb-12">
+                  <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Explore Full Event Galleries</h2>
+                  <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
+                    A few of the conferences and receptions we&apos;ve covered — open a gallery to see the full set.
+                  </p>
+                </div>
+              </SectionReveal>
+              <SectionReveal>
+                <EventGalleryLinks
+                  galleries={[
+                    {
+                      href: 'https://gallery.spotmyphotos.com/highlights/51393098-f107-4d66-8861-e24018a7aaec',
+                      title: 'Golden State Institute Antitrust & Consumer Protection Conference',
+                      location: 'San Francisco, CA',
+                      cover: '/images/events/conferences/antitrust-summit-reception-audience.jpg',
+                      alt: 'Attendees at the CLA Golden State Institute Antitrust Conference reception in San Francisco',
+                    },
+                    {
+                      href: 'https://gallery.spotmyphotos.com/highlights/c8ad9d23-12cb-4c93-b085-8129b9723da9',
+                      title: 'California Lawyers Association Summer Mixer',
+                      location: 'San Francisco, CA',
+                      cover: '/images/events/conferences/cla-summer-mixer-networking.jpg',
+                      alt: 'Attendees networking at the California Lawyers Association Summer Mixer in San Francisco',
+                    },
+                  ]}
+                />
+              </SectionReveal>
             </div>
           </section>
 
