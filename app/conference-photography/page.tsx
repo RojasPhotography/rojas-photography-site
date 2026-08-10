@@ -367,6 +367,13 @@ export default function ConferencePhotographyPage() {
                       alt: 'Attendees at the CLA Golden State Institute Antitrust Conference reception in San Francisco',
                     },
                     {
+                      href: 'https://gallery.spotmyphotos.com/highlights/903a6016-2fda-4856-99a6-2f32907a6731',
+                      title: 'CLA Solo & Small Firm Summit',
+                      location: 'Newport Beach, CA',
+                      cover: '/images/events/conferences/cla-solo-small-firm-summit-venue.jpg',
+                      alt: 'The VEA Newport Beach resort venue at the CLA Solo & Small Firm Summit',
+                    },
+                    {
                       href: 'https://gallery.spotmyphotos.com/highlights/c8ad9d23-12cb-4c93-b085-8129b9723da9',
                       title: 'California Lawyers Association Summer Mixer',
                       location: 'San Francisco, CA',
