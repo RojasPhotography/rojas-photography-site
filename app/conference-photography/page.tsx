@@ -363,8 +363,8 @@ export default function ConferencePhotographyPage() {
                       href: 'https://gallery.spotmyphotos.com/highlights/51393098-f107-4d66-8861-e24018a7aaec',
                       title: 'Golden State Institute Antitrust & Consumer Protection Conference',
                       location: 'San Francisco, CA',
-                      cover: '/images/events/conferences/antitrust-summit-reception-audience.jpg',
-                      alt: 'Attendees at the CLA Golden State Institute Antitrust Conference reception in San Francisco',
+                      cover: '/images/events/conferences/golden-state-antitrust-conference.jpg',
+                      alt: 'Ballroom at the CLA Golden State Institute Antitrust & Consumer Protection Conference dinner in San Francisco',
                     },
                     {
                       href: 'https://gallery.spotmyphotos.com/highlights/903a6016-2fda-4856-99a6-2f32907a6731',
