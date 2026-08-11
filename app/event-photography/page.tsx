@@ -10,6 +10,7 @@ import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
 import MasonryGallery from '../components/MasonryGallery';
+import EventGalleryLinks from '../components/EventGalleryLinks';
 import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 import { serviceDefinitions, statistics } from '../lib/definitions';
 
@@ -316,6 +317,47 @@ export default function EventPhotographyPage() {
                 { src: '/images/DSC_1638.jpg', alt: 'Formal gala and evening event photography — Central Valley', width: 800, height: 1200 },
               ]}
             />
+          </div>
+        </section>
+
+        {/* Full event galleries — link out to SpotMyPhotos highlights */}
+        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
+          <div className="max-w-6xl mx-auto">
+            <SectionReveal>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Explore Full Event Galleries</h2>
+                <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
+                  A few of the events and receptions we&apos;ve covered — open a gallery to see the full set.
+                </p>
+              </div>
+            </SectionReveal>
+            <SectionReveal>
+              <EventGalleryLinks
+                galleries={[
+                  {
+                    href: 'https://gallery.spotmyphotos.com/highlights/51393098-f107-4d66-8861-e24018a7aaec',
+                    title: 'Golden State Institute Antitrust & Consumer Protection Conference',
+                    location: 'San Francisco, CA',
+                    cover: '/images/events/conferences/golden-state-antitrust-conference.jpg',
+                    alt: 'Ballroom at the CLA Golden State Institute Antitrust & Consumer Protection Conference dinner in San Francisco',
+                  },
+                  {
+                    href: 'https://gallery.spotmyphotos.com/highlights/903a6016-2fda-4856-99a6-2f32907a6731',
+                    title: 'CLA Solo & Small Firm Summit',
+                    location: 'Newport Beach, CA',
+                    cover: '/images/events/conferences/cla-solo-small-firm-summit-venue.jpg',
+                    alt: 'The VEA Newport Beach resort venue at the CLA Solo & Small Firm Summit',
+                  },
+                  {
+                    href: 'https://gallery.spotmyphotos.com/highlights/c8ad9d23-12cb-4c93-b085-8129b9723da9',
+                    title: 'California Lawyers Association Summer Mixer',
+                    location: 'San Francisco, CA',
+                    cover: '/images/events/conferences/cla-summer-mixer-networking.jpg',
+                    alt: 'Attendees networking at the California Lawyers Association Summer Mixer in San Francisco',
+                  },
+                ]}
+              />
+            </SectionReveal>
           </div>
         </section>
 
