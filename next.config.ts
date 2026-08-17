@@ -4,6 +4,23 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   async redirects() {
     return [
+      // http → https (for non-www)
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'rojasphotography.net',
+          },
+          {
+            type: 'header',
+            key: 'x-forwarded-proto',
+            value: 'http',
+          },
+        ],
+        destination: 'https://rojasphotography.net/:path*',
+        permanent: true,
+      },
       // www → non-www (covers both http and https)
       {
         source: '/:path*',
