@@ -140,6 +140,27 @@ export default function HeadshotVsPortraitPage() {
             </div>
           </section>
 
+          <section className="py-20 px-8 bg-white">
+            <div className="max-w-4xl mx-auto text-center">
+              <SectionReveal>
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-8">Ready to Book Your Headshot Session?</h2>
+                <div className="bg-[var(--color-bg-warm)] border border-gray-200 rounded-2xl p-8 mb-8">
+                  <h3 className="text-xl text-[var(--color-text-dark)] mb-6">Transparent Pricing</h3>
+                  <div className="space-y-4 text-lg text-[var(--color-text-body)]">
+                    <p><span className="font-semibold text-[var(--color-text-dark)]">$150 session fee</span> + <span className="font-semibold text-[var(--color-text-dark)]">$150 per finished image</span> = your total</p>
+                    <p className="text-sm text-[var(--color-text-muted)]">No minimums. No packages. You only pay for the photos you choose. Professionally edited images arrive within 48 hours.</p>
+                  </div>
+                </div>
+                <p className="text-[var(--color-text-body)] text-lg mb-8">
+                  During your session, we guide you through unlimited wardrobe changes, posing, and expression coaching. You review your gallery in the studio and select your favorites before you leave — no guessing about what you're purchasing.
+                </p>
+                <Link href="/premium-headshots#booking-heading" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block">
+                  Book Your Session
+                </Link>
+              </SectionReveal>
+            </div>
+          </section>
+
           <FAQSection faqs={faqs} heading="Headshot vs. Portrait — Frequently Asked Questions" />
           <CTASection heading="Ready to Book Your Headshot?" subheading="$150 session. $150 per image. Professional headshots for LinkedIn, directories, and press use. Modesto, CA." primaryLabel="Book Your Session" primaryHref="/premium-headshots#booking-heading" showContactInfo={false} />
         </main>
