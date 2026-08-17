@@ -85,7 +85,7 @@ export default function HowLongHeadshotSessionPage() {
                   { step: '2', title: 'Lighting Setup & First Look (5–10 min)', desc: 'Lighting is set up before you arrive — but we make final adjustments based on your first outfit and skin tone. First frames are taken to calibrate and get you warmed up.' },
                   { step: '3', title: 'Coached Shooting & Live Photo Review (40–90 min)', desc: 'The heart of your session. We shoot multiple expressions and angles per look, and you see your frames in real-time on screen as we go. This live preview lets us collaborate throughout — adjusting poses, expressions, and direction based on what\'s actually working. It ensures the session is going exactly the way you want from the very beginning, not a surprise at the end.' },
                   { step: '4', title: 'Wardrobe Changes & Selection Throughout (integrated)', desc: 'Wardrobe changes happen naturally throughout the session as we progress through looks. After each look, you see your best frames live and help select which images to send to editing. This means you are involved in the curation process as it happens — not making tough decisions later.' },
-                  { step: '5', title: 'Final Selection & Delivery Timeline (before you leave)', desc: 'Before you leave, your selected favorites are flagged for professional editing and retouching. You walk out knowing exactly which images are being finished and when they will arrive — 48 hours for standard delivery, or 24 hours if you add our $75 rush delivery option.' },
+                  { step: '5', title: 'Final Selection & Delivery Timeline (before you leave)', desc: 'Before you leave, your selected favorites are flagged for professional editing and retouching. You walk out knowing exactly which images are being finished and when they will arrive — 48 hours for standard delivery, or 24 hours if you add our $75-per-image rush delivery option.' },
                 ].map(item => (
                   <SectionReveal key={item.step}>
                     <div className="flex gap-5 p-7 bg-[var(--color-bg-warm)] rounded-xl border border-gray-100">
@@ -158,7 +158,7 @@ export default function HowLongHeadshotSessionPage() {
           </section>
 
           <FAQSection faqs={faqs} heading="Headshot Session Length — Frequently Asked Questions" />
-          <CTASection heading="Ready to Book Your Session?" subheading="Up to 3 hours. $150 session. $150 per image. Live photo review & selection during your session. 48-hour delivery (or $75 for 24-hour rush). Modesto, CA." primaryLabel="Book Your Session" primaryHref="/premium-headshots#booking-heading" showContactInfo={false} />
+          <CTASection heading="Ready to Book Your Session?" subheading="Up to 3 hours. $150 session. $150 per image. Live photo review & selection during your session. 48-hour delivery (or $75 per image for 24-hour rush). Modesto, CA." primaryLabel="Book Your Session" primaryHref="/premium-headshots#booking-heading" showContactInfo={false} />
         </main>
       </div>
     </>

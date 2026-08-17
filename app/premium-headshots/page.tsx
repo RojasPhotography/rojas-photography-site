@@ -28,7 +28,7 @@ const faqs = [
   {
     question: 'How long does a professional headshot session take?',
     answer:
-      'Our guided sessions include unlimited coaching time. Sessions can run up to 3 hours — no hard time limit, at your pace — though we can move faster if you need to get in and out quickly. During your session, we guide you through posing, expression, and styling in real-time. Your professionally edited images are delivered within 48 hours. For time-sensitive needs, we offer rush delivery (additional $75 fee) with 24-hour turnaround.',
+      'Our guided sessions include unlimited coaching time. Sessions can run up to 3 hours — no hard time limit, at your pace — though we can move faster if you need to get in and out quickly. During your session, we guide you through posing, expression, and styling in real-time. Your professionally edited images are delivered within 48 hours. For time-sensitive needs, we offer rush delivery ($75 per image) with 24-hour turnaround.',
   },
   {
     question: 'Do you provide makeup and styling for headshots?',
@@ -329,7 +329,7 @@ export default function PremiumHeadshotsPage() {
                 <p className="text-sm font-semibold text-[var(--color-text-dark)] mb-1">How your total is calculated:</p>
                 <p className="text-[var(--color-text-body)] text-sm"><span className="font-semibold">$150 session fee</span> + <span className="font-semibold">$150 × images you select</span> = your total</p>
               </div>
-              <p className="text-[var(--color-text-muted)] text-sm mb-2">Rush delivery available — 24-hour turnaround for an additional $75</p>
+              <p className="text-[var(--color-text-muted)] text-sm mb-2">Rush delivery available — 24-hour turnaround for an additional $75 per image</p>
               <p className="text-[var(--color-text-muted)] text-sm mb-10">
                 Want the full breakdown? Read our guide to{' '}
                 <Link href="/professional-headshot-cost" className="text-[var(--color-primary)] underline">how much a professional headshot costs</Link>.
