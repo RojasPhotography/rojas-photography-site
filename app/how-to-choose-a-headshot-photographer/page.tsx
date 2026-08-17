@@ -60,7 +60,7 @@ export const metadata: Metadata = {
 const greenFlags = [
   { flag: 'Portfolio shows range across industries', why: 'Means the photographer can adapt to different professional contexts — not just one type of client.' },
   { flag: 'Expression coaching is explicitly part of the process', why: 'The difference between a good headshot and a great one is coaching. If they do not mention it, they are probably not doing it.' },
-  { flag: 'Frame review is included before you leave', why: 'You should not leave without knowing what you are getting. Reviewing frames together ensures you are satisfied before the session ends.' },
+  { flag: 'Image review is included before you leave', why: 'You should not leave without knowing what you are getting. Reviewing images together ensures you are satisfied before the session ends.' },
   { flag: 'Turnaround is 48–72 hours', why: 'A fast, professional turnaround signals a well-run workflow — not a hobbyist or part-time operation.' },
   { flag: 'Pricing is transparent and published', why: 'Photographers who hide pricing until after consultation often have complicated packages or upsells. Transparent pricing shows confidence in their value.' },
   { flag: 'Commercial usage rights are included', why: 'Your headshot needs to work on LinkedIn, your firm website, printed materials, and marketing. Photographers who charge extra for commercial usage are taking something that should be standard.' },
@@ -83,7 +83,7 @@ const questions = [
   { q: 'How long is the session and are wardrobe changes included?', why: 'Understand exactly what you are paying for before you book.' },
   { q: 'What is your turnaround time for delivery?', why: 'Sets expectations and signals professionalism.' },
   { q: 'Do the delivered images include commercial usage rights?', why: 'Ensures you can use the images on all platforms without additional licensing.' },
-  { q: 'Do we review frames together before I leave?', why: 'Confirms you will have say in what gets edited — not just what the photographer preferred.' },
+  { q: 'Do we review the images together before I leave?', why: 'Confirms you will have say in what gets edited — not just what the photographer preferred.' },
 ];
 
 export default function HowToChooseHeadshotPhotographerPage() {
@@ -198,7 +198,7 @@ export default function HowToChooseHeadshotPhotographerPage() {
                   <p>Throughout the session, you receive real-time coaching on expression, eye contact, posture, and energy — not just direction on where to stand. Most people are surprised how different this feels from having a photo taken quickly.</p>
                 </SectionReveal>
                 <SectionReveal>
-                  <p>Before you leave, you review your best frames together and select which ones get edited. You leave knowing exactly what you are getting — not waiting anxiously for a surprise delivery a week later.</p>
+                  <p>Before you leave, you review your best images together and select which ones get edited. You leave knowing exactly what you are getting — not waiting anxiously for a surprise delivery a week later.</p>
                 </SectionReveal>
                 <SectionReveal>
                   <div className="grid sm:grid-cols-3 gap-4 pt-2">
