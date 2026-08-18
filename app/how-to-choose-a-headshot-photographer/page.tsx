@@ -205,7 +205,7 @@ export default function HowToChooseHeadshotPhotographerPage() {
                     {[
                       { stat: '$150', label: 'Session fee', sub: 'Unlimited wardrobe changes included' },
                       { stat: '48 hrs', label: 'Delivery time', sub: 'Edited images delivered fast' },
-                      { stat: '50+', label: 'Five-star reviews', sub: 'Verified Google reviews' },
+                      { stat: '60+', label: 'Five-star reviews', sub: 'Verified Google reviews' },
                     ].map(item => (
                       <div key={item.stat} className="bg-[var(--color-bg-warm)] rounded-xl p-5 text-center border border-gray-100">
                         <div className="text-3xl font-bold text-[var(--color-primary)] mb-1">{item.stat}</div>
