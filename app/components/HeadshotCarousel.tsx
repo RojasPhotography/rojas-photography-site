@@ -26,7 +26,9 @@ export default function HeadshotCarousel() {
               alt={headshot.alt}
               fill
               className="object-cover object-center"
-              sizes="200px"
+              quality={90}
+              priority={index < 3}
+              sizes="(max-width: 768px) 100vw, 300px"
             />
           </div>
         ))}
