@@ -37,16 +37,16 @@ export default function ChamberExclusiveHeadshotBoothPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">The Problem With Outdated Headshots</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-              <h3 className="font-bold text-gray-900 mb-2">External</h3>
+              <h3 className="font-bold text-gray-900 mb-2">The Way They See You</h3>
               <p className="text-gray-700 text-sm">Clients and prospects judge you in seconds. Old, blurry, or casual photos damage credibility before you say a word.</p>
             </div>
             <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-              <h3 className="font-bold text-gray-900 mb-2">Internal</h3>
+              <h3 className="font-bold text-gray-900 mb-2">The Way Your Team Feels</h3>
               <p className="text-gray-700 text-sm">Your team feels less professional, less polished. Poor headshots undermine confidence in client meetings and networking.</p>
             </div>
             <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-500">
-              <h3 className="font-bold text-gray-900 mb-2">Philosophical</h3>
-              <p className="text-gray-700 text-sm">You're a professional organization. Your visual presence should reflect that commitment to excellence.</p>
+              <h3 className="font-bold text-gray-900 mb-2">The Gap You're Accepting</h3>
+              <p className="text-gray-700 text-sm">You demand excellence in your work. Yet your visual presence doesn't reflect that same standard. That disconnect costs you credibility and opportunity.</p>
             </div>
           </div>
         </div>
