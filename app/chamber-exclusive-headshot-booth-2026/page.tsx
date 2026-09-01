@@ -14,7 +14,7 @@ export default function ChamberExclusiveHeadshotBoothPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Header */}
-      <div className="bg-[#1F6B4D] text-white pt-16 pb-12">
+      <div className="bg-[#1F6B4D] text-white pt-24 pb-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-start justify-between gap-4 mb-6">
             <div className="flex-1">
