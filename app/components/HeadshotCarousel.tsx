@@ -6,10 +6,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const headshots = [
   { src: '/images/headshots/headshot-ceo-nutrition-02.jpg', alt: 'Executive headshot 1' },
-  { src: '/images/headshots/headshot-attorney-professional-02.jpg', alt: 'Professional headshot 2' },
-  { src: '/images/headshots/headshot-healthcare-02.jpg', alt: 'Healthcare professional 3' },
-  { src: '/images/headshots/headshot-tech-01.jpg', alt: 'Tech professional 4' },
-  { src: '/images/headshots/headshot-corporate-01.jpg', alt: 'Corporate executive 5' },
+  { src: '/images/headshots/headshot-attorney-06.jpg', alt: 'Attorney headshot 2' },
+  { src: '/images/headshots/headshot-kaiser-medical-01.jpg', alt: 'Healthcare professional 3' },
+  { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Finance executive 4' },
+  { src: '/images/headshots/headshot-sales-manager-01.jpg', alt: 'Sales manager 5' },
 ];
 
 export default function HeadshotCarousel() {
