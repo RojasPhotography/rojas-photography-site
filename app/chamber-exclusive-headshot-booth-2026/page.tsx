@@ -1,5 +1,8 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
+import Image from 'next/image';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import HeadshotCarousel from '../components/HeadshotCarousel';
 
 export const metadata: Metadata = {
   title: 'Modesto Chamber Exclusive: Headshot Booth Special Rate 2026',
@@ -105,6 +108,13 @@ export default function ChamberExclusiveHeadshotBoothPage() {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Gallery Section */}
+        <div className="border-t pt-12 mb-12">
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">The Rojas Look</h2>
+          <p className="text-gray-600 mb-8">Professional headshots our team has delivered.</p>
+          <HeadshotCarousel />
         </div>
 
         {/* Booking Section */}
