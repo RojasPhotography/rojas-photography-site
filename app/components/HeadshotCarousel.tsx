@@ -3,7 +3,7 @@
 import Image from 'next/image';
 
 const headshots = [
-  { src: '/images/headshots/headshot-ceo-nutrition-02.jpg', alt: 'Executive headshot 1', position: '75% center' },
+  { src: '/images/headshots/headshot-ceo-nutrition-02.jpg', alt: 'Executive headshot 1', position: '85% center' },
   { src: '/images/headshots/headshot-attorney-06.jpg', alt: 'Attorney headshot 2', position: 'center' },
   { src: '/images/headshots/headshot-kaiser-medical-01.jpg', alt: 'Healthcare professional 3', position: 'center' },
   { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Finance executive 4', position: 'center' },
