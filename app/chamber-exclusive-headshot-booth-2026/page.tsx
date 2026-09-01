@@ -218,7 +218,7 @@ export default function ChamberExclusiveHeadshotBoothPage() {
           <p className="text-sm text-gray-600 mb-4">*Chamber membership verification required to redeem this rate.</p>
           <p className="text-lg text-gray-700 mb-6"><strong>Ready to transform your team's professional image?</strong></p>
           <p className="text-gray-600 mb-6">Questions or logistics to discuss? We're here to help.</p>
-          <p className="text-sm text-gray-600">Call <a href="tel:2093803727" className="text-[#1F6B4D] font-semibold hover:underline">209.380.3727</a> or email <a href="mailto:hello@rojasphotography.net" className="text-[#1F6B4D] font-semibold hover:underline">hello@rojasphotography.net</a></p>
+          <p className="text-sm text-gray-600">Call <a href="tel:2093803727" className="text-[#1F6B4D] font-semibold hover:underline">209.380.3727</a> or email <a href="mailto:alfonso@rojasphotography.net" className="text-[#1F6B4D] font-semibold hover:underline">alfonso@rojasphotography.net</a></p>
         </div>
       </div>
     </div>
