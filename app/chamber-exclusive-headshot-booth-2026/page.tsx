@@ -14,13 +14,13 @@ export default function ChamberExclusiveHeadshotBoothPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Header */}
-      <div className="bg-[#1F6B4D] text-white py-12">
+      <div className="bg-[#1F6B4D] text-white pt-16 pb-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-start justify-between gap-4 mb-6">
             <div className="flex-1">
-              <h1 className="text-4xl md:text-5xl font-bold leading-tight">Headshots For Entire Team</h1>
+              <h1 className="text-3xl md:text-4xl font-bold leading-tight">Headshots For Entire Team</h1>
             </div>
-            <div className="bg-yellow-400 text-black px-4 py-2 rounded-full font-bold text-sm whitespace-nowrap">
+            <div className="bg-yellow-400 text-black px-4 py-2 rounded-full font-bold text-sm whitespace-nowrap flex-shrink-0">
               LIMITED OFFER
             </div>
           </div>
