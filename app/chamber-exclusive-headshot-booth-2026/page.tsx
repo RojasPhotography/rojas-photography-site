@@ -93,22 +93,22 @@ export default function ChamberExclusiveHeadshotBoothPage() {
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 bg-[#1F6B4D] text-white rounded-full flex items-center justify-center font-bold text-lg">1</div>
               <div>
-                <h3 className="font-bold text-gray-900 mb-1">We Set Up (One Hour)</h3>
-                <p className="text-gray-700">Professional studio setup at your location. Lighting, backdrop, and camera ready. Your team continues working.</p>
+                <h3 className="font-bold text-gray-900 mb-1">We Set Up (1 Hour Before)</h3>
+                <p className="text-gray-700">Professional studio setup at your location. Lighting, backdrop, and camera ready. Your team continues working — no downtime.</p>
               </div>
             </div>
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 bg-[#1F6B4D] text-white rounded-full flex items-center justify-center font-bold text-lg">2</div>
               <div>
-                <h3 className="font-bold text-gray-900 mb-1">They Shine (Three Hours)</h3>
-                <p className="text-gray-700">Each person gets a quick, professional coaching session. We handle the technical side — they just show up. No awkwardness, no retakes.</p>
+                <h3 className="font-bold text-gray-900 mb-1">They Shine (4 Hours)</h3>
+                <p className="text-gray-700">Each person gets a quick, professional coaching session. We handle the technical side — they just show up. No awkwardness, no retakes. Up to 50 people photographed.</p>
               </div>
             </div>
             <div className="flex gap-6">
               <div className="flex-shrink-0 w-12 h-12 bg-[#1F6B4D] text-white rounded-full flex items-center justify-center font-bold text-lg">3</div>
               <div>
                 <h3 className="font-bold text-gray-900 mb-1">We Perfect & Deliver (Same Day)</h3>
-                <p className="text-gray-700">Professional retouching on every image. Private gallery delivered the same day. Everyone has polished headshots ready to use.</p>
+                <p className="text-gray-700">Professional retouching on every image. Private gallery delivered the same day. Everyone has polished headshots ready to use immediately.</p>
               </div>
             </div>
           </div>
