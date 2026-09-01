@@ -24,16 +24,16 @@ export default function HeadshotCarousel() {
   };
 
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
+    <div className="relative mx-auto" style={{ width: '200px' }}>
       {/* Main Image */}
-      <div className="relative w-full bg-gray-100 rounded-lg overflow-hidden" style={{ aspectRatio: '3/4' }}>
+      <div className="relative w-full bg-gray-100 rounded-lg overflow-hidden" style={{ aspectRatio: '1/1' }}>
         <Image
           src={headshots[currentIndex].src}
           alt={headshots[currentIndex].alt}
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
-          sizes="(max-width: 768px) 100vw, 500px"
+          sizes="200px"
         />
       </div>
 
