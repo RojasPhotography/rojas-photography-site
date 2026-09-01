@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import Script from 'next/script';
-import Image from 'next/image';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import HeadshotCarousel from '../components/HeadshotCarousel';
 
 export const metadata: Metadata = {
