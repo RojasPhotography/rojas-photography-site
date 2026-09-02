@@ -1,4 +1,17 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.rojasphotography.net"
+        }
+      ],
+      "destination": "https://rojasphotography.net/:path*",
+      "permanent": true
+    }
+  ],
   "crons": [
     {
       "path": "/api/newsletter/sequence/process",
