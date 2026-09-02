@@ -1,25 +1,14 @@
 {
   "redirects": [
     {
-      "source": "^/(.*)$",
+      "source": "/:path*",
       "has": [
         {
           "type": "host",
           "value": "www.rojasphotography.net"
         }
       ],
-      "destination": "https://rojasphotography.net/$1",
-      "permanent": true
-    },
-    {
-      "source": "^/(.*)$",
-      "has": [
-        {
-          "type": "protocol",
-          "value": "http"
-        }
-      ],
-      "destination": "https://:host/$1",
+      "destination": "https://rojasphotography.net/:path*",
       "permanent": true
     }
   ],
