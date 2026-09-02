@@ -21,18 +21,7 @@ const nextConfig: NextConfig = {
         destination: 'https://rojasphotography.net/:path*',
         permanent: true,
       },
-      // www → non-www (covers both http and https)
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.rojasphotography.net',
-          },
-        ],
-        destination: 'https://rojasphotography.net/:path*',
-        permanent: true,
-      },
+      // www → non-www redirects handled by Vercel (vercel.json) for 301 status
       // Old URL → current URL redirects
       {
         source: '/about',
