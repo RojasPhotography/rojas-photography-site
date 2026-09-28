@@ -55,7 +55,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Professional Headshot Cost | 2026 Pricing Guide',
   description:
-    'How much does a professional headshot cost? 2026 pricing guide — session fees, per-image rates & what\'s included. Modesto studio. $150 session + $150/image. Book today.',
+    'Professional Headshot Pricing by Alfonso & Niomi | Per-Image Billing. 15+ years, 500+ clients. Transparent rates, no packages. Learn what\'s included.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/professional-headshot-cost',

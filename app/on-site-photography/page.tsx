@@ -45,7 +45,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'On-Site Corporate Headshots | We Come to You | Modesto CA',
   description:
-    'Full studio at your office. Every person coached individually — headshots and team photos delivered the same day. No travel required. Modesto & Central Valley.',
+    'Corporate Team Headshots by Alfonso & Niomi | We Come to You. 15+ years, 500+ executives. Individual coaching, same-day delivery. Request a quote.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/on-site-photography',

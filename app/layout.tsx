@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://rojasphotography.net'),
   title: "Professional Corporate Headshots in Modesto | Rojas Photography",
   description:
-    "Premium corporate headshots for executives, attorneys, and business leaders in Modesto, Stockton, Fresno, Turlock, and Merced. Two photographers, every session. Trusted by Comcast, Save Mart, and California Lawyers Association.",
+    "Alfonso & Niomi Rojas - Premium Corporate Photographers | Modesto & Central Valley. 15+ years, 500+ executives. Guided sessions, same-day proofs. Book your session.",
   robots: "index, follow",
   icons: {
     icon: '/icon.png',

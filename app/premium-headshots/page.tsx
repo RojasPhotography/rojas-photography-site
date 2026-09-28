@@ -45,7 +45,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Professional Headshots Modesto CA | Rojas Photography',
   description:
-    'Guided professional headshots in our Modesto studio. Two photographers, real-time coaching, 48-hour delivery — the headshot your reputation deserves.',
+    'Premium Headshots by Alfonso & Niomi | Modesto Studio. 15+ years, 500+ executives. Guided coaching, unlimited outfits. 48-hour delivery. Book your session.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/premium-headshots',

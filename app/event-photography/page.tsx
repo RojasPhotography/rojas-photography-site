@@ -46,7 +46,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Corporate Event Photography Modesto | Conferences, Galas & Summits',
   description:
-    'Conferences, galas, product launches, and fundraisers — event photography that tells your brand story, not just documents it. Modesto & Central Valley.',
+    'Event Photography by Alfonso & Niomi | Conferences, Galas, Fundraisers. 15+ years, trusted by Comcast & Save Mart. Instant gallery, same-day proofs. Get pricing.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/event-photography',
