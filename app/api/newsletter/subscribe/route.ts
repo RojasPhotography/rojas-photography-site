@@ -17,7 +17,7 @@ export async function POST(request: Request) {
       .from('subscribers')
       .select('id, is_active')
       .eq('email', email)
-      .single();
+      .maybeSingle();
 
     if (existing) {
       if (existing.is_active) {
