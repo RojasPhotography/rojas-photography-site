@@ -230,7 +230,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, message: 'Subscribed successfully' });
   } catch (error) {
-    console.error('Subscribe error:', error);
-    return NextResponse.json({ error: 'Something went wrong' }, { status: 500 });
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    console.error('Subscribe error:', errorMessage, error);
+    return NextResponse.json({ error: errorMessage || 'Something went wrong' }, { status: 500 });
   }
 }
