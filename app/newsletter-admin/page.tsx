@@ -436,6 +436,7 @@ export default function NewsletterAdmin() {
         body: JSON.stringify({ email: newSubscriberEmail, name: newSubscriberName || null, source_page: 'admin-manual-add' }),
       });
 
+      const data = await res.json();
       if (res.ok) {
         setAddSubscriberStatus('success');
         setNewSubscriberName('');
@@ -443,12 +444,16 @@ export default function NewsletterAdmin() {
         loadSubscribers();
         setTimeout(() => setAddSubscriberStatus('idle'), 3000);
       } else {
+        setStatus('error');
+        setResult(data.error || 'Could not add subscriber');
         setAddSubscriberStatus('error');
-        setTimeout(() => setAddSubscriberStatus('idle'), 3000);
+        setTimeout(() => { setAddSubscriberStatus('idle'); setResult(''); }, 4000);
       }
-    } catch {
+    } catch (err) {
+      setStatus('error');
+      setResult('Network error. Please try again.');
       setAddSubscriberStatus('error');
-      setTimeout(() => setAddSubscriberStatus('idle'), 3000);
+      setTimeout(() => { setAddSubscriberStatus('idle'); setResult(''); }, 4000);
     }
   }
 
@@ -874,8 +879,8 @@ export default function NewsletterAdmin() {
               {addSubscriberStatus === 'success' && (
                 <p className="text-green-600 text-xs mt-2">✓ Subscriber added successfully!</p>
               )}
-              {addSubscriberStatus === 'error' && (
-                <p className="text-red-600 text-xs mt-2">✗ Error adding subscriber. Try again.</p>
+              {addSubscriberStatus === 'error' && result && (
+                <p className="text-red-600 text-xs mt-2">✗ {result}</p>
               )}
             </div>
 
