@@ -230,8 +230,15 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, message: 'Subscribed successfully' });
   } catch (error) {
-    const errorMessage = error instanceof Error ? error.message : String(error);
-    console.error('Subscribe error:', errorMessage, error);
-    return NextResponse.json({ error: errorMessage || 'Something went wrong' }, { status: 500 });
+    let errorMessage = 'Something went wrong';
+    if (error instanceof Error) {
+      errorMessage = error.message;
+    } else if (error && typeof error === 'object' && 'message' in error) {
+      errorMessage = String((error as any).message);
+    } else if (typeof error === 'string') {
+      errorMessage = error;
+    }
+    console.error('Subscribe error:', errorMessage, JSON.stringify(error));
+    return NextResponse.json({ error: errorMessage }, { status: 500 });
   }
 }
