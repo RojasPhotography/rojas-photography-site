@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import SchemaScript from "./components/SchemaScript";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import MicrosoftClarity from "./components/MicrosoftClarity";
+import ApolloScript from "./components/ApolloScript";
 import { generateOrganizationSchema } from "./lib/schema";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -59,6 +60,7 @@ export default function RootLayout({
       >
         <GoogleAnalytics measurementId="G-FH5SG2NXP2" />
         <MicrosoftClarity projectId="vsdhem9lhy" />
+        <ApolloScript />
         <SchemaScript schema={generateOrganizationSchema()} />
         <Navigation />
         {children}
