@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import SchemaScript from "./components/SchemaScript";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import MicrosoftClarity from "./components/MicrosoftClarity";
-import ApolloScript from "./components/ApolloScript";
 import { generateOrganizationSchema } from "./lib/schema";
 
 const dmSerifDisplay = DM_Serif_Display({
@@ -54,7 +53,7 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
         <meta name="theme-color" content="#1F6B4D" />
-        <ApolloScript />
+        <script dangerouslySetInnerHTML={{ __html: "function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement(\"script\");o.src=\"https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=\"+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:\"6a8766f3c4a8e4001425f221\"})},document.head.appendChild(o)}initApollo();" }} />
       </head>
       <body
         className={`${dmSerifDisplay.variable} ${dmSans.variable} antialiased`}
