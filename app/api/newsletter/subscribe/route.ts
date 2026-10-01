@@ -36,38 +36,42 @@ export async function POST(request: Request) {
       if (error) throw error;
     }
 
-    // Queue welcome sequence emails 2–5 (email 1 is sent inline below)
-    try {
-      const { data: sequenceEmails } = await supabase
-        .from('sequence_emails')
-        .select('id, position, delay_days')
-        .eq('is_active', true)
-        .gt('position', 1)
-        .order('position', { ascending: true });
+    // Only send welcome sequence if subscriber signed up themselves (not manually added by admin)
+    const isAdminManualAdd = source_page === 'admin-manual-add';
 
-      if (sequenceEmails && sequenceEmails.length > 0) {
-        const now = new Date();
-        const queueItems = sequenceEmails.map((seqEmail) => {
-          const scheduledFor = new Date(now);
-          scheduledFor.setDate(scheduledFor.getDate() + seqEmail.delay_days);
-          return {
-            subscriber_email: email,
-            sequence_email_id: seqEmail.id,
-            scheduled_for: scheduledFor.toISOString(),
-            status: 'pending',
-          };
-        });
+    if (!isAdminManualAdd) {
+      // Queue welcome sequence emails 2–5 (email 1 is sent inline below)
+      try {
+        const { data: sequenceEmails } = await supabase
+          .from('sequence_emails')
+          .select('id, position, delay_days')
+          .eq('is_active', true)
+          .gt('position', 1)
+          .order('position', { ascending: true });
 
-        await supabase.from('sequence_queue').insert(queueItems);
+        if (sequenceEmails && sequenceEmails.length > 0) {
+          const now = new Date();
+          const queueItems = sequenceEmails.map((seqEmail) => {
+            const scheduledFor = new Date(now);
+            scheduledFor.setDate(scheduledFor.getDate() + seqEmail.delay_days);
+            return {
+              subscriber_email: email,
+              sequence_email_id: seqEmail.id,
+              scheduled_for: scheduledFor.toISOString(),
+              status: 'pending',
+            };
+          });
+
+          await supabase.from('sequence_queue').insert(queueItems);
+        }
+      } catch (queueError) {
+        console.error('Failed to queue sequence emails:', queueError);
+        // Don't block — subscription already succeeded
       }
-    } catch (queueError) {
-      console.error('Failed to queue sequence emails:', queueError);
-      // Don't block — subscription already succeeded
-    }
 
-    // Send welcome email — wrapped separately so a failed email doesn't block subscription
-    try {
-    await resend.emails.send({
+      // Send welcome email — wrapped separately so a failed email doesn't block subscription
+      try {
+      await resend.emails.send({
       from: 'Alfonso & Niomi Rojas <alfonso@rojasphotography.net>',
       replyTo: ['alfonso@rojasphotography.net', 'niomi@rojasphotography.net'],
       to: email,
@@ -193,12 +197,13 @@ export async function POST(request: Request) {
         </div>
       `,
     });
-    } catch (emailError) {
-      console.error('Welcome email failed:', emailError);
-      // Don't block — subscriber was saved successfully
+      } catch (emailError) {
+        console.error('Welcome email failed:', emailError);
+        // Don't block — subscriber was saved successfully
+      }
     }
 
-    // Notify Alfonso & Niomi of new subscriber
+    // Notify Alfonso & Niomi of new subscriber (regardless of signup source)
     try {
       await resend.emails.send({
         from: 'Rojas Photography <alfonso@rojasphotography.net>',
