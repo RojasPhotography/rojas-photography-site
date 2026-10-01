@@ -54,6 +54,9 @@ export default function NewsletterAdmin() {
   const [subscribers, setSubscribers] = useState<Subscriber[]>([]);
   const [showSubscribers, setShowSubscribers] = useState(false);
   const [subscriberSearch, setSubscriberSearch] = useState('');
+  const [newSubscriberName, setNewSubscriberName] = useState('');
+  const [newSubscriberEmail, setNewSubscriberEmail] = useState('');
+  const [addSubscriberStatus, setAddSubscriberStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const [history, setHistory] = useState<SentNewsletter[]>([]);
   const [showHistory, setShowHistory] = useState(false);
@@ -419,6 +422,34 @@ export default function NewsletterAdmin() {
       body: JSON.stringify({ password, email }),
     });
     loadSubscribers();
+  }
+
+  async function handleAddSubscriber(e: React.FormEvent) {
+    e.preventDefault();
+    if (!newSubscriberEmail) return;
+
+    setAddSubscriberStatus('loading');
+    try {
+      const res = await fetch('/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: newSubscriberEmail, name: newSubscriberName || null, source_page: 'admin-manual-add' }),
+      });
+
+      if (res.ok) {
+        setAddSubscriberStatus('success');
+        setNewSubscriberName('');
+        setNewSubscriberEmail('');
+        loadSubscribers();
+        setTimeout(() => setAddSubscriberStatus('idle'), 3000);
+      } else {
+        setAddSubscriberStatus('error');
+        setTimeout(() => setAddSubscriberStatus('idle'), 3000);
+      }
+    } catch {
+      setAddSubscriberStatus('error');
+      setTimeout(() => setAddSubscriberStatus('idle'), 3000);
+    }
   }
 
   async function handleSend() {
@@ -813,6 +844,41 @@ export default function NewsletterAdmin() {
       {showSubscribers && (
         <div className="max-w-7xl mx-auto px-6 pt-4">
           <div className="bg-white rounded-xl border border-gray-200 shadow-sm p-6">
+            {/* Add Subscriber Form */}
+            <div className="mb-6 pb-6 border-b border-gray-100">
+              <h3 className="text-[var(--color-text-dark)] font-medium text-sm mb-3">Add Subscriber</h3>
+              <form onSubmit={handleAddSubscriber} className="flex flex-col sm:flex-row gap-2">
+                <input
+                  type="text"
+                  value={newSubscriberName}
+                  onChange={(e) => setNewSubscriberName(e.target.value)}
+                  placeholder="Name (optional)"
+                  className="flex-1 px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] text-sm"
+                />
+                <input
+                  type="email"
+                  value={newSubscriberEmail}
+                  onChange={(e) => setNewSubscriberEmail(e.target.value)}
+                  placeholder="Email address"
+                  required
+                  className="flex-1 px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] text-sm"
+                />
+                <button
+                  type="submit"
+                  disabled={addSubscriberStatus === 'loading'}
+                  className="px-4 py-2 bg-[var(--color-primary)] text-white text-sm font-semibold rounded-lg hover:opacity-90 disabled:opacity-60 whitespace-nowrap"
+                >
+                  {addSubscriberStatus === 'loading' ? 'Adding...' : 'Add'}
+                </button>
+              </form>
+              {addSubscriberStatus === 'success' && (
+                <p className="text-green-600 text-xs mt-2">✓ Subscriber added successfully!</p>
+              )}
+              {addSubscriberStatus === 'error' && (
+                <p className="text-red-600 text-xs mt-2">✗ Error adding subscriber. Try again.</p>
+              )}
+            </div>
+
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
               <h2 className="text-[var(--color-text-dark)]">
                 Subscribers
