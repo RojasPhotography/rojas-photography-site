@@ -54,13 +54,13 @@ export default function RootLayout({
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
         <meta name="theme-color" content="#1F6B4D" />
+        <ApolloScript />
       </head>
       <body
         className={`${dmSerifDisplay.variable} ${dmSans.variable} antialiased`}
       >
         <GoogleAnalytics measurementId="G-FH5SG2NXP2" />
         <MicrosoftClarity projectId="vsdhem9lhy" />
-        <ApolloScript />
         <SchemaScript schema={generateOrganizationSchema()} />
         <Navigation />
         {children}
