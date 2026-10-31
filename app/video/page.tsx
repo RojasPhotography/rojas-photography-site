@@ -145,10 +145,10 @@ export default function VideoServicesPage() {
               <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Video That Sounds Like Your Team</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  We&apos;re Alfonso and Niomi Rojas, a Modesto team with 15+ years of storytelling experience and a background in corporate environments. Most people tense up when a camera points at them, so we build each shoot around conversation instead of a script.
+                  We&apos;re Alfonso and Niomi Rojas, a Modesto team with a background in corporate environments. Most people tense up when a camera points at them, so we build each shoot around conversation instead of a script.
                 </p>
                 <p>
-                  The result sits between a $15,000 agency production and a template: polished, professional video that still sounds like the people in it. Our video clients include BBSI.
+                  The result is polished, professional video that still sounds like the people in it.
                 </p>
               </div>
             </SectionReveal>
