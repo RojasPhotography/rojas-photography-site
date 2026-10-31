@@ -233,34 +233,6 @@ export default function VideoServicesPage() {
           </div>
         </section>
 
-        {/* Pricing */}
-        <section className="py-20 px-8 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">What Corporate Video Costs</h2>
-              <p className="text-center text-[var(--color-text-body)] mb-10">Every project is quoted to its scope. These are typical ranges.</p>
-              <div className="grid md:grid-cols-3 gap-6">
-                {[
-                  { name: 'Short promo', range: '$1,500-$2,500', note: '30-second video' },
-                  { name: 'Corporate video', range: '$3,500-$7,500', note: '2-3 minutes with motion graphics' },
-                  { name: 'Drone aerials', range: '+$500-$1,500', note: 'Added to any project' },
-                ].map((tier) => (
-                  <div key={tier.name} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm text-center">
-                    <h3 className="text-lg text-[var(--color-text-dark)] mb-2">{tier.name}</h3>
-                    <p className="text-2xl text-[var(--color-primary)] mb-2">{tier.range}</p>
-                    <p className="text-sm text-[var(--color-text-body)]">{tier.note}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="text-center mt-10">
-                <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
-                  Get Your Quote
-                </Link>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
         {/* Testimonials */}
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
