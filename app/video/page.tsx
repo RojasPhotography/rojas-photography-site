@@ -138,6 +138,23 @@ export default function VideoServicesPage() {
           definition={serviceDefinitions.videoProduction.definition}
         />
 
+        {/* StoryBrand: the problem */}
+        <section className="py-16 px-8 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">You Know You Need Video. Getting It Made Is the Hard Part.</h2>
+              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
+                <p>
+                  Your team freezes when the camera comes out, and the footage ends up stiff and over-rehearsed. The options aren&apos;t much better: agency quotes that feel out of proportion to the project, or template work that looks like everyone else&apos;s.
+                </p>
+                <p>
+                  Underneath it is a simpler worry: that the video won&apos;t sound or look like your company, and that you&apos;ll have spent the budget on something you hesitate to post. Your people shouldn&apos;t have to perform to be seen well on camera.
+                </p>
+              </div>
+            </SectionReveal>
+          </div>
+        </section>
+
         {/* Guide */}
         <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
@@ -252,6 +269,23 @@ export default function VideoServicesPage() {
                 <TestimonialCard name="Teresa Tolentino" role="Save Mart Companies" quote="I work with Rojas Photography on several projects and I couldn't be more impressed with their service. Alfonso and Niomi are incredibly professional, making everyone involved in the project feel relaxed. Even with a same-day turnaround, they deliver every time. I highly recommend Rojas Photography and will definitely continue to partner with them on future projects." />
               </SectionReveal>
             </div>
+          </div>
+        </section>
+
+        {/* StoryBrand: success and stakes */}
+        <section className="py-16 px-8 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">A Video You&apos;re Proud to Put on Your Website</h2>
+              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
+                <p>
+                  After the shoot, you have a finished video your team is comfortable with, cuts sized for your website, LinkedIn and Instagram, and a clear sense of how your company comes across to a prospect before they ever call.
+                </p>
+                <p>
+                  Without it, prospects compare you on whatever your competitors have already published. Video is often the first thing a buyer watches, and it shapes the conversation before it starts.
+                </p>
+              </div>
+            </SectionReveal>
           </div>
         </section>
 
