@@ -69,7 +69,7 @@ export const metadata: Metadata = {
 };
 
 const quickFacts = [
-  { label: 'Pricing', value: 'From $1,500 for a 30-second video; $3,500-$7,500 for a 2-3 minute production' },
+  { label: 'Projects', value: 'Brand films, client testimonials, event video and drone aerials, quoted to your scope within 24 hours' },
   { label: 'Turnaround', value: '1-2 weeks for short videos, 3-4 weeks for full productions' },
   { label: 'Coverage', value: 'Modesto, Stockton, Turlock, Merced, Fresno, Sacramento and the Central Valley' },
   { label: 'Credentials', value: 'FAA Part 107 certified drone pilots, insured' },
