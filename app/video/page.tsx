@@ -200,7 +200,7 @@ export default function VideoServicesPage() {
                 />
               </div>
               <p className="text-center text-sm text-[var(--color-text-muted)] mt-4">
-                Client film for Doctors Medical Center. Filmed by Rojas Photography; edited by Doctors Medical Center.
+                Client film for Doctors Medical Center, shot by Rojas Photography.
               </p>
             </SectionReveal>
           </div>
