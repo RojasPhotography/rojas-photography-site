@@ -44,7 +44,7 @@ const faqs = [
 
 
 export const metadata: Metadata = {
-  title: 'Corporate Event Photography Modesto | Conferences, Galas & Summits',
+  title: 'Corporate Event Photography in Modesto | Rojas Photography',
   description:
     'Event Photography by Alfonso & Niomi | Conferences, Galas, Fundraisers. 15+ years, trusted by Comcast & Save Mart. Instant gallery, same-day proofs. Get pricing.',
   robots: 'index, follow',

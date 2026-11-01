@@ -72,7 +72,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'AI Headshots vs. Professional Headshots: The Honest 2026 Guide',
+  title: 'AI Headshots vs. Professional Headshots: Honest 2026 Guide',
   description:
     'Recruiters detected AI headshots only 39% of the time — but that\'s not the real risk. The data-backed 2026 breakdown, including when AI headshots are actually acceptable.',
   robots: 'index, follow',

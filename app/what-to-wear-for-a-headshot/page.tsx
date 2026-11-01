@@ -44,7 +44,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'What to Wear for a Professional Headshot (2026 Guide by Industry)',
+  title: 'What to Wear for a Professional Headshot (2026 Guide)',
   description: 'Complete wardrobe guide for professional headshots — what colors, patterns, and styles work by industry. Attorneys, healthcare, finance, real estate, and more.',
   robots: 'index, follow',
   alternates: { canonical: 'https://rojasphotography.net/what-to-wear-for-a-headshot' },

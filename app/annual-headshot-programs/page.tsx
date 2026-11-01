@@ -44,7 +44,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Annual Headshot Programs for Companies | Rojas Photography Modesto',
+  title: 'Annual Headshot Programs for Companies | Rojas Photography',
   description:
     'Keep your team’s headshots consistent year over year. Annual on-site team days plus pay-as-you-go new-hire sessions for law, medical, and financial firms across Modesto and the Central Valley.',
   robots: 'index, follow',
