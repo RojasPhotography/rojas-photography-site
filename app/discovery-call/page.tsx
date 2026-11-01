@@ -10,7 +10,7 @@ import SchemaScript from '../components/SchemaScript';
 import { generateBreadcrumbSchema } from '../lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Schedule Your Free Discovery Call | Rojas Photography Modesto',
+  title: 'Schedule Your Free Discovery Call | Rojas Photography',
   description:
     'Book your free 20-30 minute discovery call to discuss your professional photography needs in Modesto. Phone or video consultation. No obligation. Schedule today.',
   robots: 'index, follow',

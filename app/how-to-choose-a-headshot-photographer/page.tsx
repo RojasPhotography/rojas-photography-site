@@ -44,7 +44,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'How to Choose a Headshot Photographer: What Actually Matters (2026)',
+  title: 'How to Choose a Headshot Photographer (2026 Guide)',
   description: 'What to look for in a headshot photographer — portfolio, coaching, pricing, and red flags. The honest guide to choosing well before you book.',
   robots: 'index, follow',
   alternates: { canonical: 'https://rojasphotography.net/how-to-choose-a-headshot-photographer' },

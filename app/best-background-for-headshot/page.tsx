@@ -32,7 +32,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Best Background Color for a Professional Headshot (2026 Guide)',
+  title: 'Best Background Color for a Professional Headshot (2026)',
   description: 'What background color is best for a professional headshot? White, gray, dark, or outdoor — the honest guide with industry-specific recommendations.',
   robots: 'index, follow',
   alternates: { canonical: 'https://rojasphotography.net/best-background-for-headshot' },

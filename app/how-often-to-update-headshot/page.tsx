@@ -32,7 +32,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'How Often Should You Update Your Professional Headshot? (2026)',
+  title: 'How Often to Update Your Professional Headshot (2026)',
   description: 'How often should you update your professional headshot? The 2026 answer for executives, attorneys, healthcare professionals, and job seekers.',
   robots: 'index, follow',
   alternates: { canonical: 'https://rojasphotography.net/how-often-to-update-headshot' },

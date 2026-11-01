@@ -38,7 +38,7 @@ const faqs = [
 
 
 export const metadata: Metadata = {
-  title: 'Commercial Photography Modesto | Business & Product Photography',
+  title: 'Commercial Photography in Modesto | Rojas Photography',
   description:
     'Products, storefronts, teams, and brand content — commercial photography for Central Valley businesses that want to stop looking like everyone else. 48-hour delivery.',
   robots: 'index, follow',

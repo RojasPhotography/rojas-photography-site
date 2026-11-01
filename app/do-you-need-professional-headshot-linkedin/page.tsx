@@ -32,7 +32,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Do You Need a Professional Headshot for LinkedIn? (Honest Answer)',
+  title: 'Do You Need a Professional LinkedIn Headshot? Honest Answer',
   description: 'Do you actually need a professional headshot for LinkedIn? LinkedIn\'s own data and the honest assessment of when it matters — and when it does not.',
   robots: 'index, follow',
   alternates: { canonical: 'https://rojasphotography.net/do-you-need-professional-headshot-linkedin' },

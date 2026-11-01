@@ -8,7 +8,7 @@ import SchemaScript from '../components/SchemaScript';
 import { generateBreadcrumbSchema } from '../lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Contact Rojas Photography | Get a Quote for Professional Photography',
+  title: 'Contact Rojas Photography | Get a Quote',
   description:
     'Contact Rojas Photography in Modesto for professional headshots, on-site photography, commercial, video, and event services. Call 209-380-3727 or request a quote online.',
   robots: 'index, follow',
