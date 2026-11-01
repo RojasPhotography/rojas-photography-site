@@ -180,6 +180,32 @@ export default function VideoServicesPage() {
           </div>
         </section>
 
+        {/* Featured client work */}
+        <section className="py-16 px-8 bg-white border-t border-gray-100">
+          <div className="max-w-4xl mx-auto">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">Our Work</h2>
+              <p className="text-center text-lg text-[var(--color-text-body)] max-w-2xl mx-auto mb-10">
+                A recent story film we shot for Doctors Medical Center.
+              </p>
+              <div className="relative w-full overflow-hidden rounded-2xl bg-black" style={{ aspectRatio: '16 / 9' }}>
+                <iframe
+                  src="https://www.youtube-nocookie.com/embed/oGWlQt6wXAE"
+                  title="Those Two Angels Saved My Life | Grant's Incredible Survival Story, filmed by Rojas Photography for Doctors Medical Center"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
+              <p className="text-center text-sm text-[var(--color-text-muted)] mt-4">
+                Client film for Doctors Medical Center. Filmed by Rojas Photography; edited by Doctors Medical Center.
+              </p>
+            </SectionReveal>
+          </div>
+        </section>
+
         {/* Direct answers: what, how long, where */}
         <section className="py-12 px-8 bg-white border-b border-gray-100">
           <div className="max-w-4xl mx-auto">
