@@ -264,7 +264,7 @@ export default function HealthcareHeadshotsPage() {
                       The balance between clinical authority and human warmth is unique to healthcare — and getting it wrong in either direction has real consequences. Too cold and clinical, and patients feel like numbers. Too casual, and you undermine the confidence they need to put their health in your hands.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      We have photographed healthcare professionals across the Central Valley, including staff at UC Davis Medical Center, Community Regional Medical Center, and Saint Agnes Medical Center. I also photograph ERAS medical residency headshots and understand the full range of healthcare professional photography — from medical students beginning their careers to hospital executives managing entire systems.
+                      We have photographed healthcare professionals across the Central Valley, including staff at UC Davis Medical Center, Community Regional Medical Center, and Saint Agnes Medical Center. We also photograph ERAS medical residency headshots and understand the full range of healthcare professional photography — from medical students beginning their careers to hospital executives managing entire systems.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
                       We know the difference between a headshot that makes a patient feel at ease and one that feels cold. That distinction is the entire job.

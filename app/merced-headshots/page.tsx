@@ -341,8 +341,8 @@ export default function MercedHeadshotsPage() {
               <div className="grid md:grid-cols-2 gap-10">
                 {[
                   {
-                    title: 'I Understand Academic and Healthcare Professionals',
-                    desc: 'From UC Merced faculty needing headshots for academic publications and university websites, to Mercy Medical Center physicians requiring professional imagery for hospital directories and medical profiles — we understand what credibility looks like in your field. My experience shows in every session.',
+                    title: 'We Understand Academic and Healthcare Professionals',
+                    desc: 'From UC Merced faculty needing headshots for academic publications and university websites, to Mercy Medical Center physicians requiring professional imagery for hospital directories and medical profiles — we understand what credibility looks like in your field. Our experience shows in every session.',
                   },
                   {
                     title: 'Premium Studio, or We Come to You',
@@ -350,7 +350,7 @@ export default function MercedHeadshotsPage() {
                   },
                   {
                     title: 'Corporate Experience That Shows',
-                    desc: 'We\'re Alfonso and Niomi Rojas, and our 15+ years of corporate leadership experience means we understand professional branding, executive presence, and what makes a headshot truly effective. We\'ve photographed 500+ executives and professionals across industries — from healthcare to academia to business leadership.',
+                    desc: 'We\'re Alfonso and Niomi Rojas, we come from corporate leadership ourselves, so we understand professional branding, executive presence, and what makes a headshot truly effective. We\'ve photographed 500+ executives and professionals across industries — from healthcare to academia to business leadership.',
                   },
                   {
                     title: 'Fast Turnaround, Professional Results',

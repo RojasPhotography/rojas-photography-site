@@ -345,12 +345,12 @@ export default function TurlockHeadshotsPage() {
                     desc: 'Our professional studio in Modesto is incredibly convenient for Turlock professionals. Just 15-20 minutes via Highway 99 means you can get polished headshots without a long drive or disrupting your day. Quick, convenient, and high quality.',
                   },
                   {
-                    title: 'I Understand Academia and Business',
-                    desc: 'From CSU Stanislaus faculty needing headshots for university websites and academic profiles, to Turlock business owners building their brand — we understand what professionals need from their imagery. Our 15+ years of corporate experience shows in every session.',
+                    title: 'We Understand Academia and Business',
+                    desc: 'From CSU Stanislaus faculty needing headshots for university websites and academic profiles, to Turlock business owners building their brand — we understand what professionals need from their imagery. We come from corporate leadership ourselves, and it shows in every session.',
                   },
                   {
                     title: 'In-Studio or we Come to Your Location',
-                    desc: 'Our professional studio is 15 minutes from Turlock. I\'m also happy to travel to your Turlock location or CSU campus — for individuals or your entire team. A travel fee applies for on-site visits.',
+                    desc: 'Our professional studio is 15 minutes from Turlock. We\'re also happy to travel to your Turlock location or CSU campus — for individuals or your entire team. A travel fee applies for on-site visits.',
                   },
                   {
                     title: 'Fast Turnaround, Professional Results',
