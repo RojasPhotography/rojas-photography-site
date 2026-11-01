@@ -54,7 +54,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Healthcare Professional Headshots | Doctors, Nurses & Medical Staff | Rojas Photography',
+  title: 'Healthcare Professional Headshots | Rojas Photography',
   description:
     'Professional headshots for doctors, nurses, and medical staff in Modesto & Central Valley. Patients judge before they call. Guided sessions. 48-hr delivery.',
   robots: 'index, follow',
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     canonical: 'https://rojasphotography.net/healthcare-headshots',
   },
   openGraph: {
-    title: 'Healthcare Professional Headshots | Doctors, Nurses & Medical Staff | Rojas Photography',
+    title: 'Healthcare Professional Headshots | Rojas Photography',
     description:
       'Professional headshots for doctors, nurses, and medical staff in Modesto & Central Valley. Patients judge before they call. Guided sessions. 48-hr delivery.',
     url: 'https://rojasphotography.net/healthcare-headshots',
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Healthcare Professional Headshots | Doctors, Nurses & Medical Staff | Rojas Photography',
+    title: 'Healthcare Professional Headshots | Rojas Photography',
     description:
       'Professional headshots for doctors, nurses, and medical staff in Modesto & Central Valley. Guided sessions. 48-hour delivery.',
     images: ['/images/headshots/headshot-healthcare-executive-01.jpg'],
