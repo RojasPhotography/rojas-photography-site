@@ -174,7 +174,7 @@ export default function AboutPage() {
               {[
                 { icon: Users, title: 'We Care About People', desc: "Professional photography shouldn't be stressful. We believe every client deserves a comfortable, judgment-free experience." },
                 { icon: Award, title: 'We Believe in Excellence', desc: 'Premium positioning means premium everything. From our equipment to our editing, we commit to excellence in every detail.' },
-                { icon: Zap, title: 'We Understand Business', desc: 'With 15+ years in corporate environments, we understand what executives, attorneys, and business leaders need.' },
+                { icon: Zap, title: 'We Understand Business', desc: "We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them." },
               ].map((item) => (
                 <SectionReveal key={item.title}>
                   <div>
