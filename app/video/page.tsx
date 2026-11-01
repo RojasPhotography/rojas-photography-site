@@ -7,6 +7,7 @@ import TestimonialCard from '../components/TestimonialCard';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
+import VideoFacade from '../components/VideoFacade';
 import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
 import { serviceDefinitions } from '../lib/definitions';
 
@@ -70,6 +71,16 @@ export const metadata: Metadata = {
     ],
   },
 };
+
+const productionVideos = [
+  {
+    id: 'oGWlQt6wXAE',
+    title: "Those Two Angels Saved My Life | Grant's Incredible Survival Story, filmed by Rojas Photography for Doctors Medical Center",
+    caption: 'Client film for Doctors Medical Center, shot by Rojas Photography.',
+  },
+];
+
+const socialVideos: { id: string; title: string; caption: string }[] = [];
 
 const quickFacts = [
   { label: 'Turnaround', value: '1-2 weeks for short videos, 3-4 weeks for full productions' },
@@ -168,28 +179,51 @@ export default function VideoServicesPage() {
           </div>
         </section>
 
-        {/* Featured client work */}
+        {/* Samples, grouped by how we work */}
         <section className="py-16 px-8 bg-white border-t border-gray-100">
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">Our Work</h2>
-              <p className="text-center text-lg text-[var(--color-text-body)] max-w-2xl mx-auto mb-10">
-                A recent story film we shot for Doctors Medical Center.
+              <p className="text-center text-lg text-[var(--color-text-body)] max-w-2xl mx-auto mb-14">
+                Samples from both ways of working with us.
               </p>
-              <div className="relative w-full overflow-hidden rounded-2xl bg-black" style={{ aspectRatio: '16 / 9' }}>
-                <iframe
-                  src="https://www.youtube-nocookie.com/embed/oGWlQt6wXAE"
-                  title="Those Two Angels Saved My Life | Grant's Incredible Survival Story, filmed by Rojas Photography for Doctors Medical Center"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  className="absolute inset-0 h-full w-full"
-                />
+            </SectionReveal>
+
+            {/* Full production leads while it is the only group with finished samples */}
+            <SectionReveal>
+              <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Full Production</h3>
+              <p className="text-[var(--color-text-body)] mb-6">Brand films, testimonials and story-driven video.</p>
+              <div className="grid md:grid-cols-2 gap-8 mb-16">
+                {productionVideos.map((video) => (
+                  <figure key={video.id}>
+                    <VideoFacade id={video.id} title={video.title} />
+                    <figcaption className="text-sm text-[var(--color-text-muted)] mt-3">{video.caption}</figcaption>
+                  </figure>
+                ))}
               </div>
-              <p className="text-center text-sm text-[var(--color-text-muted)] mt-4">
-                Client film for Doctors Medical Center, shot by Rojas Photography.
-              </p>
+            </SectionReveal>
+
+            <SectionReveal>
+              <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Social &amp; Short-Form</h3>
+              <p className="text-[var(--color-text-body)] mb-6">Reels and short clips built for Instagram, LinkedIn, TikTok and YouTube Shorts.</p>
+              {socialVideos.length > 0 ? (
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+                  {socialVideos.map((video) => (
+                    <figure key={video.id}>
+                      <VideoFacade id={video.id} title={video.title} vertical />
+                      <figcaption className="text-sm text-[var(--color-text-muted)] mt-3 text-center">{video.caption}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              ) : (
+                <div className="rounded-2xl border border-dashed border-gray-300 bg-[var(--color-bg-warm)] p-10 text-center">
+                  <p className="text-[var(--color-text-dark)] text-lg mb-2">Our first social video samples are on the way.</p>
+                  <p className="text-[var(--color-text-body)] mb-6">Want to be one of the first brands we feature? Ask about an introductory social video.</p>
+                  <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
+                    Ask About Social Video
+                  </Link>
+                </div>
+              )}
             </SectionReveal>
           </div>
         </section>
