@@ -131,8 +131,8 @@ export default function AboutPage() {
                   <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Alfonso Rojas</h3>
                   <p className="text-[var(--color-primary)] font-semibold mb-6">Founder, Lead Photographer &amp; Visual Strategy Consultant</p>
                   <div className="space-y-4 mb-8">
-                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">With 15+ years in manufacturing leadership and executive environments, Alfonso understands the pressures and expectations of professional leadership. As lead photographer, he guides clients through the session experience.</p>
-                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Alfonso also works with companies on their visual branding and imagery strategy. He is Part 107 certified for drone operations and a Christian photographer who values relationship-focused business practices.</p>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Alfonso&apos;s 15+ years in manufacturing leadership and executive environments mean we understand the pressures and expectations of professional leadership. As our lead photographer, he guides you through the session experience.</p>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">He also works with companies on their visual branding and imagery strategy. Alfonso is Part 107 certified for drone operations, and as a Christian photographer he values relationship-focused business practices.</p>
                   </div>
                   <div className="flex gap-2 flex-wrap">
                     <span className="bg-[var(--color-primary-light)] text-[var(--color-primary)] px-4 py-1.5 rounded-full text-xs font-bold">Lead Photographer</span>
@@ -151,8 +151,8 @@ export default function AboutPage() {
                   <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Niomi Rojas</h3>
                   <p className="text-[var(--color-primary)] font-semibold mb-6">Founder, Photographer &amp; Operations Lead</p>
                   <div className="space-y-4 mb-8">
-                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Niomi brings corporate HR and operations expertise along with a keen eye for professional imagery. She specializes in making clients feel comfortable and confident during sessions, with an exceptional ability to connect with people.</p>
-                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">As operations lead, Niomi manages the business side—from initial consultation through final delivery. She&apos;s passionate about creating a comfortable, judgment-free environment where every client feels heard and valued.</p>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Niomi brings corporate HR and operations expertise to our studio, along with a keen eye for professional imagery. She makes our clients feel comfortable and confident during sessions, with an exceptional ability to connect with people.</p>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">As our operations lead, Niomi manages the business side, from initial consultation through final delivery. She&apos;s passionate about creating a comfortable, judgment-free environment where every client feels heard and valued.</p>
                   </div>
                   <div className="flex gap-2 flex-wrap">
                     <span className="bg-[var(--color-primary-light)] text-[var(--color-primary)] px-4 py-1.5 rounded-full text-xs font-bold">Photographer</span>
