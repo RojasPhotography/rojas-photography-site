@@ -1,10 +1,8 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
-import ParallaxBand from '../components/ParallaxBand';
 import TestimonialCard from '../components/TestimonialCard';
 import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
@@ -74,19 +72,9 @@ export const metadata: Metadata = {
 };
 
 const quickFacts = [
-  { label: 'Projects', value: 'Brand films, client testimonials, event video and drone aerials, quoted to your scope within 24 hours' },
   { label: 'Turnaround', value: '1-2 weeks for short videos, 3-4 weeks for full productions' },
   { label: 'Coverage', value: 'Modesto, Stockton, Turlock, Merced, Fresno, Sacramento and the Central Valley' },
   { label: 'Credentials', value: 'FAA Part 107 certified drone pilots, insured' },
-];
-
-const services = [
-  { title: 'Corporate and brand videos', desc: 'Company overview, product and training videos for your website, campaigns and internal communications.' },
-  { title: 'Client testimonial videos', desc: 'We guide a relaxed, conversational interview on location or in studio, then edit it into a finished testimonial.' },
-  { title: 'Aerial drone videography', desc: 'Part 107 certified aerials for commercial properties, construction progress, facilities and events.' },
-  { title: 'Event video coverage', desc: 'Highlight reels, full-session recordings or recap videos for corporate events and conferences.' },
-  { title: 'Editing and motion graphics', desc: 'Color grading, sound design, licensed music, titles and motion graphics.' },
-  { title: 'Social and multi-format delivery', desc: 'Horizontal, vertical and square cuts delivered ready to publish.' },
 ];
 
 export default function VideoServicesPage() {
@@ -211,7 +199,7 @@ export default function VideoServicesPage() {
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
               <h2 className="text-2xl text-[var(--color-text-dark)] mb-6">Video Production at a Glance</h2>
-              <dl className="grid md:grid-cols-2 gap-x-10 gap-y-5">
+              <dl className="grid md:grid-cols-3 gap-x-10 gap-y-5">
                 {quickFacts.map((fact) => (
                   <div key={fact.label}>
                     <dt className="text-sm font-semibold uppercase tracking-wide text-[var(--color-primary)]">{fact.label}</dt>
@@ -287,65 +275,12 @@ export default function VideoServicesPage() {
           </div>
         </section>
 
-        <ParallaxBand image="/images/BBSI-Corp-Video.jpg" overlayOpacity={72}>
-          <SectionReveal>
-            <p className="text-white text-2xl md:text-3xl mb-6 leading-relaxed font-[family-name:var(--font-heading)]">
-              Conversations, not scripts. That&apos;s how we film.
-            </p>
-            <Link href="/contact-quote" className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">
-              Request a Video Quote
-            </Link>
-          </SectionReveal>
-        </ParallaxBand>
-
-        {/* Gallery */}
-        <section className="py-20 px-8 bg-white">
-          <div className="max-w-6xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-center mb-12 text-[var(--color-text-dark)]">Professional Video Production in Modesto & Central Valley</h2>
-            </SectionReveal>
-            <div className="grid md:grid-cols-3 gap-4">
-              {[
-                { src: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production in Modesto' },
-                { src: '/images/ALCC Drone 03.jpg', alt: 'Aerial drone videography - Central Valley' },
-                { src: '/images/BBSI-Video-Freeze.jpg', alt: 'Professional client testimonial videos' },
-              ].map((img) => (
-                <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-96 relative">
-                  <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
-                </SectionReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Services */}
-        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
-          <div className="max-w-4xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-16 text-center">Video Services We Offer</h2>
-            </SectionReveal>
-            <div className="grid md:grid-cols-2 gap-10">
-              {services.map((item) => (
-                <SectionReveal key={item.title}>
-                  <div className="flex gap-4">
-                    <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
-                    <div>
-                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
-                      <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
-                    </div>
-                  </div>
-                </SectionReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Testimonials */}
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">What Video Clients Say</h2>
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">What Our Clients Say</h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
                   Relaxed on camera, professional on delivery.
                 </p>
