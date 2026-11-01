@@ -152,7 +152,7 @@ export default function OnSitePhotographyPage() {
                   We&apos;re Alfonso and Niomi Rojas. We bring a complete professional studio — lighting, backdrops, cameras, everything — directly to your location. Your team stays at work, we come to them, and we move through efficiently without derailing anyone's day.
                 </p>
                 <p>
-                  We've photographed 500+ professionals across the Central Valley — law firms, healthcare organizations, corporate offices, school districts — and with 15+ years in corporate leadership, we understand how to operate inside a business environment without disrupting it.
+                  We've photographed 500+ professionals across the Central Valley — law firms, healthcare organizations, corporate offices, school districts — and we come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We understand how to operate inside a business environment without disrupting it.
                 </p>
               </div>
             </div>

@@ -149,7 +149,7 @@ export default function PremiumHeadshotsPage() {
                   Most people we work with feel the same way before they arrive: awkward in front of a camera, unsure how to pose, convinced they're just "not photogenic." That feeling is real — and it's exactly what we're here to take off your plate.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  We&apos;re Alfonso and Niomi Rojas. We&apos;ve photographed 500+ professionals across Modesto and the Central Valley — CEOs, attorneys, realtors, healthcare executives — and we've spent 15+ years in corporate leadership ourselves. We know what a headshot needs to communicate, and we know how to get you there without it feeling forced.
+                  We&apos;re Alfonso and Niomi Rojas. We&apos;ve photographed 500+ professionals across Modesto and the Central Valley — CEOs, attorneys, realtors, healthcare executives — and we come from corporate leadership ourselves, so we know how to work with CEOs, CFOs and the professionals who report to them. We know what a headshot needs to communicate, and we know how to get you there without it feeling forced.
                 </p>
                 <p>
                   You're never alone in front of the camera. We guide your posing, coach your expression, adjust your angles, and review images with you in real-time so you can see exactly what's working as we go.

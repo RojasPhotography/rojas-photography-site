@@ -136,7 +136,7 @@ export default function CommercialPhotographyPage() {
                   You&apos;ve built something real — a product, a space, a brand with its own personality — and stock photos don&apos;t come close to showing it. I&apos;ve heard this from nearly every commercial client we work with. The imagery they have doesn&apos;t match the quality of what they actually do.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  We&apos;re Alfonso and Niomi Rojas. With 15+ years in corporate environments, we understand business context and brand positioning — not just how to operate a camera. We&apos;ve photographed businesses across the Central Valley, from healthcare organizations and law firms to manufacturing companies and retailers, and we bring that business understanding to every shoot.
+                  We&apos;re Alfonso and Niomi Rojas. We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We understand business context and brand positioning, not just how to operate a camera. We&apos;ve photographed businesses across the Central Valley, from healthcare organizations and law firms to manufacturing companies and retailers, and we bring that business understanding to every shoot.
                 </p>
                 <p>
                   We don&apos;t just shoot photos. We work with you to understand what your brand needs to communicate — and then I build imagery around that, whether it&apos;s product photography, architectural shots, lifestyle imagery, or a complete brand library.
@@ -320,7 +320,7 @@ export default function CommercialPhotographyPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: 'Corporate Experience', desc: '15+ years in corporate environments means we understand your brand context, not just how to operate a camera.' },
+                { title: 'Corporate Experience', desc: 'We come from corporate leadership, so we know how to work with marketing teams and executives, and we understand your brand context, not just how to operate a camera.' },
                 { title: 'Professional Equipment', desc: 'Professional lighting, cameras, and expert direction — every shot is intentional.' },
                 { title: 'Fast Turnaround', desc: 'Images delivered within 48-72 hours without compromising quality.' },
                 { title: 'Local to the Central Valley', desc: 'Based in Modesto, serving Stockton, Fresno, Turlock, and beyond.' },
