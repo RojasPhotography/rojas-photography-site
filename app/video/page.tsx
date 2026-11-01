@@ -16,7 +16,7 @@ const faqs = [
   {
     question: 'How much does a corporate videographer cost in Modesto?',
     answer:
-      'Corporate video pricing is custom to scope, length and editing. A simple 30-second promotional video typically runs $1,500-$2,500. A 2-3 minute corporate video with motion graphics typically runs $3,500-$7,500. Aerial drone videography adds $500-$1,500 depending on scope. We send a personalized quote within 24 hours.',
+      'Every video is quoted to its scope, so pricing starts with a conversation about your project. The quote is shaped by the length of the finished video, shoot time and number of locations, how many people are on camera, editing and motion graphics, and whether drone footage is included. A short social video is scoped differently from a full production. Tell us about your project and we send a personalized quote within 24 hours.',
   },
   {
     question: 'Are you FAA-licensed drone pilots?',
@@ -32,6 +32,11 @@ const faqs = [
     question: 'What types of corporate videos do you create?',
     answer:
       'Company overview and brand videos, client testimonials and case studies, product demonstrations, training and educational videos, social media content, event highlight videos and aerial drone footage. Projects range from a 15-second social clip to a 10-minute production, with concept development, filming and editing handled in-house.',
+  },
+  {
+    question: 'Do you make short social media videos and reels?',
+    answer:
+      'Yes. Alongside full productions, we create short-form video for Instagram, LinkedIn, TikTok and YouTube Shorts: reels, event recaps, behind-the-scenes clips and team highlights. These are shot and edited in a focused format with vertical and square versions delivered, and they are scoped and quoted separately from full productions.',
   },
   {
     question: 'Do you work outside Modesto?',
@@ -101,7 +106,7 @@ export default function VideoServicesPage() {
       <div className="min-h-screen bg-white">
       <HeroSection
         title="Corporate Videographers in Modesto & the Central Valley"
-        subtitle="Brand videos, client testimonials, event coverage and drone aerials, planned, filmed and edited by Alfonso and Niomi Rojas."
+        subtitle="Social media video, brand films, client testimonials, event coverage and drone aerials, planned, filmed and edited by Alfonso and Niomi Rojas."
         tag="Corporate Video Production & Drone Videography"
         gradient
       >
@@ -116,7 +121,66 @@ export default function VideoServicesPage() {
       </HeroSection>
 
       <main id="main-content">
-        {/* Direct answers first: what, how much, how long, where */}
+        {/* Two lanes: short-form social vs full production */}
+        <section className="py-16 px-8 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">Two Ways to Work With Us</h2>
+              <p className="text-center text-lg text-[var(--color-text-body)] max-w-2xl mx-auto mb-12">
+                Not every video needs a full production. Tell us what you&apos;re trying to accomplish and we&apos;ll point you to the right one.
+              </p>
+            </SectionReveal>
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  tag: 'Social & Short-Form',
+                  title: 'Video for your feeds',
+                  who: 'For brands that need regular content for Instagram, LinkedIn, TikTok and YouTube Shorts.',
+                  items: [
+                    'Reels and short clips built around one focused shoot',
+                    'Event recaps, behind-the-scenes and team highlights',
+                    'Vertical and square versions, ready to post',
+                    'Quick turnaround, typically within 1-2 weeks',
+                  ],
+                  cta: 'Ask About Social Video',
+                },
+                {
+                  tag: 'Full Production',
+                  title: 'Video that carries your brand',
+                  who: 'For brand films, client testimonials, campaigns and aerial footage.',
+                  items: [
+                    'Story development, shot list and guided interviews',
+                    'Professional crew, lighting and audio, on location or in studio',
+                    'FAA Part 107 drone aerials when the story calls for them',
+                    'Color grading, sound design and motion graphics',
+                  ],
+                  cta: 'Plan a Full Production',
+                },
+              ].map((lane) => (
+                <SectionReveal key={lane.tag}>
+                  <div className="h-full flex flex-col bg-[var(--color-bg-warm)] p-8 rounded-2xl border border-gray-100">
+                    <span className="text-sm font-semibold uppercase tracking-wide text-[var(--color-primary)] mb-2">{lane.tag}</span>
+                    <h3 className="text-2xl text-[var(--color-text-dark)] mb-3">{lane.title}</h3>
+                    <p className="text-[var(--color-text-body)] mb-6">{lane.who}</p>
+                    <ul className="space-y-3 mb-8 flex-1">
+                      {lane.items.map((item) => (
+                        <li key={item} className="flex gap-3 text-sm text-[var(--color-text-body)]">
+                          <CheckCircle2 size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" aria-hidden="true" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full text-center inline-block">
+                      {lane.cta}
+                    </Link>
+                  </div>
+                </SectionReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Direct answers: what, how long, where */}
         <section className="py-12 px-8 bg-white border-b border-gray-100">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
