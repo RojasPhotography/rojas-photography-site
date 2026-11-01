@@ -154,7 +154,7 @@ export default function HeadshotBoothPage() {
                   We&apos;re Alfonso and Niomi Rojas. We bring a complete professional studio to your event, coach each person quickly through posing and expression, and keep things moving without sacrificing the quality of the photo. Every attendee gets a real headshot — not a rushed snapshot.
                 </p>
                 <p>
-                  With 15+ years in corporate leadership and 500+ professionals photographed across the Central Valley, we understand how events work and how to operate inside them without creating chaos.
+                  We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. With 500+ professionals photographed across the Central Valley, we understand how events work and how to operate inside them without creating chaos.
                 </p>
               </div>
             </div>

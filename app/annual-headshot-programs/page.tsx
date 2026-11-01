@@ -164,7 +164,7 @@ export default function AnnualHeadshotProgramsPage() {
                     An annual program takes that off your plate for good. We handle the scheduling, the setup, the coaching, and the delivery — and we shoot every session to the same look, so your team stays consistent without anyone at your firm having to manage it.
                   </p>
                   <p>
-                    With 15+ years in corporate leadership between us, we understand how firms run and how to work inside them without creating a disruption.
+                    We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We understand how firms run and how to work inside them without creating a disruption.
                   </p>
                 </div>
               </div>
