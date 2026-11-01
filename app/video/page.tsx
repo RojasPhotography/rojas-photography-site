@@ -159,13 +159,13 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Video That Sounds Like Your Team</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Videographers Who Speak Business</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  We&apos;re Alfonso and Niomi Rojas, a Modesto team with a background in corporate environments. Most people tense up when a camera points at them, so we build each shoot around conversation instead of a script.
+                  We&apos;re Alfonso and Niomi Rojas, and we come from corporate environments ourselves: manufacturing and executive leadership, HR and operations. We&apos;re comfortable talking with your marketing team, your CEO or your CFO, and we understand how business decisions get made, so you&apos;re working with a production partner, not a vendor you have to manage.
                 </p>
                 <p>
-                  The result is polished, professional video that still sounds like the people in it.
+                  Most people tense up when a camera points at them, so we build each shoot around conversation instead of a script. The result is polished, professional video that still sounds like the people in it.
                 </p>
               </div>
             </SectionReveal>
