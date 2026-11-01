@@ -45,7 +45,7 @@ export default function AboutPage() {
       <div className="min-h-screen bg-white">
         <HeroSection
           title="About Rojas Photography"
-          subtitle="Professional photographers dedicated to creating authentic corporate headshots and business imagery that elevate your professional brand."
+          subtitle="Professional corporate photographers and videographers creating headshots and business imagery that elevate your professional brand."
           gradient
         />
 
@@ -67,20 +67,20 @@ export default function AboutPage() {
               <SectionReveal>
                 <div>
                   <p className="text-lg text-[var(--color-text-dark)] mb-6 font-bold leading-relaxed">
-                    Rojas Photography was born from a shared vision: create authentic, professional photography that makes business leaders feel confident and prepared.
+                    Rojas Photography was born from a shared vision: professional photography that makes business leaders feel confident and prepared.
                   </p>
                   <p className="text-[var(--color-text-body)] mb-6 leading-relaxed">
-                    Alfonso and Niomi founded Rojas Photography during a transition period when they decided to pursue something they were truly passionate about. Both brought 15+ years of leadership experience—Alfonso in manufacturing and executive environments, and Niomi in HR and operations. They knew exactly what professional clients needed because they&apos;d lived in those demanding corporate roles.
+                    We founded Rojas Photography during a transition period, when we decided to pursue something we were truly passionate about. We both brought 15+ years of leadership experience—Alfonso in manufacturing and executive environments, and Niomi in HR and operations. We know what professional clients need because we&apos;ve lived in those demanding corporate roles.
                   </p>
                   <p className="text-[var(--color-text-body)] mb-6 leading-relaxed">
-                    Their mission was clear: eliminate the anxiety and stress that people feel during photo sessions. Alfonso and Niomi wanted to create a transformative experience—one where the real person emerges through the lens. When someone sits in front of Alfonso&apos;s camera, the goal isn&apos;t just to take a photo. It&apos;s to capture the genuine confidence, authority, and authenticity that defines them as a leader.
+                    Our mission is clear: eliminate the anxiety and stress people feel during photo sessions. We wanted to create a transformative experience—one where the real person emerges through the lens. When you sit in front of our camera, the goal isn&apos;t just to take a photo. It&apos;s to capture the confidence and authority that define you as a leader.
                   </p>
                   <p className="text-[var(--color-text-body)] mb-8 leading-relaxed">
-                    Within two years, Rojas Photography grew from startup to the most sought-after photography studio in the Central Valley. They now serve executives, attorneys, CEOs, and business leaders across Modesto, Stockton, Fresno, Turlock, and Merced.
+                    Within two years, Rojas Photography grew from startup to the most sought-after photography studio in the Central Valley. We now serve executives, attorneys, CEOs, and business leaders across Modesto, Stockton, Fresno, Turlock, and Merced.
                   </p>
                   <div className="bg-[var(--color-primary)] text-white p-6 rounded-xl">
                     <p className="leading-relaxed italic">
-                      &ldquo;Professional photography isn&apos;t about being &apos;photogenic.&apos; It&apos;s about presenting your authentic professional self with confidence. That&apos;s what we create.&rdquo;
+                      &ldquo;Professional photography isn&apos;t about being &apos;photogenic.&apos; It&apos;s about presenting your professional self with confidence. That&apos;s what we create.&rdquo;
                     </p>
                     <p className="font-bold text-sm mt-4 text-[var(--color-primary-light)]">— Alfonso &amp; Niomi Rojas</p>
                   </div>
@@ -131,8 +131,8 @@ export default function AboutPage() {
                   <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Alfonso Rojas</h3>
                   <p className="text-[var(--color-primary)] font-semibold mb-6">Founder, Lead Photographer &amp; Visual Strategy Consultant</p>
                   <div className="space-y-4 mb-8">
-                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">With 15+ years in manufacturing leadership and executive environments, Alfonso understands the pressures and expectations of professional leadership. As the lead photographer, he specializes in guiding clients through the session experience.</p>
-                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Alfonso works strategically with companies on their overall visual branding and imagery strategy. He is Part 107 certified for drone operations and a Christian photographer who values authentic, relationship-focused business practices.</p>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Alfonso&apos;s 15+ years in manufacturing leadership and executive environments mean we understand the pressures and expectations of professional leadership. As our lead photographer, he guides you through the session experience.</p>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">He also works with companies on their visual branding and imagery strategy. Alfonso is Part 107 certified for drone operations, and as a Christian photographer he values relationship-focused business practices.</p>
                   </div>
                   <div className="flex gap-2 flex-wrap">
                     <span className="bg-[var(--color-primary-light)] text-[var(--color-primary)] px-4 py-1.5 rounded-full text-xs font-bold">Lead Photographer</span>
@@ -151,8 +151,8 @@ export default function AboutPage() {
                   <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Niomi Rojas</h3>
                   <p className="text-[var(--color-primary)] font-semibold mb-6">Founder, Photographer &amp; Operations Lead</p>
                   <div className="space-y-4 mb-8">
-                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Niomi brings corporate HR and operations expertise along with a keen eye for professional imagery. She specializes in making clients feel comfortable and confident during sessions, with an exceptional ability to connect with people.</p>
-                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">As operations lead, Niomi manages the business side—from initial consultation through final delivery. She&apos;s passionate about creating a comfortable, judgment-free environment where every client feels heard and valued.</p>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">Niomi brings corporate HR and operations expertise to our studio, along with a keen eye for professional imagery. She makes our clients feel comfortable and confident during sessions, with an exceptional ability to connect with people.</p>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">As our operations lead, Niomi manages the business side, from initial consultation through final delivery. She&apos;s passionate about creating a comfortable, judgment-free environment where every client feels heard and valued.</p>
                   </div>
                   <div className="flex gap-2 flex-wrap">
                     <span className="bg-[var(--color-primary-light)] text-[var(--color-primary)] px-4 py-1.5 rounded-full text-xs font-bold">Photographer</span>
@@ -174,7 +174,7 @@ export default function AboutPage() {
               {[
                 { icon: Users, title: 'We Care About People', desc: "Professional photography shouldn't be stressful. We believe every client deserves a comfortable, judgment-free experience." },
                 { icon: Award, title: 'We Believe in Excellence', desc: 'Premium positioning means premium everything. From our equipment to our editing, we commit to excellence in every detail.' },
-                { icon: Zap, title: 'We Understand Business', desc: 'With 15+ years in corporate environments, we understand what executives, attorneys, and business leaders need.' },
+                { icon: Zap, title: 'We Understand Business', desc: "We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them." },
               ].map((item) => (
                 <SectionReveal key={item.title}>
                   <div>
@@ -221,7 +221,7 @@ export default function AboutPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10">
               {[
-                { title: 'Authenticity', desc: 'We help you present your authentic professional self. Real presence is more powerful than posing.' },
+                { title: 'Authenticity', desc: 'We help you present your professional self. Real presence is more powerful than posing.' },
                 { title: 'Integrity', desc: 'Transparent pricing, honest communication, and relationship-focused business practices.' },
                 { title: 'Excellence', desc: 'Premium positioning requires premium execution. Every detail matters.' },
                 { title: 'Respect', desc: 'We respect your time, your needs, and your privacy. HIPAA compliance and confidentiality are non-negotiable.' },

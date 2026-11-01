@@ -152,7 +152,7 @@ export default function OnSitePhotographyPage() {
                   We&apos;re Alfonso and Niomi Rojas. We bring a complete professional studio — lighting, backdrops, cameras, everything — directly to your location. Your team stays at work, we come to them, and we move through efficiently without derailing anyone's day.
                 </p>
                 <p>
-                  We've photographed 500+ professionals across the Central Valley — law firms, healthcare organizations, corporate offices, school districts — and with 15+ years in corporate leadership, we understand how to operate inside a business environment without disrupting it.
+                  We've photographed 500+ professionals across the Central Valley — law firms, healthcare organizations, corporate offices, school districts — and we come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We understand how to operate inside a business environment without disrupting it.
                 </p>
               </div>
             </div>
@@ -166,7 +166,7 @@ export default function OnSitePhotographyPage() {
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl md:text-5xl text-center text-[var(--color-text-dark)] mb-16">
-                How I Work With Your Team
+                How We Work With Your Team
               </h2>
             </SectionReveal>
 
@@ -180,7 +180,7 @@ export default function OnSitePhotographyPage() {
                     Discovery & Planning
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    I start by learning your team size, location, timeline, and what you need the photos for. For teams of 10+, we set up an online scheduling system so employees can book their own time slots without you having to coordinate every one.
+                    We start by learning your team size, location, timeline, and what you need the photos for. For teams of 10+, we set up an online scheduling system so employees can book their own time slots without you having to coordinate every one.
                   </p>
                 </div>
               </SectionReveal>
@@ -315,7 +315,7 @@ export default function OnSitePhotographyPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
-                { title: 'Full Studio Setup at Your Location', desc: 'We bring my complete professional studio to your office — all equipment, lighting, and direction. No one on your team needs to leave the building.' },
+                { title: 'Full Studio Setup at Your Location', desc: 'We bring our complete professional studio to your office — all equipment, lighting, and direction. No one on your team needs to leave the building.' },
                 { title: 'Individual Headshots & Team Photos', desc: 'Individual executive headshots, team portraits, group photos, and building photography if needed. We handle everything with expert guidance so you don\'t have to manage a thing.' },
                 { title: 'Custom Employee Scheduling', desc: 'For organizations with 10+ employees, we create a custom online calendar so your team members can book their own time slots — no back-and-forth coordination needed.' },
                 { title: 'Real-Time Coaching for Every Person', desc: 'We coach each person through posing and expression as we shoot. Everyone sees their photos in real-time so there are no surprises at delivery.' },
@@ -389,7 +389,7 @@ export default function OnSitePhotographyPage() {
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Imagine Your Entire Team Updated by Tomorrow</h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
-                  Consistent headshots across every employee. A &quot;Meet the Team&quot; page you&apos;re proud to send clients to. New hires photographed the same day they start. Here&apos;s what that looks like for organizations I&apos;ve worked with.
+                  Consistent headshots across every employee. A &quot;Meet the Team&quot; page you&apos;re proud to send clients to. New hires photographed the same day they start. Here&apos;s what that looks like for organizations we&apos;ve worked with.
                 </p>
               </div>
             </SectionReveal>
@@ -411,7 +411,7 @@ export default function OnSitePhotographyPage() {
                 Your Team Deserves Professional Headshots
               </h2>
               <p className="text-[var(--color-text-body)] mb-6 leading-relaxed">
-                Join hundreds of Central Valley organizations who&apos;ve trusted me to handle their team photography efficiently and professionally. Consistent team imagery is one quote away.
+                Join the Central Valley organizations who&apos;ve trusted us to handle their team photography efficiently and professionally. Consistent team imagery is one quote away.
               </p>
               <Link
                 href="/contact-quote"

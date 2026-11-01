@@ -346,8 +346,8 @@ export default function FresnoHeadshotsPage() {
               <div className="grid md:grid-cols-2 gap-10">
                 {[
                   {
-                    title: 'I Understand Fresno\'s Diverse Professional Community',
-                    desc: 'From Fresno State faculty needing academic headshots to Community Regional and Saint Agnes Medical Center healthcare professionals, agricultural business leaders building their brands, and legal professionals requiring authoritative imagery — we understand the unique needs of Fresno\'s varied professional sectors. My experience across industries shows in every session.',
+                    title: 'We Understand Fresno\'s Diverse Professional Community',
+                    desc: 'From Fresno State faculty needing academic headshots to Community Regional and Saint Agnes Medical Center healthcare professionals, agricultural business leaders building their brands, and legal professionals requiring authoritative imagery — we understand the unique needs of Fresno\'s varied professional sectors. Our experience across industries shows in every session.',
                   },
                   {
                     title: 'Premium Studio, or We Come to Your Fresno Location',
@@ -355,7 +355,7 @@ export default function FresnoHeadshotsPage() {
                   },
                   {
                     title: 'Corporate Leadership Experience Across Industries',
-                    desc: 'We\'re Alfonso and Niomi Rojas, and our 15+ years of corporate leadership experience means we understand professional branding across healthcare, academia, legal, agricultural, and corporate sectors. We\'ve photographed 500+ executives and professionals. Whether you need academic credibility, healthcare professionalism, legal authority, or executive presence — we deliver.',
+                    desc: 'We\'re Alfonso and Niomi Rojas, we come from corporate leadership ourselves, so we understand professional branding across healthcare, academia, legal, agricultural, and corporate sectors. We\'ve photographed 500+ executives and professionals. Whether you need academic credibility, healthcare professionalism, legal authority, or executive presence — we deliver.',
                   },
                   {
                     title: 'Fast Turnaround for Central Valley\'s Largest City',

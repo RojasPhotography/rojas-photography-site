@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: 'Why do Stockton professionals choose Rojas Photography?',
-    answer: 'Stockton professionals choose Rojas Photography because we understand business. With 15+ years of corporate leadership experience, we know what executives, attorneys, healthcare professionals, and business leaders need from their professional imagery. We have photographed 500+ professionals across the Central Valley and maintain 60+ five-star reviews.',
+    answer: 'Stockton professionals choose Rojas Photography because we understand business. We come from corporate leadership ourselves, so we know what executives, attorneys, healthcare professionals, and business leaders need from their professional imagery. We have photographed 500+ professionals across the Central Valley and maintain 60+ five-star reviews.',
   },
 ];
 

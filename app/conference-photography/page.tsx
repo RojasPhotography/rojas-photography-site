@@ -176,7 +176,7 @@ export default function ConferencePhotographyPage() {
                 <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">We Photograph Conferences the Way You Plan Them — Session by Session</h2>
                 <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                   <p>
-                    We&apos;re Alfonso and Niomi Rojas, based in Modesto. We&apos;ve covered everything from single-day association meetings to multi-day conferences, and we treat your run of show the way you do: as a plan where every session, speaker, and sponsor moment has to be accounted for.
+                    We&apos;re Alfonso and Niomi Rojas, based in Modesto. We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We&apos;ve covered everything from single-day association meetings to multi-day conferences, and we treat your run of show the way you do: as a plan where every session, speaker, and sponsor moment has to be accounted for.
                   </p>
                   <p className="font-semibold text-[var(--color-text-dark)]">
                     For multi-track programs, we bring a coordinated team of photographers so nothing overlaps into a gap — and every image comes back with the same consistent, polished look. Organizations like the California Lawyers Association trust us with their annual meeting because we show up early, work the whole schedule, and deliver fast.

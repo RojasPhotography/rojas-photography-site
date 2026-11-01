@@ -148,16 +148,16 @@ export default function EventPhotographyPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">We Work With Organizations of Every Size — And I Treat Every Event the Same Way</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">We Work With Organizations of Every Size — And We Treat Every Event the Same Way</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  We&apos;ve photographed intimate 40-person nonprofit dinners and large-scale multi-day conferences for thousands of attendees. The size of the event doesn&apos;t change how I show up. Every client gets the same preparation, the same professionalism, and the same quality of work.
+                  We&apos;ve photographed intimate 40-person nonprofit dinners and large-scale multi-day conferences for thousands of attendees. The size of the event doesn&apos;t change how we show up. Every client gets the same preparation, the same professionalism, and the same quality of work.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  We&apos;re Alfonso and Niomi Rojas, based in Modesto. We know this region — the venues, the organizations, and what Central Valley event organizers need. I show up early, stay until the end, anticipate moments before they happen, and deliver professionally edited photos within 5–7 business days, every time. Organizations like the California Lawyers Association, Valley First Credit Union, Comcast, and Save Mart trust me because I treat their events like they matter — because they do.
+                  We&apos;re Alfonso and Niomi Rojas, based in Modesto. We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We know this region — the venues, the organizations, and what Central Valley event organizers need. We show up early, stay until the end, anticipate moments before they happen, and deliver professionally edited photos within 5–7 business days, every time. Organizations like the California Lawyers Association, Valley First Credit Union, Comcast, and Save Mart trust me because I treat their events like they matter — because they do.
                 </p>
                 <p>
-                  I don&apos;t just take photos — I coordinate with your timeline, communicate with your team, and make sure you walk away with complete coverage and marketing-ready images, not just a folder of snapshots.
+                  We don&apos;t just take photos — we coordinate with your timeline, communicate with your team, and make sure you walk away with complete coverage and marketing-ready images, not just a folder of snapshots.
                 </p>
               </div>
             </SectionReveal>
@@ -168,7 +168,7 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">How I Approach Your Event</h2>
+              <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">How We Approach Your Event</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-8">
               <SectionReveal>
@@ -176,7 +176,7 @@ export default function EventPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">01</span>
                   <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Pre-Event Planning</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    We review your event schedule, key moments to prioritize, important people to photograph, and sponsor requirements. I coordinate with your event planner or AV team directly so nothing falls through the cracks on the day of.
+                    We review your event schedule, key moments to prioritize, important people to photograph, and sponsor requirements. We coordinate with your event planner or AV team directly so nothing falls through the cracks on the day of.
                   </p>
                 </div>
               </SectionReveal>
@@ -408,7 +408,7 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-16 text-center">What I Cover</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-16 text-center">What We Cover</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-10 mb-16">
               {[
@@ -502,13 +502,13 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl text-center mb-12 text-[var(--color-text-dark)]">Why Event Organizers Trust Me</h2>
+              <h2 className="text-3xl text-center mb-12 text-[var(--color-text-dark)]">Why Event Organizers Trust Us</h2>
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 { title: 'Local Expertise, Regional Reach', desc: "Based in Modesto, we know the Central Valley — the venues, the organizations, the community. We serve clients from Stockton and Fresno to Sacramento and the Bay Area, with the same local commitment everywhere I go." },
-                { title: 'Every Event Gets My Full Attention', desc: "A 50-person chamber mixer gets the same preparation and professionalism as a 500-person gala. We review your schedule, communicate with your team, and show up ready — every time." },
-                { title: 'Professional & Unobtrusive', desc: 'I blend into the event while capturing everything — you and your guests won\'t feel like you\'re being photographed.' },
+                { title: 'Every Event Gets Our Full Attention', desc: "A 50-person chamber mixer gets the same preparation and professionalism as a 500-person gala. We review your schedule, communicate with your team, and show up ready — every time." },
+                { title: 'Professional & Unobtrusive', desc: 'We blend into the event while capturing everything — you and your guests won\'t feel like you\'re being photographed.' },
                 { title: 'Fast Delivery', desc: 'Full edited gallery delivered within 5–7 business days. Ask about our add-on for real-time face recognition delivery to attendees during your event.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>

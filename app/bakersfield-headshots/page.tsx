@@ -46,7 +46,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Professional Headshots in Bakersfield, CA | Rojas Photography',
   description:
-    'Professional headshots in Bakersfield, CA. Oil & energy, healthcare, legal, and agricultural business professionals. $150 session. On-site available throughout Kern County.',
+    'Professional headshots in Bakersfield, CA. Oil & energy, healthcare, legal, and agricultural business professionals. Guided sessions. On-site available throughout Kern County.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/bakersfield-headshots',
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Professional Headshots in Bakersfield, CA | Rojas Photography',
     description:
-      'Professional headshots in Bakersfield, CA. Oil & energy, healthcare, legal, and agricultural business professionals. $150 session. On-site available.',
+      'Professional headshots in Bakersfield, CA. Oil & energy, healthcare, legal, and agricultural business professionals. Guided sessions. On-site available.',
     url: 'https://rojasphotography.net/bakersfield-headshots',
     type: 'website',
     images: [{ url: '/images/Hero Image1.jpg', alt: 'Professional headshots Bakersfield CA — Rojas Photography' }],
@@ -73,7 +73,7 @@ const services = [
 const reasons = [
   { title: 'Sector Understanding', desc: 'We understand the professional landscape of Kern County — oil and energy, healthcare, legal, agricultural, and financial services each have distinct branding needs.' },
   { title: 'Studio or On-Site', desc: 'Visit our Modesto studio or have us bring a complete professional setup directly to your office, firm, clinic, or event venue in Bakersfield.' },
-  { title: '15+ Years Corporate Experience', desc: 'Alfonso brings 15+ years in corporate leadership and 500+ professionals photographed across California. He understands what professional credibility looks like.' },
+  { title: 'Built on Corporate Leadership', desc: 'We come from corporate leadership ourselves, with 500+ professionals photographed across California. We understand what professional credibility looks like.' },
   { title: '48-Hour Turnaround', desc: 'Individual sessions delivered in 48 hours. On-site team sessions delivered the same day. No waiting weeks for images you need now.' },
 ];
 

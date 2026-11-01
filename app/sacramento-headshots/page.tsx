@@ -395,7 +395,7 @@ export default function SacramentoHeadshotsPage() {
                 {[
                   {
                     title: 'We Understand Executive Presence and Authority',
-                    desc: 'From state legislators and government officials to legal professionals and healthcare executives, we know your headshot has to communicate authority, expertise, and trustworthiness. Our 15+ years of corporate leadership experience shows in every session — we direct you into the posture and expression that project the credibility your position demands.',
+                    desc: 'From state legislators and government officials to legal professionals and healthcare executives, we know your headshot has to communicate authority, expertise, and trustworthiness. We come from corporate leadership ourselves, and it shows in every session — we direct you into the posture and expression that project the credibility your position demands.',
                   },
                   {
                     title: 'Premium Studio, or We Come to You',
