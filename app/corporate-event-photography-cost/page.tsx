@@ -55,7 +55,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Corporate Event Photography Cost: $1,500–$4,500 | 2026 Guide',
   description:
-    'Exact rates for 4-hour events, full-day coverage, and multi-photographer jobs — plus what separates a $1,500 event from a $4,500 one. Central Valley pricing guide.',
+    'Real 2026 rates for 4-hour events, full-day coverage, and multi-photographer jobs — plus what separates a budget event photographer from a premium one.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/corporate-event-photography-cost',

@@ -40,7 +40,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Commercial Photography in Modesto | Rojas Photography',
   description:
-    'Products, storefronts, teams, and brand content — commercial photography for Central Valley businesses that want to stop looking like everyone else. 48-hour delivery.',
+    'Products, storefronts, teams, and brand content — commercial photography for Central Valley businesses that want to stand out. 48-hour delivery.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/commercial',
