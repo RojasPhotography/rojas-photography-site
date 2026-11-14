@@ -59,3 +59,6 @@ public/images/events/conferences/CLA AM*
 public/images/events/conferences/*Anti-Trust*
 public/images/events/conferences/*Legislative*
 public/images/events/conferences/README.txt
+
+# Full-resolution originals of resized web images (kept on disk, out of the repo)
+/originals/

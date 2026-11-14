@@ -312,8 +312,8 @@ export default function EventPhotographyPage() {
                 { src: '/images/events/gallery/wfg-awards-winner.jpg', alt: 'Award winner with trophy at a corporate recognition event — event photography', width: 1706, height: 2560 },
                 { src: '/images/events/gallery/valley-first-speaker.jpg', alt: 'Speaker at a Valley First Credit Union corporate event — Central Valley event photography', width: 2560, height: 1703 },
                 { src: '/images/events/gallery/united-way-gala-guests.jpg', alt: 'Guests at a nonprofit fundraiser gala at the Gallo Center, Modesto — event photography', width: 2560, height: 1703 },
-                { src: '/images/events/antitrust-salesforce/friends-networking.jpg', alt: 'Colleagues networking at a corporate holiday party in Stockton — event photography', width: 6048, height: 4024 },
-                { src: '/images/events/antitrust-salesforce/laughing-attendee.jpg', alt: 'Candid moment at a corporate holiday party — authentic event photography Central Valley', width: 6048, height: 4024 },
+                { src: '/images/events/antitrust-salesforce/friends-networking.jpg', alt: 'Colleagues networking at a corporate holiday party in Stockton — event photography', width: 2560, height: 1703 },
+                { src: '/images/events/antitrust-salesforce/laughing-attendee.jpg', alt: 'Candid moment at a corporate holiday party — authentic event photography Central Valley', width: 2560, height: 1703 },
                 { src: '/images/DSC_1638.jpg', alt: 'Formal gala and evening event photography — Central Valley', width: 800, height: 1200 },
               ]}
             />
