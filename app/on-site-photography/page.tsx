@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/BB Individual Headshot Session.png',
+        url: '/images/bb-individual-headshot-session.jpg',
         alt: 'On-site corporate headshot session - Modesto photographer',
       },
     ],
@@ -72,7 +72,7 @@ export default function OnSitePhotographyPage() {
         name: 'On-Site Corporate Photography',
         description: 'Professional on-site headshots, team photography, and corporate photography at your location in Modesto and Central Valley.',
         url: 'https://rojasphotography.net/on-site-photography',
-        image: 'https://rojasphotography.net/images/BB Individual Headshot Session.png',
+        image: 'https://rojasphotography.net/images/bb-individual-headshot-session.jpg',
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([
@@ -239,7 +239,7 @@ export default function OnSitePhotographyPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-4">
               {[
-                { src: '/images/BB Individual Headshot Session.png', alt: 'On-site individual headshot session', label: 'On-Site Headshots', objectPosition: 'center 40%' },
+                { src: '/images/bb-individual-headshot-session.jpg', alt: 'On-site individual headshot session', label: 'On-Site Headshots', objectPosition: 'center 40%' },
                 { src: '/images/Move Staff Group 9.jpg', alt: 'Team and group photos', label: 'Team Photos', objectPosition: 'center' },
                 { src: '/images/Marily4170.jpg', alt: 'Business photography at client location', label: 'Corporate Photography', objectPosition: 'center 30%' },
               ].map((img) => (
@@ -370,9 +370,9 @@ export default function OnSitePhotographyPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-4">
               {[
-                { src: '/images/Kaiser BTS Headshots.png', alt: 'Behind the scenes at Kaiser on-site headshots' },
-                { src: '/images/EsmilcoBTS.png', alt: 'Behind the scenes at on-site session' },
-                { src: '/images/Mayor RIverbank BTS.png', alt: 'Behind the scenes at Riverbank Mayor session' },
+                { src: '/images/kaiser-bts-headshots.jpg', alt: 'Behind the scenes at Kaiser on-site headshots' },
+                { src: '/images/esmilco-bts.jpg', alt: 'Behind the scenes at on-site session' },
+                { src: '/images/mayor-riverbank-bts.jpg', alt: 'Behind the scenes at Riverbank Mayor session' },
               ].map((img) => (
                 <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-64 relative">
                   <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/Kaiser BTS Headshots.png',
+        url: '/images/kaiser-bts-headshots.jpg',
         alt: 'Behind the scenes corporate headshot session with Kaiser executives - Rojas Photography Modesto',
       },
     ],
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: 'Corporate Photography Modesto CA | Professional Headshots',
     description:
       'Premium corporate headshots in Modesto & the Central Valley — in our studio or at your office. Two photographers, every session. Trusted by 500+ executives.',
-    images: ['/images/Kaiser BTS Headshots.png'],
+    images: ['/images/kaiser-bts-headshots.jpg'],
   },
 };
 
@@ -328,7 +328,7 @@ export default function HomePage() {
                 </div>
                 <Link href="/on-site-photography" className="md:order-2 order-1 block group rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5 hover:shadow-2xl transition-all">
                   <Image
-                    src="/images/Kaiser BTS Headshots.png"
+                    src="/images/kaiser-bts-headshots.jpg"
                     alt="On-location corporate team headshot day at a Kaiser office in the Central Valley"
                     fill
                     sizes="(max-width: 768px) 100vw, 50vw"
