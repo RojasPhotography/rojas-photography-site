@@ -46,7 +46,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Corporate Event Photography in Modesto | Rojas Photography',
   description:
-    'Event Photography by Alfonso & Niomi | Conferences, Galas, Fundraisers. 15+ years, trusted by Comcast & Save Mart. Instant gallery, same-day proofs. Get pricing.',
+    'Corporate event photography in Modesto & the Central Valley — conferences, galas and fundraisers from Alfonso and Niomi Rojas. Trusted by Comcast and Save Mart.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/event-photography',
@@ -83,8 +83,8 @@ export default function EventPhotographyPage() {
       <div className="min-h-screen bg-white">
       {/* SB7: A Character - Event Organizer/Marketing Manager */}
       <HeroSection
-        title="Your Event Happens Once. You Need a Photographer You Can Trust."
-        subtitle="Professional event photography with fast delivery and complete coverage—so your conference, gala, or corporate event is documented flawlessly. Serving Modesto and Central Valley."
+        title="Corporate Event Photography in Modesto & the Central Valley"
+        subtitle="Your event happens once. We document it completely — conferences, galas, and corporate events photographed by Alfonso and Niomi Rojas, with fast delivery you can count on."
         tag="Professional Event Coverage & Documentation"
         gradient
       >
@@ -154,7 +154,7 @@ export default function EventPhotographyPage() {
                   We&apos;ve photographed intimate 40-person nonprofit dinners and large-scale multi-day conferences for thousands of attendees. The size of the event doesn&apos;t change how we show up. Every client gets the same preparation, the same professionalism, and the same quality of work.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
-                  We&apos;re Alfonso and Niomi Rojas, based in Modesto. We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We know this region — the venues, the organizations, and what Central Valley event organizers need. We show up early, stay until the end, anticipate moments before they happen, and deliver professionally edited photos within 5–7 business days, every time. Organizations like the California Lawyers Association, Valley First Credit Union, Comcast, and Save Mart trust me because I treat their events like they matter — because they do.
+                  We&apos;re Alfonso and Niomi Rojas, based in Modesto. We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We know this region — the venues, the organizations, and what Central Valley event organizers need. We show up early, stay until the end, anticipate moments before they happen, and deliver professionally edited photos within 5–7 business days, every time. Organizations like the California Lawyers Association, Valley First Credit Union, Comcast, and Save Mart trust us because we treat their events like they matter — because they do.
                 </p>
                 <p>
                   We don&apos;t just take photos — we coordinate with your timeline, communicate with your team, and make sure you walk away with complete coverage and marketing-ready images, not just a folder of snapshots.
@@ -506,7 +506,7 @@ export default function EventPhotographyPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: 'Local Expertise, Regional Reach', desc: "Based in Modesto, we know the Central Valley — the venues, the organizations, the community. We serve clients from Stockton and Fresno to Sacramento and the Bay Area, with the same local commitment everywhere I go." },
+                { title: 'Local Expertise, Regional Reach', desc: "Based in Modesto, we know the Central Valley — the venues, the organizations, the community. We serve clients from Stockton and Fresno to Sacramento and the Bay Area, with the same local commitment everywhere we go." },
                 { title: 'Every Event Gets Our Full Attention', desc: "A 50-person chamber mixer gets the same preparation and professionalism as a 500-person gala. We review your schedule, communicate with your team, and show up ready — every time." },
                 { title: 'Professional & Unobtrusive', desc: 'We blend into the event while capturing everything — you and your guests won\'t feel like you\'re being photographed.' },
                 { title: 'Fast Delivery', desc: 'Full edited gallery delivered within 5–7 business days. Ask about our add-on for real-time face recognition delivery to attendees during your event.' },

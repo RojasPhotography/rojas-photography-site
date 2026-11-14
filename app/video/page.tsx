@@ -52,7 +52,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Videographer in Modesto, CA | Corporate Video Production',
   description:
-    'Corporate videographers in Modesto and the Central Valley. Brand videos, client testimonials, event video and FAA Part 107 drone aerials from Alfonso and Niomi Rojas.',
+    'Corporate videographers in Modesto and the Central Valley. Brand videos, testimonials, event video and FAA Part 107 drone aerials from Alfonso and Niomi Rojas.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/video',

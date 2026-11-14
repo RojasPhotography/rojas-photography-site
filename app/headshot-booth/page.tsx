@@ -46,7 +46,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Corporate Headshot Booth Modesto | Rojas Photography',
   description:
-    'Professional headshot booth for corporate events, expos, and training days in Modesto and Central Valley. We bring the studio to your event and move attendees through efficiently. Priced by the hour.',
+    'Professional headshot booth for corporate events, expos and training days in Modesto & the Central Valley. Same-day gallery delivery, priced by the hour.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/headshot-booth',
