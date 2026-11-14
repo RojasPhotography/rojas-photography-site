@@ -125,7 +125,7 @@ function generateTurlockFAQSchema() {
 export const metadata: Metadata = {
   title: 'Professional Headshots Turlock CA | Rojas Photography',
   description:
-    'Professional headshots in Turlock, CA for CSU Stanislaus faculty, business professionals & executives. 15 min from studio. $150 session fee. Book today.',
+    'Professional headshots in Turlock, CA for CSU Stanislaus faculty, business professionals, and executives — just 15 minutes from our studio. Book today.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/turlock-headshots',

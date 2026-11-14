@@ -43,7 +43,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Professional Headshots Modesto CA | Rojas Photography',
+  title: 'Premium Executive Headshots in Modesto | Rojas Photography',
   description:
     'Premium Headshots by Alfonso & Niomi | Modesto Studio. 15+ years, 500+ executives. Guided coaching, unlimited outfits. 48-hour delivery. Book your session.',
   robots: 'index, follow',
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     canonical: 'https://rojasphotography.net/premium-headshots',
   },
   openGraph: {
-    title: 'Professional Corporate Headshots in Modesto | Rojas Photography',
+    title: 'Premium Executive Headshots — Modesto Studio | Rojas Photography',
     description:
       'Premium corporate headshots for executives and business professionals in Modesto and Central Valley. Guided sessions with professional coaching.',
     url: 'https://rojasphotography.net/premium-headshots',

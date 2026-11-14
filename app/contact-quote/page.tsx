@@ -10,7 +10,7 @@ import { generateBreadcrumbSchema } from '../lib/schema';
 export const metadata: Metadata = {
   title: 'Contact Rojas Photography | Get a Quote',
   description:
-    'Contact Rojas Photography in Modesto for professional headshots, on-site photography, commercial, video, and event services. Call 209-380-3727 or request a quote online.',
+    'Contact Rojas Photography in Modesto for headshots, on-site team photography, commercial, video, and event coverage. Call 209-380-3727 or request a quote.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/contact-quote',

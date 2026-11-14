@@ -10,7 +10,7 @@ import { generatePersonSchema, generateBreadcrumbSchema } from '../lib/schema';
 export const metadata: Metadata = {
   title: 'About Rojas Photography | Modesto Corporate Photographers',
   description:
-    'Meet Alfonso & Niomi Rojas - professional corporate photographers with 15+ years experience serving 500+ executives across Modesto and Central Valley. Learn our story.',
+    'Meet Alfonso & Niomi Rojas — husband-and-wife corporate photographers with 15+ years of experience and 500+ executives photographed across the Central Valley.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/about-rojas-photography',

@@ -46,7 +46,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Professional Headshots Bakersfield CA | Rojas Photography',
   description:
-    'Professional headshots in Bakersfield, CA. Oil & energy, healthcare, legal, and agricultural business professionals. Guided sessions. On-site available throughout Kern County.',
+    'Professional headshots in Bakersfield, CA for oil & energy, healthcare, legal, and agricultural professionals. Guided sessions, on-site across Kern County.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/bakersfield-headshots',

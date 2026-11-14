@@ -125,7 +125,7 @@ function generateFresnoFAQSchema() {
 export const metadata: Metadata = {
   title: 'Professional Headshots Fresno CA | Rojas Photography',
   description:
-    'Professional headshots in Fresno, CA for Fresno State faculty, Community Regional & Saint Agnes Medical staff, legal professionals & business executives. $150 session. Book today.',
+    'Professional headshots in Fresno, CA for Fresno State faculty, medical staff, legal professionals, and business executives. Studio-quality guided sessions.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/fresno-headshots',
