@@ -8,7 +8,7 @@ import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
 import VideoFacade from '../components/VideoFacade';
-import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
+import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, generateVideoSchema } from '../lib/schema';
 import { serviceDefinitions } from '../lib/definitions';
 
 const faqs = [
@@ -77,6 +77,7 @@ const productionVideos = [
     id: 'oGWlQt6wXAE',
     title: "Those Two Angels Saved My Life | Grant's Incredible Survival Story, filmed by Rojas Photography for Doctors Medical Center",
     caption: 'Client film for Doctors Medical Center, shot by Rojas Photography.',
+    uploadDate: '2026-09-16',
   },
 ];
 
@@ -102,6 +103,17 @@ export default function VideoServicesPage() {
         { name: 'Home', url: 'https://rojasphotography.net' },
         { name: 'Video Production', url: 'https://rojasphotography.net/video' },
       ])} />
+      {productionVideos.map((video) => (
+        <SchemaScript
+          key={video.id}
+          schema={generateVideoSchema({
+            youtubeId: video.id,
+            name: video.title,
+            description: video.caption,
+            uploadDate: video.uploadDate,
+          })}
+        />
+      ))}
       <div className="min-h-screen bg-white">
       <HeroSection
         title="Corporate Videographers in Modesto & the Central Valley"
