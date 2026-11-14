@@ -60,6 +60,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/headshot-booth"
+                  className="hover:text-[var(--color-primary-light)] transition-colors"
+                >
+                  Headshot Booth
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/commercial"
                   className="hover:text-[var(--color-primary-light)] transition-colors"
                 >

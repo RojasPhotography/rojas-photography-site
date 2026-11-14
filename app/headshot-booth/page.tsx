@@ -287,6 +287,11 @@ export default function HeadshotBoothPage() {
                 A booth is built for <strong className="text-[var(--color-text-dark)]">speed and volume</strong> — moving a large group through efficiently. If you&rsquo;d rather each person get an unhurried, individually coached session, that&rsquo;s our <Link href="/annual-headshot-programs" className="text-[var(--color-primary)] hover:underline">coached team days &rarr;</Link>
               </p>
             </SectionReveal>
+            <SectionReveal>
+              <p className="text-center text-[var(--color-text-body)] mt-4 max-w-2xl mx-auto">
+                Running the booth as part of a bigger day? We also provide <Link href="/event-photography" className="text-[var(--color-primary)] hover:underline">corporate event photography in Modesto and the Central Valley</Link> and <Link href="/conference-photography" className="text-[var(--color-primary)] hover:underline">multi-photographer conference coverage</Link>.
+              </p>
+            </SectionReveal>
           </div>
         </section>
 

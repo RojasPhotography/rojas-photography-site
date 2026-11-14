@@ -601,6 +601,9 @@ export default function EventPhotographyPage() {
               <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Ready to Capture Your Next Event?</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Let us document your event with professional photography. From planning to delivery, we handle everything.
+                Planning a multi-day program? See our <Link href="/conference-photography" className="text-[var(--color-primary)] font-semibold hover:underline">conference photography across the Central Valley and Sacramento</Link>.
+                Want attendees to leave with a professional photo? Add a <Link href="/headshot-booth" className="text-[var(--color-primary)] font-semibold hover:underline">headshot booth for your event</Link>, or
+                pair your coverage with an <Link href="/video" className="text-[var(--color-primary)] font-semibold hover:underline">event highlight video</Link>.
               </p>
               <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
                 Request a Quote

@@ -412,6 +412,8 @@ export default function HomePage() {
             </div>
             <SectionReveal>
               <p className="mt-12 text-center text-[var(--color-text-body)]">
+                Planning a conference or annual meeting? See our <Link href="/conference-photography" className="text-[var(--color-primary)] font-semibold hover:underline">conference photography across the Central Valley and Sacramento</Link>.
+                <br className="hidden md:block" />
                 Larger or custom project? <Link href="/discovery-call" className="text-[var(--color-primary)] font-semibold hover:underline">Book a free, zero-pressure discovery call →</Link>
               </p>
             </SectionReveal>

@@ -248,6 +248,8 @@ export default function CorporateEventPhotographyCostPage() {
               <p className="text-center text-sm text-[var(--color-text-muted)] mt-4">
                 Corporate event coverage across Modesto and the Central Valley —{' '}
                 <Link href="/event-photography" className="text-[var(--color-primary)] hover:underline">view full event gallery →</Link>
+                {' '}· Multi-day program?{' '}
+                <Link href="/conference-photography" className="text-[var(--color-primary)] hover:underline">see conference photography →</Link>
               </p>
             </div>
           </section>

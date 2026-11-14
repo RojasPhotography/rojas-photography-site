@@ -370,7 +370,7 @@ export default function VideoServicesPage() {
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Plan Your Video With Alfonso and Niomi</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
-                Tell us what you need and where. We reply with a custom quote within 24 hours. Looking for photography instead? See our <Link href="/commercial" className="underline">commercial photography</Link> and <Link href="/event-photography" className="underline">event photography</Link>.
+                Tell us what you need and where. We reply with a custom quote within 24 hours. Looking for photography instead? See our <Link href="/commercial" className="underline">commercial photography</Link>, <Link href="/event-photography" className="underline">event photography</Link> and <Link href="/conference-photography" className="underline">conference coverage</Link>.
               </p>
               <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
