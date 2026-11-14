@@ -27,7 +27,7 @@ const faqs = [
   {
     question: 'Do you travel to Sacramento, the Bay Area, Los Angeles, or San Diego for conferences?',
     answer:
-      'We do, regularly. We’re based in Modesto and cover conferences and corporate events statewide — we’ve photographed conferences in San Francisco and Newport Beach, and we cover events in Los Angeles and San Diego. Travel is simply built into your quote.',
+      'We do, regularly. We’re based in Modesto and cover conferences and corporate events statewide — we’ve photographed conferences in San Francisco and Newport Beach, and we cover events in Los Angeles and San Diego. Tell us your dates and venue when you request a quote.',
   },
   {
     question: 'Can you set up a headshot station for attendees at our conference?',

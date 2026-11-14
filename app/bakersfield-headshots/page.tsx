@@ -29,7 +29,7 @@ const faqs = [
   {
     question: 'How much do professional headshots cost in Bakersfield?',
     answer:
-      '$150 for the session and $150 per final edited image. For on-site sessions in Bakersfield, travel fees apply — contact us for a quote based on your team size and location. Individual sessions can also be completed at our Modesto studio with no travel fee.',
+      '$150 for the session and $150 per final edited image. For on-site sessions in Bakersfield, contact us for a quote based on your team size and location. Individual sessions can also be completed at our Modesto studio.',
   },
   {
     question: 'How long does a headshot session take?',

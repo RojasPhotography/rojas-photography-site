@@ -84,9 +84,9 @@ const mercedFaqs = [
       'Yes. As UC Merced grows, we regularly set up on the Merced campus and photograph a department, lab, or research group in one visit — matched to a single consistent look for faculty profiles, research and lab pages, grant applications, and conference bios. Faculty who join later are easy to match to the same setup.',
   },
   {
-    question: 'How far is Merced from your studio, and is there a travel fee?',
+    question: 'How far is Merced from your studio?',
     answer:
-      'Merced is about 50 minutes south of our Modesto studio on Highway 99 — close enough that it&apos;s an easy trip for us. Individuals can book at the studio and choose their images the same day. For teams, we come to you on-site; a travel fee applies and is built into your quote up front.',
+      'Merced is about 50 minutes south of our Modesto studio on Highway 99 — close enough that it&apos;s an easy trip for us. Individuals can book at the studio and choose their images the same day. For teams, we come to you on-site — quoted by team size and location.',
   },
   {
     question: 'Do you do on-site headshots at ag and logistics operations around Merced?',
@@ -251,7 +251,7 @@ export default function MercedHeadshotsPage() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {[
                   { icon: Camera, title: 'In-Studio Headshots', desc: 'Professional headshot sessions at our Modesto studio, 50 minutes from Merced. Premium lighting, guided posing, real-time review, and 48-hour delivery.', price: '$150 session + $150/image', href: '/premium-headshots', img: '/images/headshots/headshot-ceo-nutrition-02.jpg', alt: 'Professional headshot session' },
-                  { icon: Users, title: 'On-Site Team Photography', desc: 'We bring our full studio to your Merced location — UC campus, Mercy Medical Center, or your business. Photograph your full team efficiently without disrupting operations. Travel fee applies.', price: 'Custom pricing', href: '/on-site-photography', img: '/images/BB Individual Headshot Session.png', alt: 'On-site team headshot photography' },
+                  { icon: Users, title: 'On-Site Team Photography', desc: 'We bring our full studio to your Merced location — UC campus, Mercy Medical Center, or your business. Photograph your full team efficiently without disrupting operations.', price: 'Custom pricing', href: '/on-site-photography', img: '/images/BB Individual Headshot Session.png', alt: 'On-site team headshot photography' },
                   { icon: Building2, title: 'Commercial Photography', desc: 'Brand imagery, facility photography, product shots, and marketing visuals for Merced businesses, healthcare facilities, and educational institutions.', price: 'Custom pricing', href: '/commercial', img: '/images/DoctorOffice 4.jpg', alt: 'Commercial photography for businesses' },
                   { icon: Video, title: 'Video Production', desc: 'Corporate video content for Merced organizations — brand videos, educational content, patient testimonials, faculty profiles, and FAA Part 107 certified drone footage.', price: 'Custom pricing', href: '/video', img: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production' },
                   { icon: Star, title: 'Event Photography', desc: 'Professional coverage for Merced corporate events, UC conferences, healthcare fundraisers, award ceremonies, and business gatherings. 24-48 hour turnaround.', price: 'Custom pricing', href: '/event-photography', img: '/images/CLA AM 25 335.jpg', alt: 'Corporate event photography coverage' },

@@ -503,7 +503,7 @@ export default function HomePage() {
             },
             {
               question: 'Do you travel for on-site photography outside of Modesto?',
-              answer: 'Yes. We regularly travel throughout the Central Valley — Stockton, Turlock, Fresno, Sacramento, Merced, and beyond. We bring our full professional studio setup to your office, facility, or event. A travel fee applies for locations outside the immediate Modesto area.',
+              answer: 'Yes. We regularly travel throughout the Central Valley — Stockton, Turlock, Fresno, Sacramento, Merced, and beyond. We bring our full professional studio setup to your office, facility, or event. Tell us the location when you request a quote.',
             },
             {
               question: 'What is the difference between a headshot booth and on-site photography?',

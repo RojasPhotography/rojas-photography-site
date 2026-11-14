@@ -84,9 +84,9 @@ const sacramentoFaqs = [
       'Yes — on-site team days are most of what we do in Sacramento. We bring the full studio (lighting, backdrop, everything) to your Downtown, Midtown, Roseville, Folsom, Elk Grove, or Rancho Cordova location and photograph your whole team without anyone leaving the building. We just need about a 10x10 space and access to power. It works equally well for a legislative office, a law firm, an agency floor, or a corporate suite.',
   },
   {
-    question: 'How does the drive from Modesto work, and is there a travel fee?',
+    question: 'How does the drive from Modesto work for Sacramento sessions?',
     answer:
-      'Sacramento is roughly 90 minutes north of our Modesto studio, a straight shot up Highway 99 — close enough that on-site days across the capital region are routine for us. A travel fee applies for on-site visits and is built into your quote up front. Individuals are also welcome to book a session at the studio, where you review and choose your images the same day.',
+      'Sacramento is roughly 90 minutes north of our Modesto studio, a straight shot up Highway 99 — close enough that on-site days across the capital region are routine for us. On-site days are quoted by team size and location. Individuals are also welcome to book a session at the studio, where you review and choose your images the same day.',
   },
   {
     question: 'Can you match a new hire to our team’s existing headshot look later?',
@@ -262,7 +262,7 @@ export default function SacramentoHeadshotsPage() {
                   {
                     icon: Users,
                     title: 'On-Site Team Photography',
-                    desc: 'We bring our full studio to your Sacramento location — Capitol office, law firm, UC Davis Medical Center, or your business. Efficient team photography without disrupting your operations. Travel fee applies.',
+                    desc: 'We bring our full studio to your Sacramento location — Capitol office, law firm, UC Davis Medical Center, or your business. Efficient team photography without disrupting your operations.',
                     price: 'Custom pricing',
                     href: '/on-site-photography',
                     img: '/images/BB Individual Headshot Session.png',

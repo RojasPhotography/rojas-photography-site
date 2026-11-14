@@ -38,7 +38,7 @@ const faqs = [
   {
     question: 'Do you travel to the Bay Area, Los Angeles, or San Diego for events?',
     answer:
-      'Yes. We’re based in Modesto and cover events statewide — we’ve photographed conferences and receptions in San Francisco and Newport Beach, and we cover corporate events in Los Angeles and San Diego. Travel is built into your quote, so you get one clear price for the coverage you need.',
+      'Yes. We’re based in Modesto and cover events statewide — we’ve photographed conferences and receptions in San Francisco and Newport Beach, and we cover corporate events in Los Angeles and San Diego. You get one clear quote for the coverage you need.',
   },
   {
     question: 'Do you do step and repeat photography at events?',

@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: 'How far is your studio from Stockton?',
-    answer: 'Our studio is in Modesto, approximately 35–40 minutes from downtown Stockton via Highway 99. We also bring our full professional portable studio — lighting, backdrops, and equipment — directly to your Stockton office, conference room, or breakroom. The same quality results either way. A travel fee applies for on-site visits.',
+    answer: 'Our studio is in Modesto, approximately 35–40 minutes from downtown Stockton via Highway 99. We also bring our full professional portable studio — lighting, backdrops, and equipment — directly to your Stockton office, conference room, or breakroom. The same quality results either way.',
   },
   {
     question: 'What do headshot sessions cost for Stockton professionals?',
