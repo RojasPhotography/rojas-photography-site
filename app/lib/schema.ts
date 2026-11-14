@@ -172,6 +172,7 @@ export function generateServiceSchema(options: ServiceSchemaOptions) {
       { '@type': 'City', name: 'Fresno' },
       { '@type': 'City', name: 'Sacramento' },
       { '@type': 'AdministrativeArea', name: 'Central Valley' },
+      { '@type': 'State', name: 'California' },
     ],
     ...(options.image && { image: options.image }),
     url: options.url,

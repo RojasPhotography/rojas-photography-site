@@ -36,6 +36,11 @@ const faqs = [
       'Absolutely! For larger events, we can deploy multiple photographers to ensure complete coverage across all areas and ensure no important moments are missed. We coordinate team photographers to maintain consistency and deliver all images from the same professional vision. We\'ve successfully covered major events for organizations like Comcast, Save Mart, California Lawyers Association, and Valley First Credit Union.',
   },
   {
+    question: 'Do you travel to the Bay Area, Los Angeles, or San Diego for events?',
+    answer:
+      'Yes. We’re based in Modesto and cover events statewide — we’ve photographed conferences and receptions in San Francisco and Newport Beach, and we cover corporate events in Los Angeles and San Diego. Travel is built into your quote, so you get one clear price for the coverage you need.',
+  },
+  {
     question: 'Do you do step and repeat photography at events?',
     answer:
       'Yes! We provide professional step and repeat backdrop photography with branded backgrounds perfect for sponsor recognition, brand activation, and creating shareable moments. This service is ideal for galas, award ceremonies, fundraising events, and product launches. Photos are instantly available for social media sharing, event promotion, and sponsor documentation. Contact us for pricing based on your event location and duration.',
@@ -476,8 +481,8 @@ export default function EventPhotographyPage() {
                   items: ['University & college events', 'School foundation fundraisers', 'City & county public events', 'Recognition & commencement events', 'Training & seminar photography'],
                 },
                 {
-                  category: 'Bay Area & Regional',
-                  items: ['Large-scale corporate conferences', 'Tech & innovation summits', 'Multi-photographer team coverage', 'Statewide association events', 'High-profile galas & receptions'],
+                  category: 'Bay Area & Statewide',
+                  items: ['Large-scale corporate conferences', 'Tech & innovation summits', 'Los Angeles & San Diego event coverage', 'Statewide association events', 'High-profile galas & receptions'],
                 },
               ].map((group) => (
                 <SectionReveal key={group.category}>
@@ -506,7 +511,7 @@ export default function EventPhotographyPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-2 gap-8">
               {[
-                { title: 'Local Expertise, Regional Reach', desc: "Based in Modesto, we know the Central Valley — the venues, the organizations, the community. We serve clients from Stockton and Fresno to Sacramento and the Bay Area, with the same local commitment everywhere we go." },
+                { title: 'Local Expertise, Statewide Reach', desc: "Based in Modesto, we know the Central Valley — the venues, the organizations, the community. We serve clients from Stockton and Fresno to Sacramento, the Bay Area, Los Angeles, and San Diego, with the same commitment everywhere we go." },
                 { title: 'Every Event Gets Our Full Attention', desc: "A 50-person chamber mixer gets the same preparation and professionalism as a 500-person gala. We review your schedule, communicate with your team, and show up ready — every time." },
                 { title: 'Professional & Unobtrusive', desc: 'We blend into the event while capturing everything — you and your guests won\'t feel like you\'re being photographed.' },
                 { title: 'Fast Delivery', desc: 'Full edited gallery delivered within 5–7 business days. Ask about our add-on for real-time face recognition delivery to attendees during your event.' },
@@ -601,7 +606,7 @@ export default function EventPhotographyPage() {
               <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Ready to Capture Your Next Event?</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Let us document your event with professional photography. From planning to delivery, we handle everything.
-                Planning a multi-day program? See our <Link href="/conference-photography" className="text-[var(--color-primary)] font-semibold hover:underline">conference photography across the Central Valley and Sacramento</Link>.
+                Planning a multi-day program? See our <Link href="/conference-photography" className="text-[var(--color-primary)] font-semibold hover:underline">conference photography across the Central Valley, Sacramento and statewide</Link>.
                 Want attendees to leave with a professional photo? Add a <Link href="/headshot-booth" className="text-[var(--color-primary)] font-semibold hover:underline">headshot booth for your event</Link>, or
                 pair your coverage with an <Link href="/video" className="text-[var(--color-primary)] font-semibold hover:underline">event highlight video</Link>.
               </p>

@@ -40,7 +40,7 @@ const faqs = [
   {
     question: 'Do you work outside Modesto?',
     answer:
-      'Yes. We film across the Central Valley, including Stockton, Turlock, Merced, Fresno and Sacramento, and travel for larger projects. Tell us the location when you request a quote.',
+      'Yes. We film across the Central Valley, including Stockton, Turlock, Merced, Fresno and Sacramento, and travel statewide for larger projects — including the Bay Area, Los Angeles and San Diego. Tell us the location when you request a quote.',
   },
   {
     question: 'Can you deliver videos for social media?',
@@ -85,7 +85,7 @@ const socialVideos: { id: string; title: string; caption: string }[] = [];
 
 const quickFacts = [
   { label: 'Turnaround', value: '1-2 weeks for short videos, 3-4 weeks for full productions' },
-  { label: 'Coverage', value: 'Modesto, Stockton, Turlock, Merced, Fresno, Sacramento and the Central Valley' },
+  { label: 'Coverage', value: 'Modesto, Stockton, Turlock, Merced, Fresno, Sacramento and the Central Valley, with statewide travel for larger productions' },
   { label: 'Credentials', value: 'FAA Part 107 certified drone pilots, insured' },
 ];
 
