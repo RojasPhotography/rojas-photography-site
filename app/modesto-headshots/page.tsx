@@ -461,7 +461,7 @@ export default function ModestoHeadshotsPage() {
                 <SectionReveal>
                   <Link href="/on-site-photography" className="block group">
                     <div className="relative h-[360px] rounded-xl overflow-hidden hover:shadow-2xl transition-all">
-                      <Image src="/images/BB Individual Headshot Session.png" alt="On-site team photography Modesto" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <Image src="/images/bb-individual-headshot-session.jpg" alt="On-site team photography Modesto" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/80" />
                       <div className="relative z-10 p-7 h-full flex flex-col justify-end">
                         <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform backdrop-blur-sm">

@@ -265,7 +265,7 @@ export default function SacramentoHeadshotsPage() {
                     desc: 'We bring our full studio to your Sacramento location — Capitol office, law firm, UC Davis Medical Center, or your business. Efficient team photography without disrupting your operations.',
                     price: 'Custom pricing',
                     href: '/on-site-photography',
-                    img: '/images/BB Individual Headshot Session.png',
+                    img: '/images/bb-individual-headshot-session.jpg',
                     alt: 'On-site team headshot photography',
                   },
                   {

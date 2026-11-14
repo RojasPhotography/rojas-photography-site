@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/Kaiser BTS Headshots.png',
+        url: '/images/kaiser-bts-headshots.jpg',
         alt: 'Professional headshot booth setup - Rojas Photography Modesto',
       },
     ],
@@ -73,7 +73,7 @@ export default function HeadshotBoothPage() {
         name: 'Headshot Booth for Corporate Events',
         description: 'Professional headshot booth for expos, training days, and corporate events in Modesto and Central Valley. Priced by the hour.',
         url: 'https://rojasphotography.net/headshot-booth',
-        image: 'https://rojasphotography.net/images/Kaiser BTS Headshots.png',
+        image: 'https://rojasphotography.net/images/kaiser-bts-headshots.jpg',
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([
@@ -84,7 +84,7 @@ export default function HeadshotBoothPage() {
 
       {/* Hero - SB7: A Character */}
       <HeroSection
-        image="/images/Kaiser BTS Headshots.png"
+        image="/images/kaiser-bts-headshots.jpg"
         title="A Headshot Booth That Keeps Your Event Moving."
         tag="Headshot Booth | Modesto & Central Valley"
         objectPosition="center 40%"
@@ -205,7 +205,7 @@ export default function HeadshotBoothPage() {
         </section>
 
         {/* Early CTA */}
-        <ParallaxBand image="/images/Kaiser BTS Headshots.png" overlayOpacity={72}>
+        <ParallaxBand image="/images/kaiser-bts-headshots.jpg" overlayOpacity={72}>
           <SectionReveal>
             <p className="text-white text-2xl md:text-3xl mb-6 leading-relaxed font-[family-name:var(--font-heading)]">
               Make professional headshots the highlight of your next event.
@@ -229,9 +229,9 @@ export default function HeadshotBoothPage() {
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-4">
               {[
-                { src: '/images/Kaiser BTS Headshots.png', alt: 'Behind the scenes at Kaiser on-site headshot booth', objectPosition: 'center 40%' },
+                { src: '/images/kaiser-bts-headshots.jpg', alt: 'Behind the scenes at Kaiser on-site headshot booth', objectPosition: 'center 40%' },
                 { src: '/images/comcast-livermore-booth-bts.jpg', alt: 'Headshot booth behind the scenes at a Comcast office in Livermore, CA', objectPosition: 'center 30%' },
-                { src: '/images/BB Individual Headshot Session.png', alt: 'Individual headshot session at corporate event', objectPosition: 'center 30%' },
+                { src: '/images/bb-individual-headshot-session.jpg', alt: 'Individual headshot session at corporate event', objectPosition: 'center 30%' },
               ].map((img) => (
                 <SectionReveal key={img.src} className="img-hover-zoom rounded-xl overflow-hidden h-80 relative">
                   <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" style={{ objectPosition: img.objectPosition }} />
