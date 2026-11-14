@@ -25,9 +25,9 @@ const faqs = [
       'Yes. That’s exactly why conferences need a plan, not just a photographer. For multi-track programs we deploy a coordinated team of photographers so the keynote, the breakout rooms, the expo floor, and the networking are all covered at the same time — with one consistent look across every image. We map your run of show in advance so nothing important happens off-camera.',
   },
   {
-    question: 'Do you travel to Sacramento, the Bay Area, or beyond for conferences?',
+    question: 'Do you travel to Sacramento, the Bay Area, Los Angeles, or San Diego for conferences?',
     answer:
-      'We do, regularly. We’re based in Modesto and cover conferences throughout the Central Valley and Sacramento, and we travel for statewide association meetings and Bay Area events — we’ve photographed conferences as far as San Francisco. Travel is simply built into your quote.',
+      'We do, regularly. We’re based in Modesto and cover conferences and corporate events statewide — we’ve photographed conferences in San Francisco and Newport Beach, and we cover events in Los Angeles and San Diego. Tell us your dates and venue when you request a quote.',
   },
   {
     question: 'Can you set up a headshot station for attendees at our conference?',
@@ -49,13 +49,13 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Conference Photographer | Modesto & Central Valley CA',
   description:
-    'Multi-photographer conference photography across Modesto, the Central Valley & Sacramento — keynotes, breakouts, expo, and networking, delivered fast.',
+    'Multi-photographer conference photography across California — Modesto, Sacramento, the Bay Area, LA & San Diego. Keynotes, breakouts, expo and networking.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/conference-photography',
   },
   openGraph: {
-    title: 'Conference Photography in Modesto, Central Valley & Sacramento',
+    title: 'Conference Photography — Modesto, Sacramento & Statewide',
     description:
       'Professional multi-photographer conference coverage — keynotes, breakout sessions, the expo floor, and networking. Trusted by the California Lawyers Association.',
     url: 'https://rojasphotography.net/conference-photography',
@@ -74,7 +74,7 @@ export default function ConferencePhotographyPage() {
     <>
       <SchemaScript schema={generateServiceSchema({
         name: 'Conference Photography',
-        description: 'Professional multi-photographer conference and multi-day event photography in Modesto, the Central Valley, and Sacramento — keynotes, breakout sessions, expo floor, and networking. Trusted by the California Lawyers Association.',
+        description: 'Professional multi-photographer conference and multi-day event photography across California — based in Modesto, covering Sacramento, the Bay Area, Los Angeles, and San Diego. Keynotes, breakout sessions, expo floor, and networking. Trusted by the California Lawyers Association.',
         url: 'https://rojasphotography.net/conference-photography',
         image: 'https://rojasphotography.net/images/CLA AM 25 335.jpg',
       })} />
@@ -88,7 +88,7 @@ export default function ConferencePhotographyPage() {
         {/* Hero */}
         <HeroSection
           title="Conference Photography That Covers Every Room — Not Just the Keynote"
-          subtitle="Coordinated, multi-photographer coverage for conferences, annual meetings, and multi-day events across Modesto, the Central Valley, and Sacramento — keynotes, breakout sessions, the expo floor, and the hallway conversations, all delivered fast."
+          subtitle="Coordinated, multi-photographer coverage for conferences, annual meetings, and multi-day events — based in Modesto, covering Sacramento, the Bay Area, and all of California. Keynotes, breakout sessions, the expo floor, and the hallway conversations, all delivered fast."
           tag="Conference & Multi-Day Event Photography"
           gradient
         >
@@ -422,7 +422,7 @@ export default function ConferencePhotographyPage() {
                   { category: 'Agriculture & Industry', items: ['Ag industry conferences', 'Trade shows & expos', 'Grower & commodity meetings', 'Manufacturing & logistics summits'] },
                   { category: 'Finance & Business', items: ['Credit union & banking conferences', 'Chamber of Commerce summits', 'Real estate & development events', 'Professional development days'] },
                   { category: 'Government & Education', items: ['State agency conferences', 'University & college convenings', 'Public-sector summits', 'Training & seminar series'] },
-                  { category: 'Regional & Statewide', items: ['Sacramento association meetings', 'Bay Area corporate conferences', 'Multi-day, multi-photographer events', 'High-profile statewide galas'] },
+                  { category: 'Regional & Statewide', items: ['Sacramento association meetings', 'Bay Area corporate conferences', 'Los Angeles & San Diego events', 'High-profile statewide galas'] },
                 ].map((group) => (
                   <SectionReveal key={group.category}>
                     <div className="bg-white rounded-xl p-6 h-full border border-gray-100">

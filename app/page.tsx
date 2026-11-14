@@ -412,6 +412,8 @@ export default function HomePage() {
             </div>
             <SectionReveal>
               <p className="mt-12 text-center text-[var(--color-text-body)]">
+                Planning a conference or annual meeting? See our <Link href="/conference-photography" className="text-[var(--color-primary)] font-semibold hover:underline">conference photography across the Central Valley, Sacramento and statewide</Link>.
+                <br className="hidden md:block" />
                 Larger or custom project? <Link href="/discovery-call" className="text-[var(--color-primary)] font-semibold hover:underline">Book a free, zero-pressure discovery call →</Link>
               </p>
             </SectionReveal>
@@ -501,7 +503,7 @@ export default function HomePage() {
             },
             {
               question: 'Do you travel for on-site photography outside of Modesto?',
-              answer: 'Yes. We regularly travel throughout the Central Valley — Stockton, Turlock, Fresno, Sacramento, Merced, and beyond. We bring our full professional studio setup to your office, facility, or event. A travel fee applies for locations outside the immediate Modesto area.',
+              answer: 'Yes. We regularly travel throughout the Central Valley — Stockton, Turlock, Fresno, Sacramento, Merced, and beyond. We bring our full professional studio setup to your office, facility, or event. Tell us the location when you request a quote.',
             },
             {
               question: 'What is the difference between a headshot booth and on-site photography?',

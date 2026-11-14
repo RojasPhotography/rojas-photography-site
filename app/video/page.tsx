@@ -8,7 +8,7 @@ import FAQSection from '../components/FAQSection';
 import SchemaScript from '../components/SchemaScript';
 import DefinitionBox from '../components/DefinitionBox';
 import VideoFacade from '../components/VideoFacade';
-import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema } from '../lib/schema';
+import { generateServiceSchema, generateFAQSchema, generateBreadcrumbSchema, generateVideoSchema } from '../lib/schema';
 import { serviceDefinitions } from '../lib/definitions';
 
 const faqs = [
@@ -40,7 +40,7 @@ const faqs = [
   {
     question: 'Do you work outside Modesto?',
     answer:
-      'Yes. We film across the Central Valley, including Stockton, Turlock, Merced, Fresno and Sacramento, and travel for larger projects. Tell us the location when you request a quote.',
+      'Yes. We film across the Central Valley, including Stockton, Turlock, Merced, Fresno and Sacramento, and travel statewide for larger projects — including the Bay Area, Los Angeles and San Diego. Tell us the location when you request a quote.',
   },
   {
     question: 'Can you deliver videos for social media?',
@@ -52,7 +52,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Videographer in Modesto, CA | Corporate Video Production',
   description:
-    'Corporate videographers in Modesto and the Central Valley. Brand videos, client testimonials, event video and FAA Part 107 drone aerials from Alfonso and Niomi Rojas.',
+    'Corporate videographers in Modesto and the Central Valley. Brand videos, testimonials, event video and FAA Part 107 drone aerials from Alfonso and Niomi Rojas.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/video',
@@ -77,6 +77,7 @@ const productionVideos = [
     id: 'oGWlQt6wXAE',
     title: "Those Two Angels Saved My Life | Grant's Incredible Survival Story, filmed by Rojas Photography for Doctors Medical Center",
     caption: 'Client film for Doctors Medical Center, shot by Rojas Photography.',
+    uploadDate: '2026-09-16',
   },
 ];
 
@@ -84,7 +85,7 @@ const socialVideos: { id: string; title: string; caption: string }[] = [];
 
 const quickFacts = [
   { label: 'Turnaround', value: '1-2 weeks for short videos, 3-4 weeks for full productions' },
-  { label: 'Coverage', value: 'Modesto, Stockton, Turlock, Merced, Fresno, Sacramento and the Central Valley' },
+  { label: 'Coverage', value: 'Modesto, Stockton, Turlock, Merced, Fresno, Sacramento and the Central Valley, with statewide travel for larger productions' },
   { label: 'Credentials', value: 'FAA Part 107 certified drone pilots, insured' },
 ];
 
@@ -102,6 +103,17 @@ export default function VideoServicesPage() {
         { name: 'Home', url: 'https://rojasphotography.net' },
         { name: 'Video Production', url: 'https://rojasphotography.net/video' },
       ])} />
+      {productionVideos.map((video) => (
+        <SchemaScript
+          key={video.id}
+          schema={generateVideoSchema({
+            youtubeId: video.id,
+            name: video.title,
+            description: video.caption,
+            uploadDate: video.uploadDate,
+          })}
+        />
+      ))}
       <div className="min-h-screen bg-white">
       <HeroSection
         title="Corporate Videographers in Modesto & the Central Valley"
@@ -358,7 +370,7 @@ export default function VideoServicesPage() {
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Plan Your Video With Alfonso and Niomi</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
-                Tell us what you need and where. We reply with a custom quote within 24 hours. Looking for photography instead? See our <Link href="/commercial" className="underline">commercial photography</Link> and <Link href="/event-photography" className="underline">event photography</Link>.
+                Tell us what you need and where. We reply with a custom quote within 24 hours. Looking for photography instead? See our <Link href="/commercial" className="underline">commercial photography</Link>, <Link href="/event-photography" className="underline">event photography</Link> and <Link href="/conference-photography" className="underline">conference coverage</Link>.
               </p>
               <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">

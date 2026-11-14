@@ -14,7 +14,7 @@ export function generateLocalBusinessSchema() {
       'https://rojasphotography.net/images/headshots/headshot-executive-ceo.jpg',
     ],
     description:
-      'Professional corporate photography and video services in Modesto and Central Valley, CA. Specializing in executive headshots, on-site team photography, headshot booths, commercial photography, video production, and corporate event coverage. Founded and operated by Alfonso Rojas, FAA Part 107 certified, with 15+ years of corporate leadership experience.',
+      'Premium corporate photography and video studio in Modesto and the Central Valley, CA, owned and run by Alfonso and Niomi Rojas — two photographers on every session. Specializing in executive headshots, on-site team photography, headshot booths, commercial photography, video production, and conference and corporate event coverage. FAA Part 107 certified, with 15+ years of corporate leadership experience.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Modesto',
@@ -48,21 +48,38 @@ export function generateLocalBusinessSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',
-      reviewCount: '60',
+      reviewCount: '64',
       bestRating: '5',
       worstRating: '1',
     },
-    founder: {
-      '@type': 'Person',
-      name: 'Alfonso Rojas',
-      jobTitle: 'Founder & Lead Photographer',
-      url: 'https://rojasphotography.net/about-rojas-photography',
-    },
-    employee: {
-      '@type': 'Person',
-      name: 'Alfonso Rojas',
-      jobTitle: 'Founder & Lead Photographer',
-    },
+    founder: [
+      {
+        '@type': 'Person',
+        '@id': 'https://rojasphotography.net/about-rojas-photography#alfonso',
+        name: 'Alfonso Rojas',
+        jobTitle: 'Founder & Lead Photographer',
+        url: 'https://rojasphotography.net/about-rojas-photography',
+      },
+      {
+        '@type': 'Person',
+        '@id': 'https://rojasphotography.net/about-rojas-photography#niomi',
+        name: 'Niomi Rojas',
+        jobTitle: 'Co-Founder & Operations Director',
+        url: 'https://rojasphotography.net/about-rojas-photography',
+      },
+    ],
+    employee: [
+      {
+        '@type': 'Person',
+        name: 'Alfonso Rojas',
+        jobTitle: 'Founder & Lead Photographer',
+      },
+      {
+        '@type': 'Person',
+        name: 'Niomi Rojas',
+        jobTitle: 'Co-Founder & Operations Director',
+      },
+    ],
     knowsAbout: [
       'Corporate Photography',
       'Executive Headshots',
@@ -115,7 +132,8 @@ export function generateOrganizationSchema() {
     name: 'Rojas Photography',
     url: 'https://rojasphotography.net',
     logo: 'https://rojasphotography.net/images/Rojas Photography Logo 24.6.png',
-    description: 'Professional corporate photography and video services',
+    description:
+      'Premium corporate photography and video studio in Modesto, CA, owned and run by Alfonso and Niomi Rojas — two photographers on every session.',
     sameAs: [
       'https://www.instagram.com/rojasphotographymodesto/',
       'https://www.facebook.com/rojasphotography/',
@@ -144,6 +162,7 @@ export function generateServiceSchema(options: ServiceSchemaOptions) {
     description: options.description,
     provider: {
       '@type': 'LocalBusiness',
+      '@id': 'https://rojasphotography.net',
       name: 'Rojas Photography',
       url: 'https://rojasphotography.net',
     },
@@ -151,7 +170,9 @@ export function generateServiceSchema(options: ServiceSchemaOptions) {
       { '@type': 'City', name: 'Modesto' },
       { '@type': 'City', name: 'Stockton' },
       { '@type': 'City', name: 'Fresno' },
-      { '@type': 'City', name: 'Central Valley' },
+      { '@type': 'City', name: 'Sacramento' },
+      { '@type': 'AdministrativeArea', name: 'Central Valley' },
+      { '@type': 'State', name: 'California' },
     ],
     ...(options.image && { image: options.image }),
     url: options.url,
@@ -193,6 +214,37 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
       name: item.name,
       item: item.url,
     })),
+  };
+}
+
+interface VideoSchemaOptions {
+  /** YouTube video ID */
+  youtubeId: string;
+  name: string;
+  description: string;
+  /** ISO 8601 date the video was published on YouTube */
+  uploadDate: string;
+}
+
+/**
+ * Generate VideoObject schema for an embedded YouTube video —
+ * enables video rich results and makes the work citable by AI search.
+ */
+export function generateVideoSchema(options: VideoSchemaOptions) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: options.name,
+    description: options.description,
+    thumbnailUrl: `https://i.ytimg.com/vi/${options.youtubeId}/hqdefault.jpg`,
+    uploadDate: options.uploadDate,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${options.youtubeId}`,
+    contentUrl: `https://www.youtube.com/watch?v=${options.youtubeId}`,
+    publisher: {
+      '@type': 'Organization',
+      '@id': 'https://rojasphotography.net/#organization',
+      name: 'Rojas Photography',
+    },
   };
 }
 

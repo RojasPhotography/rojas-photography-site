@@ -48,7 +48,7 @@ const faqs = [
   {
     question: 'Do you travel outside Modesto for corporate events?',
     answer:
-      'Yes. Rojas Photography travels statewide for corporate events. We regularly cover events in Modesto, Stockton, Fresno, Sacramento, the Bay Area, San Francisco, Los Angeles, Orange County, and San Diego. Travel fees apply for events outside the Central Valley. Contact us with your event location and date for a full quote.',
+      'Yes. Rojas Photography travels statewide for corporate events. We regularly cover events in Modesto, Stockton, Fresno, Sacramento, the Bay Area, San Francisco, Los Angeles, Orange County, and San Diego. Contact us with your event location and date for a full quote.',
   },
 ];
 
@@ -248,6 +248,8 @@ export default function CorporateEventPhotographyCostPage() {
               <p className="text-center text-sm text-[var(--color-text-muted)] mt-4">
                 Corporate event coverage across Modesto and the Central Valley —{' '}
                 <Link href="/event-photography" className="text-[var(--color-primary)] hover:underline">view full event gallery →</Link>
+                {' '}· Multi-day program?{' '}
+                <Link href="/conference-photography" className="text-[var(--color-primary)] hover:underline">see conference photography →</Link>
               </p>
             </div>
           </section>
