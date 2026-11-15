@@ -10,7 +10,7 @@ const faqs = [
   {
     question: 'How much does a headshot booth cost?',
     answer:
-      'At Rojas Photography, a headshot booth half day (4 hours) is a flat $2,500 with unlimited attendees — we photograph every person who steps in front of the camera, and the edited gallery is delivered the same day. Longer events get a clear flat quote the same way. For comparison, national headshot-booth vendors commonly charge $5,000 or more for a single conference day.',
+      'At Rojas Photography, headshot booth pricing starts at $2,500 for a half day (4 hours) and $5,000 for a full day — unlimited attendees either way. We photograph every person who steps in front of the camera, and the edited gallery is delivered the same day. Multi-day events get a clear flat quote. For comparison, national headshot-booth vendors commonly charge $5,000 or more for a single conference day.',
   },
   {
     question: 'How many people can a headshot booth photograph?',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
 };
 
 const costFactors = [
-  { factor: 'Event Duration', detail: 'The main variable. A half day (4 hours) covers most conference and employee events at a flat $2,500. Full-day expos and multi-day conferences get a flat quote scaled to the schedule — never a per-head surprise.' },
+  { factor: 'Event Duration', detail: 'The main variable. A half day (4 hours) covers most conference and employee events, starting at $2,500. A full day is $5,000, and multi-day conferences get a flat quote scaled to the schedule — never a per-head surprise.' },
   { factor: 'Attendance', detail: 'With a flat-rate booth, attendance changes your per-person value, not your price. 40 attendees works out to about $62 per headshot; 80 attendees works out to about $31. The busier your event, the better the math gets.' },
   { factor: 'Location', detail: 'We run booths statewide — Central Valley, Sacramento, the Bay Area, Los Angeles, and San Diego. Tell us the venue and dates and your quote covers everything.' },
   { factor: 'Delivery Speed', detail: 'Same-day gallery delivery is standard, not an upgrade. Attendees get their edited headshots while your event is still the thing they are talking about.' },
@@ -134,17 +134,17 @@ export default function HeadshotBoothCostPage() {
                 <SectionReveal>
                   <div className="bg-[var(--color-primary)] rounded-xl p-8 text-center shadow-lg">
                     <p className="text-sm font-semibold text-white/70 uppercase tracking-wide mb-2">Booth Half Day (4 hrs)</p>
-                    <p className="text-4xl font-bold text-white mb-2">$2,500 flat</p>
+                    <p className="text-4xl font-bold text-white mb-2">Starts at $2,500</p>
                     <p className="text-white/70 text-sm mb-4">unlimited attendees</p>
                     <p className="text-white/90 text-sm leading-relaxed">Every person who steps in front of the camera is photographed, coached, and in the same-day gallery.</p>
                   </div>
                 </SectionReveal>
                 <SectionReveal>
                   <div className="bg-[var(--color-bg-warm)] rounded-xl p-8 text-center border border-gray-100">
-                    <p className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wide mb-2">Full Day & Multi-Day</p>
-                    <p className="text-4xl font-bold text-[var(--color-primary)] mb-2">Flat quote</p>
-                    <p className="text-[var(--color-text-muted)] text-sm mb-4">scaled to your schedule</p>
-                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">All-day expos and multi-day conferences get one clear number — tell us your run of show.</p>
+                    <p className="text-sm font-semibold text-[var(--color-text-muted)] uppercase tracking-wide mb-2">Booth Full Day</p>
+                    <p className="text-4xl font-bold text-[var(--color-primary)] mb-2">$5,000</p>
+                    <p className="text-[var(--color-text-muted)] text-sm mb-4">unlimited attendees</p>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">All-day expos and conferences. Multi-day events get one clear flat quote — tell us your run of show.</p>
                   </div>
                 </SectionReveal>
                 <SectionReveal>

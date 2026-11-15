@@ -24,7 +24,7 @@ const faqs = [
   {
     question: 'How is a headshot booth priced?',
     answer:
-      'A headshot booth half day (4 hours) is a flat $2,500 — we photograph every person who steps in front of the camera, with no per-head count to manage. Longer events get a clear flat quote the same way. Contact us with your event details and we\'ll confirm it in one email — no surprises.',
+      'Headshot booth pricing starts at $2,500 for a half day (4 hours) and $5,000 for a full day — we photograph every person who steps in front of the camera, with no per-head count to manage. Contact us with your event details and we\'ll confirm it in one email — no surprises.',
   },
   {
     question: 'What kinds of events work well with a headshot booth?',
@@ -271,7 +271,7 @@ export default function HeadshotBoothPage() {
             <SectionReveal>
               <div className="bg-white p-8 rounded-xl border border-gray-100 max-w-sm mx-auto text-center shadow-sm">
                 <h3 className="text-2xl text-[var(--color-primary)] mb-4">Pricing</h3>
-                <p className="text-[var(--color-text-body)] mb-2">A half day (4 hours) is a flat $2,500 — unlimited people. See the full <a href="/headshot-booth-cost" className="text-[var(--color-primary)] hover:underline">headshot booth cost guide</a>.</p>
+                <p className="text-[var(--color-text-body)] mb-2">A half day (4 hours) starts at $2,500; a full day is $5,000 — unlimited people. See the full <a href="/headshot-booth-cost" className="text-[var(--color-primary)] hover:underline">headshot booth cost guide</a>.</p>
                 <p className="text-[var(--color-text-muted)] text-sm mb-6">Custom quote based on event length and attendance.</p>
                 <Link
                   href="/contact-quote"
