@@ -114,18 +114,18 @@ export default function PremiumHeadshotsPage() {
           </div>
           <div className="grid grid-cols-3 gap-3 md:gap-4">
             {[
-              { src: '/images/headshots/headshot-executive-ceo.jpg', alt: 'Premium executive headshot by Rojas Photography — woman in red on dark backdrop' },
-              { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Premium corporate headshot — finance executive in dark suit, Modesto studio' },
-              { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot on dark backdrop — Rojas Photography Modesto' },
-              { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot — woman in grey blazer' },
-              { src: '/images/headshots/headshot-executive-02.jpg', alt: 'Executive headshot — man with glasses, studio lighting' },
-              { src: '/images/headshots/headshot-ceo-nutrition-01.jpg', alt: 'CEO headshot — woman in pink blazer, Modesto studio' },
-              { src: '/images/headshots/headshot-cpa-finance-01.jpg', alt: 'Finance professional headshot — man with glasses on dark backdrop' },
-              { src: '/images/headshots/headshot-sales-manager-01.jpg', alt: 'Professional headshot — woman on dark backdrop, coached session' },
-              { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Corporate executive headshot — woman in white blazer' },
+              { src: '/images/headshots/headshot-executive-ceo.jpg', alt: 'Premium executive headshot by Rojas Photography — woman in red on dark backdrop', pos: '48% 50%' },
+              { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Premium corporate headshot — finance executive in dark suit, Modesto studio', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-attorney-11.jpg', alt: 'Attorney headshot — smiling lawyer in yellow blazer on dark backdrop', pos: '75% 50%' },
+              { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot — woman in grey blazer', pos: '26% 50%' },
+              { src: '/images/headshots/headshot-executive-02.jpg', alt: 'Executive headshot — man with glasses, studio lighting', pos: '59% 50%' },
+              { src: '/images/headshots/headshot-ceo-nutrition-01.jpg', alt: 'CEO headshot — woman in pink blazer, Modesto studio', pos: '47% 50%' },
+              { src: '/images/headshots/headshot-cpa-finance-01.jpg', alt: 'Finance professional headshot — man with glasses on dark backdrop', pos: '66% 50%' },
+              { src: '/images/headshots/headshot-sales-manager-01.jpg', alt: 'Professional headshot — woman on dark backdrop, coached session', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Corporate executive headshot — woman in white blazer', pos: '57% 50%' },
             ].map((img) => (
               <div key={img.src} className="relative aspect-[4/5] rounded-xl overflow-hidden">
-                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover object-top" />
+                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover" style={{ objectPosition: img.pos }} />
               </div>
             ))}
           </div>

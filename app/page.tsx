@@ -66,8 +66,8 @@ const portfolio: { src: string; alt: string; pos: string; wide?: boolean }[] = [
   { src: '/images/headshots/headshot-attorney-07.jpg', alt: 'Lawyer headshot Modesto CA - Professional legal photography', pos: '55% 30%' },
   { src: '/images/headshots/headshot-executive-02.jpg', alt: 'Executive headshot Modesto CA - Corporate leadership photography', pos: '55% 30%' },
   { src: '/images/headshots/headshot-attorney-08.jpg', alt: 'Attorney headshot Modesto - Central Valley law firm photography', pos: '50% 32%' },
-  { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot Modesto - Professional medical photography', pos: '50% 25%' },
-  { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot Modesto CA - Professional law firm photography', pos: '58% 30%' },
+  { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot Modesto - Professional medical photography', pos: '40% 28%' },
+  { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot Modesto CA - Professional law firm photography', pos: '62% 30%' },
   { src: '/images/headshots/headshot-attorney-11.jpg', alt: 'Lawyer headshot Modesto - Modern attorney portrait photography', pos: '58% 32%' },
   { src: '/images/work/cla-annual-meeting-2026/cla-annual-meeting-speaker-laughing.jpg', alt: 'Conference photography California - speaker on stage at the CLA Annual Meeting San Diego', pos: '50% 35%' },
   { src: '/images/events/gallery/united-way-gala-guests.jpg', alt: 'Corporate event photography Modesto - United Way gala guests', pos: '50% 40%' },
@@ -164,18 +164,18 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-3 gap-3 md:gap-4">
             {[
-              { src: '/images/headshots/headshot-executive-ceo.jpg', alt: 'Executive headshot by Rojas Photography — woman in red on dark backdrop' },
-              { src: '/images/events/conferences/cla-annual-meeting-panelists.jpg', alt: 'Conference photography — panelists on stage at the California Lawyers Association Annual Meeting', pos: 'object-center' },
-              { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Corporate headshot — finance executive in dark suit' },
-              { src: '/images/kaiser-bts-headshots.jpg', alt: 'On-site headshot booth in action at a Kaiser corporate event', pos: 'object-center' },
-              { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Corporate executive headshot — woman in white blazer' },
-              { src: '/images/events/gallery/wfg-awards-red-carpet.jpg', alt: 'Corporate event photography — red carpet at the WFG awards gala', pos: 'object-center' },
-              { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot on dark backdrop' },
-              { src: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production for BBSI — behind the scenes', pos: 'object-center' },
-              { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot — woman in grey blazer' },
+              { src: '/images/headshots/headshot-executive-ceo.jpg', alt: 'Executive headshot by Rojas Photography — woman in red on dark backdrop', pos: '48% 50%' },
+              { src: '/images/events/conferences/cla-annual-meeting-panelists.jpg', alt: 'Conference photography — panelists on stage at the California Lawyers Association Annual Meeting', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Corporate headshot — finance executive in dark suit', pos: '50% 50%' },
+              { src: '/images/kaiser-bts-headshots.jpg', alt: 'On-site headshot booth in action at a Kaiser corporate event', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Corporate executive headshot — woman in white blazer', pos: '57% 50%' },
+              { src: '/images/events/gallery/wfg-awards-red-carpet.jpg', alt: 'Corporate event photography — red carpet at the WFG awards gala', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-attorney-11.jpg', alt: 'Attorney headshot — smiling lawyer in yellow blazer on dark backdrop', pos: '75% 50%' },
+              { src: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production for BBSI — behind the scenes', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot — woman in grey blazer', pos: '26% 50%' },
             ].map((img, i) => (
               <div key={img.src} className="hero-rise relative aspect-[4/5] rounded-xl overflow-hidden" style={{ animationDelay: `${0.15 + i * 0.06}s` }}>
-                <Image src={img.src} alt={img.alt} fill priority={i < 3} sizes="(max-width: 1024px) 33vw, 16vw" className={`object-cover ${('pos' in img && img.pos) || 'object-top'}`} />
+                <Image src={img.src} alt={img.alt} fill priority={i < 3} sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover" style={{ objectPosition: img.pos }} />
               </div>
             ))}
           </div>
