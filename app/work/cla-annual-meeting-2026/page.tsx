@@ -136,7 +136,7 @@ export default function CLAAnnualMeeting2026Page() {
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-10">From the Three Days</h2>
               </SectionReveal>
-              <MasonryGallery images={gallery} />
+              <MasonryGallery images={gallery} columnClasses="columns-1 sm:columns-2" />
               <p className="text-center text-sm text-[var(--color-text-muted)] mt-6">
                 Images shown with the event-branded frame attendees received through live delivery.
               </p>
