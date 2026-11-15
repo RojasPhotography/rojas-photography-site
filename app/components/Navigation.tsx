@@ -7,7 +7,8 @@ import Image from 'next/image';
 
 const serviceGroups = [
   {
-    label: 'Headshots',
+    label: 'Studio Headshots',
+    tagline: 'For individuals — at our Modesto studio',
     items: [
       { href: '/premium-headshots', label: 'Premium Studio Headshots' },
       { href: '/linkedin-headshots', label: 'LinkedIn Headshots' },
@@ -15,6 +16,7 @@ const serviceGroups = [
   },
   {
     label: 'Teams & Companies',
+    tagline: 'We bring the studio to your office',
     items: [
       { href: '/on-site-photography', label: 'On-Site Team Headshots' },
       { href: '/annual-headshot-programs', label: 'Annual Headshot Programs' },
@@ -23,6 +25,7 @@ const serviceGroups = [
   },
   {
     label: 'Events & Conferences',
+    tagline: 'Coverage wherever your event happens',
     items: [
       { href: '/event-photography', label: 'Event Photography' },
       { href: '/conference-photography', label: 'Conference Photography' },
@@ -31,6 +34,7 @@ const serviceGroups = [
   },
   {
     label: 'Video',
+    tagline: 'Corporate films, testimonials & drone',
     items: [{ href: '/video', label: 'Video Production' }],
   },
 ];
@@ -173,8 +177,11 @@ export default function Navigation() {
                 <div className="grid grid-cols-2 gap-x-6 gap-y-5">
                   {serviceGroups.map((group) => (
                     <div key={group.label}>
-                      <p className="px-3 pb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                      <p className="px-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
                         {group.label}
+                      </p>
+                      <p className="px-3 pb-1.5 text-xs text-gray-400/80 italic">
+                        {group.tagline}
                       </p>
                       {group.items.map((item) => (
                         <Link
@@ -308,8 +315,11 @@ export default function Navigation() {
                 <div className="pl-4 pt-2 pb-1 space-y-1">
                   {serviceGroups.map((group) => (
                     <div key={group.label}>
-                      <p className="px-4 pt-3 pb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                      <p className="px-4 pt-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
                         {group.label}
+                      </p>
+                      <p className="px-4 pb-1 text-xs text-gray-400/80 italic">
+                        {group.tagline}
                       </p>
                       {group.items.map((item) => (
                         <Link
