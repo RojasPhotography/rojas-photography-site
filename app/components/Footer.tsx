@@ -158,7 +158,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-4 mt-4">
               <a
-                href="https://www.instagram.com/rojasphotographymodesto/"
+                href="https://www.instagram.com/rojas.photos/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Rojas Photography on Instagram"

@@ -102,7 +102,7 @@ export function generateLocalBusinessSchema() {
       },
     },
     sameAs: [
-      'https://www.instagram.com/rojasphotographymodesto/',
+      'https://www.instagram.com/rojas.photos/',
       'https://www.facebook.com/rojasphotography/',
     ],
   };
@@ -135,7 +135,7 @@ export function generateOrganizationSchema() {
     description:
       'Premium corporate photography and video studio in Modesto, CA, owned and run by Alfonso and Niomi Rojas — two photographers on every session.',
     sameAs: [
-      'https://www.instagram.com/rojasphotographymodesto/',
+      'https://www.instagram.com/rojas.photos/',
       'https://www.facebook.com/rojasphotography/',
     ],
     contactPoint: {
@@ -275,7 +275,7 @@ export function generatePersonSchema() {
         postalCode: '95356',
         addressCountry: 'US',
       },
-      sameAs: ['https://www.instagram.com/rojasphotographymodesto/'],
+      sameAs: ['https://www.instagram.com/rojas.photos/'],
     },
     {
       '@context': 'https://schema.org',
