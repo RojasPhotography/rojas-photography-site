@@ -169,7 +169,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.facebook.com/rojasphotography/"
+                href="https://www.facebook.com/RojasCreativePhotography/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Rojas Photography on Facebook"
