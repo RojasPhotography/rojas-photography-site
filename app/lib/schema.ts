@@ -105,6 +105,7 @@ export function generateLocalBusinessSchema() {
       'https://www.instagram.com/rojas.photos/',
       'https://www.facebook.com/RojasCreativePhotography/',
       'https://www.linkedin.com/in/rojasheadshots/',
+      'https://www.youtube.com/@rojasphotography',
     ],
   };
 }
@@ -139,6 +140,7 @@ export function generateOrganizationSchema() {
       'https://www.instagram.com/rojas.photos/',
       'https://www.facebook.com/RojasCreativePhotography/',
       'https://www.linkedin.com/in/rojasheadshots/',
+      'https://www.youtube.com/@rojasphotography',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
