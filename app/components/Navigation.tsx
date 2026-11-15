@@ -216,10 +216,10 @@ export default function Navigation() {
           {/* CTA Button - Desktop */}
           <div className="hidden lg:block">
             <Link
-              href="/premium-headshots#booking-heading"
+              href="/contact-quote"
               className="btn-primary px-7 py-2.5 text-sm font-semibold rounded-full inline-block shadow-md hover:shadow-lg transition-all duration-300"
             >
-              Book a Session
+              Get Started
             </Link>
           </div>
 
@@ -358,11 +358,11 @@ export default function Navigation() {
           {/* Mobile CTA */}
           <div className="pt-6 border-t border-gray-100 mobile-nav-item" style={{ animationDelay: '0.3s' }}>
             <Link
-              href="/premium-headshots#booking-heading"
+              href="/contact-quote"
               className="btn-primary px-8 py-4 text-base font-semibold rounded-full w-full text-center inline-block shadow-lg"
               onClick={closeMenu}
             >
-              Book a Session
+              Get Started
             </Link>
           </div>
         </div>
