@@ -136,7 +136,8 @@ export default function HomePage() {
             </h1>
             <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.38s' }}>
               Executive headshots, team headshot days, conferences, events, and video — from our
-              Modesto studio to Los Angeles and San Diego. Two photographers. One partner. Every time.
+              Modesto studio to Los Angeles and San Diego. So when someone sizes your company up,
+              what they see matches what you&apos;ve built.
             </p>
             <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
               <Link
@@ -222,7 +223,7 @@ export default function HomePage() {
           </SectionReveal>
           <SectionReveal>
             <p className="mt-10 text-lg text-[var(--color-text-dark)] font-medium">
-              The corporate world moves fast — it deserves to be captured, documented, and shown at its best. That&apos;s the job we do.
+              The corporate world moves fast — your work deserves to be captured, documented, and shown at its best. Our job is to make sure it is.
             </p>
           </SectionReveal>
         </div>
@@ -272,10 +273,10 @@ export default function HomePage() {
           <div className="max-w-5xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
-                Working With Us Is Simple
+                Getting Started Is Simple
               </h2>
               <p className="text-center text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto mb-14">
-                Whether it&apos;s one headshot or a three-day conference, the path is the same.
+                Whether you need one headshot or a three-day conference covered, your path is the same.
               </p>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-8">
@@ -302,10 +303,10 @@ export default function HomePage() {
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
-                  What We Do
+                  How We Help
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  Professional headshots in Modesto — in our studio or at your office — plus event, conference, and video coverage across California. Both of us, every time.
+                  Professional headshots in Modesto — in our studio or at your office — plus event, conference, and video coverage across California. Whatever the day calls for, you get both of us.
                 </p>
               </div>
             </SectionReveal>
@@ -484,7 +485,7 @@ export default function HomePage() {
                   The Rojas Look
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  A sample of the executives, teams, conferences, and events we&apos;ve photographed from Modesto to San Diego
+                  Executives, teams, conferences, and events from Modesto to San Diego — every one of them at their best
                 </p>
               </div>
             </SectionReveal>
@@ -560,7 +561,7 @@ export default function HomePage() {
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
-                  What Central Valley Professionals Say About Working With Us
+                  Central Valley Professionals, In Their Own Words
                 </h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-8">
                   A headshot that finally looks like you. A team photo that shows your culture. Brand imagery that makes the right people take notice. That&apos;s what working together looks like — here&apos;s what clients say.
@@ -608,9 +609,9 @@ export default function HomePage() {
               Ready to Look as Good as You Are?
             </h2>
             <p className="text-lg mb-8 text-white/90">
-              Every job gets both of us — Alfonso and Niomi. Studio sessions book online in minutes. Team days,
-              events, conferences, and video start with one quick quote. Either way, you&apos;ll know exactly what
-              happens next within 24 hours.
+              Studio sessions book online in minutes. Team days, events, conferences, and video start with one
+              quick quote. Either way, you&apos;ll know exactly what happens next within 24 hours — and your job
+              still gets both of us, Alfonso and Niomi.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
