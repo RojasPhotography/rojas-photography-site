@@ -26,7 +26,7 @@ export default function HeroSection({
   if (image) {
     return (
       <section
-        className={`relative w-full ${heightClass} flex items-center justify-center overflow-hidden pt-20`}
+        className={`relative w-full ${heightClass} flex items-center justify-center overflow-hidden pt-20 lg:pt-28`}
         aria-label={title}
       >
         <Image
@@ -62,7 +62,7 @@ export default function HeroSection({
 
   return (
     <section
-      className={`relative w-full ${heightClass} flex items-center justify-center overflow-hidden pt-20 ${
+      className={`relative w-full ${heightClass} flex items-center justify-center overflow-hidden pt-20 lg:pt-28 ${
         gradient
           ? 'bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-primary-dark)]'
           : 'bg-[var(--color-primary)]'

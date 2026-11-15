@@ -148,11 +148,33 @@ export default function Navigation() {
       </a>
 
       <nav
-        className="bg-white/95 backdrop-blur-md text-[var(--color-text-dark)] px-4 sm:px-6 md:px-8 py-4 fixed w-full top-0 z-50 border-b border-gray-100 shadow-sm"
+        className="bg-white/95 backdrop-blur-md text-[var(--color-text-dark)] fixed w-full top-0 z-50 border-b border-gray-100 shadow-sm"
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+        {/* Utility bar — phone + socials */}
+        <div className="hidden lg:block border-b border-gray-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-1.5 flex justify-between items-center text-xs text-gray-500">
+            <a href="tel:2093803727" className="hover:text-[var(--color-primary)] transition-colors font-medium tracking-wide">
+              209-380-3727
+            </a>
+            <div className="flex items-center gap-4">
+              <span className="text-gray-400">Modesto, CA · Serving all of California</span>
+              <span className="h-3 w-px bg-gray-200" aria-hidden="true" />
+              <div className="flex items-center gap-3">
+                {socials.map((s) => (
+                  <SocialIcon
+                    key={s.href}
+                    social={s}
+                    className="text-gray-400 hover:text-[var(--color-primary)] transition-colors duration-200 [&>svg]:w-4 [&>svg]:h-4"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-4 flex justify-between items-center">
           {/* Logo */}
           <Link
             href="/"
@@ -170,11 +192,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-5 xl:gap-8">
-            <Link href="/" className={topLinkClass}>
-              Home
-            </Link>
-
+          <div className="hidden lg:flex items-center gap-7 xl:gap-10">
             {serviceGroups.map((group) => {
               const single = group.items.length === 1;
               if (single) {
@@ -243,17 +261,8 @@ export default function Navigation() {
             </Link>
           </div>
 
-          {/* Socials + CTA - Desktop */}
-          <div className="hidden lg:flex items-center gap-4">
-            <div className="hidden xl:flex items-center gap-3">
-              {socials.map((s) => (
-                <SocialIcon
-                  key={s.href}
-                  social={s}
-                  className="text-gray-400 hover:text-[var(--color-primary)] transition-colors duration-200"
-                />
-              ))}
-            </div>
+          {/* CTA - Desktop */}
+          <div className="hidden lg:block">
             <Link
               href="/contact-quote"
               className="btn-primary px-7 py-2.5 text-sm font-semibold rounded-full inline-block shadow-md hover:shadow-lg transition-all duration-300"
