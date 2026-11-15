@@ -60,11 +60,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/work',
-        destination: '/premium-headshots',
-        permanent: true,
-      },
-      {
         source: '/individual-headshot-session',
         destination: '/premium-headshots',
         permanent: true,

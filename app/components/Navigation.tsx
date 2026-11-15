@@ -235,6 +235,9 @@ export default function Navigation() {
               );
             })}
 
+            <Link href="/work" className={topLinkClass}>
+              Work
+            </Link>
             <Link href="/about-rojas-photography" className={topLinkClass}>
               About
             </Link>
@@ -375,6 +378,14 @@ export default function Navigation() {
               );
             })}
 
+            <Link
+              href="/work"
+              className="mobile-nav-item text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-3.5 rounded-lg transition-all duration-200"
+              onClick={closeMenu}
+              style={{ animationDelay: '0.28s' }}
+            >
+              Work
+            </Link>
             <Link
               href="/about-rojas-photography"
               className="mobile-nav-item text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-3.5 rounded-lg transition-all duration-200"
