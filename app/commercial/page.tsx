@@ -77,8 +77,8 @@ export default function CommercialPhotographyPage() {
       <div className="min-h-screen bg-white">
       {/* SB7: A Character - Business Owner/Marketing Manager */}
       <HeroSection
-        title="Your Brand Deserves Better Than Generic Stock Photos."
-        subtitle="Custom commercial photography that tells your unique brand story—not the same images your competitors use. Authentic, professional imagery for businesses in Modesto and Central Valley."
+        title="Commercial Photography in Modesto &amp; the Central Valley"
+        subtitle="Your brand deserves better than generic stock photos — custom imagery that tells your story, not the same images your competitors use."
         tag="Brand Imagery & Commercial Photography"
         gradient
       >

@@ -90,7 +90,7 @@ const whatWeDeliver = [
   'Alternate crops for company website and speaking bios',
   'High-resolution files for print use (business cards, directories)',
   'Multiple expressions and wardrobe options to choose from',
-  'Private online gallery for easy download and sharing',
+  'Review and select your favorites in the studio — finals delivered to your inbox',
   '48-hour standard delivery — rush available for $75',
 ];
 
@@ -210,7 +210,7 @@ export default function LinkedInHeadshotsPage() {
                       Our approach is not to pose you and click. We guide you through the entire session — coaching your posture, expression, and angles in real time — until we get the shot that actually looks like you at your best. No forced smiles. No awkward stiffness. Just a genuine image that works.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      With 15+ years of corporate experience and 60+ five-star reviews, we understand how professionals want to be seen — and how to get them there.
+                      With 15+ years of corporate experience and 64 five-star reviews, we understand how professionals want to be seen — and how to get them there.
                     </p>
                   </div>
                 </SectionReveal>
@@ -226,7 +226,7 @@ export default function LinkedInHeadshotsPage() {
                   Simple Process. Powerful Results.
                 </h2>
                 <p className="text-center text-[var(--color-text-body)] text-lg mb-14 max-w-2xl mx-auto">
-                  From booking to gallery delivery, we handle everything.
+                  From booking to final delivery, we handle everything.
                 </p>
               </SectionReveal>
               <div className="grid md:grid-cols-3 gap-8">
