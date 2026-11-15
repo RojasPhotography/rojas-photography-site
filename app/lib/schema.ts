@@ -104,6 +104,7 @@ export function generateLocalBusinessSchema() {
     sameAs: [
       'https://www.instagram.com/rojas.photos/',
       'https://www.facebook.com/RojasCreativePhotography/',
+      'https://www.linkedin.com/in/rojasheadshots/',
     ],
   };
 }
@@ -137,6 +138,7 @@ export function generateOrganizationSchema() {
     sameAs: [
       'https://www.instagram.com/rojas.photos/',
       'https://www.facebook.com/RojasCreativePhotography/',
+      'https://www.linkedin.com/in/rojasheadshots/',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
