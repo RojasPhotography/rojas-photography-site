@@ -233,6 +233,7 @@ export default function Footer() {
             {[
               { href: '/professional-headshot-cost', label: 'How much a headshot costs' },
               { href: '/corporate-event-photography-cost', label: 'Corporate event photography cost' },
+              { href: '/headshot-booth-cost', label: 'Headshot booth cost' },
               { href: '/what-to-wear-for-a-headshot', label: 'What to wear' },
               { href: '/how-to-prepare-for-headshots', label: 'How to prepare' },
               { href: '/best-background-for-headshot', label: 'Best background' },

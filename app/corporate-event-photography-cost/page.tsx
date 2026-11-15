@@ -23,7 +23,7 @@ const faqs = [
   {
     question: 'What is included in corporate event photography?',
     answer:
-      'Professional corporate event photography typically includes pre-event consultation and shot list planning, full event coverage by an experienced photographer, professional editing and color correction, and delivery of high-resolution images via a private online gallery within 24–48 hours. Rojas Photography includes all of these with every event booking.',
+      'Professional corporate event photography typically includes pre-event consultation and shot list planning, full event coverage by an experienced photographer, professional editing and color correction, and delivery of high-resolution images via a private online gallery within 5–7 business days. Rojas Photography includes all of these with every event booking.',
   },
   {
     question: 'How many photos will we receive from our event?',
@@ -53,7 +53,7 @@ const faqs = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Corporate Event Photography Cost: $1,500–$4,500 | 2026 Guide',
+  title: 'Corporate Event Photography Cost | 2026 Pricing Guide',
   description:
     'Real 2026 rates for 4-hour events, full-day coverage, and multi-photographer jobs — plus what separates a budget event photographer from a premium one.',
   robots: 'index, follow',
