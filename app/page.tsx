@@ -129,7 +129,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-8 py-14 md:py-20 grid lg:grid-cols-2 gap-14 items-center text-white">
           <div>
             <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase" style={{ animationDelay: '0.1s' }}>
-              Corporate Photography &amp; Video · Modesto &amp; All of California
+              Headshots · Events &amp; Conferences · Video · Modesto &amp; All of California
             </p>
             <h1 className="hero-rise text-4xl sm:text-5xl lg:text-6xl mb-6 leading-[1.05] tracking-[-0.01em]" style={{ animationDelay: '0.22s' }}>
               Corporate photography &amp; video for companies that take image seriously.
