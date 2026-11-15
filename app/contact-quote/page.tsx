@@ -123,7 +123,7 @@ export default function ContactPage() {
                 { q: "What's your response time for inquiries?", a: "We aim to respond to all inquiries within 24 hours. We're committed to getting back to you quickly." },
                 { q: 'Do you offer packages or custom pricing?', a: "Yes! We customize our offerings based on your specific needs. Whether you need a single headshot or a comprehensive package, we can create a solution that fits your budget." },
                 { q: 'Can you travel for on-site sessions?', a: 'Absolutely! We serve Modesto, Stockton, Fresno, Turlock, Merced, and the entire Central Valley. We also travel to San Francisco and surrounding areas.' },
-                { q: 'How long does it take to get my photos?', a: 'Most projects are completed and delivered within 48-72 hours. For time-sensitive projects, we can often expedite delivery.' },
+                { q: 'How long does it take to get my photos?', a: 'It depends on the service: studio headshot finals arrive in your inbox within 48 hours, team headshot days and booth events include same-day galleries, and event, conference, and commercial galleries are delivered within 5-7 business days. For time-sensitive projects, we can often expedite delivery.' },
                 { q: 'What if I\'m not happy with my photos?', a: 'For headshot sessions, you only pay for the images you love. We stand behind our work with a 100% satisfaction guarantee.' },
                 { q: 'Do you offer rush services?', a: 'Yes, we understand that sometimes you need photos quickly. Contact us directly at 209-380-3727 and we\'ll do our best to accommodate.' },
               ].map((item) => (

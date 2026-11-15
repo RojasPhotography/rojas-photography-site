@@ -27,12 +27,12 @@ const faqs = [
   {
     question: 'What\'s included in a commercial photography package?',
     answer:
-      'Our commercial photography packages include initial consultation and project planning, professional-grade photography with appropriate lighting and equipment, full editing and color correction for consistency, and fast delivery (48-72 hours). Specific deliverables are customized to your project needs—whether you need product shots, architectural photography, lifestyle imagery, or a combination. All delivered images are fully edited and ready for immediate use on websites, social media, and marketing materials.',
+      'Our commercial photography packages include initial consultation and project planning, professional-grade photography with appropriate lighting and equipment, full editing and color correction for consistency, and delivery within 5-7 business days. Specific deliverables are customized to your project needs—whether you need product shots, architectural photography, lifestyle imagery, or a combination. All delivered images are fully edited and ready for immediate use on websites, social media, and marketing materials.',
   },
   {
     question: 'How long does commercial photography take?',
     answer:
-      'Project timelines vary based on scope. A simple product photography session (5-10 items) takes 2-3 hours. A comprehensive commercial shoot (full-day location coverage) takes 6-8 hours. After shooting, we professionally edit, color correct, and deliver all images within 48-72 hours. Rush delivery available (additional fee) with 24-hour turnaround.',
+      'Project timelines vary based on scope. A simple product photography session (5-10 items) takes 2-3 hours. A comprehensive commercial shoot (full-day location coverage) takes 6-8 hours. After shooting, we professionally edit, color correct, and deliver all images within 5-7 business days. Need them sooner? Ask about expedited delivery when you request your quote.',
   },
 ];
 
@@ -40,7 +40,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Commercial Photography in Modesto | Rojas Photography',
   description:
-    'Products, storefronts, teams, and brand content — commercial photography for Central Valley businesses that want to stand out. 48-hour delivery.',
+    'Products, storefronts, teams, and brand content — commercial photography for Central Valley businesses that want to stand out. Delivered in 5-7 business days.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/commercial',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Commercial Photography in Modesto | Rojas Photography',
     description:
-      'Products, storefronts, brand content, and business portraits for Central Valley companies. Photography that converts — delivered in 48 hours.',
+      'Products, storefronts, brand content, and business portraits for Central Valley companies. Photography that converts — delivered in 5-7 business days.',
     url: 'https://rojasphotography.net/commercial',
     type: 'website',
     images: [
@@ -176,7 +176,7 @@ export default function CommercialPhotographyPage() {
                   <span className="text-5xl font-bold text-[var(--color-primary-light)]">03</span>
                   <h3 className="text-xl text-[var(--color-text-dark)] mt-4 mb-3">Editing & Delivery</h3>
                   <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                    Your images are professionally edited, color-corrected for brand consistency, and delivered within 48-72 hours — ready for immediate use on your website, social media, and marketing materials. Authentic imagery that differentiates you, not stock photo mediocrity.
+                    Your images are professionally edited, color-corrected for brand consistency, and delivered within 5-7 business days — ready for immediate use on your website, social media, and marketing materials. Authentic imagery that differentiates you, not stock photo mediocrity.
                   </p>
                 </div>
               </SectionReveal>
@@ -272,7 +272,7 @@ export default function CommercialPhotographyPage() {
                 { title: 'Brand & Lifestyle Photography', desc: 'Authentic brand storytelling through lifestyle imagery. Capture your business culture, team in action, and brand values.' },
                 { title: 'Website & Marketing Imagery', desc: 'Custom photography for your website, social media, and marketing campaigns. Professional visuals that engage your audience.' },
                 { title: 'Professional Editing & Retouching', desc: 'All images professionally edited and color-corrected for consistency across your marketing materials.' },
-                { title: 'Fast Turnaround & Delivery', desc: 'Professional images delivered within 48-72 hours. Ready to use immediately on your website, social media, and marketing platforms.' },
+                { title: 'Fast Turnaround & Delivery', desc: 'Professional images delivered within 5-7 business days. Ready to use immediately on your website, social media, and marketing platforms.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
                   <div className="flex gap-4">
@@ -322,7 +322,7 @@ export default function CommercialPhotographyPage() {
               {[
                 { title: 'Corporate Experience', desc: 'We come from corporate leadership, so we know how to work with marketing teams and executives, and we understand your brand context, not just how to operate a camera.' },
                 { title: 'Professional Equipment', desc: 'Professional lighting, cameras, and expert direction — every shot is intentional.' },
-                { title: 'Fast Turnaround', desc: 'Images delivered within 48-72 hours without compromising quality.' },
+                { title: 'Fast Turnaround', desc: 'Reliable 5-7 business day delivery without compromising quality.' },
                 { title: 'Local to the Central Valley', desc: 'Based in Modesto, serving Stockton, Fresno, Turlock, and beyond.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>

@@ -500,7 +500,7 @@ export default function ModestoHeadshotsPage() {
                           <Building2 className="text-white" size={22} />
                         </div>
                         <h3 className="text-xl text-white mb-2">Commercial Photography</h3>
-                        <p className="text-white/85 text-sm leading-relaxed mb-3">Brand imagery, facility photography, product shots, and marketing visuals for Modesto businesses. Delivered in 48–72 hours.</p>
+                        <p className="text-white/85 text-sm leading-relaxed mb-3">Brand imagery, facility photography, product shots, and marketing visuals for Modesto businesses. Delivered in 5–7 business days.</p>
                         <span className="text-white text-sm font-semibold group-hover:underline">Learn more →</span>
                       </div>
                     </div>
