@@ -5,6 +5,36 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
+const serviceGroups = [
+  {
+    label: 'Headshots',
+    items: [
+      { href: '/premium-headshots', label: 'Premium Studio Headshots' },
+      { href: '/linkedin-headshots', label: 'LinkedIn Headshots' },
+    ],
+  },
+  {
+    label: 'Teams & Companies',
+    items: [
+      { href: '/on-site-photography', label: 'On-Site Team Headshots' },
+      { href: '/annual-headshot-programs', label: 'Annual Headshot Programs' },
+      { href: '/commercial', label: 'Commercial Photography' },
+    ],
+  },
+  {
+    label: 'Events & Conferences',
+    items: [
+      { href: '/event-photography', label: 'Event Photography' },
+      { href: '/conference-photography', label: 'Conference Photography' },
+      { href: '/headshot-booth', label: 'Headshot Booth' },
+    ],
+  },
+  {
+    label: 'Video',
+    items: [{ href: '/video', label: 'Video Production' }],
+  },
+];
+
 export default function Navigation() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -135,60 +165,30 @@ export default function Navigation() {
               </button>
 
               {/* Dropdown Menu */}
-              <div id="desktop-services-menu" className={`absolute left-1/2 -translate-x-1/2 mt-2 w-64 bg-white rounded-xl shadow-xl transition-all duration-300 border border-gray-100 py-3 overflow-hidden ${
+              <div id="desktop-services-menu" className={`absolute left-1/2 -translate-x-1/2 mt-2 w-[36rem] bg-white rounded-xl shadow-xl transition-all duration-300 border border-gray-100 p-5 overflow-hidden ${
                 desktopServicesOpen
                   ? 'opacity-100 visible translate-y-0'
                   : 'opacity-0 invisible translate-y-2 pointer-events-none'
               }`}>
-                <Link
-                  href="/premium-headshots"
-                  className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
-                  onClick={() => setDesktopServicesOpen(false)}
-                >
-                  Headshots for One
-                </Link>
-                <Link
-                  href="/on-site-photography"
-                  className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
-                  onClick={() => setDesktopServicesOpen(false)}
-                >
-                  Headshots for Teams
-                </Link>
-                <Link
-                  href="/headshot-booth"
-                  className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
-                  onClick={() => setDesktopServicesOpen(false)}
-                >
-                  Headshot Booth
-                </Link>
-                <Link
-                  href="/commercial"
-                  className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
-                  onClick={() => setDesktopServicesOpen(false)}
-                >
-                  Commercial Photography
-                </Link>
-                <Link
-                  href="/video"
-                  className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
-                  onClick={() => setDesktopServicesOpen(false)}
-                >
-                  Video Production
-                </Link>
-                <Link
-                  href="/event-photography"
-                  className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
-                  onClick={() => setDesktopServicesOpen(false)}
-                >
-                  Event Photography
-                </Link>
-                <Link
-                  href="/conference-photography"
-                  className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
-                  onClick={() => setDesktopServicesOpen(false)}
-                >
-                  Conference Photography
-                </Link>
+                <div className="grid grid-cols-2 gap-x-6 gap-y-5">
+                  {serviceGroups.map((group) => (
+                    <div key={group.label}>
+                      <p className="px-3 pb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                        {group.label}
+                      </p>
+                      {group.items.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="dropdown-item relative block px-3 py-2 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 rounded-md transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
+                          onClick={() => setDesktopServicesOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
@@ -302,59 +302,27 @@ export default function Navigation() {
               <div
                 id="mobile-services-menu"
                 className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  servicesOpen ? 'max-h-[32rem] opacity-100' : 'max-h-0 opacity-0'
+                  servicesOpen ? 'max-h-[48rem] opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
                 <div className="pl-4 pt-2 pb-1 space-y-1">
-                  <Link
-                    href="/premium-headshots"
-                    className="block text-base text-[var(--color-text-body)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-2.5 rounded-lg transition-all duration-200"
-                    onClick={closeMenu}
-                  >
-                    Headshots for One
-                  </Link>
-                  <Link
-                    href="/on-site-photography"
-                    className="block text-base text-[var(--color-text-body)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-2.5 rounded-lg transition-all duration-200"
-                    onClick={closeMenu}
-                  >
-                    Headshots for Teams
-                  </Link>
-                  <Link
-                    href="/headshot-booth"
-                    className="block text-base text-[var(--color-text-body)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-2.5 rounded-lg transition-all duration-200"
-                    onClick={closeMenu}
-                  >
-                    Headshot Booth
-                  </Link>
-                  <Link
-                    href="/commercial"
-                    className="block text-base text-[var(--color-text-body)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-2.5 rounded-lg transition-all duration-200"
-                    onClick={closeMenu}
-                  >
-                    Commercial Photography
-                  </Link>
-                  <Link
-                    href="/video"
-                    className="block text-base text-[var(--color-text-body)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-2.5 rounded-lg transition-all duration-200"
-                    onClick={closeMenu}
-                  >
-                    Video Production
-                  </Link>
-                  <Link
-                    href="/event-photography"
-                    className="block text-base text-[var(--color-text-body)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-2.5 rounded-lg transition-all duration-200"
-                    onClick={closeMenu}
-                  >
-                    Event Photography
-                  </Link>
-                  <Link
-                    href="/conference-photography"
-                    className="block text-base text-[var(--color-text-body)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-2.5 rounded-lg transition-all duration-200"
-                    onClick={closeMenu}
-                  >
-                    Conference Photography
-                  </Link>
+                  {serviceGroups.map((group) => (
+                    <div key={group.label}>
+                      <p className="px-4 pt-3 pb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+                        {group.label}
+                      </p>
+                      {group.items.map((item) => (
+                        <Link
+                          key={item.href}
+                          href={item.href}
+                          className="block text-base text-[var(--color-text-body)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-2.5 rounded-lg transition-all duration-200"
+                          onClick={closeMenu}
+                        >
+                          {item.label}
+                        </Link>
+                      ))}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
