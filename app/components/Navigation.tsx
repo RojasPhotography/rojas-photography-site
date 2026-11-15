@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 const serviceGroups = [
   {
-    label: 'Studio Headshots',
+    label: 'Headshots',
     tagline: 'For individuals — at our Modesto studio',
     items: [
       { href: '/premium-headshots', label: 'Premium Studio Headshots' },
@@ -39,11 +39,14 @@ const serviceGroups = [
   },
 ];
 
+const topLinkClass =
+  'nav-link text-sm font-medium tracking-wide hover:text-[var(--color-primary)] transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--color-primary)] hover:after:w-full after:transition-all after:duration-300';
+
 export default function Navigation() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+  const [mobileOpenGroup, setMobileOpenGroup] = useState<string | null>(null);
+  const [desktopOpenGroup, setDesktopOpenGroup] = useState<string | null>(null);
 
   // Lock body scroll when mobile menu is open
   useEffect(() => {
@@ -62,30 +65,26 @@ export default function Navigation() {
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (!target.closest('.services-dropdown-container')) {
-        setDesktopServicesOpen(false);
+        setDesktopOpenGroup(null);
       }
     };
 
-    if (desktopServicesOpen) {
+    if (desktopOpenGroup) {
       document.addEventListener('click', handleClickOutside);
     }
     return () => {
       document.removeEventListener('click', handleClickOutside);
     };
-  }, [desktopServicesOpen]);
+  }, [desktopOpenGroup]);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    setServicesOpen(false);
+    setMobileOpenGroup(null);
   };
 
   const closeMenu = () => {
     setMenuOpen(false);
-    setServicesOpen(false);
-  };
-
-  const toggleDesktopServices = () => {
-    setDesktopServicesOpen(!desktopServicesOpen);
+    setMobileOpenGroup(null);
   };
 
   if (pathname === '/newsletter') {
@@ -132,84 +131,73 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8 xl:gap-10">
-            <Link
-              href="/"
-              className="nav-link text-sm font-medium tracking-wide hover:text-[var(--color-primary)] transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--color-primary)] hover:after:w-full after:transition-all after:duration-300"
-            >
+          <div className="hidden lg:flex items-center gap-5 xl:gap-8">
+            <Link href="/" className={topLinkClass}>
               Home
             </Link>
 
-            {/* Services Dropdown - Desktop */}
-            <div className="relative group services-dropdown-container">
-              <button
-                onClick={toggleDesktopServices}
-                className="nav-link text-sm font-medium tracking-wide hover:text-[var(--color-primary)] transition-all duration-200 flex items-center gap-1.5 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--color-primary)] hover:after:w-full after:transition-all after:duration-300"
-                aria-haspopup="true"
-                aria-expanded={desktopServicesOpen}
-                aria-controls="desktop-services-menu"
-              >
-                Services
-                <svg
-                  className={`w-4 h-4 transition-transform duration-300 ${
-                    desktopServicesOpen ? 'rotate-180' : ''
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
+            {serviceGroups.map((group) => {
+              const single = group.items.length === 1;
+              if (single) {
+                return (
+                  <Link key={group.label} href={group.items[0].href} className={topLinkClass}>
+                    {group.label}
+                  </Link>
+                );
+              }
+              const open = desktopOpenGroup === group.label;
+              const menuId = `desktop-menu-${group.label.replace(/[^a-z]/gi, '-').toLowerCase()}`;
+              return (
+                <div key={group.label} className="relative services-dropdown-container">
+                  <button
+                    onClick={() => setDesktopOpenGroup(open ? null : group.label)}
+                    className={`${topLinkClass} flex items-center gap-1.5`}
+                    aria-haspopup="true"
+                    aria-expanded={open}
+                    aria-controls={menuId}
+                  >
+                    {group.label}
+                    <svg
+                      className={`w-4 h-4 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
 
-              {/* Dropdown Menu */}
-              <div id="desktop-services-menu" className={`absolute left-1/2 -translate-x-1/2 mt-2 w-[36rem] bg-white rounded-xl shadow-xl transition-all duration-300 border border-gray-100 p-5 overflow-hidden ${
-                desktopServicesOpen
-                  ? 'opacity-100 visible translate-y-0'
-                  : 'opacity-0 invisible translate-y-2 pointer-events-none'
-              }`}>
-                <div className="grid grid-cols-2 gap-x-6 gap-y-5">
-                  {serviceGroups.map((group) => (
-                    <div key={group.label}>
-                      <p className="px-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
-                        {group.label}
-                      </p>
-                      <p className="px-3 pb-1.5 text-xs text-gray-400/80 italic">
-                        {group.tagline}
-                      </p>
+                  <div
+                    id={menuId}
+                    className={`absolute left-1/2 -translate-x-1/2 mt-2 w-72 bg-white rounded-xl shadow-xl transition-all duration-300 border border-gray-100 py-3 overflow-hidden ${
+                      open
+                        ? 'opacity-100 visible translate-y-0'
+                        : 'opacity-0 invisible translate-y-2 pointer-events-none'
+                    }`}
+                  >
+                    <p className="px-5 pb-2 text-xs text-gray-400 italic border-b border-gray-50">
+                      {group.tagline}
+                    </p>
+                    <div className="pt-1">
                       {group.items.map((item) => (
                         <Link
                           key={item.href}
                           href={item.href}
-                          className="dropdown-item relative block px-3 py-2 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 rounded-md transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
-                          onClick={() => setDesktopServicesOpen(false)}
+                          className="dropdown-item relative block px-5 py-3 text-sm font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 transition-all duration-200 border-l-2 border-transparent hover:border-[var(--color-primary)]"
+                          onClick={() => setDesktopOpenGroup(null)}
                         >
                           {item.label}
                         </Link>
                       ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
-              </div>
-            </div>
+              );
+            })}
 
-            <Link
-              href="/about-rojas-photography"
-              className="nav-link text-sm font-medium tracking-wide hover:text-[var(--color-primary)] transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--color-primary)] hover:after:w-full after:transition-all after:duration-300"
-            >
+            <Link href="/about-rojas-photography" className={topLinkClass}>
               About
-            </Link>
-            <Link
-              href="/contact-quote"
-              className="nav-link text-sm font-medium tracking-wide hover:text-[var(--color-primary)] transition-all duration-200 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[var(--color-primary)] hover:after:w-full after:transition-all after:duration-300"
-            >
-              Contact
             </Link>
           </div>
 
@@ -279,48 +267,50 @@ export default function Navigation() {
               Home
             </Link>
 
-            {/* Mobile Services Accordion */}
-            <div className="mobile-nav-item" style={{ animationDelay: '0.1s' }}>
-              <button
-                className="w-full text-left text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-3.5 rounded-lg transition-all duration-200 flex items-center justify-between"
-                onClick={() => setServicesOpen(!servicesOpen)}
-                aria-expanded={servicesOpen}
-                aria-controls="mobile-services-menu"
-              >
-                Services
-                <svg
-                  className={`w-5 h-5 transition-transform duration-300 ${
-                    servicesOpen ? 'rotate-180' : ''
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
+            {serviceGroups.map((group, gi) => {
+              const single = group.items.length === 1;
+              const open = mobileOpenGroup === group.label;
+              const menuId = `mobile-menu-${group.label.replace(/[^a-z]/gi, '-').toLowerCase()}`;
+              if (single) {
+                return (
+                  <Link
+                    key={group.label}
+                    href={group.items[0].href}
+                    className="mobile-nav-item text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-3.5 rounded-lg transition-all duration-200"
+                    onClick={closeMenu}
+                    style={{ animationDelay: `${0.1 + gi * 0.05}s` }}
+                  >
+                    {group.label}
+                  </Link>
+                );
+              }
+              return (
+                <div key={group.label} className="mobile-nav-item" style={{ animationDelay: `${0.1 + gi * 0.05}s` }}>
+                  <button
+                    className="w-full text-left text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-3.5 rounded-lg transition-all duration-200 flex items-center justify-between"
+                    onClick={() => setMobileOpenGroup(open ? null : group.label)}
+                    aria-expanded={open}
+                    aria-controls={menuId}
+                  >
+                    {group.label}
+                    <svg
+                      className={`w-5 h-5 transition-transform duration-300 ${open ? 'rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
 
-              {/* Services Submenu */}
-              <div
-                id="mobile-services-menu"
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  servicesOpen ? 'max-h-[48rem] opacity-100' : 'max-h-0 opacity-0'
-                }`}
-              >
-                <div className="pl-4 pt-2 pb-1 space-y-1">
-                  {serviceGroups.map((group) => (
-                    <div key={group.label}>
-                      <p className="px-4 pt-3 text-xs font-semibold uppercase tracking-wider text-gray-400">
-                        {group.label}
-                      </p>
-                      <p className="px-4 pb-1 text-xs text-gray-400/80 italic">
-                        {group.tagline}
-                      </p>
+                  <div
+                    id={menuId}
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    <div className="pl-4 pt-1 pb-1 space-y-1">
+                      <p className="px-4 pb-1 text-xs text-gray-400 italic">{group.tagline}</p>
                       {group.items.map((item) => (
                         <Link
                           key={item.href}
@@ -332,31 +322,23 @@ export default function Navigation() {
                         </Link>
                       ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
-              </div>
-            </div>
+              );
+            })}
 
             <Link
               href="/about-rojas-photography"
               className="mobile-nav-item text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-3.5 rounded-lg transition-all duration-200"
               onClick={closeMenu}
-              style={{ animationDelay: '0.15s' }}
+              style={{ animationDelay: '0.3s' }}
             >
               About
-            </Link>
-            <Link
-              href="/contact-quote"
-              className="mobile-nav-item text-lg font-medium text-[var(--color-text-dark)] hover:text-[var(--color-primary)] hover:bg-gray-50 px-4 py-3.5 rounded-lg transition-all duration-200"
-              onClick={closeMenu}
-              style={{ animationDelay: '0.2s' }}
-            >
-              Contact
             </Link>
           </div>
 
           {/* Mobile CTA */}
-          <div className="pt-6 border-t border-gray-100 mobile-nav-item" style={{ animationDelay: '0.3s' }}>
+          <div className="pt-6 border-t border-gray-100 mobile-nav-item" style={{ animationDelay: '0.35s' }}>
             <Link
               href="/contact-quote"
               className="btn-primary px-8 py-4 text-base font-semibold rounded-full w-full text-center inline-block shadow-lg"
