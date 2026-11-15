@@ -128,67 +128,61 @@ export default function HomePage() {
       <main id="main-content">
       {/* Hero — full-bleed portrait, dual CTA (studio vs on-location) */}
       <section
-        className="relative w-full min-h-screen flex items-end overflow-hidden pt-20"
-        aria-label="Corporate headshots in Modesto and the Central Valley"
+        className="relative w-full overflow-hidden pt-20 lg:pt-28"
+        style={{ background: 'linear-gradient(135deg, #0F2E1E 0%, #1F6B4D 130%)' }}
+        aria-label="Corporate photography and video for California companies"
       >
-        <Image
-          src="/images/headshots/headshot-ceo-nutrition-02.jpg"
-          alt="Executive headshot photographed by Rojas Photography in Modesto, California"
-          fill
-          priority
-          quality={90}
-          sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: '60% 35%' }}
-        />
-        <div
-          className="absolute inset-0"
-          aria-hidden="true"
-          style={{ background: 'linear-gradient(88deg, rgba(15,46,30,.92) 8%, rgba(15,46,30,.62) 40%, rgba(15,46,30,.08) 72%, rgba(15,46,30,.35) 100%)' }}
-        />
-        <div
-          className="absolute inset-0"
-          aria-hidden="true"
-          style={{ background: 'linear-gradient(0deg, rgba(15,46,30,.8) 4%, rgba(15,46,30,.35) 24%, transparent 48%)' }}
-        />
-        <div
-          className="absolute inset-0 md:hidden"
-          aria-hidden="true"
-          style={{ background: 'rgba(15,46,30,.42)' }}
-        />
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-8 pb-14 md:pb-20 pt-24 text-white">
-          <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase" style={{ animationDelay: '0.1s' }}>
-            Corporate Headshots · Modesto &amp; the Central Valley
-          </p>
-          <h1 className="hero-rise text-4xl sm:text-6xl lg:text-7xl mb-6 leading-[1.02] tracking-[-0.01em] max-w-[17ch]" style={{ animationDelay: '0.22s' }}>
-            The headshot your reputation deserves.
-          </h1>
-          <p className="hero-rise text-lg md:text-xl max-w-2xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.38s' }}>
-            Most professionals are quietly undersold by their photo. In one session — in our Modesto
-            studio or on location at your office — you&rsquo;ll have a headshot that matches the
-            reputation you&rsquo;ve built.
-          </p>
-          <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
-            <Link
-              href="/premium-headshots#booking-heading"
-              className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
-            >
-              Book a Studio Session
-            </Link>
-            <Link
-              href="/on-site-photography"
-              className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
-            >
-              Headshot Day for Your Team →
-            </Link>
+        <div className="max-w-7xl mx-auto px-8 py-14 md:py-20 grid lg:grid-cols-2 gap-14 items-center text-white">
+          <div>
+            <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase" style={{ animationDelay: '0.1s' }}>
+              Corporate Photography &amp; Video · Modesto &amp; All of California
+            </p>
+            <h1 className="hero-rise text-4xl sm:text-5xl lg:text-6xl mb-6 leading-[1.05] tracking-[-0.01em]" style={{ animationDelay: '0.22s' }}>
+              Corporate photography &amp; video for companies that take image seriously.
+            </h1>
+            <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.38s' }}>
+              Executive headshots, team headshot days, conferences, events, and video — from our
+              Modesto studio to Los Angeles and San Diego. Two photographers. One partner. Every time.
+            </p>
+            <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
+              <Link
+                href="/contact-quote"
+                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
+              >
+                Get Started
+              </Link>
+              <Link
+                href="/work"
+                className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
+              >
+                See Our Work →
+              </Link>
+            </div>
+            <div className="hero-rise mt-8" style={{ animationDelay: '0.6s' }}>
+              <GoogleReviewsBadge rating="5.0" count={64} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
+            </div>
+            <div className="hero-rise mt-10 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.72s' }}>
+              <span>500+ executives photographed</span>
+              <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
+              <span>Two photographers, every session</span>
+            </div>
           </div>
-          <div className="hero-rise mt-8" style={{ animationDelay: '0.6s' }}>
-            <GoogleReviewsBadge rating="5.0" count={64} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
-          </div>
-          <div className="hero-rise mt-10 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.72s' }}>
-            <span>500+ executives photographed</span>
-            <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
-            <span>Two photographers, every session</span>
+          <div className="grid grid-cols-3 gap-3 md:gap-4">
+            {[
+              { src: '/images/headshots/headshot-executive-ceo.jpg', alt: 'Executive headshot by Rojas Photography — woman in red on dark backdrop' },
+              { src: '/images/events/conferences/cla-annual-meeting-panelists.jpg', alt: 'Conference photography — panelists on stage at the California Lawyers Association Annual Meeting', pos: 'object-center' },
+              { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Corporate headshot — finance executive in dark suit' },
+              { src: '/images/kaiser-bts-headshots.jpg', alt: 'On-site headshot booth in action at a Kaiser corporate event', pos: 'object-center' },
+              { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Corporate executive headshot — woman in white blazer' },
+              { src: '/images/events/gallery/wfg-awards-red-carpet.jpg', alt: 'Corporate event photography — red carpet at the WFG awards gala', pos: 'object-center' },
+              { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot on dark backdrop' },
+              { src: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production for BBSI — behind the scenes', pos: 'object-center' },
+              { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot — woman in grey blazer' },
+            ].map((img, i) => (
+              <div key={img.src} className="hero-rise relative aspect-[4/5] rounded-xl overflow-hidden" style={{ animationDelay: `${0.15 + i * 0.06}s` }}>
+                <Image src={img.src} alt={img.alt} fill priority={i < 3} sizes="(max-width: 1024px) 33vw, 16vw" className={`object-cover ${('pos' in img && img.pos) || 'object-top'}`} />
+              </div>
+            ))}
           </div>
         </div>
       </section>
