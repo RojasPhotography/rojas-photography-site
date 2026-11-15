@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Briefcase, Video, Calendar, Aperture } from 'lucide-react';
+import { Briefcase, Repeat, Aperture } from 'lucide-react';
 import SectionReveal from './components/SectionReveal';
 import ParallaxBand from './components/ParallaxBand';
 import TestimonialCard from './components/TestimonialCard';
@@ -44,15 +44,15 @@ export const metadata: Metadata = {
 const otherServices = [
   {
     href: '/headshot-booth',
-    name: 'Headshot Booth for Events',
+    name: 'Headshot Booth',
     icon: Aperture,
-    desc: 'High-volume headshot stations for conferences, expos, and company events.',
+    desc: 'A flat-rate headshot station for conferences, expos, and company events — unlimited attendees, same-day gallery.',
   },
   {
-    href: '/event-photography',
-    name: 'Corporate Event Photography',
-    icon: Calendar,
-    desc: 'Conferences, galas, and company events across the Central Valley.',
+    href: '/annual-headshot-programs',
+    name: 'Annual Headshot Programs',
+    icon: Repeat,
+    desc: 'Recurring team days plus pay-as-you-go new-hire sessions, so your whole roster stays current.',
   },
   {
     href: '/commercial',
@@ -60,24 +60,18 @@ const otherServices = [
     icon: Briefcase,
     desc: 'Brand imagery for your website and marketing — products, spaces, and people.',
   },
-  {
-    href: '/video',
-    name: 'Video Production',
-    icon: Video,
-    desc: 'Brand stories, testimonials, and FAA-certified aerial footage.',
-  },
 ];
 
 const portfolio: { src: string; alt: string; pos: string; wide?: boolean }[] = [
   { src: '/images/headshots/headshot-attorney-07.jpg', alt: 'Lawyer headshot Modesto CA - Professional legal photography', pos: '55% 30%' },
   { src: '/images/headshots/headshot-executive-02.jpg', alt: 'Executive headshot Modesto CA - Corporate leadership photography', pos: '55% 30%' },
   { src: '/images/headshots/headshot-attorney-08.jpg', alt: 'Attorney headshot Modesto - Central Valley law firm photography', pos: '50% 32%' },
-  { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot Modesto - Professional medical photography', pos: '50% 25%' },
-  { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot Modesto CA - Professional law firm photography', pos: '58% 30%' },
+  { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot Modesto - Professional medical photography', pos: '40% 28%' },
+  { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot Modesto CA - Professional law firm photography', pos: '62% 30%' },
   { src: '/images/headshots/headshot-attorney-11.jpg', alt: 'Lawyer headshot Modesto - Modern attorney portrait photography', pos: '58% 32%' },
-  { src: '/images/headshots/headshot-attorney-06.jpg', alt: 'Attorney headshot Central Valley - Law firm portrait photography', pos: '50% 32%' },
-  { src: '/images/headshots/headshot-attorney-10.jpg', alt: 'Law firm attorney headshot Modesto CA - Professional portrait', pos: '58% 30%' },
-  { src: '/images/headshots/headshot-attorney-09.jpg', alt: 'Attorney headshot Central Valley CA - Legal professional photography', pos: '48% 32%' },
+  { src: '/images/work/cla-annual-meeting-2026/cla-annual-meeting-speaker-laughing.jpg', alt: 'Conference photography California - speaker on stage at the CLA Annual Meeting San Diego', pos: '50% 35%' },
+  { src: '/images/events/gallery/united-way-gala-guests.jpg', alt: 'Corporate event photography Modesto - United Way gala guests', pos: '50% 40%' },
+  { src: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production Modesto - behind the scenes with BBSI', pos: '50% 40%' },
   { src: '/images/Move Staff Group 9.jpg', alt: 'On-site team photography Modesto - Corporate group headshots', pos: '50% 35%', wide: true },
   { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Finance CEO headshot Modesto - Executive financial photography', pos: '50% 25%' },
   { src: '/images/headshots/headshot-cpa-finance-01.jpg', alt: 'CPA finance professional headshot Modesto - Accounting photography', pos: '50% 25%' },
@@ -101,11 +95,11 @@ export default function HomePage() {
       <SchemaScript schema={generateFAQSchema([
         {
           question: 'Who are Alfonso and Niomi Rojas?',
-          answer: 'Alfonso and Niomi Rojas are the husband-and-wife owners and photographers of Rojas Photography, based in Modesto, CA. They photograph every session together — two photographers on every job. They bring 15+ years of corporate leadership experience, and Alfonso is FAA Part 107 certified for drone operations. Together they have photographed 500+ executives and professionals across the Central Valley and hold 60+ five-star Google reviews.',
+          answer: 'Alfonso and Niomi Rojas are the husband-and-wife owners and photographers of Rojas Photography, based in Modesto, CA. They photograph every session together — two photographers on every job. They bring 15+ years of corporate leadership experience, and Alfonso is FAA Part 107 certified for drone operations. Together they have photographed 500+ executives and professionals across the Central Valley and hold 64 five-star Google reviews.',
         },
         {
           question: 'What is Rojas Photography?',
-          answer: 'Rojas Photography is a professional corporate photography and video studio based in Modesto, CA, founded and operated by Alfonso and Niomi Rojas, who shoot every session together. Services include executive headshots, on-site team photography, headshot booth events, commercial photography, video production, and corporate event coverage throughout the Central Valley.',
+          answer: 'Rojas Photography is a professional corporate photography and video studio based in Modesto, CA, founded and operated by Alfonso and Niomi Rojas, who shoot every session together. Services include executive headshots, on-site team photography, headshot booth events, commercial photography, video production, and corporate event coverage throughout California — including Sacramento, the Bay Area, Los Angeles, and San Diego.',
         },
         {
           question: 'Where is Rojas Photography located?',
@@ -121,74 +115,69 @@ export default function HomePage() {
         },
         {
           question: 'Does Rojas Photography offer on-site headshots for businesses?',
-          answer: 'Yes. Alfonso and Niomi Rojas bring a complete professional studio setup — lighting, backdrop, and camera equipment — directly to your office, medical facility, law firm, or business. On-site photography is priced per person and is ideal for contracted team headshots. For high-volume events, a headshot booth service is also available, priced by the hour.',
+          answer: 'Yes. Alfonso and Niomi Rojas bring a complete professional studio setup — lighting, backdrop, and camera equipment — directly to your office, medical facility, law firm, or business. On-site photography is priced per person and is ideal for contracted team headshots. For high-volume events, a headshot booth service is also available at a flat half-day rate with unlimited attendees.',
         },
       ])} />
       <div className="min-h-screen bg-white">
       <main id="main-content">
       {/* Hero — full-bleed portrait, dual CTA (studio vs on-location) */}
       <section
-        className="relative w-full min-h-screen flex items-end overflow-hidden pt-20"
-        aria-label="Corporate headshots in Modesto and the Central Valley"
+        className="relative w-full overflow-hidden pt-20 lg:pt-28"
+        style={{ background: 'linear-gradient(135deg, #0F2E1E 0%, #1F6B4D 130%)' }}
+        aria-label="Corporate photography and video for California companies"
       >
-        <Image
-          src="/images/headshots/headshot-ceo-nutrition-02.jpg"
-          alt="Executive headshot photographed by Rojas Photography in Modesto, California"
-          fill
-          priority
-          quality={90}
-          sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: '60% 35%' }}
-        />
-        <div
-          className="absolute inset-0"
-          aria-hidden="true"
-          style={{ background: 'linear-gradient(88deg, rgba(15,46,30,.92) 8%, rgba(15,46,30,.62) 40%, rgba(15,46,30,.08) 72%, rgba(15,46,30,.35) 100%)' }}
-        />
-        <div
-          className="absolute inset-0"
-          aria-hidden="true"
-          style={{ background: 'linear-gradient(0deg, rgba(15,46,30,.8) 4%, rgba(15,46,30,.35) 24%, transparent 48%)' }}
-        />
-        <div
-          className="absolute inset-0 md:hidden"
-          aria-hidden="true"
-          style={{ background: 'rgba(15,46,30,.42)' }}
-        />
-        <div className="relative z-10 w-full max-w-6xl mx-auto px-8 pb-14 md:pb-20 pt-24 text-white">
-          <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase" style={{ animationDelay: '0.1s' }}>
-            Corporate Headshots · Modesto &amp; the Central Valley
-          </p>
-          <h1 className="hero-rise text-4xl sm:text-6xl lg:text-7xl mb-6 leading-[1.02] tracking-[-0.01em] max-w-[17ch]" style={{ animationDelay: '0.22s' }}>
-            The headshot your reputation deserves.
-          </h1>
-          <p className="hero-rise text-lg md:text-xl max-w-2xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.38s' }}>
-            Most professionals are quietly undersold by their photo. In one session — in our Modesto
-            studio or on location at your office — you&rsquo;ll have a headshot that matches the
-            reputation you&rsquo;ve built.
-          </p>
-          <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
-            <Link
-              href="/premium-headshots#booking-heading"
-              className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
-            >
-              Book a Studio Session
-            </Link>
-            <Link
-              href="/on-site-photography"
-              className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
-            >
-              Headshot Day for Your Team →
-            </Link>
+        <div className="max-w-7xl mx-auto px-8 py-14 md:py-20 grid lg:grid-cols-2 gap-14 items-center text-white">
+          <div>
+            <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase" style={{ animationDelay: '0.1s' }}>
+              Headshots · Events &amp; Conferences · Video · Modesto &amp; All of California
+            </p>
+            <h1 className="hero-rise text-4xl sm:text-5xl lg:text-6xl mb-6 leading-[1.05] tracking-[-0.01em]" style={{ animationDelay: '0.22s' }}>
+              Corporate photography &amp; video for companies that take image seriously.
+            </h1>
+            <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.38s' }}>
+              Executive headshots, team headshot days, conferences, events, and video — from our
+              Modesto studio to Los Angeles and San Diego. So when someone sizes your company up,
+              what they see matches what you&apos;ve built.
+            </p>
+            <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
+              <Link
+                href="/contact-quote"
+                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
+              >
+                Get Started
+              </Link>
+              <Link
+                href="/work"
+                className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
+              >
+                See Our Work →
+              </Link>
+            </div>
+            <div className="hero-rise mt-8" style={{ animationDelay: '0.6s' }}>
+              <GoogleReviewsBadge rating="5.0" count={64} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
+            </div>
+            <div className="hero-rise mt-10 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.72s' }}>
+              <span>500+ executives photographed</span>
+              <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
+              <span>Two photographers, every session</span>
+            </div>
           </div>
-          <div className="hero-rise mt-8" style={{ animationDelay: '0.6s' }}>
-            <GoogleReviewsBadge rating="5.0" count={64} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
-          </div>
-          <div className="hero-rise mt-10 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.72s' }}>
-            <span>500+ executives photographed</span>
-            <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
-            <span>Two photographers, every session</span>
+          <div className="grid grid-cols-3 gap-3 md:gap-4">
+            {[
+              { src: '/images/headshots/headshot-executive-ceo.jpg', alt: 'Executive headshot by Rojas Photography — woman in red on dark backdrop', pos: '48% 50%' },
+              { src: '/images/events/conferences/cla-annual-meeting-panelists.jpg', alt: 'Conference photography — panelists on stage at the California Lawyers Association Annual Meeting', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Corporate headshot — finance executive in dark suit', pos: '50% 50%' },
+              { src: '/images/kaiser-bts-headshots.jpg', alt: 'On-site headshot booth in action at a Kaiser corporate event', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Corporate executive headshot — woman in white blazer', pos: '57% 50%' },
+              { src: '/images/events/gallery/wfg-awards-red-carpet.jpg', alt: 'Corporate event photography — red carpet at the WFG awards gala', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-attorney-11.jpg', alt: 'Attorney headshot — smiling lawyer in yellow blazer on dark backdrop', pos: '75% 50%' },
+              { src: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production for BBSI — behind the scenes', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot — woman in grey blazer', pos: '26% 50%' },
+            ].map((img, i) => (
+              <div key={img.src} className="hero-rise relative aspect-[4/5] rounded-xl overflow-hidden" style={{ animationDelay: `${0.15 + i * 0.06}s` }}>
+                <Image src={img.src} alt={img.alt} fill priority={i < 3} sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover" style={{ objectPosition: img.pos }} />
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -204,6 +193,41 @@ export default function HomePage() {
           </div>
         </section>
       </SectionReveal>
+
+      {/* SB7: The problem & stakes */}
+      <section className="py-16 md:py-24 px-8 bg-white" aria-label="Why professional imagery matters">
+        <div className="max-w-4xl mx-auto text-center">
+          <SectionReveal>
+            <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-6">
+              Your work is excellent. Does it look that way online?
+            </h2>
+            <p className="text-lg md:text-xl text-[var(--color-text-body)] leading-relaxed max-w-3xl mx-auto mb-10">
+              Every day, clients, recruits, and partners size up your company from a screen — the headshot on
+              LinkedIn, the team page, the photos from your last event. When that image lags behind the work,
+              you pay for it quietly: in trust, in talent, in deals that go to the firm that simply looked the part.
+            </p>
+          </SectionReveal>
+          <SectionReveal>
+            <div className="grid sm:grid-cols-3 gap-6 text-left">
+              {[
+                { t: 'Outdated headshots', d: 'A ten-year-old photo tells people your details slip — before you say a word.' },
+                { t: 'Inconsistent team pages', d: 'A patchwork of selfies and old photos makes a strong team look like a loose collection of individuals.' },
+                { t: 'Undocumented wins', d: 'Conferences, galas, and milestones your company worked hard for — gone, because nobody captured them well.' },
+              ].map((p) => (
+                <div key={p.t} className="rounded-xl border border-gray-100 bg-[var(--color-bg-warm)] p-6">
+                  <h3 className="text-[var(--color-text-dark)] font-semibold mb-2">{p.t}</h3>
+                  <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{p.d}</p>
+                </div>
+              ))}
+            </div>
+          </SectionReveal>
+          <SectionReveal>
+            <p className="mt-10 text-lg text-[var(--color-text-dark)] font-medium">
+              The corporate world moves fast — your work deserves to be captured, documented, and shown at its best. Our job is to make sure it is.
+            </p>
+          </SectionReveal>
+        </div>
+      </section>
 
       {/* The guides — SB7: problem + guide, humans up front */}
       <section className="py-16 md:py-24 px-8 bg-white">
@@ -225,13 +249,13 @@ export default function HomePage() {
                 Meet Alfonso &amp; Niomi — Two Photographers, Every Session
               </h2>
               <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
-                You've put years into building something real — a team, a reputation, a standard of work you're proud of. Then someone finds your LinkedIn and the photo doesn't come close to reflecting any of it. That gap is frustrating. We get it.
+                You've put years into building something real — a team, a reputation, a standard of work you're proud of. Then someone looks your company up — a headshot, a team page, last year's event — and what they find doesn't come close to reflecting any of it. That gap is frustrating. We get it.
               </p>
               <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
                 We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We've helped 500+ professionals — from <Link href="/premium-headshots" className="text-[var(--color-primary)] hover:underline">executive headshots</Link> to <Link href="/on-site-photography" className="text-[var(--color-primary)] hover:underline">on-site team photography</Link>, <Link href="/commercial" className="text-[var(--color-primary)] hover:underline">commercial imagery</Link>, and <Link href="/video" className="text-[var(--color-primary)] hover:underline">video production</Link> — create visuals they're genuinely proud to put in front of clients. Not as a vendor. As partners who care about getting it right.
               </p>
               <p className="text-[var(--color-text-body)] leading-relaxed mb-8">
-                We photograph businesses across Modesto, Stockton, Fresno, Turlock, Merced, Sacramento, and the East Bay.
+                We photograph businesses across Modesto, Stockton, Fresno, Sacramento, and the Bay Area — and travel statewide for conferences, events, and team days, including Los Angeles and San Diego.
               </p>
               <Link
                 href="/about-rojas-photography"
@@ -244,16 +268,45 @@ export default function HomePage() {
         </div>
       </section>
 
+        {/* SB7: The plan — three steps */}
+        <section className="py-16 md:py-20 px-8 bg-white" aria-label="How working with Rojas Photography works">
+          <div className="max-w-5xl mx-auto">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">
+                Getting Started Is Simple
+              </h2>
+              <p className="text-center text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto mb-14">
+                Whether you need one headshot or a three-day conference covered, your path is the same.
+              </p>
+            </SectionReveal>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                { n: '1', t: 'Tell us what you need', d: 'Book a studio session online, or request a quote for team days, events, conferences, or video. We reply within 24 hours with one clear number.' },
+                { n: '2', t: 'We handle the day', d: 'Two photographers on every job — coaching each person, covering every room, building the schedule around your people, not ours.' },
+                { n: '3', t: 'Delivered fast', d: 'Studio finals in your inbox within 48 hours. Team days and booths: same-day galleries. Events: live delivery while the room is still buzzing.' },
+              ].map((s) => (
+                <SectionReveal key={s.n}>
+                  <div className="text-center px-4">
+                    <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] text-white flex items-center justify-center text-xl font-bold mx-auto mb-5">{s.n}</div>
+                    <h3 className="text-xl text-[var(--color-text-dark)] mb-3">{s.t}</h3>
+                    <p className="text-[var(--color-text-body)] leading-relaxed">{s.d}</p>
+                  </div>
+                </SectionReveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Two lanes — Studio vs On-Location headshots */}
         <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
-                  Professional Headshots in Modesto — Two Ways
+                  How We Help
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  In our studio, or on location at your office. Both of us, either way.
+                  Professional headshots in Modesto — in our studio or at your office — plus event, conference, and video coverage across California. Whatever the day calls for, you get both of us.
                 </p>
               </div>
             </SectionReveal>
@@ -338,6 +391,88 @@ export default function HomePage() {
                 </Link>
               </div>
             </SectionReveal>
+
+            {/* Lane 3 — Events & Conferences */}
+            <SectionReveal>
+              <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mt-16 md:mt-24">
+                <Link href="/event-photography" className="block group rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5 hover:shadow-2xl transition-all">
+                  <Image
+                    src="/images/work/cla-annual-meeting-2026/cla-annual-meeting-panel-stage-audience.jpg"
+                    alt="Corporate conference photography — panel on stage at the California Lawyers Association Annual Meeting in San Diego"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </Link>
+                <div>
+                  <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.2em] uppercase mb-3">
+                    Statewide — Modesto to San Diego
+                  </p>
+                  <h3 className="text-2xl md:text-4xl text-[var(--color-text-dark)] mb-5">
+                    Events &amp; Conferences
+                  </h3>
+                  <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
+                    Conferences, galas, award nights, and multi-day annual meetings — covered wall to wall by
+                    both of us, with live photo delivery while your event is still running and a{' '}
+                    <Link href="/headshot-booth" className="text-[var(--color-primary)] hover:underline">headshot booth</Link>{' '}
+                    your attendees will line up for.
+                  </p>
+                  <ul className="space-y-3 text-[var(--color-text-body)] mb-8">
+                    {['Two photographers — keynote and candids at the same time', 'Live delivery via SpotMyPhotos during the event', 'Trusted by the California Lawyers Association, every year'].map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <span className="text-[var(--color-primary)] font-bold mt-0.5" aria-hidden="true">✓</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+                    <Link
+                      href="/event-photography"
+                      className="btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-block"
+                    >
+                      Plan Your Event Coverage
+                    </Link>
+                    <Link href="/work/cla-annual-meeting-2026" className="text-[var(--color-primary)] font-semibold hover:underline">
+                      See the CLA case study →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </SectionReveal>
+
+            {/* Lane 4 — Video */}
+            <SectionReveal>
+              <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mt-16 md:mt-24">
+                <div className="md:order-1 order-2">
+                  <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.2em] uppercase mb-3">
+                    Corporate Video &amp; Drone
+                  </p>
+                  <h3 className="text-2xl md:text-4xl text-[var(--color-text-dark)] mb-5">
+                    Video That Works as Hard as You Do
+                  </h3>
+                  <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
+                    Brand films, client testimonials, event recaps, and social-ready short-form — produced by the
+                    same two-person team that shoots your photography, with FAA-certified drone coverage when the
+                    story needs altitude.
+                  </p>
+                  <Link
+                    href="/video"
+                    className="btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-block"
+                  >
+                    Explore Video Production
+                  </Link>
+                </div>
+                <Link href="/video" className="md:order-2 order-1 block group rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5 hover:shadow-2xl transition-all">
+                  <Image
+                    src="/images/BBSI-Corp-Video.jpg"
+                    alt="Corporate video production behind the scenes for BBSI — Rojas Photography video services"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </Link>
+              </div>
+            </SectionReveal>
           </div>
         </section>
 
@@ -350,7 +485,7 @@ export default function HomePage() {
                   The Rojas Look
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  A sample of the executives, attorneys, and teams we&apos;ve photographed across Modesto and the Central Valley
+                  Executives, teams, conferences, and events from Modesto to San Diego — every one of them at their best
                 </p>
               </div>
             </SectionReveal>
@@ -377,14 +512,14 @@ export default function HomePage() {
             <SectionReveal>
               <div className="text-center mb-12">
                 <h2 className="text-2xl md:text-3xl text-[var(--color-text-dark)] mb-3">
-                  Beyond Headshots
+                  Rounding Out the Lineup
                 </h2>
                 <p className="text-[var(--color-text-muted)] max-w-2xl mx-auto">
-                  Photography and video for everything else your business needs across Modesto and the Central Valley.
+                  The programs and formats that keep a company&apos;s image current year-round.
                 </p>
               </div>
             </SectionReveal>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid sm:grid-cols-3 gap-5">
               {otherServices.map((s) => (
                 <SectionReveal key={s.href}>
                   <Link
@@ -426,7 +561,7 @@ export default function HomePage() {
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
-                  What Central Valley Professionals Say About Working With Us
+                  Central Valley Professionals, In Their Own Words
                 </h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-8">
                   A headshot that finally looks like you. A team photo that shows your culture. Brand imagery that makes the right people take notice. That&apos;s what working together looks like — here&apos;s what clients say.
@@ -471,10 +606,12 @@ export default function HomePage() {
         <ParallaxBand image="/images/alfonso-niomi-band.jpg" overlayOpacity={78} size="lg" position="center 30%">
           <SectionReveal>
             <h2 className="text-3xl md:text-4xl mb-4 text-white">
-              Ready for a Headshot You&apos;re Proud Of?
+              Ready to Look as Good as You Are?
             </h2>
             <p className="text-lg mb-8 text-white/90">
-              You&apos;ll spend the session with both of us — Alfonso and Niomi. Studio sessions book online in minutes — pick your time and you&apos;re set. Prefer to talk it through first? Call us directly and we&apos;ll point you to the right session.
+              Studio sessions book online in minutes. Team days, events, conferences, and video start with one
+              quick quote. Either way, you&apos;ll know exactly what happens next within 24 hours — and your job
+              still gets both of us, Alfonso and Niomi.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -483,12 +620,12 @@ export default function HomePage() {
               >
                 Book a Studio Session
               </Link>
-              <a
-                href="tel:2093803727"
+              <Link
+                href="/contact-quote"
                 className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
               >
-                Call 209-380-3727
-              </a>
+                Get a Custom Quote
+              </Link>
             </div>
             <p className="text-white/60 text-sm mt-5">In our Modesto studio · pick your favorites before you leave · edited images in your inbox within 48 hours</p>
           </SectionReveal>
@@ -499,15 +636,15 @@ export default function HomePage() {
           faqs={[
             {
               question: 'How much does a professional headshot cost in Modesto?',
-              answer: 'Our studio headshot sessions are $150 for the session, plus $150 per image you select. There is no minimum — you only pay for the photos you love. For on-site team photography, we provide custom quotes based on team size. For headshot booth events, pricing is hourly.',
+              answer: 'Our studio headshot sessions are $150 for the session, plus $150 per image you select. There is no minimum — you only pay for the photos you love. On-site team photography is $150 per person with no minimum, and a headshot booth for events starts at a flat $2,500 for a half day with unlimited attendees.',
             },
             {
               question: 'Do you travel for on-site photography outside of Modesto?',
-              answer: 'Yes. We regularly travel throughout the Central Valley — Stockton, Turlock, Fresno, Sacramento, Merced, and beyond. We bring our full professional studio setup to your office, facility, or event. Tell us the location when you request a quote.',
+              answer: 'Yes. We regularly work throughout the Central Valley — Stockton, Turlock, Fresno, Sacramento — and travel statewide for conferences, events, and team days, including the Bay Area, Los Angeles, and San Diego. Tell us the location when you request a quote.',
             },
             {
               question: 'What is the difference between a headshot booth and on-site photography?',
-              answer: 'A headshot booth is a high-volume service priced by the hour — ideal for expos, conferences, and company events where the goal is moving many people through quickly. On-site photography is a contracted, per-person service where we spend dedicated time with each individual, providing personal coaching on posing and expression. Both involve us coming to your location with professional equipment.',
+              answer: 'A headshot booth is a flat-rate, high-volume service — ideal for expos, conferences, and company events where the goal is photographing everyone who steps up. On-site photography is $150 per person, where we spend dedicated time with each individual, providing personal coaching on posing and expression. Both involve us coming to your location with professional equipment.',
             },
             {
               question: 'How quickly will I receive my photos?',
@@ -525,7 +662,7 @@ export default function HomePage() {
         <CTASection
           primaryHref="/premium-headshots#booking-heading"
           primaryLabel="Book a Studio Session"
-          subheading="Studio sessions book online in minutes. For team headshot days and custom projects, call us or start with a free discovery call."
+          subheading="Studio sessions book online in minutes. For team days, events, conferences, commercial, and video, request a quote — one clear answer within 24 hours."
         />
       </main>
       </div>
