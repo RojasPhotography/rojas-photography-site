@@ -60,26 +60,10 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/headshot-booth"
-                  className="hover:text-[var(--color-primary-light)] transition-colors"
-                >
-                  Headshot Booth
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/commercial"
                   className="hover:text-[var(--color-primary-light)] transition-colors"
                 >
                   Commercial Photography
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/video"
-                  className="hover:text-[var(--color-primary-light)] transition-colors"
-                >
-                  Video Services
                 </Link>
               </li>
               <li>
@@ -96,6 +80,22 @@ export default function Footer() {
                   className="hover:text-[var(--color-primary-light)] transition-colors"
                 >
                   Conference Photography
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/headshot-booth"
+                  className="hover:text-[var(--color-primary-light)] transition-colors"
+                >
+                  Headshot Booth
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/video"
+                  className="hover:text-[var(--color-primary-light)] transition-colors"
+                >
+                  Video Services
                 </Link>
               </li>
             </ul>
