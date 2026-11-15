@@ -317,6 +317,22 @@ export default function HeadshotBoothPage() {
           </div>
         </section>
 
+        {/* Success - SB7: Ends in Success */}
+        <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
+          <div className="max-w-4xl mx-auto text-center">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
+                The Booth People Thank You For
+              </h2>
+              <p className="text-lg text-[var(--color-text-body)] leading-relaxed max-w-3xl mx-auto">
+                Now picture your event instead: a steady line that never stalls, every attendee walking away
+                with a professional headshot already on their phone, and sponsors watching their branded booth
+                become the busiest corner of the expo floor. Next year, people ask if the booth is coming back.
+              </p>
+            </SectionReveal>
+          </div>
+        </section>
+
         {/* CTA After Stakes */}
         <section className="py-16 px-8 bg-[var(--color-primary-dark)] text-white">
           <div className="max-w-3xl mx-auto text-center">

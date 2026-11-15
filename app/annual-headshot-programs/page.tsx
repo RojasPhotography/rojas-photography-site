@@ -366,6 +366,23 @@ export default function AnnualHeadshotProgramsPage() {
             </div>
           </section>
 
+          {/* Success - SB7: Ends in Success */}
+          <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
+            <div className="max-w-4xl mx-auto text-center">
+              <SectionReveal>
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
+                  A Year From Now, It&rsquo;s Just Handled
+                </h2>
+                <p className="text-lg text-[var(--color-text-body)] leading-relaxed max-w-3xl mx-auto">
+                  Imagine your directory twelve months from now: every face current, every background matched,
+                  every new hire photographed within weeks of their start date — and you never once chased a
+                  photographer, a calendar, or a missing headshot. That&rsquo;s what the program buys you: a team
+                  page that stays right without your attention.
+                </p>
+              </SectionReveal>
+            </div>
+          </section>
+
           {/* CTA After Stakes — parallax band */}
           <ParallaxBand image="/images/Move Staff Group 9.jpg" overlayOpacity={74} size="lg">
             <SectionReveal>
