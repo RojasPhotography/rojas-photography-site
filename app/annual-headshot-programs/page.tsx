@@ -19,7 +19,7 @@ const faqs = [
   {
     question: 'How does the annual team day work?',
     answer:
-      'We come to your office and set up a complete professional studio. Each person gets a coached, unhurried session — about 15 minutes each — so everyone looks their best, not rushed. A half day covers up to 16 people; a full day covers up to 32. Same lighting, same backdrop, same direction for every person, so the whole team looks cohesive.',
+      'We come to your office and set up a complete professional studio. Each person gets a coached, unhurried session — about 15 minutes each — so everyone looks their best, not rushed. Half-day and full-day options fit teams of every size — for larger organizations we can run multiple stations or multi-day schedules. Same lighting, same backdrop, same direction for every person, so the whole team looks cohesive.',
   },
   {
     question: 'What happens when we hire someone new?',
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: 'How much does an annual headshot program cost?',
     answer:
-      'The annual team day is $2,500 for a half day (up to 16 people) or $5,000 for a full day (up to 32 people). New-hire sessions between days are $300 per person, including one edited image. Pricing is a flat, transparent agreement sized to your team — no packages or surprise fees. A full team day works out to roughly $156 per person.',
+      'Annual team days are $150 per person with no minimum team size — half the individual new-hire rate — offered as half-day and full-day visits. New-hire sessions between team days are $300 per person, including one edited image. Pricing is a flat, transparent agreement sized to your team — no packages or surprise fees.',
   },
   {
     question: 'Do all the headshots really match?',
@@ -258,9 +258,9 @@ export default function AnnualHeadshotProgramsPage() {
               </SectionReveal>
               <div className="grid md:grid-cols-3 gap-6">
                 {[
+                  { label: 'Annual Team Days', price: '$150', unit: 'per person — no minimum', note: 'Half-day and full-day visits. A coached, unhurried session for each person — same lighting, same look, whole team cohesive.', feature: true },
                   { label: 'New Hires & Individuals', price: '$300', unit: 'per person', note: 'Pay-as-you-go between team days. Includes one final edited image, shot to your program’s look.' },
-                  { label: 'Team Half Day', price: '$2,500', unit: 'up to 16 people', note: 'A coached 15-minute session for each person. Works out to about $156 per person at capacity.', feature: true },
-                  { label: 'Team Full Day', price: '$5,000', unit: 'up to 32 people', note: 'The same coached experience for larger teams or multiple departments — about $156 per person.' },
+                  { label: 'Headshot Booth Format', price: 'Flat Rate', unit: 'for large organizations', note: 'A flat half-day rate covers everyone who steps in front of the camera — the high-volume option.' },
                 ].map((t) => (
                   <SectionReveal key={t.label}>
                     <div className={`h-full rounded-2xl p-8 text-center ${t.feature ? 'bg-[var(--color-primary)] text-white shadow-xl' : 'bg-white border border-gray-100'}`}>
@@ -274,7 +274,7 @@ export default function AnnualHeadshotProgramsPage() {
               </div>
               <SectionReveal>
                 <p className="text-center text-[var(--color-text-body)] mt-10 max-w-2xl mx-auto">
-                  The more of your team we photograph in a day, the lower the per-person cost — a full team day works out to roughly <strong className="text-[var(--color-text-dark)]">$156 a person, about half the individual rate</strong>. Photographing 50+ at once? Ask about our <Link href="/headshot-booth" className="text-[var(--color-primary)] hover:underline">headshot booth</Link> format.
+                  Team days run <strong className="text-[var(--color-text-dark)]">$150 per person — half the individual rate</strong> — and every program gets one clear, flat quote sized to your team. Photographing a large group at once? Ask about our <Link href="/headshot-booth" className="text-[var(--color-primary)] hover:underline">headshot booth</Link> format.
                 </p>
               </SectionReveal>
               <SectionReveal>

@@ -27,12 +27,12 @@ const faqs = [
   {
     question: 'How is on-site photography priced?',
     answer:
-      'On-site photography is priced per person, reflecting the individual time and coaching each employee receives. This is different from a headshot booth (which is priced by the hour for high-volume events). For a custom quote based on your team size and location, contact us directly.',
+      'On-site photography is $150 per person with no minimum, reflecting the individual time and coaching each employee receives — half our individual new-hire rate. This is different from a headshot booth (a flat half-day rate for high-volume events). For a quote based on your team size and location, contact us directly.',
   },
   {
     question: 'What\'s the difference between on-site photography and a headshot booth?',
     answer:
-      'On-site photography is a contracted session where we come to your organization and spend individual time with each employee — coaching posture, expression, and angles to get the best possible result. It\'s priced per person. A headshot booth is designed for events and expos where the goal is moving a large group through efficiently — priced by the hour. If you\'re not sure which fits your need, reach out and we\'ll help you figure it out.',
+      'On-site photography is a contracted session where we come to your organization and spend individual time with each employee — coaching posture, expression, and angles to get the best possible result. It\'s $150 per person, no minimum. A headshot booth is designed for events and expos where the goal is moving a large group through efficiently — a flat half-day rate covers everyone who steps in front of the camera. If you\'re not sure which fits your need, reach out and we\'ll help you figure it out.',
   },
   {
     question: 'Can we do team group photos in addition to individual headshots?',
