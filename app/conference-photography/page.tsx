@@ -120,7 +120,8 @@ export default function ConferencePhotographyPage() {
                 The California Lawyers Association trusts us with their Annual Meeting
               </h2>
               <p className="text-[var(--color-text-body)] leading-relaxed">
-                Statewide associations, legal and healthcare organizations, and corporate teams bring us in when the stakes are high and the schedule is packed. We know how conference days move — and we&apos;re built to keep up with them.
+                Statewide associations, legal and healthcare organizations, and corporate teams bring us in when the stakes are high and the schedule is packed. We know how conference days move — and we&apos;re built to keep up with them. See how it works in practice:{' '}
+                <Link href="/work/cla-annual-meeting-2026" className="text-[var(--color-primary)] hover:underline font-semibold">our case study from the CLA 2026 Annual Meeting in San Diego</Link>.
               </p>
             </SectionReveal>
           </div>
