@@ -9,10 +9,7 @@ const serviceGroups = [
   {
     label: 'Headshots',
     tagline: 'For individuals — at our Modesto studio',
-    items: [
-      { href: '/premium-headshots', label: 'Premium In-Studio Headshots' },
-      { href: '/linkedin-headshots', label: 'LinkedIn In-Studio Headshots' },
-    ],
+    items: [{ href: '/premium-headshots', label: 'Premium In-Studio Headshots' }],
   },
   {
     label: 'Teams & Companies',
