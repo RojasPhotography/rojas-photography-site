@@ -264,7 +264,7 @@ export default function PremiumHeadshotsPage() {
                 Our Premium Corporate Headshots
               </h2>
               <p className="text-center text-[var(--color-text-body)] mb-12 max-w-2xl mx-auto">
-                Professional headshots for attorneys, executives, financial advisors, healthcare professionals, and business leaders across Modesto and the Central Valley.
+                Professional headshots for <Link href="/attorney-headshots" className="underline decoration-[var(--color-primary)]/40 underline-offset-2 hover:text-[var(--color-primary)] transition-colors">attorneys</Link>, executives, <Link href="/finance-headshots" className="underline decoration-[var(--color-primary)]/40 underline-offset-2 hover:text-[var(--color-primary)] transition-colors">financial advisors</Link>, <Link href="/healthcare-headshots" className="underline decoration-[var(--color-primary)]/40 underline-offset-2 hover:text-[var(--color-primary)] transition-colors">healthcare professionals</Link>, and business leaders across Modesto and the Central Valley. The same session works wherever your face represents you — a <Link href="/linkedin-headshots" className="underline decoration-[var(--color-primary)]/40 underline-offset-2 hover:text-[var(--color-primary)] transition-colors">LinkedIn profile refresh</Link> or an <Link href="/eras-headshots" className="underline decoration-[var(--color-primary)]/40 underline-offset-2 hover:text-[var(--color-primary)] transition-colors">ERAS residency application photo</Link>.
               </p>
             </SectionReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
