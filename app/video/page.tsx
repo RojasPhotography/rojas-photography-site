@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { CheckCircle2 } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
@@ -30,7 +31,7 @@ const faqs = [
   {
     question: 'What types of corporate videos do you create?',
     answer:
-      'Company overview and brand videos, client testimonials and case studies, product demonstrations, training and educational videos, social media content, event highlight videos and aerial drone footage. Projects range from a 15-second social clip to a 10-minute production, with concept development, filming and editing handled in-house.',
+      'Company overview and brand videos, client testimonials and case studies, recruiting and culture videos, product demonstrations, training and educational videos, social media content, event highlight videos and aerial drone footage. Projects range from a 15-second social clip to a 10-minute production, with concept development, filming and editing handled in-house.',
   },
   {
     question: 'Do you make short social media videos and reels?',
@@ -52,7 +53,7 @@ const faqs = [
 export const metadata: Metadata = {
   title: 'Videographer in Modesto, CA | Corporate Video Production',
   description:
-    'Corporate videographers in Modesto and the Central Valley. Brand videos, testimonials, event video and FAA Part 107 drone aerials from Alfonso and Niomi Rojas.',
+    'Corporate videographers in Modesto and the Central Valley. Brand films, testimonials, event coverage, social reels and drone aerials from Alfonso and Niomi Rojas.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net/video',
@@ -94,7 +95,7 @@ export default function VideoServicesPage() {
     <>
       <SchemaScript schema={generateServiceSchema({
         name: 'Corporate Video Production',
-        description: 'Corporate videographers in Modesto and the Central Valley: brand videos, client testimonials, event video and FAA Part 107 drone videography.',
+        description: 'Corporate videographers in Modesto and the Central Valley: brand and story films, client testimonial and recruiting videos, event video coverage, social media reels and FAA Part 107 drone videography.',
         url: 'https://rojasphotography.net/video',
         image: 'https://rojasphotography.net/images/BBSI-Corp-Video.jpg',
       })} />
@@ -132,49 +133,86 @@ export default function VideoServicesPage() {
       </HeroSection>
 
       <main id="main-content">
-        {/* Two lanes: short-form social vs full production */}
+        {/* Proof bar — the names they already know */}
+        <SectionReveal>
+          <section className="py-10 px-8 bg-[var(--color-bg-warm)] border-b border-gray-100" aria-label="Clients who trust Rojas Photography">
+            <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-12 gap-y-5 text-center">
+              <span className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] font-semibold">Trusted by</span>
+              {[
+                { src: '/images/logos/savemart.png', alt: 'Save Mart logo', w: 711, h: 160, cls: 'h-7' },
+                { src: '/images/logos/comcast.svg', alt: 'Comcast logo', w: 1000, h: 354, cls: 'h-7' },
+                { src: '/images/logos/cla.png', alt: 'California Lawyers Association logo', w: 350, h: 77, cls: 'h-8' },
+                { src: '/images/logos/kaiser.png', alt: 'Kaiser Permanente logo', w: 440, h: 160, cls: 'h-9' },
+                { src: '/images/logos/tenet-health.png', alt: 'Tenet Health logo', w: 313, h: 160, cls: 'h-10' },
+              ].map((logo) => (
+                <Image
+                  key={logo.src}
+                  src={logo.src}
+                  alt={logo.alt}
+                  width={logo.w}
+                  height={logo.h}
+                  className={`${logo.cls} w-auto`}
+                />
+              ))}
+            </div>
+          </section>
+        </SectionReveal>
+
+        {/* Three services: brand & story films, event coverage, social reels */}
         <section className="py-16 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">Two Ways to Work With Us</h2>
+              <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">Video Production Services</h2>
               <p className="text-center text-lg text-[var(--color-text-body)] max-w-2xl mx-auto mb-12">
-                Not every video needs a full production. Tell us what you&apos;re trying to accomplish and we&apos;ll point you to the right one.
+                Three ways we put your company on camera. Tell us what you&apos;re trying to accomplish and we&apos;ll point you to the right one.
               </p>
             </SectionReveal>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
-                  tag: 'Social & Short-Form',
-                  title: 'Video for your feeds',
-                  who: 'For brands that need regular content for Instagram, LinkedIn, TikTok and YouTube Shorts.',
+                  tag: 'For Your Brand',
+                  title: 'Brand & Story Films',
+                  who: 'Interview-driven films that show prospects, recruits and clients who you are before the first meeting.',
+                  items: [
+                    'Company overview and about-us videos',
+                    'Client testimonial and case study videos',
+                    'Recruiting and culture videos',
+                    'Color grading, sound design and motion graphics',
+                  ],
+                  cta: 'Plan a Brand Film',
+                },
+                {
+                  tag: 'For Your Events',
+                  title: 'Event Video Coverage',
+                  who: 'Conference, gala and company event videography across Modesto and the Central Valley.',
+                  items: [
+                    'A highlight reel that promotes next year’s event',
+                    'Coverage of keynotes, sessions and award moments',
+                    'FAA Part 107 drone aerials when the venue calls for them',
+                    'Vertical recap cuts, sized for social',
+                  ],
+                  cta: 'Cover My Event',
+                },
+                {
+                  tag: 'For Your Feeds',
+                  title: 'Social Media Reels',
+                  who: 'Short-form video for brands that need a steady presence on Instagram, LinkedIn, TikTok and YouTube Shorts.',
                   items: [
                     'Reels and short clips built around one focused shoot',
-                    'Event recaps, behind-the-scenes and team highlights',
+                    'Behind-the-scenes and team highlights',
                     'Vertical and square versions, ready to post',
                     'Quick turnaround, typically within 1-2 weeks',
                   ],
-                  cta: 'Ask About Social Video',
+                  cta: 'Ask About Reels',
                 },
-                {
-                  tag: 'Full Production',
-                  title: 'Video that carries your brand',
-                  who: 'For brand films, client testimonials, campaigns and aerial footage.',
-                  items: [
-                    'Story development, shot list and guided interviews',
-                    'Professional crew, lighting and audio, on location or in studio',
-                    'FAA Part 107 drone aerials when the story calls for them',
-                    'Color grading, sound design and motion graphics',
-                  ],
-                  cta: 'Plan a Full Production',
-                },
-              ].map((lane) => (
-                <SectionReveal key={lane.tag}>
+              ].map((service) => (
+                <SectionReveal key={service.title}>
                   <div className="h-full flex flex-col bg-[var(--color-bg-warm)] p-8 rounded-2xl border border-gray-100">
-                    <span className="text-sm font-semibold uppercase tracking-wide text-[var(--color-primary)] mb-2">{lane.tag}</span>
-                    <h3 className="text-2xl text-[var(--color-text-dark)] mb-3">{lane.title}</h3>
-                    <p className="text-[var(--color-text-body)] mb-6">{lane.who}</p>
+                    <span className="text-sm font-semibold uppercase tracking-wide text-[var(--color-primary)] mb-2">{service.tag}</span>
+                    <h3 className="text-2xl text-[var(--color-text-dark)] mb-3">{service.title}</h3>
+                    <p className="text-[var(--color-text-body)] mb-6">{service.who}</p>
                     <ul className="space-y-3 mb-8 flex-1">
-                      {lane.items.map((item) => (
+                      {service.items.map((item) => (
                         <li key={item} className="flex gap-3 text-sm text-[var(--color-text-body)]">
                           <CheckCircle2 size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" aria-hidden="true" />
                           <span>{item}</span>
@@ -182,7 +220,7 @@ export default function VideoServicesPage() {
                       ))}
                     </ul>
                     <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full text-center inline-block">
-                      {lane.cta}
+                      {service.cta}
                     </Link>
                   </div>
                 </SectionReveal>
@@ -197,15 +235,14 @@ export default function VideoServicesPage() {
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">Our Work</h2>
               <p className="text-center text-lg text-[var(--color-text-body)] max-w-2xl mx-auto mb-14">
-                Samples from both ways of working with us.
+                Recent films, planned, shot and edited by the two of us.
               </p>
             </SectionReveal>
 
-            {/* Full production leads while it is the only group with finished samples */}
             <SectionReveal>
-              <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Full Production</h3>
-              <p className="text-[var(--color-text-body)] mb-6">Brand films, testimonials and story-driven video.</p>
-              <div className="grid md:grid-cols-2 gap-8 mb-16">
+              <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Brand &amp; Story Films</h3>
+              <p className="text-[var(--color-text-body)] mb-6">Company stories, client testimonials and case study films.</p>
+              <div className="grid md:grid-cols-2 gap-8">
                 {productionVideos.map((video) => (
                   <figure key={video.id}>
                     <VideoFacade id={video.id} title={video.title} />
@@ -215,10 +252,10 @@ export default function VideoServicesPage() {
               </div>
             </SectionReveal>
 
-            <SectionReveal>
-              <h3 className="text-2xl text-[var(--color-text-dark)] mb-2">Social &amp; Short-Form</h3>
-              <p className="text-[var(--color-text-body)] mb-6">Reels and short clips built for Instagram, LinkedIn, TikTok and YouTube Shorts.</p>
-              {socialVideos.length > 0 ? (
+            {socialVideos.length > 0 && (
+              <SectionReveal>
+                <h3 className="text-2xl text-[var(--color-text-dark)] mt-16 mb-2">Social Media Reels</h3>
+                <p className="text-[var(--color-text-body)] mb-6">Short clips built for Instagram, LinkedIn, TikTok and YouTube Shorts.</p>
                 <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
                   {socialVideos.map((video) => (
                     <figure key={video.id}>
@@ -227,16 +264,8 @@ export default function VideoServicesPage() {
                     </figure>
                   ))}
                 </div>
-              ) : (
-                <div className="rounded-2xl border border-dashed border-gray-300 bg-[var(--color-bg-warm)] p-10 text-center">
-                  <p className="text-[var(--color-text-dark)] text-lg mb-2">Our first social video samples are on the way.</p>
-                  <p className="text-[var(--color-text-body)] mb-6">Want to be one of the first brands we feature? Ask about an introductory social video.</p>
-                  <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
-                    Ask About Social Video
-                  </Link>
-                </div>
-              )}
-            </SectionReveal>
+              </SectionReveal>
+            )}
           </div>
         </section>
 

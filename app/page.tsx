@@ -191,6 +191,7 @@ export default function HomePage() {
               { src: '/images/logos/savemart.png', alt: 'Save Mart logo', w: 711, h: 160, cls: 'h-7' },
               { src: '/images/logos/comcast.svg', alt: 'Comcast logo', w: 1000, h: 354, cls: 'h-7' },
               { src: '/images/logos/cla.png', alt: 'California Lawyers Association logo', w: 350, h: 77, cls: 'h-8' },
+              { src: '/images/logos/kaiser.png', alt: 'Kaiser Permanente logo', w: 440, h: 160, cls: 'h-9' },
               { src: '/images/logos/tenet-health.png', alt: 'Tenet Health logo', w: 313, h: 160, cls: 'h-10' },
             ].map((logo) => (
               <Image
