@@ -172,7 +172,7 @@ export default function DiscoveryCallPage() {
                 {[
                   { src: '/images/headshots/headshot-executive-02.jpg', alt: 'Executive headshot in Modesto — Rojas Photography', pos: '55% 25%' },
                   { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Comcast executive headshot in Modesto — Rojas Photography', pos: '60% 30%' },
-                  { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot in Modesto — Rojas Photography', pos: '58% 30%' },
+                  { src: '/images/headshots/headshot-attorney-11.jpg', alt: 'Attorney headshot in Modesto — Rojas Photography', pos: '75% 50%' },
                   { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Finance CEO headshot in Modesto — Rojas Photography', pos: '50% 25%' },
                 ].map((p) => (
                   <div key={p.src} className="relative aspect-[4/5] rounded-xl overflow-hidden ring-1 ring-black/5 shadow-sm">
