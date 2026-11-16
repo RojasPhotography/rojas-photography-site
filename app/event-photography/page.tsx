@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { CheckCircle2, Zap, Trophy } from 'lucide-react';
+import Image from 'next/image';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
 import ParallaxBand from '../components/ParallaxBand';
@@ -102,6 +102,22 @@ export default function EventPhotographyPage() {
           </Link>
         </div>
       </HeroSection>
+
+      {/* Proof strip — our work, immediately */}
+      <section className="bg-white pt-4 pb-2 px-4 md:px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          {[
+            { src: '/images/events/gallery/wfg-awards-red-carpet.jpg', alt: 'Team on the red carpet at a corporate awards gala in Modesto — event photography', pos: '50% 40%' },
+            { src: '/images/events/gallery/united-way-power-of-the-purse-stage.jpg', alt: 'United Way Power of the Purse fundraiser gala on stage at the Gallo Center, Modesto', pos: '50% 35%' },
+            { src: '/images/events/gallery/valley-first-celebration.jpg', alt: 'Guests celebrating at a Valley First Credit Union corporate event — Central Valley event photography', pos: '50% 40%' },
+            { src: '/images/events/gallery/summer-mixer-attendees.jpg', alt: 'Guests connecting at an evening networking mixer — Central Valley event photography', pos: '50% 40%' },
+          ].map((img) => (
+            <div key={img.src} className="relative aspect-[4/3] rounded-xl overflow-hidden">
+              <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover" style={{ objectPosition: img.pos }} priority />
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* Definition Box */}
       <DefinitionBox
@@ -244,7 +260,6 @@ export default function EventPhotographyPage() {
               {/* Benefit 1: Real-time delivery */}
               <SectionReveal>
                 <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 h-full border border-[var(--color-border-light)]">
-                  <Zap size={32} className="text-[var(--color-primary)] mb-4" aria-hidden="true" />
                   <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     All Photos Delivered Instantly — For You and Every Attendee
                   </h3>
@@ -260,7 +275,6 @@ export default function EventPhotographyPage() {
               {/* Benefit 2: Sponsorship tool */}
               <SectionReveal>
                 <div className="bg-[var(--color-bg-warm)] rounded-2xl p-8 h-full border border-[var(--color-border-light)]">
-                  <Trophy size={32} className="text-[var(--color-primary)] mb-4" aria-hidden="true" />
                   <h3 className="text-xl text-[var(--color-text-dark)] mb-4">
                     A Custom Branded Experience That Helps You Sell Sponsorships
                   </h3>
@@ -306,11 +320,7 @@ export default function EventPhotographyPage() {
               images={[
                 { src: '/images/events/gallery/wfg-awards-outdoor-group.jpg', alt: 'Company team celebrating at an outdoor awards event in Danville — corporate event photography', width: 2560, height: 1706 },
                 { src: '/images/events/gallery/wfg-awards-podium.jpg', alt: 'Award presentation at a corporate recognition gala — event photography Central Valley', width: 2560, height: 1706 },
-                { src: '/images/events/gallery/united-way-power-of-the-purse-stage.jpg', alt: 'United Way Power of the Purse fundraiser gala on stage at the Gallo Center, Modesto', width: 2560, height: 1703 },
-                { src: '/images/events/gallery/valley-first-celebration.jpg', alt: 'Guests celebrating at a Valley First Credit Union corporate event — Central Valley event photography', width: 2560, height: 1703 },
                 { src: '/images/events/gallery/corporate-reception-san-francisco.jpg', alt: 'Corporate networking reception with San Francisco skyline views — event photography', width: 2560, height: 1703 },
-                { src: '/images/events/gallery/wfg-awards-red-carpet.jpg', alt: 'Team on the red carpet at a corporate awards gala in Modesto — event photography', width: 2560, height: 1706 },
-                { src: '/images/events/gallery/summer-mixer-attendees.jpg', alt: 'Guests connecting at an evening networking mixer — Central Valley event photography', width: 2560, height: 1706 },
                 { src: '/images/events/gallery/legislative-day-capitol.jpg', alt: 'Group event at the California State Capitol in Sacramento — event photography', width: 2560, height: 1706 },
                 { src: '/images/events/gallery/united-way-keynote.jpg', alt: 'Keynote speaker at a nonprofit fundraiser gala — Modesto event photography', width: 2560, height: 1703 },
                 { src: '/images/events/gallery/corporate-dinner-tablescape.jpg', alt: 'Elegant award dinner tablescape at a corporate gala — event photography Central Valley', width: 2560, height: 1706 },
@@ -367,7 +377,7 @@ export default function EventPhotographyPage() {
         </section>
 
         {/* SB7: Success Vision */}
-        <section className="py-16 px-8 bg-[var(--color-bg-warm)]">
+        <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">What Your Event Looks Like When It Goes Right</h2>
@@ -389,27 +399,7 @@ export default function EventPhotographyPage() {
           </div>
         </section>
 
-        {/* CTA After Stakes */}
-        <section className="py-16 px-8 bg-white text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Ready for Reliable Event Coverage?</h2>
-              <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
-                Get a custom quote for your event. We&apos;ll provide professional photography with fast delivery and complete coverage—so you can focus on running a successful event, not worrying about the photographer.
-              </p>
-              <div className="flex flex-col md:flex-row gap-4 justify-center">
-                <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                  Request a Quote
-                </Link>
-                <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                  Schedule Discovery Call
-                </Link>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* What we Offer */}
+        {/* What We Cover */}
         <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
@@ -427,12 +417,9 @@ export default function EventPhotographyPage() {
                 { title: 'Flexible Event Types', desc: 'We cover all event types: conferences, galas, fundraisers, product launches, award ceremonies, and more.' },
               ].map((item) => (
                 <SectionReveal key={item.title}>
-                  <div className="flex gap-4">
-                    <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
-                    <div>
-                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
-                      <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
-                    </div>
+                  <div className="border-l-2 border-[var(--color-primary)]/30 pl-5">
+                    <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
+                    <p className="text-[var(--color-text-body)] text-sm leading-relaxed">{item.desc}</p>
                   </div>
                 </SectionReveal>
               ))}
@@ -444,6 +431,9 @@ export default function EventPhotographyPage() {
                 <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
                   Get Your Quote
                 </Link>
+                <p className="text-sm text-[var(--color-text-muted)] mt-5">
+                  Planning a budget first? See our <Link href="/corporate-event-photography-cost" className="text-[var(--color-primary)] font-semibold hover:underline">2026 event photography pricing guide</Link>.
+                </p>
               </div>
             </SectionReveal>
           </div>
@@ -453,7 +443,7 @@ export default function EventPhotographyPage() {
         <section className="py-20 px-8 bg-white">
           <div className="max-w-5xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl text-[var(--color-text-dark)] mb-4">Events we Cover Across the Central Valley & Beyond</h2>
+              <h2 className="text-3xl text-[var(--color-text-dark)] mb-4">Events We Cover Across the Central Valley & Beyond</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-12 leading-relaxed max-w-3xl">
                 From intimate nonprofit dinners to regional conferences, we work with the organizations that drive this community — and we bring the same level of professionalism to every one.
               </p>
@@ -491,7 +481,7 @@ export default function EventPhotographyPage() {
                     <ul className="text-[var(--color-text-body)] text-sm space-y-2">
                       {group.items.map((item) => (
                         <li key={item} className="flex gap-2">
-                          <span className="text-[var(--color-primary)] font-bold flex-shrink-0">✓</span>
+                          <span className="text-[var(--color-primary)] flex-shrink-0">—</span>
                           {item}
                         </li>
                       ))}
@@ -503,41 +493,14 @@ export default function EventPhotographyPage() {
           </div>
         </section>
 
-        {/* Why Choose Rojas */}
-        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
-          <div className="max-w-4xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl text-center mb-12 text-[var(--color-text-dark)]">Why Event Organizers Trust Us</h2>
-            </SectionReveal>
-            <div className="grid md:grid-cols-2 gap-8">
-              {[
-                { title: 'Local Expertise, Statewide Reach', desc: "Based in Modesto, we know the Central Valley — the venues, the organizations, the community. We serve clients from Stockton and Fresno to Sacramento, the Bay Area, Los Angeles, and San Diego, with the same commitment everywhere we go." },
-                { title: 'Every Event Gets Our Full Attention', desc: "A 50-person chamber mixer gets the same preparation and professionalism as a 500-person gala. We review your schedule, communicate with your team, and show up ready — every time." },
-                { title: 'Professional & Unobtrusive', desc: 'We blend into the event while capturing everything — you and your guests won\'t feel like you\'re being photographed.' },
-                { title: 'Fast Delivery', desc: 'Full edited gallery delivered within 5–7 business days. Ask about our add-on for real-time face recognition delivery to attendees during your event.' },
-              ].map((item) => (
-                <SectionReveal key={item.title}>
-                  <div className="flex gap-4">
-                    <CheckCircle2 size={22} className="text-[var(--color-primary)] flex-shrink-0 mt-1" aria-hidden="true" />
-                    <div>
-                      <h3 className="text-[var(--color-text-dark)] mb-2">{item.title}</h3>
-                      <p className="text-[var(--color-text-body)] text-sm">{item.desc}</p>
-                    </div>
-                  </div>
-                </SectionReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Testimonials */}
-        <section className="py-20 px-8 bg-white">
+        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Imagine Leaving Your Event With Everything You Need</h2>
+                <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">What Event Organizers Say</h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto">
-                  Sponsor deliverables handled. Social media content ready. A gallery of professional photos that make the event look as good as it actually was. Here&apos;s what event organizers say about working with us.
+                  From chamber galas to credit union events — in their own words.
                 </p>
               </div>
             </SectionReveal>
@@ -558,41 +521,6 @@ export default function EventPhotographyPage() {
           </div>
         </section>
 
-        {/* Final CTA Before FAQ */}
-        <section className="py-16 px-8 bg-[var(--color-bg-warm)] text-center">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Your Event Deserves Reliable Photography</h2>
-              <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
-                Join hundreds of Central Valley organizations who&apos;ve trusted us for professional, reliable event coverage. Complete documentation with fast delivery is one quote away.
-              </p>
-              <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                Request a Quote
-              </Link>
-            </SectionReveal>
-          </div>
-        </section>
-
-        {/* Pricing Guide CTA */}
-        <section className="py-12 px-8 bg-[var(--color-bg-warm)]">
-          <div className="max-w-3xl mx-auto text-center">
-            <SectionReveal>
-              <h2 className="text-2xl md:text-3xl text-[var(--color-text-dark)] mb-4">
-                Wondering About Event Photography Pricing?
-              </h2>
-              <p className="text-[var(--color-text-body)] text-lg mb-6 leading-relaxed">
-                We put together a complete 2026 pricing guide covering hourly rates, packages by event type, and exactly what affects cost — so you can plan your budget with confidence.
-              </p>
-              <Link
-                href="/corporate-event-photography-cost"
-                className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block"
-              >
-                View the Full Pricing Guide →
-              </Link>
-            </SectionReveal>
-          </div>
-        </section>
-
         {/* FAQ Section */}
         <FAQSection
           faqs={faqs}
@@ -605,7 +533,7 @@ export default function EventPhotographyPage() {
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Ready to Capture Your Next Event?</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
-                Let us document your event with professional photography. From planning to delivery, we handle everything.
+                Hundreds of Central Valley organizations have trusted us with events that only happen once. From planning to delivery, we handle everything.
                 Planning a multi-day program? See our <Link href="/conference-photography" className="text-[var(--color-primary)] font-semibold hover:underline">conference photography across the Central Valley, Sacramento and statewide</Link>.
                 Want attendees to leave with a professional photo? Add a <Link href="/headshot-booth" className="text-[var(--color-primary)] font-semibold hover:underline">headshot booth for your event</Link>, or
                 pair your coverage with an <Link href="/video" className="text-[var(--color-primary)] font-semibold hover:underline">event highlight video</Link>.
