@@ -67,7 +67,7 @@ const portfolio: { src: string; alt: string; pos: string; wide?: boolean }[] = [
   { src: '/images/headshots/headshot-executive-02.jpg', alt: 'Executive headshot Modesto CA - Corporate leadership photography', pos: '55% 30%' },
   { src: '/images/headshots/headshot-attorney-08.jpg', alt: 'Attorney headshot Modesto - Central Valley law firm photography', pos: '50% 32%' },
   { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot Modesto - Professional medical photography', pos: '40% 28%' },
-  { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot Modesto CA - Professional law firm photography', pos: '62% 30%' },
+  { src: '/images/headshots/headshot-ceo-nutrition-01.jpg', alt: 'CEO headshot Modesto CA - Smiling executive in pink blazer on gray backdrop', pos: '49% 30%' },
   { src: '/images/headshots/headshot-attorney-11.jpg', alt: 'Lawyer headshot Modesto - Modern attorney portrait photography', pos: '58% 32%' },
   { src: '/images/work/cla-annual-meeting-2026/cla-annual-meeting-speaker-laughing.jpg', alt: 'Conference photography California - speaker on stage at the CLA Annual Meeting San Diego', pos: '50% 35%' },
   { src: '/images/events/gallery/united-way-gala-guests.jpg', alt: 'Corporate event photography Modesto - United Way gala guests', pos: '50% 40%' },
