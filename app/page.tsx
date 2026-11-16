@@ -95,7 +95,7 @@ export default function HomePage() {
       <SchemaScript schema={generateFAQSchema([
         {
           question: 'Who are Alfonso and Niomi Rojas?',
-          answer: 'Alfonso and Niomi Rojas are the husband-and-wife owners and photographers of Rojas Photography, based in Modesto, CA. They photograph every session together — two photographers on every job. They bring 15+ years of corporate leadership experience, and Alfonso is FAA Part 107 certified for drone operations. Together they have photographed 500+ executives and professionals across the Central Valley and hold 64 five-star Google reviews.',
+          answer: 'Alfonso and Niomi Rojas are the husband-and-wife owners and photographers of Rojas Photography, based in Modesto, CA. They photograph every session together — two photographers on every job. They bring 15+ years of corporate leadership experience, and Alfonso is FAA Part 107 certified for drone operations. Together they have photographed 500+ executives and professionals across the Central Valley and hold 70 five-star Google reviews.',
         },
         {
           question: 'What is Rojas Photography?',
@@ -154,7 +154,7 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="hero-rise mt-8" style={{ animationDelay: '0.6s' }}>
-              <GoogleReviewsBadge rating="5.0" count={64} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
+              <GoogleReviewsBadge rating="5.0" count={70} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
             </div>
             <div className="hero-rise mt-10 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.72s' }}>
               <span>500+ executives photographed</span>
@@ -564,7 +564,7 @@ export default function HomePage() {
                   Central Valley Professionals, In Their Own Words
                 </h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-8">
-                  A headshot that finally looks like you. A team photo that shows your culture. Brand imagery that makes the right people take notice. That&apos;s what working together looks like — here&apos;s what clients say.
+                  A headshot that finally looks like you. A team photo that shows your culture. That&apos;s what working together looks like — and nearly half of our 70 five-star reviews mention the same thing: how comfortable the session felt, often from people who dread being photographed.
                 </p>
               </div>
             </SectionReveal>
@@ -595,7 +595,7 @@ export default function HomePage() {
             <SectionReveal>
               <p className="text-center mt-10">
                 <a href="https://g.page/r/CdOO4Sj3FR_lEBM" target="_blank" rel="noopener noreferrer" className="text-[var(--color-primary)] font-semibold hover:underline">
-                  Read all 64 reviews on Google →
+                  Read all 70 reviews on Google →
                 </a>
               </p>
             </SectionReveal>
