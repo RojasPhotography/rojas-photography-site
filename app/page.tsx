@@ -185,10 +185,22 @@ export default function HomePage() {
       {/* Proof bar — the names they already know */}
       <SectionReveal>
         <section className="py-10 px-8 bg-[var(--color-bg-warm)] border-b border-gray-100" aria-label="Clients who trust Rojas Photography">
-          <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-center">
+          <div className="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-12 gap-y-5 text-center">
             <span className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] font-semibold">Trusted by</span>
-            {['Save Mart', 'Comcast', 'California Lawyers Association', 'Kaiser Permanente', 'Tenet Health'].map((c) => (
-              <span key={c} className="text-[var(--color-text-dark)] text-sm md:text-base tracking-[0.04em]" style={{ fontFamily: 'var(--font-heading)' }}>{c}</span>
+            {[
+              { src: '/images/logos/savemart.png', alt: 'Save Mart logo', w: 711, h: 160, cls: 'h-7' },
+              { src: '/images/logos/comcast.svg', alt: 'Comcast logo', w: 1000, h: 354, cls: 'h-7' },
+              { src: '/images/logos/cla.png', alt: 'California Lawyers Association logo', w: 350, h: 77, cls: 'h-8' },
+              { src: '/images/logos/tenet-health.png', alt: 'Tenet Health logo', w: 313, h: 160, cls: 'h-10' },
+            ].map((logo) => (
+              <Image
+                key={logo.src}
+                src={logo.src}
+                alt={logo.alt}
+                width={logo.w}
+                height={logo.h}
+                className={`${logo.cls} w-auto`}
+              />
             ))}
           </div>
         </section>
