@@ -199,7 +199,7 @@ export default function HomePage() {
                 alt={logo.alt}
                 width={logo.w}
                 height={logo.h}
-                className={`${logo.cls} w-auto grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300`}
+                className={`${logo.cls} w-auto`}
               />
             ))}
           </div>
