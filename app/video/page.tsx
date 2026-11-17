@@ -307,7 +307,7 @@ export default function VideoServicesPage() {
                   91% of businesses now use video as a marketing tool.
                 </p>
                 <p className="text-sm text-[var(--color-text-muted)] mt-2">
-                  Source: <a href="https://wyzowl.com/video-marketing-statistics/" className="underline" target="_blank" rel="noopener noreferrer">Wyzowl, Video Marketing Statistics 2026</a>
+                  Source: Wyzowl, Video Marketing Statistics 2026
                 </p>
               </div>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
