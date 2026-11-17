@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'Are you FAA-licensed drone pilots?',
     answer:
-      'Yes. We are FAA Part 107 certified commercial drone pilots and carry the required insurance documentation. That certification is what allows us to legally fly for commercial properties, corporate events and business aerials.',
+      'Yes. Alfonso is an FAA Part 107 certified commercial drone pilot, and we carry the required insurance documentation. That certification is what allows us to legally fly for commercial properties, corporate events and business aerials.',
   },
   {
     question: 'How long does video production take?',
@@ -87,7 +87,7 @@ const socialVideos: { id: string; title: string; caption: string }[] = [];
 const quickFacts = [
   { label: 'Turnaround', value: '1-2 weeks for short videos, 3-4 weeks for full productions' },
   { label: 'Coverage', value: 'Modesto, Stockton, Turlock, Merced, Fresno, Sacramento and the Central Valley, with statewide travel for larger productions' },
-  { label: 'Credentials', value: 'FAA Part 107 certified drone pilots, insured' },
+  { label: 'Credentials', value: 'FAA Part 107 certified drone pilot, fully insured' },
 ];
 
 export default function VideoServicesPage() {
@@ -117,9 +117,10 @@ export default function VideoServicesPage() {
       ))}
       <div className="min-h-screen bg-white">
       <HeroSection
-        title="Corporate Videographers in Modesto & the Central Valley"
-        subtitle="Social media video, brand films, client testimonials, event coverage and drone aerials, planned, filmed and edited by Alfonso and Niomi Rojas."
-        tag="Corporate Video Production & Drone Videography"
+        title="Your Company Is Doing Something Worth Seeing. Does Your Website Show It?"
+        subtitle="Brand films, client testimonials, event coverage and social reels that show prospects your story before they ever pick up the phone, led start to finish by Alfonso and Niomi Rojas."
+        tag="Corporate Videographers in Modesto & the Central Valley"
+        tagIsHeading
         gradient
       >
         <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
@@ -164,7 +165,7 @@ export default function VideoServicesPage() {
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">Video Production Services</h2>
               <p className="text-center text-lg text-[var(--color-text-body)] max-w-2xl mx-auto mb-12">
-                Three ways we put your company on camera. Tell us what you&apos;re trying to accomplish and we&apos;ll point you to the right one.
+                Three ways to work with us. Tell us what you&apos;re trying to accomplish and we&apos;ll match you to the right format.
               </p>
             </SectionReveal>
             <div className="grid md:grid-cols-3 gap-8">
@@ -172,35 +173,35 @@ export default function VideoServicesPage() {
                 {
                   tag: 'For Your Brand',
                   title: 'Brand & Story Films',
-                  who: 'Interview-driven films that show prospects, recruits and clients who you are before the first meeting.',
+                  who: 'Brand films, client testimonials and company stories: the kind of video that earns trust before the first meeting.',
                   items: [
                     'Company overview and about-us videos',
                     'Client testimonial and case study videos',
                     'Recruiting and culture videos',
-                    'Color grading, sound design and motion graphics',
+                    'FAA Part 107 drone aerials when the story calls for them',
                   ],
                   cta: 'Plan a Brand Film',
                 },
                 {
                   tag: 'For Your Events',
                   title: 'Event Video Coverage',
-                  who: 'Conference, gala and company event videography across Modesto and the Central Valley.',
+                  who: 'Conferences, galas, award ceremonies and corporate gatherings, captured so the energy of the day lives past the event itself.',
                   items: [
-                    'A highlight reel that promotes next year’s event',
-                    'Coverage of keynotes, sessions and award moments',
-                    'FAA Part 107 drone aerials when the venue calls for them',
-                    'Vertical recap cuts, sized for social',
+                    'Multi-camera coverage with a highlight reel',
+                    'Keynotes, speaker sessions and award presentations',
+                    'Sponsor and attendee testimonials captured on the floor',
+                    'Cuts sized for social, your website and next year’s promo',
                   ],
                   cta: 'Cover My Event',
                 },
                 {
                   tag: 'For Your Feeds',
                   title: 'Social Media Reels',
-                  who: 'Short-form video for brands that need a steady presence on Instagram, LinkedIn, TikTok and YouTube Shorts.',
+                  who: 'Your team, your culture, your work: captured and cut for the platforms where your next client is scrolling.',
                   items: [
-                    'Reels and short clips built around one focused shoot',
-                    'Behind-the-scenes and team highlights',
-                    'Vertical and square versions, ready to post',
+                    'Short-form clips built around one focused shoot',
+                    'Behind-the-scenes, team highlights and culture clips',
+                    'Vertical and square versions, ready for Instagram and LinkedIn',
                     'Quick turnaround, typically within 1-2 weeks',
                   ],
                   cta: 'Ask About Reels',
@@ -235,7 +236,7 @@ export default function VideoServicesPage() {
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">Our Work</h2>
               <p className="text-center text-lg text-[var(--color-text-body)] max-w-2xl mx-auto mb-14">
-                Recent films, planned, shot and edited by the two of us.
+                Recent films, directed by Alfonso and Niomi Rojas.
               </p>
             </SectionReveal>
 
@@ -295,13 +296,23 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">You Know You Need Video. Getting It Made Is the Hard Part.</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Your Competitors Already Have Video. Your Prospects Are Watching It.</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  Your team freezes when the camera comes out, and the footage ends up stiff and over-rehearsed. The options aren&apos;t much better: agency quotes that feel out of proportion to the project, or template work that looks like everyone else&apos;s.
+                  Most decision-makers won&apos;t call a company they can&apos;t picture. When they land on your site and there&apos;s no video, they don&apos;t stop to think &ldquo;this company doesn&apos;t have video.&rdquo; They move on, to the company that gave them something to watch.
                 </p>
+              </div>
+              <div className="my-8 border-l-4 border-[var(--color-primary)] bg-[var(--color-bg-warm)] rounded-r-2xl px-6 py-5">
+                <p className="text-2xl md:text-3xl text-[var(--color-text-dark)] leading-snug">
+                  91% of businesses now use video as a marketing tool.
+                </p>
+                <p className="text-sm text-[var(--color-text-muted)] mt-2">
+                  Source: <a href="https://wyzowl.com/video-marketing-statistics/" className="underline" target="_blank" rel="noopener noreferrer">Wyzowl, Video Marketing Statistics 2026</a>
+                </p>
+              </div>
+              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  Underneath it is a simpler worry: that the video won&apos;t sound or look like your company, and that you&apos;ll have spent the budget on something you hesitate to post. Your people shouldn&apos;t have to perform to be seen well on camera.
+                  The frustrating part is that your message is good. The work is real and the team is capable. What&apos;s missing is proof, and video is the fastest way to show it.
                 </p>
               </div>
             </SectionReveal>
@@ -312,13 +323,13 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Videographers Who Speak Business</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Most People Tense Up When a Camera Points at Them.</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  We&apos;re Alfonso and Niomi Rojas, and we come from corporate environments ourselves: manufacturing and executive leadership, HR and operations. We&apos;re comfortable talking with your marketing team, your CEO or your CFO, and we understand how business decisions get made, so you&apos;re working with a production partner, not a vendor you have to manage.
+                  That&apos;s not a problem you should have to solve on shoot day. We build every shoot around conversation, not script-reading, so your team comes across as human and credible, not stiff and over-rehearsed.
                 </p>
                 <p>
-                  Most people tense up when a camera points at them, so we build each shoot around conversation instead of a script. The result is polished, professional video that still sounds like the people in it.
+                  We&apos;re Alfonso and Niomi Rojas, and we lead every production ourselves, bringing in a trusted crew when a project calls for more hands. We come from corporate environments: manufacturing, executive leadership, HR and operations. We&apos;re comfortable in the room with your marketing team, your CEO or your CFO, and we understand how business decisions get made, so you&apos;re working with a production partner, not a vendor you have to manage.
                 </p>
               </div>
             </SectionReveal>
@@ -331,12 +342,11 @@ export default function VideoServicesPage() {
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">How We Produce Your Video</h2>
             </SectionReveal>
-            <div className="grid md:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {[
                 { n: '01', t: 'Story Development', d: 'We learn your goals, audience and key messages, then build the narrative structure and shot list together.' },
                 { n: '02', t: 'Production', d: 'We bring cameras, audio, lighting and drones when needed, and guide your team through conversational interviews at your location or in studio.' },
                 { n: '03', t: 'Editing', d: 'Color grading, sound design, motion graphics and licensed music, edited to keep your team natural on screen.' },
-                { n: '04', t: 'Multi-Format Delivery', d: 'Full resolution for your website, vertical for Stories and Reels, square for social feeds, all ready to publish.' },
               ].map((step) => (
                 <SectionReveal key={step.n}>
                   <div>
@@ -376,10 +386,10 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">A Video You&apos;re Proud to Put on Your Website</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">After the Shoot, Your Company Has a Voice.</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  After the shoot, you have a finished video your team is comfortable with, cuts sized for your website, LinkedIn and Instagram, and a clear sense of how your company comes across to a prospect before they ever call.
+                  Not just a video: a finished piece your team is proud to share. Cuts sized for your website, LinkedIn and Instagram. A clear sense of how your company comes across to a prospect before the first conversation.
                 </p>
                 <p>
                   Without it, prospects compare you on whatever your competitors have already published. Video is often the first thing a buyer watches, and it shapes the conversation before it starts.
@@ -397,7 +407,7 @@ export default function VideoServicesPage() {
         <section className="py-16 px-8 bg-[var(--color-bg-warm)] text-center">
           <div className="max-w-2xl mx-auto">
             <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Plan Your Video With Alfonso and Niomi</h2>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-4">Your Story Is Ready. Let&apos;s Put It on Screen.</h2>
               <p className="text-[var(--color-text-body)] text-lg mb-8 leading-relaxed">
                 Tell us what you need and where. We reply with a custom quote within 24 hours. Looking for photography instead? See our <Link href="/commercial" className="underline">commercial photography</Link>, <Link href="/event-photography" className="underline">event photography</Link> and <Link href="/conference-photography" className="underline">conference coverage</Link>.
               </p>
