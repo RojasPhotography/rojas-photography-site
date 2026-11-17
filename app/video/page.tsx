@@ -39,6 +39,16 @@ const faqs = [
       'Yes. Alongside full productions, we create short-form video for Instagram, LinkedIn, TikTok and YouTube Shorts: reels, event recaps, behind-the-scenes clips and team highlights. These are shot and edited in a focused format with vertical and square versions delivered, and they are scoped and quoted separately from full productions.',
   },
   {
+    question: 'Does my team need to memorize a script for a corporate video?',
+    answer:
+      'No. We bring a teleprompter to every shoot, so your team can read their lines naturally. If someone prefers to speak from memory, we coach them through each take so it sounds like a conversation rather than a recitation. Many shoots also use guided interviews, where we ask questions and your team simply answers.',
+  },
+  {
+    question: 'What is included in a video production project?',
+    answer:
+      'Every project starts with story development: you approve the story and shot list before we film. Rounds of revisions are included, and your quote is set before we start, so there are no surprises on the invoice. Final delivery includes cuts sized for your website, LinkedIn, Instagram and other platforms you use.',
+  },
+  {
     question: 'Do you work outside Modesto?',
     answer:
       'Yes. We film across the Central Valley, including Stockton, Turlock, Merced, Fresno and Sacramento, and travel statewide for larger projects — including the Bay Area, Los Angeles and San Diego. Tell us the location when you request a quote.',
@@ -98,6 +108,11 @@ export default function VideoServicesPage() {
         description: 'Corporate videographers in Modesto and the Central Valley: brand and story films, client testimonial and recruiting videos, event video coverage, social media reels and FAA Part 107 drone videography.',
         url: 'https://rojasphotography.net/video',
         image: 'https://rojasphotography.net/images/BBSI-Corp-Video.jpg',
+        subServices: [
+          { name: 'Brand & Story Films', description: 'Company overview, client testimonial, case study, and recruiting and culture videos for businesses in Modesto and the Central Valley.' },
+          { name: 'Event Video Coverage', description: 'Multi-camera event videography for conferences, galas and award ceremonies, with highlight reels and on-site testimonials.' },
+          { name: 'Social Media Reels', description: 'Short-form vertical and square video for Instagram, LinkedIn, TikTok and YouTube Shorts.' },
+        ],
       })} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([
@@ -205,14 +220,14 @@ export default function VideoServicesPage() {
                     'Company overview and about-us videos',
                     'Client testimonial and case study videos',
                     'Recruiting and culture videos',
-                    'FAA Part 107 drone aerials when the story calls for them',
+                    'FAA Part 107 drone videography when the story calls for it',
                   ],
                   cta: 'Plan a Brand Film',
                 },
                 {
                   tag: 'For Your Events',
                   title: 'Event Video Coverage',
-                  who: 'Conferences, galas, award ceremonies and corporate gatherings, captured so the energy of the day lives past the event itself.',
+                  who: 'Event videography for conferences, galas, award ceremonies and corporate gatherings across Modesto and the Central Valley, captured so the energy of the day lives past the event itself.',
                   items: [
                     'Multi-camera coverage with a highlight reel',
                     'Keynotes, speaker sessions and award presentations',
@@ -324,7 +339,7 @@ export default function VideoServicesPage() {
                   That&apos;s not a problem you should have to solve on shoot day. Whether your team speaks from a teleprompter, from memory or in a guided interview, we coach every take until it sounds like a conversation, so your people come across as human and credible, not stiff and over-rehearsed.
                 </p>
                 <p>
-                  We&apos;re Alfonso and Niomi Rojas, and we lead every production ourselves, bringing in a trusted crew when a project calls for more hands. We come from corporate environments: manufacturing, executive leadership, HR and operations. We&apos;re comfortable in the room with your marketing team, your CEO or your CFO, and we understand how business decisions get made, so you&apos;re working with a production partner, not a vendor you have to manage.
+                  We&apos;re Alfonso and Niomi Rojas, corporate videographers based in Modesto, and we lead every production ourselves, bringing in a trusted crew when a project calls for more hands. We come from corporate environments: manufacturing, executive leadership, HR and operations. We&apos;re comfortable in the room with your marketing team, your CEO or your CFO, and we understand how business decisions get made, so you&apos;re working with a production partner, not a vendor you have to manage.
                 </p>
               </div>
             </SectionReveal>
