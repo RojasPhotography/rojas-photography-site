@@ -389,7 +389,7 @@ export default function VideoServicesPage() {
                 <TestimonialCard name="Francisco Chamorro" role="BBSI - Business Management Solutions" quote="Alfonso and Niomi are great to work with. Responsive, open to input and above all super professional. Our firm contracted them for a client testimonial both on site and for b-roll and the results were just what we expected. I would recommend." />
               </SectionReveal>
               <SectionReveal>
-                <TestimonialCard name="Teresa Tolentino" role="Save Mart Companies" quote="I work with Rojas Photography on several projects and I couldn't be more impressed with their service. Alfonso and Niomi are incredibly professional, making everyone involved in the project feel relaxed. Even with a same-day turnaround, they deliver every time. I highly recommend Rojas Photography and will definitely continue to partner with them on future projects." />
+                <TestimonialCard name="Kim Musgrave" role="Google Review" quote="Enjoyed working with Alfonso and Niomi on a day filming at one of our hospitals. Professional, flexible and genuine. Highly recommend!" />
               </SectionReveal>
             </div>
           </div>
