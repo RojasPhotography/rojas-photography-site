@@ -159,6 +159,33 @@ export default function VideoServicesPage() {
           </section>
         </SectionReveal>
 
+        {/* StoryBrand: the problem */}
+        <section className="py-16 px-8 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Your Competitors Already Have Video. Your Prospects Are Watching It.</h2>
+              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
+                <p>
+                  Most decision-makers won&apos;t call a company they can&apos;t picture. When they land on your site and there&apos;s no video, they don&apos;t stop to think &ldquo;this company doesn&apos;t have video.&rdquo; They move on, to the company that gave them something to watch.
+                </p>
+              </div>
+              <div className="my-8 border-l-4 border-[var(--color-primary)] bg-[var(--color-bg-warm)] rounded-r-2xl px-6 py-5">
+                <p className="text-2xl md:text-3xl text-[var(--color-text-dark)] leading-snug">
+                  91% of businesses now use video as a marketing tool.
+                </p>
+                <p className="text-sm text-[var(--color-text-muted)] mt-2">
+                  Source: Wyzowl, Video Marketing Statistics 2026
+                </p>
+              </div>
+              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
+                <p>
+                  The frustrating part is that your message is good. The work is real and the team is capable. What&apos;s missing is proof, and video is the fastest way to show it.
+                </p>
+              </div>
+            </SectionReveal>
+          </div>
+        </section>
+
         {/* Three services: brand & story films, event coverage, social reels */}
         <section className="py-16 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
@@ -173,7 +200,7 @@ export default function VideoServicesPage() {
                 {
                   tag: 'For Your Brand',
                   title: 'Brand & Story Films',
-                  who: 'Brand films, client testimonials and company stories: the kind of video that earns trust before the first meeting.',
+                  who: 'Brand films, client testimonials and company stories: the kind of video that earns trust with prospects, recruits and clients alike.',
                   items: [
                     'Company overview and about-us videos',
                     'Client testimonial and case study videos',
@@ -287,38 +314,6 @@ export default function VideoServicesPage() {
           </div>
         </section>
 
-        <DefinitionBox
-          term={serviceDefinitions.videoProduction.term}
-          definition={serviceDefinitions.videoProduction.definition}
-        />
-
-        {/* StoryBrand: the problem */}
-        <section className="py-16 px-8 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Your Competitors Already Have Video. Your Prospects Are Watching It.</h2>
-              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
-                <p>
-                  Most decision-makers won&apos;t call a company they can&apos;t picture. When they land on your site and there&apos;s no video, they don&apos;t stop to think &ldquo;this company doesn&apos;t have video.&rdquo; They move on, to the company that gave them something to watch.
-                </p>
-              </div>
-              <div className="my-8 border-l-4 border-[var(--color-primary)] bg-[var(--color-bg-warm)] rounded-r-2xl px-6 py-5">
-                <p className="text-2xl md:text-3xl text-[var(--color-text-dark)] leading-snug">
-                  91% of businesses now use video as a marketing tool.
-                </p>
-                <p className="text-sm text-[var(--color-text-muted)] mt-2">
-                  Source: Wyzowl, Video Marketing Statistics 2026
-                </p>
-              </div>
-              <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
-                <p>
-                  The frustrating part is that your message is good. The work is real and the team is capable. What&apos;s missing is proof, and video is the fastest way to show it.
-                </p>
-              </div>
-            </SectionReveal>
-          </div>
-        </section>
-
         {/* Guide */}
         <section className="py-16 px-8 bg-white">
           <div className="max-w-4xl mx-auto">
@@ -326,7 +321,7 @@ export default function VideoServicesPage() {
               <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">Most People Tense Up When a Camera Points at Them.</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  That&apos;s not a problem you should have to solve on shoot day. We build every shoot around conversation, not script-reading, so your team comes across as human and credible, not stiff and over-rehearsed.
+                  That&apos;s not a problem you should have to solve on shoot day. Whether your team speaks from a teleprompter, from memory or in a guided interview, we coach every take until it sounds like a conversation, so your people come across as human and credible, not stiff and over-rehearsed.
                 </p>
                 <p>
                   We&apos;re Alfonso and Niomi Rojas, and we lead every production ourselves, bringing in a trusted crew when a project calls for more hands. We come from corporate environments: manufacturing, executive leadership, HR and operations. We&apos;re comfortable in the room with your marketing team, your CEO or your CFO, and we understand how business decisions get made, so you&apos;re working with a production partner, not a vendor you have to manage.
@@ -357,6 +352,24 @@ export default function VideoServicesPage() {
                 </SectionReveal>
               ))}
             </div>
+            <SectionReveal>
+              <div className="mt-16 bg-white rounded-2xl border border-gray-100 p-8 md:p-10 max-w-4xl mx-auto">
+                <h3 className="text-2xl text-[var(--color-text-dark)] mb-6 text-center">Our Promise to You</h3>
+                <ul className="grid md:grid-cols-2 gap-x-10 gap-y-4">
+                  {[
+                    'You approve the story and shot list before we film.',
+                    'Rounds of revisions are included in every project.',
+                    'Your quote is set before we start, with no surprises on the invoice.',
+                    'No memorizing required. We bring a teleprompter, and if your team prefers to speak from memory, we coach them so it never sounds rehearsed.',
+                  ].map((promise) => (
+                    <li key={promise} className="flex gap-3 text-[var(--color-text-body)]">
+                      <CheckCircle2 size={20} className="text-[var(--color-primary)] flex-shrink-0 mt-0.5" aria-hidden="true" />
+                      <span>{promise}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </SectionReveal>
           </div>
         </section>
 
@@ -389,15 +402,20 @@ export default function VideoServicesPage() {
               <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">After the Shoot, Your Company Has a Voice.</h2>
               <div className="space-y-4 text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  Not just a video: a finished piece your team is proud to share. Cuts sized for your website, LinkedIn and Instagram. A clear sense of how your company comes across to a prospect before the first conversation.
+                  Not just a video: a finished piece your team is proud to share. Cuts sized for your website, LinkedIn and Instagram. A clear, confident picture of your company that does its job every time someone visits your site.
                 </p>
                 <p>
-                  Without it, prospects compare you on whatever your competitors have already published. Video is often the first thing a buyer watches, and it shapes the conversation before it starts.
+                  Without it, prospects compare you on whatever your competitors have already published. Video is often the first thing a buyer watches, and it sets the tone for everything that follows.
                 </p>
               </div>
             </SectionReveal>
           </div>
         </section>
+
+        <DefinitionBox
+          term={serviceDefinitions.videoProduction.term}
+          definition={serviceDefinitions.videoProduction.definition}
+        />
 
         <FAQSection
           faqs={faqs}
