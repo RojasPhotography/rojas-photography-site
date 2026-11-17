@@ -9,6 +9,8 @@ interface HeroSectionProps {
   fullHeight?: boolean;
   objectPosition?: string;
   children?: React.ReactNode;
+  /** Render the small tag line as the page's <h1> (for keywords) and the large title as display text. */
+  tagIsHeading?: boolean;
 }
 
 export default function HeroSection({
@@ -20,8 +22,11 @@ export default function HeroSection({
   fullHeight = false,
   objectPosition,
   children,
+  tagIsHeading = false,
 }: HeroSectionProps) {
   const heightClass = fullHeight ? 'min-h-screen' : 'min-h-[50vh]';
+  const TagEl = tag && tagIsHeading ? 'h1' : 'p';
+  const TitleEl = tag && tagIsHeading ? 'p' : 'h1';
 
   if (image) {
     return (
@@ -42,13 +47,13 @@ export default function HeroSection({
         <div className="absolute inset-0 bg-[var(--color-primary-dark)]/70" />
         <div className="relative z-10 max-w-5xl mx-auto px-8 text-white text-center py-20">
           {tag && (
-            <p className="text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.2em] mb-6 uppercase">
+            <TagEl className="text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.2em] mb-6 uppercase">
               {tag}
-            </p>
+            </TagEl>
           )}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
+          <TitleEl className="text-4xl md:text-6xl lg:text-7xl mb-6 leading-tight">
             {title}
-          </h1>
+          </TitleEl>
           {subtitle && (
             <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-200">
               {subtitle}
@@ -71,13 +76,13 @@ export default function HeroSection({
     >
       <div className="relative z-10 max-w-5xl mx-auto px-8 text-white text-center py-20">
         {tag && (
-          <p className="text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.2em] mb-6 uppercase">
+          <TagEl className="text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.2em] mb-6 uppercase">
             {tag}
-          </p>
+          </TagEl>
         )}
-        <h1 className="text-4xl md:text-6xl mb-6 leading-tight">
+        <TitleEl className="text-4xl md:text-6xl mb-6 leading-tight">
           {title}
-        </h1>
+        </TitleEl>
         {subtitle && (
           <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed text-gray-200">
             {subtitle}

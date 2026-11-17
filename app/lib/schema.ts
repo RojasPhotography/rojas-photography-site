@@ -156,6 +156,7 @@ interface ServiceSchemaOptions {
   description: string;
   url: string;
   image?: string;
+  subServices?: { name: string; description: string }[];
 }
 
 export function generateServiceSchema(options: ServiceSchemaOptions) {
@@ -179,6 +180,16 @@ export function generateServiceSchema(options: ServiceSchemaOptions) {
       { '@type': 'State', name: 'California' },
     ],
     ...(options.image && { image: options.image }),
+    ...(options.subServices && {
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: options.name,
+        itemListElement: options.subServices.map((s) => ({
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: s.name, description: s.description },
+        })),
+      },
+    }),
     url: options.url,
   };
 }
