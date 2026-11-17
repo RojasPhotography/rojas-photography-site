@@ -132,7 +132,7 @@ export default function VideoServicesPage() {
       ))}
       <div className="min-h-screen bg-white">
       <HeroSection
-        title="Your Company Is Doing Something Worth Seeing. Does Your Website Show It?"
+        title="Your Company Is Doing Something Worth Seeing. Is Anyone Seeing It?"
         subtitle="Brand films, client testimonials, event coverage and social reels that show prospects your story before they ever pick up the phone, led start to finish by Alfonso and Niomi Rojas."
         tag="Corporate Videographers in Modesto & the Central Valley"
         tagIsHeading
