@@ -14,7 +14,7 @@ export function generateLocalBusinessSchema() {
       'https://rojasphotography.net/images/headshots/headshot-executive-ceo.jpg',
     ],
     description:
-      'Premium corporate photography and video studio in Modesto and the Central Valley, CA, owned and run by Alfonso and Niomi Rojas — two photographers on every session. Specializing in executive headshots, on-site team photography, headshot booths, commercial photography, video production, and conference and corporate event coverage. FAA Part 107 certified, with 15+ years of corporate leadership experience.',
+      'Premium corporate photography and video studio in Modesto and the Central Valley, CA, owned and run by Alfonso and Niomi Rojas, who lead every session with their team when the day calls for it. Specializing in executive headshots, on-site team photography, headshot booths, commercial photography, video production, and conference and corporate event coverage. FAA Part 107 certified, with 15+ years of corporate leadership experience.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Modesto',
@@ -135,7 +135,7 @@ export function generateOrganizationSchema() {
     url: 'https://rojasphotography.net',
     logo: 'https://rojasphotography.net/images/Rojas Photography Logo 24.6.png',
     description:
-      'Premium corporate photography and video studio in Modesto, CA, owned and run by Alfonso and Niomi Rojas — two photographers on every session.',
+      'Premium corporate photography and video studio in Modesto, CA, owned and run by Alfonso and Niomi Rojas, who lead every session with their team when the day calls for it.',
     sameAs: [
       'https://www.instagram.com/rojas.photos/',
       'https://www.facebook.com/RojasCreativePhotography/',

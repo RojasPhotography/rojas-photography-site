@@ -62,8 +62,8 @@ export default function DiscoveryCallPage() {
               Let&rsquo;s talk before you book.
             </h1>
             <p className="text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-8 mx-auto md:mx-0">
-              A relaxed discovery call with Alfonso and Niomi — the two photographers who&rsquo;ll be
-              at your session. We&rsquo;ll learn your goals, answer your questions, and map out the
+              A relaxed discovery call with Alfonso and Niomi, who lead every session
+              we take on. We&rsquo;ll learn your goals, answer your questions, and map out the
               right plan. No pressure, no upselling.
             </p>
             <a
@@ -77,7 +77,7 @@ export default function DiscoveryCallPage() {
             <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
               <Image
                 src="/images/Alfonso+Niomi-0026.jpg"
-                alt="Alfonso and Niomi Rojas, the two photographers behind Rojas Photography in Modesto"
+                alt="Alfonso and Niomi Rojas, the husband-and-wife team behind Rojas Photography in Modesto"
                 fill
                 priority
                 quality={90}

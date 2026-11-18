@@ -15,7 +15,7 @@ import FAQSection from './components/FAQSection';
 export const metadata: Metadata = {
   title: 'Corporate Photography Modesto CA | Professional Headshots',
   description:
-    'Premium corporate headshots in Modesto & the Central Valley — in our studio or at your office. Two photographers, every session. Trusted by 500+ executives.',
+    'Premium corporate headshots in Modesto & the Central Valley — in our studio or at your office. Led by Alfonso and Niomi. Trusted by 500+ executives.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://rojasphotography.net',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Corporate Photography Modesto CA | Professional Headshots',
     description:
-      'Premium corporate headshots in Modesto & the Central Valley — in our studio or at your office. Two photographers, every session. Trusted by 500+ executives.',
+      'Premium corporate headshots in Modesto & the Central Valley — in our studio or at your office. Led by Alfonso and Niomi. Trusted by 500+ executives.',
     url: 'https://rojasphotography.net',
     type: 'website',
     images: [
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Corporate Photography Modesto CA | Professional Headshots',
     description:
-      'Premium corporate headshots in Modesto & the Central Valley — in our studio or at your office. Two photographers, every session. Trusted by 500+ executives.',
+      'Premium corporate headshots in Modesto & the Central Valley — in our studio or at your office. Led by Alfonso and Niomi. Trusted by 500+ executives.',
     images: ['/images/kaiser-bts-headshots.jpg'],
   },
 };
@@ -167,7 +167,7 @@ export default function HomePage() {
             <div className="hero-rise mt-10 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.72s' }}>
               <span>500+ executives photographed</span>
               <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
-              <span>Two photographers, every session</span>
+              <span>Led by Alfonso &amp; Niomi</span>
             </div>
           </div>
           <div className="grid grid-cols-3 gap-3 md:gap-4">
@@ -247,7 +247,7 @@ export default function HomePage() {
           <SectionReveal>
             <div>
               <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">
-                Meet Alfonso &amp; Niomi — Two Photographers, Every Session
+                Meet Alfonso &amp; Niomi and Our Team
               </h2>
               <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
                 You've put years into building something real — a team, a reputation, a standard of work you're proud of. Then someone looks your company up — a headshot, a team page, last year's event — and what they find doesn't come close to reflecting any of it. That gap is frustrating. We get it.
@@ -283,7 +283,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 { n: '1', t: 'Tell us what you need', d: 'Book a studio session online, or request a quote for team days, events, conferences, or video. We reply within 24 hours with one clear number.' },
-                { n: '2', t: 'We handle the day', d: 'Two photographers on every job — coaching each person, covering every room, building the schedule around your people, not ours.' },
+                { n: '2', t: 'We handle the day', d: 'Led by Alfonso and Niomi, with our team when the day calls for it — coaching each person, covering every room, building the schedule around your people, not ours.' },
                 { n: '3', t: 'Delivered fast', d: 'Studio finals in your inbox within 48 hours. Team days and booths: same-day galleries. Events: live delivery while the room is still buzzing.' },
               ].map((s) => (
                 <SectionReveal key={s.n}>
@@ -307,7 +307,7 @@ export default function HomePage() {
                   How We Help
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  Professional headshots in Modesto — in our studio or at your office — plus event, conference, and video coverage across California. Whatever the day calls for, you get both of us.
+                  Professional headshots in Modesto — in our studio or at your office — plus event, conference, and video coverage across California. Every job is led by Alfonso and Niomi, with our team when the day calls for it.
                 </p>
               </div>
             </SectionReveal>
@@ -333,7 +333,7 @@ export default function HomePage() {
                     Headshots for One
                   </h3>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
-                    For executives, attorneys, and personal brands who need one photograph that carries their name. We guide you through every pose and expression — unlimited wardrobe changes, personal direction from both of us, and hand-finished retouching.
+                    For executives, attorneys, and personal brands who need one photograph that carries their name. We guide you through every pose and expression — unlimited wardrobe changes, personal direction from us, and hand-finished retouching.
                   </p>
                   <p className="text-[var(--color-text-body)] leading-relaxed mb-8">
                     We review every image together in the studio — you choose and purchase your favorites before you leave, and the edited finals arrive in your inbox within 48 hours.
@@ -414,12 +414,12 @@ export default function HomePage() {
                   </h3>
                   <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
                     Conferences, galas, award nights, and multi-day annual meetings — covered wall to wall by
-                    both of us, with live photo delivery while your event is still running and a{' '}
+                    Alfonso, Niomi and our team, with live photo delivery while your event is still running and a{' '}
                     <Link href="/headshot-booth" className="text-[var(--color-primary)] hover:underline">headshot booth</Link>{' '}
                     your attendees will line up for.
                   </p>
                   <ul className="space-y-3 text-[var(--color-text-body)] mb-8">
-                    {['Two photographers — keynote and candids at the same time', 'Live delivery via SpotMyPhotos during the event', 'Trusted by the California Lawyers Association, every year'].map((item) => (
+                    {['Keynote and candids covered at the same time', 'Live delivery via SpotMyPhotos during the event', 'Trusted by the California Lawyers Association, every year'].map((item) => (
                       <li key={item} className="flex items-start gap-3">
                         <span className="text-[var(--color-primary)] font-bold mt-0.5" aria-hidden="true">✓</span>
                         <span>{item}</span>
@@ -611,8 +611,8 @@ export default function HomePage() {
             </h2>
             <p className="text-lg mb-8 text-white/90">
               Studio sessions book online in minutes. Team days, events, conferences, and video start with one
-              quick quote. Either way, you&apos;ll know exactly what happens next within 24 hours — and your job
-              still gets both of us, Alfonso and Niomi.
+              quick quote. Either way, you&apos;ll know exactly what happens next within 24 hours — and every job
+              is led by Alfonso and Niomi, with our team when the day calls for it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
