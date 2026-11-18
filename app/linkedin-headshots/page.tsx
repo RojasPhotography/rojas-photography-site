@@ -210,7 +210,7 @@ export default function LinkedInHeadshotsPage() {
                       Our approach is not to pose you and click. We guide you through the entire session — coaching your posture, expression, and angles in real time — until we get the shot that actually looks like you at your best. No forced smiles. No awkward stiffness. Just a genuine image that works.
                     </p>
                     <p className="text-[var(--color-text-body)] leading-relaxed">
-                      With 15+ years of corporate experience and 64 five-star reviews, we understand how professionals want to be seen — and how to get them there.
+                      With 15+ years of corporate experience and 70 five-star reviews, we understand how professionals want to be seen — and how to get them there.
                     </p>
                   </div>
                 </SectionReveal>
