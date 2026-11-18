@@ -88,12 +88,12 @@ const portfolio: { src: string; alt: string; pos: string; wide?: boolean }[] = [
 // One list feeds both the visible FAQ and the FAQPage schema, so they can't drift apart.
 const homeFaqs = [
   {
-    question: 'Who are Alfonso and Niomi Rojas?',
-    answer: 'Alfonso and Niomi Rojas are the husband-and-wife owners and photographers of Rojas Photography in Modesto, CA. We photograph every session together, so there are two photographers on every job. We bring 15+ years of corporate leadership experience, Alfonso is an FAA Part 107 certified drone pilot, and together we have photographed 500+ executives and professionals across the Central Valley, with 70 five-star Google reviews.',
+    question: 'Who will be photographing me?',
+    answer: 'We will. We\'re Alfonso and Niomi Rojas, the husband-and-wife team behind Rojas Photography in Modesto, CA, and we photograph every session together, so you have two photographers on every job. We bring 15+ years of corporate leadership experience, and together we have photographed 500+ executives and professionals across the Central Valley, with 70 five-star Google reviews.',
   },
   {
-    question: 'What does Rojas Photography do?',
-    answer: 'Rojas Photography is a corporate photography and video studio based in Modesto, CA. We offer executive and professional headshots, on-site team headshot days, annual headshot programs, headshot booths for events, corporate event photography, commercial photography and video production for businesses throughout California.',
+    question: 'What services do you offer?',
+    answer: 'For individuals, we offer premium in-studio headshots for executives, attorneys, healthcare and finance professionals, real estate agents and LinkedIn profiles. For teams and companies, we offer on-site team headshots, annual headshot programs and commercial photography. For events and conferences, we offer event photography, conference photography and headshot booths. And for brands, our video production includes brand and story films, event video coverage and social media reels.',
   },
   {
     question: 'Where are you located, and do you travel outside of Modesto?',
