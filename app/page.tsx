@@ -85,6 +85,38 @@ const portfolio: { src: string; alt: string; pos: string; wide?: boolean }[] = [
   { src: '/images/headshots/headshot-mortgage-lender-02.jpg', alt: 'Mortgage professional headshot Modesto - Financial services photography', pos: '50% 26%' },
 ];
 
+// One list feeds both the visible FAQ and the FAQPage schema, so they can't drift apart.
+const homeFaqs = [
+  {
+    question: 'Who are Alfonso and Niomi Rojas?',
+    answer: 'Alfonso and Niomi Rojas are the husband-and-wife owners and photographers of Rojas Photography in Modesto, CA. We photograph every session together, so there are two photographers on every job. We bring 15+ years of corporate leadership experience, Alfonso is an FAA Part 107 certified drone pilot, and together we have photographed 500+ executives and professionals across the Central Valley, with 70 five-star Google reviews.',
+  },
+  {
+    question: 'What does Rojas Photography do?',
+    answer: 'Rojas Photography is a corporate photography and video studio based in Modesto, CA. We offer executive and professional headshots, on-site team headshot days, annual headshot programs, headshot booths for events, corporate event photography, commercial photography and video production for businesses throughout California.',
+  },
+  {
+    question: 'Where are you located, and do you travel outside of Modesto?',
+    answer: 'Our studio is in Modesto, CA 95356, in the heart of the Central Valley. We regularly work throughout the Central Valley, including Stockton, Turlock, Fresno, Sacramento, Merced, Ceres, Riverbank, Oakdale, Tracy, Manteca, Lodi and Clovis, and travel statewide for conferences, events and team days, including the Bay Area, Los Angeles and San Diego. Tell us the location when you request a quote.',
+  },
+  {
+    question: 'How much does a professional headshot cost in Modesto?',
+    answer: 'Our studio headshot sessions are $150 for the session, plus $150 per image you select. There is no minimum — you only pay for the photos you love. On-site team photography is $150 per person with no minimum, and a headshot booth for events starts at a flat $2,500 for a half day with unlimited attendees.',
+  },
+  {
+    question: 'What is the difference between a headshot booth and on-site photography?',
+    answer: 'A headshot booth is a flat-rate, high-volume service — ideal for expos, conferences, and company events where the goal is photographing everyone who steps up. On-site photography is $150 per person, where we spend dedicated time with each individual, providing personal coaching on posing and expression. Both involve us coming to your location with professional equipment.',
+  },
+  {
+    question: 'How quickly will I receive my photos?',
+    answer: 'For studio sessions, you review, choose, and purchase your favorite images with us before you leave; the edited finals arrive in your inbox within 48 hours. On-site team photography is delivered the same day. For corporate events with SpotMyPhotos live delivery (full-day bookings), guests can access their photos in real time during the event.',
+  },
+  {
+    question: 'What should I wear to a headshot session?',
+    answer: 'We send every client a preparation guide before their session with specific wardrobe recommendations. Generally, solid colors and professional attire photograph best. Bring multiple outfits — sessions include unlimited wardrobe changes at no extra charge. We guide you through everything in real time so you never have to guess.',
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -93,32 +125,7 @@ export default function HomePage() {
       {generatePersonSchema().map((person, i) => (
         <SchemaScript key={i} schema={person} />
       ))}
-      <SchemaScript schema={generateFAQSchema([
-        {
-          question: 'Who are Alfonso and Niomi Rojas?',
-          answer: 'Alfonso and Niomi Rojas are the husband-and-wife owners and photographers of Rojas Photography, based in Modesto, CA. They photograph every session together — two photographers on every job. They bring 15+ years of corporate leadership experience, and Alfonso is FAA Part 107 certified for drone operations. Together they have photographed 500+ executives and professionals across the Central Valley and hold 70 five-star Google reviews.',
-        },
-        {
-          question: 'What is Rojas Photography?',
-          answer: 'Rojas Photography is a professional corporate photography and video studio based in Modesto, CA, founded and operated by Alfonso and Niomi Rojas, who shoot every session together. Services include executive headshots, on-site team photography, headshot booth events, commercial photography, video production, and corporate event coverage throughout California — including Sacramento, the Bay Area, Los Angeles, and San Diego.',
-        },
-        {
-          question: 'Where is Rojas Photography located?',
-          answer: 'Rojas Photography is located in Modesto, CA 95356, in the heart of the Central Valley. The studio serves clients in Modesto, Stockton, Turlock, Fresno, Sacramento, Merced, and throughout Central Valley California. On-site photography is available at client locations throughout California.',
-        },
-        {
-          question: 'How much does a professional headshot cost in Modesto, CA?',
-          answer: 'A professional headshot session at Rojas Photography in Modesto costs $150 for the session fee, plus $150 per image selected. There is no minimum number of images to purchase — you only pay for the photos you love. For on-site team photography and headshot booth events, pricing is customized based on team size and scope.',
-        },
-        {
-          question: 'What areas does Rojas Photography serve in California?',
-          answer: 'Rojas Photography is based in Modesto, CA and serves the entire Central Valley including Stockton, Turlock, Fresno, Sacramento, Merced, Ceres, Riverbank, Oakdale, Tracy, Manteca, Lodi, and Clovis. On-site photography is available throughout California.',
-        },
-        {
-          question: 'Does Rojas Photography offer on-site headshots for businesses?',
-          answer: 'Yes. Alfonso and Niomi Rojas bring a complete professional studio setup — lighting, backdrop, and camera equipment — directly to your office, medical facility, law firm, or business. On-site photography is priced per person and is ideal for contracted team headshots. For high-volume events, a headshot booth service is also available at a flat half-day rate with unlimited attendees.',
-        },
-      ])} />
+      <SchemaScript schema={generateFAQSchema(homeFaqs)} />
       <div className="min-h-screen bg-white">
       <main id="main-content">
       {/* Hero — full-bleed portrait, dual CTA (studio vs on-location) */}
@@ -627,28 +634,7 @@ export default function HomePage() {
 
         {/* FAQ Section - AEO */}
         <FAQSection
-          faqs={[
-            {
-              question: 'How much does a professional headshot cost in Modesto?',
-              answer: 'Our studio headshot sessions are $150 for the session, plus $150 per image you select. There is no minimum — you only pay for the photos you love. On-site team photography is $150 per person with no minimum, and a headshot booth for events starts at a flat $2,500 for a half day with unlimited attendees.',
-            },
-            {
-              question: 'Do you travel for on-site photography outside of Modesto?',
-              answer: 'Yes. We regularly work throughout the Central Valley — Stockton, Turlock, Fresno, Sacramento — and travel statewide for conferences, events, and team days, including the Bay Area, Los Angeles, and San Diego. Tell us the location when you request a quote.',
-            },
-            {
-              question: 'What is the difference between a headshot booth and on-site photography?',
-              answer: 'A headshot booth is a flat-rate, high-volume service — ideal for expos, conferences, and company events where the goal is photographing everyone who steps up. On-site photography is $150 per person, where we spend dedicated time with each individual, providing personal coaching on posing and expression. Both involve us coming to your location with professional equipment.',
-            },
-            {
-              question: 'How quickly will I receive my photos?',
-              answer: 'For studio sessions, you review, choose, and purchase your favorite images with us before you leave; the edited finals arrive in your inbox within 48 hours. On-site team photography is delivered the same day. For corporate events with SpotMyPhotos live delivery (full-day bookings), guests can access their photos in real time during the event.',
-            },
-            {
-              question: 'What should I wear to a headshot session?',
-              answer: 'We send every client a preparation guide before their session with specific wardrobe recommendations. Generally, solid colors and professional attire photograph best. Bring multiple outfits — sessions include unlimited wardrobe changes at no extra charge. We guide you through everything in real time so you never have to guess.',
-            },
-          ]}
+          faqs={homeFaqs}
           heading="Common Questions"
         />
 
