@@ -89,7 +89,7 @@ const portfolio: { src: string; alt: string; pos: string; wide?: boolean }[] = [
 const homeFaqs = [
   {
     question: 'Who will be photographing me?',
-    answer: 'We will. We\'re Alfonso and Niomi Rojas, the husband-and-wife team behind Rojas Photography in Modesto, CA, and we photograph every session together, so you have two photographers on every job. We bring 15+ years of corporate leadership experience, and together we have photographed 500+ executives and professionals across the Central Valley, with 70 five-star Google reviews.',
+    answer: 'Our team will. Rojas Photography is led by Alfonso and Niomi Rojas, a husband-and-wife team in Modesto, CA, and every session is handled by us and our team, with more hands added when a project calls for it. We bring 15+ years of corporate leadership experience, and together we have photographed 500+ executives and professionals across the Central Valley, with 70 five-star Google reviews.',
   },
   {
     question: 'What services do you offer?',
