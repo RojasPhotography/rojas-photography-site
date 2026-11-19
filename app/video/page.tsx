@@ -90,6 +90,12 @@ const productionVideos = [
     caption: 'Client film for Doctors Medical Center, shot by Rojas Photography.',
     uploadDate: '2026-09-16',
   },
+  {
+    id: 'w7rYwN8DxZw',
+    title: 'BBSI Client Testimonial featuring Ace Hardware, filmed by Rojas Photography',
+    caption: 'Client testimonial film for BBSI, featuring Ace Hardware, shot by Rojas Photography.',
+    uploadDate: '2026-11-18',
+  },
 ];
 
 const socialVideos: { id: string; title: string; caption: string }[] = [];
