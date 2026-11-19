@@ -98,8 +98,8 @@ const productionVideos = [
   },
   {
     id: '4m7pQxd3u1Y',
-    title: 'BBSI Client Testimonial, filmed by Rojas Photography',
-    caption: 'Client testimonial film for BBSI, shot by Rojas Photography.',
+    title: 'BBSI Client Testimonial featuring Dental Excellence, filmed by Rojas Photography',
+    caption: 'Client testimonial film for BBSI, featuring Dental Excellence, shot by Rojas Photography.',
     uploadDate: '2026-11-18',
   },
 ];
