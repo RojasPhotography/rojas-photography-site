@@ -119,7 +119,14 @@ const eventVideos = [
   },
 ];
 
-const socialVideos: { id: string; title: string; caption: string }[] = [];
+const socialVideos = [
+  {
+    id: '1SlP9S2NazI',
+    title: 'Valley First Credit Union Team Day 2025 highlight reel by Rojas Photography',
+    caption: 'Valley First Credit Union Team Day 2025 highlight reel.',
+    uploadDate: '2026-11-18',
+  },
+];
 
 const quickFacts = [
   { label: 'Turnaround', value: '1-2 weeks for short videos, 3-4 weeks for full productions' },
@@ -146,7 +153,7 @@ export default function VideoServicesPage() {
         { name: 'Home', url: 'https://rojasphotography.net' },
         { name: 'Video Production', url: 'https://rojasphotography.net/video' },
       ])} />
-      {[...productionVideos, ...eventVideos].map((video) => (
+      {[...productionVideos, ...eventVideos, ...socialVideos].map((video) => (
         <SchemaScript
           key={video.id}
           schema={generateVideoSchema({
