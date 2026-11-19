@@ -96,6 +96,12 @@ const productionVideos = [
     caption: 'Client testimonial film for BBSI, featuring Ace Hardware, shot by Rojas Photography.',
     uploadDate: '2026-11-18',
   },
+  {
+    id: '4m7pQxd3u1Y',
+    title: 'BBSI Client Testimonial, filmed by Rojas Photography',
+    caption: 'Client testimonial film for BBSI, shot by Rojas Photography.',
+    uploadDate: '2026-11-18',
+  },
 ];
 
 const socialVideos: { id: string; title: string; caption: string }[] = [];
