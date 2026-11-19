@@ -110,6 +110,15 @@ const productionVideos = [
   },
 ];
 
+const eventVideos = [
+  {
+    id: 'IVhEFCIGbLY',
+    title: 'Modesto Veterans Day Parade 2025 event highlight film by Rojas Photography',
+    caption: 'Event highlight film for the Modesto Veterans Day Parade 2025, shot by Rojas Photography for the event organizer.',
+    uploadDate: '2025-11-18',
+  },
+];
+
 const socialVideos: { id: string; title: string; caption: string }[] = [];
 
 const quickFacts = [
@@ -137,7 +146,7 @@ export default function VideoServicesPage() {
         { name: 'Home', url: 'https://rojasphotography.net' },
         { name: 'Video Production', url: 'https://rojasphotography.net/video' },
       ])} />
-      {productionVideos.map((video) => (
+      {[...productionVideos, ...eventVideos].map((video) => (
         <SchemaScript
           key={video.id}
           schema={generateVideoSchema({
@@ -292,6 +301,21 @@ export default function VideoServicesPage() {
                 ))}
               </div>
             </SectionReveal>
+
+            {eventVideos.length > 0 && (
+              <SectionReveal>
+                <h3 className="text-2xl text-[var(--color-text-dark)] mt-16 mb-2">Event Coverage</h3>
+                <p className="text-[var(--color-text-body)] mb-6">Highlight films that keep the energy of the day alive long after it ends.</p>
+                <div className="grid md:grid-cols-2 gap-8">
+                  {eventVideos.map((video) => (
+                    <figure key={video.id}>
+                      <VideoFacade id={video.id} title={video.title} />
+                      <figcaption className="text-sm text-[var(--color-text-muted)] mt-3">{video.caption}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </SectionReveal>
+            )}
 
             {socialVideos.length > 0 && (
               <SectionReveal>
