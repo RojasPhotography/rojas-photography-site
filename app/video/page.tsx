@@ -112,6 +112,12 @@ const productionVideos = [
 
 const eventVideos = [
   {
+    id: '6fqij04Bgng',
+    title: 'Edible Extravaganza 2026 event highlight film by Rojas Photography',
+    caption: 'Event highlight film for Edible Extravaganza 2026, shot by Rojas Photography.',
+    uploadDate: '2026-11-19',
+  },
+  {
     id: 'IVhEFCIGbLY',
     title: 'Modesto Veterans Day Parade 2025 event highlight film by Rojas Photography',
     caption: 'Event highlight film for the Modesto Veterans Day Parade 2025, shot by Rojas Photography for the event organizer.',
