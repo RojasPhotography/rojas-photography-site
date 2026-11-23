@@ -26,7 +26,7 @@ export const metadata: Metadata = {
       {
         url: 'https://rojasphotography.net/images/work/kaiser-innovations-team/kaiser-team-headshots-gray-white.jpg',
         width: 1600,
-        height: 1000,
+        height: 800,
         alt: 'The same Kaiser Permanente team headshot on a gray background and a white background',
       },
     ],
@@ -130,7 +130,7 @@ export default function KaiserInnovationsTeamHeadshotsPage() {
               <div className="grid md:grid-cols-2 gap-x-8 gap-y-10">
                 {pairs.map((p) => (
                   <figure key={p.id} className="grid grid-cols-2 gap-2">
-                    <div className="relative aspect-[4/5] overflow-hidden rounded-l-xl bg-gray-300">
+                    <div className="relative aspect-square overflow-hidden rounded-l-xl bg-gray-300">
                       <Image
                         src={p.gray}
                         alt="Kaiser Permanente Innovations team headshot on a gray background, Pleasanton"
@@ -139,7 +139,7 @@ export default function KaiserInnovationsTeamHeadshotsPage() {
                         className="object-cover"
                       />
                     </div>
-                    <div className="relative aspect-[4/5] overflow-hidden rounded-r-xl bg-gray-100">
+                    <div className="relative aspect-square overflow-hidden rounded-r-xl bg-gray-100">
                       <Image
                         src={p.white}
                         alt="The same team member's headshot on a white background, from the same sitting"
@@ -160,7 +160,7 @@ export default function KaiserInnovationsTeamHeadshotsPage() {
               <SectionReveal>
                 <h2 id="review-heading" className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-12">In Her Words</h2>
                 <figure className="grid md:grid-cols-[220px_1fr] gap-8 items-center">
-                  <div className="relative aspect-[4/5] w-48 md:w-full mx-auto overflow-hidden rounded-xl bg-gray-300">
+                  <div className="relative aspect-square w-48 md:w-full mx-auto overflow-hidden rounded-xl bg-gray-300">
                     <Image
                       src="/images/work/kaiser-innovations-team/kaiser-team-headshot-07-gray.jpg"
                       alt="Sandra Mello, Admin Specialist at the Kaiser Business Campus in Pleasanton"
