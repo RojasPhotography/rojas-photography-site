@@ -25,8 +25,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: 'https://rojasphotography.net/images/work/kaiser-innovations-team/kaiser-team-headshots-gray-white.jpg',
-        width: 1600,
-        height: 800,
+        width: 1500,
+        height: 1000,
         alt: 'The same Kaiser Permanente team headshot on a gray background and a white background',
       },
     ],
