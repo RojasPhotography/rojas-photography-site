@@ -41,6 +41,15 @@ const caseStudies = [
     blurb:
       'Quick, coached headshots over the lunch window at a historic downtown LA hotel, with photos delivered to each attendee during the event.',
   },
+  {
+    href: '/work/kaiser-innovations-team-headshots',
+    image: '/images/work/kaiser-innovations-team/kaiser-team-headshots-gray-white.jpg',
+    alt: 'The same Kaiser Permanente team headshot on a gray background and a white background',
+    tag: 'Team Headshots · On-Site Studio',
+    title: 'Kaiser Permanente Innovations Team — Pleasanton',
+    blurb:
+      'A national team in one building for one day: headshots scheduled around their meetings, white and gray backgrounds in a single sitting, and a team photo to close it out.',
+  },
 ];
 
 export default function WorkPage() {

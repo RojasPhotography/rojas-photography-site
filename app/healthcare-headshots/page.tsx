@@ -428,7 +428,7 @@ export default function HealthcareHeadshotsPage() {
                         Our studio is in Modesto, CA — convenient for healthcare professionals at Community Regional, Memorial Medical Center, and throughout the Central Valley. We also serve Sacramento, Fresno, Stockton, and surrounding areas.
                       </p>
                       <p className="text-[var(--color-text-body)] text-sm leading-relaxed">
-                        We bring our full on-site studio to hospitals, clinics, and medical practices for team sessions. Contact us for department and group pricing.
+                        We bring our full on-site studio to hospitals, clinics, and medical practices for team sessions, like our <Link href="/work/kaiser-innovations-team-headshots" className="text-[var(--color-primary)] hover:underline">Kaiser Permanente team headshots in Pleasanton</Link>. Contact us for department and group pricing.
                       </p>
                     </div>
                     <div className="text-center pt-2">

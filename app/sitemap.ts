@@ -37,6 +37,7 @@ const pages: Array<[path: string, lastModified: string, changeFrequency: Freq, p
   ['/work', '2026-11-22', 'monthly', 0.8],
   ['/work/cla-annual-meeting-2026', '2026-11-15', 'monthly', 0.8],
   ['/work/biltmore-los-angeles-headshots', '2026-11-22', 'monthly', 0.8],
+  ['/work/kaiser-innovations-team-headshots', '2026-11-22', 'monthly', 0.8],
   ['/professional-headshot-cost', '2026-09-28', 'monthly', 0.8],
   ['/how-to-prepare-for-headshots', '2026-07-16', 'monthly', 0.7],
   ['/what-to-wear-for-a-headshot', '2026-10-31', 'monthly', 0.8],
