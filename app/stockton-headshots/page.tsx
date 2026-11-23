@@ -92,7 +92,7 @@ export default function StocktonHeadshotsPage() {
         email: 'alfonso@rojasphotography.net',
         url: 'https://rojasphotography.net/stockton-headshots',
         priceRange: '$$',
-        aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', reviewCount: '60' },
+        aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', reviewCount: '70' },
       }} />
       <SchemaScript schema={generateFAQSchema(faqs)} />
       <SchemaScript schema={generateBreadcrumbSchema([

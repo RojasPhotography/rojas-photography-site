@@ -11,7 +11,7 @@ const pages: Array<[path: string, lastModified: string, changeFrequency: Freq, p
   ['/on-site-photography', '2026-10-31', 'weekly', 0.9],
   ['/headshot-booth', '2026-11-14', 'weekly', 0.9],
   ['/commercial', '2026-10-31', 'weekly', 0.9],
-  ['/video', '2026-11-14', 'weekly', 0.9],
+  ['/video', '2026-11-17', 'weekly', 0.9],
   ['/event-photography', '2026-11-14', 'weekly', 0.9],
   ['/conference-photography', '2026-11-14', 'weekly', 0.9],
   ['/about-rojas-photography', '2026-10-31', 'monthly', 0.7],

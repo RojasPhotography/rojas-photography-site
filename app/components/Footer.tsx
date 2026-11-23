@@ -216,6 +216,7 @@ export default function Footer() {
               { href: '/finance-headshots', label: 'Finance Headshots' },
               { href: '/linkedin-headshots', label: 'LinkedIn Headshots' },
               { href: '/student-headshots', label: 'Student & Grad Headshots' },
+              { href: '/eras-headshots', label: 'ERAS Residency Headshots' },
             ].map((l) => (
               <li key={l.href}>
                 <Link href={l.href} className="hover:text-[var(--color-primary-light)] transition-colors">

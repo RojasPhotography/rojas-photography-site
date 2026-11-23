@@ -40,7 +40,7 @@ function generateTurlockSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',
-      reviewCount: '60',
+      reviewCount: '70',
     },
   };
 }

@@ -62,8 +62,8 @@ export default function DiscoveryCallPage() {
               Let&rsquo;s talk before you book.
             </h1>
             <p className="text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-8 mx-auto md:mx-0">
-              A relaxed discovery call with Alfonso and Niomi — the two photographers who&rsquo;ll be
-              at your session. We&rsquo;ll learn your goals, answer your questions, and map out the
+              A relaxed discovery call with Alfonso and Niomi, who lead every session
+              we take on. We&rsquo;ll learn your goals, answer your questions, and map out the
               right plan. No pressure, no upselling.
             </p>
             <a
@@ -77,7 +77,7 @@ export default function DiscoveryCallPage() {
             <div className="relative w-full aspect-[4/5] rounded-xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
               <Image
                 src="/images/Alfonso+Niomi-0026.jpg"
-                alt="Alfonso and Niomi Rojas, the two photographers behind Rojas Photography in Modesto"
+                alt="Alfonso and Niomi Rojas, the husband-and-wife team behind Rojas Photography in Modesto"
                 fill
                 priority
                 quality={90}
@@ -172,7 +172,7 @@ export default function DiscoveryCallPage() {
                 {[
                   { src: '/images/headshots/headshot-executive-02.jpg', alt: 'Executive headshot in Modesto — Rojas Photography', pos: '55% 25%' },
                   { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Comcast executive headshot in Modesto — Rojas Photography', pos: '60% 30%' },
-                  { src: '/images/headshots/headshot-attorney-05.jpg', alt: 'Attorney headshot in Modesto — Rojas Photography', pos: '58% 30%' },
+                  { src: '/images/headshots/headshot-attorney-11.jpg', alt: 'Attorney headshot in Modesto — Rojas Photography', pos: '75% 50%' },
                   { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Finance CEO headshot in Modesto — Rojas Photography', pos: '50% 25%' },
                 ].map((p) => (
                   <div key={p.src} className="relative aspect-[4/5] rounded-xl overflow-hidden ring-1 ring-black/5 shadow-sm">

@@ -21,7 +21,7 @@ export const serviceDefinitions = {
   },
   videoProduction: {
     term: 'Corporate Video Production',
-    definition: `Corporate video production is professional video content created for business communication, marketing, and training purposes. This includes company overview and brand videos, client testimonial videos, product demonstration videos, training and educational videos, promotional social media content, and aerial drone videography captured by FAA Part 107 certified pilots.`,
+    definition: `Corporate video production is professional video content created for business communication, marketing, and training purposes. This includes company overview and brand videos, client testimonial videos, recruiting and culture videos, event highlight videos, product demonstration videos, training and educational videos, promotional social media content, and aerial drone videography captured by an FAA Part 107 certified pilot.`,
     context: `Professional business videos generate 80% more engagement than static images and increase conversion rates by 47%.`,
   },
   eventPhotography: {

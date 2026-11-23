@@ -30,33 +30,33 @@ export default function FAQSection({ faqs, heading = 'Frequently Asked Questions
           {faqs.map((faq, index) => (
             <SectionReveal key={index}>
               <div className="border border-gray-200 rounded-lg overflow-hidden">
-                <button
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
-                  aria-expanded={openIndex === index}
-                  aria-controls={`faq-${index}`}
-                >
-                  <h3 className="text-lg font-semibold text-[var(--color-text-dark)] text-left">
-                    {faq.question}
-                  </h3>
-                  <ChevronDown
-                    size={20}
-                    aria-hidden="true"
-                    className={`flex-shrink-0 text-[var(--color-primary)] transition-transform duration-300 ${
-                      openIndex === index ? 'rotate-180' : ''
-                    }`}
-                  />
-                </button>
-                {openIndex === index && (
-                  <div
-                    id={`faq-${index}`}
-                    className="px-6 py-4 bg-gray-50 border-t border-gray-200"
+                <h3 className="text-lg font-semibold text-[var(--color-text-dark)] text-left">
+                  <button
+                    onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                    className="w-full px-6 py-4 flex items-center justify-between gap-4 text-left hover:bg-gray-50 transition-colors"
+                    aria-expanded={openIndex === index}
+                    aria-controls={`faq-${index}`}
                   >
-                    <p className="text-[var(--color-text-body)] leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
+                    <span>{faq.question}</span>
+                    <ChevronDown
+                      size={20}
+                      aria-hidden="true"
+                      className={`flex-shrink-0 text-[var(--color-primary)] transition-transform duration-300 ${
+                        openIndex === index ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </button>
+                </h3>
+                {/* Answers stay in the HTML (hidden, not unmounted) so crawlers can read them and they match the FAQPage schema. */}
+                <div
+                  id={`faq-${index}`}
+                  hidden={openIndex !== index}
+                  className="px-6 py-4 bg-gray-50 border-t border-gray-200"
+                >
+                  <p className="text-[var(--color-text-body)] leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
               </div>
             </SectionReveal>
           ))}

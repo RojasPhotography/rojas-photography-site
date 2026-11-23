@@ -10,12 +10,12 @@
 - **Owner:** Alfonso Rojas — Rojas Photography LLC, Modesto, CA
 
 ## The business
-Premium corporate photography & video studio serving Modesto / Central Valley, run by **Alfonso and Niomi Rojas** (they shoot together). Known clients: Save Mart, Comcast, California Lawyers Association, Kaiser, Tenet Health. (NOT CalPERS — bid submitted, never hired; never list them as a client.) Reputation: well known locally and intentionally **premium / expensive** — protect that positioning in every decision.
+Premium corporate photography & video studio serving Modesto / Central Valley, run by **Alfonso and Niomi Rojas**, who lead every session, with their team when the day calls for it. Known clients: Save Mart, Comcast, California Lawyers Association, Kaiser, Tenet Health. (NOT CalPERS — bid submitted, never hired; never list them as a client.) Reputation: well known locally and intentionally **premium / expensive** — protect that positioning in every decision.
 
 ## Strategy we're building toward: the "Premium Barbell"
 The site currently sells one thing (premium individual headshots) to one audience. The business is really **two lanes**, and the site should reflect that:
 - **Signature (premium):** individual executives, attorneys, personal brands. White-glove, you + Niomi, hand-retouched. Carries the brand and the margin.
-- **Express (volume, automation-driven):** team headshot days, event coverage, school portraits. Fast, same-day galleries, instant ordering. Captures volume **without adding shooters**.
+- **Express (volume, automation-driven):** team headshot days, event coverage, school portraits. Fast, same-day galleries, instant ordering. Captures volume through automation first, with our team added when the day calls for it.
 
 Priority order behind every decision: **(1) brand / be THE name → (2) revenue & profit → (3) volume / market share.**
 
@@ -23,7 +23,7 @@ Mid-tier guardrail: Express must always feel like a *different experience* (fast
 
 ## Brand & voice conventions (ALWAYS / NEVER)
 - **Brand color:** deep green `#1F6B4D`. Standardize everywhere — buttons, `theme-color`, favicon. (Site currently uses `#1A5C3C` in places; migrate it.)
-- **Voice:** first-person plural — "we," **Alfonso and Niomi.** The two-of-us is a premium differentiator. NEVER mix solo "I" and "we" on the same page; fix existing pages written in "I."
+- **Voice:** first-person plural — "we," **Alfonso and Niomi.** Founder-led is the premium differentiator. Standard line: **"Led by Alfonso and Niomi, with our team when the day calls for it."** NEVER promise both of them (or "two photographers") at every session; case studies of past events may describe who was actually there. NEVER mix solo "I" and "we" on the same page; fix existing pages written in "I."
 - **Pricing:** lead with outcome and craft. **NEVER put a price (e.g. "$150") in a page title or meta description.** Transparent pricing on-page, lower down, is fine.
 - **Tone:** confident, restrained, premium. Don't repeat the same phrases ("story," "authentic," "undersold by a photo") multiple times per page.
 - **Audience clarity:** every page should signal within seconds whether it's for an **individual** or a **company.**

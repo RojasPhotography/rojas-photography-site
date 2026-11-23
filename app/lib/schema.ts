@@ -14,7 +14,7 @@ export function generateLocalBusinessSchema() {
       'https://rojasphotography.net/images/headshots/headshot-executive-ceo.jpg',
     ],
     description:
-      'Premium corporate photography and video studio in Modesto and the Central Valley, CA, owned and run by Alfonso and Niomi Rojas — two photographers on every session. Specializing in executive headshots, on-site team photography, headshot booths, commercial photography, video production, and conference and corporate event coverage. FAA Part 107 certified, with 15+ years of corporate leadership experience.',
+      'Premium corporate photography and video studio in Modesto and the Central Valley, CA, owned and run by Alfonso and Niomi Rojas, who lead every session with their team when the day calls for it. Specializing in executive headshots, on-site team photography, headshot booths, commercial photography, video production, and conference and corporate event coverage. FAA Part 107 certified, with 15+ years of corporate leadership experience.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Modesto',
@@ -48,7 +48,7 @@ export function generateLocalBusinessSchema() {
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5',
-      reviewCount: '64',
+      reviewCount: '70',
       bestRating: '5',
       worstRating: '1',
     },
@@ -135,7 +135,7 @@ export function generateOrganizationSchema() {
     url: 'https://rojasphotography.net',
     logo: 'https://rojasphotography.net/images/Rojas Photography Logo 24.6.png',
     description:
-      'Premium corporate photography and video studio in Modesto, CA, owned and run by Alfonso and Niomi Rojas — two photographers on every session.',
+      'Premium corporate photography and video studio in Modesto, CA, owned and run by Alfonso and Niomi Rojas, who lead every session with their team when the day calls for it.',
     sameAs: [
       'https://www.instagram.com/rojas.photos/',
       'https://www.facebook.com/RojasCreativePhotography/',
@@ -156,6 +156,7 @@ interface ServiceSchemaOptions {
   description: string;
   url: string;
   image?: string;
+  subServices?: { name: string; description: string }[];
 }
 
 export function generateServiceSchema(options: ServiceSchemaOptions) {
@@ -179,6 +180,16 @@ export function generateServiceSchema(options: ServiceSchemaOptions) {
       { '@type': 'State', name: 'California' },
     ],
     ...(options.image && { image: options.image }),
+    ...(options.subServices && {
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: options.name,
+        itemListElement: options.subServices.map((s) => ({
+          '@type': 'Offer',
+          itemOffered: { '@type': 'Service', name: s.name, description: s.description },
+        })),
+      },
+    }),
     url: options.url,
   };
 }

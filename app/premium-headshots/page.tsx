@@ -81,31 +81,56 @@ export default function PremiumHeadshotsPage() {
       ])} />
       <div className="min-h-screen bg-white">
       {/* Hero Section - SB7: A Character */}
-      <HeroSection
-        image="/images/headshots/headshot-ceo-nutrition-02.jpg"
-        title="Professional Headshots Shouldn't Feel Awkward."
-        tag="Premium Corporate Headshots | Modesto, CA"
-        objectPosition="70% 33%"
-        fullHeight
+      <section
+        className="relative w-full overflow-hidden pt-20 lg:pt-28"
+        style={{ background: 'linear-gradient(135deg, #0F2E1E 0%, #1F6B4D 130%)' }}
+        aria-label="Premium corporate headshots in Modesto"
       >
-        <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-          Most professionals feel camera-shy or don't know how to pose. Our guided headshot sessions in Modesto include real-time coaching so you feel confident, look natural, and walk away with a headshot that builds credibility.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-          <a
-            href="#booking-heading"
-            className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-          >
-            Book Your Session
-          </a>
-          <Link
-            href="/discovery-call"
-            className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-          >
-            Schedule Discovery Call
-          </Link>
+        <div className="max-w-7xl mx-auto px-8 py-14 md:py-20 grid lg:grid-cols-2 gap-14 items-center text-white">
+          <div>
+            <p className="text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase">
+              Premium Corporate Headshots | Modesto, CA
+            </p>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl mb-6 leading-[1.05] tracking-[-0.01em]">
+              Professional Headshots Shouldn&apos;t Feel Awkward.
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 mb-10 max-w-xl leading-relaxed">
+              Most professionals feel camera-shy or don&apos;t know how to pose. Our guided headshot sessions in Modesto include real-time coaching so you feel confident, look natural, and walk away with a headshot that builds credibility.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#booking-heading"
+                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
+              >
+                Book Your Session
+              </a>
+              <Link
+                href="/discovery-call"
+                className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
+              >
+                Schedule Discovery Call
+              </Link>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-3 md:gap-4">
+            {[
+              { src: '/images/headshots/headshot-executive-ceo.jpg', alt: 'Premium executive headshot by Rojas Photography — woman in red on dark backdrop', pos: '48% 50%' },
+              { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Premium corporate headshot — finance executive in dark suit, Modesto studio', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-attorney-11.jpg', alt: 'Attorney headshot — smiling lawyer in yellow blazer on dark backdrop', pos: '75% 50%' },
+              { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot — woman in grey blazer', pos: '26% 50%' },
+              { src: '/images/headshots/headshot-executive-02.jpg', alt: 'Executive headshot — man with glasses, studio lighting', pos: '59% 50%' },
+              { src: '/images/headshots/headshot-ceo-nutrition-01.jpg', alt: 'CEO headshot — woman in pink blazer, Modesto studio', pos: '47% 50%' },
+              { src: '/images/headshots/headshot-cpa-finance-01.jpg', alt: 'Finance professional headshot — man with glasses on dark backdrop', pos: '66% 50%' },
+              { src: '/images/headshots/headshot-sales-manager-01.jpg', alt: 'Professional headshot — woman on dark backdrop, coached session', pos: '50% 50%' },
+              { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Corporate executive headshot — woman in white blazer', pos: '57% 50%' },
+            ].map((img) => (
+              <div key={img.src} className="relative aspect-[4/5] rounded-xl overflow-hidden">
+                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover" style={{ objectPosition: img.pos }} />
+              </div>
+            ))}
+          </div>
         </div>
-      </HeroSection>
+      </section>
 
       {/* Problem Section - SB7: Has a Problem */}
       <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]">
@@ -146,7 +171,7 @@ export default function PremiumHeadshotsPage() {
               </h2>
               <div className="space-y-4 text-lg text-[var(--color-text-body)] leading-relaxed">
                 <p>
-                  Most people we work with feel the same way before they arrive: awkward in front of a camera, unsure how to pose, convinced they're just "not photogenic." That feeling is real — and it's exactly what we're here to take off your plate.
+                  Most people we work with feel the same way before they arrive: awkward in front of a camera, unsure how to pose, convinced they're just "not photogenic." That feeling is real — and it's exactly what we're here to take off your plate. Don&apos;t take our word for it: nearly half of our 70 five-star Google reviews mention how comfortable the session felt — many written by people who told us they dread being photographed.
                 </p>
                 <p className="font-semibold text-[var(--color-text-dark)]">
                   We&apos;re Alfonso and Niomi Rojas. We&apos;ve photographed 500+ professionals across Modesto and the Central Valley — CEOs, attorneys, realtors, healthcare executives — and we come from corporate leadership ourselves, so we know how to work with CEOs, CFOs and the professionals who report to them. We know what a headshot needs to communicate, and we know how to get you there without it feeling forced.
@@ -239,7 +264,7 @@ export default function PremiumHeadshotsPage() {
                 Our Premium Corporate Headshots
               </h2>
               <p className="text-center text-[var(--color-text-body)] mb-12 max-w-2xl mx-auto">
-                Professional headshots for attorneys, executives, financial advisors, healthcare professionals, and business leaders across Modesto and the Central Valley.
+                Professional headshots for <Link href="/attorney-headshots" className="underline decoration-[var(--color-primary)]/40 underline-offset-2 hover:text-[var(--color-primary)] transition-colors">attorneys</Link>, executives, <Link href="/finance-headshots" className="underline decoration-[var(--color-primary)]/40 underline-offset-2 hover:text-[var(--color-primary)] transition-colors">financial advisors</Link>, <Link href="/healthcare-headshots" className="underline decoration-[var(--color-primary)]/40 underline-offset-2 hover:text-[var(--color-primary)] transition-colors">healthcare professionals</Link>, and business leaders across Modesto and the Central Valley. The same session works wherever your face represents you — a <Link href="/linkedin-headshots" className="underline decoration-[var(--color-primary)]/40 underline-offset-2 hover:text-[var(--color-primary)] transition-colors">LinkedIn profile refresh</Link> or an <Link href="/eras-headshots" className="underline decoration-[var(--color-primary)]/40 underline-offset-2 hover:text-[var(--color-primary)] transition-colors">ERAS residency application photo</Link>.
               </p>
             </SectionReveal>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

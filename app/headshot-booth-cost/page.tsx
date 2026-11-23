@@ -20,7 +20,7 @@ const faqs = [
   {
     question: 'What is included in a headshot booth booking?',
     answer:
-      'A complete professional studio brought to your venue — lighting, backdrop, and camera — plus two photographers, Alfonso and Niomi, who coach every attendee through their quick session. Every image is edited, and the finished gallery is delivered the same day so attendees have their headshots before the event buzz fades.',
+      'A complete professional studio brought to your venue — lighting, backdrop, and camera — plus Alfonso, Niomi and our team, who coach every attendee through their quick session. Every image is edited, and the finished gallery is delivered the same day so attendees have their headshots before the event buzz fades.',
   },
   {
     question: 'What is the difference between a headshot booth and an on-site team headshot day?',
@@ -77,7 +77,7 @@ const costFactors = [
   { factor: 'Attendance', detail: 'With a flat-rate booth, attendance changes your per-person value, not your price. 40 attendees works out to about $62 per headshot; 80 attendees works out to about $31. The busier your event, the better the math gets.' },
   { factor: 'Location', detail: 'We run booths statewide — Central Valley, Sacramento, the Bay Area, Los Angeles, and San Diego. Tell us the venue and dates and your quote covers everything.' },
   { factor: 'Delivery Speed', detail: 'Same-day gallery delivery is standard, not an upgrade. Attendees get their edited headshots while your event is still the thing they are talking about.' },
-  { factor: 'Staffing', detail: 'Two photographers — Alfonso and Niomi — run every booth. One shoots while one coaches and keeps the line moving, which is how 80 people fit into 4 hours without anyone feeling rushed past.' },
+  { factor: 'Staffing', detail: 'Every booth is led by Alfonso and Niomi, with our team when the day calls for it. One person shoots while another coaches and keeps the line moving, which is how 80 people fit into 4 hours without anyone feeling rushed past.' },
 ];
 
 export default function HeadshotBoothCostPage() {

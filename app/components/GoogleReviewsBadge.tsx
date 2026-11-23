@@ -12,7 +12,7 @@ interface GoogleReviewsBadgeProps {
  */
 export default function GoogleReviewsBadge({
   rating = '5.0',
-  count = 64,
+  count = 70,
   href,
 }: GoogleReviewsBadgeProps) {
   return (
