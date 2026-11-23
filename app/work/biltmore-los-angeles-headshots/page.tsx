@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import HeroSection from '../../components/HeroSection';
 import SectionReveal from '../../components/SectionReveal';
 import SchemaScript from '../../components/SchemaScript';
 import { generateBreadcrumbSchema } from '../../lib/schema';
-
-// TODO before merge: add photos to public/images/work/triological-biltmore/,
-// swap the gradient hero for a photo, and add the MasonryGallery section.
 
 export const metadata: Metadata = {
   title: 'Conference Headshots in Los Angeles: Millennium Biltmore Case Study',
@@ -22,6 +20,14 @@ export const metadata: Metadata = {
       'Quick, coached headshot sessions over the lunch window at a historic downtown Los Angeles hotel, with photos delivered to each attendee during the event.',
     url: 'https://rojasphotography.net/work/biltmore-los-angeles-headshots',
     type: 'article',
+    images: [
+      {
+        url: 'https://rojasphotography.net/images/work/triological-biltmore/biltmore-los-angeles-conference-headshots-collage.jpg',
+        width: 1600,
+        height: 1000,
+        alt: 'Three conference headshots taken on-site at the Millennium Biltmore Hotel in Los Angeles',
+      },
+    ],
   },
 };
 
@@ -33,6 +39,11 @@ const facts = [
   { label: 'Delivery', value: 'Photos delivered to each attendee via SpotMyPhotos during the event' },
   { label: 'Photographer', value: 'Alfonso Rojas' },
 ];
+
+const gallery = Array.from({ length: 9 }, (_, i) => ({
+  src: `/images/work/triological-biltmore/biltmore-los-angeles-conference-headshot-${String(i + 1).padStart(2, '0')}.jpg`,
+  alt: `Professional conference headshot ${i + 1} of 9, taken on-site at the Millennium Biltmore Hotel in Los Angeles`,
+}));
 
 export default function BiltmoreLosAngelesHeadshotsPage() {
   return (
@@ -52,7 +63,7 @@ export default function BiltmoreLosAngelesHeadshotsPage() {
           gradient
         >
           <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
-            The Triological Society brought us to the historic Millennium Biltmore in downtown Los Angeles to give their physicians a professional headshot without taking time from a packed program: quick, coached sessions over the lunch window, with finished photos delivered during the event.
+            The Triological Society brought us to the historic Millennium Biltmore in downtown Los Angeles to give their attendees a professional headshot without taking time from a packed program: quick, coached sessions over the lunch window, with finished photos delivered during the event.
           </p>
         </HeroSection>
 
@@ -82,7 +93,7 @@ export default function BiltmoreLosAngelesHeadshotsPage() {
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6">A Medical Association, a Historic Hotel, and a High Bar</h2>
                 <p>
-                  The Triological Society is a national society of otolaryngologists, head and neck surgeons whose headshots end up on hospital directories, university faculty pages and conference programs. When they gathered at the Millennium Biltmore in downtown Los Angeles, the organizer wanted to give attendees something they would genuinely use. The challenge wasn&apos;t the photography; it was the schedule. Physicians at a packed meeting don&apos;t have an hour for a photo shoot, and the program had no minutes to spare.
+                  The Triological Society is a national society of otolaryngologists, head and neck surgeons whose headshots end up on hospital directories, university faculty pages and conference programs. When they gathered at the Millennium Biltmore in downtown Los Angeles, the organizer wanted to give attendees something they would genuinely use. The challenge wasn&apos;t the photography; it was the schedule. Attendees at a packed medical meeting don&apos;t have an hour for a photo shoot, and the program had no minutes to spare.
                 </p>
               </SectionReveal>
               <SectionReveal>
@@ -93,7 +104,7 @@ export default function BiltmoreLosAngelesHeadshotsPage() {
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl text-[var(--color-text-dark)] mb-6 pt-6">Photos on Their Phones Before They Left</h2>
                 <p>
-                  Delivery ran through SpotMyPhotos, so each physician&apos;s photos reached their phone during the event itself, before they headed home. No waiting weeks for a gallery link, and no chasing people for selections afterward. For the organizer, it was a perk attendees valued that cost the program zero minutes, and they told us afterward that everyone loved their photos.
+                  Delivery ran through SpotMyPhotos, so each attendee&apos;s photos reached their phone during the event itself, before they headed home. No waiting weeks for a gallery link, and no chasing people for selections afterward. For the organizer, it was a perk attendees valued that cost the program zero minutes, and they told us afterward that everyone loved their photos.
                 </p>
               </SectionReveal>
               <SectionReveal>
@@ -106,7 +117,30 @@ export default function BiltmoreLosAngelesHeadshotsPage() {
             </div>
           </section>
 
-          {/* Gallery placeholder — added when photos come off the SSD */}
+          {/* Gallery */}
+          <section className="py-16 md:py-20 px-8 bg-[var(--color-bg-warm)]" aria-labelledby="gallery-heading">
+            <div className="max-w-5xl mx-auto">
+              <SectionReveal>
+                <h2 id="gallery-heading" className="text-3xl md:text-4xl text-center text-[var(--color-text-dark)] mb-4">From the Lunch Window</h2>
+                <p className="text-center text-lg text-[var(--color-text-body)] max-w-2xl mx-auto mb-12">
+                  A few minutes per person, one consistent look across every attendee.
+                </p>
+              </SectionReveal>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                {gallery.map((img) => (
+                  <div key={img.src} className="relative aspect-[2/3] overflow-hidden rounded-xl bg-gray-200">
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
 
           {/* CTA */}
           <section className="py-20 px-8 bg-[var(--color-primary)] text-center">
