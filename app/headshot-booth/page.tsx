@@ -289,7 +289,7 @@ export default function HeadshotBoothPage() {
             </SectionReveal>
             <SectionReveal>
               <p className="text-center text-[var(--color-text-body)] mt-4 max-w-2xl mx-auto">
-                Running the booth as part of a bigger day? We also provide <Link href="/event-photography" className="text-[var(--color-primary)] hover:underline">corporate event photography in Modesto and the Central Valley</Link> and <Link href="/conference-photography" className="text-[var(--color-primary)] hover:underline">multi-photographer conference coverage</Link>.
+                Running the booth as part of a bigger day? We also provide <Link href="/event-photography" className="text-[var(--color-primary)] hover:underline">corporate event photography in Modesto and the Central Valley</Link> and <Link href="/conference-photography" className="text-[var(--color-primary)] hover:underline">multi-photographer conference coverage</Link>. Need something quicker for a packed program? See our <Link href="/work/biltmore-los-angeles-headshots" className="text-[var(--color-primary)] hover:underline">lunch-window conference headshots at the Millennium Biltmore in Los Angeles</Link>.
               </p>
             </SectionReveal>
           </div>

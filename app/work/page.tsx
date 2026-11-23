@@ -32,6 +32,15 @@ const caseStudies = [
     blurb:
       'Three days of keynotes, breakouts, and a full expo at the Sheraton San Diego Resort — plus a headshot booth for attendees and live photo delivery throughout the event.',
   },
+  {
+    href: '/work/biltmore-los-angeles-headshots',
+    image: '/images/work/triological-biltmore/biltmore-los-angeles-conference-headshots-collage.jpg',
+    alt: 'Three conference headshots taken on-site at the Millennium Biltmore Hotel in Los Angeles',
+    tag: 'Conference Headshots · On-Site Studio',
+    title: 'Triological Society at the Millennium Biltmore — Los Angeles',
+    blurb:
+      'Quick, coached headshots over the lunch window at a historic downtown LA hotel, with photos delivered to each attendee during the event.',
+  },
 ];
 
 export default function WorkPage() {
