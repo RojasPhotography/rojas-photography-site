@@ -194,7 +194,7 @@ export default function OnSitePhotographyPage() {
                     On-Site Setup & Sessions
                   </h3>
                   <p className="text-[var(--color-text-body)] leading-relaxed">
-                    We arrive, set up the full studio at your location, and your team comes to us throughout the day — no travel, no disruption. We coach everyone through posing so results are consistent across your entire organization. See it in our <Link href="/work/biltmore-los-angeles-headshots" className="text-[var(--color-primary)] hover:underline">on-site conference headshots case study from Los Angeles</Link>.
+                    We arrive, set up the full studio at your location, and your team comes to us throughout the day — no travel, no disruption. We coach everyone through posing so results are consistent across your entire organization. See it in our <Link href="/work/biltmore-los-angeles-headshots" className="text-[var(--color-primary)] hover:underline">on-site conference headshots case study from Los Angeles</Link> and our <Link href="/work/kaiser-innovations-team-headshots" className="text-[var(--color-primary)] hover:underline">Kaiser Permanente team headshots in Pleasanton</Link>.
                   </p>
                 </div>
               </SectionReveal>
