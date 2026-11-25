@@ -13,6 +13,9 @@ import {
 } from '../_lib/api';
 import { applyPreheader, extractPreheader } from '../_lib/preheader';
 import { Badge, Button, Card, EmailFrame, Field, Modal, cx, inputClass } from './ui';
+import { BlockEditor, TemplatePicker } from '../_editor/BlockEditor';
+import { renderDoc } from '../_editor/EmailTemplate';
+import { parseContent, type BlockDoc } from '../_editor/types';
 
 type Template = Parameters<BeefreeSDK['load']>[0];
 const BLANK_TEMPLATE = { page: { rows: [] }, comments: [] } as unknown as Template;
@@ -24,6 +27,7 @@ type Mode =
   | { kind: 'sequence'; id: number; position: number };
 
 type Step = 1 | 2 | 3 | 4;
+type EditorKind = 'blocks' | 'classic';
 
 export interface ComposerHandle {
   newNewsletter: () => void;
@@ -58,7 +62,9 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
   const [lastSavedAt, setLastSavedAt] = useState<Date | null>(null);
   const [saving, setSaving] = useState(false);
   const [isDirty, setIsDirty] = useState(false);
-  const [editorReady, setEditorReady] = useState(false);
+  const [editorKind, setEditorKind] = useState<EditorKind>('blocks');
+  const [doc, setDoc] = useState<BlockDoc | null>(null);
+  const [editorReady, setEditorReady] = useState(false); // classic (Beefree) editor only
   const [editorFailed, setEditorFailed] = useState(false);
   const [busy, setBusy] = useState<null | 'next' | 'test' | 'send'>(null);
   const [testTo, setTestTo] = useState(DEFAULT_TEST_TO);
@@ -68,6 +74,9 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
   const [subjectError, setSubjectError] = useState('');
 
   const beeRef = useRef<BeefreeSDK | null>(null);
+  const beeReady = useRef<Promise<void> | null>(null);
+  const editorKindRef = useRef<EditorKind>('blocks');
+  const docRef = useRef<BlockDoc | null>(null);
   const modeRef = useRef(mode);
   const subjectRef = useRef(subject);
   const previewTextRef = useRef(previewText);
@@ -100,49 +109,62 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
 
   // ---------- Editor ----------
 
-  useEffect(() => {
-    let cancelled = false;
-    async function init() {
-      try {
-        const token = await apiJson<unknown>('/api/newsletter/beefree-token');
-        if (cancelled) return;
-        const config = {
-          container: 'beefree-editor',
-          language: 'en-US',
-          trackChanges: true,
-          onLoad: () => setEditorReady(true),
-          onChange: () => {
-            if (Date.now() < ignoreChangesUntil.current) return;
-            markDirty(true);
-          },
-          onSave: (pageJson: string, pageHtml: string) => {
-            const resolve = saveResolver.current;
-            if (resolve) {
-              saveResolver.current = null;
-              resolve({ json: pageJson, html: pageHtml });
-              return;
-            }
-            // The editor's own Save button
-            editorSaveHandler.current(pageJson, pageHtml);
-          },
-          onSaveAsTemplate: () => {},
-          onError: (error: unknown) => console.error('Beefree error:', error),
-        };
-        const bee = new BeefreeSDK(token as ConstructorParameters<typeof BeefreeSDK>[0]);
-        bee.start(config, BLANK_TEMPLATE);
-        beeRef.current = bee;
-      } catch (err) {
-        if (!cancelled) {
+  // The classic Beefree editor only loads when an older draft needs it.
+  function ensureBeefree(): Promise<void> {
+    if (beeReady.current) return beeReady.current;
+    beeReady.current = new Promise<void>((resolve, reject) => {
+      (async () => {
+        try {
+          const token = await apiJson<unknown>('/api/newsletter/beefree-token');
+          const config = {
+            container: 'beefree-editor',
+            language: 'en-US',
+            trackChanges: true,
+            onLoad: () => {
+              setEditorReady(true);
+              resolve();
+            },
+            onChange: () => {
+              if (Date.now() < ignoreChangesUntil.current) return;
+              markDirty(true);
+            },
+            onSave: (pageJson: string, pageHtml: string) => {
+              const done = saveResolver.current;
+              if (done) {
+                saveResolver.current = null;
+                done({ json: pageJson, html: pageHtml });
+                return;
+              }
+              // The editor's own Save button
+              editorSaveHandler.current(pageJson, pageHtml);
+            },
+            onSaveAsTemplate: () => {},
+            onError: (error: unknown) => console.error('Beefree error:', error),
+          };
+          const bee = new BeefreeSDK(token as ConstructorParameters<typeof BeefreeSDK>[0]);
+          bee.start(config, BLANK_TEMPLATE);
+          beeRef.current = bee;
+        } catch (err) {
           setEditorFailed(true);
-          handleError(err, 'The email editor could not load. Refresh the page to try again.');
+          beeReady.current = null;
+          handleError(err, 'The classic editor could not load. Refresh the page to try again.');
+          reject(err);
         }
-      }
-    }
-    init();
-    return () => {
-      cancelled = true;
-    };
-  }, [handleError, markDirty]);
+      })();
+    });
+    return beeReady.current;
+  }
+
+  function setKind(kind: EditorKind) {
+    editorKindRef.current = kind;
+    setEditorKind(kind);
+  }
+
+  function updateDoc(next: BlockDoc | null, dirty = true) {
+    docRef.current = next;
+    setDoc(next);
+    if (dirty) markDirty(true);
+  }
 
   function loadIntoEditor(template: Template) {
     if (!beeRef.current) return;
@@ -150,7 +172,12 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
     beeRef.current.load(template);
   }
 
-  function requestEditorContent(): Promise<{ json: string; html: string }> {
+  async function requestEditorContent(): Promise<{ json: string; html: string }> {
+    if (editorKindRef.current === 'blocks') {
+      const current = docRef.current;
+      if (!current) throw new Error('Pick a starting layout first.');
+      return { json: JSON.stringify(current), html: await renderDoc(current) };
+    }
     return new Promise((resolve, reject) => {
       const bee = beeRef.current;
       if (!bee || !editorReady) {
@@ -268,13 +295,32 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
     setTestSentFor(null);
     setSentResult(null);
     setSubjectError('');
+    setKind('blocks');
+    updateDoc(null, false);
+    markDirty(false);
+  }
+
+  // Opens stored content in the right editor: new blocks, classic Beefree, or the layout picker
+  async function openContent(content: string | null) {
+    const parsed = parseContent(content);
+    if (parsed === 'classic') {
+      setKind('classic');
+      try {
+        await ensureBeefree();
+        loadIntoEditor(JSON.parse(content as string));
+      } catch {
+        /* error already shown */
+      }
+    } else {
+      setKind('blocks');
+      updateDoc(parsed, false);
+    }
     markDirty(false);
   }
 
   useImperativeHandle(ref, () => ({
     newNewsletter() {
       reset({ kind: 'newsletter', id: null });
-      loadIntoEditor(BLANK_TEMPLATE);
     },
     async openDraft(id: number) {
       try {
@@ -293,15 +339,7 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
         setHtml(full.html_content || '');
         jsonRef.current = full.content;
         setLastSavedAt(full.updated_at ? new Date(full.updated_at) : null);
-        let template = BLANK_TEMPLATE;
-        if (full.content) {
-          try {
-            template = JSON.parse(full.content);
-          } catch {
-            notify('This draft was saved in an older format, so its design could not be reopened.', 'error');
-          }
-        }
-        loadIntoEditor(template);
+        await openContent(full.content);
       } catch (err) {
         handleError(err, 'Could not open the draft.');
       }
@@ -309,7 +347,7 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
     openSequence(email: SequenceEmail) {
       if (email.html_content && !email.json_content) {
         const proceed = window.confirm(
-          'This welcome email was built outside the visual editor, so the editor will open blank. Saving would replace the current email.\n\nOpen it anyway?',
+          'This welcome email was built outside the editor, so you will start it fresh from a layout. Saving would replace the current email.\n\nOpen it anyway?',
         );
         if (!proceed) return;
       }
@@ -320,13 +358,8 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
       setPreviewText(pre);
       previewTextRef.current = pre;
       setHtml(email.html_content || '');
-      let template = BLANK_TEMPLATE;
-      try {
-        if (email.json_content) template = JSON.parse(email.json_content);
-      } catch {
-        /* open blank */
-      }
-      loadIntoEditor(template);
+      jsonRef.current = email.json_content;
+      openContent(email.json_content);
     },
     async prepareToLeave() {
       if (!dirtyRef.current) return true;
@@ -402,10 +435,11 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
 
   function startAnother() {
     reset({ kind: 'newsletter', id: null });
-    loadIntoEditor(BLANK_TEMPLATE);
   }
 
   // ---------- Render ----------
+
+  const canSave = editorKind === 'blocks' ? doc !== null : editorReady;
 
   const previewHtml = html.replace(/\{\{first_name\}\}/gi, 'Alfonso').replace(/\{\{name\}\}/gi, 'Alfonso Rojas');
   const testIsCurrent = testSentFor !== null && testSentFor === html;
@@ -432,8 +466,8 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
 
       <div className={cx(sentResult && 'hidden')}>
       {/* Header */}
-      <div className="mb-5 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <div className="min-w-0">
+      <div className="mb-5 flex flex-col gap-4 2xl:flex-row 2xl:items-center 2xl:justify-between">
+        <div className="min-w-0 flex-1">
           <button
             onClick={() => onExit(isSequence ? 'welcome' : 'newsletters')}
             className="mb-1 text-sm text-stone-500 hover:text-stone-800"
@@ -450,7 +484,7 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
         </div>
 
         {/* Stepper */}
-        <ol className="flex flex-wrap items-center gap-1.5">
+        <ol className="flex shrink-0 flex-wrap items-center gap-1.5">
           {steps.map((label, i) => {
             const n = (i + 1) as Step;
             const done = n < step;
@@ -510,7 +544,19 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
           </Field>
         </Card>
 
-        <Card className="relative overflow-hidden">
+        {editorKind === 'blocks' &&
+          (doc ? (
+            <BlockEditor doc={doc} onChange={(next) => updateDoc(next)} notify={notify} />
+          ) : (
+            <TemplatePicker onPick={(picked) => updateDoc(picked)} />
+          ))}
+
+        {/* Classic editor for drafts made before the new editor. Always mounted so it loads once. */}
+        <Card className={cx('relative overflow-hidden', editorKind !== 'classic' && 'hidden')}>
+          <div className="flex items-center justify-between border-b border-stone-100 px-5 py-3 text-sm">
+            <span className="text-stone-600">This draft was made in the classic editor.</span>
+            <Badge>Classic editor</Badge>
+          </div>
           {!editorReady && (
             <div className="absolute inset-0 z-10 flex flex-col items-center justify-center gap-3 bg-white text-sm text-stone-500">
               {editorFailed ? (
@@ -527,12 +573,18 @@ export const Composer = forwardRef<ComposerHandle, ComposerProps>(function Compo
         </Card>
 
         <StepFooter
-          hint={<>Type <code className="rounded bg-stone-100 px-1">{'{{first_name}}'}</code> in the email to greet people by name.</>}
+          hint={
+            editorKind === 'blocks' && !doc
+              ? 'Pick a layout to start writing.'
+              : isSequence
+                ? 'Welcome emails save when you click Save.'
+                : 'Drafts save automatically while you write.'
+          }
         >
-          <Button onClick={() => saveNow()} disabled={saving || busy !== null || !editorReady}>
+          <Button onClick={() => saveNow()} disabled={saving || busy !== null || !canSave}>
             {isSequence ? 'Save welcome email' : 'Save draft'}
           </Button>
-          <Button variant="primary" onClick={() => goTo(2)} disabled={busy !== null || !editorReady}>
+          <Button variant="primary" onClick={() => goTo(2)} disabled={busy !== null || !canSave}>
             {busy === 'next' ? 'Saving…' : 'Next: preview and test →'}
           </Button>
         </StepFooter>
