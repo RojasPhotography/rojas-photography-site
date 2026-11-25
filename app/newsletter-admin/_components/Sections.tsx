@@ -1,6 +1,6 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { Fragment, useMemo, useState } from 'react';
 import type { Draft, SentNewsletter, SequenceEmail, Subscriber } from '../_lib/api';
 import { formatDate, timeAgo } from '../_lib/api';
 import { Badge, Button, Card, EmptyState, Field, Metric, PageHeader, cx, inputClass } from './ui';
@@ -398,18 +398,48 @@ export function WelcomeSeries({
 
 // ---------------- Reports ----------------
 
+function shortLink(url: string) {
+  try {
+    const u = new URL(url);
+    return (u.hostname.replace(/^www\./, '') + u.pathname).replace(/\/$/, '');
+  } catch {
+    return url;
+  }
+}
+
 export function Reports({ history, onView }: { history: SentNewsletter[]; onView: (id: number, subject: string) => void }) {
+  const [openId, setOpenId] = useState<number | null>(null);
   const withStats = history.filter((h) => h.stats && h.stats.sent > 0);
-  const avg = withStats.length ? Math.round(withStats.reduce((t, h) => t + (h.stats?.openRate ?? 0), 0) / withStats.length) : null;
+  const avg = (key: 'openRate' | 'clickRate') =>
+    withStats.length ? Math.round(withStats.reduce((t, h) => t + (h.stats?.[key] ?? 0), 0) / withStats.length) : null;
+  const avgOpen = avg('openRate');
+  const avgClick = avg('clickRate');
+  const connected = history.some((h) => h.stats?.trackingConnected);
 
   return (
     <div>
-      <PageHeader title="Reports" description="Opens are counted when someone's email app loads images, so treat them as a trend rather than an exact number." />
-      <div className="mb-6 grid gap-4 sm:grid-cols-3">
+      <PageHeader
+        title="Reports"
+        description="Each person counts once, no matter how many times they open or click."
+      />
+
+      {!connected && history.length > 0 && (
+        <Card className="mb-6 border-l-0 bg-amber-50/60 p-5 ring-amber-200">
+          <p className="font-medium text-amber-900">Click tracking isn&apos;t connected yet</p>
+          <p className="mt-1 text-sm text-amber-900/80">
+            Opens are being counted again starting with your next newsletter. Clicks, deliveries and bounces start showing once
+            Resend tracking is switched on. Past newsletters can&apos;t be backfilled, because those opens were never saved.
+          </p>
+        </Card>
+      )}
+
+      <div className="mb-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         <Metric label="Newsletters sent" value={history.length} />
-        <Metric label="Average open rate" value={avg === null ? '—' : `${avg}%`} />
-        <Metric label="Emails delivered" value={withStats.reduce((t, h) => t + (h.stats?.sent ?? 0), 0)} />
+        <Metric label="Average open rate" value={avgOpen === null ? '—' : `${avgOpen}%`} hint="A trend, not an exact count" />
+        <Metric label="Average click rate" value={avgClick === null || !connected ? '—' : `${avgClick}%`} hint="The most reliable signal" />
+        <Metric label="Emails sent" value={withStats.reduce((t, h) => t + (h.stats?.sent ?? 0), 0)} />
       </div>
+
       <Card>
         {history.length === 0 ? (
           <EmptyState title="No results yet" body="Send your first newsletter and its results will show up here." />
@@ -420,29 +450,72 @@ export function Reports({ history, onView }: { history: SentNewsletter[]; onView
                 <tr className="text-left text-xs uppercase tracking-wide text-stone-500">
                   <th className="px-6 py-3 font-medium">Newsletter</th>
                   <th className="px-6 py-3 font-medium">Sent</th>
-                  <th className="px-6 py-3 font-medium">Delivered</th>
                   <th className="px-6 py-3 font-medium">Opened</th>
-                  <th className="px-6 py-3 font-medium">Failed</th>
+                  <th className="px-6 py-3 font-medium">Clicked</th>
+                  <th className="px-6 py-3 font-medium">Bounced</th>
+                  <th className="px-6 py-3" />
                 </tr>
               </thead>
               <tbody className="divide-y divide-stone-100">
-                {history.map((h) => (
-                  <tr key={h.id} className="hover:bg-stone-50">
-                    <td className="max-w-xs px-6 py-3">
-                      <button onClick={() => onView(h.id, h.subject)} className="truncate text-left font-medium text-stone-900 hover:underline">{h.subject}</button>
-                    </td>
-                    <td className="px-6 py-3 text-stone-500">{formatDate(h.sent_at)}</td>
-                    <td className="px-6 py-3 tabular-nums">{h.stats?.sent ?? '—'}</td>
-                    <td className="px-6 py-3">{h.stats ? <OpenRate rate={h.stats.openRate} /> : '—'}</td>
-                    <td className="px-6 py-3 tabular-nums">{h.stats?.failed ? <span className="text-red-700">{h.stats.failed}</span> : 0}</td>
-                  </tr>
-                ))}
+                {history.map((h) => {
+                  const s = h.stats;
+                  const expanded = openId === h.id;
+                  return (
+                    <Fragment key={h.id}>
+                      <tr className="hover:bg-stone-50">
+                        <td className="max-w-xs px-6 py-3">
+                          <button onClick={() => onView(h.id, h.subject)} className="block truncate text-left font-medium text-stone-900 hover:underline">{h.subject}</button>
+                          <span className="text-xs text-stone-500">{formatDate(h.sent_at)}</span>
+                        </td>
+                        <td className="px-6 py-3 tabular-nums">{s?.sent ?? '—'}</td>
+                        <td className="px-6 py-3">{s ? <Rate rate={s.openRate} count={s.opened} /> : '—'}</td>
+                        <td className="px-6 py-3">{s?.trackingConnected ? <Rate rate={s.clickRate ?? 0} count={s.clicked ?? 0} /> : <span className="text-stone-400">—</span>}</td>
+                        <td className="px-6 py-3 tabular-nums">{s?.bounced ? <span className="text-red-700">{s.bounced}</span> : s?.trackingConnected ? 0 : '—'}</td>
+                        <td className="px-6 py-3 text-right">
+                          {s?.topLinks && s.topLinks.length > 0 && (
+                            <button onClick={() => setOpenId(expanded ? null : h.id)} className="text-sm font-medium text-[var(--color-primary)] hover:underline">
+                              {expanded ? 'Hide links' : 'Top links'}
+                            </button>
+                          )}
+                        </td>
+                      </tr>
+                      {expanded && s?.topLinks && (
+                        <tr>
+                          <td colSpan={6} className="bg-stone-50 px-6 py-4">
+                            <ul className="space-y-2">
+                              {s.topLinks.map((l) => (
+                                <li key={l.url} className="flex items-center justify-between gap-4 text-sm">
+                                  <span className="truncate text-stone-700">{shortLink(l.url)}</span>
+                                  <span className="shrink-0 tabular-nums text-stone-500">{l.clicks} {l.clicks === 1 ? 'person' : 'people'}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </td>
+                        </tr>
+                      )}
+                    </Fragment>
+                  );
+                })}
               </tbody>
             </table>
           </div>
         )}
       </Card>
-      <p className="mt-4 text-sm text-stone-500">Click tracking and bounce reports arrive with the move to Resend Broadcasts.</p>
+      <p className="mt-4 max-w-3xl text-sm text-stone-500">
+        About open rates: Apple Mail opens every email automatically to protect privacy, which pushes open rates up, while
+        some apps block images, which pushes them down. Clicks show real interest.
+      </p>
+    </div>
+  );
+}
+
+function Rate({ rate, count }: { rate: number; count: number }) {
+  return (
+    <div className="flex w-36 items-center gap-2">
+      <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-stone-100">
+        <div className="h-full rounded-full bg-[var(--color-primary)]" style={{ width: `${Math.min(100, Math.max(0, rate))}%` }} />
+      </div>
+      <span className="w-16 text-right text-xs tabular-nums text-stone-600">{rate}% <span className="text-stone-400">({count})</span></span>
     </div>
   );
 }

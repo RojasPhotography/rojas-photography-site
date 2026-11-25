@@ -9,9 +9,16 @@ export interface Draft {
 
 export interface NewsletterStats {
   sent: number;
+  delivered?: number;
   opened: number;
+  clicked?: number;
+  bounced?: number;
+  complained?: number;
   failed: number;
   openRate: number;
+  clickRate?: number;
+  topLinks?: { url: string; clicks: number }[];
+  trackingConnected?: boolean;
 }
 
 export interface SentNewsletter {

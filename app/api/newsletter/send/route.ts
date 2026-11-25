@@ -78,6 +78,11 @@ export async function POST(request: Request) {
           subject,
           html: withFooter(personalize(html_content, subscriber.name), subscriber.email, pixel),
           headers: unsubscribeHeaders(subscriber.email),
+          // Lets Resend's open/click events be matched back to this newsletter and person
+          tags: [
+            { name: 'newsletter_id', value: String(newsletterId) },
+            { name: 'subscriber_id', value: String(subscriber.id) },
+          ],
         };
       });
 
