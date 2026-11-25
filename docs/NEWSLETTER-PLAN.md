@@ -66,7 +66,7 @@ Fixes S1 to S7 and W1 to W7.
 - Clean up the schema: one up-to-date `schema.sql` matching the live database, move the loose SQL files into `supabase/migrations/`
 - Lock down Supabase security rules (replace the "allow all" policies)
 
-### Phase 3: A workflow that feels like a product *(UI rebuild of /newsletter-admin)*
+### Phase 3: A workflow that feels like a product *(first pass DONE on this branch: layout, step-by-step composer, autosave, preview text, phone preview, contacts, reports. Still to come: contact tags and invites, which need Phase 2)*
 Split the single page into clear sections:
 1. **Dashboard**: last issue's results, list size and growth, next scheduled send
 2. **Newsletters**: a list of drafts, scheduled and sent, each with a status badge
