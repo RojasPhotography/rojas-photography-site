@@ -5,7 +5,8 @@ import { useState } from 'react';
 export default function NewsletterFooterForm() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [companyWebsite, setCompanyWebsite] = useState(''); // honeypot, hidden from people
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'already' | 'error'>('idle');
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -14,12 +15,16 @@ export default function NewsletterFooterForm() {
       const res = await fetch('/api/newsletter/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, name, source_page: window.location.pathname }),
+        body: JSON.stringify({ email, name, company_website: companyWebsite, source_page: window.location.pathname }),
       });
-      setStatus(res.ok ? 'success' : 'error');
+      setStatus(res.ok ? 'success' : res.status === 409 ? 'already' : 'error');
     } catch {
       setStatus('error');
     }
+  }
+
+  if (status === 'already') {
+    return <p className="text-green-400 text-sm">You&apos;re already on the list. Thank you!</p>;
   }
 
   if (status === 'success') {
@@ -32,6 +37,17 @@ export default function NewsletterFooterForm() {
         <p className="text-red-400 text-xs mb-2">Something went wrong. Try again.</p>
       )}
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
+        <div aria-hidden="true" style={{ position: 'absolute', left: '-10000px', width: 1, height: 1, overflow: 'hidden' }}>
+          <label htmlFor="footer-newsletter-website">Leave this empty</label>
+          <input
+            id="footer-newsletter-website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            value={companyWebsite}
+            onChange={(e) => setCompanyWebsite(e.target.value)}
+          />
+        </div>
         <label htmlFor="footer-newsletter-name" className="sr-only">Your name</label>
         <input
           id="footer-newsletter-name"

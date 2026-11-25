@@ -1,17 +1,15 @@
 import { getSupabase } from '@/app/lib/supabase-server';
 import { NextResponse } from 'next/server';
+import { isAdmin } from '@/app/lib/newsletter-auth';
 
 function unauthorized() {
   return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 }
 
 // GET — list all sequence emails with queue stats
-export async function GET(request: Request) {
+export async function GET() {
+  if (!(await isAdmin())) return unauthorized();
   const supabase = getSupabase();
-  const { searchParams } = new URL(request.url);
-  const password = searchParams.get('password');
-
-  if (password !== process.env.NEWSLETTER_ADMIN_PASSWORD) return unauthorized();
 
   const { data, error } = await supabase
     .from('sequence_emails')
@@ -44,10 +42,9 @@ export async function GET(request: Request) {
 
 // PUT — update a sequence email template
 export async function PUT(request: Request) {
+  if (!(await isAdmin())) return unauthorized();
   const supabase = getSupabase();
-  const { password, id, subject, html_content, json_content, is_active } = await request.json();
-
-  if (password !== process.env.NEWSLETTER_ADMIN_PASSWORD) return unauthorized();
+  const { id, subject, html_content, json_content, is_active } = await request.json();
 
   const updates: Record<string, unknown> = { updated_at: new Date().toISOString() };
   if (subject !== undefined) updates.subject = subject;

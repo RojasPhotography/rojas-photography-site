@@ -1,16 +1,13 @@
 import { getSupabase } from '@/app/lib/supabase-server';
+import { isAdmin, unauthorized } from '@/app/lib/newsletter-auth';
+import { normalizeEmail } from '@/app/lib/newsletter-email';
 import { NextResponse } from 'next/server';
 
-// GET — list all subscribers (active + inactive)
-export async function GET(request: Request) {
+// GET: list all subscribers (active + inactive)
+export async function GET() {
+  if (!(await isAdmin())) return unauthorized();
+
   const supabase = getSupabase();
-  const { searchParams } = new URL(request.url);
-  const password = searchParams.get('password');
-
-  if (password !== process.env.NEWSLETTER_ADMIN_PASSWORD) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-  }
-
   const { data, error } = await supabase
     .from('subscribers')
     .select('id, email, name, is_active, subscribed_at')
@@ -20,20 +17,20 @@ export async function GET(request: Request) {
   return NextResponse.json(data);
 }
 
-// DELETE — deactivate (unsubscribe) a subscriber
+// DELETE: deactivate (unsubscribe) a subscriber
 export async function DELETE(request: Request) {
+  if (!(await isAdmin())) return unauthorized();
+
   try {
     const supabase = getSupabase();
-    const { password, email } = await request.json();
-
-    if (password !== process.env.NEWSLETTER_ADMIN_PASSWORD) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
+    const { email } = await request.json();
+    const clean = normalizeEmail(email);
+    if (!clean) return NextResponse.json({ error: 'Invalid email' }, { status: 400 });
 
     await supabase
       .from('subscribers')
       .update({ is_active: false, unsubscribed_at: new Date().toISOString() })
-      .eq('email', email);
+      .ilike('email', clean.replace(/[%_\\]/g, '\\$&'));
 
     return NextResponse.json({ success: true });
   } catch {

@@ -1,6 +1,9 @@
 import { NextResponse } from 'next/server';
+import { isAdmin, unauthorized } from '@/app/lib/newsletter-auth';
 
 export async function GET() {
+  if (!(await isAdmin())) return unauthorized();
+
   try {
     const response = await fetch('https://auth.getbee.io/loginV2', {
       method: 'POST',
