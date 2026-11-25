@@ -111,6 +111,6 @@ Legally, U.S. law (CAN-SPAM) lets you email business contacts without prior opt-
 Phase 3 builds this in: the Contacts screen records **source** and **consent** (`signed_up`, `said_yes`, `invited`) and has a "Send invite" button that emails the one-click link.
 
 ## Needs you before we go further
-1. **Mailing address** for the email footer (CAN-SPAM requirement). A P.O. box or registered business address works.
+1. ~~Mailing address~~ Done: 1905 Generations Dr, Modesto, CA 95356 is in the footer.
 2. **Optional:** add a `NEWSLETTER_SIGNING_SECRET` setting in Vercel (any long random string). Until then, the code falls back to an existing private key, which works fine.
 3. Approve Phase 2 (database changes + Resend Broadcasts).

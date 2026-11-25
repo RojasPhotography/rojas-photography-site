@@ -7,8 +7,8 @@ export const SITE_URL = 'https://rojasphotography.net';
 export const REPLY_EMAIL = 'alfonso@rojasphotography.net';
 
 // CAN-SPAM requires a valid physical postal address in every commercial email.
-// Set NEWSLETTER_POSTAL_ADDRESS in Vercel (e.g. "123 Main St, Suite 4, Modesto, CA 95354").
-export const POSTAL_ADDRESS = process.env.NEWSLETTER_POSTAL_ADDRESS || 'Modesto, CA';
+// Can be overridden with NEWSLETTER_POSTAL_ADDRESS in Vercel (e.g. if you switch to a P.O. box).
+export const POSTAL_ADDRESS = process.env.NEWSLETTER_POSTAL_ADDRESS || '1905 Generations Dr, Modesto, CA 95356';
 
 function signingKey() {
   // Prefer a dedicated secret; fall back to an existing server-only key so links work today.
