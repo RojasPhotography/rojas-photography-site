@@ -463,15 +463,15 @@ export function Reports({ history, onView }: { history: SentNewsletter[]; onView
                   return (
                     <Fragment key={h.id}>
                       <tr className="hover:bg-stone-50">
-                        <td className="max-w-xs px-6 py-3">
-                          <button onClick={() => onView(h.id, h.subject)} className="block truncate text-left font-medium text-stone-900 hover:underline">{h.subject}</button>
+                        <td className="w-[22rem] min-w-[14rem] px-6 py-3 align-top">
+                          <button onClick={() => onView(h.id, h.subject)} className="block max-w-[22rem] whitespace-normal break-words text-left font-medium leading-snug text-stone-900 hover:underline">{h.subject}</button>
                           <span className="text-xs text-stone-500">{formatDate(h.sent_at)}</span>
                         </td>
-                        <td className="px-6 py-3 tabular-nums">{s?.sent ?? '—'}</td>
-                        <td className="px-6 py-3">{s ? <Rate rate={s.openRate} count={s.opened} /> : '—'}</td>
-                        <td className="px-6 py-3">{s?.trackingConnected ? <Rate rate={s.clickRate ?? 0} count={s.clicked ?? 0} /> : <span className="text-stone-400">—</span>}</td>
-                        <td className="px-6 py-3 tabular-nums">{s?.bounced ? <span className="text-red-700">{s.bounced}</span> : s?.trackingConnected ? 0 : '—'}</td>
-                        <td className="px-6 py-3 text-right">
+                        <td className="whitespace-nowrap px-6 py-3 align-top tabular-nums">{s?.sent ?? '—'}</td>
+                        <td className="whitespace-nowrap px-6 py-3 align-top">{s ? <Rate rate={s.openRate} count={s.opened} /> : '—'}</td>
+                        <td className="whitespace-nowrap px-6 py-3 align-top">{s?.trackingConnected ? <Rate rate={s.clickRate ?? 0} count={s.clicked ?? 0} /> : <span className="text-stone-400">—</span>}</td>
+                        <td className="whitespace-nowrap px-6 py-3 align-top tabular-nums">{s?.bounced ? <span className="text-red-700">{s.bounced}</span> : s?.trackingConnected ? 0 : '—'}</td>
+                        <td className="whitespace-nowrap px-6 py-3 text-right align-top">
                           {s?.topLinks && s.topLinks.length > 0 && (
                             <button onClick={() => setOpenId(expanded ? null : h.id)} className="text-sm font-medium text-[var(--color-primary)] hover:underline">
                               {expanded ? 'Hide links' : 'Top links'}
