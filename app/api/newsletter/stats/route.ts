@@ -1,7 +1,10 @@
 import { getSupabase } from '@/app/lib/supabase-server';
+import { isAdmin, unauthorized } from '@/app/lib/newsletter-auth';
 import { NextResponse } from 'next/server';
 
 export async function GET(request: Request) {
+  if (!(await isAdmin())) return unauthorized();
+
   const { searchParams } = new URL(request.url);
   const newsletterId = searchParams.get('newsletter_id');
 

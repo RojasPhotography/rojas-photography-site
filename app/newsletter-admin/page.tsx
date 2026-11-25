@@ -40,6 +40,7 @@ interface SequenceEmail {
 export default function NewsletterAdmin() {
   const [password, setPassword] = useState('');
   const [authenticated, setAuthenticated] = useState(false);
+  const [authChecked, setAuthChecked] = useState(false);
   const [authLoading, setAuthLoading] = useState(false);
   const [authError, setAuthError] = useState('');
 
@@ -67,23 +68,67 @@ export default function NewsletterAdmin() {
   const [sequenceSubject, setSequenceSubject] = useState('');
   const [sequenceSaveStatus, setSequenceSaveStatus] = useState<'idle' | 'saving' | 'saved' | 'error'>('idle');
   const [sequenceTestStatus, setSequenceTestStatus] = useState<Record<number, 'idle' | 'loading' | 'sent' | 'error'>>({});
-  const pendingSequenceSave = useRef(false);
   const [previewHtml, setPreviewHtml] = useState<string | null>(null);
 
   const [bee, setBee] = useState<BeefreeSDK | null>(null);
   const [editorReady, setEditorReady] = useState(false);
-  const pendingDraftSave = useRef(false);
+
+  // Unsaved-changes tracking. A ref so editor callbacks always see the latest value.
+  const [isDirty, setIsDirty] = useState(false);
+  const isDirtyRef = useRef(false);
+  const markDirty = useCallback((dirty: boolean) => {
+    isDirtyRef.current = dirty;
+    setIsDirty(dirty);
+  }, []);
+  const [lastSavedAt, setLastSavedAt] = useState<Date | null>(null);
+  const ignoreChangesUntil = useRef(0);
+
+  // When we ask the editor to save, its onSave callback resolves this promise with
+  // the CURRENT design. Test and Send use it, so they always match what's on screen.
+  const saveResolver = useRef<((content: { json: string; html: string }) => void) | null>(null);
 
   const subjectRef = useRef(subject);
   const currentDraftIdRef = useRef(currentDraftId);
   const editingSequenceIdRef = useRef(editingSequenceId);
+  const sequenceSubjectRef = useRef(sequenceSubject);
   useEffect(() => { subjectRef.current = subject; }, [subject]);
   useEffect(() => { currentDraftIdRef.current = currentDraftId; }, [currentDraftId]);
   useEffect(() => { editingSequenceIdRef.current = editingSequenceId; }, [editingSequenceId]);
+  useEffect(() => { sequenceSubjectRef.current = sequenceSubject; }, [sequenceSubject]);
 
   const [status, setStatus] = useState<'idle' | 'loading' | 'saving' | 'success' | 'error'>('idle');
   const [result, setResult] = useState('');
   const [testEmailStatus, setTestEmailStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+
+  // Stay signed in across refreshes (session cookie set by the server)
+  useEffect(() => {
+    fetch('/api/newsletter/auth')
+      .then((res) => res.json())
+      .then((data) => setAuthenticated(Boolean(data.authenticated)))
+      .catch(() => {})
+      .finally(() => setAuthChecked(true));
+  }, []);
+
+  // Warn before closing or refreshing the tab with unsaved work
+  useEffect(() => {
+    function onBeforeUnload(e: BeforeUnloadEvent) {
+      if (!isDirtyRef.current) return;
+      e.preventDefault();
+      e.returnValue = '';
+    }
+    window.addEventListener('beforeunload', onBeforeUnload);
+    return () => window.removeEventListener('beforeunload', onBeforeUnload);
+  }, []);
+
+  function confirmDiscard(action: string) {
+    if (!isDirtyRef.current) return true;
+    return window.confirm(`You have unsaved changes. ${action} anyway and lose them?`);
+  }
+
+  function showError(message: string) {
+    setStatus('error');
+    setResult(message);
+  }
 
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
@@ -96,6 +141,7 @@ export default function NewsletterAdmin() {
         body: JSON.stringify({ password }),
       });
       if (res.ok) {
+        setPassword('');
         setAuthenticated(true);
       } else {
         setAuthError('Incorrect password. Please try again.');
@@ -107,34 +153,56 @@ export default function NewsletterAdmin() {
     }
   }
 
-  const loadDrafts = useCallback(async () => {
-    const res = await fetch('/api/newsletter/drafts');
-    const data = await res.json();
-    if (Array.isArray(data)) setDrafts(data);
+  async function handleLogout() {
+    if (!confirmDiscard('Sign out')) return;
+    await fetch('/api/newsletter/auth', { method: 'DELETE' });
+    markDirty(false);
+    window.location.reload();
+  }
+
+  // Any 401 means the session expired: send them back to the sign-in screen
+  const api = useCallback(async (url: string, init?: RequestInit) => {
+    const res = await fetch(url, init);
+    if (res.status === 401) {
+      setAuthenticated(false);
+      throw new Error('Your session expired. Please sign in again.');
+    }
+    return res;
   }, []);
 
+  const jsonInit = (method: string, body: unknown): RequestInit => ({
+    method,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+
+  const loadDrafts = useCallback(async () => {
+    const res = await api('/api/newsletter/drafts');
+    const data = await res.json();
+    if (Array.isArray(data)) setDrafts(data);
+  }, [api]);
+
   const loadSubscribers = useCallback(async () => {
-    const res = await fetch(`/api/newsletter/subscribers?password=${encodeURIComponent(password)}`);
+    const res = await api('/api/newsletter/subscribers');
     const data = await res.json();
     if (Array.isArray(data)) setSubscribers(data);
-  }, [password]);
+  }, [api]);
 
   const loadSequence = useCallback(async () => {
-    const res = await fetch(`/api/newsletter/sequence?password=${encodeURIComponent(password)}`);
+    const res = await api('/api/newsletter/sequence');
     const data = await res.json();
     if (Array.isArray(data)) setSequenceEmails(data);
-  }, [password]);
+  }, [api]);
 
   const loadHistory = useCallback(async () => {
-    const res = await fetch('/api/newsletter/drafts?status=sent');
+    const res = await api('/api/newsletter/drafts?status=sent');
     const data = await res.json();
     if (!Array.isArray(data)) return;
 
-    // Fetch stats for each newsletter in parallel
     const withStats = await Promise.all(
       data.map(async (item: SentNewsletter) => {
         try {
-          const statsRes = await fetch(`/api/newsletter/stats?newsletter_id=${item.id}`);
+          const statsRes = await api(`/api/newsletter/stats?newsletter_id=${item.id}`);
           const stats = await statsRes.json();
           return { ...item, stats };
         } catch {
@@ -143,43 +211,58 @@ export default function NewsletterAdmin() {
       })
     );
     setHistory(withStats);
-  }, []);
+  }, [api]);
+
+  // Latest versions of the save handlers, for the editor's own Save button
+  const handlersRef = useRef<{
+    saveDraftWithContent: (json: string, html: string) => Promise<number | null>;
+    saveSequenceEmailWithContent: (json: string, html: string) => Promise<boolean>;
+  } | null>(null);
 
   useEffect(() => {
     if (!authenticated) return;
-    loadDrafts();
+    loadDrafts().catch(() => {});
+    loadSubscribers().catch(() => {}); // needed for the send confirmation count
 
     async function initEditor(template = {}) {
       try {
         const res = await fetch('/api/newsletter/beefree-token');
+        if (!res.ok) throw new Error('Could not get an editor token');
         const token = await res.json();
 
         const config = {
           container: 'beefree-editor',
           language: 'en-US',
+          trackChanges: true,
           onLoad: () => setEditorReady(true),
+          onChange: () => {
+            if (Date.now() < ignoreChangesUntil.current) return;
+            markDirty(true);
+          },
           onSave: (pageJson: string, pageHtml: string) => {
             setJsonContent(pageJson);
             setHtmlContent(pageHtml);
-            setResult('');
-            // Sequence email save (explicit "Save Sequence Email" button)
-            if (pendingSequenceSave.current) {
-              pendingSequenceSave.current = false;
-              saveSequenceEmailWithContent(pageJson, pageHtml);
+
+            // A save we asked for (Save / Test / Send buttons): hand the content back
+            const resolve = saveResolver.current;
+            if (resolve) {
+              saveResolver.current = null;
+              resolve({ json: pageJson, html: pageHtml });
               return;
             }
-            // While editing a sequence email, ignore a stray editor save so it
-            // doesn't create a stray newsletter draft.
-            if (editingSequenceIdRef.current !== null) return;
-            // Newsletter mode: ANY save persists the draft — whether it came from
-            // our "Save Draft" button or the editor's own Save button. No more
-            // silent, non-saving clicks.
-            pendingDraftSave.current = false;
-            saveDraftWithContent(pageJson, pageHtml);
+
+            // The editor's own Save button: save to whatever is open
+            if (editingSequenceIdRef.current !== null) {
+              handlersRef.current?.saveSequenceEmailWithContent(pageJson, pageHtml);
+            } else {
+              handlersRef.current?.saveDraftWithContent(pageJson, pageHtml);
+            }
           },
-          onSaveAsTemplate: (_pageJson: string) => {},
+          onSaveAsTemplate: () => {},
           onError: (error: unknown) => {
             console.error('Beefree error:', error);
+            const pending = saveResolver.current;
+            if (pending) saveResolver.current = null;
           },
         };
 
@@ -188,133 +271,200 @@ export default function NewsletterAdmin() {
         setBee(beeInstance);
       } catch (err) {
         console.error('Failed to init Beefree editor:', err);
+        showError('The email editor could not load. Refresh the page to try again.');
       }
     }
 
     initEditor();
-  }, [authenticated, loadDrafts]);
+  }, [authenticated, loadDrafts, loadSubscribers, markDirty]);
+
+  // Ask the editor for the current design. Rejects if the editor doesn't answer.
+  function requestEditorSave(): Promise<{ json: string; html: string }> {
+    return new Promise((resolve, reject) => {
+      if (!bee || !editorReady) {
+        reject(new Error('The editor is still loading. Give it a second and try again.'));
+        return;
+      }
+      const timeout = setTimeout(() => {
+        if (saveResolver.current) {
+          saveResolver.current = null;
+          reject(new Error('The editor did not respond. Please try again.'));
+        }
+      }, 15000);
+      saveResolver.current = (content) => {
+        clearTimeout(timeout);
+        resolve(content);
+      };
+      bee.save();
+    });
+  }
+
+  const BLANK_TEMPLATE = { page: { rows: [] }, comments: [] } as unknown as Parameters<BeefreeSDK['load']>[0];
+
+  function loadIntoEditor(template: Parameters<BeefreeSDK['load']>[0]) {
+    if (!bee) return;
+    ignoreChangesUntil.current = Date.now() + 1500;
+    bee.load(template);
+  }
+
+  function resetComposer() {
+    setCurrentDraftId(null);
+    currentDraftIdRef.current = null;
+    setSubject('');
+    setHtmlContent('');
+    setJsonContent('');
+    setLastSavedAt(null);
+    markDirty(false);
+  }
+
+  function newNewsletter() {
+    if (!confirmDiscard('Start a new newsletter')) return;
+    setEditingSequenceId(null);
+    resetComposer();
+    loadIntoEditor(BLANK_TEMPLATE);
+    markDirty(false);
+    setResult('');
+    setStatus('idle');
+  }
 
   async function loadDraft(draft: Draft) {
-    const res = await fetch(`/api/newsletter/drafts?id=${draft.id}`);
-    const full = await res.json();
+    if (!confirmDiscard('Open this draft')) return;
+    if (!bee || !editorReady) {
+      showError('The editor is still loading. Give it a second and try again.');
+      return;
+    }
+    try {
+      const res = await api(`/api/newsletter/drafts?id=${draft.id}`);
+      const full = await res.json();
+      if (!res.ok) throw new Error(full.error || 'Could not open the draft.');
 
-    setCurrentDraftId(draft.id);
-    setSubject(draft.subject);
-    setShowDrafts(false);
-
-    if (full.content && bee) {
-      try {
-        const template = JSON.parse(full.content);
-        bee.load(template);
-      } catch {
-        console.log('Could not restore design — starting fresh');
+      let template = BLANK_TEMPLATE;
+      if (full.content) {
+        try {
+          template = JSON.parse(full.content);
+        } catch {
+          showError('This draft was saved in an older format and its design could not be reopened.');
+        }
       }
+
+      setEditingSequenceId(null);
+      setCurrentDraftId(full.id);
+      currentDraftIdRef.current = full.id;
+      setSubject(full.subject === 'Untitled Draft' ? '' : full.subject);
+      setHtmlContent(full.html_content || '');
+      setJsonContent(full.content || '');
+      setLastSavedAt(full.updated_at ? new Date(full.updated_at) : null);
+      setShowDrafts(false);
+      loadIntoEditor(template);
+      markDirty(false);
+    } catch (err) {
+      showError(err instanceof Error ? err.message : 'Could not open the draft.');
     }
   }
 
-  async function saveDraftWithContent(json: string, html: string) {
+  // Saves to the open draft (or creates one). Returns the draft id, or null on failure.
+  async function saveDraftWithContent(json: string, html: string): Promise<number | null> {
     setStatus('saving');
     try {
-      const res = await fetch('/api/newsletter/drafts', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          password,
+      const res = await api(
+        '/api/newsletter/drafts',
+        jsonInit('POST', {
           id: currentDraftIdRef.current,
           subject: subjectRef.current || 'Untitled Draft',
           content: json,
           html_content: html,
-        }),
-      });
-
+        })
+      );
       const data = await res.json();
-      if (res.ok) {
-        setCurrentDraftId(data.id);
-        setStatus('idle');
-        setResult('draft-saved');
-        loadDrafts();
-        setTimeout(() => setResult(''), 3000);
-      } else {
-        setStatus('error');
-        setResult(data.error || 'Could not save draft.');
+      if (!res.ok) {
+        showError(data.error || 'Could not save draft.');
+        return null;
       }
-    } catch {
-      setStatus('error');
-      setResult('Something went wrong saving the draft.');
+      setCurrentDraftId(data.id);
+      currentDraftIdRef.current = data.id;
+      setLastSavedAt(new Date());
+      markDirty(false);
+      setStatus('idle');
+      setResult('draft-saved');
+      loadDrafts().catch(() => {});
+      setTimeout(() => setResult((r) => (r === 'draft-saved' ? '' : r)), 3000);
+      return data.id;
+    } catch (err) {
+      showError(err instanceof Error ? err.message : 'Something went wrong saving the draft.');
+      return null;
     }
   }
 
-  function saveDraft() {
-    if (!bee) {
-      setStatus('error');
-      setResult('Editor not ready. Please wait and try again.');
-      return;
+  async function saveDraft() {
+    try {
+      const { json, html } = await requestEditorSave();
+      await saveDraftWithContent(json, html);
+    } catch (err) {
+      showError(err instanceof Error ? err.message : 'Could not save.');
     }
-    // Trigger Beefree to save first — onSave callback will then save the draft
-    pendingDraftSave.current = true;
-    bee.save();
   }
 
-  async function deleteDraft(id: number) {
-    await fetch('/api/newsletter/drafts', {
-      method: 'DELETE',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ password, id }),
-    });
-    if (currentDraftId === id) {
-      setCurrentDraftId(null);
-      setSubject('');
-      setHtmlContent('');
-      setJsonContent('');
+  async function deleteDraft(draft: Draft) {
+    if (!window.confirm(`Delete the draft "${draft.subject || 'Untitled Draft'}"? This can't be undone.`)) return;
+    try {
+      await api('/api/newsletter/drafts', jsonInit('DELETE', { id: draft.id }));
+      if (currentDraftIdRef.current === draft.id) {
+        resetComposer();
+        loadIntoEditor(BLANK_TEMPLATE);
+        markDirty(false);
+      }
+      loadDrafts().catch(() => {});
+    } catch (err) {
+      showError(err instanceof Error ? err.message : 'Could not delete the draft.');
     }
-    loadDrafts();
   }
 
   async function duplicateDraft(draft: Draft) {
-    const res = await fetch(`/api/newsletter/drafts?id=${draft.id}`);
-    const full = await res.json();
-    await fetch('/api/newsletter/drafts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        password,
-        subject: `Copy of ${draft.subject || 'Untitled Draft'}`,
-        content: full.content,
-        html_content: full.html_content,
-      }),
-    });
-    loadDrafts();
-  }
-
-  async function saveSequenceEmailWithContent(json: string, html: string) {
-    if (editingSequenceId === null) return;
-    setSequenceSaveStatus('saving');
     try {
-      const res = await fetch('/api/newsletter/sequence', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          password,
-          id: editingSequenceId,
-          subject: sequenceSubject,
-          html_content: html,
-          json_content: json,
-        }),
-      });
-      if (res.ok) {
-        setSequenceSaveStatus('saved');
-        loadSequence();
-        setTimeout(() => setSequenceSaveStatus('idle'), 3000);
-      } else {
-        setSequenceSaveStatus('error');
-      }
-    } catch {
-      setSequenceSaveStatus('error');
+      const res = await api(`/api/newsletter/drafts?id=${draft.id}`);
+      const full = await res.json();
+      await api(
+        '/api/newsletter/drafts',
+        jsonInit('POST', {
+          subject: `Copy of ${draft.subject || 'Untitled Draft'}`,
+          content: full.content,
+          html_content: full.html_content,
+        })
+      );
+      loadDrafts().catch(() => {});
+    } catch (err) {
+      showError(err instanceof Error ? err.message : 'Could not duplicate the draft.');
     }
   }
 
+  async function saveSequenceEmailWithContent(json: string, html: string): Promise<boolean> {
+    const id = editingSequenceIdRef.current;
+    if (id === null) return false;
+    setSequenceSaveStatus('saving');
+    try {
+      const res = await api(
+        '/api/newsletter/sequence',
+        jsonInit('PUT', { id, subject: sequenceSubjectRef.current, html_content: html, json_content: json })
+      );
+      if (!res.ok) {
+        setSequenceSaveStatus('error');
+        return false;
+      }
+      setSequenceSaveStatus('saved');
+      markDirty(false);
+      loadSequence().catch(() => {});
+      setTimeout(() => setSequenceSaveStatus('idle'), 3000);
+      return true;
+    } catch {
+      setSequenceSaveStatus('error');
+      return false;
+    }
+  }
+
+  handlersRef.current = { saveDraftWithContent, saveSequenceEmailWithContent };
+
   function editSequenceEmail(seqEmail: SequenceEmail) {
-    // Warn if email has custom HTML but no BeefreeSDK JSON — editor will show blank and could overwrite content
+    if (!confirmDiscard('Switch to this welcome email')) return;
     if (seqEmail.html_content && !seqEmail.json_content) {
       const proceed = window.confirm(
         'This email has existing HTML content that cannot be loaded in the visual editor.\n\nOpening the editor will show a blank canvas. If you click "Save Sequence Email", the existing content will be overwritten with blank.\n\nClick OK to open the editor anyway, or Cancel to keep the existing content safe.'
@@ -322,106 +472,105 @@ export default function NewsletterAdmin() {
       if (!proceed) return;
     }
 
+    resetComposer();
     setEditingSequenceId(seqEmail.id);
+    editingSequenceIdRef.current = seqEmail.id;
     setSequenceSubject(seqEmail.subject);
-    setCurrentDraftId(null);
-    setSubject('');
-    setHtmlContent('');
-    setJsonContent('');
     setShowSequence(false);
 
     if (bee) {
       try {
-        if (seqEmail.json_content) {
-          bee.load(JSON.parse(seqEmail.json_content));
-        } else {
-          bee.load({ page: { rows: [] }, comments: [] } as unknown as Parameters<typeof bee.load>[0]);
-        }
+        loadIntoEditor(seqEmail.json_content ? JSON.parse(seqEmail.json_content) : BLANK_TEMPLATE);
       } catch {
-        bee.load({ page: { rows: [] }, comments: [] } as unknown as Parameters<typeof bee.load>[0]);
+        loadIntoEditor(BLANK_TEMPLATE);
       }
     }
+    markDirty(false);
 
-    // Scroll to editor
     setTimeout(() => {
       document.getElementById('beefree-editor')?.scrollIntoView({ behavior: 'smooth' });
     }, 100);
   }
 
-  function saveSequenceEmail() {
-    if (!bee) return;
-    pendingSequenceSave.current = true;
-    bee.save();
+  function cancelSequenceEdit() {
+    if (!confirmDiscard('Close this welcome email')) return;
+    setEditingSequenceId(null);
+    editingSequenceIdRef.current = null;
+    setSequenceSubject('');
+    resetComposer();
+    loadIntoEditor(BLANK_TEMPLATE);
+    markDirty(false);
+  }
+
+  async function saveSequenceEmail() {
+    try {
+      const { json, html } = await requestEditorSave();
+      await saveSequenceEmailWithContent(json, html);
+    } catch (err) {
+      setSequenceSaveStatus('error');
+      showError(err instanceof Error ? err.message : 'Could not save.');
+    }
   }
 
   async function toggleSequenceEmail(id: number, is_active: boolean) {
-    await fetch('/api/newsletter/sequence', {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ password, id, is_active }),
-    });
-    loadSequence();
+    try {
+      await api('/api/newsletter/sequence', jsonInit('PUT', { id, is_active }));
+      loadSequence().catch(() => {});
+    } catch (err) {
+      showError(err instanceof Error ? err.message : 'Could not update the email.');
+    }
   }
 
   async function sendSequenceTest(seqEmail: SequenceEmail) {
     if (!seqEmail.html_content) return;
     setSequenceTestStatus((prev) => ({ ...prev, [seqEmail.id]: 'loading' }));
     try {
-      const res = await fetch('/api/newsletter/test-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          password,
-          subject: seqEmail.subject,
-          html_content: seqEmail.html_content,
-        }),
-      });
+      const res = await api(
+        '/api/newsletter/test-email',
+        jsonInit('POST', { subject: seqEmail.subject, html_content: seqEmail.html_content })
+      );
       setSequenceTestStatus((prev) => ({ ...prev, [seqEmail.id]: res.ok ? 'sent' : 'error' }));
-      setTimeout(() => setSequenceTestStatus((prev) => ({ ...prev, [seqEmail.id]: 'idle' })), 4000);
     } catch {
       setSequenceTestStatus((prev) => ({ ...prev, [seqEmail.id]: 'error' }));
-      setTimeout(() => setSequenceTestStatus((prev) => ({ ...prev, [seqEmail.id]: 'idle' })), 4000);
     }
+    setTimeout(() => setSequenceTestStatus((prev) => ({ ...prev, [seqEmail.id]: 'idle' })), 4000);
   }
 
+  // Test always uses what's on screen right now, and saves it first
   async function handleTestEmail() {
-    if (!htmlContent) {
-      setStatus('error');
-      setResult('Please save your email design first using the Save button in the editor.');
-      return;
-    }
     setTestEmailStatus('loading');
+    setResult('');
     try {
-      const res = await fetch('/api/newsletter/test-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password, subject, html_content: htmlContent }),
-      });
-      const data = await res.json();
-      if (res.ok) {
-        setTestEmailStatus('success');
-        setTimeout(() => setTestEmailStatus('idle'), 4000);
-      } else {
-        setTestEmailStatus('error');
-        setStatus('error');
-        setResult(data.error || 'Could not send test email.');
-        setTimeout(() => setTestEmailStatus('idle'), 4000);
+      const { json, html } = await requestEditorSave();
+      if (editingSequenceIdRef.current === null) {
+        const id = await saveDraftWithContent(json, html);
+        if (id === null) throw new Error('Could not save before sending the test.');
       }
-    } catch {
+      const res = await api(
+        '/api/newsletter/test-email',
+        jsonInit('POST', {
+          subject: editingSequenceIdRef.current !== null ? sequenceSubjectRef.current : subjectRef.current,
+          html_content: html,
+        })
+      );
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Could not send test email.');
+      setTestEmailStatus('success');
+    } catch (err) {
       setTestEmailStatus('error');
-      setStatus('error');
-      setResult('Could not reach the server. Please try again.');
-      setTimeout(() => setTestEmailStatus('idle'), 4000);
+      showError(err instanceof Error ? err.message : 'Could not send test email.');
     }
+    setTimeout(() => setTestEmailStatus('idle'), 4000);
   }
 
   async function handleRemoveSubscriber(email: string) {
-    await fetch('/api/newsletter/subscribers', {
-      method: 'DELETE',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ password, email }),
-    });
-    loadSubscribers();
+    if (!window.confirm(`Unsubscribe ${email}? They will stop receiving newsletters.`)) return;
+    try {
+      await api('/api/newsletter/subscribers', jsonInit('DELETE', { email }));
+      loadSubscribers().catch(() => {});
+    } catch (err) {
+      showError(err instanceof Error ? err.message : 'Could not remove subscriber.');
+    }
   }
 
   async function handleAddSubscriber(e: React.FormEvent) {
@@ -430,69 +579,72 @@ export default function NewsletterAdmin() {
 
     setAddSubscriberStatus('loading');
     try {
-      const res = await fetch('/api/newsletter/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: newSubscriberEmail, name: newSubscriberName || null, source_page: 'admin-manual-add' }),
-      });
-
+      const res = await api(
+        '/api/newsletter/subscribe',
+        jsonInit('POST', { email: newSubscriberEmail, name: newSubscriberName || null, source_page: 'admin-manual-add' })
+      );
       const data = await res.json();
       if (res.ok) {
         setAddSubscriberStatus('success');
         setNewSubscriberName('');
         setNewSubscriberEmail('');
-        loadSubscribers();
+        loadSubscribers().catch(() => {});
         setTimeout(() => setAddSubscriberStatus('idle'), 3000);
       } else {
-        setStatus('error');
-        setResult(data.error || 'Could not add subscriber');
+        showError(data.error || 'Could not add subscriber');
         setAddSubscriberStatus('error');
         setTimeout(() => { setAddSubscriberStatus('idle'); setResult(''); }, 4000);
       }
-    } catch (err) {
-      setStatus('error');
-      setResult('Network error. Please try again.');
+    } catch {
+      showError('Network error. Please try again.');
       setAddSubscriberStatus('error');
       setTimeout(() => { setAddSubscriberStatus('idle'); setResult(''); }, 4000);
     }
   }
 
   async function handleSend() {
-    if (!htmlContent) {
-      setStatus('error');
-      setResult('Please save your email design first using the Save button in the editor.');
+    if (editingSequenceIdRef.current !== null) {
+      showError('You are editing a welcome email. Close it before sending a newsletter.');
       return;
     }
-    if (!subject) {
-      setStatus('error');
-      setResult('Please enter a subject line.');
+    if (!subject.trim()) {
+      showError('Please enter a subject line.');
       return;
     }
 
     setStatus('loading');
+    setResult('');
     try {
-      const res = await fetch('/api/newsletter/send', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password, subject, html_content: htmlContent, content: jsonContent }),
-      });
+      // 1. Grab exactly what's on screen and save it to the draft
+      const { json, html } = await requestEditorSave();
+      const id = await saveDraftWithContent(json, html);
+      if (id === null) return;
 
-      const data = await res.json();
-      if (res.ok) {
-        setStatus('success');
-        setResult(`Sent to ${data.sent} subscriber${data.sent !== 1 ? 's' : ''}${data.failed > 0 ? ` (${data.failed} failed)` : ''}!`);
-        if (currentDraftId) {
-          deleteDraft(currentDraftId);
-          setCurrentDraftId(null);
-        }
-        loadHistory();
-      } else {
-        setStatus('error');
-        setResult(data.error || 'Something went wrong.');
+      // 2. Confirm with the real numbers
+      const recipients = subscribers.filter((s) => s.is_active).length;
+      setStatus('idle');
+      if (!window.confirm(`Send "${subject}" to ${recipients} active subscriber${recipients === 1 ? '' : 's'} now?\n\nThis can't be undone.`)) {
+        return;
       }
-    } catch {
-      setStatus('error');
-      setResult('Something went wrong. Please try again.');
+
+      // 3. Send the draft itself
+      setStatus('loading');
+      const res = await api('/api/newsletter/send', jsonInit('POST', { id, subject, html_content: html, content: json }));
+      const data = await res.json();
+      if (!res.ok) {
+        showError(data.error || 'Something went wrong.');
+        return;
+      }
+
+      setStatus('success');
+      setResult(`Sent to ${data.sent} subscriber${data.sent !== 1 ? 's' : ''}${data.failed > 0 ? ` (${data.failed} failed)` : ''}!`);
+      resetComposer();
+      loadIntoEditor(BLANK_TEMPLATE);
+      markDirty(false);
+      loadDrafts().catch(() => {});
+      loadHistory().catch(() => {});
+    } catch (err) {
+      showError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
     }
   }
 
@@ -506,6 +658,10 @@ export default function NewsletterAdmin() {
           (s.name || '').toLowerCase().includes(subscriberQuery),
       )
     : subscribers;
+
+  if (!authChecked) {
+    return <div className="min-h-screen bg-[var(--color-bg-warm)]" />;
+  }
 
   if (!authenticated) {
     return (
@@ -545,14 +701,34 @@ export default function NewsletterAdmin() {
             <div className="flex-1">
               <div className="flex items-center gap-3">
                 <h1 className="text-2xl text-[var(--color-text-dark)]">Newsletter Admin</h1>
-                {currentDraftId && (
-                  <span className="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full font-medium">Draft</span>
-                )}
+                {isDirty ? (
+                  <span className="text-xs bg-amber-100 text-amber-800 px-2 py-1 rounded-full font-medium">Unsaved changes</span>
+                ) : lastSavedAt ? (
+                  <span className="text-xs bg-green-50 text-green-800 px-2 py-1 rounded-full font-medium">
+                    Saved {lastSavedAt.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })}
+                  </span>
+                ) : null}
               </div>
-              <p className="text-sm text-[var(--color-text-muted)]">Rojas Photography</p>
+              <p className="text-sm text-[var(--color-text-muted)]">
+                {editingSequenceId !== null
+                  ? 'Editing a welcome email'
+                  : currentDraftId
+                  ? `Editing draft: ${subject || 'Untitled'}`
+                  : 'New newsletter'}
+                <span className="mx-2">·</span>
+                <button onClick={handleLogout} className="underline hover:text-[var(--color-text-dark)]">Sign out</button>
+              </p>
             </div>
 
             <div className="flex items-center gap-3 flex-wrap">
+              {/* New newsletter */}
+              <button
+                onClick={newNewsletter}
+                className="px-4 py-2 rounded-xl border border-gray-200 text-sm font-medium text-[var(--color-text-dark)] hover:bg-gray-50 transition-colors"
+              >
+                + New
+              </button>
+
               {/* Sequence button */}
               <button
                 onClick={() => {
@@ -635,13 +811,7 @@ export default function NewsletterAdmin() {
                     {sequenceSaveStatus === 'saving' ? 'Saving...' : sequenceSaveStatus === 'saved' ? '✓ Saved!' : 'Save Sequence Email'}
                   </button>
                   <button
-                    onClick={() => {
-                      setEditingSequenceId(null);
-                      setSequenceSubject('');
-                      setHtmlContent('');
-                      setJsonContent('');
-                      if (bee) bee.load({ page: { rows: [] }, comments: [] } as unknown as Parameters<typeof bee.load>[0]);
-                    }}
+                    onClick={cancelSequenceEdit}
                     className="px-3 py-2 rounded-xl border border-gray-200 text-sm text-[var(--color-text-muted)] hover:bg-gray-50 transition-colors"
                   >
                     Cancel
@@ -656,7 +826,7 @@ export default function NewsletterAdmin() {
                 disabled={status === 'saving'}
                 className="px-4 py-2 rounded-xl border border-gray-200 text-sm font-medium text-[var(--color-text-dark)] hover:bg-gray-50 transition-colors disabled:opacity-60"
               >
-                {status === 'saving' ? 'Saving...' : currentDraftId ? 'Update Draft' : 'Save Draft'}
+                {status === 'saving' ? 'Saving...' : 'Save Draft'}
               </button>
               )}
 
@@ -1034,7 +1204,7 @@ export default function NewsletterAdmin() {
                         Duplicate
                       </button>
                       <button
-                        onClick={() => deleteDraft(draft.id)}
+                        onClick={() => deleteDraft(draft)}
                         className="px-3 py-1 text-xs font-semibold border border-red-200 text-red-600 rounded-full hover:bg-red-50"
                       >
                         Delete

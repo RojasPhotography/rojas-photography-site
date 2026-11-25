@@ -1,22 +1,39 @@
 import { getSupabase } from '@/app/lib/supabase-server';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { isAdmin } from '@/app/lib/newsletter-auth';
+import { escapeHtml, normalizeEmail, unsubscribeHeaders, unsubscribeUrl } from '@/app/lib/newsletter-email';
+
+const SOURCE_PATTERN = /^[a-z0-9\/_-]{1,80}$/i;
 
 export async function POST(request: Request) {
   try {
     const supabase = getSupabase();
     const resend = new Resend(process.env.RESEND_API_KEY);
-    const { email, name, source_page } = await request.json();
+    const body = await request.json();
 
-    if (!email) {
-      return NextResponse.json({ error: 'Email is required' }, { status: 400 });
+    // Honeypot: real people never see or fill this field; bots do. Pretend it worked.
+    if (body.company_website) {
+      return NextResponse.json({ success: true, message: 'Subscribed successfully' });
     }
+
+    const email = normalizeEmail(body.email);
+    if (!email) {
+      return NextResponse.json({ error: 'Please enter a valid email address.' }, { status: 400 });
+    }
+    const name: string | null =
+      typeof body.name === 'string' && body.name.trim() ? body.name.trim().slice(0, 100) : null;
+    let source_page: string | null =
+      typeof body.source_page === 'string' && SOURCE_PATTERN.test(body.source_page) ? body.source_page : null;
+
+    // Only a signed-in admin can add someone without triggering the welcome sequence
+    if (source_page === 'admin-manual-add' && !(await isAdmin())) source_page = 'website';
 
     // Check if already subscribed
     const { data: existing } = await supabase
       .from('subscribers')
       .select('id, is_active')
-      .eq('email', email)
+      .ilike('email', email.replace(/[%_\\]/g, '\\$&'))
       .maybeSingle();
 
     if (existing) {
@@ -27,7 +44,7 @@ export async function POST(request: Request) {
       await supabase
         .from('subscribers')
         .update({ is_active: true, unsubscribed_at: null, name: name || null, subscribed_at: new Date().toISOString(), source_page: source_page || null })
-        .eq('email', email);
+        .eq('id', existing.id);
     } else {
       const { error } = await supabase
         .from('subscribers')
@@ -71,10 +88,11 @@ export async function POST(request: Request) {
 
       // Send welcome email — wrapped separately so a failed email doesn't block subscription
       try {
-      await resend.emails.send({
+      const { error: welcomeError } = await resend.emails.send({
       from: 'Alfonso & Niomi Rojas <alfonso@rojasphotography.net>',
       replyTo: ['alfonso@rojasphotography.net', 'niomi@rojasphotography.net'],
       to: email,
+      headers: unsubscribeHeaders(email),
       subject: 'Welcome to Rojas Photography — we\'re honored you\'re here',
       html: `
         <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; color: #333; background-color: #ffffff;">
@@ -98,7 +116,7 @@ export async function POST(request: Request) {
           <!-- Body -->
           <div style="padding: 40px 40px 32px;">
             <h1 style="color: #0f3d2a; font-size: 26px; margin: 0 0 16px; line-height: 1.3;">
-              We're so glad you're here${name ? `, ${name.split(' ')[0]}` : ''}.
+              We're so glad you're here${name ? `, ${escapeHtml(name.split(' ')[0])}` : ''}.
             </h1>
 
             <p style="font-size: 16px; line-height: 1.7; margin: 0 0 16px; color: #444;">
@@ -190,13 +208,14 @@ export async function POST(request: Request) {
             <p style="font-size: 12px; color: #aaa; margin: 0;">
               You're receiving this because you signed up at rojasphotography.net.
               &nbsp;·&nbsp;
-              <a href="https://rojasphotography.net/api/newsletter/unsubscribe?email=${encodeURIComponent(email)}" style="color: #aaa;">Unsubscribe</a>
+              <a href="${unsubscribeUrl(email)}" style="color: #aaa;">Unsubscribe</a>
             </p>
           </div>
 
         </div>
       `,
     });
+      if (welcomeError) console.error('Welcome email failed:', welcomeError);
       } catch (emailError) {
         console.error('Welcome email failed:', emailError);
         // Don't block — subscriber was saved successfully
@@ -208,17 +227,17 @@ export async function POST(request: Request) {
       await resend.emails.send({
         from: 'Rojas Photography <alfonso@rojasphotography.net>',
         to: ['alfonso@rojasphotography.net', 'niomi@rojasphotography.net'],
-        subject: `New subscriber: ${name || email}`,
+        subject: `New subscriber: ${(name || email).replace(/[\r\n]/g, ' ')}`,
         html: `
           <div style="font-family: Georgia, serif; max-width: 480px; margin: 0 auto; color: #333;">
             <div style="background-color: #0f3d2a; padding: 20px 32px;">
               <p style="color: #ffffff; margin: 0; font-size: 16px; font-weight: bold;">New Newsletter Subscriber</p>
             </div>
             <div style="padding: 28px 32px;">
-              <p style="font-size: 15px; margin: 0 0 12px;"><strong>Name:</strong> ${name || '(not provided)'}</p>
-              <p style="font-size: 15px; margin: 0 0 12px;"><strong>Email:</strong> ${email}</p>
+              <p style="font-size: 15px; margin: 0 0 12px;"><strong>Name:</strong> ${name ? escapeHtml(name) : '(not provided)'}</p>
+              <p style="font-size: 15px; margin: 0 0 12px;"><strong>Email:</strong> ${escapeHtml(email)}</p>
               <p style="font-size: 15px; margin: 0 0 12px;"><strong>Signed up:</strong> ${new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles', dateStyle: 'full', timeStyle: 'short' })}</p>
-              <p style="font-size: 15px; margin: 0 0 0;"><strong>Source page:</strong> ${source_page || '(unknown)'}</p>
+              <p style="font-size: 15px; margin: 0 0 0;"><strong>Source page:</strong> ${escapeHtml(source_page || '(unknown)')}</p>
             </div>
           </div>
         `,
@@ -230,15 +249,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ success: true, message: 'Subscribed successfully' });
   } catch (error) {
-    let errorMessage = 'Something went wrong';
-    if (error instanceof Error) {
-      errorMessage = error.message;
-    } else if (error && typeof error === 'object' && 'message' in error) {
-      errorMessage = String((error as any).message);
-    } else if (typeof error === 'string') {
-      errorMessage = error;
-    }
-    console.error('Subscribe error:', errorMessage, JSON.stringify(error));
-    return NextResponse.json({ error: errorMessage }, { status: 500 });
+    console.error('Subscribe error:', error);
+    return NextResponse.json({ error: 'Something went wrong. Please try again.' }, { status: 500 });
   }
 }

@@ -1,24 +1,26 @@
 import { getSupabase } from '@/app/lib/supabase-server';
+import { isAdmin, unauthorized } from '@/app/lib/newsletter-auth';
+import { personalize, withFooter, unsubscribeHeaders, SITE_URL } from '@/app/lib/newsletter-email';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
 const BATCH_SIZE = 50;
 
+// Give large lists time to finish (Vercel Hobby allows up to 60s)
+export const maxDuration = 60;
+
 export async function POST(request: Request) {
+  if (!(await isAdmin())) return unauthorized();
+
   try {
     const supabase = getSupabase();
     const resend = new Resend(process.env.RESEND_API_KEY);
-    const { password, subject, content, html_content } = await request.json();
-
-    if (password !== process.env.NEWSLETTER_ADMIN_PASSWORD) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
+    const { id, subject, content, html_content } = await request.json();
 
     if (!subject || !html_content) {
       return NextResponse.json({ error: 'Subject and content are required' }, { status: 400 });
     }
 
-    // Get all active subscribers
     const { data: subscribers, error } = await supabase
       .from('subscribers')
       .select('id, email, name')
@@ -29,93 +31,96 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'No active subscribers' }, { status: 400 });
     }
 
-    // Log newsletter to newsletters table
-    const { data: newsletter, error: newsletterError } = await supabase
-      .from('newsletters')
-      .insert({
-        subject,
-        content: content || html_content,
-        html_content,
-        status: 'sending',
-        created_by: 'alfonso@rojasphotography.net',
-      })
-      .select('id')
-      .single();
-
-    if (newsletterError) throw newsletterError;
+    // Claim the newsletter. Sending the draft itself (instead of copying it and
+    // deleting the draft) means work is never lost, and the status check makes
+    // a double click or a second tab unable to send it twice.
+    let newsletterId: number;
+    if (id) {
+      const { data: claimed, error: claimError } = await supabase
+        .from('newsletters')
+        .update({ subject, content: content || html_content, html_content, status: 'sending', updated_at: new Date().toISOString() })
+        .eq('id', id)
+        .eq('status', 'draft')
+        .select('id')
+        .maybeSingle();
+      if (claimError) throw claimError;
+      if (!claimed) {
+        return NextResponse.json({ error: 'This newsletter is already sending or was already sent.' }, { status: 409 });
+      }
+      newsletterId = claimed.id;
+    } else {
+      const { data: created, error: createError } = await supabase
+        .from('newsletters')
+        .insert({
+          subject,
+          content: content || html_content,
+          html_content,
+          status: 'sending',
+          created_by: 'alfonso@rojasphotography.net',
+        })
+        .select('id')
+        .single();
+      if (createError) throw createError;
+      newsletterId = created.id;
+    }
 
     let sent = 0;
     let failed = 0;
 
-    // Send in batches of BATCH_SIZE
     for (let i = 0; i < subscribers.length; i += BATCH_SIZE) {
       const batch = subscribers.slice(i, i + BATCH_SIZE);
 
       const emails = batch.map((subscriber) => {
-        const firstName = subscriber.name ? subscriber.name.split(' ')[0] : 'there';
-        const personalizedHtml = html_content
-          .replace(/\{\{first_name\}\}/gi, firstName)
-          .replace(/\{\{name\}\}/gi, subscriber.name || 'there');
-
-        const trackingPixel = `<img src="https://rojasphotography.net/api/newsletter/track?n=${newsletter.id}&s=${subscriber.id}" width="1" height="1" style="display:block;width:1px;height:1px;opacity:0;" alt="" />`;
-
+        const pixel = `<img src="${SITE_URL}/api/newsletter/track?n=${newsletterId}&s=${subscriber.id}" width="1" height="1" style="display:block;width:1px;height:1px;opacity:0;" alt="" />`;
         return {
           from: 'Alfonso Rojas <alfonso@rojasphotography.net>',
           to: subscriber.email,
           subject,
-          html: `
-            <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 40px 20px; color: #333;">
-              ${personalizedHtml}
-              <hr style="border: none; border-top: 1px solid #eee; margin: 40px 0;" />
-              <p style="font-size: 13px; color: #888;">
-                — Alfonso & Niomi Rojas<br/>Rojas Photography · Modesto, CA
-              </p>
-              <p style="font-size: 12px; color: #aaa;">
-                <a href="https://rojasphotography.net/api/newsletter/unsubscribe?email=${encodeURIComponent(subscriber.email)}" style="color: #aaa;">Unsubscribe</a>
-              </p>
-              ${trackingPixel}
-            </div>
-          `,
+          html: withFooter(personalize(html_content, subscriber.name), subscriber.email, pixel),
+          headers: unsubscribeHeaders(subscriber.email),
         };
       });
 
+      let batchFailed = true;
       try {
         const { error: batchError } = await resend.batch.send(emails);
-
-        // Log events for each subscriber in the batch
-        const eventRows = batch.map((subscriber) => ({
-          newsletter_id: newsletter.id,
-          subscriber_id: subscriber.id,
-          subscriber_email: subscriber.email,
-          event_type: batchError ? 'failed' : 'sent',
-        }));
-
-        await supabase.from('email_events').insert(eventRows);
-
-        if (batchError) {
-          failed += batch.length;
-        } else {
-          sent += batch.length;
-        }
-      } catch {
-        const eventRows = batch.map((subscriber) => ({
-          newsletter_id: newsletter.id,
-          subscriber_id: subscriber.id,
-          subscriber_email: subscriber.email,
-          event_type: 'failed',
-        }));
-        await supabase.from('email_events').insert(eventRows);
-        failed += batch.length;
+        if (batchError) console.error('Batch send error:', batchError);
+        batchFailed = Boolean(batchError);
+      } catch (err) {
+        console.error('Batch send exception:', err);
       }
+
+      await supabase.from('email_events').insert(
+        batch.map((subscriber) => ({
+          newsletter_id: newsletterId,
+          subscriber_id: subscriber.id,
+          subscriber_email: subscriber.email,
+          event_type: batchFailed ? 'failed' : 'sent',
+        })),
+      );
+
+      if (batchFailed) failed += batch.length;
+      else sent += batch.length;
     }
 
-    // Update newsletter status
+    if (sent === 0) {
+      // Nothing went out: put it back to a draft so nothing is lost and it can be retried
+      await supabase
+        .from('newsletters')
+        .update({ status: 'draft', updated_at: new Date().toISOString() })
+        .eq('id', newsletterId);
+      return NextResponse.json(
+        { error: 'Resend did not accept any emails, so nothing was sent. Your draft is safe. Check the Resend dashboard and try again.' },
+        { status: 502 },
+      );
+    }
+
     await supabase
       .from('newsletters')
       .update({ status: 'sent', sent_at: new Date().toISOString() })
-      .eq('id', newsletter.id);
+      .eq('id', newsletterId);
 
-    return NextResponse.json({ success: true, sent, failed });
+    return NextResponse.json({ success: true, id: newsletterId, sent, failed });
   } catch (error) {
     console.error('Send error:', error);
     return NextResponse.json({ error: 'Something went wrong' }, { status: 500 });

@@ -1,19 +1,18 @@
 import { getSupabase } from '@/app/lib/supabase-server';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
+import { isAdmin } from '@/app/lib/newsletter-auth';
+import { personalize, withFooter, unsubscribeHeaders } from '@/app/lib/newsletter-email';
 
 // Called by Vercel Cron daily — processes pending sequence emails that are due
 export async function GET(request: Request) {
+  // Vercel Cron sends "Authorization: Bearer <CRON_SECRET>". A signed-in admin can also run it.
   const authHeader = request.headers.get('authorization');
   const cronSecret = process.env.CRON_SECRET;
-  const adminPassword = process.env.NEWSLETTER_ADMIN_PASSWORD;
-  const { searchParams } = new URL(request.url);
-  const queryPassword = searchParams.get('password');
+  const validCron = Boolean(cronSecret) && authHeader === `Bearer ${cronSecret}`;
 
-  const validCron = cronSecret && authHeader === `Bearer ${cronSecret}`;
-  const validAdmin = adminPassword && queryPassword === adminPassword;
-
-  if (cronSecret && !validCron && !validAdmin) {
+  // NOTE: if CRON_SECRET is not set in Vercel, this stays open (as before) so the cron keeps working.
+  if (cronSecret && !validCron && !(await isAdmin())) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
@@ -77,8 +76,8 @@ export async function GET(request: Request) {
     const { data: subscriber } = await supabase
       .from('subscribers')
       .select('is_active, name')
-      .eq('email', item.subscriber_email)
-      .single();
+      .ilike('email', item.subscriber_email.replace(/[%_\\]/g, '\\$&'))
+      .maybeSingle();
 
     if (!subscriber?.is_active) {
       await supabase
@@ -89,20 +88,20 @@ export async function GET(request: Request) {
       continue;
     }
 
-    // Personalize subject and body with subscriber name
-    const firstName = subscriber.name ? subscriber.name.split(' ')[0] : null;
-    const personalizedHtml = firstName
-      ? seqEmail.html_content.replace(/\{\{first_name\}\}/g, firstName)
-      : seqEmail.html_content.replace(/,?\s*\{\{first_name\}\}/g, '');
+    // Personalize, and always include the unsubscribe footer
+    const html = withFooter(personalize(seqEmail.html_content, subscriber.name, null), item.subscriber_email);
 
     try {
-      await resend.emails.send({
+      const { error: sendError } = await resend.emails.send({
         from: 'Alfonso & Niomi Rojas <alfonso@rojasphotography.net>',
         replyTo: ['alfonso@rojasphotography.net', 'niomi@rojasphotography.net'],
         to: item.subscriber_email,
         subject: seqEmail.subject,
-        html: personalizedHtml,
+        html,
+        headers: unsubscribeHeaders(item.subscriber_email),
       });
+      // Resend reports API errors in the result instead of throwing
+      if (sendError) throw sendError;
 
       await supabase
         .from('sequence_queue')
