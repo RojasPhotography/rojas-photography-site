@@ -4,6 +4,9 @@ import { NextResponse } from 'next/server';
 import { isAdmin } from '@/app/lib/newsletter-auth';
 import { personalize, withFooter, unsubscribeHeaders } from '@/app/lib/newsletter-email';
 
+// Pacing the sends takes time, so allow up to 60 seconds
+export const maxDuration = 60;
+
 // Called by Vercel Cron daily — processes pending sequence emails that are due
 export async function GET(request: Request) {
   // Vercel Cron sends "Authorization: Bearer <CRON_SECRET>". A signed-in admin can also run it.
@@ -51,6 +54,7 @@ export async function GET(request: Request) {
   let skipped = 0;
   let failed = 0;
 
+  let first = true;
   for (const item of dueItems) {
     const seqEmail = (Array.isArray(item.sequence_emails)
       ? item.sequence_emails[0]
@@ -90,6 +94,10 @@ export async function GET(request: Request) {
 
     // Personalize, and always include the unsubscribe footer
     const html = withFooter(personalize(seqEmail.html_content, subscriber.name, null), item.subscriber_email);
+
+    // Stay under Resend's requests-per-second limit
+    if (!first) await new Promise((resolve) => setTimeout(resolve, 600));
+    first = false;
 
     try {
       const { error: sendError } = await resend.emails.send({

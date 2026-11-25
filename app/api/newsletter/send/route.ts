@@ -4,7 +4,11 @@ import { personalize, withFooter, unsubscribeHeaders, SITE_URL } from '@/app/lib
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const BATCH_SIZE = 50;
+// Resend accepts up to 100 emails per batch call and limits how fast calls can come in,
+// so we pace the calls and retry when Resend asks us to slow down.
+const BATCH_SIZE = 100;
+const PAUSE_MS = 600;
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 // Give large lists time to finish (Vercel Hobby allows up to 60s)
 export const maxDuration = 60;
@@ -86,13 +90,26 @@ export async function POST(request: Request) {
         };
       });
 
+      if (i > 0) await sleep(PAUSE_MS);
+
+      // The idempotency key means a retry can never deliver the same batch twice
+      const idempotencyKey = `newsletter-${newsletterId}-batch-${i / BATCH_SIZE}`;
       let batchFailed = true;
-      try {
-        const { error: batchError } = await resend.batch.send(emails);
-        if (batchError) console.error('Batch send error:', batchError);
-        batchFailed = Boolean(batchError);
-      } catch (err) {
-        console.error('Batch send exception:', err);
+      for (let attempt = 0; attempt < 3; attempt++) {
+        try {
+          const { error: batchError } = await resend.batch.send(emails, { idempotencyKey });
+          if (!batchError) {
+            batchFailed = false;
+            break;
+          }
+          console.error('Batch send error:', batchError);
+          // Only "slow down" and temporary server errors are worth retrying
+          const retryable = batchError.name === 'rate_limit_exceeded' || batchError.name === 'internal_server_error';
+          if (!retryable) break;
+        } catch (err) {
+          console.error('Batch send exception:', err);
+        }
+        await sleep(1500 * (attempt + 1));
       }
 
       await supabase.from('email_events').insert(

@@ -178,7 +178,7 @@ export function Newsletters({
                 <div className="min-w-0">
                   <p className="truncate font-medium text-stone-900">{n.subject}</p>
                   <p className="text-sm text-stone-500">
-                    Sent {formatDate(n.sent_at)}
+                    {n.sent_at ? `Sent ${formatDate(n.sent_at)}` : 'Sending was cut off. Check Reports for who got it'}
                     {n.stats ? ` · ${n.stats.sent} delivered · ${n.stats.openRate}% opened` : ''}
                   </p>
                 </div>

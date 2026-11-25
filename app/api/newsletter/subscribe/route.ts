@@ -2,7 +2,7 @@ import { getSupabase } from '@/app/lib/supabase-server';
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 import { isAdmin } from '@/app/lib/newsletter-auth';
-import { escapeHtml, normalizeEmail, unsubscribeHeaders, unsubscribeUrl } from '@/app/lib/newsletter-email';
+import { escapeHtml, normalizeEmail, unsubscribeHeaders, unsubscribeUrl, POSTAL_ADDRESS } from '@/app/lib/newsletter-email';
 
 const SOURCE_PATTERN = /^[a-z0-9\/_-]{1,80}$/i;
 
@@ -28,6 +28,20 @@ export async function POST(request: Request) {
 
     // Only a signed-in admin can add someone without triggering the welcome sequence
     if (source_page === 'admin-manual-add' && !(await isAdmin())) source_page = 'website';
+
+    // Flood guard: a real website never gets dozens of signups in a few minutes.
+    // If it does, a bot is feeding in addresses, so stop sending emails to strangers.
+    if (source_page !== 'admin-manual-add') {
+      const since = new Date(Date.now() - 10 * 60 * 1000).toISOString();
+      const { count: recent } = await supabase
+        .from('subscribers')
+        .select('id', { count: 'exact', head: true })
+        .gte('subscribed_at', since);
+      if ((recent ?? 0) >= 20) {
+        console.error('Signup flood guard triggered');
+        return NextResponse.json({ error: 'Too many signups right now. Please try again in a few minutes.' }, { status: 429 });
+      }
+    }
 
     // Check if already subscribed
     const { data: existing } = await supabase
@@ -65,6 +79,14 @@ export async function POST(request: Request) {
           .eq('is_active', true)
           .gt('position', 1)
           .order('position', { ascending: true });
+
+        // If this person signed up before, cancel any welcome emails still waiting
+        // so nobody gets the series twice
+        await supabase
+          .from('sequence_queue')
+          .update({ status: 'skipped' })
+          .eq('subscriber_email', email)
+          .eq('status', 'pending');
 
         if (sequenceEmails && sequenceEmails.length > 0) {
           const now = new Date();
@@ -205,6 +227,9 @@ export async function POST(request: Request) {
 
           <!-- Footer -->
           <div style="background-color: #f9f6f1; border-top: 1px solid #e8e0d5; padding: 20px 40px; text-align: center;">
+            <p style="font-size: 12px; color: #aaa; margin: 0 0 6px;">
+              Rojas Photography LLC &middot; ${escapeHtml(POSTAL_ADDRESS)}
+            </p>
             <p style="font-size: 12px; color: #aaa; margin: 0;">
               You're receiving this because you signed up at rojasphotography.net.
               &nbsp;·&nbsp;

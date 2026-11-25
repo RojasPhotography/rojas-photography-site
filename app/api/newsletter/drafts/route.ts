@@ -25,8 +25,9 @@ export async function GET(request: Request) {
     const { data, error } = await supabase
       .from('newsletters')
       .select('id, subject, sent_at, created_at')
-      .eq('status', 'sent')
-      .order('sent_at', { ascending: false })
+      // "sending" too, so a send that was cut off partway still shows up with its stats
+      .in('status', ['sent', 'sending'])
+      .order('sent_at', { ascending: false, nullsFirst: true })
       .limit(20);
     if (error) return NextResponse.json({ error: error.message }, { status: 500 });
     return NextResponse.json(data);
