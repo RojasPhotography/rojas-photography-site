@@ -138,7 +138,7 @@ export default function HomePage() {
           <div>
             <h1 className="hero-rise mb-6" style={{ animationDelay: '0.1s' }}>
               <span className="block text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase">
-                Corporate Photography &amp; Video · Modesto &amp; All of California
+                Corporate Photography &amp; Video · Modesto, CA
               </span>
               <span className="block text-5xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-[-0.01em]">
                 Look as good as your work.
