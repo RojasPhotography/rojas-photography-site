@@ -5,34 +5,33 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 
+// The menu uses the same three words as the homepage hero: Headshots, Events, Video.
 const serviceGroups = [
   {
     label: 'Headshots',
-    tagline: 'For individuals — at our Modesto studio',
-    items: [{ href: '/premium-headshots', label: 'Premium In-Studio Headshots' }],
-  },
-  {
-    label: 'Teams & Companies',
-    tagline: 'We bring the studio to your office',
+    tagline: 'For you, or for your whole team',
     items: [
-      { href: '/on-site-photography', label: 'On-Site Team Headshots' },
+      { href: '/headshots', label: 'Headshots: studio or on-site?' },
+      { href: '/premium-headshots', label: 'In Our Studio · For You' },
+      { href: '/on-site-photography', label: 'At Your Office · For Your Team' },
       { href: '/annual-headshot-programs', label: 'Annual Headshot Programs' },
-      { href: '/commercial', label: 'Commercial Photography' },
     ],
   },
   {
-    label: 'Events & Conferences',
-    tagline: 'Coverage wherever your event happens',
+    label: 'Events',
+    tagline: 'Conferences, galas and company events',
     items: [
-      { href: '/event-photography', label: 'Event Photography' },
-      { href: '/conference-photography', label: 'Conference Photography' },
-      { href: '/headshot-booth', label: 'Headshot Booth' },
+      { href: '/event-photography', label: 'Event & Conference Photography' },
+      { href: '/headshot-booth', label: 'Headshot Booth for Attendees' },
     ],
   },
   {
     label: 'Video',
-    tagline: 'Corporate films, testimonials & drone',
-    items: [{ href: '/video', label: 'Video Production' }],
+    tagline: 'Brand films, testimonials, reels & drone',
+    items: [
+      { href: '/video', label: 'Video Production & Drone' },
+      { href: '/commercial', label: 'Commercial Photography' },
+    ],
   },
 ];
 
@@ -261,10 +260,10 @@ export default function Navigation() {
           {/* CTA - Desktop */}
           <div className="hidden lg:block">
             <Link
-              href="/contact-quote"
+              href="/premium-headshots#booking-heading"
               className="btn-primary px-7 py-2.5 text-sm font-semibold rounded-full inline-block shadow-md hover:shadow-lg transition-all duration-300"
             >
-              Get Started
+              Book a session
             </Link>
           </div>
 
@@ -405,11 +404,18 @@ export default function Navigation() {
           {/* Mobile CTA + Socials */}
           <div className="pt-6 border-t border-gray-100 mobile-nav-item" style={{ animationDelay: '0.35s' }}>
             <Link
-              href="/contact-quote"
+              href="/premium-headshots#booking-heading"
               className="btn-primary px-8 py-4 text-base font-semibold rounded-full w-full text-center inline-block shadow-lg"
               onClick={closeMenu}
             >
-              Get Started
+              Book a session
+            </Link>
+            <Link
+              href="/contact-quote"
+              className="block text-center text-base font-semibold text-[var(--color-primary)] pt-4 hover:underline"
+              onClick={closeMenu}
+            >
+              Team, event or video? Plan it with us
             </Link>
             <div className="flex justify-center gap-6 pt-5">
               {socials.map((s) => (
