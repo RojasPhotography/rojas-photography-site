@@ -173,7 +173,7 @@ export default function SacramentoHeadshotsPage() {
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
             <Link
-              href="/discovery-call"
+              href="/premium-headshots#booking-heading"
               className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
             >
               Book Your Session

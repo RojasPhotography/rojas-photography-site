@@ -156,10 +156,10 @@ export default function HowToPrepareForHeadshotsPage() {
               Book Your Session
             </Link>
             <Link
-              href="/discovery-call"
+              href="/on-site-photography"
               className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
             >
-              Schedule Discovery Call
+              Photographing a whole team?
             </Link>
           </div>
         </HeroSection>
@@ -475,10 +475,10 @@ export default function HowToPrepareForHeadshotsPage() {
                     View Session Details & Book
                   </Link>
                   <Link
-                    href="/discovery-call"
+                    href="/on-site-photography"
                     className="border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
                   >
-                    Schedule a Discovery Call
+                    Photographing a whole team?
                   </Link>
                 </div>
               </SectionReveal>
@@ -735,10 +735,10 @@ export default function HowToPrepareForHeadshotsPage() {
                     Book Your Session
                   </Link>
                   <Link
-                    href="/discovery-call"
+                    href="/on-site-photography"
                     className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                   >
-                    Schedule Discovery Call
+                    Photographing a whole team?
                   </Link>
                 </div>
               </SectionReveal>

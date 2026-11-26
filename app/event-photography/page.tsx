@@ -95,10 +95,10 @@ export default function EventPhotographyPage() {
       >
         <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
           <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-            Request a Quote
+            Plan your event coverage
           </Link>
-          <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-            Schedule Discovery Call
+          <Link href="/work/cla-annual-meeting-2026" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
+            See the CLA case study
           </Link>
         </div>
       </HeroSection>
@@ -136,7 +136,7 @@ export default function EventPhotographyPage() {
             Standard delivery: 5–7 business days. &nbsp;·&nbsp; With our real-time add-on: you and your attendees get photos instantly.
           </p>
           <Link href="/contact-quote" className="flex-shrink-0 bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-6 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap">
-            Get a Quote
+            Plan your event coverage
           </Link>
         </div>
       </div>
@@ -305,7 +305,7 @@ export default function EventPhotographyPage() {
               Stop gambling with unreliable photographers. Get professional event coverage you can trust.
             </p>
             <Link href="/contact-quote" className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">
-                Request a Quote
+                Plan your event coverage
               </Link>
           </SectionReveal>
         </ParallaxBand>
@@ -429,7 +429,7 @@ export default function EventPhotographyPage() {
                 <h3 className="text-2xl text-[var(--color-primary)] mb-4">Pricing</h3>
                 <p className="text-[var(--color-text-body)] mb-6">Custom pricing based on event size, duration, and coverage needs.</p>
                 <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
-                  Get Your Quote
+                  Plan your event coverage
                 </Link>
                 <p className="text-sm text-[var(--color-text-muted)] mt-5">
                   Planning a budget first? See our <Link href="/corporate-event-photography-cost" className="text-[var(--color-primary)] font-semibold hover:underline">2026 event photography pricing guide</Link>.
@@ -539,7 +539,7 @@ export default function EventPhotographyPage() {
                 pair your coverage with an <Link href="/video" className="text-[var(--color-primary)] font-semibold hover:underline">event highlight video</Link>.
               </p>
               <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                Request a Quote
+                Plan your event coverage
               </Link>
             </SectionReveal>
           </div>

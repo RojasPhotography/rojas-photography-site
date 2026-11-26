@@ -94,10 +94,10 @@ export default function ConferencePhotographyPage() {
         >
           <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
             <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-              Request a Conference Quote
+              Plan your conference coverage
             </Link>
-            <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-              Schedule a Call
+            <Link href="/work/cla-annual-meeting-2026" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
+              See the CLA case study
             </Link>
           </div>
         </HeroSection>
@@ -144,7 +144,7 @@ export default function ConferencePhotographyPage() {
               Multi-photographer teams for multi-track days. &nbsp;·&nbsp; Edited gallery in 5–7 business days, with same-day highlights available.
             </p>
             <Link href="/contact-quote" className="flex-shrink-0 bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-6 py-2 rounded-full text-sm font-bold transition-all whitespace-nowrap">
-              Get a Quote
+              Plan your conference coverage
             </Link>
           </div>
         </div>
@@ -235,7 +235,7 @@ export default function ConferencePhotographyPage() {
                 Planning a conference or annual meeting? Let&apos;s make sure every room is covered.
               </p>
               <Link href="/contact-quote" className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">
-                Request a Conference Quote
+                Plan your conference coverage
               </Link>
             </SectionReveal>
           </ParallaxBand>
@@ -540,10 +540,10 @@ export default function ConferencePhotographyPage() {
                 </p>
                 <div className="flex flex-col md:flex-row gap-4 justify-center">
                   <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                    Request a Conference Quote
+                    Plan your conference coverage
                   </Link>
-                  <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                    Schedule a Call
+                  <Link href="/work/cla-annual-meeting-2026" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
+                    See the CLA case study
                   </Link>
                 </div>
               </SectionReveal>

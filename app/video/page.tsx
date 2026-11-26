@@ -180,10 +180,10 @@ export default function VideoServicesPage() {
       >
         <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
           <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-            Request a Video Quote
+            Plan your video
           </Link>
-          <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-            Schedule a Discovery Call
+          <Link href="/work" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
+            See our work
           </Link>
         </div>
       </HeroSection>
@@ -481,10 +481,10 @@ export default function VideoServicesPage() {
               </p>
               <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                  Request a Video Quote
+                  Plan your video
                 </Link>
-                <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                  Schedule a Discovery Call
+                <Link href="/work" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
+                  See our work
                 </Link>
               </div>
             </SectionReveal>

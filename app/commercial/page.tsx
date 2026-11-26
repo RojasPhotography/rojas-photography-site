@@ -84,10 +84,10 @@ export default function CommercialPhotographyPage() {
       >
         <div className="flex flex-col md:flex-row gap-4 justify-center mt-8">
           <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-            Request a Quote
+            Plan your brand shoot
           </Link>
-          <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-            Schedule Discovery Call
+          <Link href="/work" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
+            See our work
           </Link>
         </div>
       </HeroSection>
@@ -191,7 +191,7 @@ export default function CommercialPhotographyPage() {
               Stop settling for stock photos your competitors use. Get custom brand photography.
             </p>
             <Link href="/contact-quote" className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block">
-                Request a Quote
+                Plan your brand shoot
               </Link>
           </SectionReveal>
         </ParallaxBand>
@@ -249,10 +249,10 @@ export default function CommercialPhotographyPage() {
               </p>
               <div className="flex flex-col md:flex-row gap-4 justify-center">
                 <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                  Request a Quote
+                  Plan your brand shoot
                 </Link>
-                <Link href="/discovery-call" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                  Schedule Discovery Call
+                <Link href="/work" className="btn-outline px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
+                  See our work
                 </Link>
               </div>
             </SectionReveal>
@@ -290,7 +290,7 @@ export default function CommercialPhotographyPage() {
                 <h3 className="text-2xl text-[var(--color-primary)] mb-4">Pricing</h3>
                 <p className="text-[var(--color-text-body)] mb-6">Custom pricing based on project scope and requirements.</p>
                 <Link href="/contact-quote" className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block">
-                  Get Your Quote
+                  Plan your brand shoot
                 </Link>
               </div>
             </SectionReveal>
@@ -370,7 +370,7 @@ export default function CommercialPhotographyPage() {
                 Join hundreds of Central Valley businesses who&apos;ve partnered with us for authentic, professional commercial photography. Differentiated brand imagery is one quote away.
               </p>
               <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                Request a Quote
+                Plan your brand shoot
               </Link>
             </SectionReveal>
           </div>
@@ -391,7 +391,7 @@ export default function CommercialPhotographyPage() {
                 Let&apos;s discuss your project and create compelling imagery that strengthens your brand.
               </p>
               <Link href="/contact-quote" className="btn-primary px-10 py-4 text-lg font-semibold rounded-full text-center inline-block">
-                Request a Quote
+                Plan your brand shoot
               </Link>
             </SectionReveal>
           </div>

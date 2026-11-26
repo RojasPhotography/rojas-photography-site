@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import HeroSection from '../components/HeroSection';
 import SectionReveal from '../components/SectionReveal';
-import CTASection from '../components/CTASection';
+import Link from 'next/link';
 import ContactFormEmbed from '../components/ContactFormEmbed';
+import SchedulerEmbed from '../components/SchedulerEmbed';
 import SchemaScript from '../components/SchemaScript';
 import { generateBreadcrumbSchema } from '../lib/schema';
 
@@ -46,21 +47,65 @@ export default function ContactPage() {
       ])} />
     <div className="min-h-screen bg-white">
       <HeroSection
-        title="Let's Work Together"
-        subtitle="Ready to transform your professional image? Get in touch with Rojas Photography. We're here to answer your questions and discuss your photography needs."
+        title="Plan it with us"
+        subtitle="Team headshot days, events, conferences and video. Tell us what's coming up and you'll hear back from Alfonso or Niomi within 24 hours."
         gradient
       />
 
       <main id="main-content">
-        {/* Contact Usthods */}
+        {/* Contact Form - 17hats */}
+        <section className="pt-16 pb-20 px-8 bg-[var(--color-bg-warm)]">
+          <div className="max-w-2xl mx-auto">
+            <SectionReveal>
+              <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">
+                Tell us what you&apos;re planning
+              </h2>
+              <p className="text-center text-[var(--color-text-body)] mb-4 text-lg">
+                A few quick details and we&apos;ll come back with a clear plan and quote within 24 hours.
+              </p>
+              <p className="text-center text-[var(--color-text-muted)] mb-12">
+                Booking a studio headshot for yourself?{' '}
+                <Link href="/premium-headshots#booking-heading" className="text-[var(--color-primary)] font-semibold hover:underline">
+                  Book a studio session online instead
+                </Link>
+                .
+              </p>
+            </SectionReveal>
+
+            <div className="flex justify-center">
+              <ContactFormEmbed />
+            </div>
+
+            <p className="text-center text-[var(--color-text-muted)] text-sm mt-8">
+              We respect your privacy and will only use this information to respond to your inquiry.
+            </p>
+          </div>
+        </section>
+
+        {/* Prefer to talk first — same path, just a call instead of the form */}
+        <section id="pick-a-time" className="py-20 px-8 bg-white" aria-labelledby="call-heading">
+          <div className="max-w-3xl mx-auto">
+            <SectionReveal>
+              <h2 id="call-heading" className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">
+                Rather talk it through first?
+              </h2>
+              <p className="text-center text-[var(--color-text-body)] mb-8 text-lg">
+                Pick a time for a free 20 to 30 minute call. No pressure, just a clear answer on what you need.
+              </p>
+            </SectionReveal>
+            <SchedulerEmbed />
+          </div>
+        </section>
+
+        {/* Other ways to reach us */}
         <section className="py-20 px-8 bg-white">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <h2 className="text-3xl md:text-4xl text-center mb-16 text-[var(--color-text-dark)]">
-                Get in Touch
+                Or reach us directly
               </h2>
             </SectionReveal>
-            <div className="grid md:grid-cols-3 gap-6 mb-24">
+            <div className="grid md:grid-cols-3 gap-6 mb-0">
               {[
                 { icon: Phone, title: 'Call Us', desc: 'Speak directly with Alfonso or Niomi about your photography needs.', value: '209-380-3727', href: 'tel:2093803727' },
                 { icon: Mail, title: 'Email Us', desc: "Send us an email and we'll get back to you within 24 hours.", value: 'alfonso@rojasphotography.net', href: 'mailto:alfonso@rojasphotography.net' },
@@ -84,28 +129,6 @@ export default function ContactPage() {
                 </SectionReveal>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* Contact Form - 17hats */}
-        <section className="py-20 px-8 bg-[var(--color-bg-warm)]">
-          <div className="max-w-2xl mx-auto">
-            <SectionReveal>
-              <h2 className="text-3xl md:text-4xl text-center mb-4 text-[var(--color-text-dark)]">
-                Request a Quote
-              </h2>
-              <p className="text-center text-[var(--color-text-body)] mb-16 text-lg">
-                Tell us about your project and we&apos;ll provide a personalized quote within 24 hours.
-              </p>
-            </SectionReveal>
-
-            <div className="flex justify-center">
-              <ContactFormEmbed />
-            </div>
-
-            <p className="text-center text-[var(--color-text-muted)] text-sm mt-8">
-              We respect your privacy and will only use this information to respond to your inquiry.
-            </p>
           </div>
         </section>
 
@@ -138,11 +161,6 @@ export default function ContactPage() {
           </div>
         </section>
 
-        <CTASection
-          heading="Ready to Get Started?"
-          subheading="Don't wait—reach out today and let's discuss how we can help elevate your professional image."
-          dark={false}
-        />
       </main>
     </div>
     </>

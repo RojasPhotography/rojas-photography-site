@@ -96,13 +96,13 @@ export default function OnSitePhotographyPage() {
             href="/contact-quote"
             className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
           >
-            Request a Quote
+            Plan a team headshot day
           </Link>
           <Link
-            href="/discovery-call"
+            href="/work/kaiser-innovations-team-headshots"
             className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
           >
-            Schedule Discovery Call
+            See the Kaiser team day
           </Link>
         </div>
       </HeroSection>
@@ -226,7 +226,7 @@ export default function OnSitePhotographyPage() {
                 href="/contact-quote"
                 className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
               >
-                Request a Quote
+                Plan a team headshot day
               </Link>
           </SectionReveal>
         </ParallaxBand>
@@ -294,13 +294,13 @@ export default function OnSitePhotographyPage() {
                   href="/contact-quote"
                   className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Request a Quote
+                  Plan a team headshot day
                 </Link>
                 <Link
-                  href="/discovery-call"
+                  href="/work/kaiser-innovations-team-headshots"
                   className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Schedule Discovery Call
+                  See the Kaiser team day
                 </Link>
               </div>
             </SectionReveal>
@@ -341,7 +341,7 @@ export default function OnSitePhotographyPage() {
                   href="/contact-quote"
                   className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block"
                 >
-                  Get Your Quote
+                  Plan a team headshot day
                 </Link>
               </div>
             </SectionReveal>
@@ -417,7 +417,7 @@ export default function OnSitePhotographyPage() {
                 href="/contact-quote"
                 className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block"
               >
-                Request a Quote
+                Plan a team headshot day
               </Link>
             </SectionReveal>
           </div>
@@ -433,7 +433,7 @@ export default function OnSitePhotographyPage() {
           heading="Ready to Bring Professional Photography On-Site?"
           subheading="Let us handle your team's professional headshots and corporate photography at your location."
           primaryHref="/contact-quote"
-          primaryLabel="Request a Quote"
+          primaryLabel="Plan a team headshot day"
         />
       </main>
       </div>

@@ -143,13 +143,13 @@ export default function CorporateEventPhotographyCostPage() {
               href="/contact-quote"
               className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
             >
-              Get a Quote
+              Plan your event coverage
             </Link>
             <Link
-              href="/discovery-call"
+              href="/work/cla-annual-meeting-2026"
               className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
             >
-              Schedule Discovery Call
+              See the CLA case study
             </Link>
           </div>
         </HeroSection>
@@ -396,7 +396,7 @@ export default function CorporateEventPhotographyCostPage() {
                       href="/contact-quote"
                       className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block mt-4"
                     >
-                      Get a Quote for Your Event
+                      Plan your event coverage
                     </Link>
                   </div>
                 </SectionReveal>
@@ -450,7 +450,7 @@ export default function CorporateEventPhotographyCostPage() {
             <div className="max-w-3xl mx-auto text-center">
               <SectionReveal>
                 <h2 className="text-3xl md:text-4xl mb-4">
-                  Get a Quote for Your Event
+                  Plan your event coverage
                 </h2>
                 <p className="text-lg mb-8 text-white/90">
                   Tell us about your event — date, location, duration, and expected attendance — and we&apos;ll send you a personalized quote within 24 hours.
@@ -460,13 +460,13 @@ export default function CorporateEventPhotographyCostPage() {
                     href="/contact-quote"
                     className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                   >
-                    Request a Quote
+                    Plan your event coverage
                   </Link>
                   <Link
-                    href="/discovery-call"
+                    href="/work/cla-annual-meeting-2026"
                     className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                   >
-                    Schedule Discovery Call
+                    See the CLA case study
                   </Link>
                 </div>
               </SectionReveal>
@@ -483,7 +483,7 @@ export default function CorporateEventPhotographyCostPage() {
           <CTASection
             heading="Ready to Document Your Next Corporate Event?"
             subheading="Trusted by Comcast, Save Mart, California Lawyers Association, and organizations across California."
-            primaryLabel="Get a Quote"
+            primaryLabel="Plan your event coverage"
             primaryHref="/contact-quote"
             showContactInfo={false}
           />

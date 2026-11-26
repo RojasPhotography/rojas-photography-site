@@ -172,10 +172,10 @@ export default function ProfessionalHeadshotCostPage() {
               Book Your Session
             </Link>
             <Link
-              href="/discovery-call"
+              href="/on-site-photography"
               className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
             >
-              Schedule Discovery Call
+              Photographing a whole team?
             </Link>
           </div>
         </HeroSection>

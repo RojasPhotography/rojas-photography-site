@@ -98,13 +98,13 @@ export default function HeadshotBoothPage() {
             href="/contact-quote"
             className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
           >
-            Request a Quote
+            Plan your headshot booth
           </Link>
           <Link
-            href="/discovery-call"
+            href="/work/biltmore-los-angeles-headshots"
             className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
           >
-            Schedule Discovery Call
+            See the Biltmore booth day
           </Link>
         </div>
       </HeroSection>
@@ -214,7 +214,7 @@ export default function HeadshotBoothPage() {
                 href="/contact-quote"
                 className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
               >
-                Request a Quote
+                Plan your headshot booth
               </Link>
           </SectionReveal>
         </ParallaxBand>
@@ -277,7 +277,7 @@ export default function HeadshotBoothPage() {
                   href="/contact-quote"
                   className="btn-primary px-8 py-3 text-base font-semibold rounded-full inline-block"
                 >
-                  Get Your Quote
+                  Plan your headshot booth
                 </Link>
               </div>
             </SectionReveal>
@@ -348,13 +348,13 @@ export default function HeadshotBoothPage() {
                   href="/contact-quote"
                   className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Request a Quote
+                  Plan your headshot booth
                 </Link>
                 <Link
-                  href="/discovery-call"
+                  href="/work/biltmore-los-angeles-headshots"
                   className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Schedule Discovery Call
+                  See the Biltmore booth day
                 </Link>
               </div>
             </SectionReveal>
@@ -369,9 +369,9 @@ export default function HeadshotBoothPage() {
 
         <CTASection
           heading="Let&apos;s Talk About Your Event"
-          subheading="Schedule a free discovery call and we&apos;ll help you figure out exactly what you need for your event size and format."
+          subheading="Tell us your event size and format, and we&apos;ll help you figure out exactly what you need. You&apos;ll hear back within 24 hours."
           primaryHref="/contact-quote"
-          primaryLabel="Request a Quote"
+          primaryLabel="Plan your headshot booth"
         />
 
       </main>

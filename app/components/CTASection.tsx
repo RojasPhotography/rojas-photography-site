@@ -13,8 +13,8 @@ interface CTASectionProps {
 export default function CTASection({
   heading = 'Ready to Elevate Your Professional Image?',
   subheading = "Let's create professional portraits that build your credibility and advance your career.",
-  primaryHref = '/discovery-call',
-  primaryLabel = 'Book Now',
+  primaryHref = '/contact-quote',
+  primaryLabel = 'Plan it with us',
   showContactInfo = true,
   dark = true,
 }: CTASectionProps) {

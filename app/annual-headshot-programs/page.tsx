@@ -108,13 +108,13 @@ export default function AnnualHeadshotProgramsPage() {
               href="/contact-quote"
               className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
             >
-              Request Your Program Quote
+              Plan your annual program
             </Link>
             <Link
-              href="/discovery-call"
+              href="/work/kaiser-innovations-team-headshots"
               className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
             >
-              Schedule a Discovery Call
+              See the Kaiser team day
             </Link>
           </div>
         </HeroSection>
@@ -219,7 +219,7 @@ export default function AnnualHeadshotProgramsPage() {
                   href="/contact-quote"
                   className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Request Your Program Quote
+                  Plan your annual program
                 </Link>
               </SectionReveal>
             </div>
@@ -280,7 +280,7 @@ export default function AnnualHeadshotProgramsPage() {
               <SectionReveal>
                 <div className="text-center mt-10">
                   <Link href="/contact-quote" className="btn-primary px-9 py-4 text-lg font-semibold rounded-full inline-block">
-                    Request Your Program Quote
+                    Plan your annual program
                   </Link>
                 </div>
               </SectionReveal>
@@ -397,13 +397,13 @@ export default function AnnualHeadshotProgramsPage() {
                   href="/contact-quote"
                   className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Request Your Program Quote
+                  Plan your annual program
                 </Link>
                 <Link
-                  href="/discovery-call"
+                  href="/work/kaiser-innovations-team-headshots"
                   className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Schedule a Discovery Call
+                  See the Kaiser team day
                 </Link>
               </div>
             </SectionReveal>
@@ -417,9 +417,9 @@ export default function AnnualHeadshotProgramsPage() {
 
           <CTASection
             heading="Let&rsquo;s Build Your Program"
-            subheading="Schedule a free discovery call and we&rsquo;ll map out exactly what an annual program looks like for your team size and hiring pace."
+            subheading="Tell us your team size and hiring pace, and we&rsquo;ll map out exactly what an annual program looks like. You&rsquo;ll hear back within 24 hours."
             primaryHref="/contact-quote"
-            primaryLabel="Request Your Program Quote"
+            primaryLabel="Plan your annual program"
           />
 
         </main>

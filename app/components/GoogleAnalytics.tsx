@@ -54,6 +54,18 @@ export default function GoogleAnalytics({ measurementId }: { measurementId: stri
             }
           });
 
+          // Track studio booking buttons (Book a session / Book a studio session)
+          document.addEventListener('click', function(e) {
+            const target = e.target.closest('a[href*="booking-heading"]');
+            if (target) {
+              gtag('event', 'studio_booking_click', {
+                event_category: 'conversion',
+                event_label: 'Studio Booking Button',
+                value: 5
+              });
+            }
+          });
+
           // Track Quote Request buttons
           document.addEventListener('click', function(e) {
             const target = e.target.closest('a[href*="contact-quote"]');

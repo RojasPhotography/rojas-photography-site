@@ -105,10 +105,10 @@ export default function PremiumHeadshotsPage() {
                 Book Your Session
               </a>
               <Link
-                href="/discovery-call"
+                href="/on-site-photography"
                 className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
               >
-                Schedule Discovery Call
+                Photographing a whole team?
               </Link>
             </div>
           </div>
@@ -412,10 +412,10 @@ export default function PremiumHeadshotsPage() {
                   Book Your Session
                 </a>
                 <Link
-                  href="/discovery-call"
+                  href="/on-site-photography"
                   className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
                 >
-                  Schedule Discovery Call
+                  Photographing a whole team?
                 </Link>
               </div>
             </SectionReveal>
@@ -508,9 +508,10 @@ export default function PremiumHeadshotsPage() {
         />
 
         <CTASection
-          heading="Want to Discuss Your Project First?"
-          subheading="Schedule a free discovery call to discuss your professional photography needs."
-          primaryLabel="Book Your Discovery Call"
+          heading="Ready for a Headshot That Looks Like You?"
+          subheading="Studio sessions book online in minutes. Questions first? Call us and talk with Alfonso or Niomi."
+          primaryHref="/premium-headshots#booking-heading"
+          primaryLabel="Book a studio session"
           showContactInfo={false}
         />
       </main>
