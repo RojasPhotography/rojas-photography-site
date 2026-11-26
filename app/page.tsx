@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { ReactNode } from 'react';
 import { Briefcase, Repeat, Aperture } from 'lucide-react';
 import SectionReveal from './components/SectionReveal';
 import LogoMarquee from './components/LogoMarquee';
@@ -60,6 +61,116 @@ const otherServices = [
     name: 'Commercial Photography',
     icon: Briefcase,
     desc: 'Brand imagery for your website and marketing — products, spaces, and people.',
+  },
+];
+
+// The homepage's service lanes: each one starts from the client's situation, then what we do, then the result.
+const moments: {
+  href: string;
+  img: string;
+  alt: string;
+  pos: string;
+  eyebrow: string;
+  situation: string;
+  body: ReactNode;
+  results: string[];
+  links: { href: string; label: string }[];
+  note?: ReactNode;
+}[] = [
+  {
+    href: '/on-site-photography',
+    img: '/images/kaiser-bts-headshots.jpg',
+    alt: 'On-location corporate team headshot day at a Kaiser office',
+    pos: '50% 35%',
+    eyebrow: 'Team Headshot Days · We Come to You',
+    situation: 'When your team page looks like a patchwork',
+    body: (
+      <>
+        We bring the complete studio, with lighting, backdrop and direction, to your office, firm or facility anywhere in
+        California. From a handful of partners to hundreds of employees, everyone is coached and photographed without
+        leaving the building. Hiring all year? An{' '}
+        <Link href="/annual-headshot-programs" className="text-[var(--color-primary)] hover:underline">annual headshot program</Link>{' '}
+        keeps the whole roster current.
+      </>
+    ),
+    results: [
+      'One consistent, on-brand look across the entire team',
+      'Galleries delivered the same day',
+      'Multiple stations or a multi-day schedule for large teams and shift-based workplaces',
+    ],
+    links: [
+      { href: '/on-site-photography', label: 'Plan a team headshot day' },
+      { href: '/work/kaiser-innovations-team-headshots', label: 'See the Kaiser case study' },
+    ],
+  },
+  {
+    href: '/event-photography',
+    img: '/images/work/cla-annual-meeting-2026/cla-annual-meeting-panel-stage-audience.jpg',
+    alt: 'Corporate conference photography — panel on stage at the California Lawyers Association Annual Meeting in San Diego',
+    pos: '50% 50%',
+    eyebrow: 'Events & Conferences · Statewide',
+    situation: 'When your conference or big night is coming up',
+    body: (
+      <>
+        Conferences, galas, award nights and multi-day annual meetings, led by Alfonso and Niomi, with our team covering
+        every room. Add a{' '}
+        <Link href="/headshot-booth" className="text-[var(--color-primary)] hover:underline">headshot booth</Link>{' '}
+        and your attendees leave with a photo they&apos;ll actually use.
+      </>
+    ),
+    results: [
+      'Keynotes and candids covered at the same time',
+      'Photos delivered live via SpotMyPhotos while your event is still running',
+      'Trusted by the California Lawyers Association, every year',
+    ],
+    links: [
+      { href: '/event-photography', label: 'Plan your event coverage' },
+      { href: '/work/cla-annual-meeting-2026', label: 'See the CLA case study' },
+    ],
+  },
+  {
+    href: '/video',
+    img: '/images/BBSI-Corp-Video.jpg',
+    alt: 'Corporate video production behind the scenes for BBSI — Rojas Photography video services',
+    pos: '50% 50%',
+    eyebrow: 'Corporate Video & Drone',
+    situation: 'When people need to feel who you are',
+    body: (
+      <>
+        Brand films, client testimonials, event recaps and social-ready reels, led by Alfonso and Niomi, the same people
+        behind your photography, with FAA-certified drone coverage when the story needs altitude.
+      </>
+    ),
+    results: [
+      'Your photos and video come from one team, so everything looks like the same company',
+      'Short-form cuts for LinkedIn and social from the same shoot',
+    ],
+    links: [{ href: '/video', label: 'Explore video production' }],
+  },
+  {
+    href: '/premium-headshots',
+    img: '/images/headshots/headshot-attorney-02.jpg',
+    alt: 'Professional studio headshot of an attorney at the Rojas Photography studio in Modesto',
+    pos: '50% 16%',
+    eyebrow: 'Signature Executive Headshots · Modesto Studio',
+    situation: 'When you’re the face of the company',
+    body: (
+      <>
+        For executives, attorneys and personal brands who need one photograph that carries their name. We guide every
+        pose and expression, with unlimited wardrobe changes and hand-finished retouching.
+      </>
+    ),
+    results: [
+      'Choose your favorites with us before you leave',
+      'Edited finals in your inbox within 48 hours',
+    ],
+    links: [{ href: '/premium-headshots#booking-heading', label: 'Book a studio session' }],
+    note: (
+      <>
+        Sessions are $150, plus $150 per finished image you choose. No minimum.{' '}
+        <Link href="/professional-headshot-cost" className="text-[var(--color-primary)] underline">See how headshot pricing works</Link>.
+      </>
+    ),
   },
 ];
 
@@ -248,7 +359,7 @@ export default function HomePage() {
                 Meet Alfonso &amp; Niomi and Our Team
               </h2>
               <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
-                You've put years into building something real — a team, a reputation, a standard of work you're proud of. Then someone looks your company up — a headshot, a team page, last year's event — and what they find doesn't come close to reflecting any of it. That gap is frustrating. We get it.
+                We know how frustrating it is when your company looks nothing like the work behind it. Closing that gap is the whole reason we do this.
               </p>
               <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
                 We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We've helped 500+ executives and their teams — from <Link href="/premium-headshots" className="text-[var(--color-primary)] hover:underline">executive headshots</Link> to <Link href="/on-site-photography" className="text-[var(--color-primary)] hover:underline">on-site team photography</Link>, <Link href="/commercial" className="text-[var(--color-primary)] hover:underline">commercial imagery</Link>, and <Link href="/video" className="text-[var(--color-primary)] hover:underline">video production</Link> — create visuals they're genuinely proud to put in front of clients. Not as a vendor. As partners who care about getting it right.
@@ -296,180 +407,72 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Two lanes — Studio vs On-Location headshots */}
-        <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]">
+        {/* SB7: one problem, many moments — each service framed by the client's situation */}
+        <section className="py-20 md:py-28 px-8 bg-[var(--color-bg-warm)]" aria-labelledby="moments-heading">
           <div className="max-w-6xl mx-auto">
             <SectionReveal>
               <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
-                  How We Help
+                <h2 id="moments-heading" className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
+                  What Are You Getting Ready For?
                 </h2>
                 <p className="text-[var(--color-text-muted)] text-lg max-w-2xl mx-auto">
-                  Professional headshots in Modesto — in our studio or at your office — plus event, conference, and video coverage across California. Every job is led by Alfonso and Niomi, with our team when the day calls for it.
+                  Team headshot days at your office, event and conference coverage, corporate video, and executive headshots in our Modesto studio, for companies across California. Every job is led by Alfonso and Niomi, with our team when the day calls for it.
                 </p>
               </div>
             </SectionReveal>
 
-            {/* Lane 1 — Studio */}
-            <SectionReveal>
-              <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mb-16 md:mb-24">
-                <Link href="/premium-headshots" className="block group rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5 hover:shadow-2xl transition-all">
-                  <Image
-                    src="/images/headshots/headshot-attorney-02.jpg"
-                    alt="Professional studio headshot of an attorney at the Rojas Photography studio in Modesto"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    style={{ objectPosition: '50% 16%' }}
-                  />
-                </Link>
-                <div>
-                  <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.2em] uppercase mb-3">
-                    In Our Modesto Studio
-                  </p>
-                  <h3 className="text-2xl md:text-4xl text-[var(--color-text-dark)] mb-5">
-                    Headshots for One
-                  </h3>
-                  <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
-                    For executives, attorneys, and personal brands who need one photograph that carries their name. We guide you through every pose and expression — unlimited wardrobe changes, personal direction from us, and hand-finished retouching.
-                  </p>
-                  <p className="text-[var(--color-text-body)] leading-relaxed mb-8">
-                    We review every image together in the studio — you choose and purchase your favorites before you leave, and the edited finals arrive in your inbox within 48 hours.
-                  </p>
+            {moments.map((m, i) => (
+              <SectionReveal key={m.href}>
+                <div className={`grid md:grid-cols-2 gap-10 md:gap-14 items-center ${i > 0 ? 'mt-16 md:mt-24' : ''}`}>
                   <Link
-                    href="/premium-headshots#booking-heading"
-                    className="btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-block"
+                    href={m.href}
+                    className={`block group rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5 hover:shadow-2xl transition-all ${i % 2 ? 'md:order-2' : ''}`}
                   >
-                    Book a Studio Session
+                    <Image
+                      src={m.img}
+                      alt={m.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      style={{ objectPosition: m.pos }}
+                    />
                   </Link>
-                  <p className="text-sm text-[var(--color-text-muted)] mt-4">
-                    Sessions are $150, plus $150 per finished image you choose. No minimum.{' '}
-                    <Link href="/professional-headshot-cost" className="text-[var(--color-primary)] underline">See how headshot pricing works</Link>.
-                  </p>
-                </div>
-              </div>
-            </SectionReveal>
-
-            {/* Lane 2 — On-location */}
-            <SectionReveal>
-              <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
-                <div className="md:order-1 order-2">
-                  <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.2em] uppercase mb-3">
-                    We Come to You
-                  </p>
-                  <h3 className="text-2xl md:text-4xl text-[var(--color-text-dark)] mb-5">
-                    Headshots for Teams
-                  </h3>
-                  <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
-                    We bring the complete studio — lighting, backdrop, and direction — to your office, firm, or facility anywhere in the Central Valley. From a handful of partners to hundreds of employees — everyone photographed without leaving the building.
-                  </p>
-                  <ul className="space-y-3 text-[var(--color-text-body)] mb-8">
-                    {['Full studio setup at your office', 'A consistent, on-brand look across the entire team', 'Galleries delivered the same day', 'Multiple headshot stations — or a multi-day schedule — for large teams and shift-based workplaces'].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="text-[var(--color-primary)] font-bold mt-0.5" aria-hidden="true">✓</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href="/on-site-photography"
-                    className="btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-block"
-                  >
-                    Plan a Headshot Day for Your Team
-                  </Link>
-                </div>
-                <Link href="/on-site-photography" className="md:order-2 order-1 block group rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5 hover:shadow-2xl transition-all">
-                  <Image
-                    src="/images/kaiser-bts-headshots.jpg"
-                    alt="On-location corporate team headshot day at a Kaiser office in the Central Valley"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    style={{ objectPosition: '50% 35%' }}
-                  />
-                </Link>
-              </div>
-            </SectionReveal>
-
-            {/* Lane 3 — Events & Conferences */}
-            <SectionReveal>
-              <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mt-16 md:mt-24">
-                <Link href="/event-photography" className="block group rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5 hover:shadow-2xl transition-all">
-                  <Image
-                    src="/images/work/cla-annual-meeting-2026/cla-annual-meeting-panel-stage-audience.jpg"
-                    alt="Corporate conference photography — panel on stage at the California Lawyers Association Annual Meeting in San Diego"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </Link>
-                <div>
-                  <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.2em] uppercase mb-3">
-                    Statewide — Modesto to San Diego
-                  </p>
-                  <h3 className="text-2xl md:text-4xl text-[var(--color-text-dark)] mb-5">
-                    Events &amp; Conferences
-                  </h3>
-                  <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
-                    Conferences, galas, award nights, and multi-day annual meetings — covered wall to wall by
-                    Alfonso, Niomi and our team, with live photo delivery while your event is still running and a{' '}
-                    <Link href="/headshot-booth" className="text-[var(--color-primary)] hover:underline">headshot booth</Link>{' '}
-                    your attendees will line up for.
-                  </p>
-                  <ul className="space-y-3 text-[var(--color-text-body)] mb-8">
-                    {['Keynote and candids covered at the same time', 'Live delivery via SpotMyPhotos during the event', 'Trusted by the California Lawyers Association, every year'].map((item) => (
-                      <li key={item} className="flex items-start gap-3">
-                        <span className="text-[var(--color-primary)] font-bold mt-0.5" aria-hidden="true">✓</span>
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-                    <Link
-                      href="/event-photography"
-                      className="btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-block"
-                    >
-                      Plan Your Event Coverage
-                    </Link>
-                    <Link href="/work/cla-annual-meeting-2026" className="text-[var(--color-primary)] font-semibold hover:underline">
-                      See the CLA case study →
-                    </Link>
+                  <div className={i % 2 ? 'md:order-1' : ''}>
+                    <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.2em] uppercase mb-3">{m.eyebrow}</p>
+                    <h3 className="text-2xl md:text-4xl text-[var(--color-text-dark)] mb-5">{m.situation}</h3>
+                    <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">{m.body}</p>
+                    <ul className="space-y-3 text-[var(--color-text-body)] mb-8">
+                      {m.results.map((r) => (
+                        <li key={r} className="flex items-start gap-3">
+                          <span className="text-[var(--color-primary)] font-bold mt-0.5" aria-hidden="true">✓</span>
+                          <span>{r}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="flex flex-col sm:flex-row gap-x-8 gap-y-3">
+                      {m.links.map((l) => (
+                        <Link key={l.href} href={l.href} className="text-[var(--color-primary)] text-lg font-semibold hover:underline">
+                          {l.label} →
+                        </Link>
+                      ))}
+                    </div>
+                    {m.note && <p className="text-sm text-[var(--color-text-muted)] mt-4">{m.note}</p>}
                   </div>
                 </div>
-              </div>
-            </SectionReveal>
+              </SectionReveal>
+            ))}
 
-            {/* Lane 4 — Video */}
             <SectionReveal>
-              <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center mt-16 md:mt-24">
-                <div className="md:order-1 order-2">
-                  <p className="text-[var(--color-primary)] font-semibold text-xs tracking-[0.2em] uppercase mb-3">
-                    Corporate Video &amp; Drone
-                  </p>
-                  <h3 className="text-2xl md:text-4xl text-[var(--color-text-dark)] mb-5">
-                    Video That Works as Hard as You Do
-                  </h3>
-                  <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-6">
-                    Brand films, client testimonials, event recaps, and social-ready short-form — produced by the
-                    same two-person team that shoots your photography, with FAA-certified drone coverage when the
-                    story needs altitude.
-                  </p>
-                  <Link
-                    href="/video"
-                    className="btn-primary px-8 py-4 text-lg font-semibold rounded-full inline-block"
-                  >
-                    Explore Video Production
-                  </Link>
-                </div>
-                <Link href="/video" className="md:order-2 order-1 block group rounded-2xl overflow-hidden relative aspect-[4/3] shadow-xl ring-1 ring-black/5 hover:shadow-2xl transition-all">
-                  <Image
-                    src="/images/BBSI-Corp-Video.jpg"
-                    alt="Corporate video production behind the scenes for BBSI — Rojas Photography video services"
-                    fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+              <div className="text-center mt-20">
+                <Link
+                  href="/contact-quote"
+                  className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block"
+                >
+                  Get Started
                 </Link>
+                <p className="text-[var(--color-text-muted)] mt-4">
+                  Not sure which one fits? Tell us what&apos;s coming up, and we&apos;ll reply within 24 hours.
+                </p>
               </div>
             </SectionReveal>
           </div>
@@ -560,7 +563,7 @@ export default function HomePage() {
             <SectionReveal>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl text-[var(--color-text-dark)] mb-4">
-                  Central Valley Professionals, In Their Own Words
+                  Our Clients, In Their Own Words
                 </h2>
                 <p className="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-8">
                   A headshot that finally looks like you. A team photo that shows your culture. That&apos;s what working together looks like — and nearly half of our 70 five-star reviews mention the same thing: how comfortable the session felt, often from people who dread being photographed.
@@ -578,9 +581,9 @@ export default function HomePage() {
               </SectionReveal>
               <SectionReveal>
                 <TestimonialCard
-                  name="Joyce Ulrich"
-                  role="Entrepreneur, Modesto"
-                  quote="Alfonso and Niomi create a comfortable environment that puts you at ease immediately. The professional headshots turned out beautifully—exactly what I needed for my business."
+                  name="Sandra Mello"
+                  role="Admin Specialist, Kaiser Business Campus, Pleasanton"
+                  quote="Alfonso and Niomi were amazing! They were complete pros, putting all of us at ease and getting some very good-looking photos - in real time!"
                 />
               </SectionReveal>
               <SectionReveal>
@@ -605,28 +608,27 @@ export default function HomePage() {
         <ParallaxBand image="/images/alfonso-niomi-band.jpg" overlayOpacity={78} size="lg" position="center 30%">
           <SectionReveal>
             <h2 className="text-3xl md:text-4xl mb-4 text-white">
-              Ready to Look as Good as You Are?
+              Picture Your Company at Its Best
             </h2>
             <p className="text-lg mb-8 text-white/90">
-              Studio sessions book online in minutes. Team days, events, conferences, and video start with one
-              quick quote. Either way, you&apos;ll know exactly what happens next within 24 hours — and every job
-              is led by Alfonso and Niomi, with our team when the day calls for it.
+              A team page that looks like one team. A conference documented the way it felt. A headshot you&apos;re
+              proud to send. Tell us what&apos;s coming up, and you&apos;ll have a clear quote within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/premium-headshots#booking-heading"
+                href="/contact-quote"
                 className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
+              >
+                Get Started
+              </Link>
+              <Link
+                href="/premium-headshots#booking-heading"
+                className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
               >
                 Book a Studio Session
               </Link>
-              <Link
-                href="/contact-quote"
-                className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
-              >
-                Get a Custom Quote
-              </Link>
             </div>
-            <p className="text-white/60 text-sm mt-5">In our Modesto studio · pick your favorites before you leave · edited images in your inbox within 48 hours</p>
+            <p className="text-white/60 text-sm mt-5">Led by Alfonso and Niomi, with our team when the day calls for it</p>
           </SectionReveal>
         </ParallaxBand>
 
@@ -638,9 +640,10 @@ export default function HomePage() {
 
         {/* CTA + Contact */}
         <CTASection
-          primaryHref="/premium-headshots#booking-heading"
-          primaryLabel="Book a Studio Session"
-          subheading="Studio sessions book online in minutes. For team days, events, conferences, commercial, and video, request a quote — one clear answer within 24 hours."
+          heading="Tell Us What’s Coming Up"
+          primaryHref="/contact-quote"
+          primaryLabel="Get Started"
+          subheading="Team days, events, conferences, video and studio sessions all start here. One clear answer within 24 hours."
         />
       </main>
       </div>
