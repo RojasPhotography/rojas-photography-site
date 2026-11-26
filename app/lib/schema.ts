@@ -55,6 +55,7 @@ export function generateLocalBusinessSchema() {
     memberOf: [
       { '@type': 'Organization', name: 'Modesto Chamber of Commerce', url: 'https://www.modchamber.org' },
       { '@type': 'Organization', name: 'Professional Photographers of America', url: 'https://www.ppa.com' },
+      { '@type': 'Organization', name: 'SCORE', url: 'https://www.score.org' },
     ],
     founder: [
       {
