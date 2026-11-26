@@ -6,6 +6,7 @@ type Freq = 'weekly' | 'monthly';
 
 const pages: Array<[path: string, lastModified: string, changeFrequency: Freq, priority: number]> = [
   ['', '2026-11-14', 'weekly', 1],
+  ['/headshots', '2026-11-26', 'weekly', 0.9],
   ['/premium-headshots', '2026-10-31', 'weekly', 0.9],
   ['/annual-headshot-programs', '2026-10-31', 'monthly', 0.9],
   ['/on-site-photography', '2026-10-31', 'weekly', 0.9],
