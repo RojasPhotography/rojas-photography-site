@@ -104,7 +104,7 @@ export default function HeadshotsPage() {
                   className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   style={{ objectPosition: d.pos }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(15,46,30,0.25)] to-[rgba(15,46,30,0.94)]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[rgba(15,46,30,0.45)] to-[rgba(15,46,30,0.96)]" />
                 <div className="absolute inset-x-0 bottom-0 p-7 md:p-9 text-white">
                   <p className="text-[var(--color-primary-light)] text-xs font-semibold tracking-[0.2em] uppercase mb-3">{d.eyebrow}</p>
                   <h2 className="text-3xl md:text-4xl mb-3 text-white">{d.title}</h2>
