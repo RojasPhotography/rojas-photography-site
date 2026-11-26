@@ -9,6 +9,7 @@ import ParallaxBand from './components/ParallaxBand';
 import TestimonialCard from './components/TestimonialCard';
 import GoogleReviewsBadge from './components/GoogleReviewsBadge';
 import CTASection from './components/CTASection';
+import HeroPicker from './components/HeroPicker';
 import SchemaScript from './components/SchemaScript';
 import { generateLocalBusinessSchema, generateWebSiteSchema, generatePersonSchema, generateFAQSchema } from './lib/schema';
 import FAQSection from './components/FAQSection';
@@ -47,18 +48,21 @@ const otherServices = [
   {
     href: '/headshot-booth',
     name: 'Headshot Booth',
+    cta: 'See the headshot booth',
     icon: Aperture,
     desc: 'A flat-rate headshot station for conferences, expos, and company events — unlimited attendees, same-day gallery.',
   },
   {
     href: '/annual-headshot-programs',
     name: 'Annual Headshot Programs',
+    cta: 'See annual programs',
     icon: Repeat,
     desc: 'Recurring team days plus pay-as-you-go new-hire sessions, so your whole roster stays current.',
   },
   {
     href: '/commercial',
     name: 'Commercial Photography',
+    cta: 'See commercial photography',
     icon: Briefcase,
     desc: 'Brand imagery for your website and marketing — products, spaces, and people.',
   },
@@ -239,62 +243,19 @@ export default function HomePage() {
       <SchemaScript schema={generateFAQSchema(homeFaqs)} />
       <div className="min-h-screen bg-white">
       <main id="main-content">
-      {/* Hero — full-bleed portrait, dual CTA (studio vs on-location) */}
+      {/* Hero — "I need…" picker: Headshots · Events · Video, matching the menu */}
       <section
         className="relative w-full overflow-hidden pt-20 lg:pt-28"
         style={{ background: 'linear-gradient(135deg, #0F2E1E 0%, #1F6B4D 130%)' }}
         aria-label="Corporate photography and video for California companies"
       >
-        <div className="max-w-7xl mx-auto px-8 py-14 md:py-20 grid lg:grid-cols-2 gap-14 items-center text-white">
-          <div>
-            <h1 className="hero-rise mb-6" style={{ animationDelay: '0.1s' }}>
-              <span className="block text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase">
-                Corporate Photography &amp; Video · Modesto, CA
-              </span>{' '}
-              <span className="block text-5xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-[-0.01em]">
-                Look as good as your work.
-              </span>
-            </h1>
-            <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.3s' }}>
-              Headshots, team days, events and video for companies across California.
-            </p>
-            <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
-              <Link
-                href="/contact-quote"
-                className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
-              >
-                Get Started
-              </Link>
-              <Link
-                href="/work"
-                className="border-2 border-white/40 text-white hover:bg-white/10 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block text-center"
-              >
-                See Our Work →
-              </Link>
-            </div>
-            <div className="hero-rise mt-8 flex flex-wrap items-center gap-x-6 gap-y-3" style={{ animationDelay: '0.6s' }}>
-              <GoogleReviewsBadge rating="5.0" count={70} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
-              <span className="text-xs md:text-sm tracking-[0.15em] uppercase text-white/70">
-                500+ executives <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span> Led by Alfonso &amp; Niomi
-              </span>
-            </div>
-          </div>
-          <div className="grid grid-cols-3 gap-3 md:gap-4">
-            {[
-              { src: '/images/headshots/headshot-executive-ceo.jpg', alt: 'Executive headshot by Rojas Photography — woman in red on dark backdrop', pos: '48% 50%' },
-              { src: '/images/events/conferences/cla-annual-meeting-panelists.jpg', alt: 'Conference photography — panelists on stage at the California Lawyers Association Annual Meeting', pos: '50% 50%' },
-              { src: '/images/headshots/headshot-finance-ceo.jpg', alt: 'Corporate headshot — finance executive in dark suit', pos: '50% 50%' },
-              { src: '/images/kaiser-bts-headshots.jpg', alt: 'On-site headshot booth in action at a Kaiser corporate event', pos: '50% 50%' },
-              { src: '/images/headshots/headshot-comcast-executive.jpg', alt: 'Corporate executive headshot — woman in white blazer', pos: '57% 50%' },
-              { src: '/images/events/gallery/wfg-awards-red-carpet.jpg', alt: 'Corporate event photography — red carpet at the WFG awards gala', pos: '50% 50%' },
-              { src: '/images/headshots/headshot-attorney-11.jpg', alt: 'Attorney headshot — smiling lawyer in yellow blazer on dark backdrop', pos: '75% 50%' },
-              { src: '/images/BBSI-Corp-Video.jpg', alt: 'Corporate video production for BBSI — behind the scenes', pos: '50% 50%' },
-              { src: '/images/headshots/headshot-healthcare-executive-01.jpg', alt: 'Healthcare executive headshot — woman in grey blazer', pos: '26% 50%' },
-            ].map((img, i) => (
-              <div key={img.src} className="hero-rise relative aspect-[4/5] rounded-xl overflow-hidden" style={{ animationDelay: `${0.15 + i * 0.06}s` }}>
-                <Image src={img.src} alt={img.alt} fill priority={i < 3} sizes="(max-width: 1024px) 33vw, 16vw" className="object-cover" style={{ objectPosition: img.pos }} />
-              </div>
-            ))}
+        <div className="max-w-7xl mx-auto px-8 py-14 md:py-20">
+          <HeroPicker />
+          <div className="hero-rise mt-10 flex flex-wrap items-center gap-x-6 gap-y-3" style={{ animationDelay: '0.6s' }}>
+            <GoogleReviewsBadge rating="5.0" count={70} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
+            <span className="text-xs md:text-sm tracking-[0.15em] uppercase text-white/70">
+              500+ executives <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span> Led by Alfonso &amp; Niomi
+            </span>
           </div>
         </div>
       </section>
@@ -371,7 +332,7 @@ export default function HomePage() {
                 href="/about-rojas-photography"
                 className="btn-outline px-8 py-3 font-semibold rounded-full inline-block"
               >
-                More About Us
+                Meet Alfonso and Niomi
               </Link>
             </div>
           </SectionReveal>
@@ -468,7 +429,7 @@ export default function HomePage() {
                   href="/contact-quote"
                   className="btn-primary px-10 py-4 text-lg font-semibold rounded-full inline-block"
                 >
-                  Get Started
+                  Plan it with us
                 </Link>
                 <p className="text-[var(--color-text-muted)] mt-4">
                   Not sure which one fits? Tell us what&apos;s coming up, and we&apos;ll reply within 24 hours.
@@ -526,8 +487,7 @@ export default function HomePage() {
                 <SectionReveal key={s.href}>
                   <Link
                     href={s.href}
-                    aria-label={`Learn more about ${s.name}`}
-                    className="group relative flex h-[280px] flex-col justify-between rounded-xl p-7 transition-all hover:shadow-2xl hover:-translate-y-1"
+                                        className="group relative flex h-[280px] flex-col justify-between rounded-xl p-7 transition-all hover:shadow-2xl hover:-translate-y-1"
                     style={{
                       background:
                         'radial-gradient(120% 80% at 85% -10%, rgba(255,255,255,.14), transparent 60%), linear-gradient(160deg, var(--color-primary) 0%, var(--color-primary-dark) 100%)',
@@ -540,7 +500,7 @@ export default function HomePage() {
                       <h3 className="text-xl text-white mb-2">{s.name}</h3>
                       <p className="text-white/80 text-sm leading-snug mb-4">{s.desc}</p>
                       <span className="text-[var(--color-primary-light)] text-sm font-semibold group-hover:underline">
-                        Learn More →
+                        {s.cta} →
                       </span>
                     </div>
                   </Link>
@@ -551,7 +511,7 @@ export default function HomePage() {
               <p className="mt-12 text-center text-[var(--color-text-body)]">
                 Planning a conference or annual meeting? See our <Link href="/conference-photography" className="text-[var(--color-primary)] font-semibold hover:underline">conference photography across the Central Valley, Sacramento and statewide</Link>.
                 <br className="hidden md:block" />
-                Larger or custom project? <Link href="/discovery-call" className="text-[var(--color-primary)] font-semibold hover:underline">Book a free, zero-pressure discovery call →</Link>
+                Larger or custom project? <Link href="/contact-quote" className="text-[var(--color-primary)] font-semibold hover:underline">Plan it with us →</Link>
               </p>
             </SectionReveal>
           </div>
@@ -619,7 +579,7 @@ export default function HomePage() {
                 href="/contact-quote"
                 className="bg-white text-[var(--color-primary-dark)] hover:bg-gray-100 px-10 py-4 text-lg font-semibold rounded-full transition-all inline-block"
               >
-                Get Started
+                Plan it with us
               </Link>
               <Link
                 href="/premium-headshots#booking-heading"
@@ -642,8 +602,8 @@ export default function HomePage() {
         <CTASection
           heading="Tell Us What’s Coming Up"
           primaryHref="/contact-quote"
-          primaryLabel="Get Started"
-          subheading="Team days, events, conferences, video and studio sessions all start here. One clear answer within 24 hours."
+          primaryLabel="Plan it with us"
+          subheading="Team days, events, conferences and video all start here. Studio sessions book online. One clear answer within 24 hours."
         />
       </main>
       </div>
