@@ -260,11 +260,11 @@ export default function Footer() {
           <h4 className="text-white text-sm mb-5 tracking-wider text-center">MEMBER &amp; CERTIFIED</h4>
           <ul className="flex flex-wrap items-center justify-center gap-4">
             {[
-              { src: '/images/badges/modesto-chamber-of-commerce.png', alt: 'Member of the Modesto Chamber of Commerce', w: 319, h: 159, cls: 'h-10' },
-              { src: '/images/badges/ppa-member.png', alt: 'Proud member of Professional Photographers of America (PPA)', w: 323, h: 160, cls: 'h-10' },
-              { src: '/images/badges/faa-part-107-certified-remote-pilot.png', alt: 'FAA Part 107 certified remote pilot', w: 200, h: 200, cls: 'h-14' },
+              { src: '/images/badges/modesto-chamber-of-commerce.png', alt: 'Member of the Modesto Chamber of Commerce', w: 319, h: 159, cls: 'h-14' },
+              { src: '/images/badges/ppa-member.png', alt: 'Proud member of Professional Photographers of America (PPA)', w: 323, h: 160, cls: 'h-14' },
+              { src: '/images/badges/faa-part-107-certified-remote-pilot.png', alt: 'FAA Part 107 certified remote pilot', w: 200, h: 200, cls: 'h-20' },
             ].map((b) => (
-              <li key={b.src} className="bg-white rounded-xl px-4 py-2.5 flex items-center">
+              <li key={b.src} className="bg-white rounded-xl px-5 py-3 flex items-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={b.src} alt={b.alt} width={b.w} height={b.h} loading="lazy" className={`${b.cls} w-auto`} />
               </li>
