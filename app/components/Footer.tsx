@@ -260,9 +260,9 @@ export default function Footer() {
           <h4 className="text-white text-sm mb-5 tracking-wider text-center">MEMBER &amp; CERTIFIED</h4>
           <ul className="flex flex-wrap items-center justify-center gap-5">
             {[
-              { src: '/images/badges/modesto-chamber-of-commerce.png', alt: 'Member of the Modesto Chamber of Commerce', w: 319, h: 159, cls: 'h-20' },
-              { src: '/images/badges/ppa-member.png', alt: 'Proud member of Professional Photographers of America (PPA)', w: 323, h: 160, cls: 'h-20' },
-              { src: '/images/badges/faa-part-107-certified-remote-pilot.png', alt: 'FAA Part 107 certified remote pilot', w: 240, h: 240, cls: 'h-28' },
+              { src: '/images/badges/ppa-member.png', alt: 'Proud member of Professional Photographers of America (PPA)', w: 404, h: 200, cls: 'h-24' },
+              { src: '/images/badges/faa-part-107-certified-remote-pilot.png', alt: 'FAA Part 107 certified remote pilot', w: 280, h: 280, cls: 'h-32' },
+              { src: '/images/badges/modesto-chamber-of-commerce.png', alt: 'Member of the Modesto Chamber of Commerce', w: 319, h: 159, cls: 'h-24' },
             ].map((b) => (
               <li key={b.src} className="bg-white rounded-xl px-6 py-4 flex items-center">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
