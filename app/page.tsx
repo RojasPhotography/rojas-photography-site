@@ -136,16 +136,16 @@ export default function HomePage() {
       >
         <div className="max-w-7xl mx-auto px-8 py-14 md:py-20 grid lg:grid-cols-2 gap-14 items-center text-white">
           <div>
-            <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase" style={{ animationDelay: '0.1s' }}>
-              Headshots · Events &amp; Conferences · Video · Modesto &amp; All of California
-            </p>
-            <h1 className="hero-rise text-4xl sm:text-5xl lg:text-6xl mb-6 leading-[1.05] tracking-[-0.01em]" style={{ animationDelay: '0.22s' }}>
-              Corporate photography &amp; video that makes your company look as good as it is.
+            <h1 className="hero-rise mb-6" style={{ animationDelay: '0.1s' }}>
+              <span className="block text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase">
+                Corporate Photography &amp; Video · Modesto &amp; All of California
+              </span>
+              <span className="block text-5xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-[-0.01em]">
+                Look as good as your work.
+              </span>
             </h1>
-            <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.38s' }}>
-              When clients, recruits and partners look you up, what they see should match what
-              you&apos;ve built. Executive headshots, team headshot days, events and video, from our
-              Modesto studio to Los Angeles and San Diego.
+            <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.3s' }}>
+              Headshots, team days, events and video for companies across California.
             </p>
             <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
               <Link
@@ -161,13 +161,11 @@ export default function HomePage() {
                 See Our Work →
               </Link>
             </div>
-            <div className="hero-rise mt-8" style={{ animationDelay: '0.6s' }}>
+            <div className="hero-rise mt-8 flex flex-wrap items-center gap-x-6 gap-y-3" style={{ animationDelay: '0.6s' }}>
               <GoogleReviewsBadge rating="5.0" count={70} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
-            </div>
-            <div className="hero-rise mt-10 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.72s' }}>
-              <span>500+ executives photographed</span>
-              <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
-              <span>Led by Alfonso &amp; Niomi</span>
+              <span className="text-xs md:text-sm tracking-[0.15em] uppercase text-white/70">
+                500+ executives <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span> Led by Alfonso &amp; Niomi
+              </span>
             </div>
           </div>
           <div className="grid grid-cols-3 gap-3 md:gap-4">
