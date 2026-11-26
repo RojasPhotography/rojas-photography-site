@@ -136,16 +136,16 @@ export default function HomePage() {
       >
         <div className="max-w-7xl mx-auto px-8 py-14 md:py-20 grid lg:grid-cols-2 gap-14 items-center text-white">
           <div>
-            <p className="hero-rise text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase" style={{ animationDelay: '0.1s' }}>
-              Headshots · Events &amp; Conferences · Video · Modesto &amp; All of California
-            </p>
-            <h1 className="hero-rise text-4xl sm:text-5xl lg:text-6xl mb-6 leading-[1.05] tracking-[-0.01em]" style={{ animationDelay: '0.22s' }}>
-              Corporate photography &amp; video for companies that take image seriously.
+            <h1 className="hero-rise mb-6" style={{ animationDelay: '0.1s' }}>
+              <span className="block text-[var(--color-primary-light)] font-semibold text-xs md:text-sm tracking-[0.22em] mb-6 uppercase">
+                Corporate Photography &amp; Video · Modesto, CA
+              </span>{' '}
+              <span className="block text-5xl sm:text-6xl lg:text-7xl leading-[1.02] tracking-[-0.01em]">
+                Look as good as your work.
+              </span>
             </h1>
-            <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.38s' }}>
-              Executive headshots, team headshot days, conferences, events, and video — from our
-              Modesto studio to Los Angeles and San Diego. So when someone sizes your company up,
-              what they see matches what you&apos;ve built.
+            <p className="hero-rise text-lg md:text-xl max-w-xl leading-relaxed text-white/90 mb-10" style={{ animationDelay: '0.3s' }}>
+              Headshots, team days, events and video for companies across California.
             </p>
             <div className="hero-rise flex flex-col sm:flex-row gap-4" style={{ animationDelay: '0.52s' }}>
               <Link
@@ -161,13 +161,11 @@ export default function HomePage() {
                 See Our Work →
               </Link>
             </div>
-            <div className="hero-rise mt-8" style={{ animationDelay: '0.6s' }}>
+            <div className="hero-rise mt-8 flex flex-wrap items-center gap-x-6 gap-y-3" style={{ animationDelay: '0.6s' }}>
               <GoogleReviewsBadge rating="5.0" count={70} href="https://g.page/r/CdOO4Sj3FR_lEBM" />
-            </div>
-            <div className="hero-rise mt-10 border-t border-white/15 pt-6 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs md:text-sm tracking-[0.15em] uppercase text-white/70" style={{ animationDelay: '0.72s' }}>
-              <span>500+ executives photographed</span>
-              <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span>
-              <span>Led by Alfonso &amp; Niomi</span>
+              <span className="text-xs md:text-sm tracking-[0.15em] uppercase text-white/70">
+                500+ executives <span className="text-[var(--color-primary-light)]" aria-hidden="true">·</span> Led by Alfonso &amp; Niomi
+              </span>
             </div>
           </div>
           <div className="grid grid-cols-3 gap-3 md:gap-4">
@@ -253,7 +251,7 @@ export default function HomePage() {
                 You've put years into building something real — a team, a reputation, a standard of work you're proud of. Then someone looks your company up — a headshot, a team page, last year's event — and what they find doesn't come close to reflecting any of it. That gap is frustrating. We get it.
               </p>
               <p className="text-lg text-[var(--color-text-body)] leading-relaxed mb-4">
-                We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We've helped 500+ professionals — from <Link href="/premium-headshots" className="text-[var(--color-primary)] hover:underline">executive headshots</Link> to <Link href="/on-site-photography" className="text-[var(--color-primary)] hover:underline">on-site team photography</Link>, <Link href="/commercial" className="text-[var(--color-primary)] hover:underline">commercial imagery</Link>, and <Link href="/video" className="text-[var(--color-primary)] hover:underline">video production</Link> — create visuals they're genuinely proud to put in front of clients. Not as a vendor. As partners who care about getting it right.
+                We come from corporate leadership ourselves, so we know how to work with marketing teams, CEOs, CFOs and the professionals who report to them. We've helped 500+ executives and their teams — from <Link href="/premium-headshots" className="text-[var(--color-primary)] hover:underline">executive headshots</Link> to <Link href="/on-site-photography" className="text-[var(--color-primary)] hover:underline">on-site team photography</Link>, <Link href="/commercial" className="text-[var(--color-primary)] hover:underline">commercial imagery</Link>, and <Link href="/video" className="text-[var(--color-primary)] hover:underline">video production</Link> — create visuals they're genuinely proud to put in front of clients. Not as a vendor. As partners who care about getting it right.
               </p>
               <p className="text-[var(--color-text-body)] leading-relaxed mb-8">
                 We photograph businesses across Modesto, Stockton, Fresno, Sacramento, and the Bay Area — and travel statewide for conferences, events, and team days, including Los Angeles and San Diego.
